@@ -349,9 +349,25 @@ function renderRuns() {
   ];
   const x = rounds => 46 + 380 * ROUND_OPTIONS.indexOf(rounds) / (ROUND_OPTIONS.length - 1);
   const y = wins => 142 - 116 * wins / 72;
-  const marks = series.map(([, color, points], s) => points.map(p => s === 0 ?
-    `<rect x="${(x(p.x) - 9).toFixed(1)}" y="${(y(p.y) - 4).toFixed(1)}" width="8" height="8" fill="${color}"/>` :
-    `<circle cx="${(x(p.x) + (s === 1 ? 3 : 10)).toFixed(1)}" cy="${y(p.y).toFixed(1)}" r="4" fill="${color}"/>`).join('')).join('');
+  // Identical results sit on the same spot, so draw each spot once: a single run is dim,
+  // repeats are brighter and larger, with a ×n count beside them.
+  const marks = series.map(([name, color, points], s) => {
+    const spots = new Map();
+    for (const p of points) {
+      const k = `${p.x}|${p.y}`;
+      spots.set(k, { ...p, n: (spots.get(k)?.n ?? 0) + 1 });
+    }
+    return [...spots.values()].map(p => {
+      const cx = x(p.x) + [-5, 3, 10][s], cy = y(p.y);
+      const opacity = Math.min(1, 0.45 + 0.275 * (p.n - 1)).toFixed(2), size = 4 + Math.min(3, p.n - 1);
+      const tip = `<title>${name}: ${p.y}/72 after ${p.x} rounds${p.n > 1 ? ` (${p.n} runs)` : ''}</title>`;
+      const shape = s === 0
+        ? `<rect x="${(cx - size).toFixed(1)}" y="${(cy - size).toFixed(1)}" width="${2 * size}" height="${2 * size}" fill="${color}" fill-opacity="${opacity}">${tip}</rect>`
+        : `<circle cx="${cx.toFixed(1)}" cy="${cy.toFixed(1)}" r="${size}" fill="${color}" fill-opacity="${opacity}">${tip}</circle>`;
+      const count = p.n > 1 ? `<text x="${(s === 0 ? cx - size - 3 : cx + size + 3).toFixed(1)}" y="${(cy + 3.5).toFixed(1)}" text-anchor="${s === 0 ? 'end' : 'start'}" fill="${color}" font-size="9">×${p.n}</text>` : '';
+      return shape + count;
+    }).join('');
+  }).join('');
   const ticks = ROUND_OPTIONS.map(n => `<text x="${x(n)}" y="161" text-anchor="middle" fill="currentColor" font-size="10">${n}</text>`).join('');
   $('runs-chart').innerHTML = runs.length ? `<svg viewBox="0 0 460 184" style="width:100%" aria-hidden="true"><path d="M38 26V142H440" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">72</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text>${marks}${ticks}<text x="240" y="179" text-anchor="middle" fill="currentColor" font-size="10">training rounds · height: test wins out of 72</text></svg>` : '';
   const notes = series.map(([name, , points]) => {

@@ -879,7 +879,7 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
             </div>
             <h4>Your runs: rounds trained vs. final test score</h4>
             <p class="legend">Each live run you finish is added here. Try 24, 48, and 288 rounds to see how training length changes the score. Runs are kept in this browser, so reloading the page does not lose them. <button type="button" id="runs-clear" hidden>Clear my runs</button></p>
-            <div class="runs-key"><span><i style="background:var(--gfp)"></i>Fly A</span><span><i style="background:#ffffff;border-radius:50%"></i>Taught Fly B</span><span><i style="background:#8a929b;border-radius:50%"></i>Fly B alone</span></div>
+            <div class="runs-key"><span><i style="background:var(--gfp)"></i>Fly A</span><span><i style="background:#ffffff;border-radius:50%"></i>Taught Fly B</span><span><i style="background:#8a929b;border-radius:50%"></i>Fly B alone</span><span class="legend">Faint = one run; brighter and larger with ×n = the same result from several runs.</span></div>
             <div id="runs-chart" role="img" aria-label="Final test wins versus training rounds for each finished run"></div>
             <p id="runs-correlation" class="legend">No finished runs yet. Only "▶ Train Fly A live" in the Challenge on the Simulation tab adds a run here; the recorded story and highlight do not.</p>
             <div class="scroll"><table><thead><tr><th>Run</th><th>Opponent</th><th>Seed</th><th>Fly A rounds</th><th>Fly A score</th><th>Fly B rounds</th><th>Taught Fly B</th><th>Fly B alone</th></tr></thead><tbody id="runs-table"></tbody></table></div>
