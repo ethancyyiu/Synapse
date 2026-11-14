@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#15181C">
+<title>Fly Hero</title>
+<link rel="icon" href="data:,">
+<link rel="preload" href="fonts/atkinson-hyperlegible-next-latin.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+  /* Look borrowed from fluorescence microscopy figures: ink on paper, GFP green for reward, magenta for punishment.
+     Native CSS, no design system. Shapes: controls use a 2px radius, figures stay square. */
+  @font-face { font-family: "Atkinson Hyperlegible Next"; src: url("fonts/atkinson-hyperlegible-next-latin.woff2") format("woff2"); font-weight: 400 700; font-display: swap; }
+  :root { color-scheme: dark; --paper: #15181C; --ink: #E6E8EB; --graphite: #A3ABB4; --rule: #2C3137; --faint: #69717A; --hover: #1E2227; --gfp: #5CC17A; --magenta: #E466B8; --lane1: #F0555A; --lane2: #5B9BFF; --lane3: #4CC76A; --onlane: #15181C; --font: "Atkinson Hyperlegible Next", system-ui, sans-serif; }
+  body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.55 var(--font); font-variant-numeric: tabular-nums; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 56px 24px 72px; }
+  .skip { position: absolute; left: 8px; top: -48px; background: var(--ink); color: var(--paper); padding: 6px 12px; }
+  .skip:focus-visible { top: 8px; }
+  h1 { margin: 0; font-size: 48px; font-weight: 700; line-height: 1; letter-spacing: -0.025em; }
+  .lede { margin: 12px 0 40px; max-width: 60ch; font-size: 18px; color: var(--graphite); }
+  p { margin: 0 0 12px; }
+  .tabs { display: flex; flex-wrap: wrap; gap: 4px 28px; margin-bottom: 20px; }
+  .tabs button { font: inherit; font-size: 17px; color: var(--graphite); background: none; border: 0; border-bottom: 2px solid transparent; padding: 6px 0; cursor: pointer; touch-action: manipulation; }
+  .tabs button:hover { color: var(--ink); }
+  .tabs button[aria-pressed="true"] { color: var(--ink); font-weight: 600; border-bottom-color: var(--ink); }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; }
+  label { font-size: 15px; color: var(--graphite); }
+  select, .btn { font: inherit; font-size: 15px; color: var(--ink); background: var(--paper); border: 1px solid var(--ink); border-radius: 2px; padding: 5px 10px; cursor: pointer; touch-action: manipulation; }
+  select { margin-left: 6px; }
+  .btn:hover, select:hover { background: var(--hover); }
+  @media (prefers-reduced-motion: no-preference) { .btn:active { transform: translateY(1px); } }
+  :focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+  @media (pointer: coarse) { select, .btn, .tabs button { min-height: 44px; } }
+  main { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 40px; align-items: start; }
+  main > div { min-width: 0; }
+  @media (max-width: 760px) { main { grid-template-columns: 1fr; } h1 { font-size: 38px; } }
+  canvas { display: block; max-width: 100%; height: auto; }
+  /* game and brain share one size so they compare side by side, and both fit on screen */
+  #game, #brain { width: auto; max-height: 62vh; }
+  #brainHeader { margin-bottom: 30px; } /* matches the HUD line plus the progress bar, so both panels start level */
+  .small { font-size: 14px; color: var(--graphite); }
+  progress { display: block; width: 100%; height: 2px; margin: 0 0 16px; border: 0; appearance: none; background: var(--rule); }
+  progress::-webkit-progress-bar { background: var(--rule); }
+  progress::-webkit-progress-value { background: var(--ink); }
+  progress::-moz-progress-bar { background: var(--ink); }
+  kbd { font: inherit; font-size: 14px; font-weight: 600; border: 1px solid var(--ink); border-radius: 2px; padding: 0 6px; }
+  .legend { max-width: 68ch; margin-top: 24px; font-size: 15px; color: var(--graphite); }
+  table { width: 100%; margin-top: 16px; border-collapse: collapse; font-size: 14px; }
+  caption { caption-side: bottom; text-align: left; padding-top: 8px; }
+  th { font-weight: 600; border-bottom: 1px solid var(--ink); }
+  td, th { padding: 4px 0 4px 12px; text-align: right; }
+  td:first-child, th:first-child { text-align: left; padding-left: 0; }
+  td:first-child { white-space: nowrap; } /* fly names stay on one line */
+  .cmp-grid > div { min-width: 0; }
+  #cmpTable { overflow-x: auto; } /* on a phone the table scrolls sideways instead of the page */
+  .swatch { display: inline-block; width: 16px; height: 0; border-top: 2px solid; margin-right: 8px; vertical-align: middle; }
+  .gfp { color: var(--gfp); } .magenta { color: var(--magenta); }
+  /* compare mode: the brain is hidden, so the comparison takes the full width */
+  main.solo { grid-template-columns: 1fr; }
+  .cmp-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: start; }
+  @media (max-width: 760px) { .cmp-grid { grid-template-columns: 1fr; } }
+  #cmp { width: 100%; height: auto; }
+  .guide h2 { margin: 0 0 4px; font-size: 20px; }
+  .guide h3 { margin: 20px 0 0; font-size: 16px; }
+  .guide dl { margin: 0; }
+  .guide dt { margin-top: 10px; font-weight: 600; }
+  .guide dd { margin: 2px 0 0; max-width: 60ch; color: var(--graphite); }
+  .takeaway { margin-top: 24px; max-width: 60ch; }
+  .guide .note { margin: 4px 0 0; max-width: 60ch; color: var(--graphite); }
+  .lead-in { max-width: 70ch; margin-bottom: 20px; }
+  .credits { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--rule); max-width: 80ch; font-size: 14px; color: var(--graphite); }
+  .credits h2 { margin: 0 0 8px; font-size: 16px; color: var(--ink); }
+  .credits ul { margin: 0 0 12px; padding-left: 18px; }
+  .credits a { color: var(--ink); }
+  /* the result text flashes with the dopamine that fired, then fades back like the neuron flashes */
+  .flash-gfp { font-weight: 600; animation: flash-gfp 900ms ease-out forwards; }
+  .flash-magenta { font-weight: 600; animation: flash-magenta 900ms ease-out forwards; }
+  @keyframes flash-gfp { from { color: var(--gfp); } 60% { color: var(--gfp); } to { color: var(--graphite); } }
+  @keyframes flash-magenta { from { color: var(--magenta); } 60% { color: var(--magenta); } to { color: var(--graphite); } }
+  @media (prefers-reduced-motion: reduce) { .flash-gfp { animation: none; color: var(--gfp); } .flash-magenta { animation: none; color: var(--magenta); } }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the game</a>
+<div class="wrap">
+  <h1>Fly Hero</h1>
+  <p class="lede">A spiking model of a real fruit-fly brain learns a three-lane rhythm game, in the style of Guitar Hero, by trial and error.</p>
+
+  <div class="tabs" role="group" aria-label="Mode">
+    <button data-mode="watch" aria-pressed="true">Watch the fly learn</button>
+    <button data-mode="human" aria-pressed="false">You vs fly</button>
+    <button data-mode="compare" aria-pressed="false">Compare learners</button>
+  </div>
+  <div class="controls" id="controls">
+    <label>Fly
+      <select id="cond" name="fly">
+        <option value="bio:real">Bio-RL, real wiring</option>
+        <option value="bio:shuffled">Bio-RL, shuffled wiring</option>
+        <option value="bio:random">Bio-RL, random network</option>
+        <option value="bio:blocked">Bio-RL, dopamine blocked</option>
+        <option value="deep:real">Deep-RL, real wiring</option>
+        <option value="deep:shuffled">Deep-RL, shuffled wiring</option>
+        <option value="deep:random">Deep-RL, random network</option>
+      </select>
+    </label>
+    <label>Speed
+      <select id="speed" name="speed"><option value="0.5">0.5×</option><option value="1" selected>1×</option><option value="4">4×</option><option value="max">Max</option></select>
+    </label>
+    <button id="reset" class="btn">New fly</button>
+  </div>
+
+  <main id="main">
+    <div>
+      <div id="play">
+        <p id="hud">Loading…</p>
+        <progress id="prog" max="1" value="0" aria-label="Song progress"></progress>
+        <canvas id="game" width="480" height="655" role="img" aria-label="Three lanes with notes falling toward the hit line"></canvas>
+        <div id="humanBox" hidden>
+          <p style="margin-top:20px">Press <kbd>J</kbd> <kbd>K</kbd> <kbd>L</kbd> as a note reaches the line. Your opponent is a Bio-RL fly that has already practised this song 30 times, playing with its learning frozen.</p>
+          <button id="humanStart" class="btn">Start song</button>
+          <p id="humanMsg" style="margin-top:12px" aria-live="polite"></p>
+        </div>
+        <div id="curveBox">
+          <p class="small" style="margin-top:28px">Hit rate after each song</p>
+          <canvas id="curve" width="300" height="120" role="img" aria-label="Line chart of this fly's hit rate per episode"></canvas>
+        </div>
+      </div>
+      <div id="compare" hidden>
+        <p class="lead-in">Each fly practised for <strong>30 songs</strong> (the same song 30 times), starting untrained. Results are averaged over 5 repeats; song 0 is before practice.</p>
+        <div class="cmp-grid">
+          <div>
+            <canvas id="cmp" width="480" height="260" role="img" aria-label="Line chart of the average share of notes hit after each play, for every version of the fly; the table lists the values"></canvas>
+            <div id="cmpTable"></div>
+          </div>
+          <div class="guide">
+            <h2>What the options mean</h2>
+            <h3>How the fly learns</h3>
+            <dl>
+              <dt>Bio-RL</dt>
+              <dd>The brain adjusts its own connections. Dopamine strengthens them after a hit and weakens them after a mistake.</dd>
+              <dt>Deep-RL</dt>
+              <dd>The brain stays fixed. A separate AI program learns which key to press from the brain's output.</dd>
+            </dl>
+            <h3>How the brain is wired</h3>
+            <dl>
+              <dt>Real wiring</dt>
+              <dd>Copied from a map of a real fruit fly's brain.</dd>
+              <dt>Shuffled wiring</dt>
+              <dd>The brain's overall structure (eyes to memory to output) is kept, but individual synapses are rewired at random. Tests whether exact connections matter.</dd>
+              <dt>Random network</dt>
+              <dd>Any neuron can connect to any other, so signals don't follow a real brain's route from the eyes, through memory, to output. Tests whether brain structure matters.</dd>
+              <dt>Dopamine blocked</dt>
+              <dd>Bio-RL with dopamine switched off. Tests whether dopamine drives the learning.</dd>
+            </dl>
+            <h3>Deep-RL, real wiring, 150 songs</h3>
+            <p class="note">Deep-RL given 150 songs of practice instead of 30, to see if more practice helps. It reached 98.5%, about the same as after 30 songs.</p>
+            <h3>What the numbers mean</h3>
+            <dl>
+              <dt>Before practice</dt>
+              <dd>Notes hit before any practice.</dd>
+              <dt>End of practice</dt>
+              <dd>Average of the last 5 practice songs.</dd>
+              <dt>New song</dt>
+              <dd>Notes hit on a song it never practised, with learning off.</dd>
+            </dl>
+            <p class="takeaway">In short: the brain-style learner needed dopamine and the fly's real wiring. The trained readout learned on every wiring, even a random one.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="brainCol">
+      <p id="brainHeader">&nbsp;</p>
+      <canvas id="brain" width="480" height="655" role="img" aria-label="The fly's brain and nerve cord seen from above; simulated neurons flash when they spike"></canvas>
+      <p id="lastEvent" class="small" style="margin-top:12px">&nbsp;</p>
+      <p class="legend">Each grey dot is the cell body of one of 139,662 neurons in a fly's brain and nerve cord (Janelia and Google male CNS), seen from above with the head at the top. The empty band below the brain is the neck: only nerve fibres pass through it, so it has no cell bodies to draw. When a note falls into a lane, that lane's visual neurons fire, then Kenyon cells, then the output neurons that choose a lane; each flashes as it spikes. Nerve cord neurons flash when the brain's descending neurons send signals down the neck. For the Bio-RL fly, a hit releases <span class="gfp">reward dopamine</span> and a mistake releases <span class="magenta">punishment dopamine</span>, which strengthen or weaken the synapses that just fired.</p>
+    </div>
+  </main>
+
+  <footer class="credits">
+    <h2>Based on published research</h2>
+    <ul>
+      <li>Brain wiring, cell types and drawing: the male fruit fly connectome (male CNS v1.0), released open source by Janelia Research Campus, Google Research, the University of Cambridge and the MRC Laboratory of Molecular Biology. Berg et al., <a href="https://doi.org/10.1016/j.cell.2026.08.015">Cell 2026</a>. <a href="https://male-cns.janelia.org/">Data</a> (CC-BY) and <a href="https://research.google/blog/a-connectomics-milestone-mapping-the-complete-male-fruit-fly-brain/">Google Research announcement</a>.</li>
+      <li>Neuron model: Shiu et al., <a href="https://doi.org/10.1038/s41586-024-07763-9">Nature 2024</a>.</li>
+      <li>Dopamine learning rule: inspired by Bennett, Philippides and Nowotny, <a href="https://doi.org/10.1038/s41467-021-22592-4">Nature Communications 2021</a>.</li>
+    </ul>
+  </footer>
+</div>
+<script type="module" src="js/app.js"></script>
+</body>
+</html>

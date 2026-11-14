@@ -1,0 +1,14 @@
+{
+  "name": "synapse-demo",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "serve": "python tools/serve.py",
+    "test": "node tools/verify_claims.mjs && node tools/check_links.mjs",
+    "check:demo": "node tools/check_rps_challenge_demo.mjs",
+    "check:all": "npm test && node tools/check_rps_challenge_demo.mjs && node tools/check_rps_demo.mjs && python -m unittest flyhero.test_rps && python -m flyhero.test"
+  },
+  "dependencies": {
+    "three": "^0.187.0"
+  }
+}

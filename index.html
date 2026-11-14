@@ -1,0 +1,1028 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Synapse — Two Brains, One Learned Message</title>
+    <link rel="icon" href="data:,">
+    <style>
+@font-face {
+  font-family: Atkinson;
+  src: url('fonts/atkinson-hyperlegible-next-latin.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: Fraunces;
+  src: url('fonts/fraunces-latin-wght.woff2') format('woff2');
+  font-weight: 100 900;
+  font-display: swap;
+}
+:root {
+  color-scheme: dark;
+  --paper: #121212;
+  --ink: #edebe6;
+  --graphite: #a9a69f;
+  --rule: #2e2d2a;
+  --gfp: #5cc17a;
+  --magenta: #e466b8;
+  --lane1: #f0555a;
+  --lane2: #5b9bff;
+  --lane3: #4cc76a;
+  --neuron-vpn: #6db7ff;
+  --neuron-kc: #63c9ad;
+  --neuron-mbon: #e466b8;
+  --neuron-pam: #5cc17a;
+  --neuron-ppl1: #f07878;
+  --neuron-mid: #edc46a;
+  --neuron-dn: #a694ff;
+  --neuron-vnc: #87919d;
+  --neuron-apl: #d8dfe6;
+  --accent: #6fb3a8;
+}
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 10px;
+  margin: 18px 0 10px;
+}
+.scenario-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 12px;
+  margin: 16px 0 4px;
+}
+.scenario-card {
+  background: #1a1917;
+  border: 1px solid #3a3835;
+  border-radius: 6px;
+  padding: 14px 16px;
+  font-size: .93em;
+}
+.scenario-icon { width: 1.35em; height: 1.35em; flex: none; fill: none; stroke: var(--gfp); stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.scenario-card strong {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 6px;
+  font-size: 1em;
+  color: var(--ink);
+}
+.scenario-card p {
+  margin: 0;
+  color: var(--graphite);
+  line-height: 1.4;
+}
+.scenario-card em {
+  display: block;
+  margin-top: 8px;
+  font-style: normal;
+  font-size: .88em;
+  color: #6b6960;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.5 Atkinson,system-ui,sans-serif;
+}
+button,select {
+  font: inherit;
+}
+button {
+  background: #1f1e1d;
+  color: var(--ink);
+  border: 1px solid #5f5d58;
+  border-radius: 3px;
+  padding: 9px 14px;
+  cursor: pointer;
+}
+button:hover {
+  background: #2b2a28;
+}
+button:disabled { opacity: .55; cursor: not-allowed; }
+#compare-start:enabled { border-color: var(--gfp); color: var(--gfp); }
+button:focus-visible,select:focus-visible {
+  outline: 3px solid var(--lane2);
+  outline-offset: 2px;
+}
+button[aria-pressed=true] {
+  border-color: var(--graphite);
+  color: var(--ink);
+}
+select {
+  background: #1f1e1d;
+  color: var(--ink);
+  border: 1px solid #5f5d58;
+  padding: 8px;
+}
+a {
+  color: var(--accent);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+a:hover { color: var(--ink); }
+h1,h2,h3,p {
+  margin: 0 0 12px;
+}
+h1,h2 {
+  font-family: Fraunces,Georgia,serif;
+  font-weight: 400;
+  letter-spacing: -.015em;
+}
+h1 {
+  font-size: clamp(2.75rem,7vw,5.5rem);
+  font-weight: 300;
+  line-height: 1;
+}
+h2 {
+  font-size: 1.6rem;
+  line-height: 1.2;
+}
+h3 {
+  font-size: 1.1rem;
+}
+small,.muted {
+  color: var(--graphite);
+}
+.wrap {
+  max-width: 1720px;
+  margin: auto;
+  padding: 28px 24px 70px;
+}
+.lede {
+  max-width: 75ch;
+  color: var(--graphite);
+  font-size: 1.1rem;
+}
+.panel {
+  border: 1px solid var(--rule);
+  background: #191918;
+  padding: 18px;
+  margin-top: 18px;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.controls label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+}
+.flyhead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.move {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.rps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+}
+.brain {
+  width: 100%;
+  max-width: 390px;
+  display: block;
+  height: auto;
+  background: var(--paper);
+  cursor: grab;
+  touch-action: none;
+}
+.brain-view { margin: 0; }
+.brain-view figcaption { color: var(--graphite); font-size: .85rem; margin-top: 5px; }
+.brain-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; position: relative; }
+.step-card .brain-card { margin: 12px 0 4px; }
+.step-card h4 { margin: 16px 0 6px; font-size: .95rem; }
+.opponent-preview { border: 1px solid var(--rule); background: #191918; padding: 10px 12px; margin: 10px 0; }
+.opponent-preview p { margin: 2px 0; display: grid; grid-template-columns: 7.5em minmax(0,1fr); gap: 8px; align-items: baseline; }
+.step-card .controls label { flex-wrap: wrap; min-width: 0; max-width: 100%; }
+.step-card .controls select { max-width: 100%; min-width: 0; }
+.step-card .controls label:has(> input[type=checkbox]) { flex-wrap: nowrap; align-items: flex-start; }
+.step-card .controls label > input[type=checkbox] { margin-top: .3em; flex: 0 0 auto; }
+.runs-key { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: .85rem; color: var(--graphite); margin: 6px 0; }
+.runs-key i { display: inline-block; width: 10px; height: 10px; margin-right: 5px; vertical-align: middle; }
+.brain-card { min-width: 0; text-align: center; }
+.brain-card .brain { margin: 0 auto; }
+.brain-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; list-style: none; padding: 0; margin: 8px 0; }
+.brain-legend li { display: flex; align-items: center; gap: 6px; font-size: .82rem; color: var(--graphite); }
+#mission { position: sticky; top: 0; z-index: 10; background: var(--paper); border-bottom: 1px solid var(--rule); padding: 12px 0; margin-bottom: 18px; }
+.steps { display: flex; gap: 6px; list-style: none; margin: 0 0 8px; padding: 0; font-size: .78rem; }
+.step { flex: 1; padding: 4px 0; border-top: 2px solid var(--rule); color: var(--graphite); }
+.step.done { border-top-color: var(--graphite); }
+.step.now { border-top-color: var(--ink); color: var(--ink); font-weight: 700; }
+.mission-main { display: flex; justify-content: space-between; gap: 18px; align-items: center; }
+.mission-text { min-width: 0; flex: 1; }
+#mission-title { font-size: clamp(1.4rem,3vw,2.1rem); line-height: 1.15; margin: 0; }
+#live-story { margin: 2px 0 6px; color: var(--graphite); font-size: .92rem; min-height: 1.4em; }
+.scoreboard { display: grid; grid-template-columns: auto auto auto; gap: 0 16px; text-align: center; flex: 0 0 auto; }
+.score span { display: block; font-size: 2rem; font-weight: 700; line-height: 1; }
+.score small { color: var(--graphite); font-size: .74rem; }
+.score.taught span { color: var(--ink); }
+.score.alone span { color: var(--graphite); }
+.score-note { grid-column: 1 / -1; margin: 2px 0 0; font-size: .7rem; color: var(--graphite); }
+.bar { height: 2px; background: var(--rule); margin-top: 8px; overflow: hidden; }
+#mission-bar { height: 100%; width: 0; background: var(--ink); }
+.phases { display: flex; gap: 6px; list-style: none; padding: 0; margin: 0; }
+.phase { padding: 3px 12px; border: 1px solid transparent; font-size: .95rem; color: var(--graphite); }
+#mission.is-running #mission-title { font-size: clamp(1.3rem,2.4vw,1.7rem); }
+#mission.is-running .steps { margin-bottom: 4px; }
+#mission.is-final .score.taught span { color: var(--gfp); }
+.timeline { display: block; width: 100%; margin: 8px 0 0; accent-color: var(--gfp); cursor: pointer; height: 18px; }
+#mission.has-timeline .bar { display: none; }
+#mission.has-timeline .step { cursor: pointer; }
+#mission.has-timeline .step:hover { color: var(--ink); border-top-color: var(--gfp); }
+#challenge-panel.is-running .step1-card { display: none; }
+#challenge-panel.is-running .train-row { margin-top: 0; }
+.step1-cols { display: grid; grid-template-columns: minmax(0,1.15fr) minmax(0,1fr); gap: 32px; }
+.step1-col > h4:first-child { margin-top: 6px; }
+.train-row { display: grid; grid-template-columns: minmax(340px,1fr) minmax(0,2fr); grid-template-rows: auto auto; grid-auto-flow: column; column-gap: 18px; row-gap: 0; margin-top: 18px; }
+.train-row > .cell-top { border-bottom: 0; padding-bottom: 8px; }
+.train-row > .cell-bottom { border-top: 0; padding-top: 8px; }
+.train-row .brain-card > h3 { margin: 0 0 4px; height: 32px; display: flex; align-items: center; justify-content: center; gap: 6px; line-height: 1; }
+.train-row .brain-card > h3 .teach-arrow { margin-left: 2px; }
+.train-row .brain-card > .result-strip { height: 12px; min-height: 12px; margin: 6px auto 8px; overflow: hidden; }
+.step2-card.cell-top { display: flex; flex-direction: column; }
+.step2-card .run-badge { margin-top: auto; padding-top: 10px; }
+.step3-card > .step-title, .step3-card > h3 { margin-top: 0; }
+.step3-card #brain-stage { border: 0; padding: 0; margin: 0; background: none; }
+@media (max-width: 1100px) { .train-row { grid-template-columns: 1fr; grid-template-rows: none; grid-auto-flow: row; } .train-row > .step3-card.cell-top { margin-top: 18px; } }
+@media (max-width: 860px) { .step1-cols { grid-template-columns: 1fr; gap: 0; } }
+#mission.is-final .score-note { color: var(--ink); font-weight: 700; }
+.teach-message { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px 14px; margin: 0 0 12px; padding: 10px 14px; border: 2px solid var(--rule); background: #191918; font-size: 1rem; color: var(--graphite); }
+.teach-message[hidden] { display: none; }
+.teach-message > div { min-width: 0; }
+.teach-message small, .teach-message span { display: block; line-height: 1.35; }
+.teach-message .teach-note { grid-column: 1 / -1; margin: 0; font-size: .82rem; }
+@media (max-width: 860px) { .teach-message { grid-template-columns: 1fr; } }
+.stage-card { margin: 0 0 12px; padding: 14px 18px; border: 2px solid var(--ink); background: #1f1e1d; }
+.stage-card strong { display: block; font-size: 1.35rem; color: var(--ink); margin-bottom: 6px; }
+.stage-card p { margin: 0; font-size: 1.05rem; color: var(--ink); line-height: 1.45; }
+.teach-message strong { font-size: 1.2rem; color: var(--ink); display: inline-flex; align-items: center; gap: 10px; line-height: 1.3; }
+.rps-icon { width: 1.35em; height: 1.35em; fill: var(--gfp); stroke: none; flex: 0 0 auto; }
+.rps-icon .cut { fill: none; stroke: #191918; stroke-width: 1.1; stroke-linecap: round; stroke-linejoin: round; }
+.teach-message.pulse-a { animation: teach-pulse-a .9s ease-out; }
+.teach-message.pulse-b { animation: teach-pulse-b .9s ease-out; }
+@keyframes teach-pulse-a { from { border-color: var(--gfp); box-shadow: 0 0 0 0 rgba(92,193,122,.55); } to { border-color: var(--rule); box-shadow: 0 0 0 16px rgba(92,193,122,0); } }
+@keyframes teach-pulse-b { from { border-color: var(--gfp); box-shadow: 0 0 0 0 rgba(92,193,122,.55); } to { border-color: var(--rule); box-shadow: 0 0 0 16px rgba(92,193,122,0); } }
+.result-strip { display: flex; flex-wrap: wrap; gap: 3px; justify-content: center; margin: 8px auto 0; max-width: 350px; min-height: 12px; }
+.result-strip span { width: 11px; height: 11px; background: #3a4149; }
+.result-strip .w { background: var(--gfp); }
+.result-strip .l { background: #7a3f4c; }
+.strip-key { font-size: .78rem; color: var(--graphite); text-align: center; margin: 6px 0 0; }
+.strip-key i { display: inline-block; width: 9px; height: 9px; margin: 0 4px 0 8px; vertical-align: middle; }
+.run-badge { font-size: 1.05rem; font-weight: 700; color: var(--ink); text-align: center; margin: 8px 0 0; min-height: 1.4em; }
+.run-next { border: 1px solid var(--ink); padding: 14px 16px; margin-top: 14px; }
+.run-next p { margin: 0 0 10px; font-size: 1.1rem; color: var(--ink); }
+.run-next .controls a { padding: 8px 14px; border: 1px solid var(--rule); color: var(--ink); text-decoration: none; }
+.run-next .controls a:hover { background: #2b2a28; }
+.phase.on { color: var(--ink); border-color: var(--ink); font-weight: 700; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+button.primary { background: var(--ink); color: var(--paper); border-color: var(--ink); font-weight: 700; padding: 10px 20px; font-size: 1.02rem; }
+button.primary:hover { background: #ffffff; color: var(--paper); }
+button.primary:disabled { background: #1f1e1d; color: var(--graphite); border-color: var(--rule); }
+.toplinks { font-size: .82rem; margin: 0 0 10px; }
+.brain-card h3 small { color: var(--graphite); font-weight: 400; font-size: .8em; }
+.teach-arrow { display: inline-block; margin-left: 6px; padding: 1px 8px; background: var(--ink); color: var(--paper); font-weight: 700; font-size: .75rem; vertical-align: middle; opacity: 0; transition: opacity .12s; pointer-events: none; }
+.teach-arrow.on { opacity: 1; }
+details > summary { cursor: pointer; font-weight: 600; }
+@media (max-width: 800px) { .brain-pair { grid-template-columns: 1fr; } .teach-arrow { display: none; } .mission-main { flex-direction: column; align-items: stretch; } }
+.role-toggle { display: flex; align-items: center; gap: 6px; padding: 3px 8px; font-size: .82rem; }
+.role-toggle[aria-pressed=false] { opacity: .45; text-decoration: line-through; }
+.brain-swatch { width: 9px; height: 9px; border-radius: 50%; flex: 0 0 auto; }
+@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  html, body { overflow-x: clip; }
+  .brain-pair { grid-template-columns: 1fr; }
+  .panel, .controls, .controls label { min-width: 0; }
+  .controls label { flex-wrap: wrap; }
+  .controls select, .controls input { max-width: 100%; }
+  .scroll { max-width: 100%; min-width: 0; }
+}
+@media (max-width: 600px) { .brain-pair { grid-template-columns: 1fr; } }
+.signal {
+  border: 1px solid var(--rule);
+  padding: 15px;
+  margin: 18px 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+}
+.signal .line {
+  height: 5px;
+  background: var(--rule);
+  position: relative;
+}
+.signal .pulse {
+  position: absolute;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--gfp);
+  opacity: 0;
+}
+.signal .pulse.active {
+  opacity: 1;
+}
+.signal code {
+  color: var(--gfp);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.stat {
+  border: 1px solid var(--rule);
+  padding: 10px;
+}
+.stat strong {
+  display: block;
+  font-size: 1.4rem;
+}
+.chart {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .93rem;
+}
+th,td {
+  padding: 8px;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+}
+th:not(:first-child),td:not(:first-child) {
+  text-align: right;
+}
+caption {
+  text-align: left;
+  color: var(--graphite);
+  padding: 0 0 8px;
+}
+.scroll {
+  overflow: auto;
+}
+footer {
+  margin-top: 30px;
+  color: var(--graphite);
+  font-size: .92rem;
+}
+.legend {
+  font-size: .92rem;
+  color: var(--graphite);
+}
+.game-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+[hidden] { display: none !important; }
+.game-actions button { min-width: 110px; font-size: 1.1rem; }
+.game-metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; font-size: .88rem; }
+.pattern-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.pattern-item { border: 1px solid var(--rule); padding: 6px; display: flex; gap: 5px; align-items: center; }
+.pattern-item button { padding: 3px 7px; }
+.game-metrics span { padding: 7px; border: 1px solid var(--rule); }
+.game-metrics strong { display: block; color: var(--gfp); }
+.history { max-height: 250px; overflow: auto; }
+.neural-bars { display: grid; gap: 6px; margin: 10px 0 16px; }
+.neural-bar { display: grid; grid-template-columns: 74px 1fr 48px; gap: 8px; align-items: center; font-size: .88rem; }
+.neural-track { height: 10px; background: var(--paper); border: 1px solid var(--rule); }
+.neural-fill { display: block; height: 100%; background: var(--gfp); }
+.replay-step { border-left: 3px solid var(--lane2); padding-left: 12px; margin: 10px 0; }
+.replay-step strong { color: var(--ink); }
+.finding { border-left: 2px solid var(--graphite); padding: 5px 12px; margin: 12px 0; }
+.finding.caution { border-color: var(--graphite); }
+.step-title { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--rule); }
+summary { cursor: pointer; font-weight: 700; }
+summary:focus-visible { outline: 3px solid var(--lane2); }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+@media(max-width:750px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .signal {
+    grid-template-columns: 1fr;
+  }
+  .signal .line {
+    width: 100%;
+  }
+  .game-metrics { grid-template-columns: repeat(2,1fr); }
+}
+.hero { position: relative; padding: 48px 0 10px; }
+.hero > :not(.hero-flies) { position: relative; z-index: 1; }
+.hero h1 { margin-bottom: 18px; }
+.hero { cursor: url('img/racket-cursor.svg') 19 19, crosshair; }
+.hero a, .hero button { cursor: pointer; }
+.hero-flies { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0; }
+.kicker { text-transform: uppercase; letter-spacing: .08em; font-size: .76rem; color: var(--graphite); margin: 0 0 6px; }
+.hook { font-size: clamp(1.15rem,2.4vw,1.5rem); line-height: 1.35; max-width: 48ch; margin: 0 0 20px; }
+.hero-stats { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: 20px; margin: 24px 0 28px; max-width: 1100px; }
+.stat-tile { border-top: 2px solid var(--rule); padding: 16px 16px 8px 0; }
+.stat-tile strong { display: block; font-family: Fraunces,Georgia,serif; font-weight: 300; font-size: 3.4rem; line-height: 1.0; letter-spacing: -.02em; }
+.stat-tile strong { color: var(--gfp); }
+.stat-tile.dim strong { color: var(--graphite); }
+.stat-tile.accent { border-top-color: var(--accent); }
+.stat-tile.accent strong { color: var(--accent); }
+.stat-tile strong small { font-size: .42em; color: var(--graphite); font-weight: 400; }
+.stat-tile span { color: var(--graphite); font-size: .85rem; line-height: 1.35; display: block; margin-top: 4px; }
+.faster { border: 1px solid var(--rule); background: #191918; padding: 14px 16px; margin: 14px 0; max-width: 880px; }
+.faster-head { margin: 0 0 10px; font-weight: 700; color: var(--ink); }
+.faster-bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.faster-bars li { display: grid; grid-template-columns: 11em 1fr 5em; gap: 10px; align-items: center; color: var(--graphite); }
+.faster-bars b { height: 14px; width: calc(var(--n) / 15 * 100%); min-width: 2px; background: #5f5d58; }
+.faster-bars .taught { color: var(--ink); font-weight: 700; }
+.faster-bars .taught b { background: var(--gfp); }
+.faster-bars em { font-style: normal; text-align: right; font-variant-numeric: tabular-nums; }
+.hook-also { max-width: 75ch; margin: 4px 0 14px; color: var(--graphite); }
+.hook-also strong { color: var(--ink); }
+.hook-why { max-width: 75ch; margin: -6px 0 16px; color: var(--ink); font-size: 1.02rem; }
+.hook-why span { color: var(--graphite); }
+.hook-sub { max-width: 75ch; margin: 0 0 14px; color: var(--graphite); font-size: .88rem; }
+.hook-sub a { color: var(--graphite); }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; margin: 0 0 10px; }
+.hero-actions .primary-btn { background: var(--gfp); color: #0a0f0b; border-color: var(--gfp); font-weight: 700; font-size: 1.05rem; padding: 12px 22px; }
+.hero-actions .primary-btn:hover { background: #4ade80; border-color: #4ade80; }
+.hook { font-size: clamp(1.3rem,2.8vw,1.8rem); line-height: 1.3; max-width: 52ch; margin: 0 0 24px; font-weight: 400; }
+.button-link { display: inline-block; padding: 9px 14px; border: 1px solid #5f5d58; border-radius: 3px; color: var(--ink); text-decoration: none; }
+.button-link.primary { background: var(--ink); color: var(--paper); font-weight: 700; }
+.button-link:hover { background: #2b2a28; }
+.page-nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: .88rem; border-top: 1px solid var(--rule); padding-top: 10px; margin: 0; }
+.page-nav a { color: var(--ink); text-decoration: none; }
+.page-nav a:hover { text-decoration: underline; }
+.page-nav .secondary { color: var(--graphite); margin-left: auto; align-self: center; }
+/* Page tabs: a fixed strip on the right edge of the window (a bottom bar on narrow screens). */
+body:has(.tab-rail) { padding-right: 140px; }
+.tab-rail { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 20; }
+.tabs { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; }
+.tabs [role=tab] { width: 108px; box-sizing: border-box; padding: 14px 16px; transition: width .15s ease; background: #1f1e1d; border: 1px solid #5f5d58; border-right: 0; border-radius: 8px 0 0 8px; color: var(--ink); font-weight: 700; font-size: 1rem; letter-spacing: .04em; text-decoration: none; box-shadow: -2px 2px 8px rgba(0,0,0,.35); }
+.tabs [role=tab]:hover { background: #2b2a28; text-decoration: none; }
+.tabs [role=tab][aria-selected=true] { background: var(--ink); color: var(--paper); border-color: var(--ink); width: 136px; }
+.tabs [role=tab]:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
+@media (max-width: 760px) {
+  body:has(.tab-rail) { padding-right: 0; padding-bottom: 56px; }
+  .tab-rail { top: auto; bottom: 0; left: 0; transform: none; background: var(--paper); border-top: 1px solid var(--rule); }
+  .tabs { flex-direction: row; gap: 0; }
+  .tabs [role=tab], .tabs [role=tab][aria-selected=true] { width: auto; flex: 1; text-align: center; padding: 14px 6px; border: 0; border-radius: 0; box-shadow: none; }
+}
+.page-nav .secondary a { color: var(--graphite); }
+.section-title { font-size: 1.6rem; margin: 44px 0 4px; scroll-margin-top: 12px; }
+.section-lede { color: var(--graphite); margin: 0 0 4px; max-width: 75ch; }
+.setup-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 18px; }
+.step-card { border: 1px solid var(--rule); padding: 16px; min-width: 0; }
+.step-card .controls, .step-card .controls label { min-width: 0; max-width: 100%; }
+.step-card .controls label { flex-wrap: wrap; }
+.step-card .controls select, .step-card .controls input { min-width: 0; max-width: 100%; }
+#challenge-opponent { width: 100%; }
+.step-card h2, .step-card h3, .step-card .step-title { font-size: 1.1rem; margin: 0 0 8px; padding: 0; border: 0; }
+.step-block { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--rule); }
+.step-block > h3 { margin-top: 0; }
+.brain-tools { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; border-top: 1px solid var(--rule); margin-top: 14px; padding-top: 10px; }
+.brain-tools .brain-legend { margin: 0; }
+.result-chart { margin: 10px 0 0; }
+.result-chart > svg { width: 100%; height: auto; max-width: 880px; display: block; }
+@media (min-width: 1000px) { .result-chart > svg { max-width: min(880px, calc(100% - 250px)); } }
+.result-chart { position: relative; }
+.result-chart > svg:focus-visible { outline: 2px solid var(--lane2); outline-offset: 4px; }
+.result-chart path, .result-chart text, .result-chart circle { transition: opacity .15s; }
+.rc-tip { position: absolute; pointer-events: none; background: #11151a; border: 1px solid var(--rule); padding: 8px 10px; font-size: .85rem; min-width: 190px; box-shadow: 0 4px 14px rgba(0,0,0,.4); }
+.rc-head { margin: 0 0 6px; color: var(--graphite); }
+.rc-row { display: grid; grid-template-columns: 18px 2.6em 1fr; gap: 8px; align-items: center; line-height: 1.6; }
+.rc-row strong { text-align: right; font-variant-numeric: tabular-nums; }
+.rc-row span { color: var(--graphite); }
+.rc-row.dim { opacity: .4; }
+.chart-key li[role="button"] { cursor: pointer; user-select: none; }
+.chart-key li[aria-pressed="true"] { text-decoration: underline; text-underline-offset: 4px; }
+.chart-key li:focus-visible { outline: 2px solid var(--lane2); }
+.rc-hint { margin: 6px 0 0; }
+.idea-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 10px 0 18px; max-width: 980px; }
+.idea-steps > div { border: 1px solid var(--rule); padding: 10px 12px; }
+.idea-steps svg { width: 100%; max-width: 240px; height: auto; display: block; margin: 0 auto 6px; }
+.idea-steps p { margin: 0; font-size: .9rem; color: var(--graphite); }
+.idea-steps p strong { color: var(--ink); }
+@media (max-width: 760px) { .idea-steps { grid-template-columns: 1fr; } }
+table.studies { font-size: .9rem; }
+table.studies th, table.studies td { vertical-align: top; text-align: left; }
+table.studies td.ok { color: #4ade80; font-weight: 700; white-space: nowrap; }
+table.studies td.no { color: #e0a458; font-weight: 700; white-space: nowrap; }
+.props { list-style: none; padding: 0; margin: 12px 0 18px; display: grid; grid-template-columns: repeat(auto-fit,minmax(200px,1fr)); gap: 12px; }
+.props li { border-top: 2px solid #4ade80; padding-top: 8px; }
+.props strong { display: block; }
+.props span { color: var(--graphite); font-size: .9rem; }
+table.uses { font-size: .9rem; }
+table.uses th, table.uses td { vertical-align: top; text-align: left; }
+table.uses tbody th { white-space: nowrap; }
+.result-chart > svg text[role="button"] { cursor: pointer; pointer-events: bounding-box; transition: opacity .15s, fill .15s; }
+.result-chart > svg text[role="button"]:focus-visible { outline: 2px solid var(--lane2); outline-offset: 3px; }
+.rc-explain { margin: 4px 0 10px; min-height: 2.8em; max-width: 880px; border-left: 2px solid var(--rule); padding: 4px 10px; color: var(--graphite); }
+.rc-explain.on { border-color: #4ade80; }
+.rc-explain strong { color: #4ade80; }
+.rc-explain.side { position: absolute; margin: 0; min-height: 0; font-size: .9rem; }
+.rc-explain.side strong { display: none; }
+.chart-key { display: flex; flex-wrap: wrap; gap: 6px 18px; list-style: none; padding: 0; margin: 8px 0; font-size: .85rem; color: var(--graphite); }
+.chart-key svg { vertical-align: middle; margin-right: 6px; }
+.how-steps { counter-reset: how; list-style: none; padding: 0; margin: 12px 0; display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.how-steps li { border: 1px solid var(--rule); padding: 14px; }
+.how-steps li::before { counter-increment: how; content: counter(how); display: block; font-size: 1.5rem; font-weight: 700; color: var(--graphite); }
+.replay-step { border-left-color: var(--rule); }
+#demo { scroll-margin-top: 12px; }
+input[type=number] { font: inherit; background: #1f1e1d; color: var(--ink); border: 1px solid #5f5d58; padding: 8px; width: 6.5em; }
+input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
+.mission-foot { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 16px; margin-top: 8px; }
+.playback { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.playback button { padding: 5px 12px; font-size: .88rem; }
+#play-toggle { min-width: 6.5em; }
+#play-toggle.paused { border-color: var(--gfp); color: var(--gfp); }
+.speed { display: inline-flex; }
+.speed .speed-option { border-radius: 0; margin-left: -1px; min-width: 2.6em; padding: 5px 8px; }
+.speed .speed-option:first-child { border-radius: 3px 0 0 3px; margin-left: 0; }
+.speed .speed-option:last-child { border-radius: 0 3px 3px 0; }
+.speed .speed-option[aria-checked=true] { background: var(--ink); color: var(--paper); border-color: var(--ink); font-weight: 700; position: relative; }
+.play-status { font-size: .8rem; color: var(--graphite); min-width: 11em; font-variant-numeric: tabular-nums; }
+#mission.is-paused #mission-bar { background: var(--gfp); }
+#mission.is-evaluating .bar { height: 5px; }
+#mission.is-evaluating #mission-bar { width: 28% !important; background: var(--gfp); animation: eval-bounce 1.1s ease-in-out infinite alternate; }
+.eval-loading { margin: 10px 0; color: var(--graphite); font-size: .9rem; }
+.eval-loading[hidden] { display: none; }
+.eval-loading-track { position: relative; height: 7px; margin-top: 6px; overflow: hidden; border-radius: 99px; background: #2b2a28; }
+.eval-loading-track::after { content: ''; position: absolute; inset: 0 auto 0 0; width: 28%; border-radius: inherit; background: var(--gfp); animation: eval-bounce 1.1s ease-in-out infinite alternate; }
+@keyframes eval-bounce { to { transform: translateX(257%); } }
+@media (prefers-reduced-motion: reduce) { .eval-loading-track::after, #mission.is-evaluating #mission-bar { animation: none; width: 100% !important; } }
+.fly-alone:has(> .brain-view[hidden])::after { content: 'Fly B alone appears when student training starts'; display: flex; align-items: center; justify-content: center; text-align: center; padding: 20px; margin: 0 auto; max-width: 390px; aspect-ratio: 320 / 437; border: 1px dashed var(--rule); color: var(--graphite); font-size: .85rem; }
+@media (max-width: 600px) {
+  #mission { padding: 8px 0; }
+  #mission-mode, #mission .phases, .score-note { display: none; }
+  #mission .steps { font-size: .68rem; margin-bottom: 4px; }
+  #mission-title { font-size: 1.15rem; }
+  #live-story { font-size: .8rem; margin-bottom: 2px; }
+  .mission-main { gap: 4px; }
+  .scoreboard { grid-template-columns: repeat(3,1fr); }
+  .score span { font-size: 1.25rem; }
+  .score small { font-size: .68rem; }
+  .mission-foot { margin-top: 6px; }
+  .playback button { padding: 5px 9px; }
+  .play-status { flex-basis: 100%; min-width: 0; }
+}
+@media (max-width: 760px) { .hero-stats, .setup-grid, .how-steps { grid-template-columns: repeat(2,1fr); } .page-nav .secondary { margin-left: 0; } }
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header class="hero">
+        <canvas class="hero-flies" aria-hidden="true"></canvas>
+        <p class="kicker">Simulated fruit-fly connectome · 6,900 neurons · real Janelia data</p>
+        <h1>Synapse</h1>
+        <p class="hook">Two AI systems. Incompatible architectures. One sends 12 bytes. The other adapts 6× faster.</p>
+        <div class="hero-stats">
+          <div class="stat-tile"><strong>68<small> / 72</small></strong><span>taught fly wins — 48 rounds after the rule change</span></div>
+          <div class="stat-tile dim"><strong>10<small> / 72</small></strong><span>alone fly wins — same point, same conditions</span></div>
+          <div class="stat-tile"><strong>15<small> / 15</small></strong><span>runs where the taught fly recovered · alone fly: 0 / 15</span></div>
+          <div class="stat-tile accent"><strong>+19<small> wins</small></strong><span>second task (fault-response, random order) · 15 runs · same result</span></div>
+        </div>
+        <div class="hero-actions"><button id="hero-play" type="button" class="primary-btn">▶ Watch the demo — 1½ min</button><button id="hero-play-fast" type="button">▶ 30-second highlight</button><a class="button-link" href="#results">See the full result →</a></div>
+        <p class="hook-sub">Two tasks · 30 combined runs · locked protocols · all failures reported · <a href="#study-results">full research log</a></p>
+        <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
+      </header>
+      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist" aria-orientation="vertical"><a id="tab-btn-sim" role="tab" href="#demo" aria-controls="tab-sim" aria-selected="true">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Stats</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a></div></nav>
+      <main>
+        <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim">
+        <h2 id="demo" class="section-title">Live demo</h2>
+        <p class="section-lede">One agent learns a new rule. It sends 12 bytes to the other. Watch what happens.</p>
+        <div class="idea-steps" role="img" aria-label="Fly A learns the new rule, sends its suggested move to Fly B as spikes on two neurons, then is unplugged while Fly B is tested alone.">
+          <div><svg viewBox="0 0 240 72" aria-hidden="true"><g transform="translate(-34 0)"><ellipse cx="120" cy="36" rx="30" ry="22" fill="none" stroke="#e8e6df" stroke-width="2"/><text x="120" y="42" text-anchor="middle" fill="#e8e6df" font-size="18" font-weight="700">A</text><path d="M152 24 C188 4 188 68 152 48" fill="none" stroke="#8a929b" stroke-width="2"/><path d="M152 48 l10 -1 l-5 -8 z" fill="#8a929b"/><text x="196" y="40" fill="#a3abb4" font-size="12">win / loss</text></g></svg><p><strong>1. Fly A learns.</strong> It works out the new rule from its own wins and losses.</p></div>
+          <div><svg viewBox="0 0 240 72" aria-hidden="true"><ellipse cx="46" cy="36" rx="30" ry="22" fill="none" stroke="#e8e6df" stroke-width="2"/><text x="46" y="42" text-anchor="middle" fill="#e8e6df" font-size="18" font-weight="700">A</text><ellipse cx="194" cy="36" rx="30" ry="22" fill="none" stroke="#e8e6df" stroke-width="2"/><text x="194" y="42" text-anchor="middle" fill="#e8e6df" font-size="18" font-weight="700">B</text><line x1="80" y1="30" x2="158" y2="30" stroke="#8a929b" stroke-width="2"/><line x1="80" y1="42" x2="158" y2="42" stroke="#8a929b" stroke-width="2"/><circle cx="108" cy="30" r="5" fill="#4ade80"/><circle cx="132" cy="42" r="5" fill="#4ade80"/><path d="M158 24 l10 12 l-10 12 z" fill="#8a929b"/><text x="120" y="16" text-anchor="middle" fill="#e8e6df" font-size="14" font-weight="600">spikes on 2 neurons</text></svg><p><strong>2. Fly A advises.</strong> Each round it sends the move it would play. Fly B still plays and learns for itself.</p></div>
+          <div><svg viewBox="0 0 240 72" aria-hidden="true"><ellipse cx="46" cy="36" rx="30" ry="22" fill="none" stroke="#e8e6df" stroke-width="2" opacity=".3"/><text x="46" y="42" text-anchor="middle" fill="#e8e6df" font-size="18" font-weight="700" opacity=".3">A</text><line x1="80" y1="36" x2="104" y2="36" stroke="#8a929b" stroke-width="2" stroke-dasharray="4 4"/><path d="M112 28 l14 16 M126 28 l-14 16" stroke="#e8e6df" stroke-width="2.5"/><line x1="134" y1="36" x2="158" y2="36" stroke="#8a929b" stroke-width="2" stroke-dasharray="4 4"/><ellipse cx="194" cy="36" rx="30" ry="22" fill="none" stroke="#4ade80" stroke-width="3"/><text x="194" y="42" text-anchor="middle" fill="#4ade80" font-size="18" font-weight="700">B</text></svg><p><strong>3. Fly A is unplugged.</strong> Fly B plays 72 games alone. Every score on this page is measured this way.</p></div>
+        </div>
+        <section id="mission" aria-live="polite">
+          <ol class="steps">
+            <li id="mission-step-1" class="step">Opponent</li>
+            <li id="mission-step-2" class="step">Fly A learns</li>
+            <li id="mission-step-3" class="step">Fly A teaches Fly B</li>
+            <li id="mission-step-4" class="step">Final test</li>
+          </ol>
+          <div class="mission-main">
+            <div class="mission-text">
+              <p id="mission-mode" class="legend"></p><h2 id="mission-title">Press ▶ Watch the demo to see it in 1½ minutes</h2>
+              <p id="live-story">Or set up your own game in Step 1 and press Train Fly A live.</p>
+            </div>
+            <div class="scoreboard" aria-label="Wins in the last 24 rounds">
+              <div class="score taught"><span id="mission-taught">–</span><small>Taught Fly B</small></div>
+              <div class="score alone"><span id="mission-alone">–</span><small>Fly B Alone</small></div>
+              <div class="score alone"><span id="mission-random">–</span><small>Random messages</small></div>
+              <p id="score-note" class="score-note">wins in last 24 rounds</p>
+            </div>
+          </div>
+          <div class="bar"><div id="mission-bar"></div></div>
+          <input id="timeline" class="timeline" type="range" min="0" max="1" step="1" value="0" hidden aria-label="Recorded run timeline: drag to move through the run">
+          <div class="mission-foot">
+            <ol class="phases" aria-label="Stage of this round">
+              <li id="live-phase-0" class="phase">See</li>
+              <li id="live-phase-1" class="phase">Teach</li>
+              <li id="live-phase-2" class="phase">Reward</li>
+              <li id="live-phase-3" class="phase">Learn</li>
+            </ol>
+            <div class="playback" role="group" aria-label="Playback controls">
+              <button id="play-toggle" type="button" disabled aria-keyshortcuts="Space" title="Pause or resume (Space)">❚❚ Pause</button>
+              <button id="play-step" type="button" disabled aria-keyshortcuts="ArrowRight" title="Play one round, then pause (→)">Step ›</button>
+              <div class="speed" role="radiogroup" aria-label="Playback speed">
+                <button type="button" class="speed-option" data-speed="0.25" role="radio" aria-checked="false">¼×</button>
+                <button type="button" class="speed-option" data-speed="0.5" role="radio" aria-checked="false">½×</button>
+                <button type="button" class="speed-option" data-speed="1" role="radio" aria-checked="true">1×</button>
+                <button type="button" class="speed-option" data-speed="2" role="radio" aria-checked="false">2×</button>
+                <button type="button" class="speed-option" data-speed="4" role="radio" aria-checked="false">4×</button>
+              </div>
+              <span id="play-status" class="play-status" role="status">Start a run to use these</span>
+            </div>
+          </div>
+        </section>
+        <section id="challenge-panel" class="panel" aria-labelledby="challenge-title">
+            <div class="step-card step1-card">
+              <h2 id="challenge-title">Step 1 - Set up the game</h2>
+              <p class="legend">Pick how the opponent plays rock-paper-scissors and how long each fly practises.</p>
+              <div class="step1-cols"><div class="step1-col">
+              <h4>How does the opponent play?</h4>
+              <div class="controls">
+                <label>Opponent <select id="challenge-opponent">
+                  <option value="a">Circle: Rock → Paper → Scissors</option>
+                  <option value="b">Reverse circle: Rock → Scissors → Paper</option>
+                  <option value="noisy-a">Noisy circle: follows the circle 80% of the time (experimental)</option>
+                  <option value="custom">My own pattern</option>
+                </select></label>
+              </div>
+              <div id="challenge-pattern-wrap" hidden>
+                <p class="legend">Add up to 5 moves. The opponent plays them in order, then starts again.</p>
+                <div class="controls"><button id="challenge-add-rock">+ Rock</button><button id="challenge-add-paper">+ Paper</button><button id="challenge-add-scissors">+ Scissors</button></div>
+                <div id="challenge-pattern-list" class="pattern-list" aria-label="Custom opponent pattern"></div>
+              </div>
+              <div class="opponent-preview">
+                <p><span class="legend">Opponent plays</span> <strong id="challenge-pattern-preview"></strong></p>
+                <p><span class="legend">To win, play</span> <strong id="challenge-answer-preview"></strong></p>
+              </div>
+              <p id="challenge-rule" class="legend"></p>
+              <p id="challenge-pattern-warning" class="legend"></p>
+              </div><div class="step1-col">
+              <h4>How many rounds does each fly train?</h4>
+              <div class="controls">
+                <label>Fly A <select id="challenge-teacher-rounds"><option value="24">24 rounds</option><option value="48">48 rounds</option><option value="96">96 rounds</option><option value="144">144 rounds</option><option value="288" selected>288 rounds</option></select></label>
+                <label>Fly B <select id="challenge-student-rounds"><option value="six">6 rounds, then continue to 288</option><option value="24" selected>24 rounds</option><option value="48">48 rounds</option><option value="96">96 rounds</option><option value="144">144 rounds</option><option value="288">288 rounds</option></select></label>
+              </div>
+              <div class="controls"><label><input id="challenge-fast" type="checkbox"> Quick Fly B run: skip the in-between tests (faster, but no Fly B learning curve)</label></div>
+              <p class="legend">One round is one game. After training, each fly takes a 72-game frozen test with no help or learning. Fly A defaults to 288 rounds; Fly B defaults to 24 for a quicker demonstration. Choose 288 for the full student budget.</p>
+              <details><summary>Advanced</summary>
+                <div class="controls"><label>Random seed <input id="challenge-seed" type="number" min="1" max="9999" step="1" value="830"></label></div>
+                <p class="legend">The seed sets the random noise in the simulated neurons. The same seed and settings give the same result.</p>
+              </details>
+              <div class="controls"><button id="challenge-reset">Reset</button></div>
+              </div></div>
+            </div>
+          <div class="train-row">
+            <div class="step-card step2-card cell-top">
+              <h3 class="step-title">Step 2 - Train Fly A</h3>
+              <p id="challenge-teacher-plan" class="legend">Fly A learns from its own wins and losses for 288 rounds.</p>
+          <div class="controls"><button id="challenge-replay-switch" class="primary" type="button">▶ Rule change (recorded, 1½ min)</button><button id="challenge-replay" type="button">Normal learning (recorded)</button><button id="challenge-train">Train Fly A live</button></div>
+          <p id="challenge-status" class="visually-hidden" role="status">Ready to train Fly A.</p>
+              <p id="teacher-badge" class="run-badge" aria-live="polite"></p>
+            </div>
+            <div class="step-card step2-card cell-bottom">
+              <article id="teacher-card" class="brain-card fly-a"><h3>Fly A <small>teacher</small></h3><div class="result-strip" aria-hidden="true"></div><figure class="brain-view"><canvas id="challenge-teacher-brain" class="brain" width="320" height="437" role="img" aria-label="Rotatable three-dimensional Fly A connectome point cloud; live simulated spikes appear during the Challenge"></canvas><figcaption id="challenge-teacher-brain-header">Loading connectome anatomy; live spikes begin with Fly A training.</figcaption></figure></article>
+              <p id="challenge-teacher-progress">0 / 288 training rounds</p>
+              <div id="challenge-eval-loading" class="eval-loading" role="status" hidden><span id="challenge-eval-loading-text">Checking 72 frozen games…</span><div class="eval-loading-track" aria-hidden="true"></div></div>
+          <p id="teacher-details-hint" class="legend">Inside Fly A's brain: press <strong>Train Fly A live</strong> to see its neurons.</p><details id="teacher-details" class="panel" hidden><summary>Inside Fly A's brain <small>(live training only)</small></summary><div><div><p class="legend">These come straight from Fly A's simulated neurons and update after every game while it trains live.</p><p id="challenge-teacher-last">Last game: waiting</p><p id="challenge-teacher-kc" class="legend">Neurons that noticed the opponent's last move: waiting</p><p class="legend">How strongly Fly A's brain leans toward each move (output-neuron spikes per neuron):</p><div id="challenge-teacher-bars" class="neural-bars"></div><p id="challenge-teacher-q" class="legend">How good Fly A thinks each move is: waiting</p><p id="challenge-teacher-eval">Test score: after training</p></div></div></details>
+            </div>
+          <section class="step-card step3-card cell-top" aria-labelledby="compare-title">
+            <h3 id="compare-title">Step 3 - Compare Fly B students</h3>
+            <p id="compare-plan" class="legend">Two Fly B brains are shown: With Teacher and Alone. A third matched student receives random messages in the background; its score appears above and in the frozen comparison.</p>
+            <div class="controls"><button id="compare-start" disabled class="primary">▶ Teach Fly B</button><span class="legend">Pause, step, and speed controls are in the bar above.</span><span id="compare-round" class="visually-hidden">0 / 24 training rounds</span></div>
+            <p id="compare-status" class="visually-hidden" role="status">Both students idle.</p>
+            <p id="compare-teacher-score" class="legend">Fly A frozen score: pending training.</p>
+          <div id="teach-head">
+          <h4 id="brain-stage-title">Fly B brains</h4>
+          <p class="legend">Fly A's brain in Step 2 keeps firing while it sends spikes to the taught Fly B shown here.</p>
+          <div id="stage-card" class="stage-card" hidden aria-live="polite"><strong id="stage-card-title"></strong><p id="stage-card-text"></p></div>
+          <div id="teach-message" class="teach-message" hidden aria-live="polite"><div><small>1 · Fly A prefers</small><strong id="teach-move">—</strong></div><div><small>2 · Measured DN spikes in Fly B</small><strong id="teach-dn-counts">—</strong><span id="teach-detail">Decoded: —</span></div><div><small>3 · Fly B reward learning</small><strong id="teach-update">—</strong><span id="teach-update-detail"></span></div><p class="teach-note">Fly B plays before receiving advice; the decoded message can affect later choices.</p></div>
+          <p class="strip-key">Squares under each name: last 24 training games ·<i style="background:var(--gfp)"></i>win<i style="background:#3a4149"></i>draw<i style="background:#7a3f4c"></i>loss</p>
+          </div>
+          </section>
+          <div class="step-card step3-card cell-bottom">
+        <section id="brain-stage" class="panel" aria-labelledby="brain-stage-title">
+          <div class="brain-pair">
+            <article class="brain-card fly-b"><h3>Fly B <small>taught</small><span id="teach-arrow" class="teach-arrow" aria-hidden="true">← Fly A</span></h3><div id="guided-strip" class="result-strip" role="img" aria-label="Taught Fly B: last 24 training games"></div><figure id="guided-brain-view" class="brain-view"><canvas id="guided-brain" class="brain" width="320" height="437" role="img" aria-label="Rotatable three-dimensional Fly B connectome point cloud; live simulated spikes appear during the Challenge"></canvas><figcaption id="guided-brain-header">Loading connectome anatomy; live spikes begin with student training.</figcaption></figure></article>
+            <article class="brain-card fly-alone"><h3>Fly B <small>alone</small></h3><div id="alone-strip" class="result-strip" role="img" aria-label="Fly B alone: last 24 training games"></div><figure id="alone-brain-view" class="brain-view"><canvas id="alone-brain" class="brain" width="320" height="437" role="img" aria-label="Fly B Alone connectome anatomy; live simulated spikes appear during training"></canvas><figcaption id="alone-brain-header">Brain view loads when student training starts</figcaption></figure></article>
+          </div>
+          <div class="brain-tools">
+          <div class="controls"><button id="brain-reset" type="button" aria-label="Reset 3D brain view">Reset view</button><span id="brain-scene-status" class="legend">Loading connectome points…</span></div>
+          <ul class="brain-legend" aria-label="Neuron class colors">
+            <li><button type="button" class="role-toggle" data-role="vpn" aria-pressed="true"><span class="brain-swatch" style="background:var(--neuron-vpn)"></span>VPN</button></li>
+            <li><button type="button" class="role-toggle" data-role="kc" aria-pressed="true"><span class="brain-swatch" style="background:var(--neuron-kc)"></span>KC</button></li>
+            <li><button type="button" class="role-toggle" data-role="mbon" aria-pressed="true"><span class="brain-swatch" style="background:var(--neuron-mbon)"></span>MBON</button></li>
+            <li><button type="button" class="role-toggle" data-role="pam" aria-pressed="true"><span class="brain-swatch" style="background:var(--neuron-pam)"></span>PAM</button></li>
+            <li><button type="button" class="role-toggle" data-role="ppl1" aria-pressed="true"><span class="brain-swatch" style="background:var(--neuron-ppl1)"></span>PPL1</button></li>
+            <li><button type="button" class="role-toggle" data-role="mid" aria-pressed="false"><span class="brain-swatch" style="background:var(--neuron-mid)"></span>Mid</button></li>
+            <li><button type="button" class="role-toggle" data-role="dn" aria-pressed="true"><span class="brain-swatch" style="background:var(--neuron-dn)"></span>DN</button></li>
+            <li><button type="button" class="role-toggle" data-role="vnc" aria-pressed="false"><span class="brain-swatch" style="background:var(--neuron-vnc)"></span>VNC</button></li>
+          </ul>
+          </div>
+          <p id="brain-pick" class="legend" role="status">Click a dot to identify a neuron.</p>
+          <details class="legend"><summary>About this view</summary><p>Points are measured 3D cell-body positions from the male CNS v1.0 annotations; 73 of the 6,900 simulated neurons have no position and are not drawn. Light and shadow are a display aid estimated from point density. The views turn on their own: drag to take over, and use Reset view to resume. Colored dots mark neuron classes. During live training, every recent spike flashes on top of the surface, including spikes inside the brain or on its far side. Background firing from the nerve cord (VNC) and central brain (Mid) starts hidden; click those classes to show it.</p></details>
+        </section>
+            <details class="panel"><summary>Round-by-round details</summary><div class="grid">
+              <article class="panel"><h4>Fly B Alone</h4><p id="alone-status">Idle until Fly A finishes</p><p id="alone-action">No action yet</p><p id="alone-recent">Recent wins: waiting</p><p id="alone-kc" class="legend">KC activity: waiting</p><div id="alone-bars" class="neural-bars"></div><p id="alone-q" class="legend">Learned action values: waiting</p></article>
+              <article class="panel"><h4>Fly B With Teacher</h4><p id="guided-status">Idle until Fly A finishes</p><p id="guided-proposal" class="replay-step">1. Own action: waiting</p><p id="guided-advice" class="replay-step">2. Fly A preference: waiting</p><p id="guided-dn" class="replay-step">3. Measured DN spikes: waiting</p><p id="guided-action" class="replay-step">4. Final action and reward: waiting</p><p id="guided-q" class="replay-step">5. Own-reward update: waiting</p><p id="guided-recent">Recent wins: waiting</p><p id="guided-kc" class="legend">KC activity: waiting</p><div id="guided-bars" class="neural-bars"></div></article>
+            </div></details>
+          </div>
+          </div>
+          <section class="step-block" aria-labelledby="step4-title">
+            <h3 id="step4-title">Step 4 - Disconnect and compare</h3>
+            <div id="run-next" class="run-next" hidden>
+              <p id="run-next-text"></p>
+              <div class="controls"><a href="#stats">See this run in Stats →</a><a href="#results">How it held up across 15 runs →</a><a id="run-try" href="#challenge-title">Train your own flies live →</a></div>
+              <p id="run-about" class="legend"></p>
+            </div>
+            <p id="compare-result" class="legend">Waiting for the final test.</p>
+            <div id="compare-eval-loading" class="eval-loading" role="status" hidden><span>Checking frozen games for both Fly Bs…</span><div class="eval-loading-track" aria-hidden="true"></div></div>
+            <div id="compare-cards" class="grid" hidden>
+              <article class="panel"><h4>Fly B Alone</h4><p id="compare-alone-score" class="move">—</p><p id="compare-alone-cues" class="legend"></p></article>
+              <article class="panel"><h4>Fly B With Teacher</h4><p id="compare-guided-score" class="move">—</p><p id="compare-guided-cues" class="legend"></p></article>
+            </div>
+            <p id="compare-difference" class="finding" hidden></p>
+            <button id="compare-continue" type="button" hidden disabled>Continue training to 288 rounds</button>
+            <p class="legend">This is one run with one control. <a href="#results">The 15-run study</a> tests four controls.</p>
+            <p class="legend"><a href="#live-runs">See how training rounds relate to wins in the Stats tab →</a></p>
+          </section>
+        </section>
+        </div>
+        <div id="tab-stats" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-stats" hidden>
+        <h2 id="stats" class="section-title">Stats</h2>
+        <p class="section-lede">The locked 15-run study first, then the numbers from your own live runs on this page.</p>
+        <section id="results" class="panel" aria-labelledby="results-title">
+          <h2 id="results-title">The result: teaching helps most when the rules change</h2>
+          <p class="section-lede">Fifteen independent runs. Each Fly B first learned one rule (Rock → Paper → Scissors), then the opponent switched to the reverse (Rock → Scissors → Paper). Average games won out of 72, tested with Fly A disconnected and learning switched off.</p>
+          <figure class="result-chart">
+            <svg viewBox="0 0 740 330" role="img" aria-labelledby="result-chart-title result-chart-desc">
+<title id="result-chart-title">Average frozen wins after the rule change, 15 runs</title>
+<desc id="result-chart-desc">At 48 rounds: taught 67.7, shuffled 32.6, random 32.4, untrained 22.6, alone 10.1 wins out of 72.</desc><line x1="56" x2="584" y1="290.0" y2="290.0" stroke="#2e2d2a" stroke-width="1"/><text x="48" y="294.0" text-anchor="end" fill="#6b6960" font-size="13">0</text><line x1="56" x2="584" y1="206.7" y2="206.7" stroke="#2e2d2a" stroke-width="1"/><text x="48" y="210.7" text-anchor="end" fill="#6b6960" font-size="13">24</text><line x1="56" x2="584" y1="123.3" y2="123.3" stroke="#2e2d2a" stroke-width="1"/><text x="48" y="127.3" text-anchor="end" fill="#6b6960" font-size="13">48</text><line x1="56" x2="584" y1="40.0" y2="40.0" stroke="#2e2d2a" stroke-width="1"/><text x="48" y="44.0" text-anchor="end" fill="#6b6960" font-size="13">72</text><text x="56.0" y="310" text-anchor="middle" fill="#6b6960" font-size="13">0</text><text x="188.0" y="310" text-anchor="middle" fill="#6b6960" font-size="13">24</text><text x="320.0" y="310" text-anchor="middle" fill="#6b6960" font-size="13">48</text><text x="584.0" y="310" text-anchor="middle" fill="#6b6960" font-size="13">96</text><text x="320" y="327" text-anchor="middle" fill="#6b6960" font-size="13">Rounds after the rule change</text><line x1="320.0" x2="320.0" y1="34" y2="290" stroke="#5f5d58" stroke-width="1" stroke-dasharray="3 3"/><text x="326.0" y="46" fill="#a3abb4" font-size="13">test point</text><path d="M56.0 287.6 L188.0 261.9 L320.0 211.5 L584.0 207.0" fill="none" stroke="#6f7882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 4"/><text x="594.0" y="211.0" fill="#6b6960" font-size="14">Untrained teacher</text><path d="M56.0 287.6 L188.0 275.1 L320.0 254.9 L584.0 168.1" fill="none" stroke="#8a929b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="594.0" y="172.1" fill="#8a929b" font-size="14">Alone</text><path d="M56.0 287.6 L188.0 249.0 L320.0 177.5 L584.0 111.9" fill="none" stroke="#a3abb4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 4"/><text x="594.0" y="124.9" fill="#8a929b" font-size="14">Random messages</text><path d="M56.0 287.6 L188.0 256.7 L320.0 176.8 L584.0 106.0" fill="none" stroke="#a3abb4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 4"/><text x="594.0" y="102.0" fill="#8a929b" font-size="14">Shuffled messages</text><path d="M56.0 287.6 L188.0 111.9 L320.0 54.9 L584.0 47.3" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="594.0" y="51.3" fill="#4ade80" font-size="15" font-weight="700">Taught by Fly A</text><circle cx="56.0" cy="287.6" r="4.5" fill="#ffffff" stroke="#191918" stroke-width="2"/><circle cx="56.0" cy="287.6" r="10" fill="transparent"><title>Taught by Fly A: 0.7 of 72 wins after 0 rounds</title></circle><circle cx="188.0" cy="111.9" r="4.5" fill="#ffffff" stroke="#191918" stroke-width="2"/><circle cx="188.0" cy="111.9" r="10" fill="transparent"><title>Taught by Fly A: 51.3 of 72 wins after 24 rounds</title></circle><circle cx="320.0" cy="54.9" r="4.5" fill="#ffffff" stroke="#191918" stroke-width="2"/><circle cx="320.0" cy="54.9" r="10" fill="transparent"><title>Taught by Fly A: 67.7 of 72 wins after 48 rounds</title></circle><circle cx="584.0" cy="47.3" r="4.5" fill="#ffffff" stroke="#191918" stroke-width="2"/><circle cx="584.0" cy="47.3" r="10" fill="transparent"><title>Taught by Fly A: 69.9 of 72 wins after 96 rounds</title></circle><circle cx="56.0" cy="287.6" r="10" fill="transparent"><title>Shuffled messages: 0.7 of 72 wins after 0 rounds</title></circle><circle cx="188.0" cy="256.7" r="10" fill="transparent"><title>Shuffled messages: 9.6 of 72 wins after 24 rounds</title></circle><circle cx="320.0" cy="176.8" r="10" fill="transparent"><title>Shuffled messages: 32.6 of 72 wins after 48 rounds</title></circle><circle cx="584.0" cy="106.0" r="10" fill="transparent"><title>Shuffled messages: 53 of 72 wins after 96 rounds</title></circle><circle cx="56.0" cy="287.6" r="10" fill="transparent"><title>Random messages: 0.7 of 72 wins after 0 rounds</title></circle><circle cx="188.0" cy="249.0" r="10" fill="transparent"><title>Random messages: 11.8 of 72 wins after 24 rounds</title></circle><circle cx="320.0" cy="177.5" r="10" fill="transparent"><title>Random messages: 32.4 of 72 wins after 48 rounds</title></circle><circle cx="584.0" cy="111.9" r="10" fill="transparent"><title>Random messages: 51.3 of 72 wins after 96 rounds</title></circle><circle cx="56.0" cy="287.6" r="10" fill="transparent"><title>Alone: 0.7 of 72 wins after 0 rounds</title></circle><circle cx="188.0" cy="275.1" r="10" fill="transparent"><title>Alone: 4.3 of 72 wins after 24 rounds</title></circle><circle cx="320.0" cy="254.9" r="10" fill="transparent"><title>Alone: 10.1 of 72 wins after 48 rounds</title></circle><circle cx="584.0" cy="168.1" r="10" fill="transparent"><title>Alone: 35.1 of 72 wins after 96 rounds</title></circle><circle cx="56.0" cy="287.6" r="10" fill="transparent"><title>Untrained teacher: 0.7 of 72 wins after 0 rounds</title></circle><circle cx="188.0" cy="261.9" r="10" fill="transparent"><title>Untrained teacher: 8.1 of 72 wins after 24 rounds</title></circle><circle cx="320.0" cy="211.5" r="10" fill="transparent"><title>Untrained teacher: 22.6 of 72 wins after 48 rounds</title></circle><circle cx="584.0" cy="207.0" r="10" fill="transparent"><title>Untrained teacher: 23.9 of 72 wins after 96 rounds</title></circle><text x="314.0" y="44.9" text-anchor="end" fill="#4ade80" font-size="16" font-weight="700">68</text><text x="326.0" y="270.9" fill="#888" font-size="16" font-weight="700">10</text></svg>
+            <figcaption><ul class="chart-key" aria-label="Chart key"><li><svg width="28" height="8" aria-hidden="true"><line x1="1" x2="27" y1="4" y2="4" stroke="#ffffff" stroke-width="3"/></svg>Taught by Fly A</li><li><svg width="28" height="8" aria-hidden="true"><line x1="1" x2="27" y1="4" y2="4" stroke="#a3abb4" stroke-width="2" stroke-dasharray="2 4"/></svg>Shuffled messages</li><li><svg width="28" height="8" aria-hidden="true"><line x1="1" x2="27" y1="4" y2="4" stroke="#a3abb4" stroke-width="2" stroke-dasharray="7 4"/></svg>Random messages</li><li><svg width="28" height="8" aria-hidden="true"><line x1="1" x2="27" y1="4" y2="4" stroke="#8a929b" stroke-width="2"/></svg>Alone</li><li><svg width="28" height="8" aria-hidden="true"><line x1="1" x2="27" y1="4" y2="4" stroke="#6f7882" stroke-width="2" stroke-dasharray="12 4"/></svg>Untrained teacher</li></ul></figcaption>
+          </figure>
+          <noscript><ul class="legend"><li><strong>Taught by Fly A:</strong> the trained Fly A sends its real suggested move each round.</li><li><strong>Shuffled messages:</strong> Fly A's real suggestions, on the wrong rounds.</li><li><strong>Random messages:</strong> a random move on the same rounds.</li><li><strong>Alone:</strong> no messages.</li><li><strong>Untrained teacher:</strong> a never-trained Fly A; it always suggested one move, so it is a weak control.</li></ul></noscript>
+          <div class="faster">
+            <p class="faster-head">How much faster? Runs that reached 58 of 72 wins within 48 rounds of the rule change</p>
+            <ul class="faster-bars">
+              <li class="taught"><span>Taught by Fly A</span><b style="--n:15"></b><em>15 of 15</em></li>
+              <li><span>Random messages</span><b style="--n:2"></b><em>2 of 15</em></li>
+              <li><span>Shuffled messages</span><b style="--n:0"></b><em>0 of 15</em></li>
+              <li><span>Untrained teacher</span><b style="--n:0"></b><em>0 of 15</em></li>
+              <li><span>Alone</span><b style="--n:0"></b><em>0 of 15</em></li>
+            </ul>
+            <p class="legend">Even by 96 rounds, Fly B learning alone reached 58/72 in only 2 of 15 runs. Counted from the saved 24-, 48- and 96-round checkpoints in <a href="data/rule_switch_cohort_summary.json">the cohort results</a>; this is a summary of that data, not the study's locked primary measure.</p>
+          </div>
+          <details><summary>Show as a table</summary><div class="scroll"><table><caption>Average wins out of 72, Fly A disconnected (15 runs)</caption><thead><tr><th>Rounds after change</th><th>Taught by Fly A</th><th>Shuffled messages</th><th>Random messages</th><th>Alone</th><th>Untrained teacher</th></tr></thead><tbody><tr><td>0</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr><tr><td>24</td><td>51.3</td><td>9.6</td><td>11.8</td><td>4.3</td><td>8.1</td></tr><tr><td>48</td><td>67.7</td><td>32.6</td><td>32.4</td><td>10.1</td><td>22.6</td></tr><tr><td>96</td><td>69.9</td><td>53</td><td>51.3</td><td>35.1</td><td>23.9</td></tr></tbody></table></div></details>
+            <div id="study-results" class="panel">
+              <h4>Every study at a glance</h4>
+              <div class="scroll"><table class="studies">
+                <thead><tr><th>Question</th><th>Runs</th><th>What we found (wins out of 72, Fly A unplugged)</th><th>Met its rule set in advance?</th></tr></thead>
+                <tbody>
+                  <tr><th>Does teaching speed up learning a fixed rule?</th><td>20 pairs</td><td>Taught led the best control in each pair by 10.3 after 6 rounds</td><td class="ok">Yes</td></tr>
+                  <tr><th>Does it help after the rule changes?</th><td>15</td><td>Taught 68, shuffled messages 33, alone 10. Lead over the best control in each run: 24.9</td><td class="ok">Yes</td></tr>
+                  <tr><th>Is it what the teacher knows, not just a confident teacher?</th><td>15</td><td>New-rule teacher 68, old-rule teacher 1</td><td class="ok">Yes</td></tr>
+                  <tr><th>Can Fly B learn how far to trust one teacher?</th><td>14</td><td>Got back 34 of the wins a bad teacher cost (36 against 1), but stayed 7.5 below learning alone</td><td class="no">No</td></tr>
+                  <tr><th>Can Fly B pick the right one of two teachers?</th><td>14</td><td>Ended level with the good teacher alone (70). Lead over following both: 8.4, just under the bar</td><td class="no">No, narrowly</td></tr>
+                  <tr><th>Does it carry over to a second task?</th><td>15, after two 3-run pilots that failed</td><td>Alarm-response task: taught 70, shuffled 44, random 36, alone 8. Lead over the best control in each run: 19.0</td><td class="ok">Yes, on the third test</td></tr>
+                  <tr><th>Does it hold on a simulator we wrote ourselves?</th><td>10 of 15 completed</td><td>Taught 70, shuffled messages 28, alone 4. Lead over the best control in each run: 35.0. On 5 runs the teacher did not learn well enough and the run stopped</td><td class="ok">Yes, at the minimum number of runs</td></tr>
+                </tbody>
+              </table></div>
+              <details><summary>Full write-up of each study, with confidence intervals and links</summary>
+              <p class="finding"><strong>20-pair study:</strong> after 6 rounds, taught Fly Bs won <strong>+10.3/72</strong> more than the best control (95% CI +7.3 to +13.6; 15 of 19 pairs). Alone students catch up by round 288.</p>
+              <p id="study-rule-switch" class="finding"><strong>Rule change (15-seed study):</strong> 48 rounds after the opponent switched rules, taught Fly Bs averaged <strong>68/72</strong>, against 10 alone, 32 random messages, 33 shuffled, and 23 untrained teacher. Lead over the best control: <strong>+24.9/72</strong> (95% CI +17.8 to +32.1); random messages matched the teacher on 1 of 15 seeds. At 96 rounds, alone averaged 35. Random and shuffled messages also beat learning alone (32 and 33 against 10), so part of the gap to "alone" comes from any message loosening the old habit. The teacher's own contribution is the +24.9 over the best control, not the 58 over alone.</p>
+              <p class="legend">Both use locked protocols and frozen tests with Fly A disconnected, with untrained-teacher, shuffled, random, and alone controls.</p>
+              <p id="study-stale" class="finding"><strong>Out-of-date teacher (locked protocol, 15 new runs):</strong> a Fly A trained just as well, but on the <em>old</em> rule, gave Fly B no help. At 48 rounds, average wins of 72: taught by the new-rule Fly A <strong>68</strong>; taught by the old-rule Fly A <strong>1</strong>; alone 14. Difference <strong>+67.1</strong> (95% CI +65.6 to +68.4). So the gain comes from what Fly A knows about the current rule, not from having a confident teacher. It also does harm: by 96 rounds the old-rule teacher held its students at 1 win while those learning alone reached 31 (30 fewer, 95% CI 21 to 39 fewer; 12 of 15 runs). An earlier 3-run pilot agreed. <a href="docs/stale-teacher-cohort-protocol.md">Protocol</a> · <a href="data/stale_teacher_cohort_summary.json">results</a> · <a href="data/stale_teacher_control_summary.json">pilot</a>.</p>
+              <p id="study-trust" class="finding"><strong>Can Fly B learn whom to trust? (locked protocol, 14 completed runs): mostly.</strong> Here Fly B lowers its trust in the teacher whenever it plays the advised move and does not win. With the old-rule Fly A, at 96 rounds it won <strong>36</strong> of 72 on average, against 1 without the check: <strong>+34.2</strong> (95% CI +25.6 to +42.0). With the new-rule Fly A it kept the speed-up (67 against 68 at 48 rounds). It still ended <strong>7.5 wins below</strong> learning alone (43; 95% CI 2.2 to 12.9 below), so this study <strong>failed</strong> its pass rule, which required no remaining harm. <a href="docs/trust-gate-cohort-protocol.md">Protocol</a> · <a href="data/trust_gate_cohort_summary.json">results</a>.</p>
+              <p id="study-two-teachers" class="finding"><strong>Two teachers who disagree (locked protocol, 14 completed runs): a narrow fail.</strong> Fly B heard a new-rule Fly A and an old-rule Fly A on every round and was not told which was which. Keeping a trust value for each, it ended at <strong>70</strong> of 72 at 96 rounds: the same score as hearing only the new-rule teacher, on all 14 runs, and 34 above learning alone (36). But a Fly B that followed both equally also reached 62 by then, so the lead from choosing was <strong>+8.4</strong> (95% CI +3.8 to +13.6), just short of the +4 lower bound the protocol required. This study <strong>failed</strong> its pass rule. Earlier on, the gap was wider (48 rounds: 68 against 50; 24 rounds: 46 against 10), but those were not the locked test. <a href="docs/two-teacher-cohort-protocol.md">Protocol</a> · <a href="data/two_teacher_cohort_summary.json">results</a>.</p>
+              <p id="study-second-task" class="finding"><strong>A second task (locked protocol, 15 runs): passed, on the third test.</strong> We replaced Rock-Paper-Scissors with a fault-response task: one of three alarms in random order, three responses, and a change in which response fixes each fault. 48 rounds after the change, taught Fly Bs won <strong>70</strong> of 72 on average, against 44 with shuffled messages, 36 random, 25 with an untrained teacher, and 8 alone. Lead over the best control in each run: <strong>+19.0</strong> (95% CI +11.8 to +26.2). On 4 of 15 runs a control came within 4 wins of the taught fly, and by 96 rounds the lead had shrunk to 6.3, so here too the gain is speed. <strong>What to hold against it:</strong> two 3-run pilots came first and both failed their rules. With a small change (one alarm), Fly B alone was perfect within 24 rounds and the teacher added nothing. With this large change, the taught fly led by 25, 0, and 25, and the pilot rule needed all three. We had said we would stop there; we reopened it as a 15-run test with the averaged rule the Rock-Paper-Scissors study used. <a href="docs/fault-response-cohort-protocol.md">Protocol</a> · <a href="data/fault_response_cohort_summary.json">results</a> · <a href="docs/fault-response-pilot-protocol.md">pilot 1</a> · <a href="docs/fault-response-full-change-protocol.md">pilot 2</a>.</p>
+              <p id="study-engine" class="finding"><strong>Our own simulator (locked protocol, 10 of 15 runs completed): passed.</strong> Everything above ran on the neural simulator that came with Fly Hero. We wrote a second one for this project (<code>js/engine.js</code>): the same published neuron model and the same connectome, but solved exactly at each step instead of approximately, so its spikes are not the same. We repeated the rule-change study on it with nothing re-tuned. In the 10 runs that completed, taught Fly Bs won <strong>70</strong> of 72 at 48 rounds, against 28 shuffled, 25 random, 24 with an untrained teacher, and 4 alone. Lead over the best control in each run: <strong>+35.0</strong> (95% CI +28.2 to +41.4), and the taught fly led by more than 4 in every one. <strong>What to hold against it:</strong> on 5 of 15 runs Fly A did not reach its 58-of-72 bar on the new simulator (it scored 47 to 54) and the run stopped, which never happened on the original simulator; the protocol needed at least 10 completed runs and got exactly 10. Neurons are less active on the new simulator, and the learner settings were tuned for the old one. So the result holds when the teacher has learned, and the teacher learns less reliably. <strong>Follow-up (locked protocol, 15 new runs, teacher only):</strong> when we re-measured the two numbers that scale the learner's inputs on the new simulator, using no rewards or answers, Fly A reached its bar on <strong>15 of 15</strong> runs, against 12 of 15 with the old numbers on the same runs. The teaching study has not been repeated with the new numbers. <a href="docs/engine-teacher-scaling-protocol.md">Protocol</a> · <a href="data/engine_teacher_scaling_summary.json">results</a>. We wrote this simulator after reading the original, so it is a check on one codebase, not an independent replication. <a href="docs/engine-replication-cohort-protocol.md">Protocol</a> · <a href="data/engine_replication_cohort_summary.json">results</a> · <a href="docs/engine-replication-pilot-protocol.md">pilot</a>.</p>
+              </details>
+            </div>
+          <p class="legend">Locked before running: <a href="docs/rule-switch-cohort-protocol.md">protocol</a> · <a href="data/rule_switch_cohort_summary.json">results</a> · <a href="docs/lab-notebook.md">lab notebook</a>.</p>
+        </section>
+        <details id="live-runs" class="panel"><summary>Your own live runs <small>(empty until you train a fly live on the Simulation tab)</small></summary>
+          <section id="rounds-summary" aria-labelledby="rounds-title">
+            <h3 id="rounds-title">Training rounds vs. wins</h3>
+            <p class="legend">How the number of training rounds relates to how many games each fly wins.</p>
+            <h4>Fly A: wins in each block of 24 training rounds</h4>
+            <div id="teacher-learning-chart" role="img" aria-label="Fly A training wins per 24-round block"></div>
+            <p id="teacher-learning-note" class="legend">Train Fly A live to fill this in.</p>
+            <div id="compare-learning" hidden>
+              <h4>Fly B: test score after each number of training rounds</h4>
+              <p class="legend">Each point is a 72-game test with Fly A disconnected and learning off. White: taught · Grey: alone · Dashed: random messages.</p>
+              <div id="compare-frozen-chart" role="img" aria-label="Frozen RPS wins versus training rounds"></div>
+              <details><summary>Exact scores</summary><div id="compare-checkpoints" class="legend"></div></details>
+              <p id="compare-interpretation" class="finding"></p>
+              <h4>Fly B: wins in each block of 24 training rounds</h4>
+              <div id="compare-training-chart" role="img" aria-label="Online training wins by episode"></div>
+            </div>
+            <h4>Your runs: rounds trained vs. final test score</h4>
+            <p class="legend">Each live run you finish is added here. Try 24, 48, and 288 rounds to see how training length changes the score. Runs are not saved when you leave the page.</p>
+            <div class="runs-key"><span><i style="background:var(--gfp)"></i>Fly A</span><span><i style="background:#ffffff;border-radius:50%"></i>Taught Fly B</span><span><i style="background:#8a929b;border-radius:50%"></i>Fly B alone</span></div>
+            <div id="runs-chart" role="img" aria-label="Final test wins versus training rounds for each finished run"></div>
+            <p id="runs-correlation" class="legend">No finished runs yet.</p>
+            <div class="scroll"><table><thead><tr><th>Run</th><th>Opponent</th><th>Seed</th><th>Fly A rounds</th><th>Fly A score</th><th>Fly B rounds</th><th>Taught Fly B</th><th>Fly B alone</th></tr></thead><tbody id="runs-table"></tbody></table></div>
+          </section>
+        </details>
+        </div>
+        <div id="tab-research" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-research" hidden>
+        <h2 id="research" class="section-title">Research</h2>
+        <p class="section-lede">How the system works, what it does and does not show, and the archived experiments behind it.</p>
+        <section id="how" class="panel" aria-labelledby="how-title">
+          <h2 id="how-title">How it works</h2>
+          <ol class="how-steps">
+            <li><strong>Fly A learns.</strong> A simulated fruit-fly connectome plays Rock-Paper-Scissors. A small readout of its brain activity learns from its own wins and losses; the connectome's own synapses stay fixed.</li>
+            <li><strong>Fly A sends spikes, not weights.</strong> On each round it sends its preferred move as spikes on two descending neurons (DNge175) in Fly B's brain.</li>
+            <li><strong>Fly B learns for itself.</strong> Fly B plays its own move, learns from its own reward, and leans toward Fly A's suggestion. Then Fly A is disconnected and Fly B is tested alone.</li>
+          </ol>
+          <div class="hero-stats">
+            <div class="stat-tile"><strong>&lt;12<small> bytes</small></strong><span>everything Fly A sent before the test point: 46 messages on 2 neurons</span></div>
+            <div class="stat-tile"><strong>0<small> weights shared</small></strong><span>Fly B's learner has a different structure (48 numbers vs Fly A's 13), so weights could not be copied anyway</span></div>
+            <div class="stat-tile"><strong>990,102</strong><span>connectome synapses, identical in both flies and never changed</span></div>
+          </div>
+          <h3 id="uses">Where this could lead</h3>
+          <p>Real systems rarely share one model. When conditions change, a partner that has already adapted could help a differently built one catch up — sending a few bytes of advice, without handing over its model or its data. Three concrete scenarios where this matters today:</p>
+          <div class="scenario-cards" style="margin-bottom:20px">
+            <div class="scenario-card"><strong><svg class="scenario-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6z"/><path d="M5.5 10v8M10 10v8M14 10v8M18.5 10v8"/><path d="M3 20.5h18"/></svg>Fraud detection</strong><p>Fraudsters change tactics. Bank A adapts. Bank B runs a different model — private data, incompatible architecture. Bank A sends "I would block this." Bank B adapts faster. <em>Dal Pozzolo et al. 2018: fraud drifts continuously across 75M real transactions.</em></p></div>
+            <div class="scenario-card"><strong><svg class="scenario-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M12 8v8M8 12h8"/></svg>Hospital diagnostics</strong><p>Sepsis criteria change. Hospital A updates. Hospital B can't receive it — HIPAA blocks data, different EHR blocks weight transfer. Hospital A sends a per-patient flag. Hospital B recalibrates. <em>Finlayson et al. 2021: deployed clinical AI degrades as patients shift.</em></p></div>
+            <div class="scenario-card"><strong><svg class="scenario-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17H3v-3l2-5.2a2 2 0 0 1 1.9-1.3h10.2a2 2 0 0 1 1.9 1.3L21 14v3h-2"/><path d="M9 17h6M3.5 13.5h17"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>Mixed vehicle fleets</strong><p>Construction zone reverses a street. Tesla learns it. Waymo hasn't — different OS, competitor IP. At the junction, Tesla sends "I now do X." Waymo adapts before its own data catches up. <em>Open X-Embodiment 2023: cross-robot learning today needs one shared model.</em></p></div>
+          </div>
+          <p>Our result has four properties that make this possible:</p>
+          <ul class="props"><li><strong>Different builds</strong><span>Fly B's learner has a different structure from Fly A's, so nothing could be copied</span></li><li><strong>Tiny message</strong><span>under 12 bytes in total before the test point</span></li><li><strong>Nothing private sent</strong><span>only "I would play this move", never weights or game history</span></li><li><strong>Works after a change</strong><span>15 of 15 taught flies recovered within 48 rounds; 0 of 15 alone</span></li></ul>
+          <h4>What published research already shows</h4>
+          <ul>
+            <li><strong>Advice works between differently built learners.</strong> A trained agent that may advise only a limited number of times still speeds up a student that uses a different learning method and a different view of the task (<a href="https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2013/docs/p1053.pdf" rel="noopener">Torrey &amp; Taylor 2013</a>). This is the idea we test inside a connectome.</li>
+            <li><strong>Sharing weights has two real problems.</strong> The standard way for separate sites to learn together averages their model weights, so every site must run the same model (<a href="https://arxiv.org/abs/1602.05629" rel="noopener">McMahan et al. 2017</a>). And the updates they share can be turned back into the private training data, pixel for pixel (<a href="https://arxiv.org/abs/1906.08935" rel="noopener">Zhu et al. 2019</a>). Sharing outputs instead of weights lets differently designed models learn together (<a href="https://arxiv.org/abs/1910.03581" rel="noopener">Li &amp; Wang 2019</a>).</li>
+            <li><strong>Rules really do change in deployed systems.</strong> Clinical AI models degrade when technology, patients, or behaviour shift (<a href="https://doi.org/10.1056/NEJMc2104626" rel="noopener">Finlayson et al. 2021</a>). Fraud patterns drift over time in a three-year stream of 75 million card transactions (<a href="https://doi.org/10.1109/TNNLS.2017.2736643" rel="noopener">Dal Pozzolo et al. 2018</a>).</li>
+            <li><strong>Checking the adviser is an open problem.</strong> Recent work has students ask for advice only when they are unsure (<a href="https://doi.org/10.1609/aaai.v34i04.6036" rel="noopener">Da Silva et al. 2020</a>). Our own tests went the other way: Fly B learned from its wins how much to trust each teacher. That removed most, not all, of the harm from one out-of-date teacher. With a current and an out-of-date teacher together, it ended exactly where it would have with the current one alone, though following both equally got most of the way there too (Stats tab; both studies failed their strict pass rules).</li>
+            <li><strong>Real flies and real brains do this.</strong> Fruit flies copy the mate choices and egg-laying sites of other flies, and the habits spread through groups (<a href="https://doi.org/10.1126/science.aat1590" rel="noopener">Danchin et al. 2018</a>; <a href="https://doi.org/10.1016/j.cub.2011.12.050" rel="noopener">Battesti et al. 2012</a>). Rats have solved a task using brain activity transmitted from another rat (<a href="https://doi.org/10.1038/srep01319" rel="noopener">Pais-Vieira et al. 2013</a>). These are different mechanisms from ours; they show the question is a biological one too.</li>
+          </ul>
+          <h4>Seven places the idea could be used</h4>
+          <p class="legend">None of these has been tested here; the table below this one lists the second tasks we did try. Each row says what would change, what the few bytes of advice would be, and why a model or data could not be sent instead.</p>
+          <div class="scroll"><table class="uses">
+            <thead><tr><th>Where</th><th>The "rule change"</th><th>The advice</th><th>Why not send the model or data</th><th>Related research</th></tr></thead>
+            <tbody>
+              <tr><th>Mixed robot fleets</th><td>A floor gets slippery, a gripper wears, a shelf layout changes</td><td>"In this situation I now do X"</td><td>Robots from different makers run different models. Today's cross-robot learning pools a million recorded runs into one shared model</td><td><a href="https://arxiv.org/abs/2310.08864" rel="noopener">Open X-Embodiment 2023</a></td></tr>
+              <tr><th>Hospitals</th><td>A new scanner, a new patient mix, a new treatment protocol</td><td>"For a case like this I now flag it"</td><td>Patient data cannot leave the hospital, and shared model updates can leak it</td><td><a href="https://doi.org/10.1056/NEJMc2104626" rel="noopener">Finlayson et al. 2021</a>; <a href="https://arxiv.org/abs/1906.08935" rel="noopener">Zhu et al. 2019</a></td></tr>
+              <tr><th>Banks and fraud</th><td>Fraudsters switch tactics</td><td>"I would now block this kind of payment"</td><td>Customer records are private and each bank's model is its own</td><td><a href="https://doi.org/10.1109/TNNLS.2017.2736643" rel="noopener">Dal Pozzolo et al. 2018</a></td></tr>
+              <tr><th>Underwater and remote vehicles</th><td>Currents, ice, or terrain change mid-mission</td><td>A move suggestion of a few bits</td><td>Underwater sound links carry very little data, so a model cannot be sent</td><td><a href="https://doi.org/10.1109/MCOM.2009.4752682" rel="noopener">Stojanovic &amp; Preisig 2009</a></td></tr>
+              <tr><th>Brain-like chips</th><td>A sensor ages or its surroundings change</td><td>The same spikes the chip already computes with</td><td>These chips learn on the chip itself and talk in spikes; advice as spikes needs no translation step</td><td><a href="https://doi.org/10.1109/MM.2018.112130359" rel="noopener">Davies et al. 2018</a></td></tr>
+              <tr><th>Brain-computer interfaces</th><td>The recorded brain signals drift from day to day</td><td>A second decoder's suggested output</td><td>Each decoder is fitted to one brain's signals and cannot be swapped</td><td><a href="https://doi.org/10.1038/s41551-020-0542-9" rel="noopener">Degenhart et al. 2020</a></td></tr>
+              <tr><th>Old equipment in the field</th><td>Operating conditions move beyond what it was built for</td><td>A newer unit's suggested action</td><td>The old unit's software cannot be replaced, but it can still listen</td><td>No direct study found</td></tr>
+            </tbody>
+          </table></div>
+          <p class="legend"><strong>Brain-like chips is the one case where spikes themselves matter.</strong> Everywhere else a network cable would do, as our own digital-message test showed. On hardware that only speaks spikes, a spike message is the natural format. The brain-computer interface row is the most speculative.</p>
+          <h4>What we tried beyond Rock-Paper-Scissors</h4>
+          <p>Six tests on a second task; the last one passed. The first three stopped before any teaching because the task itself did not work in this system. The next two were small pilots that failed their rules. The sixth was a full 15-run test.</p>
+          <div class="scroll"><table class="uses">
+            <thead><tr><th>Task</th><th>What happened</th><th>What it tells us</th></tr></thead>
+            <tbody>
+              <tr><th>Sensor readings (temperature, vibration)</th><td>Stopped: the simulated senses could not tell the three conditions apart (18 of 36)</td><td>Continuous signals need a better way in than this sensory pathway</td></tr>
+              <tr><th>Warehouse route</th><td>Stopped: the teacher did not learn the route well enough (8 of 12)</td><td>Multi-step tasks are beyond this learner</td></tr>
+              <tr><th>Package recovery</th><td>Stopped: the teacher narrowly missed its bar with uncertain outcomes</td><td>Random outcomes are hard for this learner</td></tr>
+              <tr><th>Fault response, small change</th><td>Ran, 3 runs: Fly B alone was perfect within 24 rounds; the teacher added nothing</td><td>Advice is not needed when recovering alone is quick</td></tr>
+              <tr><th>Fault response, large change (pilot)</th><td>Ran, 3 runs: taught fly led the best control by 25, 0, 25; our rule needed all three</td><td>The same direction as Rock-Paper-Scissors, too few runs to say</td></tr>
+              <tr><th>Fault response, large change (full test)</th><td><strong>Passed</strong>, 15 runs: taught fly led the best control by 19.0 on average (95% CI 11.8 to 26.2)</td><td>The teaching effect is not specific to Rock-Paper-Scissors or to its fixed cycle of cues</td></tr>
+            </tbody>
+          </table></div>
+          <h4>The idea, sharpened by what we found</h4>
+          <p>The results point to something narrower and more useful than "share advice": <strong>advice as a temporary, checked aid after a change.</strong> Each part is a known research idea; the table says which parts we have actually tested here.</p>
+          <div class="scroll"><table class="uses">
+            <thead><tr><th>Part of the idea</th><th>Research idea it draws on</th><th>Our evidence</th></tr></thead>
+            <tbody>
+              <tr><th>Advise after a change, not all the time</th><td>Spending a limited advice budget where it matters most (<a href="https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2013/docs/p1053.pdf" rel="noopener">Torrey &amp; Taylor 2013</a>)</td><td><strong>Supported, on two tasks:</strong> after a full change the taught fly led the best control by 24.9 wins in Rock-Paper-Scissors and 19.0 in the alarm-response task (15 runs each). After a small change, advice added nothing (3-run pilot)</td></tr>
+              <tr><th>Send a suggestion, never the model</th><td>Sharing outputs instead of weights (<a href="https://arxiv.org/abs/1910.03581" rel="noopener">Li &amp; Wang 2019</a>)</td><td><strong>Supported:</strong> under 12 bytes sent, between learners of different structure</td></tr>
+              <tr><th>The learner checks the adviser against its own results</th><td>Advice the student can question (<a href="https://doi.org/10.1609/aaai.v34i04.6036" rel="noopener">Da Silva et al. 2020</a>)</td><td><strong>Partly:</strong> removed 34 of the 42 wins a bad teacher cost; failed its no-harm rule</td></tr>
+              <tr><th>Several advisers, not all trustworthy</th><td>Choosing among advisers by how their advice pays off</td><td><strong>Partly:</strong> ended level with the good teacher alone on 14 of 14 runs; the lead over following both was just under our bar</td></tr>
+              <tr><th>The learner keeps what it learned once the adviser is gone</th><td>Distilling a teacher into a student</td><td><strong>Supported:</strong> every score on this page is measured with the teacher disconnected</td></tr>
+              <tr><th>Notice the change and ask for help</th><td>Detecting when a deployed model's world has shifted (<a href="https://doi.org/10.1056/NEJMc2104626" rel="noopener">Finlayson et al. 2021</a>)</td><td><strong>Not tested.</strong> Here the change point is known to the experiment</td></tr>
+            </tbody>
+          </table></div>
+          <p class="finding"><strong>What remains to do.</strong> Both confirmed tasks are small: three cues, three choices, fixed outcomes, in one simulated system. The next step is a task this system could not handle: continuous sensor readings, outcomes with chance in them, or more than one step. <span class="legend">Confirmed so far only in simulation, on Rock-Paper-Scissors and one alarm-response task.</span></p>
+          <h3>What we do not claim</h3>
+          <ul class="legend">
+            <li><strong>Not a new learning method.</strong> A teacher suggesting moves to a student is "action advising", a known idea in reinforcement learning (<a href="https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2013/docs/p1053.pdf" rel="noopener">Torrey &amp; Taylor 2013</a>). What is new here is the test, not the method: (1) the advice travels as spikes on two neurons inside a simulated fly connectome; (2) it works when the student is built differently from the teacher (48 learned numbers against 13), so nothing could have been copied; (3) every claim was run against controls fixed in advance, including a teacher that is confident but out of date; and (4) we measured what happens when Fly B has to judge its teachers for itself, with one teacher and with two who disagree, and report where that fell short.</li>
+            <li><strong>Spikes are a working channel, not a better one.</strong> Sending the same advice digitally worked equally well (archived ablation, 552/552 spike messages decoded). We show learned knowledge survives a neural channel, not that neurons beat a network cable.</li>
+            <li><strong>Two simulators, one starting point.</strong> The demo and most studies run on the simulator that came with Fly Hero. Our own simulator reproduces the main result when the teacher learns, but the teacher failed to learn on 5 of 15 runs there, so we have not moved the demo to it.</li>
+            <li><strong>It is a hybrid brain.</strong> The connectome senses and carries the message; a small learned readout picks the move, and Fly B's imitation step is engineered. The connectome and dopamine rule are unchanged.</li>
+            <li><strong>Fly B trusts its teacher.</strong> It follows advice without checking it. In a locked 15-run study, a teacher trained on the old rule kept Fly B stuck at its starting score, 30 wins below learning alone by 96 rounds. A Fly B that learns from its own wins how much to trust its teacher got most of that back, but not all of it. Given a current and an out-of-date teacher at once, it ended level with having the current one alone (see the Stats tab).</li>
+            <li><strong>Speed, not a higher ceiling.</strong> Students learning alone close the gap given enough rounds. The gain is adapting faster after a change.</li>
+          </ul>
+        <details class="panel"><summary>What is this? Research notes and limits</summary>
+          <ul class="legend">
+            <li>Each simulated connectome produces sensory spikes; engineered controllers learn from game rewards.</li>
+            <li>In the archived action-preference study, Fly A’s learned preference traveled through measured DN spikes. Fly B updated its own controller from its reward and the decoded message, then played without Fly A.</li>
+            <li>On fixed Strategies A and B, trained advice sped early frozen learning against silent, untrained, shuffled, and generic controls. Direct digital delivery of the same preference matched the spike route; final accuracy was often the same.</li>
+          </ul>
+          <p class="finding">The supported result is faster early retained learning in an engineered hybrid system on two fixed RPS rules.</p>
+          <p class="finding caution">The live Challenge below runs the same action-preference protocol as the archived study, including its engineered imitation update. A matched ablation found neural-spike delivery and direct digital delivery equally effective. A live run is a demonstration, not a new locked result, and these results do not establish biological teaching or arbitrary-opponent generalization. Older proposal/veto experiments failed their gate and are in the <a href="archive.html">archive</a>.</p>
+          <p class="legend">The broader question is whether independently trained agents can share useful learned information through a constrained channel. A future sensor-based benchmark might distinguish normal equipment operation, overheating, and excessive vibration. That task is proposed only; it has not been implemented, deployed, or measured here.</p>
+        </details>
+        </section>
+        <h2 id="evidence" class="section-title">Evidence and archive</h2>
+        <p class="section-lede">Earlier locked studies, ablations, and recorded measurements.</p>
+        <details id="research-evidence" class="panel"><summary>Research Evidence - archived controls and results</summary>
+        <details id="ablation-evidence" class="panel"><summary>Neural spikes versus direct messaging · archived Strategy B ablation</summary>
+          <p class="legend">Fly A’s learned action preference was sent either through <strong>measured DNge175 spikes</strong> or directly as the same digital preference at the same update time. Fly B kept the same sensory simulation and reward plus imitation updates. Silence and globally scrambled neural messages were controls. This archived ablation tests the action-preference mechanism shown in the live Challenge.</p>
+          <p class="legend">Across two fresh students, all <strong>552/552 trained neural messages decoded correctly</strong>. Neural and digital arms had identical training actions, rewards, updates, weights, and frozen predictions. The spike route transports learned information; it has not shown an advantage over direct delivery or a necessary role for detailed DN output wiring.</p>
+          <div class="controls"><label>Archived student <select id="ablation-evidence-seed"><option value="11017">Strategy B · student 11017</option><option value="11018">Strategy B · student 11018</option></select></label></div>
+          <p class="legend">Frozen, teacher-disconnected wins out of 72 after the labeled training rounds. White: neural spikes, with the direct-digital line drawn dashed on top, because the two were identical at every checkpoint. Grey: no advice. Grey dotted: scrambled neural messages.</p>
+          <div id="ablation-evidence-chart" role="img" aria-label="Archived neural, digital, silent, and scrambled frozen RPS learning curves"></div>
+          <details><summary>Show as a table</summary><div class="scroll"><table><thead><tr><th>Training rounds</th><th>Neural spikes</th><th>Direct digital</th><th>No advice</th><th>Scrambled neural</th></tr></thead><tbody id="ablation-evidence-table"></tbody></table></div></details>
+          <p id="ablation-evidence-status" class="legend">Open this comparison to load the archived result.</p>
+          <p class="legend"><a href="docs/connectome-contribution-ablation-report.md">Causal pathway and limits</a> · <a href="docs/connectome-contribution-ablation-protocol.md">Locked protocol</a> · <a href="data/rps_connectome_contribution_ablation.json">Trial-level result</a>.</p>
+        </details>
+        <section id="preference-event" class="panel" aria-labelledby="preference-event-title">
+          <h3 id="preference-event-title">One archived teaching round · recorded measurements</h3>
+          <p class="legend">The first message-bearing training round for the selected student, chosen consistently without selecting a favorable outcome. The archive stores MBON group rates and DN counts, but not cell-by-cell spike events for a brain animation.</p>
+          <div class="grid"><div><h4>Fly A · learned preference</h4><p id="preference-event-teacher">Loading archived round…</p><p id="preference-event-dn" class="legend"></p></div><div><h4>Fly B · own action and update</h4><p id="preference-event-student">Loading archived round…</p><p id="preference-event-update" class="legend"></p></div></div>
+          <p id="preference-event-status" class="legend"></p>
+        </section>
+        <article class="panel"><h3>Action-preference teaching · archived Strategy A and B</h3><p class="legend">Fly A learned from its own RPS rewards, then its frozen MBON-driven preferred action was encoded as actual simulated DNge175 spikes. Fly B decoded measured spike counts and updated its own cue-specific controller after its own reward. The played action for that round was chosen before the message. This is engineered hybrid imitation with frozen KC→MBON synapses, not natural biological teacher–student plasticity.</p><p class="legend">Strategy A: all four reported trained students reached at least 58/72 frozen wins by round 6; the earliest control did so at round 12. Their early mean advantages over the strongest controls were +11.75, +11, +8, and +11.75 wins/72. Strategy B: teacher frozen wins were 67/72 and 69/72; trained students scored 70/72 and 69/72 at round 6, with +17 and +11 wins/72 early advantages. Both finished 70/72 disconnected. Every reported training message decoded from measured DN spikes (276/276 per messaged arm). Silent students also reached 70/72 eventually in Strategy B.</p><p class="legend">Choose an archived student to inspect its actual five-arm <strong>frozen, teacher-disconnected</strong> learning curve. These are wins on 72 evaluation rounds after the labeled number of training rounds; they are not online training wins or a new live run. Checkpoints are equally spaced in the chart; the labels give the actual training rounds.</p><div class="controls"><label>Archived result <select id="preference-evidence-seed"><option value="a-11007">Strategy A initial · student 11007</option><option value="a-11008">Strategy A initial · student 11008</option><option value="a-11011">Strategy A confirmation · student 11011</option><option value="a-11012">Strategy A confirmation · student 11012</option><option value="b-11015">Strategy B initial · student 11015</option><option value="b-11016">Strategy B confirmation · student 11016</option></select></label></div><p class="legend">Line colors: <span style="color:#e466b8">trained preference</span>, <span style="color:#5cc17a">no message</span>, <span style="color:#66bde0">untrained</span>, <span style="color:#f5b45c">shuffled</span>, <span style="color:#b29cf2">generic</span>. Lines overlap when arms have equal wins; the table lists each count.</p><div id="preference-evidence-chart" role="img" aria-label="Archived five-arm frozen RPS wins at seven training checkpoints"></div><div class="scroll"><table><thead><tr><th>Training rounds</th><th>Trained preference</th><th>No message</th><th>Untrained</th><th>Shuffled</th><th>Generic</th></tr></thead><tbody id="preference-evidence-table"></tbody></table></div><p id="preference-evidence-status" class="legend">Open Research Evidence to load the selected archived result.</p><p class="legend"><a href="docs/action-preference-independent-audit.md">Strategy A independent audit</a> · <a href="docs/action-preference-strategy-b-independent-audit.md">Strategy B independent audit</a> · <a href="docs/action-preference-strategy-b-protocol.md">Strategy B locked protocol</a>. Both tasks use fixed observable opponent rules; the evidence does not cover arbitrary patterns. Earlier negative results are preserved below and in the research reports.</p></article>
+        <p class="legend">Older proposal/veto results and the Research Replay are on the <a href="archive.html">archive page</a>. The <a href="legacy.html">legacy RPS page</a> preserves the older frozen-policy game, exploratory quantized neural-message demo, and detailed historical results.</p>
+        </details>
+        <p class="legend">The archived engineered action-preference protocol passed its teacher-specific early retained-learning gates on fixed Strategies A and B. The earlier proposal/veto protocol did not. Neither establishes biological transfer or reliable learning on arbitrary opponent patterns. <a href="docs/research-story.md">Read the research story</a> or <a href="docs/lab-notebook.md">full lab notebook</a>.</p>
+        <section class="panel" aria-label="Live demo method notes">
+            <details><summary>Method notes</summary>
+          <p class="legend">These views show Fly A and two Fly B networks in the live Challenge, not an animation of archived events. A third Fly B with random messages runs as a background control without a brain view. The archive stores measured MBON rates and DN counts, but not cell-by-cell spike events. <a href="#research-evidence">Inspect the archived Strategy A/B controls</a>, or <a href="#challenge-title">start the live Challenge</a>.</p>
+            <p class="legend">Each image uses the same connectome cell positions; bright dots are recent spikes from that fly's own live simulation. Fly A's image continues updating while it teaches. Fly B plays its own move first; afterwards an engineered DN spike-count buffer carries Fly A's preferred action into a small imitation update. This is hybrid simulated neural communication, not proof of biological brain-to-brain teaching. The live run includes Alone and Random messages as controls; the archived evidence also includes untrained, shuffled, and generic advice.</p>
+            <p class="legend">The live comparison shows trained advice, silence, and random messages under matched conditions. It is a live diagnostic, not the final teacher-specific proof. The archived controls below test whether the trained teacher is uniquely helpful.</p>
+          <p class="finding">Archived action-preference teaching reached 58/72 frozen, disconnected wins by round 6 for four Strategy A students and two Strategy B students. Each passed its locked early-speed comparison with silent, untrained, shuffled, and generic controls on a fixed observable rule.</p>
+          <p class="finding caution">This is a separate engineered hybrid imitation protocol, and the live Challenge above runs it as a demonstration only. Some controls reached the same final accuracy. Earlier proposal/veto, receiver, and noisy-task failures remain valid; these results do not establish biological teaching or arbitrary-opponent generalization.</p>
+            </details>
+        </section>
+        </div>
+      </main>
+      <footer>Neural simulator and connectome subset from <a href="https://github.com/bsgelman/fly-hero">Fly Hero</a> by Benjamin Gelman (MIT). The two-fly teaching experiments, learners, message channel, and this page are ours. Connectome data: Janelia and Google male CNS (CC-BY). Neuron model after Shiu et al. 2024; dopamine learning rule inspired by Bennett et al. 2021. See <a href="README.md">README</a> for method and limitations.</footer>
+    </div>
+    <script>
+      // Three tabs; any in-page link (#results, #how, #evidence…) opens the tab that holds its target.
+      const tabs = { sim: 'tab-sim', stats: 'tab-stats', research: 'tab-research' };
+      const showTab = (name, target, scroll = true) => {
+        for (const [key, id] of Object.entries(tabs)) {
+          document.getElementById(id).hidden = key !== name;
+          document.getElementById(`tab-btn-${key}`).setAttribute('aria-selected', String(key === name));
+        }
+        if (scroll) (target ?? document.querySelector('main')).scrollIntoView({ block: 'start' });
+      };
+      const route = () => {
+        const target = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
+        const panel = target?.closest?.('.tab-panel');
+        if (!panel) return showTab('sim', null, false);
+        const name = Object.keys(tabs).find(key => tabs[key] === panel.id);
+        const top = ['demo', 'stats', 'research'].includes(target.id);
+        if (target.tagName === 'DETAILS') target.open = true;
+        showTab(name, top ? null : target);
+      };
+      addEventListener('hashchange', route);
+      route();
+      // The same recording at 4x speed.
+      document.getElementById('hero-play-fast').addEventListener('click', () => {
+        showTab('sim', document.getElementById('demo'));
+        const play = document.getElementById('challenge-replay-switch');
+        if (play.disabled) return;
+        play.click();
+        document.querySelector('.speed-option[data-speed="4"]')?.click();
+      });
+      document.getElementById('hero-play').addEventListener('click', () => {
+        showTab('sim', document.getElementById('demo'));
+        const play = document.getElementById('challenge-replay-switch');
+        if (!play.disabled) play.click();
+      });
+    </script>
+    <script type="importmap">
+      {"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+    </script>
+    <script type="module" src="js/rps_challenge.js"></script>
+    <script type="module" src="js/result_chart.js"></script>
+    <script type="module" src="js/hero_flies.js"></script>
+  </body>
+</html>
