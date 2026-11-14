@@ -302,8 +302,8 @@ function showStudentPlan() {
   $('step1-teacher-rounds').textContent = `${teacherRounds()} rounds`;
   $('step1-student-rounds').textContent = plan.pauseAtSix ? '6, then 288 rounds' : `${plan.rounds} rounds`;
   $('compare-plan').textContent = plan.pauseAtSix ?
-    'Taught vs. alone · pause after 6 rounds, then continue.' :
-    'Taught vs. alone · random-message control.';
+    'Fly A sends advice as spikes to one Fly B; the other trains alone. Pause after 6 rounds.' :
+    'Fly A sends advice as spikes to one Fly B; the other trains alone.';
   if (!comparisonRunning) $('compare-round').textContent = `0 / ${plan.first} training rounds`;
 }
 let runKind = 'live';
@@ -557,7 +557,7 @@ function challengeReset() {
   const aRounds = teacherRounds();
   $('challenge-status').textContent = `Ready to train Fly A. Budget: ${aRounds / 24} episodes × 24 rounds; frozen check: 72 rounds${challengeConfig().mode === 'custom' ? ' on the same repeating pattern with fresh neural streams' : ' on three new opponent sequences'}.`;
   $('challenge-teacher-progress').textContent = `0 / ${aRounds} training rounds`;
-  $('challenge-teacher-plan').textContent = `Fly A learns from its own wins and losses for ${aRounds} rounds, then takes the 72-game test. The recorded runs always use 288 rounds.`;
+  $('challenge-teacher-plan').textContent = `Fly A trains for ${aRounds} rounds from its wins and losses.`;
   showStudentPlan();
   lineChart('teacher-learning-chart', [], 24);
   $('teacher-learning-note').textContent = 'Train Fly A live to fill this in.';
