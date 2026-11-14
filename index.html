@@ -1042,8 +1042,7 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
         const name = Object.keys(tabs).find(key => tabs[key] === panel.id);
         const top = ['demo', 'stats', 'research'].includes(target.id);
         for (let details = target.closest('details'); details; details = details.parentElement.closest('details')) details.open = true;
-        showTab(name, top ? null : target, !top);
-        if (top) scrollTo(0, 0);
+        showTab(name, top ? null : target);
       };
       addEventListener('hashchange', route);
       addEventListener('popstate', route);
