@@ -7,6 +7,7 @@ import hashlib
 from pathlib import Path
 from urllib.request import Request, urlopen
 
+from .config import load_env
 from .core import FEATURE_NAMES, fixture_teacher, validate_teacher_output
 
 CACHE_DIR = Path(__file__).resolve().parent / ".teacher-cache"
@@ -22,11 +23,13 @@ SCHEMA = {"type": "object", "properties": {
 
 
 def frontier_available() -> bool:
+    load_env()
     return bool(os.environ.get("OPENAI_API_KEY"))
 
 
 def frontier_teacher(f: dict, opener=urlopen) -> dict:
     """Send feature-only mock context, validate structured output, never log secrets."""
+    load_env()
     key = os.environ.get("OPENAI_API_KEY")
     model = os.environ.get("SYNAPSE_FRAUD_TEACHER_MODEL", DEFAULT_MODEL)
     if not key or not model:

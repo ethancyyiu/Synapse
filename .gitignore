@@ -6,3 +6,4 @@ docs/party-mode-debate.md
 .claude/
 .playwright-mcp/
 fraud/.teacher-cache/
+.env

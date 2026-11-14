@@ -24,10 +24,11 @@ def normalize_purchase(raw: dict, merchants: dict | None = None, account_id: str
     embedded = raw.get("merchant") if isinstance(raw.get("merchant"), dict) else {}
     merchant_id = str(raw.get("merchant_id") or raw.get("merchantId") or embedded.get("_id") or "unknown")
     merchant = merchants.get(merchant_id, {})
-    amount = float(raw.get("amount", 0))
+    amount = (float(raw["amount_cents"]) / 100 if "amount_cents" in raw else
+              float(raw.get("amount", 0)))
     if not math.isfinite(amount) or amount < 0:
         raise ValueError("Invalid purchase amount")
-    date = str(raw.get("purchase_date") or raw.get("date") or "")
+    date = str(raw.get("purchase_date") or raw.get("created_at") or raw.get("date") or "")
     if not date:
         raise ValueError("Purchase lacks a date")
     parsed = datetime.fromisoformat(date.replace("Z", "+00:00"))

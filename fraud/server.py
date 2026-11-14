@@ -12,11 +12,13 @@ from urllib.parse import parse_qs, unquote, urlsplit
 
 import numpy as np
 
+from .config import load_env
 from .core import evidence, features, fixture_teacher, make_dataset, risk_band, score
 from .nessie import NessieClient, NessieUnavailable
 from .teacher import frontier_available, teacher_for_demo
 
 ROOT = Path(__file__).resolve().parent.parent
+load_env()
 ARTIFACT = json.loads((ROOT / "data" / "fraud" / "experiment.json").read_text(encoding="utf-8"))
 DATASET = make_dataset()
 MEAN = np.array(ARTIFACT["scaler"]["mean"])

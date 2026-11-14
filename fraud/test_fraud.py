@@ -2,16 +2,19 @@ import unittest
 from unittest.mock import patch
 import io
 import json
+import os
 from pathlib import Path
 
 import numpy as np
 
 from fraud.core import (FEATURE_NAMES, evaluate, features, fixture_teacher, make_dataset,
                         normalize_purchase, score, train_models, validate_teacher_output)
+from fraud.config import load_env
 from fraud.nessie import NessieClient, NessieUnavailable
-from fraud.server import Handler
-from fraud.teacher import SCHEMA, cached_frontier_teacher, frontier_teacher
+from fraud.server import Handler, mode
+from fraud.teacher import SCHEMA, cached_frontier_teacher, frontier_available, frontier_teacher
 from fraud import train_frontier
+from tools.serve import NoCache
 
 
 class FraudChecks(unittest.TestCase):
@@ -80,6 +83,30 @@ class FraudChecks(unittest.TestCase):
         self.assertTrue(all(method == "GET" for method, _ in seen))
         self.assertTrue(all("key=test-secret" in url for _, url in seen))
 
+    def test_nessie_v2_bearer_and_purchase_cents(self):
+        seen = []
+        def fake_open(request, timeout):
+            seen.append(request)
+            if "/transactions" in request.full_url:
+                value = {"items": [{"id": "p2", "kind": "purchase", "amount_cents": 1825,
+                                     "created_at": "2026-01-04T12:00:00Z", "merchant_id": "m2"},
+                                    {"id": "d2", "kind": "deposit", "amount_cents": 5000,
+                                     "created_at": "2026-01-04T13:00:00Z"}]}
+            elif "/merchants" in request.full_url:
+                value = {"items": [{"id": "m2", "name": "Mock Cafe", "category": "dining"}]}
+            else:
+                value = {"items": [{"id": "a2", "type": "Checking", "nickname": "Everyday"}]}
+            return io.BytesIO(json.dumps(value).encode())
+        client = NessieClient(key="nsk_test-secret", opener=fake_open)
+        self.assertEqual(client.accounts()[0]["name"], "Everyday · a2")
+        purchases = client.purchases("a2")
+        self.assertEqual(len(purchases), 1)
+        self.assertEqual(purchases[0]["amount"], 18.25)
+        self.assertEqual(purchases[0]["merchant_name"], "Mock Cafe")
+        self.assertTrue(all(request.get_method() == "GET" for request in seen))
+        self.assertTrue(all("key=" not in request.full_url for request in seen))
+        self.assertTrue(all(request.get_header("Authorization") == "Bearer nsk_test-secret" for request in seen))
+
     def test_frontier_schema_and_minimized_request(self):
         sent = []
         def fake_open(request, timeout):
@@ -125,6 +152,24 @@ class FraudChecks(unittest.TestCase):
                      "/docs/../.git/config", "/.env", "/requirements.txt",
                      "/data/fraud/frontier-student.json", "/fraud/.teacher-cache/x.json"):
             self.assertFalse(handler.static_allowed(path), path)
+        old_handler = NoCache.__new__(NoCache)
+        for path in ("/.env", "/%2eenv", "/.git/config", "/fraud/.teacher-cache/x.json", "/fraud/config.py"):
+            old_handler.path = path
+            self.assertTrue(old_handler.private_path(), path)
+        old_handler.path = "/index.html"
+        self.assertFalse(old_handler.private_path())
+
+    def test_env_loader_keeps_process_precedence(self):
+        contents = "NESSIE_API_KEY=from-file\nOPENAI_API_KEY='quoted-key'\nSYNAPSE_FRAUD_TEACHER_MODEL=gpt-5.6-luna\nBAD_VARIABLE=ignore\n"
+        with patch.dict("os.environ", {"NESSIE_API_KEY": "from-process"}, clear=True), \
+             patch.object(Path, "read_text", return_value=contents):
+            load_env(Path("unused.env"))
+            self.assertEqual(os.environ["NESSIE_API_KEY"], "from-process")
+            self.assertEqual(os.environ["OPENAI_API_KEY"], "quoted-key")
+            self.assertNotIn("BAD_VARIABLE", os.environ)
+            self.assertEqual(mode(), "nessie")
+            self.assertTrue(frontier_available())
+            self.assertIsInstance(NessieClient(), NessieClient)
 
 
 if __name__ == "__main__": unittest.main()
