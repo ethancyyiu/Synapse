@@ -1,0 +1,72 @@
+{
+ "dataset": "fraud",
+ "version": 2,
+ "hashes": {
+  "protocol": "665bee6df59e89f28c378bbf5e3361c1726746dfba060b3e263e42c87825f383",
+  "runner": "7f74383433dee38fefc2be384fcbdb755550633aa7da3e7b8d669c2021e7ae47",
+  "v1Runner": "61aea2b571a2f0398f3fe849f782db8b3effd6b2cc6600e857247dd9f701038a"
+ },
+ "seedsRun": 15,
+ "seedsPassingTeacherGate": 12,
+ "gateMargins": [
+  0.021752835806462256,
+  0.1854457494124091,
+  0.1921930711955162,
+  0.11085459473085246,
+  0.06396983485384711,
+  0.1658000887228307,
+  0.03977667735246726,
+  -0.0011795622190458044,
+  0.03720462145600045,
+  0.039321820562698506,
+  0.029145285506574692,
+  0.10047976207398535,
+  0.003485958571773806,
+  -0.07838720954621081,
+  0.03860933841996772
+ ],
+ "changeTest": {
+  "meanChange": 0.049935773796519006,
+  "passed": true
+ },
+ "headroomTest": {
+  "meanHeadroom": 0.03603519335861328,
+  "passed": true
+ },
+ "mainTest": {
+  "meanAdvantage": 0.03276903141327573,
+  "bootstrap95": [
+   0.00998526350768055,
+   0.06175005954838846
+  ],
+  "passed": false
+ },
+ "seedsAdvantageAtMostZero": 2,
+ "meanAP": {
+  "alone": 0.7562785916401965,
+  "taught": 0.7890476230534723,
+  "shuffled": 0.29913764956829897,
+  "random": 0.3483844232486144,
+  "stale": 0.741753637114725,
+  "fullLabels": 0.7923137849988097,
+  "oldOnlyStudent": 0.7535948034420094,
+  "newSiteStudent": 0.8035305772385284,
+  "teacher": 0.8021494383903877,
+  "staleTeacher": 0.7490974500597852
+ },
+ "meanRecallTop1": {
+  "alone": 0.8586851609413587,
+  "taught": 0.8294297431393433,
+  "shuffled": 0.5433488667682516,
+  "random": 0.5202481651918952,
+  "stale": 0.8182809993644158,
+  "fullLabels": 0.8470307681840485,
+  "oldOnlyStudent": 0.8710541087762503,
+  "newSiteStudent": 0.859624217376049,
+  "teacher": 0.8599577275198985,
+  "staleTeacher": 0.8516313959383589
+ },
+ "meanTaughtMinusStale": 0.04729398593874735,
+ "meanTeacherBitRecall": 0.7255318464107794,
+ "adviceBytes": 3062
+}

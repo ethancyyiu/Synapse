@@ -1,0 +1,84 @@
+{
+ "status": "completed",
+ "seed": 104,
+ "teacherGate": {
+  "teacherAP": 0.9294612225058996,
+  "oldOnlyStudentAP": 0.8654913876520525,
+  "margin": 0.06396983485384711,
+  "passed": true,
+  "setting": {
+   "learning_rate": 0.1,
+   "max_leaf_nodes": 31
+  },
+  "cvAP": 0.8248662373685368
+ },
+ "staleTeacherSetting": {
+  "learning_rate": 0.05,
+  "max_leaf_nodes": 15
+ },
+ "metrics": {
+  "alone": {
+   "ap": 0.7252528991296296,
+   "recallTop1": 0.8068181818181818
+  },
+  "taught": {
+   "ap": 0.7624883297516684,
+   "recallTop1": 0.7954545454545454
+  },
+  "shuffled": {
+   "ap": 0.11418008191765894,
+   "recallTop1": 0.19318181818181818
+  },
+  "random": {
+   "ap": 0.34094263187601587,
+   "recallTop1": 0.5
+  },
+  "stale": {
+   "ap": 0.758102470287985,
+   "recallTop1": 0.7954545454545454
+  },
+  "fullLabels": {
+   "ap": 0.7646441371489733,
+   "recallTop1": 0.7954545454545454
+  },
+  "oldOnlyStudent": {
+   "ap": 0.7172254187365064,
+   "recallTop1": 0.8181818181818182
+  },
+  "newSiteStudent": {
+   "ap": 0.7733647269080378,
+   "recallTop1": 0.8295454545454546
+  },
+  "teacher": {
+   "ap": 0.7441232195204371,
+   "recallTop1": 0.8295454545454546
+  },
+  "staleTeacher": {
+   "ap": 0.7412837110290542,
+   "recallTop1": 0.7840909090909091
+  }
+ },
+ "advantage": 0.03723543062203871,
+ "change": 0.056139308171531455,
+ "headroom": 0.03939123801934363,
+ "adviceBits": 24500,
+ "adviceBytes": 3062,
+ "teacherFlagRate": 0.0012244897959183673,
+ "teacherBitAccuracy": 0.9995510204081632,
+ "teacherBitRecall": 0.7878787878787878,
+ "labelledPositives": 0,
+ "advisedTruePositives": 33,
+ "counts": {
+  "teacherUnits": 56008,
+  "streamUnits": 28004,
+  "testUnits": 56009,
+  "testCases": 56009,
+  "testPositives": 88,
+  "oldCases": 144786
+ },
+ "hashes": {
+  "protocol": "665bee6df59e89f28c378bbf5e3361c1726746dfba060b3e263e42c87825f383",
+  "runner": "7f74383433dee38fefc2be384fcbdb755550633aa7da3e7b8d669c2021e7ae47",
+  "v1Runner": "61aea2b571a2f0398f3fe849f782db8b3effd6b2cc6600e857247dd9f701038a"
+ }
+}

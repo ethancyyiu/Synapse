@@ -1,0 +1,66 @@
+{
+ "status": "completed",
+ "seed": 7,
+ "metrics": {
+  "alone": {
+   "ap": 0.7186055167112416,
+   "recallTop1": 0.796875
+  },
+  "taught": {
+   "ap": 0.4438068297186849,
+   "recallTop1": 0.6875
+  },
+  "shuffled": {
+   "ap": 0.3174584914865081,
+   "recallTop1": 0.5625
+  },
+  "random": {
+   "ap": 0.251537873501358,
+   "recallTop1": 0.421875
+  },
+  "stale": {
+   "ap": 0.5802359911383684,
+   "recallTop1": 0.75
+  },
+  "fullLabels": {
+   "ap": 0.6726611526388441,
+   "recallTop1": 0.75
+  },
+  "oldOnlyStudent": {
+   "ap": 0.683225292737331,
+   "recallTop1": 0.828125
+  },
+  "newSiteStudent": {
+   "ap": 0.7297731219304483,
+   "recallTop1": 0.84375
+  },
+  "teacher": {
+   "ap": 0.23866813141679905,
+   "recallTop1": 0.640625
+  },
+  "staleTeacher": {
+   "ap": 0.33709203457061127,
+   "recallTop1": 0.703125
+  }
+ },
+ "advantage": -0.2747986869925567,
+ "change": 0.046547829193117285,
+ "adviceBits": 4500,
+ "adviceBytes": 562,
+ "teacherFlagRate": 0.005333333333333333,
+ "staleFlagRate": 0.002,
+ "labelledPositives": 0,
+ "advisedTruePositives": 13,
+ "counts": {
+  "teacherUnits": 56008,
+  "streamUnits": 28004,
+  "testUnits": 56009,
+  "testCases": 56009,
+  "testPositives": 64,
+  "oldCases": 144786
+ },
+ "hashes": {
+  "protocol": "d6603af8ea63f8cc21e75d4469770521040bcaf9ba8400e6790ef299cda04645",
+  "runner": "61aea2b571a2f0398f3fe849f782db8b3effd6b2cc6600e857247dd9f701038a"
+ }
+}

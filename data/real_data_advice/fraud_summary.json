@@ -1,0 +1,48 @@
+{
+ "dataset": "fraud",
+ "seeds": 15,
+ "hashes": {
+  "protocol": "d6603af8ea63f8cc21e75d4469770521040bcaf9ba8400e6790ef299cda04645",
+  "runner": "61aea2b571a2f0398f3fe849f782db8b3effd6b2cc6600e857247dd9f701038a"
+ },
+ "changeTest": {
+  "meanChange": 0.06132500453701441,
+  "passed": true
+ },
+ "mainTest": {
+  "meanAdvantage": -0.11774874132233805,
+  "bootstrap95": [
+   -0.17776680792012242,
+   -0.06404995704794168
+  ],
+  "passed": false
+ },
+ "seedsAdvantageAtMostZero": 14,
+ "meanAP": {
+  "alone": 0.7417456302296102,
+  "taught": 0.6239968889072721,
+  "shuffled": 0.36296770288740465,
+  "random": 0.3900052941151229,
+  "stale": 0.5926624125890373,
+  "fullLabels": 0.7494415166012762,
+  "oldOnlyStudent": 0.7402832895011096,
+  "newSiteStudent": 0.801608294038124,
+  "teacher": 0.3632678076561174,
+  "staleTeacher": 0.30507806575861485
+ },
+ "meanRecallTop1": {
+  "alone": 0.8610367977211981,
+  "taught": 0.7884254035865064,
+  "shuffled": 0.5893910151658569,
+  "random": 0.5823677308545612,
+  "stale": 0.736144257774255,
+  "fullLabels": 0.8419164051324005,
+  "oldOnlyStudent": 0.8721415099348316,
+  "newSiteStudent": 0.8675641259038706,
+  "teacher": 0.6452152944516149,
+  "staleTeacher": 0.6470796944404466
+ },
+ "meanTaughtMinusStale": 0.031334476318234716,
+ "meanFullLabelsMinusTaught": 0.1254446276940041,
+ "adviceBytes": 562
+}

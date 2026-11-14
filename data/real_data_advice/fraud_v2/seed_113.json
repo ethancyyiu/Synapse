@@ -1,0 +1,20 @@
+{
+ "status": "stopped_at_teacher_gate",
+ "seed": 113,
+ "teacherGate": {
+  "teacherAP": 0.7495225260256697,
+  "oldOnlyStudentAP": 0.8279097355718805,
+  "margin": -0.07838720954621081,
+  "passed": false,
+  "setting": {
+   "learning_rate": 0.1,
+   "max_leaf_nodes": 15
+  },
+  "cvAP": 0.8364856828714884
+ },
+ "hashes": {
+  "protocol": "665bee6df59e89f28c378bbf5e3361c1726746dfba060b3e263e42c87825f383",
+  "runner": "7f74383433dee38fefc2be384fcbdb755550633aa7da3e7b8d669c2021e7ae47",
+  "v1Runner": "61aea2b571a2f0398f3fe849f782db8b3effd6b2cc6600e857247dd9f701038a"
+ }
+}
