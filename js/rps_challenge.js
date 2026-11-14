@@ -3,6 +3,7 @@ import { Network, rng, wiring } from './sim.js';
 import { MOVES, Opponent, RpsContextualBandit, RpsEpisode, T_DECIDE, result } from './rps.js';
 import { inlineCheckpoint, runStudents } from './rps_student_engine.js';
 import { analyzePattern, challengeOpponent } from './rps_challenge_opponent.js';
+import { drawLineChart } from './line_chart.js';
 export { analyzePattern, challengeOpponent };
 import { Brain } from './brain.js';
 import { Brain3D } from './brain3d.js';
@@ -307,8 +308,15 @@ function showStudentPlan() {
   if (!comparisonRunning) $('compare-round').textContent = `0 / ${plan.first} training rounds`;
 }
 let runKind = 'live';
-// Finished live runs on this page, so different round counts can be compared.
-const runs = [];
+// Finished live runs, kept in this browser so reloading the page does not lose them.
+const RUNS_KEY = 'synapse-live-runs-v1';
+const runs = (() => {
+  try {
+    const saved = JSON.parse(localStorage.getItem(RUNS_KEY) ?? '[]');
+    return Array.isArray(saved) ? saved.filter(r => r && Number.isInteger(r.teacherRounds) && Number.isInteger(r.teacherWins)) : [];
+  } catch { return []; }
+})();
+const saveRuns = () => { try { localStorage.setItem(RUNS_KEY, JSON.stringify(runs)); } catch { /* storage full or blocked */ } };
 const pearson = points => {
   if (points.length < 3) return null;
   const mean = key => points.reduce((sum, p) => sum + p[key], 0) / points.length;
@@ -318,6 +326,8 @@ const pearson = points => {
   return sxx && syy ? sxy / Math.sqrt(sxx * syy) : null;
 };
 function renderRuns() {
+  saveRuns();
+  if ($('runs-clear')) $('runs-clear').hidden = !runs.length;
   const body = $('runs-table'); body.replaceChildren();
   runs.forEach((run, i) => {
     const tr = document.createElement('tr');
@@ -346,7 +356,7 @@ function renderRuns() {
     const value = new Set(points.map(p => p.x)).size > 1 ? pearson(points) : null;
     return value === null ? null : `${name} r = ${value.toFixed(2)} (${points.length} runs)`;
   }).filter(Boolean);
-  $('runs-correlation').textContent = !runs.length ? 'No finished runs yet.' : notes.length ?
+  $('runs-correlation').textContent = !runs.length ? 'No finished runs yet. Only "▶ Train Fly A live" in the Challenge on the Simulation tab adds a run here; the recorded story and highlight do not.' : notes.length ?
     `Correlation between rounds trained and test score: ${notes.join(' · ')}. Close to +1 means more rounds went with higher scores. With only a few live runs this is a rough guide, not a research result.` :
     'Finish at least three runs with different round counts to see a correlation.';
 }
@@ -844,17 +854,27 @@ export async function loadActionPreferenceEvidence() {
     $('preference-event-student').textContent = `Fly B had already played ${move(sample.action)} against ${move(sample.opponent)}: ${sample.reward > 0 ? 'win (+1)' : sample.reward < 0 ? 'loss (−1)' : 'tie (0)'}. Its recorded MBON rates (Rock/Paper/Scissors) were ${sample.rates.map(rate => rate.toFixed(2)).join(' / ')} spikes per neuron.`;
     $('preference-event-update').textContent = `After that action, Fly B's own-reward value step was ${sample.rewardStep.toFixed(4)}; decoded-preference imitation update ${sample.imitation ? 'applied' : 'not applied'}. Frozen evaluation disables both updates and all teacher messages.`;
     $('preference-event-status').textContent = `Archived student ${seed}, training round ${sampleIndex + 1}; recorded measurements, not a live run or a cell-level spike replay. Per-trial Fly A Q scores were not saved.`;
-    const colors = ['#e466b8', '#5cc17a', '#66bde0', '#f5b45c', '#b29cf2'];
-    const x = i => 38 + 390 * i / 6;
-    const y = wins => 142 - 116 * wins / 72;
-    const lines = arms.map((arm, a) => {
-      const points = pair.byArm[arm].checkpoints;
-      const path = points.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p.wins).toFixed(1)}`).join(' ');
-      const dots = points.map((p, i) => `<circle cx="${x(i)}" cy="${y(p.wins)}" r="2.5" fill="${colors[a]}"/>`).join('');
-      return `<path d="${path}" fill="none" stroke="${colors[a]}" stroke-width="2.5"/>${dots}`;
-    }).join('');
-    const ticks = rounds.map((round, i) => `<text x="${x(i)}" y="161" text-anchor="middle" fill="currentColor" font-size="10">${round}</text>`).join('');
-    chart.innerHTML = `<svg viewBox="0 0 460 174" style="width:100%;max-width:680px" aria-hidden="true"><path d="M38 26V142H430" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">72</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text>${lines}${ticks}</svg>`;
+    const about = {
+      trained: ["Taught by Fly A", "The trained Fly A's preferred move, sent as spikes on the two DNge175 neurons on every observed round."],
+      alone: ['Alone', 'No messages. Fly B learns only from its own wins and losses.'],
+      untrained: ['Untrained teacher', 'A never-trained Fly A sends its preference the same way. Tests whether training the teacher matters.'],
+      shuffled: ['Shuffled messages', "Fly A's real suggestions, mixed up so they arrive on the wrong rounds. Tests whether timing matters."],
+      generic: ['Generic messages', 'A random move on every observed round, unrelated to the game. Tests whether any message at all helps.'],
+    };
+    drawLineChart(chart, {
+      title: `Archived student ${seed}: frozen, teacher-disconnected wins out of 72`,
+      ticks: rounds.map(String),
+      tickTitle: k => (k ? `After ${rounds[k]} training rounds` : 'Before training'),
+      xLabel: 'Training rounds (checkpoints equally spaced)',
+      max: 72,
+      yTicks: [0, 24, 48, 72],
+      band: { from: 1, to: 4, label: 'early window (scored)' },
+      bar: { value: 58, label: '58/72 bar' },
+      series: arms.map(arm => ({
+        name: about[arm][0], about: about[arm][1], main: arm === 'trained',
+        values: pair.byArm[arm].checkpoints.map(p => p.wins),
+      })),
+    });
     for (let i = 0; i < rounds.length; i++) {
       const row = document.createElement('tr');
       [rounds[i], ...arms.map(arm => `${pair.byArm[arm].checkpoints[i].wins}/72`)].forEach((value, j) => {
@@ -867,7 +887,7 @@ export async function loadActionPreferenceEvidence() {
     const early = arm => [1, 2, 3, 4].reduce((sum, i) => sum + pair.byArm[arm].checkpoints[i].wins, 0) / 4;
     const advantage = early('trained') - Math.max(...arms.slice(1).map(early));
     const first = arm => pair.byArm[arm].checkpoints.find(p => p.wins >= 58)?.rounds ?? null;
-    $('preference-evidence-status').textContent = `Archived student ${seed}: trained advice first reached 58/72 at round ${first('trained')}; early mean advantage over the strongest control was +${advantage}/72. Final disconnected wins: trained ${pair.byArm.trained.checkpoints[6].wins}/72, no message ${pair.byArm.alone.checkpoints[6].wins}/72. Pink trained, green silent, blue untrained, orange shuffled, purple generic. Saved source: data/${file}.`;
+    $('preference-evidence-status').textContent = `Archived student ${seed}: trained advice first reached 58/72 at round ${first('trained')}; early mean advantage over the strongest control was +${advantage}/72. Final disconnected wins: trained ${pair.byArm.trained.checkpoints[6].wins}/72, no message ${pair.byArm.alone.checkpoints[6].wins}/72. Saved source: data/${file}.`;
   } catch (error) {
     if (loadId !== preferenceLoadId) return;
     $('preference-evidence-status').textContent = `Archived action-preference result unavailable: ${error.message}`;
@@ -1347,6 +1367,8 @@ if (typeof document !== 'undefined') {
   if ($('evidence-speed-chart')) loadSpeedEvidence();
   if ($('replay-load')) {
   $('replay-load').onclick = loadReplay;
+  if ($('runs-clear')) $('runs-clear').onclick = () => { runs.length = 0; renderRuns(); };
+  if (runs.length) renderRuns(); // show runs saved from an earlier visit
   $('replay-seed').onchange = () => { if (replay) { replayRound = 1; showReplay(); } };
   $('replay-arm').onchange = () => { if (replay) { replayRound = 1; showReplay(); } };
   $('replay-checkpoint').onchange = () => { if (replay) showReplay(); };
