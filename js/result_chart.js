@@ -56,36 +56,20 @@ if (svg) {
   chart.append(tip);
 
   const GREEN = '#4ade80';
-  // One explanation line under the graph, filled in for the touched name.
+  // Explain the touched line beside the chart on wide screens.
   const explain = document.createElement('p');
   explain.className = 'rc-explain';
   explain.setAttribute('role', 'status');
-  svg.after(explain);
-  let focused = null, current = null, shown = null;
-  // With room to the right of the graph, the explanation sits beside the touched name;
-  // otherwise it stays under the graph.
-  const place = () => {
-    const picked = series.find(s => s.name === shown);
-    const fig = chart.getBoundingClientRect(), box = svg.getBoundingClientRect();
-    const side = fig.width - box.width >= 200;
-    explain.classList.toggle('side', side);
-    if (!side) { explain.style.left = explain.style.top = explain.style.width = ''; return; }
-    explain.style.left = `${box.width + 12}px`;
-    explain.style.width = `${Math.min(340, fig.width - box.width - 12)}px`;
-    const y = picked && picked.label ? Number(picked.label.getAttribute('y')) - 5 : 262;
-    explain.style.top = `${box.top - fig.top + y * box.height / 330 - explain.offsetHeight / 2}px`;
-  };
-  addEventListener('resize', place);
+  chart.querySelector('.result-chart-side').prepend(explain);
+  let focused = null, current = null;
   const emphasize = name => {
     const picked = series.find(s => s.name === name);
-    shown = picked ? name : null;
     explain.classList.toggle('on', !!picked);
     if (picked) {
       const strong = document.createElement('strong');
       strong.textContent = picked.name;
       explain.replaceChildren(strong, ` ${picked.about}`);
     } else explain.textContent = 'Touch a name to see what that line means.';
-    place();
     series.forEach(s => {
       const dim = name && s.name !== name, on = s.name === name;
       // The touched line turns green; clearing the inline style restores its own colour.
