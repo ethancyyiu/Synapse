@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Synapse — research archive</title>
+    <link rel="icon" href="data:,">
+    <style>
+@font-face {
+  font-family: Atkinson;
+  src: url('fonts/atkinson-hyperlegible-next-latin.woff2') format('woff2');
+  font-display: swap;
+}
+:root {
+  color-scheme: dark;
+  --paper: #15181c;
+  --ink: #e6e8eb;
+  --graphite: #a3abb4;
+  --rule: #343a42;
+  --gfp: #5cc17a;
+  --magenta: #e466b8;
+  --lane1: #f0555a;
+  --lane2: #5b9bff;
+  --lane3: #4cc76a;
+  --neuron-vpn: #6db7ff;
+  --neuron-kc: #63c9ad;
+  --neuron-mbon: #e466b8;
+  --neuron-pam: #5cc17a;
+  --neuron-ppl1: #f07878;
+  --neuron-mid: #edc46a;
+  --neuron-dn: #a694ff;
+  --neuron-vnc: #87919d;
+  --neuron-apl: #d8dfe6;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.5 Atkinson,system-ui,sans-serif;
+}
+button,select {
+  font: inherit;
+}
+button {
+  background: #22282e;
+  color: var(--ink);
+  border: 1px solid #69717a;
+  border-radius: 3px;
+  padding: 9px 14px;
+  cursor: pointer;
+}
+button:hover {
+  background: #303841;
+}
+button:disabled { opacity: .55; cursor: not-allowed; }
+#compare-start:enabled { border-color: var(--gfp); color: var(--gfp); }
+button:focus-visible,select:focus-visible {
+  outline: 3px solid var(--lane2);
+  outline-offset: 2px;
+}
+button[aria-pressed=true] {
+  border-color: var(--gfp);
+  color: var(--gfp);
+}
+select {
+  background: #22282e;
+  color: var(--ink);
+  border: 1px solid #69717a;
+  padding: 8px;
+}
+a {
+  color: #8cbbff;
+}
+h1,h2,h3,p {
+  margin: 0 0 12px;
+}
+h1 {
+  font-size: clamp(2rem,5vw,3rem);
+  line-height: 1.1;
+}
+h2 {
+  font-size: 1.45rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+small,.muted {
+  color: var(--graphite);
+}
+.wrap {
+  max-width: 1300px;
+  margin: auto;
+  padding: 32px 20px 70px;
+}
+.lede {
+  max-width: 75ch;
+  color: var(--graphite);
+  font-size: 1.1rem;
+}
+.panel {
+  border: 1px solid var(--rule);
+  background: #1b2025;
+  padding: 18px;
+  margin-top: 18px;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.controls label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+}
+.flyhead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.move {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.rps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+}
+.brain {
+  width: 100%;
+  max-width: 390px;
+  display: block;
+  height: auto;
+  background: var(--paper);
+  cursor: grab;
+  touch-action: none;
+}
+.brain-view { margin: 0; }
+.brain-view figcaption { color: var(--graphite); font-size: .85rem; margin-top: 5px; }
+.brain-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; }
+.brain-card { min-width: 0; text-align: center; }
+.brain-card .brain { margin: 0 auto; }
+.brain-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; list-style: none; padding: 0; margin: 8px 0; }
+.brain-legend li { display: flex; align-items: center; gap: 6px; font-size: .82rem; color: var(--graphite); }
+.brain-swatch { width: 9px; height: 9px; border-radius: 50%; flex: 0 0 auto; }
+@media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  html, body { overflow-x: hidden; }
+  .brain-pair { grid-template-columns: 1fr; }
+  .panel, .controls, .controls label { min-width: 0; }
+  .controls label { flex-wrap: wrap; }
+  .controls select, .controls input { max-width: 100%; }
+  .scroll { max-width: 100%; min-width: 0; }
+}
+@media (max-width: 600px) { .brain-pair { grid-template-columns: 1fr; } }
+.signal {
+  border: 1px solid var(--rule);
+  padding: 15px;
+  margin: 18px 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+}
+.signal .line {
+  height: 5px;
+  background: var(--rule);
+  position: relative;
+}
+.signal .pulse {
+  position: absolute;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--gfp);
+  opacity: 0;
+}
+.signal .pulse.active {
+  opacity: 1;
+}
+.signal code {
+  color: var(--gfp);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.stat {
+  border: 1px solid var(--rule);
+  padding: 10px;
+}
+.stat strong {
+  display: block;
+  font-size: 1.4rem;
+}
+.chart {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .93rem;
+}
+th,td {
+  padding: 8px;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+}
+th:not(:first-child),td:not(:first-child) {
+  text-align: right;
+}
+caption {
+  text-align: left;
+  color: var(--graphite);
+  padding: 0 0 8px;
+}
+.scroll {
+  overflow: auto;
+}
+footer {
+  margin-top: 30px;
+  color: var(--graphite);
+  font-size: .92rem;
+}
+.legend {
+  font-size: .92rem;
+  color: var(--graphite);
+}
+.game-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+[hidden] { display: none !important; }
+.game-actions button { min-width: 110px; font-size: 1.1rem; }
+.game-metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; font-size: .88rem; }
+.pattern-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.pattern-item { border: 1px solid var(--rule); padding: 6px; display: flex; gap: 5px; align-items: center; }
+.pattern-item button { padding: 3px 7px; }
+.game-metrics span { padding: 7px; border: 1px solid var(--rule); }
+.game-metrics strong { display: block; color: var(--gfp); }
+.history { max-height: 250px; overflow: auto; }
+.neural-bars { display: grid; gap: 6px; margin: 10px 0 16px; }
+.neural-bar { display: grid; grid-template-columns: 74px 1fr 48px; gap: 8px; align-items: center; font-size: .88rem; }
+.neural-track { height: 10px; background: var(--paper); border: 1px solid var(--rule); }
+.neural-fill { display: block; height: 100%; background: var(--gfp); }
+.replay-step { border-left: 3px solid var(--lane2); padding-left: 12px; margin: 10px 0; }
+.replay-step strong { color: var(--ink); }
+.finding { border-left: 3px solid var(--gfp); padding: 5px 12px; margin: 12px 0; }
+.finding.caution { border-color: var(--magenta); }
+.step-title { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--rule); }
+summary { cursor: pointer; font-weight: 700; }
+summary:focus-visible { outline: 3px solid var(--lane2); }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+@media(max-width:750px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .signal {
+    grid-template-columns: 1fr;
+  }
+  .signal .line {
+    width: 100%;
+  }
+  .game-metrics { grid-template-columns: repeat(2,1fr); }
+}
+    </style>
+  </head>
+  <body><main>
+<h1>Archived older results</h1>
+<p><a href="index.html">Back to the main demo</a></p>
+<p class="finding caution">These proposal/veto experiments failed their teacher-specific retained-learning gates. They are kept for the record and are not the method the main demo runs.</p>
+            <section id="signal-diagnostic" class="panel" aria-labelledby="signal-diagnostic-title">
+              <h3 id="signal-diagnostic-title">Neural Advice Diagnostic</h3>
+              <p class="legend">This older proposal/veto protocol has a real, decodable signal, but its archived five-arm comparison did not show a unique retained-learning advantage. The separate action-preference protocol and its controls appear in Research Evidence on the main demo.</p>
+              <div class="grid">
+                <article class="panel">
+                  <h4>Immediate effect</h4>
+                  <p id="diagnostic-immediate" class="legend">Pending archived comparison…</p>
+                </article>
+                <article class="panel">
+                  <h4>Retained effect</h4>
+                  <p id="diagnostic-retained" class="legend">Pending archived comparison…</p>
+                </article>
+              </div>
+              <div class="scroll">
+                <table>
+                  <caption>Archived five-arm comparison from the locked Strategy A result</caption>
+                  <thead>
+                    <tr>
+                      <th>Training rounds</th>
+                      <th>Trained advice</th>
+                      <th>No advice</th>
+                      <th>Untrained advice</th>
+                      <th>Shuffled advice</th>
+                      <th>Matched generic veto</th>
+                    </tr>
+                  </thead>
+                  <tbody id="diagnostic-table-body"></tbody>
+                </table>
+              </div>
+            </section>
+          <article class="panel"><h3>Older proposal/veto Strategy A · five-arm frozen learning curves</h3><p class="legend">Archived teacher 830 and student 10830; separate from the live Challenge. Seven frozen 72-round evaluations after 0, 6, 12, 24, 48, 96, and 288 training rounds. All evaluations were disconnected, with exploration and learning off. Lines mark recorded wins; the table gives exact counts.</p><div id="evidence-speed-chart" role="img" aria-label="Archived five-arm frozen RPS wins across seven training checkpoints"></div><div class="scroll"><table><thead><tr><th>Training rounds</th><th>Trained advice</th><th>No advice</th><th>Untrained advice</th><th>Shuffled advice</th><th>Matched generic advice</th></tr></thead><tbody id="evidence-speed-table"></tbody></table></div><p id="evidence-speed-status" class="legend">Loading archived results…</p><p class="legend">The trained-teacher-specific gate failed; all four message arms reached the 58/72 proficiency threshold at round 12. <a href="data/rps_teacher_specific_speed_initial.json">Saved five-arm result</a> · <a href="docs/lab-notebook.md">locked protocol and interpretation</a>.</p></article>
+          <article class="panel"><h3>Research Replay · archived teaching controls</h3><p class="legend">Recorded students 851 and 852, fixed Strategy B, pretrained teacher 830. This replay is separate from the live flies on the main demo. Step through measured neural events and compare the disconnected checkpoints.</p><div class="controls"><label>Student <select id="replay-seed"><option value="851">851</option><option value="852">852</option></select></label><label>Training message <select id="replay-arm"><option value="correct">Trained Fly A</option><option value="shuffled">Shuffled</option><option value="untrained">Untrained teacher</option><option value="generic">Generic veto</option><option value="disconnected">Disconnected</option></select></label><button id="replay-load">Load archived replay</button></div><p id="replay-status" role="status">Replay loads only when requested. No new training or neural simulation occurs.</p></article>
+          <div id="replay-details" hidden>
+            <div class="controls"><button id="replay-prev">Previous round</button><button id="replay-next">Next round</button><span id="replay-round">Round 1 of 12</span></div>
+            <div class="grid">
+              <article class="panel"><h3>Fly A · archived neural source</h3><p id="replay-teacher-source"></p><div id="replay-teacher-bars" class="neural-bars"></div><p id="replay-teacher-q" class="legend"></p></article>
+              <article class="panel"><h3>Fly B · archived neural receiver</h3><p id="replay-cue"></p><div id="replay-student-bars" class="neural-bars"></div><p id="replay-proposal" class="replay-step"></p><p id="replay-advice" class="replay-step"></p><p id="replay-dn" class="replay-step"></p><p id="replay-final" class="replay-step"></p><p id="replay-update" class="replay-step"></p></article>
+            </div>
+            <h3>Frozen, disconnected evaluation on identical held-out sequences</h3>
+            <p class="legend">All rows below turn messages and learning off during evaluation. Scores come from the archived experiment; they are not outcomes of the live Challenge above.</p>
+            <div class="scroll"><table><thead><tr><th>Training condition</th><th>Before training</th><th>After 6 rounds</th><th>After 12 rounds</th></tr></thead><tbody id="replay-controls"></tbody></table></div>
+            <div class="controls" style="margin-top:12px"><label>Inspect frozen checkpoint <select id="replay-checkpoint"><option value="6">After 6 rounds</option><option value="12">After 12 rounds</option><option value="0">Before training</option></select></label></div>
+            <p id="replay-frozen-detail" class="legend"></p>
+            <p class="finding caution" id="replay-conclusion">This older proposal/veto experiment failed its locked teacher-specific advantage gate. The generic-veto control also failed its rejection-count matching gate.</p>
+            <p class="legend">Source: <a href="data/rps_teacher_guided_matched_veto.json">archived matched-veto trials and checkpoints</a> and <a href="data/rps_teacher_guided_reset_preflight.json">teacher neural source</a>. See the <a href="docs/lab-notebook.md">lab notebook</a>. The DN counts are actual recorded spikes from the simulated 240–280 ms window, held in an engineered measurement buffer.</p>
+          </div>
+<script type="importmap">
+      {"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+    </script>
+<script type="module" src="js/rps_challenge.js"></script>
+</main></body></html>
