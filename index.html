@@ -1026,6 +1026,15 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
         }
         if (scroll) (target ?? document.querySelector('main')).scrollIntoView({ block: 'start' });
       };
+      const tabLinks = document.querySelectorAll('.tab-rail [role="tab"]');
+      tabLinks.forEach(tab => tab.addEventListener('click', event => {
+        event.preventDefault();
+        const name = tab.id.slice('tab-btn-'.length);
+        const hash = tab.getAttribute('href');
+        if (location.hash !== hash) history.pushState(null, '', hash);
+        showTab(name, null, false);
+        scrollTo(0, 0);
+      }));
       const route = () => {
         const target = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
         const panel = target?.closest?.('.tab-panel');
@@ -1033,9 +1042,11 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
         const name = Object.keys(tabs).find(key => tabs[key] === panel.id);
         const top = ['demo', 'stats', 'research'].includes(target.id);
         for (let details = target.closest('details'); details; details = details.parentElement.closest('details')) details.open = true;
-        showTab(name, top ? null : target);
+        showTab(name, top ? null : target, !top);
+        if (top) scrollTo(0, 0);
       };
       addEventListener('hashchange', route);
+      addEventListener('popstate', route);
       route();
       // The same recording at 4x speed.
       document.getElementById('hero-play-fast').addEventListener('click', () => {

@@ -40,7 +40,7 @@ function setEvaluating(on) { evaluating = on; renderPlayback(); }
 function followTo(key, el) {
   if (seeking || followOff || followKey === key || !el?.getBoundingClientRect || typeof scrollTo !== 'function' || $('tab-sim')?.hidden) return;
   followKey = key;
-  const top = el.getBoundingClientRect().top + scrollY - ($('mission').offsetHeight || 0) - 12;
+  const top = el.getBoundingClientRect().top + scrollY - ($('mission').offsetHeight || 0) - 24;
   scrollTo({ top: Math.max(0, top), behavior: 'smooth' });
 }
 // Solid hand icons (fist, open hand, V sign) in the page's accent colour; .cut lines use the box background.
@@ -131,8 +131,10 @@ function mission(step, title, progress = 0) {
   $('mission-title').textContent = title;
   $('mission-bar').style.width = `${Math.round(progress * 100)}%`;
   if (playback.active) {
-    if (step === 2) followTo('teacher', $('teacher-card'));
-    else if (step === 3) followTo('students', $('teach-head') ?? $('brain-stage'));
+    if (step === 2) followTo('teacher', document.querySelector('.step2-card.cell-top'));
+    else if (step === 3) followTo('students', document.querySelector(
+      matchMedia('(max-width: 1100px)').matches ? '.step3-card.cell-top' : '.train-row'
+    ));
     else if (step === 5) followTo('end', $('step4-title'));
   }
 }
