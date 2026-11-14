@@ -458,6 +458,16 @@ summary:focus-visible { outline: 3px solid var(--lane2); }
 .stat-tile.accent strong { color: var(--accent); }
 .stat-tile strong small { font-size: calc(.42em + 2px); color: var(--graphite); font-weight: 400; }
 .stat-tile span { color: var(--graphite); font-size: calc(.85rem + 2px); line-height: 1.35; display: block; margin-top: 4px; }
+#tab-research .hero-stats { grid-template-columns: repeat(3,minmax(0,1fr)); text-align: center; }
+#tab-research .hero-stats .stat-tile { padding-right: 0; }
+@media (max-width: 760px) {
+  #tab-research .hero-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #tab-research .hero-stats .stat-tile:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 520px) {
+  #tab-research .hero-stats { grid-template-columns: 1fr; }
+  #tab-research .hero-stats .stat-tile:last-child { grid-column: auto; }
+}
 .faster { border: 1px solid var(--rule); background: #191918; padding: 14px 16px; margin: 14px 0; }
 .faster-head { margin: 0 0 10px; font-weight: 700; color: var(--ink); }
 .faster-bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
@@ -489,6 +499,10 @@ summary:focus-visible { outline: 3px solid var(--lane2); }
 /* Compact side tabs leave most of the page width for the demo. */
 html { scroll-padding-top: 12px; }
 body:has(.tab-rail) { padding-right: 100px; }
+@media (min-width: 761px) {
+  body:has(#tab-research:not([hidden])) { padding-right: 86px; }
+  body:has(#tab-research:not([hidden])) .wrap { max-width: none; padding-right: 16px; }
+}
 .tab-rail { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 20; }
 .tabs { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
 .tabs [role=tab] { box-sizing: border-box; width: 94px; padding: 9px 7px; background: #1f1e1d; border: 1px solid #5f5d58; border-right: 0; border-radius: 5px 0 0 5px; color: var(--ink); font-weight: 700; font-size: calc(.84rem + 2px); letter-spacing: .01em; text-align: center; text-decoration: none; }
