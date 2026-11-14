@@ -341,7 +341,7 @@ function renderRuns() {
     `<rect x="${(x(p.x) - 9).toFixed(1)}" y="${(y(p.y) - 4).toFixed(1)}" width="8" height="8" fill="${color}"/>` :
     `<circle cx="${(x(p.x) + (s === 1 ? 3 : 10)).toFixed(1)}" cy="${y(p.y).toFixed(1)}" r="4" fill="${color}"/>`).join('')).join('');
   const ticks = ROUND_OPTIONS.map(n => `<text x="${x(n)}" y="161" text-anchor="middle" fill="currentColor" font-size="10">${n}</text>`).join('');
-  $('runs-chart').innerHTML = runs.length ? `<svg viewBox="0 0 460 184" style="width:100%;max-width:680px" aria-hidden="true"><path d="M38 26V142H440" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">72</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text>${marks}${ticks}<text x="240" y="179" text-anchor="middle" fill="currentColor" font-size="10">training rounds · height: test wins out of 72</text></svg>` : '';
+  $('runs-chart').innerHTML = runs.length ? `<svg viewBox="0 0 460 184" style="width:100%" aria-hidden="true"><path d="M38 26V142H440" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">72</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text>${marks}${ticks}<text x="240" y="179" text-anchor="middle" fill="currentColor" font-size="10">training rounds · height: test wins out of 72</text></svg>` : '';
   const notes = series.map(([name, , points]) => {
     const value = new Set(points.map(p => p.x)).size > 1 ? pearson(points) : null;
     return value === null ? null : `${name} r = ${value.toFixed(2)} (${points.length} runs)`;
@@ -357,7 +357,7 @@ function lineChart(id, points, maximum, color = '#5cc17a') {
   const path = points.map((p, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)},${y(p.wins).toFixed(1)}`).join(' ');
   const dots = points.map((p, i) => `<circle cx="${x(i)}" cy="${y(p.wins)}" r="3" fill="${color}"/>`).join('');
   const ticks = points.map((p, i) => `<text x="${x(i)}" y="161" text-anchor="middle" fill="currentColor" font-size="10">${p.rounds}</text>`).join('');
-  $(id).innerHTML = `<svg viewBox="0 0 460 174" style="width:100%;max-width:680px" aria-hidden="true"><path d="M38 26V142H430" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">${maximum}</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text><path d="${path}" fill="none" stroke="${color}" stroke-width="2.5"/>${dots}${ticks}</svg>`;
+  $(id).innerHTML = `<svg viewBox="0 0 460 174" style="width:100%" aria-hidden="true"><path d="M38 26V142H430" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">${maximum}</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text><path d="${path}" fill="none" stroke="${color}" stroke-width="2.5"/>${dots}${ticks}</svg>`;
 }
 
 let replay, replaySource, replayRound = 0, challengeToken = 0, challengeRunning = false;
@@ -741,7 +741,7 @@ function learningChart(id, points, maximum, label) {
     return `<path d="${path}" fill="none" stroke="${colors[arm]}" stroke-width="2.5"${arm === 2 ? ' stroke-dasharray="5 4"' : ''}/>${dots}`;
   }).join('');
   const ticks = points.map((point, i) => `<text x="${x(i)}" y="161" text-anchor="middle" fill="currentColor" font-size="10">${point[label]}</text>`).join('');
-  $(id).innerHTML = `<svg viewBox="0 0 460 174" style="width:100%;max-width:680px" aria-hidden="true"><path d="M38 26V142H430" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">${maximum}</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text>${lines}${ticks}</svg>`;
+  $(id).innerHTML = `<svg viewBox="0 0 460 174" style="width:100%" aria-hidden="true"><path d="M38 26V142H430" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">${maximum}</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text>${lines}${ticks}</svg>`;
 }
 export async function loadSpeedEvidence() {
   try {
@@ -766,7 +766,7 @@ export async function loadSpeedEvidence() {
       return `<path d="${points}" fill="none" stroke="${colors[index]}" stroke-width="2.5"/>${dots}`;
     }).join('');
     const ticks = rounds.map((round, i) => `<text x="${x(i)}" y="161" text-anchor="middle" fill="currentColor" font-size="10">${round}</text>`).join('');
-    $('evidence-speed-chart').innerHTML = `<svg viewBox="0 0 460 174" style="width:100%;max-width:680px" aria-hidden="true"><path d="M38 26V142H430" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">72</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text>${lines}${ticks}</svg>`;
+    $('evidence-speed-chart').innerHTML = `<svg viewBox="0 0 460 174" style="width:100%" aria-hidden="true"><path d="M38 26V142H430" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">72</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text>${lines}${ticks}</svg>`;
     const body = $('evidence-speed-table'); body.replaceChildren();
     for (const point of pair.checkpoints) {
       const tr = document.createElement('tr');
@@ -854,7 +854,7 @@ export async function loadActionPreferenceEvidence() {
       return `<path d="${path}" fill="none" stroke="${colors[a]}" stroke-width="2.5"/>${dots}`;
     }).join('');
     const ticks = rounds.map((round, i) => `<text x="${x(i)}" y="161" text-anchor="middle" fill="currentColor" font-size="10">${round}</text>`).join('');
-    chart.innerHTML = `<svg viewBox="0 0 460 174" style="width:100%;max-width:680px" aria-hidden="true"><path d="M38 26V142H430" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">72</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text>${lines}${ticks}</svg>`;
+    chart.innerHTML = `<svg viewBox="0 0 460 174" style="width:100%" aria-hidden="true"><path d="M38 26V142H430" fill="none" stroke="currentColor" opacity=".5"/><text x="32" y="31" text-anchor="end" fill="currentColor" font-size="10">72</text><text x="32" y="143" text-anchor="end" fill="currentColor" font-size="10">0</text>${lines}${ticks}</svg>`;
     for (let i = 0; i < rounds.length; i++) {
       const row = document.createElement('tr');
       [rounds[i], ...arms.map(arm => `${pair.byArm[arm].checkpoints[i].wins}/72`)].forEach((value, j) => {
@@ -931,7 +931,7 @@ export async function loadAblationEvidence() {
     // A short sample of each line's stroke sits before its name.
     const names = labels.map(l => `<line x1="596" x2="618" y1="${l.at - 4}" y2="${l.at - 4}" stroke="${l.stroke}" stroke-width="${l.width}"` +
       `${l.dash ? ` stroke-dasharray="${l.dash}"` : ''}/><text x="626" y="${l.at}" fill="${l.fill}" font-size="13"${l.bold ? ' font-weight="700"' : ''}>${l.text}</text>`).join('');
-    chart.innerHTML = `<svg viewBox="0 0 840 330" style="width:100%;max-width:880px;display:block" aria-hidden="true">${grid}` +
+    chart.innerHTML = `<svg viewBox="0 0 840 330" style="width:100%;display:block" aria-hidden="true">${grid}` +
       `<path d="M56 290H584" fill="none" stroke="#5f5d58"/>${ticks}` +
       `<text x="320" y="327" text-anchor="middle" fill="#a3abb4" font-size="12">Training rounds (checkpoints shown evenly spaced)</text>` +
       line('silent', '#8a929b', 2) + line('scrambled', '#a3abb4', 2, '2 4') + line('neural', '#ffffff', 3) +

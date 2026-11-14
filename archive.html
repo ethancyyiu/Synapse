@@ -150,12 +150,12 @@ small,.muted {
   touch-action: none;
 }
 .brain-view { margin: 0; }
-.brain-view figcaption { color: var(--graphite); font-size: .85rem; margin-top: 5px; }
+.brain-view figcaption { color: var(--graphite); font-size: calc(.85rem + 2px); margin-top: 5px; }
 .brain-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 32px; }
 .brain-card { min-width: 0; text-align: center; }
 .brain-card .brain { margin: 0 auto; }
 .brain-legend { display: flex; flex-wrap: wrap; gap: 8px 16px; list-style: none; padding: 0; margin: 8px 0; }
-.brain-legend li { display: flex; align-items: center; gap: 6px; font-size: .82rem; color: var(--graphite); }
+.brain-legend li { display: flex; align-items: center; gap: 6px; font-size: calc(.82rem + 2px); color: var(--graphite); }
 .brain-swatch { width: 9px; height: 9px; border-radius: 50%; flex: 0 0 auto; }
 @media (max-width: 700px) { .grid { grid-template-columns: 1fr; } }
 @media (max-width: 600px) {
@@ -219,7 +219,7 @@ small,.muted {
 table {
   border-collapse: collapse;
   width: 100%;
-  font-size: .93rem;
+  font-size: calc(.93rem + 2px);
 }
 th,td {
   padding: 8px;
@@ -240,16 +240,16 @@ caption {
 footer {
   margin-top: 30px;
   color: var(--graphite);
-  font-size: .92rem;
+  font-size: calc(.92rem + 2px);
 }
 .legend {
-  font-size: .92rem;
+  font-size: calc(.92rem + 2px);
   color: var(--graphite);
 }
 .game-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
 [hidden] { display: none !important; }
 .game-actions button { min-width: 110px; font-size: 1.1rem; }
-.game-metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; font-size: .88rem; }
+.game-metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; font-size: calc(.88rem + 2px); }
 .pattern-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
 .pattern-item { border: 1px solid var(--rule); padding: 6px; display: flex; gap: 5px; align-items: center; }
 .pattern-item button { padding: 3px 7px; }
@@ -257,7 +257,7 @@ footer {
 .game-metrics strong { display: block; color: var(--gfp); }
 .history { max-height: 250px; overflow: auto; }
 .neural-bars { display: grid; gap: 6px; margin: 10px 0 16px; }
-.neural-bar { display: grid; grid-template-columns: 74px 1fr 48px; gap: 8px; align-items: center; font-size: .88rem; }
+.neural-bar { display: grid; grid-template-columns: 74px 1fr 48px; gap: 8px; align-items: center; font-size: calc(.88rem + 2px); }
 .neural-track { height: 10px; background: var(--paper); border: 1px solid var(--rule); }
 .neural-fill { display: block; height: 100%; background: var(--gfp); }
 .replay-step { border-left: 3px solid var(--lane2); padding-left: 12px; margin: 10px 0; }
