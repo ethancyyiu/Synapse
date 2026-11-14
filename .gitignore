@@ -1,0 +1,7 @@
+data/raw/
+node_modules/
+__pycache__/
+docs/superpowers/
+docs/party-mode-debate.md
+.claude/
+.playwright-mcp/
