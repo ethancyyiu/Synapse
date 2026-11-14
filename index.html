@@ -509,11 +509,14 @@ body:has(.tab-rail) { padding-right: 100px; }
 .tabs [role=tab]:hover { background: #2b2a28; text-decoration: none; }
 .tabs [role=tab][aria-selected=true] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 .tabs [role=tab]:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
+.tab-rail .fraud-link { box-sizing: border-box; display: block; width: 94px; margin-top: 4px; padding: 9px 7px; background: #214138; border: 1px solid #4b9676; border-right: 0; border-radius: 5px 0 0 5px; color: var(--ink); font-weight: 700; font-size: calc(.84rem + 2px); text-align: center; text-decoration: none; }
+.tab-rail .fraud-link:hover { background: #2c5a4b; }
 @media (max-width: 760px) {
   body:has(.tab-rail) { padding-right: 0; padding-bottom: 54px; }
-  .tab-rail { top: auto; bottom: 0; left: 0; transform: none; background: var(--paper); border-top: 1px solid var(--rule); }
-  .tabs { flex-direction: row; gap: 0; }
+  .tab-rail { top: auto; bottom: 0; left: 0; transform: none; background: var(--paper); border-top: 1px solid var(--rule); display: flex; }
+  .tabs { flex-direction: row; gap: 0; flex: 3; }
   .tabs [role=tab] { flex: 1; width: auto; padding: 11px 6px; border: 0; border-radius: 0; }
+  .tab-rail .fraud-link { flex: 1; width: auto; margin: 0; padding: 11px 6px; border: 0; border-radius: 0; }
 }
 .page-nav .secondary a { color: var(--graphite); }
 .section-title { font-size: 1.6rem; margin: 44px 0 4px; }
@@ -657,7 +660,7 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
         <p class="hook-sub"><button id="hero-play-fast" type="button">30-second highlight</button> · <a href="#how">How it works and what we tested</a></p>
         <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a href="fraud.html">Synapse Fraud prototype</a> · <a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
       </header>
-      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-sim" role="tab" href="#demo" aria-controls="tab-sim" aria-selected="true">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Stats</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a></div></nav>
+      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-sim" role="tab" href="#demo" aria-controls="tab-sim" aria-selected="true">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Stats</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a></div><a class="fraud-link" href="fraud.html">Synapse Fraud</a></nav>
       <main>
         <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim">
         <h2 id="demo" class="section-title">Live demo</h2>
