@@ -17,8 +17,6 @@
 
 Synapse adapts [Fly Hero](https://github.com/bsgelman/fly-hero) by Benjamin Gelman, a simulated fruit-fly connectome that learns a rhythm game, into a two-fly Rock-Paper-Scissors (RPS) teaching experiment.
 
-**Archive integrity after date removal.** Calendar dates and date-stamped paths were removed from this working tree at the user's request. Saved trial measurements remain, but the SHA-256 values recorded in research artifacts and audit reports refer to the original files and no longer match the edited protocols or artifacts. Use Git revision `e2dd5a0` to verify the original hashes and research chronology. The current tree is the date-free demo and archive view, not the original write-once record.
-
 ## Run locally
 
 You need Python 3 and a current browser with WebGL. Three.js is vendored in `vendor/three/`, so there is nothing to install and the demo works offline.

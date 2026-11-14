@@ -125,7 +125,7 @@ async function hold(ms, token) {
 }
 const PICK_HINT = 'Click a dot to identify a neuron.';
 
-const STORY_IDLE = 'Follow the recording, or use Step 1 to train your own flies.';
+const STORY_IDLE = 'Watch the recorded rule change, or use Step 1 to train your own flies.';
 function mission(step, title, progress = 0) {
   [1, 2, 3, 4].forEach(i => { $(`mission-step-${i}`).className = i === step ? 'step now' : i < step ? 'step done' : 'step'; });
   $('mission-title').textContent = title;
@@ -302,8 +302,8 @@ function showStudentPlan() {
   $('step1-teacher-rounds').textContent = `${teacherRounds()} rounds`;
   $('step1-student-rounds').textContent = plan.pauseAtSix ? '6, then 288 rounds' : `${plan.rounds} rounds`;
   $('compare-plan').textContent = plan.pauseAtSix ?
-    'Fly A sends advice as spikes to one Fly B; the other trains alone. Pause after 6 rounds.' :
-    'Fly A sends advice as spikes to one Fly B; the other trains alone.';
+    'Fly A sends move advice as spikes to one Fly B. Another trains alone; a third gets random messages. All learn from their own games. Pause after 6 rounds.' :
+    'Fly A sends move advice as spikes to one Fly B. Another trains alone; a third gets random messages. All learn from their own games.';
   if (!comparisonRunning) $('compare-round').textContent = `0 / ${plan.first} training rounds`;
 }
 let runKind = 'live';
@@ -468,7 +468,7 @@ function clearComparisonDisplay() {
   renderStrip('guided-strip', []); renderStrip('alone-strip', []);
   $('run-next').hidden = true;
   $('run-about').textContent = '';
-  mission(1, 'Press ▶ Watch the demo to see it in 1½ minutes');
+  mission(1, 'Press ▶ Watch the 90-second story');
   comparisonReady = null;
   comparisonRunning = false;
   $('compare-start').disabled = true;
@@ -557,7 +557,7 @@ function challengeReset() {
   const aRounds = teacherRounds();
   $('challenge-status').textContent = `Ready to train Fly A. Budget: ${aRounds / 24} episodes × 24 rounds; frozen check: 72 rounds${challengeConfig().mode === 'custom' ? ' on the same repeating pattern with fresh neural streams' : ' on three new opponent sequences'}.`;
   $('challenge-teacher-progress').textContent = `0 / ${aRounds} training rounds`;
-  $('challenge-teacher-plan').textContent = `Fly A trains for ${aRounds} rounds from its wins and losses.`;
+  $('challenge-teacher-plan').textContent = `Fly A trains for ${aRounds} rounds, using wins and losses to learn the pattern. Then it plays 72 test games without learning.`;
   showStudentPlan();
   lineChart('teacher-learning-chart', [], 24);
   $('teacher-learning-note').textContent = 'Train Fly A live to fill this in.';
@@ -1035,7 +1035,9 @@ function studentEventHandler(views, { preview = false } = {}) {
         $('guided-dn').textContent = `3. Measured DNge175 spikes: 3141 ${message.dnCounts[0]} · 3165 ${message.dnCounts[1]} · decoded ${message.decoded === null ? 'none' : move(message.decoded)}`;
         const lesson = message.preference === null ? 'No cue yet' :
           `Fly A says ${move(message.preference)} · ${message.dnCounts[0] + message.dnCounts[1]} spikes`;
-        $('live-story').textContent = `Round ${completed}/${total} · ${lesson} · Taught: ${outcome(guidedRow.reward)} · Alone: ${outcome(rows[0].reward)}`;
+        $('live-story').textContent = runKind === 'ruleSwitch' ?
+          "Fly A's spike message reaches one Fly B. All students keep learning from their own wins and losses as the new rule takes hold." :
+          `Round ${completed}/${total} · ${lesson} · Taught: ${outcome(guidedRow.reward)} · Alone: ${outcome(rows[0].reward)}`;
         $('mission-taught').textContent = wins(recent[1]);
         $('mission-alone').textContent = wins(recent[0]);
         $('mission-random').textContent = wins(recent[2]);
@@ -1083,7 +1085,7 @@ function studentEventHandler(views, { preview = false } = {}) {
         setEvaluating(runKind === 'live');
         showPhase(-1);
         mission(4, runKind === 'live' ? 'Checking both 72-game tests' : 'Final test: Fly A disconnected', 1);
-        $('live-story').textContent = 'Both Fly Bs play alone. No help, no learning.';
+        $('live-story').textContent = 'Fly A is disconnected and learning is switched off. Both Fly Bs now play new games so we can compare what they retained.';
         $('compare-status').textContent = 'Frozen evaluation: both students disconnected, with no exploration or learning.';
       }
       if (event.type === 'done') {
@@ -1108,9 +1110,10 @@ function studentEventHandler(views, { preview = false } = {}) {
         $('run-next').hidden = false;
         mission(5, `Final test: Taught ${totals[1]}/72 · Alone ${totals[0]}/72${randomWins === null ? '' : ` · Random ${randomWins}/72`}`, 1);
         showPhase(-1);
-        const first = arm => checkpoints.find(point => point.wins[arm] >= 58)?.rounds ?? 'never';
-        $('live-story').textContent = preview ? `${total}-round quick run complete · one frozen test with Fly A disconnected.` :
-          `Reached 58/72 at round: Taught ${first(1)} · Alone ${first(0)}`;
+        $('live-story').textContent = runKind === 'ruleSwitch' ?
+          'This is one recorded run with Fly A unplugged. The scores show what each Fly B retained; Stats has the 15-run result.' :
+          preview ? `${total}-round quick run complete · one frozen test with Fly A disconnected.` :
+          'Fly A was disconnected for the final test. Compare both scores to see what each Fly B retained.';
         const run = runKind === 'live' ? comparisonReady?.run : null;
         if (run) {
           Object.assign(run, { studentRounds: total, taught: totals[1], alone: totals[0] });
@@ -1269,7 +1272,9 @@ async function playRecordedRun(kind = 'normal', startAt = 0, startPaused = false
     const apply = async (event, live) => {
       if (event.type === 'teacher') {
         mission(2, event.frozen ? 'Fly A is taking its test' : 'Fly A is learning the game', event.progress);
-        $('live-story').textContent = event.story;
+        $('live-story').textContent = kind === 'ruleSwitch' ? (event.frozen ?
+          'Fly A now plays new games with learning switched off. This check shows whether it learned the opponent’s new rule.' :
+          'Fly A practices against the new rule, using its wins and losses to improve its next move.') : event.story;
         applyFrame(event, live);
         teacherRound++;
         playback.where = event.frozen ? `Fly A test round ${teacherRound - 288}/72` : `Fly A round ${teacherRound}/288`;
@@ -1287,7 +1292,10 @@ async function playRecordedRun(kind = 'normal', startAt = 0, startPaused = false
         if (live) await hold(kind === 'ruleSwitch' ? 16 : 9, token);
       } else if (event.type === 'stage') {
         mission(event.step, event.title, event.progress);
-        $('live-story').textContent = event.story;
+        $('live-story').textContent = event.title === 'Every Fly B learned the OLD rule' ?
+          'All three Fly Bs practiced the old rule and start from identical copies. That gives them a fair starting point.' :
+          event.title === 'The opponent just changed its rule' ?
+            'The opponent reverses its rule. Fly A already knows the new pattern; we now watch whether its advice helps one Fly B adapt faster.' : event.story;
         const card = STAGE_CARDS[event.title];
         $('stage-card').hidden = !card;
         if (card) { $('stage-card-title').textContent = event.title; $('stage-card-text').textContent = card; }
