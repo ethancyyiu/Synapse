@@ -4,8 +4,10 @@
 import { readFile, access } from 'node:fs/promises';
 
 const root = new URL('../', import.meta.url);
-const files = ['index.html', 'archive.html', 'legacy.html', 'rhythm.html', 'README.md',
-  'docs/pitch-script.md', 'docs/demo-guide.md', 'docs/research-story.md', 'docs/earlier-rps-experiment.md'];
+const files = ['index.html', 'archive.html', 'legacy.html', 'rhythm.html', 'fraud.html', 'README.md',
+  'docs/pitch-script.md', 'docs/demo-guide.md', 'docs/research-story.md', 'docs/earlier-rps-experiment.md',
+  'docs/synapse-fraud-plan.md', 'docs/synapse-fraud-protocol.md', 'docs/synapse-fraud-research.md',
+  'docs/synapse-fraud-demo-guide.md'];
 const missing = [];
 let checked = 0;
 for (const file of files) {
