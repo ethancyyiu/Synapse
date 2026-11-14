@@ -1,0 +1,713 @@
+{
+  "command": "node tools/check_two_cue_population_fresh.mjs",
+  "hypothesis": "The fixed four-MBON analytical source readout generalizes to fresh trained teachers",
+  "sourceNeurons": [
+    2146,
+    2134,
+    2124,
+    2122
+  ],
+  "calibrationTeachers": [
+    501,
+    502
+  ],
+  "evaluationTeachers": [
+    505,
+    506
+  ],
+  "evaluationTest": 2,
+  "shuffleSeedRule": "20261102 + teacher seed",
+  "gate": "each teacher: trained >= 18/24 and >= 8/12 per mapping; shuffled labels <= 14/24",
+  "archivedDecoderReproduced": true,
+  "evaluation": {
+    "505": {
+      "trained": {
+        "score": 20,
+        "byMapping": [
+          10,
+          10
+        ]
+      },
+      "untrained": {
+        "score": 12,
+        "byMapping": [
+          0,
+          12
+        ]
+      },
+      "shuffledLabels": {
+        "score": 14,
+        "byMapping": [
+          7,
+          7
+        ]
+      },
+      "disconnected": {
+        "score": 12,
+        "byMapping": [
+          12,
+          0
+        ]
+      },
+      "trials": [
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 1,
+          "trace": [
+            0.7672059499758563,
+            1.5386421153859364,
+            0.7827045382418687,
+            0
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 4,
+          "trace": [
+            0.0019017134184540498,
+            0.026444908034518586,
+            0.3108436118338589,
+            0.04379460419298927
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 5,
+          "trace": [
+            0.7868852299906751,
+            1.5407535991725045,
+            0.8649027663058455,
+            0.6247103469688348
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 7,
+          "trace": [
+            0.8189282388483612,
+            1.2661242698923554,
+            1.3942709664789525,
+            0.01144196912513707
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 9,
+          "trace": [
+            1.6466201330058128,
+            2.8454109513568975,
+            1.3970021632414278,
+            0.020250068036356185
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 10,
+          "trace": [
+            1.49918512485657,
+            1.8416027566277544,
+            1.3231910215796938,
+            0.6215239404994024
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 11,
+          "trace": [
+            1.9758678873177342,
+            3.03063662705296,
+            2.080677920214888,
+            0.08411411852582241
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 12,
+          "trace": [
+            0.639471493965417,
+            0.9923872513314349,
+            1.0162942757915794,
+            0.011383608054890217
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 17,
+          "trace": [
+            0.002227487923953687,
+            0.9930496999662626,
+            0.3523709031684251,
+            0.18452004080799567
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 18,
+          "trace": [
+            1.1341158999140983,
+            2.271548243317078,
+            1.0328001555877027,
+            0.024972071985581493
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 21,
+          "trace": [
+            0.007282832466852379,
+            0.2149925939991333,
+            0.20916825181110532,
+            0.00006189957779012949
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 23,
+          "trace": [
+            0.8423542161054549,
+            2.836267285319481,
+            1.2625123370996219,
+            0.0000011337303141691265
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 1,
+          "trace": [
+            0.7866278610665539,
+            1.5424116025222792,
+            1.6060207818132073,
+            0
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 4,
+          "trace": [
+            0.0019498555228451377,
+            1.0976941947924541,
+            0.9224061671811028,
+            0
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 5,
+          "trace": [
+            0.0002638842494547206,
+            0.1485567547594226,
+            0.124834099894653,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 7,
+          "trace": [
+            0.000004833208621437325,
+            0.2826573000957485,
+            0.03954026569088662,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 9,
+          "trace": [
+            8.852330378416315e-8,
+            0.16320236992746656,
+            0.03494232353962505,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 10,
+          "trace": [
+            1.1980326390670468e-8,
+            0.02208703895902013,
+            0.00472892925318053,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 11,
+          "trace": [
+            1.6213608653484572e-9,
+            0.0029891556733771,
+            0.0006399909798850918,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 12,
+          "trace": [
+            2.1942733194069298e-10,
+            0.16081810600486784,
+            0.00008661336053162645,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 17,
+          "trace": [
+            9.961985458077049e-15,
+            0.0036513480282859313,
+            0.00014748616869208914,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 18,
+          "trace": [
+            1.3482081235678775e-15,
+            0.0004941562196035258,
+            0.000019960082413426786,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 21,
+          "trace": [
+            3.3418738208931724e-18,
+            0.015530939790910494,
+            4.947609772872198e-8,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 23,
+          "trace": [
+            6.120855411519394e-20,
+            0.19813262829550365,
+            9.061863396229977e-10,
+            0
+          ],
+          "prediction": 1
+        }
+      ]
+    },
+    "506": {
+      "trained": {
+        "score": 21,
+        "byMapping": [
+          9,
+          12
+        ]
+      },
+      "untrained": {
+        "score": 12,
+        "byMapping": [
+          1,
+          11
+        ]
+      },
+      "shuffledLabels": {
+        "score": 13,
+        "byMapping": [
+          5,
+          8
+        ]
+      },
+      "disconnected": {
+        "score": 12,
+        "byMapping": [
+          12,
+          0
+        ]
+      },
+      "trials": [
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 1,
+          "trace": [
+            0.7945336025033345,
+            1.8355818961569212,
+            0.9748082336298294,
+            0.1808657926171227
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 2,
+          "trace": [
+            1.660183515985091,
+            1.7489955446764927,
+            0.7554929145558589,
+            0.17706762902853715
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 3,
+          "trace": [
+            2.1993051338389757,
+            3.3686015449385227,
+            1.0186330605979184,
+            0.023963497726612593
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 4,
+          "trace": [
+            0.6537714199662833,
+            0.9691136515058675,
+            0.13785699377019744,
+            0.003243106752171054
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 5,
+          "trace": [
+            1.1210798800952764,
+            2.453091068374083,
+            0.248582400484762,
+            0.6192222985770129
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 6,
+          "trace": [
+            2.374440638776677,
+            3.5344991766222917,
+            1.88818758651366,
+            0.23487443400071772
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 8,
+          "trace": [
+            0.06858657202598337,
+            0.2916416652531896,
+            0.08619672112108342,
+            0.6078074507443944
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 15,
+          "trace": [
+            0.0000024957377897175575,
+            0.1662493748655736,
+            0.41601622088475926,
+            0.0005345666728131348
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 16,
+          "trace": [
+            0.6636505878977008,
+            0.917331143866908,
+            0.7470360037218187,
+            0.7945362386014343
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 19,
+          "trace": [
+            0.03080378232869466,
+            0.06787239137748868,
+            0.41057377992141786,
+            0.001969458430873622
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 20,
+          "trace": [
+            0.004168838606212868,
+            0.1633091911261503,
+            0.05556511879519195,
+            0.14469080603810738
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 0,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 22,
+          "trace": [
+            0.05596439815817867,
+            1.2023567368263766,
+            0.26966213247825294,
+            0.6434743805862327
+          ],
+          "prediction": 0
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 1,
+          "trace": [
+            0,
+            0,
+            1,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 2,
+          "trace": [
+            0,
+            0.28626404466815963,
+            0.1353352832366133,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 3,
+          "trace": [
+            0,
+            0.9345757608621521,
+            0.018315638888734293,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 4,
+          "trace": [
+            0.1746449889668115,
+            1.033937438519391,
+            0.002478752176666379,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 5,
+          "trace": [
+            0.023635629047678585,
+            0.13992821609095987,
+            0.0003354626279025152,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 6,
+          "trace": [
+            0.003198734551643097,
+            0.1850646771042976,
+            0.0000453999297624853,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 8,
+          "trace": [
+            0.00005858686694881213,
+            0.18245572570839616,
+            0.17377477497916471,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 15,
+          "trace": [
+            0.000007067575201310868,
+            0.000025161981077951496,
+            0.000007318837185135161,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 16,
+          "trace": [
+            9.56492291665468e-7,
+            0.000003405303835978864,
+            9.904969034129247e-7,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 19,
+          "trace": [
+            2.370907349930388e-9,
+            0.3725568835928595,
+            0.24985018126628855,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 0,
+          "test": 2,
+          "sourceRound": 20,
+          "trace": [
+            3.208674177305965e-10,
+            0.0504200913627895,
+            0.03381354504839227,
+            0
+          ],
+          "prediction": 1
+        },
+        {
+          "mapping": 1,
+          "shuffledLabel": 1,
+          "test": 2,
+          "sourceRound": 22,
+          "trace": [
+            5.876891754314254e-12,
+            0.0009234761861378447,
+            0.0006193166806543014,
+            0
+          ],
+          "prediction": 1
+        }
+      ]
+    }
+  },
+  "passed": true
+}

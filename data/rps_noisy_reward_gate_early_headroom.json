@@ -1,0 +1,818 @@
+{
+  "kind": "read_only_saved_result_diagnostic",
+  "source": "rps_noisy_reward_gate_prerequisites.json",
+  "method": {
+    "earlyWindows": "training rounds 1-24 and 1-72; final 1-288, fixed before calculation",
+    "onlineMargin": "pre-action Q_expectedOptimal minus largest competing pre-action Q",
+    "misleadingPositive": "reward +1 for an action suboptimal in expectation under noise 0.5",
+    "weightIncreasingStep": "0.03*(1-Q_played)>1e-12 on a misleading positive-reward trial",
+    "caveat": "Training was balanced and actions were forced; online Q margins are not frozen checkpoint accuracy."
+  },
+  "students": [
+    {
+      "seed": 863,
+      "initialFrozenOptimal": 23,
+      "finalFrozenOptimal": 69,
+      "frozenObserved": 69,
+      "intermediateFrozenCheckpoints": 0,
+      "intermediateFullControllerSnapshots": 0,
+      "perTrialPreActionQScoresAvailable": true,
+      "trainingSensoryRouting": {
+        "correct": 276,
+        "n": 276
+      },
+      "windows": {
+        "24": {
+          "observed": 23,
+          "rewardedOptimal": 5,
+          "misleadingPositive": 2,
+          "positiveOnlineQMargin": 5
+        },
+        "72": {
+          "observed": 69,
+          "rewardedOptimal": 15,
+          "misleadingPositive": 8,
+          "positiveOnlineQMargin": 29
+        },
+        "288": {
+          "observed": 276,
+          "rewardedOptimal": 70,
+          "misleadingPositive": 27,
+          "positiveOnlineQMargin": 229
+        }
+      },
+      "byCue": [
+        {
+          "cue": 0,
+          "trainingExposures": 88,
+          "firstRewardedOptimalRound": 24,
+          "firstMisleadingPositiveRound": 42,
+          "rewardedOptimal": 26,
+          "misleadingPositive": 10,
+          "misleadingPositiveWeightIncreasingSteps": 10,
+          "misleadingBeforeFirstOptimalReward": 0,
+          "misleadingAtNonpositiveOnlineMargin": 4,
+          "misleadingAtPositiveOnlineMargin": 6,
+          "positiveOnlineMarginByEpisode": [
+            {
+              "episode": 0,
+              "positive": 0,
+              "n": 7
+            },
+            {
+              "episode": 1,
+              "positive": 4,
+              "n": 7
+            },
+            {
+              "episode": 2,
+              "positive": 1,
+              "n": 9
+            },
+            {
+              "episode": 3,
+              "positive": 5,
+              "n": 8
+            },
+            {
+              "episode": 4,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 5,
+              "positive": 6,
+              "n": 7
+            },
+            {
+              "episode": 6,
+              "positive": 7,
+              "n": 8
+            },
+            {
+              "episode": 7,
+              "positive": 7,
+              "n": 7
+            },
+            {
+              "episode": 8,
+              "positive": 7,
+              "n": 8
+            },
+            {
+              "episode": 9,
+              "positive": 3,
+              "n": 4
+            },
+            {
+              "episode": 10,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 11,
+              "positive": 7,
+              "n": 7
+            }
+          ]
+        },
+        {
+          "cue": 1,
+          "trainingExposures": 96,
+          "firstRewardedOptimalRound": 12,
+          "firstMisleadingPositiveRound": 10,
+          "rewardedOptimal": 21,
+          "misleadingPositive": 9,
+          "misleadingPositiveWeightIncreasingSteps": 9,
+          "misleadingBeforeFirstOptimalReward": 1,
+          "misleadingAtNonpositiveOnlineMargin": 2,
+          "misleadingAtPositiveOnlineMargin": 7,
+          "positiveOnlineMarginByEpisode": [
+            {
+              "episode": 0,
+              "positive": 0,
+              "n": 8
+            },
+            {
+              "episode": 1,
+              "positive": 2,
+              "n": 10
+            },
+            {
+              "episode": 2,
+              "positive": 4,
+              "n": 7
+            },
+            {
+              "episode": 3,
+              "positive": 6,
+              "n": 6
+            },
+            {
+              "episode": 4,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 5,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 6,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 7,
+              "positive": 9,
+              "n": 9
+            },
+            {
+              "episode": 8,
+              "positive": 9,
+              "n": 9
+            },
+            {
+              "episode": 9,
+              "positive": 11,
+              "n": 11
+            },
+            {
+              "episode": 10,
+              "positive": 6,
+              "n": 6
+            },
+            {
+              "episode": 11,
+              "positive": 6,
+              "n": 6
+            }
+          ]
+        },
+        {
+          "cue": 2,
+          "trainingExposures": 92,
+          "firstRewardedOptimalRound": 9,
+          "firstMisleadingPositiveRound": 21,
+          "rewardedOptimal": 23,
+          "misleadingPositive": 8,
+          "misleadingPositiveWeightIncreasingSteps": 8,
+          "misleadingBeforeFirstOptimalReward": 0,
+          "misleadingAtNonpositiveOnlineMargin": 0,
+          "misleadingAtPositiveOnlineMargin": 8,
+          "positiveOnlineMarginByEpisode": [
+            {
+              "episode": 0,
+              "positive": 5,
+              "n": 8
+            },
+            {
+              "episode": 1,
+              "positive": 6,
+              "n": 6
+            },
+            {
+              "episode": 2,
+              "positive": 7,
+              "n": 7
+            },
+            {
+              "episode": 3,
+              "positive": 9,
+              "n": 9
+            },
+            {
+              "episode": 4,
+              "positive": 7,
+              "n": 7
+            },
+            {
+              "episode": 5,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 6,
+              "positive": 7,
+              "n": 7
+            },
+            {
+              "episode": 7,
+              "positive": 7,
+              "n": 7
+            },
+            {
+              "episode": 8,
+              "positive": 6,
+              "n": 6
+            },
+            {
+              "episode": 9,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 10,
+              "positive": 9,
+              "n": 9
+            },
+            {
+              "episode": 11,
+              "positive": 10,
+              "n": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 864,
+      "initialFrozenOptimal": 31,
+      "finalFrozenOptimal": 69,
+      "frozenObserved": 69,
+      "intermediateFrozenCheckpoints": 0,
+      "intermediateFullControllerSnapshots": 0,
+      "perTrialPreActionQScoresAvailable": true,
+      "trainingSensoryRouting": {
+        "correct": 276,
+        "n": 276
+      },
+      "windows": {
+        "24": {
+          "observed": 23,
+          "rewardedOptimal": 4,
+          "misleadingPositive": 1,
+          "positiveOnlineQMargin": 7
+        },
+        "72": {
+          "observed": 69,
+          "rewardedOptimal": 17,
+          "misleadingPositive": 3,
+          "positiveOnlineQMargin": 40
+        },
+        "288": {
+          "observed": 276,
+          "rewardedOptimal": 61,
+          "misleadingPositive": 28,
+          "positiveOnlineQMargin": 215
+        }
+      },
+      "byCue": [
+        {
+          "cue": 0,
+          "trainingExposures": 92,
+          "firstRewardedOptimalRound": 37,
+          "firstMisleadingPositiveRound": 112,
+          "rewardedOptimal": 22,
+          "misleadingPositive": 7,
+          "misleadingPositiveWeightIncreasingSteps": 7,
+          "misleadingBeforeFirstOptimalReward": 0,
+          "misleadingAtNonpositiveOnlineMargin": 0,
+          "misleadingAtPositiveOnlineMargin": 7,
+          "positiveOnlineMarginByEpisode": [
+            {
+              "episode": 0,
+              "positive": 0,
+              "n": 9
+            },
+            {
+              "episode": 1,
+              "positive": 0,
+              "n": 7
+            },
+            {
+              "episode": 2,
+              "positive": 0,
+              "n": 6
+            },
+            {
+              "episode": 3,
+              "positive": 5,
+              "n": 8
+            },
+            {
+              "episode": 4,
+              "positive": 9,
+              "n": 9
+            },
+            {
+              "episode": 5,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 6,
+              "positive": 5,
+              "n": 5
+            },
+            {
+              "episode": 7,
+              "positive": 6,
+              "n": 6
+            },
+            {
+              "episode": 8,
+              "positive": 9,
+              "n": 9
+            },
+            {
+              "episode": 9,
+              "positive": 9,
+              "n": 9
+            },
+            {
+              "episode": 10,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 11,
+              "positive": 8,
+              "n": 8
+            }
+          ]
+        },
+        {
+          "cue": 1,
+          "trainingExposures": 87,
+          "firstRewardedOptimalRound": 9,
+          "firstMisleadingPositiveRound": 34,
+          "rewardedOptimal": 21,
+          "misleadingPositive": 7,
+          "misleadingPositiveWeightIncreasingSteps": 7,
+          "misleadingBeforeFirstOptimalReward": 0,
+          "misleadingAtNonpositiveOnlineMargin": 1,
+          "misleadingAtPositiveOnlineMargin": 6,
+          "positiveOnlineMarginByEpisode": [
+            {
+              "episode": 0,
+              "positive": 6,
+              "n": 8
+            },
+            {
+              "episode": 1,
+              "positive": 9,
+              "n": 9
+            },
+            {
+              "episode": 2,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 3,
+              "positive": 7,
+              "n": 7
+            },
+            {
+              "episode": 4,
+              "positive": 7,
+              "n": 7
+            },
+            {
+              "episode": 5,
+              "positive": 5,
+              "n": 5
+            },
+            {
+              "episode": 6,
+              "positive": 6,
+              "n": 6
+            },
+            {
+              "episode": 7,
+              "positive": 9,
+              "n": 9
+            },
+            {
+              "episode": 8,
+              "positive": 5,
+              "n": 6
+            },
+            {
+              "episode": 9,
+              "positive": 0,
+              "n": 6
+            },
+            {
+              "episode": 10,
+              "positive": 1,
+              "n": 9
+            },
+            {
+              "episode": 11,
+              "positive": 7,
+              "n": 7
+            }
+          ]
+        },
+        {
+          "cue": 2,
+          "trainingExposures": 97,
+          "firstRewardedOptimalRound": 13,
+          "firstMisleadingPositiveRound": 7,
+          "rewardedOptimal": 18,
+          "misleadingPositive": 14,
+          "misleadingPositiveWeightIncreasingSteps": 14,
+          "misleadingBeforeFirstOptimalReward": 1,
+          "misleadingAtNonpositiveOnlineMargin": 3,
+          "misleadingAtPositiveOnlineMargin": 11,
+          "positiveOnlineMarginByEpisode": [
+            {
+              "episode": 0,
+              "positive": 1,
+              "n": 6
+            },
+            {
+              "episode": 1,
+              "positive": 7,
+              "n": 7
+            },
+            {
+              "episode": 2,
+              "positive": 9,
+              "n": 9
+            },
+            {
+              "episode": 3,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 4,
+              "positive": 7,
+              "n": 7
+            },
+            {
+              "episode": 5,
+              "positive": 10,
+              "n": 10
+            },
+            {
+              "episode": 6,
+              "positive": 12,
+              "n": 12
+            },
+            {
+              "episode": 7,
+              "positive": 7,
+              "n": 8
+            },
+            {
+              "episode": 8,
+              "positive": 8,
+              "n": 8
+            },
+            {
+              "episode": 9,
+              "positive": 4,
+              "n": 8
+            },
+            {
+              "episode": 10,
+              "positive": 0,
+              "n": 6
+            },
+            {
+              "episode": 11,
+              "positive": 5,
+              "n": 8
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "teacherSource": [
+    {
+      "teacherSeed": 861,
+      "matchedToStudentTrainingTrialIDs": false,
+      "teacherState": "frozen controller, independent continuous 288-round source stream",
+      "windows": {
+        "24": {
+          "observedCandidates": 23,
+          "misleadingPositive": 3,
+          "rejectedMisleading": 3,
+          "rewardedOptimal": 6,
+          "approvedRewardedOptimal": 6
+        },
+        "72": {
+          "observedCandidates": 71,
+          "misleadingPositive": 9,
+          "rejectedMisleading": 9,
+          "rewardedOptimal": 17,
+          "approvedRewardedOptimal": 17
+        },
+        "288": {
+          "observedCandidates": 287,
+          "misleadingPositive": 36,
+          "rejectedMisleading": 36,
+          "rewardedOptimal": 62,
+          "approvedRewardedOptimal": 62
+        }
+      },
+      "byCue": [
+        {
+          "cue": 0,
+          "byCandidateAction": [
+            {
+              "action": 0,
+              "n": 31,
+              "approvals": 31,
+              "rewarded": 23
+            },
+            {
+              "action": 1,
+              "n": 30,
+              "approvals": 0,
+              "rewarded": 7
+            },
+            {
+              "action": 2,
+              "n": 30,
+              "approvals": 0,
+              "rewarded": 2
+            }
+          ]
+        },
+        {
+          "cue": 1,
+          "byCandidateAction": [
+            {
+              "action": 0,
+              "n": 30,
+              "approvals": 0,
+              "rewarded": 8
+            },
+            {
+              "action": 1,
+              "n": 30,
+              "approvals": 30,
+              "rewarded": 18
+            },
+            {
+              "action": 2,
+              "n": 31,
+              "approvals": 0,
+              "rewarded": 7
+            }
+          ]
+        },
+        {
+          "cue": 2,
+          "byCandidateAction": [
+            {
+              "action": 0,
+              "n": 35,
+              "approvals": 0,
+              "rewarded": 6
+            },
+            {
+              "action": 1,
+              "n": 35,
+              "approvals": 0,
+              "rewarded": 6
+            },
+            {
+              "action": 2,
+              "n": 35,
+              "approvals": 35,
+              "rewarded": 21
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "teacherSeed": 862,
+      "matchedToStudentTrainingTrialIDs": false,
+      "teacherState": "frozen controller, independent continuous 288-round source stream",
+      "windows": {
+        "24": {
+          "observedCandidates": 23,
+          "misleadingPositive": 0,
+          "rejectedMisleading": 0,
+          "rewardedOptimal": 5,
+          "approvedRewardedOptimal": 5
+        },
+        "72": {
+          "observedCandidates": 71,
+          "misleadingPositive": 7,
+          "rejectedMisleading": 7,
+          "rewardedOptimal": 19,
+          "approvedRewardedOptimal": 19
+        },
+        "288": {
+          "observedCandidates": 287,
+          "misleadingPositive": 30,
+          "rejectedMisleading": 30,
+          "rewardedOptimal": 71,
+          "approvedRewardedOptimal": 71
+        }
+      },
+      "byCue": [
+        {
+          "cue": 0,
+          "byCandidateAction": [
+            {
+              "action": 0,
+              "n": 31,
+              "approvals": 31,
+              "rewarded": 29
+            },
+            {
+              "action": 1,
+              "n": 31,
+              "approvals": 0,
+              "rewarded": 7
+            },
+            {
+              "action": 2,
+              "n": 31,
+              "approvals": 0,
+              "rewarded": 5
+            }
+          ]
+        },
+        {
+          "cue": 1,
+          "byCandidateAction": [
+            {
+              "action": 0,
+              "n": 30,
+              "approvals": 0,
+              "rewarded": 7
+            },
+            {
+              "action": 1,
+              "n": 29,
+              "approvals": 29,
+              "rewarded": 21
+            },
+            {
+              "action": 2,
+              "n": 30,
+              "approvals": 0,
+              "rewarded": 4
+            }
+          ]
+        },
+        {
+          "cue": 2,
+          "byCandidateAction": [
+            {
+              "action": 0,
+              "n": 35,
+              "approvals": 0,
+              "rewarded": 2
+            },
+            {
+              "action": 1,
+              "n": 35,
+              "approvals": 0,
+              "rewarded": 5
+            },
+            {
+              "action": 2,
+              "n": 35,
+              "approvals": 35,
+              "rewarded": 21
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "receiverFailures": [
+    {
+      "seed": 863,
+      "firstCue": 1,
+      "phase": "second",
+      "branches": [
+        {
+          "bit": null,
+          "recognized": 9,
+          "vpnHeadCorrect": 12,
+          "errorRepeats": [
+            1,
+            6,
+            10
+          ]
+        },
+        {
+          "bit": 0,
+          "recognized": 9,
+          "vpnHeadCorrect": 12,
+          "errorRepeats": [
+            1,
+            6,
+            10
+          ]
+        },
+        {
+          "bit": 1,
+          "recognized": 9,
+          "vpnHeadCorrect": 12,
+          "errorRepeats": [
+            1,
+            6,
+            10
+          ]
+        }
+      ],
+      "sameErrorsAcrossBranches": true,
+      "resetBeforeSecondCue": true,
+      "timingAlternativeTested": false
+    },
+    {
+      "seed": 864,
+      "firstCue": 0,
+      "phase": "first",
+      "branches": [
+        {
+          "bit": null,
+          "recognized": 8,
+          "vpnHeadCorrect": 12,
+          "errorRepeats": [
+            3,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "bit": 0,
+          "recognized": 8,
+          "vpnHeadCorrect": 12,
+          "errorRepeats": [
+            3,
+            5,
+            7,
+            10
+          ]
+        },
+        {
+          "bit": 1,
+          "recognized": 8,
+          "vpnHeadCorrect": 12,
+          "errorRepeats": [
+            3,
+            5,
+            7,
+            10
+          ]
+        }
+      ],
+      "sameErrorsAcrossBranches": true,
+      "resetBeforeSecondCue": true,
+      "timingAlternativeTested": false
+    }
+  ],
+  "limits": [
+    "Only initial and final frozen student evaluations were saved.",
+    "No teacher Q/neural observations were aligned to the students' actual training trials; source-trace selectivity cannot be assigned as observed advice for those trials.",
+    "The receiver's first cue is classified before DN stimulation; its second cue follows a full student neural-state reset.",
+    "No reward-gated student policy was simulated or trained."
+  ]
+}

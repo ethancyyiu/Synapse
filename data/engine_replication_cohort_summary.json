@@ -1,0 +1,540 @@
+{
+ "protocol": "docs/engine-replication-cohort-protocol.md",
+ "engine": "js/engine.js",
+ "seedsFound": 15,
+ "completed": 10,
+ "stoppedTeacher": 5,
+ "advantage48": {
+  "mean": 35,
+  "bootstrap95": [
+   28.2,
+   41.4
+  ],
+  "perSeed": [
+   45,
+   22,
+   44,
+   46,
+   45,
+   36,
+   24,
+   45,
+   21,
+   22
+  ]
+ },
+ "passed": true,
+ "reportedNotTested": {
+  "shareAdvantageAtMost4": 0,
+  "trainedMinusAlone48": {
+   "mean": 66.5,
+   "bootstrap95": [
+    61.7,
+    69
+   ],
+   "perSeed": [
+    45,
+    69,
+    69,
+    69,
+    69,
+    69,
+    69,
+    69,
+    69,
+    68
+   ]
+  },
+  "advantage24": {
+   "mean": 29.2,
+   "bootstrap95": [
+    19,
+    38.5
+   ],
+   "perSeed": [
+    21,
+    47,
+    29,
+    0,
+    45,
+    23,
+    44,
+    7,
+    44,
+    32
+   ]
+  },
+  "advantage96": {
+   "mean": 6.2,
+   "bootstrap95": [
+    0.2,
+    12.3
+   ],
+   "perSeed": [
+    0,
+    0,
+    0,
+    18,
+    21,
+    0,
+    1,
+    0,
+    0,
+    22
+   ]
+  }
+ },
+ "meanWins": {
+  "0": {
+   "alone": 1.1,
+   "trained": 1.1,
+   "random": 1.1,
+   "untrained": 1.1,
+   "shuffled": 1.1
+  },
+  "24": {
+   "alone": 1.4,
+   "trained": 53.9,
+   "random": 11.1,
+   "untrained": 23.9,
+   "shuffled": 10.8
+  },
+  "48": {
+   "alone": 3.8,
+   "trained": 70.3,
+   "random": 24.8,
+   "untrained": 23.9,
+   "shuffled": 28.2
+  },
+  "96": {
+   "alone": 34.5,
+   "trained": 70.4,
+   "random": 56.4,
+   "untrained": 24,
+   "shuffled": 56.2
+  }
+ },
+ "integrity": true,
+ "seeds": [
+  {
+   "file": "seed_3.json",
+   "status": "completed",
+   "teacherWins": 62,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "random": 0,
+     "untrained": 0,
+     "shuffled": 0
+    },
+    {
+     "rounds": 24,
+     "alone": 3,
+     "trained": 48,
+     "random": 27,
+     "untrained": 24,
+     "shuffled": 3
+    },
+    {
+     "rounds": 48,
+     "alone": 27,
+     "trained": 72,
+     "random": 27,
+     "untrained": 24,
+     "shuffled": 27
+    },
+    {
+     "rounds": 96,
+     "alone": 29,
+     "trained": 72,
+     "random": 72,
+     "untrained": 24,
+     "shuffled": 62
+    }
+   ]
+  },
+  {
+   "file": "seed_4.json",
+   "status": "completed",
+   "teacherWins": 64,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "random": 2,
+     "untrained": 2,
+     "shuffled": 2
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 71,
+     "random": 2,
+     "untrained": 24,
+     "shuffled": 2
+    },
+    {
+     "rounds": 48,
+     "alone": 2,
+     "trained": 71,
+     "random": 2,
+     "untrained": 24,
+     "shuffled": 49
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 70,
+     "random": 70,
+     "untrained": 23,
+     "shuffled": 46
+    }
+   ]
+  },
+  {
+   "file": "seed_5.json",
+   "status": "completed",
+   "teacherWins": 61,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "random": 1,
+     "untrained": 1,
+     "shuffled": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 52,
+     "random": 1,
+     "untrained": 23,
+     "shuffled": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "random": 26,
+     "untrained": 23,
+     "shuffled": 24
+    },
+    {
+     "rounds": 96,
+     "alone": 67,
+     "trained": 71,
+     "random": 68,
+     "untrained": 24,
+     "shuffled": 71
+    }
+   ]
+  },
+  {
+   "file": "seed_6.json",
+   "status": "stopped_teacher",
+   "teacherWins": 52,
+   "points": null
+  },
+  {
+   "file": "seed_7.json",
+   "status": "completed",
+   "teacherWins": 61,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "random": 1,
+     "untrained": 1,
+     "shuffled": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 24,
+     "random": 1,
+     "untrained": 24,
+     "shuffled": 23
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "random": 24,
+     "untrained": 24,
+     "shuffled": 24
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 70,
+     "random": 43,
+     "untrained": 24,
+     "shuffled": 52
+    }
+   ]
+  },
+  {
+   "file": "seed_8.json",
+   "status": "completed",
+   "teacherWins": 61,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "random": 0,
+     "untrained": 0,
+     "shuffled": 0
+    },
+    {
+     "rounds": 24,
+     "alone": 0,
+     "trained": 69,
+     "random": 24,
+     "untrained": 23,
+     "shuffled": 24
+    },
+    {
+     "rounds": 48,
+     "alone": 0,
+     "trained": 69,
+     "random": 24,
+     "untrained": 23,
+     "shuffled": 24
+    },
+    {
+     "rounds": 96,
+     "alone": 46,
+     "trained": 69,
+     "random": 24,
+     "untrained": 23,
+     "shuffled": 48
+    }
+   ]
+  },
+  {
+   "file": "seed_9.json",
+   "status": "completed",
+   "teacherWins": 62,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "random": 1,
+     "untrained": 1,
+     "shuffled": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 47,
+     "random": 1,
+     "untrained": 24,
+     "shuffled": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "random": 24,
+     "untrained": 24,
+     "shuffled": 34
+    },
+    {
+     "rounds": 96,
+     "alone": 2,
+     "trained": 70,
+     "random": 48,
+     "untrained": 24,
+     "shuffled": 70
+    }
+   ]
+  },
+  {
+   "file": "seed_10.json",
+   "status": "completed",
+   "teacherWins": 66,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 3,
+     "trained": 3,
+     "random": 3,
+     "untrained": 3,
+     "shuffled": 3
+    },
+    {
+     "rounds": 24,
+     "alone": 3,
+     "trained": 72,
+     "random": 28,
+     "untrained": 24,
+     "shuffled": 27
+    },
+    {
+     "rounds": 48,
+     "alone": 3,
+     "trained": 72,
+     "random": 48,
+     "untrained": 24,
+     "shuffled": 25
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 72,
+     "random": 71,
+     "untrained": 24,
+     "shuffled": 48
+    }
+   ]
+  },
+  {
+   "file": "seed_11.json",
+   "status": "stopped_teacher",
+   "teacherWins": 53,
+   "points": null
+  },
+  {
+   "file": "seed_12.json",
+   "status": "stopped_teacher",
+   "teacherWins": 47,
+   "points": null
+  },
+  {
+   "file": "seed_13.json",
+   "status": "completed",
+   "teacherWins": 67,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "random": 1,
+     "untrained": 1,
+     "shuffled": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 30,
+     "random": 1,
+     "untrained": 23,
+     "shuffled": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "random": 1,
+     "untrained": 23,
+     "shuffled": 25
+    },
+    {
+     "rounds": 96,
+     "alone": 26,
+     "trained": 71,
+     "random": 71,
+     "untrained": 24,
+     "shuffled": 48
+    }
+   ]
+  },
+  {
+   "file": "seed_14.json",
+   "status": "completed",
+   "teacherWins": 61,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "random": 0,
+     "untrained": 0,
+     "shuffled": 0
+    },
+    {
+     "rounds": 24,
+     "alone": 0,
+     "trained": 68,
+     "random": 24,
+     "untrained": 24,
+     "shuffled": 24
+    },
+    {
+     "rounds": 48,
+     "alone": 0,
+     "trained": 69,
+     "random": 24,
+     "untrained": 24,
+     "shuffled": 48
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 69,
+     "random": 49,
+     "untrained": 24,
+     "shuffled": 69
+    }
+   ]
+  },
+  {
+   "file": "seed_15.json",
+   "status": "stopped_teacher",
+   "teacherWins": 47,
+   "points": null
+  },
+  {
+   "file": "seed_16.json",
+   "status": "stopped_teacher",
+   "teacherWins": 54,
+   "points": null
+  },
+  {
+   "file": "seed_17.json",
+   "status": "completed",
+   "teacherWins": 61,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "random": 2,
+     "untrained": 2,
+     "shuffled": 2
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 58,
+     "random": 2,
+     "untrained": 26,
+     "shuffled": 2
+    },
+    {
+     "rounds": 48,
+     "alone": 2,
+     "trained": 70,
+     "random": 48,
+     "untrained": 26,
+     "shuffled": 2
+    },
+    {
+     "rounds": 96,
+     "alone": 31,
+     "trained": 70,
+     "random": 48,
+     "untrained": 26,
+     "shuffled": 48
+    }
+   ]
+  }
+ ]
+}

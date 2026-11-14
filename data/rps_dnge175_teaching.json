@@ -1,0 +1,10532 @@
+{
+  "command": "node tools/check_rps_dnge175_teaching.mjs",
+  "design": {
+    "pairs": [
+      [
+        741,
+        712
+      ],
+      [
+        742,
+        713
+      ],
+      [
+        743,
+        714
+      ]
+    ],
+    "arms": [
+      "correct",
+      "shuffled",
+      "untrained",
+      "disconnected"
+    ],
+    "trainSeeds": [
+      41000,
+      41001,
+      41002,
+      41003,
+      41004,
+      41005,
+      41006,
+      41007,
+      41008,
+      41009,
+      41010,
+      41011
+    ],
+    "finalSeeds": [
+      51000,
+      51001,
+      51002
+    ],
+    "checkpointSeed": 52000,
+    "checkpoints": [
+      2,
+      4,
+      6
+    ],
+    "rounds": 24,
+    "threshold": 1.098235868125541,
+    "targets": [
+      3141,
+      3165
+    ],
+    "dnScale": 7.388888888888889,
+    "featureMean": [
+      0.36765962731770174,
+      0.30435569515802674,
+      0.46466474775766364
+    ],
+    "featureStd": [
+      0.20011453971667878,
+      0.2243174591178991,
+      0.3925539112928469
+    ],
+    "opponent": "previous_opponent offset 1 noise 0",
+    "trainingBudget": "12 x 24 per arm and student",
+    "teacherStreams": "rng(teacherSeed*10000000+1000*episodeKey+round+1)",
+    "studentStreams": "key=studentSeed*10000000+1000*episodeKey+round; network rng(key+2); action rng(key+501); cue-period network rng(key+3)",
+    "smokeStreams": "2026130400+100000*(studentSeed-741)+1000*cue+10*repeat",
+    "shuffleStreams": "2026140400+1000*teacherSeed+episodeIndex; Fisher-Yates within observed rounds 1-23",
+    "checkpoint": "after episodes 2,4,6; frozen disconnected 24 rounds, opponent seed 52000, episodeKey 200; mean wins/24",
+    "finalEvaluation": "disconnected and common correct held-out messages, each 3 x 24 rounds seeds 51000-51002, episodeKeys 100-102",
+    "gates": "correct arm every student: early checkpoint mean > each control; final disconnected >=58/72, >=70% each state, >=12/69 each action, and >=4/72 wins versus each control; all validity checks"
+  },
+  "status": "stopped_before_training",
+  "smokeBySeed": [
+    {
+      "seed": 741,
+      "byCue": [
+        {
+          "cue": 0,
+          "byCondition": {
+            "none": {
+              "correct": 9,
+              "meanDnCounts": [
+                0,
+                0
+              ]
+            },
+            "bit0": {
+              "correct": 9,
+              "meanDnCounts": [
+                8,
+                0
+              ]
+            },
+            "bit1": {
+              "correct": 9,
+              "meanDnCounts": [
+                0,
+                8
+              ]
+            }
+          },
+          "extra": [
+            8,
+            8
+          ]
+        },
+        {
+          "cue": 1,
+          "byCondition": {
+            "none": {
+              "correct": 12,
+              "meanDnCounts": [
+                0,
+                0
+              ]
+            },
+            "bit0": {
+              "correct": 12,
+              "meanDnCounts": [
+                7.916666666666667,
+                0
+              ]
+            },
+            "bit1": {
+              "correct": 12,
+              "meanDnCounts": [
+                0,
+                7.916666666666667
+              ]
+            }
+          },
+          "extra": [
+            7.916666666666667,
+            7.916666666666667
+          ]
+        },
+        {
+          "cue": 2,
+          "byCondition": {
+            "none": {
+              "correct": 12,
+              "meanDnCounts": [
+                0,
+                0
+              ]
+            },
+            "bit0": {
+              "correct": 12,
+              "meanDnCounts": [
+                7.833333333333333,
+                0
+              ]
+            },
+            "bit1": {
+              "correct": 12,
+              "meanDnCounts": [
+                0,
+                7.833333333333333
+              ]
+            }
+          },
+          "extra": [
+            7.833333333333333,
+            7.833333333333333
+          ]
+        }
+      ],
+      "checks": {
+        "fullCount": true,
+        "measuredFiveFeatures": true,
+        "firstRoundValid": true,
+        "physicalReach": true,
+        "cueRecognition": false,
+        "cueNoLargeDrop": true,
+        "weightsUnchanged": true
+      }
+    },
+    {
+      "seed": 742,
+      "byCue": [
+        {
+          "cue": 0,
+          "byCondition": {
+            "none": {
+              "correct": 12,
+              "meanDnCounts": [
+                0,
+                0
+              ]
+            },
+            "bit0": {
+              "correct": 12,
+              "meanDnCounts": [
+                7.166666666666667,
+                0
+              ]
+            },
+            "bit1": {
+              "correct": 12,
+              "meanDnCounts": [
+                0,
+                7.166666666666667
+              ]
+            }
+          },
+          "extra": [
+            7.166666666666667,
+            7.166666666666667
+          ]
+        },
+        {
+          "cue": 1,
+          "byCondition": {
+            "none": {
+              "correct": 11,
+              "meanDnCounts": [
+                0,
+                0
+              ]
+            },
+            "bit0": {
+              "correct": 11,
+              "meanDnCounts": [
+                8.166666666666666,
+                0
+              ]
+            },
+            "bit1": {
+              "correct": 11,
+              "meanDnCounts": [
+                0,
+                8.166666666666666
+              ]
+            }
+          },
+          "extra": [
+            8.166666666666666,
+            8.166666666666666
+          ]
+        },
+        {
+          "cue": 2,
+          "byCondition": {
+            "none": {
+              "correct": 11,
+              "meanDnCounts": [
+                0,
+                0
+              ]
+            },
+            "bit0": {
+              "correct": 10,
+              "meanDnCounts": [
+                9,
+                0
+              ]
+            },
+            "bit1": {
+              "correct": 10,
+              "meanDnCounts": [
+                0,
+                9
+              ]
+            }
+          },
+          "extra": [
+            9,
+            9
+          ]
+        }
+      ],
+      "checks": {
+        "fullCount": true,
+        "measuredFiveFeatures": true,
+        "firstRoundValid": true,
+        "physicalReach": true,
+        "cueRecognition": true,
+        "cueNoLargeDrop": true,
+        "weightsUnchanged": true
+      }
+    },
+    {
+      "seed": 743,
+      "byCue": [
+        {
+          "cue": 0,
+          "byCondition": {
+            "none": {
+              "correct": 10,
+              "meanDnCounts": [
+                0,
+                0
+              ]
+            },
+            "bit0": {
+              "correct": 9,
+              "meanDnCounts": [
+                7.416666666666667,
+                0
+              ]
+            },
+            "bit1": {
+              "correct": 9,
+              "meanDnCounts": [
+                0,
+                7.416666666666667
+              ]
+            }
+          },
+          "extra": [
+            7.416666666666667,
+            7.416666666666667
+          ]
+        },
+        {
+          "cue": 1,
+          "byCondition": {
+            "none": {
+              "correct": 10,
+              "meanDnCounts": [
+                0,
+                0
+              ]
+            },
+            "bit0": {
+              "correct": 10,
+              "meanDnCounts": [
+                8.166666666666666,
+                0
+              ]
+            },
+            "bit1": {
+              "correct": 10,
+              "meanDnCounts": [
+                0,
+                8.166666666666666
+              ]
+            }
+          },
+          "extra": [
+            8.166666666666666,
+            8.166666666666666
+          ]
+        },
+        {
+          "cue": 2,
+          "byCondition": {
+            "none": {
+              "correct": 12,
+              "meanDnCounts": [
+                0,
+                0
+              ]
+            },
+            "bit0": {
+              "correct": 12,
+              "meanDnCounts": [
+                7.083333333333333,
+                0
+              ]
+            },
+            "bit1": {
+              "correct": 12,
+              "meanDnCounts": [
+                0,
+                7.083333333333333
+              ]
+            }
+          },
+          "extra": [
+            7.083333333333333,
+            7.083333333333333
+          ]
+        }
+      ],
+      "checks": {
+        "fullCount": true,
+        "measuredFiveFeatures": true,
+        "firstRoundValid": true,
+        "physicalReach": true,
+        "cueRecognition": false,
+        "cueNoLargeDrop": true,
+        "weightsUnchanged": true
+      }
+    }
+  ],
+  "smokeRows": [
+    {
+      "seed": 741,
+      "cue": null,
+      "condition": "none",
+      "key": 2026130390,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": null,
+      "firstRound": true
+    },
+    {
+      "seed": 741,
+      "repeat": 0,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130400,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5,
+        0.5714285714285714
+      ],
+      "features": [
+        0.8561940259691435,
+        0.4507425028249607,
+        -0.03230033799140362,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 0,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130400,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.5,
+        0.42857142857142855
+      ],
+      "features": [
+        0.1889192101882625,
+        0.4507425028249607,
+        -0.2750954727804774,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 0,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130400,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.5,
+        0.5,
+        0.42857142857142855
+      ],
+      "features": [
+        0.1889192101882625,
+        0.4507425028249607,
+        -0.2750954727804774,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 1,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130410,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        0.9285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        0.4893972091596061,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 1,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130410,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        0.9285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        0.4893972091596061,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 1,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130410,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        0.9285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        0.4893972091596061,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 2,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130420,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.6428571428571429,
+        0.5714285714285714
+      ],
+      "features": [
+        0.4213861548728199,
+        0.8562917568306991,
+        -0.03230033799140362,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 2,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130420,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.6428571428571429,
+        0.5714285714285714
+      ],
+      "features": [
+        0.4213861548728199,
+        0.8562917568306991,
+        -0.03230033799140362,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 2,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130420,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.6428571428571429,
+        0.5714285714285714
+      ],
+      "features": [
+        0.4213861548728199,
+        0.8562917568306991,
+        -0.03230033799140362,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 3,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130430,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.42857142857142855,
+        0.5714285714285714
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.23323752411624413,
+        -0.03230033799140362,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 3,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130430,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.42857142857142855,
+        0.5714285714285714
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.23323752411624413,
+        -0.03230033799140362,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 3,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130430,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.42857142857142855,
+        0.5714285714285714
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.23323752411624413,
+        -0.03230033799140362,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 4,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130440,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.5,
+        0.42857142857142855
+      ],
+      "features": [
+        0.1889192101882625,
+        0.4507425028249607,
+        -0.2750954727804774,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 4,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130440,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.42857142857142855,
+        0.7857142857142857
+      ],
+      "features": [
+        0.1889192101882625,
+        0.23323752411624413,
+        0.29334505193446747,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 4,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130440,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.5,
+        0.42857142857142855,
+        0.7857142857142857
+      ],
+      "features": [
+        0.1889192101882625,
+        0.23323752411624413,
+        0.29334505193446747,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 5,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130450,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        0.5714285714285714
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        -0.03230033799140362,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 5,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130450,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        0.35714285714285715
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        -0.40576107796734173,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 5,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130450,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        0.35714285714285715
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        -0.40576107796734173,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 6,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130460,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.6428571428571429,
+        0.21428571428571427
+      ],
+      "features": [
+        0.1889192101882625,
+        0.8562917568306991,
+        -0.6890995746948642,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 6,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130460,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.6428571428571429,
+        0.21428571428571427
+      ],
+      "features": [
+        0.1889192101882625,
+        0.8562917568306991,
+        -0.6890995746948642,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 6,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130460,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.5,
+        0.6428571428571429,
+        0.21428571428571427
+      ],
+      "features": [
+        0.1889192101882625,
+        0.8562917568306991,
+        -0.6890995746948642,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 7,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130470,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.21428571428571427,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.4912666234292062,
+        -0.5434930422017814,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 7,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130470,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.21428571428571427,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.4912666234292062,
+        -0.5434930422017814,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 7,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130470,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.21428571428571427,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.4912666234292062,
+        -0.5434930422017814,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 8,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130480,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7857142857142857,
+        1
+      ],
+      "features": [
+        1.060187171984674,
+        1.228004280978124,
+        0.5820409024834114,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 8,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130480,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7857142857142857,
+        1
+      ],
+      "features": [
+        1.060187171984674,
+        1.228004280978124,
+        0.5820409024834114,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 8,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130480,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7857142857142857,
+        1
+      ],
+      "features": [
+        1.060187171984674,
+        1.228004280978124,
+        0.5820409024834114,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 9,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130490,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.2857142857142857,
+        0.14285714285714285
+      ],
+      "features": [
+        0.4213861548728199,
+        -0.23645625750977636,
+        -0.8435359974954221,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 9,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130490,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.2857142857142857,
+        0.2857142857142857
+      ],
+      "features": [
+        0.1889192101882625,
+        -0.23645625750977636,
+        -0.5434930422017814,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 9,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130490,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.5,
+        0.2857142857142857,
+        0.2857142857142857
+      ],
+      "features": [
+        0.1889192101882625,
+        -0.23645625750977636,
+        -0.5434930422017814,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 10,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130500,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        0.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        -0.03230033799140362,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 10,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130500,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        0.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        -0.03230033799140362,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 10,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130500,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        0.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        -0.03230033799140362,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 11,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026130510,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        0.7142857142857143
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        0.18935425386596533,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 11,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026130510,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7142857142857143,
+        0.7857142857142857
+      ],
+      "features": [
+        1.060187171984674,
+        1.0460211456449109,
+        0.29334505193446747,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 11,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026130510,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7142857142857143,
+        0.7857142857142857
+      ],
+      "features": [
+        1.060187171984674,
+        1.0460211456449109,
+        0.29334505193446747,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 741,
+      "repeat": 0,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131400,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 0,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131400,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 0,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131400,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 1,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131410,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 1,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131410,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 1,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131410,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 2,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131420,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 2,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131420,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 2,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131420,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 3,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131430,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 3,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131430,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 3,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131430,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 4,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131440,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 4,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131440,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 4,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131440,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 5,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131450,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 5,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131450,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 5,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131450,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 6,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131460,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 6,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131460,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 6,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131460,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 7,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131470,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.21428571428571427,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.4912666234292062,
+        -0.5434930422017814,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 7,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131470,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.21428571428571427,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.4912666234292062,
+        -0.5434930422017814,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 7,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131470,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.21428571428571427,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.4912666234292062,
+        -0.5434930422017814,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 8,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131480,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 8,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131480,
+      "dnCounts": [
+        11,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.4887218045112782,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 8,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131480,
+      "dnCounts": [
+        0,
+        11
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.4887218045112782
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 9,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131490,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 9,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131490,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 9,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131490,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 10,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131500,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.2857142857142857,
+        0,
+        0
+      ],
+      "features": [
+        -0.5813930322180321,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 10,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131500,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.2857142857142857,
+        0,
+        0
+      ],
+      "features": [
+        -0.5813930322180321,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 10,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131500,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.2857142857142857,
+        0,
+        0
+      ],
+      "features": [
+        -0.5813930322180321,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 11,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026131510,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 11,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026131510,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 11,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026131510,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 741,
+      "repeat": 0,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132400,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        1.4285714285714286
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        1.07663797273427,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 0,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132400,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.7142857142857142
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.3599764694617922,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 0,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132400,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.7142857142857142
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.3599764694617922,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 1,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132410,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.7857142857142857,
+        1.9285714285714286
+      ],
+      "features": [
+        1.4447721264067237,
+        1.228004280978124,
+        1.5535445496464173,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 1,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132410,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        1.2142857142857142
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        0.8413242553730278,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 1,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132410,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        1.2142857142857142
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        0.8413242553730278,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 2,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132420,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.9285714285714286,
+        2.0714285714285716
+      ],
+      "features": [
+        1.4447721264067237,
+        1.57109412088077,
+        1.6748732324568762,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 2,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132420,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.7857142857142857,
+        1.7857142857142858
+      ],
+      "features": [
+        1.4447721264067237,
+        1.228004280978124,
+        1.4261469638983715,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 2,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132420,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.7857142857142857,
+        1.7857142857142858
+      ],
+      "features": [
+        1.4447721264067237,
+        1.228004280978124,
+        1.4261469638983715,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 3,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132430,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        1,
+        0.7857142857142857,
+        1.7142857142857142
+      ],
+      "features": [
+        1.6265062683754379,
+        1.228004280978124,
+        1.3599764694617922,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 3,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132430,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.8571428571428571,
+        1.6428571428571428
+      ],
+      "features": [
+        1.4447721264067237,
+        1.402848955608052,
+        1.2920412220601514,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 3,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132430,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.8571428571428571,
+        1.6428571428571428
+      ],
+      "features": [
+        1.4447721264067237,
+        1.402848955608052,
+        1.2920412220601514,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 4,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132440,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.6428571428571429,
+        1.6428571428571428
+      ],
+      "features": [
+        0.4213861548728199,
+        0.8562917568306991,
+        1.2920412220601514,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 4,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132440,
+      "dnCounts": [
+        5,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5714285714285714,
+        1.0714285714285714
+      ],
+      "features": [
+        1.060187171984674,
+        0.6581272325639078,
+        0.671433260581945,
+        0.6766917293233082,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 4,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132440,
+      "dnCounts": [
+        0,
+        5
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        1.4285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.6581272325639078,
+        1.07663797273427,
+        0,
+        0.6766917293233082
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 5,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132450,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        1.5
+      ],
+      "features": [
+        0.6435177532752572,
+        0.6581272325639078,
+        1.1504814271983563,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 5,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132450,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        1.5
+      ],
+      "features": [
+        0.6435177532752572,
+        0.6581272325639078,
+        1.1504814271983563,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 5,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132450,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        1.5
+      ],
+      "features": [
+        0.6435177532752572,
+        0.6581272325639078,
+        1.1504814271983563,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 6,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132460,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.5714285714285714,
+        1.2142857142857142
+      ],
+      "features": [
+        0.1889192101882625,
+        0.6581272325639078,
+        0.8413242553730278,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 6,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132460,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        1.1428571428571428
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        0.7577947785809099,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 6,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132460,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        1.1428571428571428
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        0.7577947785809099,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 7,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132470,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        1.6428571428571428
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        1.2920412220601514,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 7,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132470,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.7142857142857143,
+        1.9285714285714286
+      ],
+      "features": [
+        1.25617849379872,
+        1.0460211456449109,
+        1.5535445496464173,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 7,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132470,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.7142857142857143,
+        1.9285714285714286
+      ],
+      "features": [
+        1.25617849379872,
+        1.0460211456449109,
+        1.5535445496464173,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 8,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132480,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.5714285714285714
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        1.2222445052273527,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 8,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132480,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.5714285714285714
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        1.2222445052273527,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 8,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132480,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.5714285714285714
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        1.2222445052273527,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 9,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132490,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.6428571428571429,
+        1.7857142857142858
+      ],
+      "features": [
+        1.4447721264067237,
+        0.8562917568306991,
+        1.4261469638983715,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 9,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132490,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7857142857142857,
+        1.6428571428571428
+      ],
+      "features": [
+        1.060187171984674,
+        1.228004280978124,
+        1.2920412220601514,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 9,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132490,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7857142857142857,
+        1.6428571428571428
+      ],
+      "features": [
+        1.060187171984674,
+        1.228004280978124,
+        1.2920412220601514,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 10,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132500,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.42857142857142855,
+        1.2857142857142858
+      ],
+      "features": [
+        1.25617849379872,
+        0.23323752411624413,
+        0.922201549933712,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 10,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132500,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.42857142857142855,
+        1.2857142857142858
+      ],
+      "features": [
+        1.25617849379872,
+        0.23323752411624413,
+        0.922201549933712,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 10,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132500,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.42857142857142855,
+        1.2857142857142858
+      ],
+      "features": [
+        1.25617849379872,
+        0.23323752411624413,
+        0.922201549933712,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 11,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026132510,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.7142857142857143,
+        1.5
+      ],
+      "features": [
+        0.6435177532752572,
+        1.0460211456449109,
+        1.1504814271983563,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 11,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026132510,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.6428571428571429,
+        1.5714285714285714
+      ],
+      "features": [
+        1.25617849379872,
+        0.8562917568306991,
+        1.2222445052273527,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 741,
+      "repeat": 11,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026132510,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.6428571428571429,
+        1.5714285714285714
+      ],
+      "features": [
+        1.25617849379872,
+        0.8562917568306991,
+        1.2222445052273527,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "cue": null,
+      "condition": "none",
+      "key": 2026230390,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": null,
+      "firstRound": true
+    },
+    {
+      "seed": 742,
+      "repeat": 0,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230400,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.35714285714285715,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.00457367160447321,
+        -0.40576107796734173,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 0,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230400,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.42857142857142855,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.23323752411624413,
+        -0.2750954727804774,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 0,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230400,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.42857142857142855,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.23323752411624413,
+        -0.2750954727804774,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 1,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230410,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        0.35714285714285715
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        -0.40576107796734173,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 1,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230410,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        0.35714285714285715
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        -0.40576107796734173,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 1,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230410,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        0.35714285714285715
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        -0.40576107796734173,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 2,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230420,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.23645625750977636,
+        -0.6890995746948642,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 2,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230420,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.23645625750977636,
+        -0.6890995746948642,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 2,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230420,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.23645625750977636,
+        -0.6890995746948642,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 3,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230430,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5714285714285714,
+        0.5714285714285714
+      ],
+      "features": [
+        1.060187171984674,
+        0.6581272325639078,
+        -0.03230033799140362,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 3,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230430,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.5,
+        0.2857142857142857
+      ],
+      "features": [
+        0.1889192101882625,
+        0.4507425028249607,
+        -0.5434930422017814,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 3,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230430,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0.5,
+        0.5,
+        0.2857142857142857
+      ],
+      "features": [
+        0.1889192101882625,
+        0.4507425028249607,
+        -0.5434930422017814,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 4,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230440,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        0.6435177532752572,
+        0.00457367160447321,
+        -0.5434930422017814,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 4,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230440,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        0.6435177532752572,
+        0.00457367160447321,
+        -0.5434930422017814,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 4,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230440,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        0.6435177532752572,
+        0.00457367160447321,
+        -0.5434930422017814,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 5,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230450,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.35714285714285715,
+        0.42857142857142855
+      ],
+      "features": [
+        0.6435177532752572,
+        0.00457367160447321,
+        -0.2750954727804774,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 5,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230450,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        0.7142857142857143
+      ],
+      "features": [
+        0.6435177532752572,
+        0.6581272325639078,
+        0.18935425386596533,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 5,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230450,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        0.7142857142857143
+      ],
+      "features": [
+        0.6435177532752572,
+        0.6581272325639078,
+        0.18935425386596533,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 6,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230460,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.6428571428571429,
+        0.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.8562917568306991,
+        -0.03230033799140362,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 6,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230460,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.6428571428571429,
+        0.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.8562917568306991,
+        -0.03230033799140362,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 6,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230460,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.6428571428571429,
+        0.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.8562917568306991,
+        -0.03230033799140362,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 7,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230470,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5,
+        0.42857142857142855
+      ],
+      "features": [
+        1.060187171984674,
+        0.4507425028249607,
+        -0.2750954727804774,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 7,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230470,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5,
+        0.42857142857142855
+      ],
+      "features": [
+        1.060187171984674,
+        0.4507425028249607,
+        -0.2750954727804774,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 7,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230470,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5,
+        0.42857142857142855
+      ],
+      "features": [
+        1.060187171984674,
+        0.4507425028249607,
+        -0.2750954727804774,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 8,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230480,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        0.6428571428571429
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        0.08093700671988797,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 8,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230480,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.21428571428571427,
+        0.5714285714285714
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.4912666234292062,
+        -0.03230033799140362,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 8,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230480,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.21428571428571427,
+        0.5714285714285714
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.4912666234292062,
+        -0.03230033799140362,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 9,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230490,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.2750954727804774,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 9,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230490,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.2750954727804774,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 9,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230490,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.2750954727804774,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 10,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230500,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.21428571428571427,
+        0.5
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.4912666234292062,
+        -0.15080639358433515,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 10,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230500,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.21428571428571427,
+        0.5
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.4912666234292062,
+        -0.15080639358433515,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 10,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230500,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.21428571428571427,
+        0.5
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.4912666234292062,
+        -0.15080639358433515,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 11,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026230510,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.14285714285714285
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.8435359974954221,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 11,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026230510,
+      "dnCounts": [
+        5,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.14285714285714285
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.8435359974954221,
+        0.6766917293233082,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 11,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026230510,
+      "dnCounts": [
+        0,
+        5
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.14285714285714285
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.8435359974954221,
+        0,
+        0.6766917293233082
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 0,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231400,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.049239879038443,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 0,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231400,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.049239879038443,
+        -1.1836966449457225,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 0,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231400,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.21428571428571427,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.049239879038443,
+        -1.1836966449457225,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 1,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231410,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 1,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231410,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 1,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231410,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 2,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231420,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 2,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231420,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 2,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231420,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 3,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231430,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 3,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231430,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 3,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231430,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 4,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231440,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.14285714285714285,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.7615292327456353,
+        -0.6890995746948642,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 4,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231440,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.14285714285714285,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.7615292327456353,
+        -0.6890995746948642,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 4,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231440,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.14285714285714285,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.7615292327456353,
+        -0.6890995746948642,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 5,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231450,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.14285714285714285,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.7615292327456353,
+        -0.40576107796734173,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 5,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231450,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.14285714285714285,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.7615292327456353,
+        -0.40576107796734173,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 5,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231450,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.14285714285714285,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.7615292327456353,
+        -0.40576107796734173,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 6,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231460,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 6,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231460,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 6,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231460,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 7,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231470,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 7,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231470,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 7,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231470,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 8,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231480,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 8,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231480,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 8,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231480,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 9,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231490,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 9,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231490,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 9,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231490,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 10,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231500,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 10,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231500,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 10,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231500,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 11,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026231510,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.049239879038443,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 11,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026231510,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.049239879038443,
+        -1.1836966449457225,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 11,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026231510,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.21428571428571427,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.049239879038443,
+        -1.1836966449457225,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 742,
+      "repeat": 0,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232400,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.8571428571428571,
+        1.6428571428571428
+      ],
+      "features": [
+        1.4447721264067237,
+        1.402848955608052,
+        1.2920412220601514,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 0,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232400,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.2142857142857142
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        0.8413242553730278,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 0,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232400,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.2142857142857142
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        0.8413242553730278,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 1,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232410,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        1.0714285714285714,
+        0.8571428571428571,
+        2.2142857142857144
+      ],
+      "features": [
+        1.8018624412000224,
+        1.402848955608052,
+        1.7906850299422976,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 1,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232410,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.5
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        1.1504814271983563,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 1,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232410,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.5
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        1.1504814271983563,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 2,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232420,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        1,
+        0.9285714285714286,
+        1.7857142857142858
+      ],
+      "features": [
+        1.6265062683754379,
+        1.57109412088077,
+        1.4261469638983715,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 2,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232420,
+      "dnCounts": [
+        11,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.5
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        1.1504814271983563,
+        1.4887218045112782,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 2,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232420,
+      "dnCounts": [
+        0,
+        11
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.5
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        1.1504814271983563,
+        0,
+        1.4887218045112782
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 3,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232430,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.42857142857142855,
+        1.0714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.23323752411624413,
+        0.671433260581945,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 3,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232430,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.8571428571428571,
+        1,
+        2.142857142857143
+      ],
+      "features": [
+        1.25617849379872,
+        1.7332199059796476,
+        1.7334372094377306,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 3,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232430,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.8571428571428571,
+        1,
+        2.142857142857143
+      ],
+      "features": [
+        1.25617849379872,
+        1.7332199059796476,
+        1.7334372094377306,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 4,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232440,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        1,
+        0.7857142857142857,
+        1.4285714285714286
+      ],
+      "features": [
+        1.6265062683754379,
+        1.228004280978124,
+        1.07663797273427,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 4,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232440,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        1,
+        0.7857142857142857,
+        1.4285714285714286
+      ],
+      "features": [
+        1.6265062683754379,
+        1.228004280978124,
+        1.07663797273427,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 4,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232440,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        1,
+        0.7857142857142857,
+        1.4285714285714286
+      ],
+      "features": [
+        1.6265062683754379,
+        1.228004280978124,
+        1.07663797273427,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 5,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232450,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.5714285714285714,
+        1.5714285714285714
+      ],
+      "features": [
+        1.25617849379872,
+        0.6581272325639078,
+        1.2222445052273527,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 5,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232450,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        1.3571428571428572
+      ],
+      "features": [
+        0.8561940259691435,
+        0.6581272325639078,
+        1.0005899133699838,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 5,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232450,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        1.3571428571428572
+      ],
+      "features": [
+        0.8561940259691435,
+        0.6581272325639078,
+        1.0005899133699838,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 6,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232460,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.2857142857142857,
+        1.0714285714285714
+      ],
+      "features": [
+        0.1889192101882625,
+        -0.23645625750977636,
+        0.671433260581945,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 6,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232460,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.2857142857142857,
+        1.0714285714285714
+      ],
+      "features": [
+        0.1889192101882625,
+        -0.23645625750977636,
+        0.671433260581945,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 6,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232460,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.5,
+        0.2857142857142857,
+        1.0714285714285714
+      ],
+      "features": [
+        0.1889192101882625,
+        -0.23645625750977636,
+        0.671433260581945,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 7,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232470,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        1.4285714285714286
+      ],
+      "features": [
+        0.6435177532752572,
+        0.6581272325639078,
+        1.07663797273427,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 7,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232470,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.4285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.07663797273427,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 7,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232470,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.4285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.07663797273427,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 8,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232480,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.7142857142857143,
+        1.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        1.0460211456449109,
+        1.2222445052273527,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 8,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232480,
+      "dnCounts": [
+        11,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.42857142857142855,
+        1.0714285714285714
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.23323752411624413,
+        0.671433260581945,
+        1.4887218045112782,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 8,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232480,
+      "dnCounts": [
+        0,
+        11
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.42857142857142855,
+        1.0714285714285714
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.23323752411624413,
+        0.671433260581945,
+        0,
+        1.4887218045112782
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 742,
+      "repeat": 9,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232490,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.9285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.5535445496464173,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 9,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232490,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.9285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.5535445496464173,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 9,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232490,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.9285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.5535445496464173,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 10,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232500,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7142857142857143,
+        1.7142857142857142
+      ],
+      "features": [
+        1.060187171984674,
+        1.0460211456449109,
+        1.3599764694617922,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 10,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232500,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5714285714285714,
+        1.3571428571428572
+      ],
+      "features": [
+        1.060187171984674,
+        0.6581272325639078,
+        1.0005899133699838,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 10,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232500,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5714285714285714,
+        1.3571428571428572
+      ],
+      "features": [
+        1.060187171984674,
+        0.6581272325639078,
+        1.0005899133699838,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 11,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026232510,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        1.0714285714285714,
+        0.9285714285714286,
+        2.2857142857142856
+      ],
+      "features": [
+        1.8018624412000224,
+        1.57109412088077,
+        1.8466745541490215,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 11,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026232510,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.7857142857142857,
+        1.6428571428571428
+      ],
+      "features": [
+        1.4447721264067237,
+        1.228004280978124,
+        1.2920412220601514,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 742,
+      "repeat": 11,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026232510,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.7857142857142857,
+        1.6428571428571428
+      ],
+      "features": [
+        1.4447721264067237,
+        1.228004280978124,
+        1.2920412220601514,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "cue": null,
+      "condition": "none",
+      "key": 2026330390,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": null,
+      "firstRound": true
+    },
+    {
+      "seed": 743,
+      "repeat": 0,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330400,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        1.2857142857142858,
+        0.9285714285714286,
+        1.7142857142857142
+      ],
+      "features": [
+        2.293781084156319,
+        1.57109412088077,
+        1.3599764694617922,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 0,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330400,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        1.2142857142857142,
+        1.2857142857142858,
+        1.5
+      ],
+      "features": [
+        2.1351284527206924,
+        2.328498548799598,
+        1.1504814271983563,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 0,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330400,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        1.2142857142857142,
+        1.2857142857142858,
+        1.5
+      ],
+      "features": [
+        2.1351284527206924,
+        2.328498548799598,
+        1.1504814271983563,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 1,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330410,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7142857142857143,
+        0.7142857142857143
+      ],
+      "features": [
+        1.060187171984674,
+        1.0460211456449109,
+        0.18935425386596533,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 1,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330410,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7142857142857143,
+        0.7142857142857143
+      ],
+      "features": [
+        1.060187171984674,
+        1.0460211456449109,
+        0.18935425386596533,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 1,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330410,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7142857142857143,
+        0.7142857142857143
+      ],
+      "features": [
+        1.060187171984674,
+        1.0460211456449109,
+        0.18935425386596533,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 2,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330420,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5714285714285714,
+        0.7857142857142857
+      ],
+      "features": [
+        1.060187171984674,
+        0.6581272325639078,
+        0.29334505193446747,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 2,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330420,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.21428571428571427,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.4912666234292062,
+        -0.6890995746948642,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 2,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330420,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.21428571428571427,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.4912666234292062,
+        -0.6890995746948642,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 3,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330430,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.5,
+        0.5714285714285714
+      ],
+      "features": [
+        0.1889192101882625,
+        0.4507425028249607,
+        -0.03230033799140362,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 3,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330430,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.5,
+        0.5714285714285714
+      ],
+      "features": [
+        0.1889192101882625,
+        0.4507425028249607,
+        -0.03230033799140362,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 3,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330430,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.5,
+        0.5,
+        0.5714285714285714
+      ],
+      "features": [
+        0.1889192101882625,
+        0.4507425028249607,
+        -0.03230033799140362,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 4,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330440,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.42857142857142855
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        -0.2750954727804774,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 4,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330440,
+      "dnCounts": [
+        5,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.42857142857142855
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        -0.2750954727804774,
+        0.6766917293233082,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 4,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330440,
+      "dnCounts": [
+        0,
+        5
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.42857142857142855
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        -0.2750954727804774,
+        0,
+        0.6766917293233082
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 5,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330450,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.5434930422017814,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 5,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330450,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.5434930422017814,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 5,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330450,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.5434930422017814,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 6,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330460,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.35714285714285715,
+        0.5714285714285714
+      ],
+      "features": [
+        0.4213861548728199,
+        0.00457367160447321,
+        -0.03230033799140362,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 6,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330460,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        1.3571428571428572,
+        1,
+        1.5
+      ],
+      "features": [
+        2.4475513134975753,
+        1.7332199059796476,
+        1.1504814271983563,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 6,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330460,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        1.3571428571428572,
+        1,
+        1.5
+      ],
+      "features": [
+        2.4475513134975753,
+        1.7332199059796476,
+        1.1504814271983563,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 7,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330470,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.6428571428571429,
+        0.5
+      ],
+      "features": [
+        0.1889192101882625,
+        0.8562917568306991,
+        -0.15080639358433515,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 7,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330470,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.6428571428571429,
+        0.5
+      ],
+      "features": [
+        0.1889192101882625,
+        0.8562917568306991,
+        -0.15080639358433515,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 7,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330470,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.5,
+        0.6428571428571429,
+        0.5
+      ],
+      "features": [
+        0.1889192101882625,
+        0.8562917568306991,
+        -0.15080639358433515,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 8,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330480,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        1.1428571428571428,
+        0.8571428571428571,
+        1
+      ],
+      "features": [
+        1.9712731782892863,
+        1.402848955608052,
+        0.5820409024834114,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 8,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330480,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        1.1428571428571428,
+        0.8571428571428571,
+        1
+      ],
+      "features": [
+        1.9712731782892863,
+        1.402848955608052,
+        0.5820409024834114,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 8,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330480,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        1.1428571428571428,
+        0.8571428571428571,
+        1
+      ],
+      "features": [
+        1.9712731782892863,
+        1.402848955608052,
+        0.5820409024834114,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 9,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330490,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.21428571428571427,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.4912666234292062,
+        -0.2750954727804774,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 9,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330490,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.7142857142857143,
+        0.7857142857142857
+      ],
+      "features": [
+        0.6435177532752572,
+        1.0460211456449109,
+        0.29334505193446747,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 9,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330490,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.7142857142857143,
+        0.7857142857142857
+      ],
+      "features": [
+        0.6435177532752572,
+        1.0460211456449109,
+        0.29334505193446747,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 10,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330500,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.42857142857142855,
+        0.35714285714285715
+      ],
+      "features": [
+        0.8561940259691435,
+        0.23323752411624413,
+        -0.40576107796734173,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 10,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330500,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.35714285714285715
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        -0.40576107796734173,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 10,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330500,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.35714285714285715
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        -0.40576107796734173,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 11,
+      "cue": 0,
+      "condition": "none",
+      "key": 2026330510,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.5,
+        0.2857142857142857,
+        0.5
+      ],
+      "features": [
+        0.1889192101882625,
+        -0.23645625750977636,
+        -0.15080639358433515,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 11,
+      "cue": 0,
+      "condition": "bit0",
+      "key": 2026330510,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        0.6428571428571429
+      ],
+      "features": [
+        0.8561940259691435,
+        0.6581272325639078,
+        0.08093700671988797,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 11,
+      "cue": 0,
+      "condition": "bit1",
+      "key": 2026330510,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        0.6428571428571429
+      ],
+      "features": [
+        0.8561940259691435,
+        0.6581272325639078,
+        0.08093700671988797,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 0,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331400,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.23645625750977636,
+        -0.40576107796734173,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 0,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331400,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.23645625750977636,
+        -0.40576107796734173,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 0,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331400,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.23645625750977636,
+        -0.40576107796734173,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 1,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331410,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 1,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331410,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 1,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331410,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 2,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331420,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 2,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331420,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 2,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331420,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 3,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331430,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 3,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331430,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 3,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331430,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 4,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331440,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 4,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331440,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 4,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331440,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 5,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331450,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0.07142857142857142
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.007942768848224,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 5,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331450,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0.07142857142857142
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.007942768848224,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 5,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331450,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0.07142857142857142
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.007942768848224,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 6,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331460,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0.07142857142857142
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.007942768848224,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 6,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331460,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0.07142857142857142
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.007942768848224,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 6,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331460,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0.07142857142857142
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.007942768848224,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 7,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331470,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 7,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331470,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 7,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331470,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 8,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331480,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 8,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331480,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 8,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331480,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 9,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331490,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0.07142857142857142
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -1.007942768848224,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 9,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331490,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0.07142857142857142
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -1.007942768848224,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 9,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331490,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0.07142857142857142
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -1.007942768848224,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 10,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331500,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 10,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331500,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 10,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331500,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 1
+    },
+    {
+      "seed": 743,
+      "repeat": 11,
+      "cue": 1,
+      "condition": "none",
+      "key": 2026331510,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.2857142857142857,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.23645625750977636,
+        -0.40576107796734173,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 11,
+      "cue": 1,
+      "condition": "bit0",
+      "key": 2026331510,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.2857142857142857,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.23645625750977636,
+        -0.40576107796734173,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 11,
+      "cue": 1,
+      "condition": "bit1",
+      "key": 2026331510,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.2857142857142857,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.23645625750977636,
+        -0.40576107796734173,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 0
+    },
+    {
+      "seed": 743,
+      "repeat": 0,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332400,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.5
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        1.1504814271983563,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 0,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332400,
+      "dnCounts": [
+        11,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.5
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        1.1504814271983563,
+        1.4887218045112782,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 0,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332400,
+      "dnCounts": [
+        0,
+        11
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.5
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        1.1504814271983563,
+        0,
+        1.4887218045112782
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 1,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332410,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.2142857142857142
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        0.8413242553730278,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 1,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332410,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.3571428571428572
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        1.0005899133699838,
+        1.218045112781955,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 1,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332410,
+      "dnCounts": [
+        0,
+        9
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.3571428571428572
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        1.0005899133699838,
+        0,
+        1.218045112781955
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 2,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332420,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.7857142857142858
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.4261469638983715,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 2,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332420,
+      "dnCounts": [
+        10,
+        0
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.7142857142857143,
+        1.5
+      ],
+      "features": [
+        1.25617849379872,
+        1.0460211456449109,
+        1.1504814271983563,
+        1.3533834586466165,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 2,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332420,
+      "dnCounts": [
+        0,
+        10
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.7142857142857143,
+        1.5
+      ],
+      "features": [
+        1.25617849379872,
+        1.0460211456449109,
+        1.1504814271983563,
+        0,
+        1.3533834586466165
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 3,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332430,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7142857142857143,
+        1.7857142857142858
+      ],
+      "features": [
+        1.060187171984674,
+        1.0460211456449109,
+        1.4261469638983715,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 3,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332430,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        1.1428571428571428,
+        0.7142857142857143,
+        1.9285714285714286
+      ],
+      "features": [
+        1.9712731782892863,
+        1.0460211456449109,
+        1.5535445496464173,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 3,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332430,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        1.1428571428571428,
+        0.7142857142857143,
+        1.9285714285714286
+      ],
+      "features": [
+        1.9712731782892863,
+        1.0460211456449109,
+        1.5535445496464173,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 4,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332440,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7142857142857143,
+        1.6428571428571428
+      ],
+      "features": [
+        1.060187171984674,
+        1.0460211456449109,
+        1.2920412220601514,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 4,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332440,
+      "dnCounts": [
+        8,
+        0
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.7142857142857143,
+        1.8571428571428572
+      ],
+      "features": [
+        1.25617849379872,
+        1.0460211456449109,
+        1.490642074648657,
+        1.0827067669172932,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 4,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332440,
+      "dnCounts": [
+        0,
+        8
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.7142857142857143,
+        1.8571428571428572
+      ],
+      "features": [
+        1.25617849379872,
+        1.0460211456449109,
+        1.490642074648657,
+        0,
+        1.0827067669172932
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 5,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332450,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5,
+        1.4285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.4507425028249607,
+        1.07663797273427,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 5,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332450,
+      "dnCounts": [
+        5,
+        0
+      ],
+      "rates": [
+        1.1428571428571428,
+        1.1428571428571428,
+        2.357142857142857
+      ],
+      "features": [
+        1.9712731782892863,
+        2.04078790250679,
+        1.9014599087265234,
+        0.6766917293233082,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 5,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332450,
+      "dnCounts": [
+        0,
+        5
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.6428571428571429,
+        1.5714285714285714
+      ],
+      "features": [
+        1.25617849379872,
+        0.8562917568306991,
+        1.2222445052273527,
+        0,
+        0.6766917293233082
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 6,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332460,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.42857142857142855,
+        1.3571428571428572
+      ],
+      "features": [
+        1.060187171984674,
+        0.23323752411624413,
+        1.0005899133699838,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 6,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332460,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        1.5714285714285714
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        1.2222445052273527,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 6,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332460,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        1.5714285714285714
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        1.2222445052273527,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 7,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332470,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.7857142857142857,
+        1.7142857142857142
+      ],
+      "features": [
+        1.25617849379872,
+        1.228004280978124,
+        1.3599764694617922,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 7,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332470,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.5714285714285714,
+        1.4285714285714286
+      ],
+      "features": [
+        1.4447721264067237,
+        0.6581272325639078,
+        1.07663797273427,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 7,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332470,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.5714285714285714,
+        1.4285714285714286
+      ],
+      "features": [
+        1.4447721264067237,
+        0.6581272325639078,
+        1.07663797273427,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 8,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332480,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        1.1428571428571428,
+        1.2142857142857142,
+        2
+      ],
+      "features": [
+        1.9712731782892863,
+        2.1869638753977676,
+        1.6149311538447986,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 8,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332480,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.6428571428571428
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        1.2920412220601514,
+        0.9473684210526315,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 8,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332480,
+      "dnCounts": [
+        0,
+        7
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.6428571428571429,
+        1.7142857142857142
+      ],
+      "features": [
+        1.4447721264067237,
+        0.8562917568306991,
+        1.3599764694617922,
+        0,
+        0.9473684210526315
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 9,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332490,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.9285714285714286,
+        2.0714285714285716
+      ],
+      "features": [
+        1.4447721264067237,
+        1.57109412088077,
+        1.6748732324568762,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 9,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332490,
+      "dnCounts": [
+        5,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5,
+        1.7857142857142858
+      ],
+      "features": [
+        1.060187171984674,
+        0.4507425028249607,
+        1.4261469638983715,
+        0.6766917293233082,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 9,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332490,
+      "dnCounts": [
+        0,
+        5
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5,
+        1.7857142857142858
+      ],
+      "features": [
+        1.060187171984674,
+        0.4507425028249607,
+        1.4261469638983715,
+        0,
+        0.6766917293233082
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 10,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332500,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        1.2142857142857142,
+        1,
+        2.4285714285714284
+      ],
+      "features": [
+        2.1351284527206924,
+        1.7332199059796476,
+        1.9550918012950993,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 10,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332500,
+      "dnCounts": [
+        6,
+        0
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.7857142857142857,
+        1.9285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        1.228004280978124,
+        1.5535445496464173,
+        0.8120300751879699,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 10,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332500,
+      "dnCounts": [
+        0,
+        6
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.7857142857142857,
+        1.9285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        1.228004280978124,
+        1.5535445496464173,
+        0,
+        0.8120300751879699
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 11,
+      "cue": 2,
+      "condition": "none",
+      "key": 2026332510,
+      "dnCounts": [
+        0,
+        0
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.8571428571428572
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        1.490642074648657,
+        0,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 11,
+      "cue": 2,
+      "condition": "bit0",
+      "key": 2026332510,
+      "dnCounts": [
+        4,
+        0
+      ],
+      "rates": [
+        0.9285714285714286,
+        1,
+        2.0714285714285716
+      ],
+      "features": [
+        1.4447721264067237,
+        1.7332199059796476,
+        1.6748732324568762,
+        0.5413533834586466,
+        0
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    },
+    {
+      "seed": 743,
+      "repeat": 11,
+      "cue": 2,
+      "condition": "bit1",
+      "key": 2026332510,
+      "dnCounts": [
+        0,
+        4
+      ],
+      "rates": [
+        0.9285714285714286,
+        1,
+        2.0714285714285716
+      ],
+      "features": [
+        1.4447721264067237,
+        1.7332199059796476,
+        1.6748732324568762,
+        0,
+        0.5413533834586466
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "cueActive": true,
+      "cuePrediction": 2
+    }
+  ],
+  "smokePassed": false,
+  "conclusion": "Implementation or receiving-validity gate failed; no student training was run."
+}

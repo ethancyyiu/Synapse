@@ -1,0 +1,233 @@
+{
+  "command": "node tools/check_two_cue_source_2132.mjs",
+  "sampleMs": 120,
+  "neuron": 2132,
+  "bitEncoding": "trace<0.5",
+  "mapping": [
+    "cue0->action0,cue1->action2",
+    "cue0->action2,cue1->action0"
+  ],
+  "note": "Paired shuffle swaps mapping labels within the same cue and trial",
+  "runs": [
+    {
+      "seed": 11,
+      "sourceFile": "two_cue_source_02_11_lanes02.json",
+      "frozenFiles": [
+        "two_cue_diag0_02_11_lanes02.json",
+        "two_cue_diag1_02_11_lanes02.json"
+      ],
+      "beforeTraining": [
+        {
+          "cue": 0,
+          "n": 36,
+          "meanTrace": 0.07103540188152513,
+          "bit1": 33
+        },
+        {
+          "cue": 1,
+          "n": 36,
+          "meanTrace": 0.014232250101017927,
+          "bit1": 36
+        }
+      ],
+      "activity": [
+        {
+          "mapping": 0,
+          "lateTrainingAccuracy": 0.9444444444444443,
+          "frozen": {
+            "correct": 65,
+            "total": 72
+          },
+          "byCue": [
+            {
+              "cue": 0,
+              "n": 36,
+              "meanTrace": 1.375014616029273,
+              "bit1": 3,
+              "bit1ByTest": [
+                1,
+                1,
+                1
+              ]
+            },
+            {
+              "cue": 1,
+              "n": 36,
+              "meanTrace": 1.4981316494150643,
+              "bit1": 0,
+              "bit1ByTest": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "mapping": 1,
+          "lateTrainingAccuracy": 0.9305555555555557,
+          "frozen": {
+            "correct": 68,
+            "total": 72
+          },
+          "byCue": [
+            {
+              "cue": 0,
+              "n": 36,
+              "meanTrace": 0.7982979930304913,
+              "bit1": 18,
+              "bit1ByTest": [
+                7,
+                6,
+                5
+              ]
+            },
+            {
+              "cue": 1,
+              "n": 36,
+              "meanTrace": 4.111846319818175,
+              "bit1": 0,
+              "bit1ByTest": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "observed": {
+        "byCue": [
+          {
+            "cue": 0,
+            "bitInformation": 0.1639560440835478,
+            "bestBitMappingAccuracy": 0.7083333333333334
+          },
+          {
+            "cue": 1,
+            "bitInformation": 0,
+            "bestBitMappingAccuracy": 0.5
+          }
+        ],
+        "conditionalBitInformation": 0.0819780220417739,
+        "bestBitMappingAccuracy": 0.6041666666666667
+      },
+      "pairedShuffle": {
+        "permutations": 2000,
+        "mean": 0.006364713749619406,
+        "percentile95": 0.027959440042805594,
+        "pAtLeastObserved": 0.0014992503748125937
+      }
+    },
+    {
+      "seed": 12,
+      "sourceFile": "two_cue_source_02_12_lanes02.json",
+      "frozenFiles": [
+        "two_cue_diag0_02_12_lanes02.json",
+        "two_cue_diag1_02_12_lanes02.json"
+      ],
+      "beforeTraining": [
+        {
+          "cue": 0,
+          "n": 36,
+          "meanTrace": 0.040422971690690056,
+          "bit1": 35
+        },
+        {
+          "cue": 1,
+          "n": 36,
+          "meanTrace": 0.00793894960225991,
+          "bit1": 36
+        }
+      ],
+      "activity": [
+        {
+          "mapping": 0,
+          "lateTrainingAccuracy": 0.861111111111111,
+          "frozen": {
+            "correct": 66,
+            "total": 72
+          },
+          "byCue": [
+            {
+              "cue": 0,
+              "n": 36,
+              "meanTrace": 1.4973073532007941,
+              "bit1": 2,
+              "bit1ByTest": [
+                0,
+                0,
+                2
+              ]
+            },
+            {
+              "cue": 1,
+              "n": 36,
+              "meanTrace": 1.4243816254652024,
+              "bit1": 2,
+              "bit1ByTest": [
+                0,
+                0,
+                2
+              ]
+            }
+          ]
+        },
+        {
+          "mapping": 1,
+          "lateTrainingAccuracy": 0.9166666666666666,
+          "frozen": {
+            "correct": 63,
+            "total": 72
+          },
+          "byCue": [
+            {
+              "cue": 0,
+              "n": 36,
+              "meanTrace": 0.6511063926296236,
+              "bit1": 21,
+              "bit1ByTest": [
+                8,
+                6,
+                7
+              ]
+            },
+            {
+              "cue": 1,
+              "n": 36,
+              "meanTrace": 3.83771703208456,
+              "bit1": 0,
+              "bit1ByTest": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        }
+      ],
+      "observed": {
+        "byCue": [
+          {
+            "cue": 0,
+            "bitInformation": 0.25907019533384423,
+            "bestBitMappingAccuracy": 0.7638888888888888
+          },
+          {
+            "cue": 1,
+            "bitInformation": 0.02835035372621017,
+            "bestBitMappingAccuracy": 0.5277777777777778
+          }
+        ],
+        "conditionalBitInformation": 0.14371027453002722,
+        "bestBitMappingAccuracy": 0.6458333333333333
+      },
+      "pairedShuffle": {
+        "permutations": 2000,
+        "mean": 0.013804776081716796,
+        "percentile95": 0.039939420682707616,
+        "pAtLeastObserved": 0.0004997501249375312
+      }
+    }
+  ]
+}

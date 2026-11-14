@@ -1,0 +1,575 @@
+{
+  "command": "node tools/check_rps_observable_baseline.mjs predictor",
+  "strategy": {
+    "strategy": "previous_opponent",
+    "offset": 1,
+    "noise": 0
+  },
+  "trainSeeds": [
+    41000,
+    41001,
+    41002,
+    41003,
+    41004,
+    41005,
+    41006,
+    41007,
+    41008,
+    41009,
+    41010,
+    41011
+  ],
+  "heldoutSeeds": [
+    51000,
+    51001,
+    51002
+  ],
+  "trainingRounds": 24,
+  "lookup": [
+    1,
+    2,
+    0
+  ],
+  "fallback": 0,
+  "constantAction": 1,
+  "training": [
+    {
+      "previous": null,
+      "next": 2
+    },
+    {
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "previous": 0,
+      "next": 1
+    }
+  ],
+  "heldout": [
+    {
+      "seed": 51000,
+      "round": 0,
+      "previous": null,
+      "next": 0
+    },
+    {
+      "seed": 51000,
+      "round": 1,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51000,
+      "round": 2,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51000,
+      "round": 3,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51000,
+      "round": 4,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51000,
+      "round": 5,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51000,
+      "round": 6,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51000,
+      "round": 7,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51000,
+      "round": 8,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51000,
+      "round": 9,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51000,
+      "round": 10,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51000,
+      "round": 11,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51000,
+      "round": 12,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51000,
+      "round": 13,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51000,
+      "round": 14,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51000,
+      "round": 15,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51000,
+      "round": 16,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51000,
+      "round": 17,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51000,
+      "round": 18,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51000,
+      "round": 19,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51000,
+      "round": 20,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51000,
+      "round": 21,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51000,
+      "round": 22,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51000,
+      "round": 23,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51001,
+      "round": 0,
+      "previous": null,
+      "next": 0
+    },
+    {
+      "seed": 51001,
+      "round": 1,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51001,
+      "round": 2,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51001,
+      "round": 3,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51001,
+      "round": 4,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51001,
+      "round": 5,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51001,
+      "round": 6,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51001,
+      "round": 7,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51001,
+      "round": 8,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51001,
+      "round": 9,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51001,
+      "round": 10,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51001,
+      "round": 11,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51001,
+      "round": 12,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51001,
+      "round": 13,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51001,
+      "round": 14,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51001,
+      "round": 15,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51001,
+      "round": 16,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51001,
+      "round": 17,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51001,
+      "round": 18,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51001,
+      "round": 19,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51001,
+      "round": 20,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51001,
+      "round": 21,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51001,
+      "round": 22,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51001,
+      "round": 23,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51002,
+      "round": 0,
+      "previous": null,
+      "next": 1
+    },
+    {
+      "seed": 51002,
+      "round": 1,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51002,
+      "round": 2,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51002,
+      "round": 3,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51002,
+      "round": 4,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51002,
+      "round": 5,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51002,
+      "round": 6,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51002,
+      "round": 7,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51002,
+      "round": 8,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51002,
+      "round": 9,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51002,
+      "round": 10,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51002,
+      "round": 11,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51002,
+      "round": 12,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51002,
+      "round": 13,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51002,
+      "round": 14,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51002,
+      "round": 15,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51002,
+      "round": 16,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51002,
+      "round": 17,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51002,
+      "round": 18,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51002,
+      "round": 19,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51002,
+      "round": 20,
+      "previous": 2,
+      "next": 0
+    },
+    {
+      "seed": 51002,
+      "round": 21,
+      "previous": 0,
+      "next": 1
+    },
+    {
+      "seed": 51002,
+      "round": 22,
+      "previous": 1,
+      "next": 2
+    },
+    {
+      "seed": 51002,
+      "round": 23,
+      "previous": 2,
+      "next": 0
+    }
+  ],
+  "summary": {
+    "predictionAccuracy": 0.9861111111111112,
+    "observedStateAccuracy": 1,
+    "winRate": 0.9861111111111112,
+    "randomWinRate": 0.3194444444444444,
+    "constantWinRate": 0.3333333333333333
+  },
+  "passed": true
+}

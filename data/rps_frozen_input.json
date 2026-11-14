@@ -1,0 +1,4411 @@
+{
+  "command": "node tools/check_rps_frozen_input.mjs",
+  "design": {
+    "seeds": [
+      651,
+      652,
+      653
+    ],
+    "repeats": 12,
+    "calibrationRepeats": 6,
+    "heldoutRepeats": 6,
+    "weights": "reproducible initial, frozen; trained snapshots unavailable",
+    "neuralResetEachTrial": true,
+    "matchedNetworkAndTieStreamsBySeedRepeat": true,
+    "input": "laneVpn[state].slice(2), 150 Hz, 0-240 ms",
+    "countResetMs": 50,
+    "decisionMs": 240,
+    "reward": false,
+    "teacher": false
+  },
+  "gates": {
+    "eachSeedState2Recall": ">=5/6",
+    "eachSeedFalseState2": "<=2/12",
+    "eachSeedMeanActiveKC": ">=1",
+    "eachSeedNegativePaperMargin": ">=10/12",
+    "eachSeedPaperChosen": "<=2/12"
+  },
+  "summary": [
+    {
+      "seed": 651,
+      "heldoutKCConfusion": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          6
+        ]
+      ],
+      "byState": [
+        {
+          "state": 0,
+          "meanActiveKC": 8.5,
+          "uniqueActiveKC": 15,
+          "mostFrequentKC": [
+            [
+              67,
+              12
+            ],
+            [
+              354,
+              12
+            ],
+            [
+              1155,
+              12
+            ],
+            [
+              1808,
+              12
+            ],
+            [
+              1841,
+              12
+            ],
+            [
+              2041,
+              12
+            ],
+            [
+              162,
+              8
+            ],
+            [
+              1194,
+              8
+            ],
+            [
+              806,
+              4
+            ],
+            [
+              241,
+              2
+            ],
+            [
+              310,
+              2
+            ],
+            [
+              548,
+              2
+            ]
+          ],
+          "meanRates": [
+            0.6488095238095237,
+            0.5773809523809522,
+            0.7023809523809524
+          ],
+          "meanPaperMinusScissors": -0.12500000000000003,
+          "negativePaperMargin": 9,
+          "paperChosen": 1,
+          "paperStrictMax": 0,
+          "paperTieAdjustedMax": 0.5,
+          "threeWayZeroTies": 0,
+          "actionCounts": [
+            4,
+            1,
+            7
+          ]
+        },
+        {
+          "state": 1,
+          "meanActiveKC": 7.5,
+          "uniqueActiveKC": 12,
+          "mostFrequentKC": [
+            [
+              310,
+              12
+            ],
+            [
+              823,
+              12
+            ],
+            [
+              1374,
+              12
+            ],
+            [
+              1851,
+              12
+            ],
+            [
+              283,
+              11
+            ],
+            [
+              739,
+              8
+            ],
+            [
+              251,
+              7
+            ],
+            [
+              1669,
+              7
+            ],
+            [
+              336,
+              4
+            ],
+            [
+              616,
+              3
+            ],
+            [
+              1012,
+              1
+            ],
+            [
+              1822,
+              1
+            ]
+          ],
+          "meanRates": [
+            0.15476190476190474,
+            0.017857142857142856,
+            0.041666666666666664
+          ],
+          "meanPaperMinusScissors": -0.023809523809523808,
+          "negativePaperMargin": 1,
+          "paperChosen": 0,
+          "paperStrictMax": 0,
+          "paperTieAdjustedMax": 0.5,
+          "threeWayZeroTies": 0,
+          "actionCounts": [
+            11,
+            0,
+            1
+          ]
+        },
+        {
+          "state": 2,
+          "meanActiveKC": 6.833333333333333,
+          "uniqueActiveKC": 13,
+          "mostFrequentKC": [
+            [
+              67,
+              12
+            ],
+            [
+              309,
+              12
+            ],
+            [
+              519,
+              12
+            ],
+            [
+              1777,
+              12
+            ],
+            [
+              2005,
+              9
+            ],
+            [
+              1014,
+              8
+            ],
+            [
+              255,
+              7
+            ],
+            [
+              264,
+              4
+            ],
+            [
+              789,
+              2
+            ],
+            [
+              415,
+              1
+            ],
+            [
+              427,
+              1
+            ],
+            [
+              1165,
+              1
+            ]
+          ],
+          "meanRates": [
+            0.6964285714285715,
+            0.613095238095238,
+            1.458333333333333
+          ],
+          "meanPaperMinusScissors": -0.8452380952380952,
+          "negativePaperMargin": 12,
+          "paperChosen": 0,
+          "paperStrictMax": 0,
+          "paperTieAdjustedMax": 0,
+          "threeWayZeroTies": 0,
+          "actionCounts": [
+            0,
+            0,
+            12
+          ]
+        }
+      ],
+      "kcPass": true,
+      "competitionPass": true
+    },
+    {
+      "seed": 652,
+      "heldoutKCConfusion": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          6
+        ]
+      ],
+      "byState": [
+        {
+          "state": 0,
+          "meanActiveKC": 7.75,
+          "uniqueActiveKC": 15,
+          "mostFrequentKC": [
+            [
+              67,
+              12
+            ],
+            [
+              354,
+              12
+            ],
+            [
+              1808,
+              12
+            ],
+            [
+              1841,
+              12
+            ],
+            [
+              2041,
+              12
+            ],
+            [
+              1155,
+              9
+            ],
+            [
+              1194,
+              9
+            ],
+            [
+              162,
+              5
+            ],
+            [
+              310,
+              3
+            ],
+            [
+              806,
+              2
+            ],
+            [
+              241,
+              1
+            ],
+            [
+              329,
+              1
+            ]
+          ],
+          "meanRates": [
+            0.5238095238095237,
+            0.4464285714285714,
+            0.5297619047619048
+          ],
+          "meanPaperMinusScissors": -0.0833333333333333,
+          "negativePaperMargin": 6,
+          "paperChosen": 3,
+          "paperStrictMax": 0,
+          "paperTieAdjustedMax": 2,
+          "threeWayZeroTies": 0,
+          "actionCounts": [
+            4,
+            3,
+            5
+          ]
+        },
+        {
+          "state": 1,
+          "meanActiveKC": 7.166666666666667,
+          "uniqueActiveKC": 11,
+          "mostFrequentKC": [
+            [
+              283,
+              12
+            ],
+            [
+              823,
+              12
+            ],
+            [
+              1374,
+              12
+            ],
+            [
+              310,
+              11
+            ],
+            [
+              1851,
+              10
+            ],
+            [
+              1669,
+              8
+            ],
+            [
+              739,
+              7
+            ],
+            [
+              251,
+              5
+            ],
+            [
+              336,
+              5
+            ],
+            [
+              616,
+              3
+            ],
+            [
+              264,
+              1
+            ]
+          ],
+          "meanRates": [
+            0.12499999999999996,
+            0.023809523809523808,
+            0.03571428571428571
+          ],
+          "meanPaperMinusScissors": -0.011904761904761904,
+          "negativePaperMargin": 1,
+          "paperChosen": 0,
+          "paperStrictMax": 0,
+          "paperTieAdjustedMax": 0,
+          "threeWayZeroTies": 0,
+          "actionCounts": [
+            11,
+            0,
+            1
+          ]
+        },
+        {
+          "state": 2,
+          "meanActiveKC": 6.833333333333333,
+          "uniqueActiveKC": 12,
+          "mostFrequentKC": [
+            [
+              67,
+              12
+            ],
+            [
+              519,
+              12
+            ],
+            [
+              1777,
+              12
+            ],
+            [
+              309,
+              11
+            ],
+            [
+              2005,
+              9
+            ],
+            [
+              264,
+              8
+            ],
+            [
+              255,
+              7
+            ],
+            [
+              1014,
+              4
+            ],
+            [
+              789,
+              3
+            ],
+            [
+              1669,
+              2
+            ],
+            [
+              249,
+              1
+            ],
+            [
+              415,
+              1
+            ]
+          ],
+          "meanRates": [
+            0.7142857142857143,
+            0.6607142857142857,
+            1.482142857142857
+          ],
+          "meanPaperMinusScissors": -0.8214285714285715,
+          "negativePaperMargin": 12,
+          "paperChosen": 0,
+          "paperStrictMax": 0,
+          "paperTieAdjustedMax": 0,
+          "threeWayZeroTies": 0,
+          "actionCounts": [
+            0,
+            0,
+            12
+          ]
+        }
+      ],
+      "kcPass": true,
+      "competitionPass": true
+    },
+    {
+      "seed": 653,
+      "heldoutKCConfusion": [
+        [
+          6,
+          0,
+          0
+        ],
+        [
+          0,
+          6,
+          0
+        ],
+        [
+          0,
+          0,
+          6
+        ]
+      ],
+      "byState": [
+        {
+          "state": 0,
+          "meanActiveKC": 7.25,
+          "uniqueActiveKC": 14,
+          "mostFrequentKC": [
+            [
+              67,
+              12
+            ],
+            [
+              1808,
+              12
+            ],
+            [
+              2041,
+              12
+            ],
+            [
+              354,
+              10
+            ],
+            [
+              1155,
+              10
+            ],
+            [
+              1841,
+              9
+            ],
+            [
+              162,
+              6
+            ],
+            [
+              1194,
+              6
+            ],
+            [
+              806,
+              4
+            ],
+            [
+              241,
+              2
+            ],
+            [
+              310,
+              1
+            ],
+            [
+              329,
+              1
+            ]
+          ],
+          "meanRates": [
+            0.49999999999999994,
+            0.4226190476190476,
+            0.5059523809523809
+          ],
+          "meanPaperMinusScissors": -0.08333333333333331,
+          "negativePaperMargin": 7,
+          "paperChosen": 2,
+          "paperStrictMax": 0,
+          "paperTieAdjustedMax": 1,
+          "threeWayZeroTies": 0,
+          "actionCounts": [
+            6,
+            2,
+            4
+          ]
+        },
+        {
+          "state": 1,
+          "meanActiveKC": 7.25,
+          "uniqueActiveKC": 11,
+          "mostFrequentKC": [
+            [
+              283,
+              12
+            ],
+            [
+              1374,
+              12
+            ],
+            [
+              310,
+              10
+            ],
+            [
+              823,
+              10
+            ],
+            [
+              1851,
+              10
+            ],
+            [
+              739,
+              9
+            ],
+            [
+              336,
+              7
+            ],
+            [
+              1669,
+              7
+            ],
+            [
+              251,
+              4
+            ],
+            [
+              616,
+              4
+            ],
+            [
+              354,
+              2
+            ]
+          ],
+          "meanRates": [
+            0.12499999999999999,
+            0.023809523809523808,
+            0.017857142857142856
+          ],
+          "meanPaperMinusScissors": 0.005952380952380952,
+          "negativePaperMargin": 0,
+          "paperChosen": 2,
+          "paperStrictMax": 0,
+          "paperTieAdjustedMax": 0.8333333333333333,
+          "threeWayZeroTies": 1,
+          "actionCounts": [
+            10,
+            2,
+            0
+          ]
+        },
+        {
+          "state": 2,
+          "meanActiveKC": 8.5,
+          "uniqueActiveKC": 13,
+          "mostFrequentKC": [
+            [
+              67,
+              12
+            ],
+            [
+              255,
+              12
+            ],
+            [
+              309,
+              12
+            ],
+            [
+              519,
+              12
+            ],
+            [
+              1777,
+              12
+            ],
+            [
+              2005,
+              12
+            ],
+            [
+              264,
+              11
+            ],
+            [
+              789,
+              7
+            ],
+            [
+              1014,
+              5
+            ],
+            [
+              1669,
+              3
+            ],
+            [
+              415,
+              2
+            ],
+            [
+              427,
+              1
+            ]
+          ],
+          "meanRates": [
+            0.7678571428571429,
+            0.7202380952380952,
+            1.7023809523809526
+          ],
+          "meanPaperMinusScissors": -0.9821428571428571,
+          "negativePaperMargin": 12,
+          "paperChosen": 0,
+          "paperStrictMax": 0,
+          "paperTieAdjustedMax": 0,
+          "threeWayZeroTies": 0,
+          "actionCounts": [
+            0,
+            0,
+            12
+          ]
+        }
+      ],
+      "kcPass": true,
+      "competitionPass": true
+    }
+  ],
+  "allKcPass": true,
+  "allCompetitionPass": true,
+  "trials": [
+    {
+      "seed": 651,
+      "repeat": 0,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        241,
+        354,
+        806,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        2,
+        1,
+        3,
+        2,
+        2,
+        1,
+        6,
+        4,
+        3
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        0.9285714285714286
+      ],
+      "paperMinusScissors": -0.2857142857142857,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 0,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        336,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        1,
+        1,
+        2,
+        4,
+        2
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 0,
+      "state": 2,
+      "activeKC": [
+        67,
+        309,
+        519,
+        1014,
+        1777
+      ],
+      "activeKCCounts": [
+        6,
+        3,
+        4,
+        1,
+        4
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        1.0714285714285714
+      ],
+      "paperMinusScissors": -0.5714285714285714,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 1,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        172,
+        354,
+        548,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        2,
+        1,
+        3,
+        1,
+        3,
+        1,
+        7,
+        3,
+        2
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.8571428571428571,
+        0.9285714285714286
+      ],
+      "paperMinusScissors": -0.07142857142857151,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 1,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        3,
+        3,
+        2,
+        4,
+        1,
+        1
+      ],
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0
+      ],
+      "paperMinusScissors": 0.07142857142857142,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0.5,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 1,
+      "state": 2,
+      "activeKC": [
+        67,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        7,
+        1,
+        4,
+        4,
+        1
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.2142857142857142
+      ],
+      "paperMinusScissors": -0.7142857142857142,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 2,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        310,
+        354,
+        806,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        1,
+        4,
+        1,
+        2,
+        3,
+        6,
+        4,
+        3
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7857142857142857,
+        1.2857142857142858
+      ],
+      "paperMinusScissors": -0.5000000000000001,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 2,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        616,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        2,
+        2,
+        2,
+        1,
+        4,
+        5,
+        2,
+        3
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.14285714285714285,
+        0.5
+      ],
+      "paperMinusScissors": -0.35714285714285715,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 2,
+      "state": 2,
+      "activeKC": [
+        67,
+        264,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        5,
+        1,
+        1,
+        5,
+        4,
+        1
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.6428571428571429,
+        1.2857142857142858
+      ],
+      "paperMinusScissors": -0.6428571428571429,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 3,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        2,
+        2,
+        1,
+        4,
+        2,
+        4
+      ],
+      "rates": [
+        0.5,
+        0.5714285714285714,
+        0.6428571428571429
+      ],
+      "paperMinusScissors": -0.07142857142857151,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 3,
+      "state": 1,
+      "activeKC": [
+        251,
+        310,
+        336,
+        739,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        2,
+        1,
+        2,
+        2,
+        6,
+        2
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 3,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        7,
+        1,
+        3,
+        5,
+        5,
+        1
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5,
+        1.5
+      ],
+      "paperMinusScissors": -1,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 4,
+      "state": 0,
+      "activeKC": [
+        67,
+        354,
+        806,
+        1155,
+        1808,
+        1841,
+        2006,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        4,
+        1,
+        4,
+        6,
+        3,
+        1,
+        6
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5714285714285714,
+        0.5714285714285714
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 4,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        616,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        2,
+        5,
+        1,
+        1
+      ],
+      "rates": [
+        0.2857142857142857,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 4,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        415,
+        427,
+        519,
+        789,
+        1014,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        2,
+        2,
+        3,
+        2,
+        1,
+        6,
+        1,
+        1,
+        1,
+        6,
+        2
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.8571428571428571,
+        1.6428571428571428
+      ],
+      "paperMinusScissors": -0.7857142857142857,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 5,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        1155,
+        1808,
+        1841,
+        2006,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        3,
+        2,
+        4,
+        2,
+        1,
+        3
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.42857142857142855,
+        0.35714285714285715
+      ],
+      "paperMinusScissors": 0.0714285714285714,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 5,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        739,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        2,
+        2,
+        2,
+        2,
+        1,
+        6,
+        1
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 5,
+      "state": 2,
+      "activeKC": [
+        67,
+        309,
+        519,
+        1777
+      ],
+      "activeKCCounts": [
+        6,
+        1,
+        3,
+        2
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        1.0714285714285714
+      ],
+      "paperMinusScissors": -0.5,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 6,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        548,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        3,
+        4,
+        1,
+        5,
+        6,
+        3,
+        4
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.5714285714285714,
+        0.8571428571428571
+      ],
+      "paperMinusScissors": -0.2857142857142857,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 6,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        2,
+        1,
+        4,
+        6,
+        1,
+        3
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 6,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        309,
+        519,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        7,
+        2,
+        3,
+        5,
+        1,
+        5,
+        2
+      ],
+      "rates": [
+        0.7142857142857143,
+        1,
+        2.0714285714285716
+      ],
+      "paperMinusScissors": -1.0714285714285716,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 7,
+      "state": 0,
+      "activeKC": [
+        67,
+        354,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        2,
+        3,
+        2,
+        5,
+        2,
+        2
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.35714285714285715
+      ],
+      "paperMinusScissors": -0.07142857142857145,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 7,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        336,
+        739,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        1,
+        2,
+        2,
+        1,
+        1,
+        4,
+        1
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 7,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        309,
+        519,
+        1014,
+        1165,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        5,
+        2,
+        4,
+        6,
+        1,
+        1,
+        4,
+        2
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.5,
+        1.6428571428571428
+      ],
+      "paperMinusScissors": -1.1428571428571428,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 8,
+      "state": 0,
+      "activeKC": [
+        67,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        2,
+        1,
+        2,
+        1,
+        4,
+        1,
+        2
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.35714285714285715,
+        0.42857142857142855
+      ],
+      "paperMinusScissors": -0.0714285714285714,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 8,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        5,
+        2,
+        1
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 8,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        7,
+        1,
+        1,
+        1,
+        6,
+        2,
+        6,
+        2
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        1.7857142857142858
+      ],
+      "paperMinusScissors": -1.2142857142857144,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 9,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        5,
+        1,
+        3,
+        1,
+        1,
+        5,
+        2,
+        5
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.7857142857142857,
+        0.9285714285714286
+      ],
+      "paperMinusScissors": -0.1428571428571429,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 9,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        336,
+        616,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        2,
+        2,
+        1,
+        1,
+        3,
+        4,
+        2
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 9,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        1,
+        2,
+        3,
+        7,
+        1,
+        3,
+        6,
+        3
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.8571428571428571,
+        1.8571428571428572
+      ],
+      "paperMinusScissors": -1,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 10,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        241,
+        354,
+        806,
+        1155,
+        1194,
+        1270,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        5,
+        2,
+        1,
+        4,
+        1,
+        2,
+        2,
+        1,
+        6,
+        4,
+        5
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.7857142857142857
+      ],
+      "paperMinusScissors": -0.2142857142857143,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 10,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        1,
+        3,
+        1,
+        2,
+        5,
+        1,
+        2
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 10,
+      "state": 2,
+      "activeKC": [
+        67,
+        309,
+        519,
+        1014,
+        1777
+      ],
+      "activeKCCounts": [
+        5,
+        1,
+        3,
+        1,
+        3
+      ],
+      "rates": [
+        0.5,
+        0.35714285714285715,
+        0.9285714285714286
+      ],
+      "paperMinusScissors": -0.5714285714285714,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 11,
+      "state": 0,
+      "activeKC": [
+        67,
+        310,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        1,
+        1,
+        4,
+        1,
+        4,
+        1,
+        3
+      ],
+      "rates": [
+        0.5,
+        0.5,
+        0.35714285714285715
+      ],
+      "paperMinusScissors": 0.14285714285714285,
+      "action": 1,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0.5,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 11,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        823,
+        1012,
+        1374,
+        1669,
+        1822,
+        1851
+      ],
+      "activeKCCounts": [
+        3,
+        2,
+        1,
+        1,
+        4,
+        2,
+        1,
+        1
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 651,
+      "repeat": 11,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        309,
+        519,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        1,
+        1,
+        4,
+        1,
+        4,
+        1
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.5,
+        1.4285714285714286
+      ],
+      "paperMinusScissors": -0.9285714285714286,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 0,
+      "state": 0,
+      "activeKC": [
+        67,
+        310,
+        354,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        2,
+        2,
+        2,
+        5,
+        2,
+        3
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.5
+      ],
+      "paperMinusScissors": -0.2142857142857143,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 0,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        1,
+        1,
+        5,
+        2,
+        1
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 0,
+      "state": 2,
+      "activeKC": [
+        67,
+        309,
+        519,
+        1777
+      ],
+      "activeKCCounts": [
+        5,
+        3,
+        4,
+        3
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.1428571428571428
+      ],
+      "paperMinusScissors": -0.6428571428571428,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 1,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        2,
+        3,
+        1,
+        2,
+        6,
+        3,
+        4
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        0.21428571428571427
+      ],
+      "paperMinusScissors": 0.2857142857142857,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 1,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        336,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        2,
+        4,
+        1,
+        1
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 1,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        309,
+        519,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        1,
+        2,
+        5,
+        1,
+        4,
+        2
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.4285714285714286
+      ],
+      "paperMinusScissors": -0.7857142857142857,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 2,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        2,
+        1,
+        5,
+        1,
+        4
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "paperMinusScissors": 0.07142857142857145,
+      "action": 1,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0.5,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 2,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        739,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        1,
+        2,
+        1,
+        2,
+        5,
+        1
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 2,
+      "state": 2,
+      "activeKC": [
+        67,
+        264,
+        309,
+        519,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        8,
+        1,
+        1,
+        6,
+        1,
+        5,
+        2
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.7142857142857143,
+        1.6428571428571428
+      ],
+      "paperMinusScissors": -0.9285714285714285,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 3,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        241,
+        354,
+        806,
+        1155,
+        1194,
+        1808,
+        1841,
+        2006,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        2,
+        1,
+        4,
+        2,
+        2,
+        1,
+        7,
+        4,
+        1,
+        4
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.1428571428571428
+      ],
+      "paperMinusScissors": -0.4999999999999999,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 3,
+      "state": 1,
+      "activeKC": [
+        251,
+        264,
+        283,
+        310,
+        336,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        1,
+        3,
+        2,
+        1,
+        1,
+        1,
+        5,
+        2,
+        1
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.21428571428571427,
+        0.42857142857142855
+      ],
+      "paperMinusScissors": -0.21428571428571427,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 3,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        5,
+        2,
+        1,
+        2,
+        5,
+        1,
+        4,
+        3
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.8571428571428571,
+        1.9285714285714286
+      ],
+      "paperMinusScissors": -1.0714285714285716,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 4,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        329,
+        354,
+        806,
+        1155,
+        1194,
+        1270,
+        1808,
+        1841,
+        2005,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        1,
+        1,
+        4,
+        1,
+        5,
+        1,
+        1,
+        6,
+        4,
+        1,
+        5
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.6428571428571429,
+        1.1428571428571428
+      ],
+      "paperMinusScissors": -0.4999999999999999,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 4,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        2,
+        3,
+        1,
+        1,
+        4,
+        2,
+        1
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 4,
+      "state": 2,
+      "activeKC": [
+        67,
+        264,
+        519,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        5,
+        1,
+        5,
+        3,
+        1
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        1.7142857142857142
+      ],
+      "paperMinusScissors": -1.1428571428571428,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 5,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        1,
+        1,
+        3,
+        1,
+        4,
+        1,
+        3
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.21428571428571427,
+        0.42857142857142855
+      ],
+      "paperMinusScissors": -0.21428571428571427,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 5,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        823,
+        1374,
+        1669
+      ],
+      "activeKCCounts": [
+        4,
+        1,
+        1,
+        5,
+        2
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 5,
+      "state": 2,
+      "activeKC": [
+        67,
+        264,
+        309,
+        519,
+        789,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        1,
+        1,
+        3,
+        1,
+        3,
+        1
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        1.1428571428571428
+      ],
+      "paperMinusScissors": -0.5714285714285714,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 6,
+      "state": 0,
+      "activeKC": [
+        67,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        4,
+        1,
+        1,
+        6,
+        3,
+        3
+      ],
+      "rates": [
+        0.5,
+        0.5714285714285714,
+        0.5714285714285714
+      ],
+      "paperMinusScissors": 0,
+      "action": 1,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0.5,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 6,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        616,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        2,
+        2,
+        1,
+        1,
+        4,
+        6,
+        2,
+        3
+      ],
+      "rates": [
+        0.14285714285714285,
+        0.07142857142857142,
+        0
+      ],
+      "paperMinusScissors": 0.07142857142857142,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 6,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        7,
+        1,
+        1,
+        2,
+        5,
+        5,
+        3
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.8571428571428571,
+        1.7142857142857142
+      ],
+      "paperMinusScissors": -0.8571428571428571,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 7,
+      "state": 0,
+      "activeKC": [
+        67,
+        354,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        3,
+        2,
+        5,
+        3,
+        5
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        0.5
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 7,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        336,
+        616,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        3,
+        2,
+        1,
+        1,
+        3,
+        5,
+        3
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 7,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        1,
+        1,
+        1,
+        4,
+        1,
+        3,
+        1
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.7142857142857143,
+        1.2142857142857142
+      ],
+      "paperMinusScissors": -0.4999999999999999,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 8,
+      "state": 0,
+      "activeKC": [
+        67,
+        310,
+        354,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        2,
+        4,
+        2,
+        4
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.42857142857142855,
+        0.5
+      ],
+      "paperMinusScissors": -0.07142857142857145,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 8,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        823,
+        1374,
+        1669
+      ],
+      "activeKCCounts": [
+        3,
+        3,
+        1,
+        4,
+        1
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 8,
+      "state": 2,
+      "activeKC": [
+        67,
+        309,
+        519,
+        1777
+      ],
+      "activeKCCounts": [
+        6,
+        1,
+        3,
+        3
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.42857142857142855,
+        1.0714285714285714
+      ],
+      "paperMinusScissors": -0.6428571428571428,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 9,
+      "state": 0,
+      "activeKC": [
+        67,
+        310,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        1,
+        3,
+        3,
+        1,
+        4,
+        2,
+        3
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.5714285714285714,
+        0.6428571428571429
+      ],
+      "paperMinusScissors": -0.07142857142857151,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 9,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        336,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        2,
+        2,
+        2,
+        2,
+        3,
+        2
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 9,
+      "state": 2,
+      "activeKC": [
+        67,
+        249,
+        255,
+        264,
+        309,
+        415,
+        519,
+        789,
+        1014,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        5,
+        1,
+        2,
+        2,
+        2,
+        1,
+        6,
+        2,
+        3,
+        1,
+        5,
+        2
+      ],
+      "rates": [
+        1,
+        0.8571428571428571,
+        1.9285714285714286
+      ],
+      "paperMinusScissors": -1.0714285714285716,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 10,
+      "state": 0,
+      "activeKC": [
+        67,
+        354,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        2,
+        1,
+        4,
+        2,
+        1
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.2857142857142857,
+        0.21428571428571427
+      ],
+      "paperMinusScissors": 0.07142857142857142,
+      "action": 1,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0.5,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 10,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        336,
+        739,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        2,
+        1,
+        1,
+        1,
+        2,
+        5,
+        1
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 10,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        309,
+        519,
+        1777
+      ],
+      "activeKCCounts": [
+        5,
+        1,
+        2,
+        4,
+        3
+      ],
+      "rates": [
+        0.5,
+        0.42857142857142855,
+        0.8571428571428571
+      ],
+      "paperMinusScissors": -0.42857142857142855,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 11,
+      "state": 0,
+      "activeKC": [
+        67,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        3,
+        3,
+        1,
+        4,
+        2,
+        3
+      ],
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.21428571428571427
+      ],
+      "paperMinusScissors": 0.14285714285714288,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0.5,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 11,
+      "state": 1,
+      "activeKC": [
+        283,
+        616,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        2,
+        1,
+        3,
+        4,
+        2,
+        2
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 652,
+      "repeat": 11,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        2,
+        1,
+        3,
+        3,
+        1,
+        5,
+        2
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.7857142857142857,
+        2
+      ],
+      "paperMinusScissors": -1.2142857142857144,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 0,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        2,
+        1,
+        2,
+        2,
+        1,
+        4,
+        2,
+        4
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.42857142857142855,
+        0.42857142857142855
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 0,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        336,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        3,
+        2,
+        1,
+        1,
+        4,
+        1,
+        1
+      ],
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 1,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0.3333333333333333,
+      "threeWayZeroTie": true
+    },
+    {
+      "seed": 653,
+      "repeat": 0,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        2,
+        2,
+        1,
+        6,
+        1,
+        5,
+        2
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.7857142857142858
+      ],
+      "paperMinusScissors": -1.1428571428571428,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 1,
+      "state": 0,
+      "activeKC": [
+        67,
+        354,
+        806,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        4,
+        1,
+        1,
+        2,
+        6,
+        4,
+        4
+      ],
+      "rates": [
+        0.5,
+        0.5,
+        0.35714285714285715
+      ],
+      "paperMinusScissors": 0.14285714285714285,
+      "action": 1,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0.5,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 1,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        354,
+        739,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        2,
+        1,
+        1,
+        2,
+        5,
+        2
+      ],
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0
+      ],
+      "paperMinusScissors": 0.07142857142857142,
+      "action": 1,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0.5,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 1,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        1,
+        1,
+        2,
+        5,
+        4,
+        2
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.6428571428571429,
+        1.7142857142857142
+      ],
+      "paperMinusScissors": -1.0714285714285712,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 2,
+      "state": 0,
+      "activeKC": [
+        67,
+        354,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        2,
+        5,
+        1,
+        2
+      ],
+      "rates": [
+        0.5,
+        0.35714285714285715,
+        0.42857142857142855
+      ],
+      "paperMinusScissors": -0.0714285714285714,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 2,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        336,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        1,
+        1,
+        1,
+        4,
+        2,
+        1
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 2,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        5,
+        1,
+        1,
+        3,
+        5,
+        1,
+        5,
+        2
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        1.3571428571428572
+      ],
+      "paperMinusScissors": -0.7857142857142858,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 3,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        1194,
+        1808,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        1,
+        1,
+        4,
+        2
+      ],
+      "rates": [
+        0.21428571428571427,
+        0.42857142857142855,
+        0.42857142857142855
+      ],
+      "paperMinusScissors": 0,
+      "action": 1,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0.5,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 3,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        336,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        4,
+        2,
+        1,
+        1,
+        1,
+        5,
+        2,
+        1
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 3,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        7,
+        1,
+        1,
+        3,
+        5,
+        1,
+        1,
+        4,
+        1
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.8571428571428571,
+        1.8571428571428572
+      ],
+      "paperMinusScissors": -1,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 4,
+      "state": 0,
+      "activeKC": [
+        67,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        2,
+        1,
+        2,
+        1,
+        3,
+        1,
+        1
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.21428571428571427,
+        0.21428571428571427
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 4,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        616,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        1,
+        1,
+        2,
+        3,
+        2
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 4,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        7,
+        2,
+        1,
+        3,
+        5,
+        1,
+        1,
+        6,
+        2
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.8571428571428571,
+        2.2142857142857144
+      ],
+      "paperMinusScissors": -1.3571428571428572,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 5,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        241,
+        310,
+        354,
+        806,
+        1155,
+        1808,
+        1841,
+        2006,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        1,
+        1,
+        4,
+        1,
+        2,
+        6,
+        4,
+        1,
+        4
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        0.7857142857142857
+      ],
+      "paperMinusScissors": -0.2142857142857143,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 5,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        336,
+        616,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        3,
+        2,
+        1,
+        1,
+        1,
+        1,
+        5,
+        2,
+        1
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.07142857142857142,
+        0.07142857142857142
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 5,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        7,
+        1,
+        1,
+        2,
+        4,
+        1,
+        1,
+        4,
+        2
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.7142857142857143,
+        1.4285714285714286
+      ],
+      "paperMinusScissors": -0.7142857142857143,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 6,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        3,
+        2,
+        1,
+        5,
+        3,
+        4
+      ],
+      "rates": [
+        0.2857142857142857,
+        0.35714285714285715,
+        0.42857142857142855
+      ],
+      "paperMinusScissors": -0.0714285714285714,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 6,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        616,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        2,
+        1,
+        1,
+        1,
+        3,
+        6,
+        1,
+        3
+      ],
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 6,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        309,
+        519,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        1,
+        1,
+        6,
+        2,
+        5,
+        1
+      ],
+      "rates": [
+        0.8571428571428571,
+        0.7142857142857143,
+        1.2142857142857142
+      ],
+      "paperMinusScissors": -0.4999999999999999,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 7,
+      "state": 0,
+      "activeKC": [
+        67,
+        1155,
+        1194,
+        1808,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        2,
+        3,
+        4
+      ],
+      "rates": [
+        0.42857142857142855,
+        0.21428571428571427,
+        0.42857142857142855
+      ],
+      "paperMinusScissors": -0.21428571428571427,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 7,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        336,
+        739,
+        1374
+      ],
+      "activeKCCounts": [
+        2,
+        3,
+        2,
+        1,
+        3,
+        6
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 7,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        7,
+        1,
+        1,
+        3,
+        5,
+        5,
+        1
+      ],
+      "rates": [
+        0.5,
+        0.5714285714285714,
+        1.6428571428571428
+      ],
+      "paperMinusScissors": -1.0714285714285714,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 8,
+      "state": 0,
+      "activeKC": [
+        67,
+        241,
+        354,
+        806,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        4,
+        1,
+        3,
+        1,
+        3,
+        5,
+        2,
+        4
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        0.7857142857142857
+      ],
+      "paperMinusScissors": -0.1428571428571428,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 8,
+      "state": 1,
+      "activeKC": [
+        251,
+        283,
+        310,
+        336,
+        354,
+        739,
+        1374
+      ],
+      "activeKCCounts": [
+        1,
+        2,
+        3,
+        1,
+        1,
+        1,
+        4
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 8,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        6,
+        1,
+        1,
+        1,
+        6,
+        2,
+        5,
+        1
+      ],
+      "rates": [
+        0.9285714285714286,
+        0.7142857142857143,
+        1.7142857142857142
+      ],
+      "paperMinusScissors": -0.9999999999999999,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 9,
+      "state": 0,
+      "activeKC": [
+        67,
+        329,
+        354,
+        806,
+        1155,
+        1270,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        2,
+        1,
+        4,
+        1,
+        3,
+        1,
+        7,
+        3,
+        5
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.9285714285714286
+      ],
+      "paperMinusScissors": -0.3571428571428572,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 9,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        4,
+        2,
+        2,
+        5,
+        2,
+        2
+      ],
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 9,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        5,
+        2,
+        1,
+        5,
+        6,
+        5,
+        2
+      ],
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.6428571428571428
+      ],
+      "paperMinusScissors": -0.9999999999999999,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 10,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        1155,
+        1808,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        1,
+        1,
+        4,
+        3
+      ],
+      "rates": [
+        0.5714285714285714,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "paperMinusScissors": 0.07142857142857145,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 10,
+      "state": 1,
+      "activeKC": [
+        283,
+        336,
+        616,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKCCounts": [
+        2,
+        1,
+        1,
+        1,
+        1,
+        5,
+        2,
+        1
+      ],
+      "rates": [
+        0.21428571428571427,
+        0.14285714285714285,
+        0.14285714285714285
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 10,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        415,
+        519,
+        789,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        5,
+        1,
+        2,
+        3,
+        1,
+        5,
+        1,
+        1,
+        5,
+        3
+      ],
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        1.8571428571428572
+      ],
+      "paperMinusScissors": -1.1428571428571428,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 11,
+      "state": 0,
+      "activeKC": [
+        67,
+        162,
+        354,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKCCounts": [
+        3,
+        1,
+        3,
+        5,
+        2,
+        3
+      ],
+      "rates": [
+        0.6428571428571429,
+        0.42857142857142855,
+        0.5714285714285714
+      ],
+      "paperMinusScissors": -0.14285714285714285,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 11,
+      "state": 1,
+      "activeKC": [
+        283,
+        310,
+        739,
+        823,
+        1374,
+        1851
+      ],
+      "activeKCCounts": [
+        1,
+        3,
+        1,
+        2,
+        5,
+        1
+      ],
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "paperMinusScissors": 0,
+      "action": 0,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    },
+    {
+      "seed": 653,
+      "repeat": 11,
+      "state": 2,
+      "activeKC": [
+        67,
+        255,
+        264,
+        309,
+        415,
+        427,
+        519,
+        561,
+        789,
+        1014,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKCCounts": [
+        5,
+        2,
+        2,
+        4,
+        1,
+        1,
+        6,
+        1,
+        1,
+        1,
+        1,
+        6,
+        3
+      ],
+      "rates": [
+        0.9285714285714286,
+        1,
+        2
+      ],
+      "paperMinusScissors": -1,
+      "action": 2,
+      "paperStrictMax": 0,
+      "paperTieAdjustedMax": 0,
+      "threeWayZeroTie": false
+    }
+  ]
+}

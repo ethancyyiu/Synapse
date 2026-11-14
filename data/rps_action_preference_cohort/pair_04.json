@@ -1,0 +1,4794 @@
+{
+  "protocol": {
+    "stage": "cohort_pair_04",
+    "teacherSeed": 21009,
+    "studentSeed": 21010,
+    "trainingSeeds": [
+      83048,
+      83049,
+      83050,
+      83051,
+      83052,
+      83053,
+      83054,
+      83055,
+      83056,
+      83057,
+      83058,
+      83059
+    ],
+    "evaluationSeeds": [
+      93402,
+      93413,
+      93400
+    ],
+    "lockedDocument": "docs/action-preference-cohort-protocol.md",
+    "protocolSha256": "5b2664dd02d55adc1d9ad2e6797beabdc83d79bb767a295bb1dc49b08a5ca99c",
+    "unchangedFrom": "tools/check_rps_action_preference_strategy_b.mjs",
+    "teacher": "12*24 Strategy B own rewards; frozen >=58/72, >=70% per cue, >=12 each action",
+    "receiver": "v3 matched-stream post-sensory forced codes, 12 repeats per cue/branch; all gates required",
+    "code": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "dn": [
+      3141,
+      3165
+    ],
+    "dnHz": 300,
+    "cueWindow": [
+      0,
+      240
+    ],
+    "dnWindow": [
+      240,
+      280
+    ],
+    "rewardTime": 280,
+    "updateTime": 620,
+    "roundEnd": 680,
+    "student": "cue heads, own reward alpha .03, decoded-action softmax imitation alpha .03, epsilon .20",
+    "training": "12*24 Strategy B, stage-specific unused opponent seeds, keyed streams",
+    "checkpoints": [
+      0,
+      6,
+      12,
+      24,
+      48,
+      96,
+      288
+    ],
+    "evaluation": "72 disconnected frozen rounds, stage-specific unused opponent seeds",
+    "controls": "alone, untrained neural teacher, global shuffled teacher, seeded generic random",
+    "sourceGate": "trained >=70% winning preference per cue; shuffled/generic <=60% per cue; all actions; >=50% shuffle changed",
+    "pilotGate": "trained early mean 6/12/24/48 >=4/72 over each control, first 58/72 <=48 earlier every control, final >=58/72 >=70% per cue and >=12 each action"
+  },
+  "status": "stopped_teacher",
+  "teacher": {
+    "wins": 53,
+    "byCue": [
+      {
+        "cue": 0,
+        "wins": 20,
+        "n": 23
+      },
+      {
+        "cue": 1,
+        "wins": 9,
+        "n": 23
+      },
+      {
+        "cue": 2,
+        "wins": 23,
+        "n": 23
+      }
+    ],
+    "actions": [
+      34,
+      9,
+      26
+    ],
+    "trainingRows": [
+      {
+        "episode": 0,
+        "round": 0,
+        "cue": null,
+        "action": 0,
+        "opponent": 1,
+        "reward": -1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 1,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.07142857142857142
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 2,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 3,
+        "cue": 2,
+        "action": 0,
+        "opponent": 1,
+        "reward": -1,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 4,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 5,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 6,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1.4285714285714286
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 7,
+        "cue": 1,
+        "action": 2,
+        "opponent": 0,
+        "reward": -1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 8,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.7142857142857143,
+          0.42857142857142855,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 9,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          1,
+          1,
+          2
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 10,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.14285714285714285,
+          0.5
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 11,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.35714285714285715,
+          0.21428571428571427,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 12,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          1.3571428571428572
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 13,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 14,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.5
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 15,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 16,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 17,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 18,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          1,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 19,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.14285714285714285,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 20,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.2857142857142857,
+          0.2857142857142857,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 21,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          1.2142857142857142
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 22,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 23,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 0,
+        "cue": null,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 1,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          1.7857142857142858
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 2,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 3,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 4,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.8571428571428571,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 5,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.5
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 6,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.5,
+          0.21428571428571427,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 7,
+        "cue": 2,
+        "action": 1,
+        "opponent": 1,
+        "reward": 0,
+        "rates": [
+          0.6428571428571429,
+          0.7857142857142857,
+          1.5
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 8,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.21428571428571427,
+          0.14285714285714285,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 9,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.42857142857142855,
+          0.35714285714285715,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 10,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 11,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 12,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 13,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.8571428571428571,
+          2
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 14,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.5714285714285714
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 15,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 16,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1.4285714285714286
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 17,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.2857142857142857,
+          0.21428571428571427,
+          0.5
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 18,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.21428571428571427,
+          0.2857142857142857,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 19,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.7857142857142857,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 20,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 21,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 22,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          1.5
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 23,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 0,
+        "cue": null,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 1,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 2,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.21428571428571427,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 3,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 4,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          0.9285714285714286,
+          2
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 5,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 6,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.42857142857142855,
+          0.35714285714285715,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 7,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          1,
+          2.357142857142857
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 8,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 9,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.6428571428571429,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 10,
+        "cue": 2,
+        "action": 1,
+        "opponent": 1,
+        "reward": 0,
+        "rates": [
+          0.6428571428571429,
+          0.6428571428571429,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 11,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 12,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 13,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          1,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 14,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 15,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.2857142857142857,
+          0.42857142857142855,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 16,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.6428571428571429,
+          1.5
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 17,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 18,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.21428571428571427,
+          0.21428571428571427,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 19,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.7857142857142857,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 20,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 21,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.2857142857142857,
+          0.2857142857142857,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 22,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          1.2142857142857142
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 23,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.5
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 0,
+        "cue": null,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 1,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.7857142857142857,
+          1.3571428571428572
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 2,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 3,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 4,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 5,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.21428571428571427,
+          0.14285714285714285,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 6,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5714285714285714,
+          0.35714285714285715,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 7,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.3571428571428572
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 8,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 9,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.42857142857142855,
+          0.35714285714285715,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 10,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.42857142857142855,
+          1.2857142857142858
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 11,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 12,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 13,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.5,
+          1.2142857142857142
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 14,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.14285714285714285,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 15,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.5
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 16,
+        "cue": 2,
+        "action": 1,
+        "opponent": 1,
+        "reward": 0,
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          1.5
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 17,
+        "cue": 1,
+        "action": 2,
+        "opponent": 0,
+        "reward": -1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 18,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.21428571428571427,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 19,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 20,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 21,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.2857142857142857,
+          0.42857142857142855,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 22,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.8571428571428571,
+          2.0714285714285716
+        ]
+      },
+      {
+        "episode": 3,
+        "round": 23,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 0,
+        "cue": null,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 1,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.42857142857142855,
+          0.21428571428571427,
+          0.5
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 2,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.42857142857142855,
+          1.6428571428571428
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 3,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 4,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.42857142857142855,
+          0.21428571428571427,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 5,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.9285714285714286,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 6,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 7,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 8,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.5
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 9,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 10,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 11,
+        "cue": 2,
+        "action": 0,
+        "opponent": 1,
+        "reward": -1,
+        "rates": [
+          0.6428571428571429,
+          0.35714285714285715,
+          1.4285714285714286
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 12,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 13,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.2857142857142857,
+          0.21428571428571427,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 14,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          1.0714285714285714,
+          0.7857142857142857,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 15,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 16,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.35714285714285715,
+          0.21428571428571427,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 17,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 18,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.14285714285714285,
+          0.5714285714285714
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 19,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.42857142857142855,
+          0.5714285714285714,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 20,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          1.2857142857142858
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 21,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 22,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 4,
+        "round": 23,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.7857142857142857,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 0,
+        "cue": null,
+        "action": 1,
+        "opponent": 1,
+        "reward": 0,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 1,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 2,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.35714285714285715,
+          0.7142857142857143
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 3,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.6428571428571429,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 4,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 5,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 6,
+        "cue": 2,
+        "action": 1,
+        "opponent": 1,
+        "reward": 0,
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          1.3571428571428572
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 7,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 8,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.35714285714285715,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 9,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.7857142857142857,
+          1.5
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 10,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 11,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.2857142857142857,
+          0.14285714285714285,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 12,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          1,
+          1.7857142857142858
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 13,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.21428571428571427,
+          0.21428571428571427,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 14,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 15,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          1.0714285714285714,
+          2.357142857142857
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 16,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 17,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.8571428571428571,
+          0.42857142857142855,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 18,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.3571428571428572
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 19,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 20,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.5714285714285714
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 21,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          1.4285714285714286
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 22,
+        "cue": 1,
+        "action": 2,
+        "opponent": 0,
+        "reward": -1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 5,
+        "round": 23,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.4285714285714286
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 0,
+        "cue": null,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 1,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.5,
+          1.4285714285714286
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 2,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.2857142857142857,
+          0.21428571428571427,
+          0.5
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 3,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.2857142857142857,
+          0.35714285714285715,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 4,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          1,
+          0.8571428571428571,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 5,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 6,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5,
+          0.21428571428571427,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 7,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          2.2142857142857144
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 8,
+        "cue": 1,
+        "action": 2,
+        "opponent": 0,
+        "reward": -1,
+        "rates": [
+          0,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 9,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5,
+          0.5,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 10,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 11,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 12,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.35714285714285715,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 13,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.7142857142857143,
+          1.7857142857142858
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 14,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 15,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          0.5714285714285714
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 16,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          1.1428571428571428,
+          0.6428571428571429,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 17,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 18,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.35714285714285715,
+          0.5,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 19,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          0.8571428571428571,
+          1.7857142857142858
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 20,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.21428571428571427,
+          0.6428571428571429
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 21,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.42857142857142855,
+          0.21428571428571427,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 22,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 6,
+        "round": 23,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 0,
+        "cue": null,
+        "action": 2,
+        "opponent": 0,
+        "reward": -1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 1,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.6428571428571429,
+          0.35714285714285715,
+          0.7142857142857143
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 2,
+        "cue": 2,
+        "action": 0,
+        "opponent": 1,
+        "reward": -1,
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          1.5
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 3,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 4,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5,
+          0.5714285714285714,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 5,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          1.7857142857142858
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 6,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 7,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.7142857142857143,
+          0.6428571428571429,
+          0.8571428571428571
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 8,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 9,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.2857142857142857,
+          0.21428571428571427,
+          0.5714285714285714
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 10,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.5
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 11,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.35714285714285715,
+          1.2857142857142858
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 12,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 13,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 14,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.8571428571428572
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 15,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 16,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 17,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          1,
+          0.9285714285714286,
+          1.8571428571428572
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 18,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 19,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 20,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          1
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 21,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.5
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 22,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          1,
+          0.6428571428571429,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 7,
+        "round": 23,
+        "cue": 2,
+        "action": 1,
+        "opponent": 1,
+        "reward": 0,
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          1.8571428571428572
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 0,
+        "cue": null,
+        "action": 0,
+        "opponent": 1,
+        "reward": -1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 1,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 2,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 3,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.8571428571428572
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 4,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.21428571428571427,
+          0.5
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 5,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.2857142857142857,
+          0.21428571428571427,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 6,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          1.4285714285714286
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 7,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 8,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 9,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.5,
+          1.5
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 10,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.21428571428571427,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 11,
+        "cue": 0,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0.21428571428571427,
+          0.21428571428571427,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 12,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.6428571428571428
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 13,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 14,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 15,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          1.4285714285714286
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 16,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.21428571428571427,
+          0.6428571428571429
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 17,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 18,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.6428571428571429,
+          1.5
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 19,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 20,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 21,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          1.2142857142857142
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 22,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.21428571428571427,
+          0.5714285714285714
+        ]
+      },
+      {
+        "episode": 8,
+        "round": 23,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.2857142857142857,
+          0.2857142857142857,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 0,
+        "cue": null,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 1,
+        "cue": 2,
+        "action": 0,
+        "opponent": 1,
+        "reward": -1,
+        "rates": [
+          1,
+          1,
+          2.2142857142857144
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 2,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 3,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 4,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.6428571428571429,
+          1.2142857142857142
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 5,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 6,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 7,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          2
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 8,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 9,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 10,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.8571428571428571,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 11,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 12,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 13,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          1.0714285714285714,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 14,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0.07142857142857142,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 15,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 16,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.7857142857142857,
+          1.6428571428571428
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 17,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 18,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 19,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          1.0714285714285714,
+          2.0714285714285716
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 20,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 21,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.21428571428571427,
+          0.35714285714285715,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 22,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.7142857142857143,
+          1.5
+        ]
+      },
+      {
+        "episode": 9,
+        "round": 23,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0.07142857142857142,
+          0.5714285714285714
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 0,
+        "cue": null,
+        "action": 1,
+        "opponent": 1,
+        "reward": 0,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 1,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.2857142857142857,
+          0.14285714285714285,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 2,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 3,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          1,
+          1,
+          2.142857142857143
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 4,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.5
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 5,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 6,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.7857142857142857,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 7,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 8,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 9,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          1.2142857142857142
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 10,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 11,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 12,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.7857142857142857,
+          1.5
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 13,
+        "cue": 1,
+        "action": 2,
+        "opponent": 0,
+        "reward": -1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 14,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.2857142857142857,
+          0.35714285714285715,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 15,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 16,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 17,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5,
+          0.2857142857142857,
+          0.5714285714285714
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 18,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.0714285714285714
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 19,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.5
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 20,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.5
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 21,
+        "cue": 2,
+        "action": 0,
+        "opponent": 1,
+        "reward": -1,
+        "rates": [
+          0.9285714285714286,
+          0.8571428571428571,
+          1.7857142857142858
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 22,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.21428571428571427,
+          0.14285714285714285,
+          0.5
+        ]
+      },
+      {
+        "episode": 10,
+        "round": 23,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.2857142857142857,
+          0.21428571428571427,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 0,
+        "cue": null,
+        "action": 1,
+        "opponent": 2,
+        "reward": -1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 1,
+        "cue": 2,
+        "action": 1,
+        "opponent": 1,
+        "reward": 0,
+        "rates": [
+          0.7142857142857143,
+          0.42857142857142855,
+          1.2857142857142858
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 2,
+        "cue": 1,
+        "action": 2,
+        "opponent": 0,
+        "reward": -1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 3,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.9285714285714286,
+          0.7857142857142857,
+          1.4285714285714286
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 4,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.35714285714285715,
+          1.4285714285714286
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 5,
+        "cue": 1,
+        "action": 2,
+        "opponent": 0,
+        "reward": -1,
+        "rates": [
+          0,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 6,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          0.9285714285714286
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 7,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.6428571428571429,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 8,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 9,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 10,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.8571428571428571,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 11,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.2857142857142857,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 12,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 13,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 14,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.5
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 15,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 16,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 17,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0.07142857142857142,
+          0.5
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 18,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          0.5
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 19,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          0.7857142857142857,
+          1.7857142857142858
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 20,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.2857142857142857,
+          0,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 21,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 22,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          0.9285714285714286,
+          2.142857142857143
+        ]
+      },
+      {
+        "episode": 11,
+        "round": 23,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.35714285714285715
+        ]
+      }
+    ],
+    "frozenRows": [
+      {
+        "episode": 0,
+        "round": 0,
+        "cue": null,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 1,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.21428571428571427,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 2,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          2.0714285714285716
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 3,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 4,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 5,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.7857142857142858
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 6,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 7,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.42857142857142855,
+          0.5,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 8,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.6428571428571429,
+          1.5
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 9,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 10,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 11,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          1.0714285714285714,
+          2.2142857142857144
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 12,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 13,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 14,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 15,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 16,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 17,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          1.3571428571428572
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 18,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.2857142857142857,
+          0.14285714285714285,
+          0.5
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 19,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.2857142857142857,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 20,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.6428571428571429,
+          1.2857142857142858
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 21,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.2857142857142857,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 22,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 0,
+        "round": 23,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          1,
+          1.0714285714285714,
+          2.5
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 0,
+        "cue": null,
+        "action": 0,
+        "opponent": 1,
+        "reward": -1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 1,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.42857142857142855,
+          0.21428571428571427,
+          0.6428571428571429
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 2,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 3,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          1.0714285714285714,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 4,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 5,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 6,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          2.2142857142857144
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 7,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.2857142857142857,
+          0.14285714285714285,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 8,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.21428571428571427,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 9,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 10,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0.07142857142857142,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 11,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 12,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.6428571428571428
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 13,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 14,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 15,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          1.0714285714285714,
+          2.2142857142857144
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 16,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.5
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 17,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          0.8571428571428571
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 18,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          1,
+          0.9285714285714286,
+          2.2142857142857144
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 19,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.21428571428571427,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 20,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.2857142857142857,
+          0,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 21,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 22,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 1,
+        "round": 23,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.35714285714285715,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 0,
+        "cue": null,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 1,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.5714285714285714
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 2,
+        "cue": 1,
+        "action": 1,
+        "opponent": 0,
+        "reward": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 3,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 4,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.7857142857142857,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 5,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 6,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 7,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.7857142857142858
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 8,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.21428571428571427
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 9,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          0.8571428571428571
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 10,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7142857142857143,
+          0.6428571428571429,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 11,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0.14285714285714285
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 12,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 13,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.7142857142857143,
+          2.0714285714285716
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 14,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 15,
+        "cue": 0,
+        "action": 2,
+        "opponent": 2,
+        "reward": 0,
+        "rates": [
+          0.7857142857142857,
+          0.6428571428571429,
+          0.7142857142857143
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 16,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.9285714285714286,
+          0.8571428571428571,
+          1.9285714285714286
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 17,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.21428571428571427,
+          0.21428571428571427,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 18,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          0.5
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 19,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.7142857142857142
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 20,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.35714285714285715
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 21,
+        "cue": 0,
+        "action": 0,
+        "opponent": 2,
+        "reward": 1,
+        "rates": [
+          0.2857142857142857,
+          0.21428571428571427,
+          0.2857142857142857
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 22,
+        "cue": 2,
+        "action": 2,
+        "opponent": 1,
+        "reward": 1,
+        "rates": [
+          0.8571428571428571,
+          0.7142857142857143,
+          1.7857142857142858
+        ]
+      },
+      {
+        "episode": 2,
+        "round": 23,
+        "cue": 1,
+        "action": 0,
+        "opponent": 0,
+        "reward": 0,
+        "rates": [
+          0.21428571428571427,
+          0.21428571428571427,
+          0.5
+        ]
+      }
+    ],
+    "finalWeights": "{\"W\":[[-0.031461156255395646,-0.012245918566354432,-0.3884380664090754],[-0.33729614456795853,-0.34817079617589447,0.4101949178457017],[0.17897249606541343,0.1553267726757412,0.3488336244408215]],\"b\":[0.3943441944493116,0.007765607924992679,0.0877344809009577],\"baseline\":0}",
+    "synapsesFrozen": true,
+    "teacherValid": false
+  },
+  "receiver": null,
+  "synthetic": null,
+  "independent": null,
+  "source": null,
+  "pilot": null
+}

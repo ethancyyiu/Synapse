@@ -1,0 +1,297 @@
+{
+  "protocol": {
+    "seed": 931,
+    "studentSeed": 10931,
+    "config": {
+      "mode": "preset",
+      "offset": 1,
+      "noise": 0.3
+    },
+    "teacherRounds": 288,
+    "studentRounds": 24,
+    "frozenRounds": 72,
+    "teacherMinWins": 45,
+    "teacherMinCueFraction": 0.5,
+    "teacherMinActionCount": 6,
+    "studentMinAdvantage": 8
+  },
+  "teacher": {
+    "wins": 50,
+    "byCue": [
+      {
+        "cue": 0,
+        "n": 23,
+        "wins": 17
+      },
+      {
+        "cue": 1,
+        "n": 25,
+        "wins": 13
+      },
+      {
+        "cue": 2,
+        "n": 21,
+        "wins": 19
+      }
+    ],
+    "actions": [
+      15,
+      23,
+      31
+    ],
+    "trainingWins": [
+      10,
+      9,
+      11,
+      14,
+      15,
+      14,
+      12,
+      13,
+      12,
+      13,
+      15,
+      12
+    ]
+  },
+  "student": {
+    "rounds": 24,
+    "messages": [
+      {
+        "preference": null,
+        "decoded": null,
+        "dnCounts": [
+          0,
+          0
+        ]
+      },
+      {
+        "preference": 1,
+        "decoded": 1,
+        "dnCounts": [
+          0,
+          8
+        ]
+      },
+      {
+        "preference": 2,
+        "decoded": 2,
+        "dnCounts": [
+          5,
+          9
+        ]
+      },
+      {
+        "preference": 0,
+        "decoded": 0,
+        "dnCounts": [
+          7,
+          0
+        ]
+      },
+      {
+        "preference": 1,
+        "decoded": 1,
+        "dnCounts": [
+          0,
+          11
+        ]
+      },
+      {
+        "preference": 2,
+        "decoded": 2,
+        "dnCounts": [
+          7,
+          10
+        ]
+      },
+      {
+        "preference": 0,
+        "decoded": 0,
+        "dnCounts": [
+          9,
+          0
+        ]
+      },
+      {
+        "preference": 1,
+        "decoded": 1,
+        "dnCounts": [
+          0,
+          9
+        ]
+      },
+      {
+        "preference": 2,
+        "decoded": 2,
+        "dnCounts": [
+          9,
+          8
+        ]
+      },
+      {
+        "preference": 0,
+        "decoded": 0,
+        "dnCounts": [
+          5,
+          0
+        ]
+      },
+      {
+        "preference": 1,
+        "decoded": 1,
+        "dnCounts": [
+          0,
+          8
+        ]
+      },
+      {
+        "preference": 2,
+        "decoded": 2,
+        "dnCounts": [
+          6,
+          6
+        ]
+      },
+      {
+        "preference": 1,
+        "decoded": 1,
+        "dnCounts": [
+          0,
+          8
+        ]
+      },
+      {
+        "preference": 2,
+        "decoded": 2,
+        "dnCounts": [
+          9,
+          8
+        ]
+      },
+      {
+        "preference": 0,
+        "decoded": 0,
+        "dnCounts": [
+          10,
+          0
+        ]
+      },
+      {
+        "preference": 1,
+        "decoded": 1,
+        "dnCounts": [
+          0,
+          6
+        ]
+      },
+      {
+        "preference": 2,
+        "decoded": 2,
+        "dnCounts": [
+          6,
+          7
+        ]
+      },
+      {
+        "preference": 1,
+        "decoded": 1,
+        "dnCounts": [
+          0,
+          6
+        ]
+      },
+      {
+        "preference": 0,
+        "decoded": 0,
+        "dnCounts": [
+          9,
+          0
+        ]
+      },
+      {
+        "preference": 1,
+        "decoded": 1,
+        "dnCounts": [
+          0,
+          10
+        ]
+      },
+      {
+        "preference": 2,
+        "decoded": 2,
+        "dnCounts": [
+          9,
+          6
+        ]
+      },
+      {
+        "preference": 0,
+        "decoded": 0,
+        "dnCounts": [
+          6,
+          0
+        ]
+      },
+      {
+        "preference": 1,
+        "decoded": 1,
+        "dnCounts": [
+          0,
+          7
+        ]
+      },
+      {
+        "preference": 2,
+        "decoded": 2,
+        "dnCounts": [
+          9,
+          7
+        ]
+      }
+    ],
+    "final": {
+      "wins": [
+        39,
+        58
+      ],
+      "byCue": [
+        [
+          {
+            "wins": 19,
+            "n": 23
+          },
+          {
+            "wins": 19,
+            "n": 25
+          },
+          {
+            "wins": 1,
+            "n": 21
+          }
+        ],
+        [
+          {
+            "wins": 20,
+            "n": 23
+          },
+          {
+            "wins": 19,
+            "n": 25
+          },
+          {
+            "wins": 19,
+            "n": 21
+          }
+        ]
+      ]
+    }
+  },
+  "gates": {
+    "matchedOpponent": true,
+    "teacher": true,
+    "receiver": true,
+    "display": true
+  },
+  "conclusion": "opt-in exploratory demo candidate; no teacher-specific claim"
+}

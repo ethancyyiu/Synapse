@@ -1,0 +1,4898 @@
+{
+  "command": "node tools/check_rps_hybrid_receiver.mjs",
+  "design": {
+    "seed": 721,
+    "repeats": 12,
+    "conditions": [
+      "none",
+      "bit0",
+      "bit1"
+    ],
+    "targets": [
+      [
+        506,
+        545
+      ],
+      [
+        113,
+        1421
+      ]
+    ],
+    "messageHz": 300,
+    "messageStartMs": 50,
+    "messageEndMs": 90,
+    "cueHz": 150,
+    "cueStartMs": 0,
+    "cueEndMs": 240,
+    "stateDecoder": "fixed reward-free log1p MBON centroids; no refit",
+    "bitDecoder": "per-cue nearest Euclidean standardized-feature centroids; train repeats 0-5; test repeats 6-11",
+    "gates": "target pair +1 mean spike/cue; bit decoder >=10/12 and >=5/6 per bit/cue; no-message state >=9/12/cue; messages >=8/12/cue and drop <=2/12"
+  },
+  "byState": [
+    {
+      "state": 0,
+      "byCondition": {
+        "none": {
+          "stateCorrect": 10,
+          "meanTargetCountsAt90": [
+            0,
+            0
+          ],
+          "meanActiveKcAt240": 7.916666666666667,
+          "meanMbonRates": [
+            0.5059523809523809,
+            0.4583333333333333,
+            0.46428571428571436
+          ]
+        },
+        "bit0": {
+          "stateCorrect": 12,
+          "meanTargetCountsAt90": [
+            14.833333333333334,
+            0
+          ],
+          "meanActiveKcAt240": 10.333333333333334,
+          "meanMbonRates": [
+            0.6547619047619048,
+            0.4166666666666666,
+            0.4404761904761904
+          ]
+        },
+        "bit1": {
+          "stateCorrect": 9,
+          "meanTargetCountsAt90": [
+            0,
+            15.333333333333334
+          ],
+          "meanActiveKcAt240": 10.916666666666666,
+          "meanMbonRates": [
+            0.5654761904761904,
+            0.5952380952380952,
+            0.7678571428571429
+          ]
+        }
+      },
+      "targetedExtraAt90": [
+        14.833333333333334,
+        15.333333333333334
+      ],
+      "bitTraining": [
+        [
+          0.5552882755678893,
+          0.2924801768670983,
+          -0.2542320526997888
+        ],
+        [
+          0.19296728953864264,
+          0.5525886501663483,
+          0.13440788877999743
+        ]
+      ],
+      "bitTest": [
+        {
+          "repeat": 6,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            1.9121007911138848,
+            2.3015287344748034
+          ]
+        },
+        {
+          "repeat": 6,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            5.602898078072307,
+            5.014839206716786
+          ]
+        },
+        {
+          "repeat": 7,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.3707708859001163,
+            0.8569146014474642
+          ]
+        },
+        {
+          "repeat": 7,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            0.8408346656471034,
+            0.41450942770496574
+          ]
+        },
+        {
+          "repeat": 8,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.8412034579917473,
+            1.3621906263909525
+          ]
+        },
+        {
+          "repeat": 8,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            0.7650286943597817,
+            0.43752874007494846
+          ]
+        },
+        {
+          "repeat": 9,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.8921429880761174,
+            2.133486669359846
+          ]
+        },
+        {
+          "repeat": 9,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            0.698092067945512,
+            0.29850994086304083
+          ]
+        },
+        {
+          "repeat": 10,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.1844918537468468,
+            0.8120452669946878
+          ]
+        },
+        {
+          "repeat": 10,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            0.26396584565865344,
+            0.0661727056433256
+          ]
+        },
+        {
+          "repeat": 11,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.3206645750364934,
+            0.9665495570070652
+          ]
+        },
+        {
+          "repeat": 11,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            0.5677647469265223,
+            0.03641580115250406
+          ]
+        }
+      ],
+      "decoderCorrect": 12,
+      "perBitDecoderCorrect": [
+        6,
+        6
+      ]
+    },
+    {
+      "state": 1,
+      "byCondition": {
+        "none": {
+          "stateCorrect": 12,
+          "meanTargetCountsAt90": [
+            0,
+            0
+          ],
+          "meanActiveKcAt240": 7.166666666666667,
+          "meanMbonRates": [
+            0.11904761904761903,
+            0.017857142857142856,
+            0.023809523809523808
+          ]
+        },
+        "bit0": {
+          "stateCorrect": 12,
+          "meanTargetCountsAt90": [
+            15.25,
+            0
+          ],
+          "meanActiveKcAt240": 7.666666666666667,
+          "meanMbonRates": [
+            0.2619047619047619,
+            0.011904761904761904,
+            0.029761904761904757
+          ]
+        },
+        "bit1": {
+          "stateCorrect": 4,
+          "meanTargetCountsAt90": [
+            0,
+            15.666666666666666
+          ],
+          "meanActiveKcAt240": 10.916666666666666,
+          "meanMbonRates": [
+            0.30952380952380953,
+            0.2738095238095238,
+            0.5476190476190476
+          ]
+        }
+      },
+      "targetedExtraAt90": [
+        15.25,
+        15.666666666666666
+      ],
+      "bitTraining": [
+        [
+          -0.8786294644039471,
+          -1.257594768428927,
+          -1.076996044488399
+        ],
+        [
+          -0.9935308924850023,
+          -0.6122035363292428,
+          -0.4505470831788785
+        ]
+      ],
+      "bitTest": [
+        {
+          "repeat": 6,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.34319122538510877,
+            1.5575034391899076
+          ]
+        },
+        {
+          "repeat": 6,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            3.27377315027902,
+            1.714304602712165
+          ]
+        },
+        {
+          "repeat": 7,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.34319122538510877,
+            1.5575034391899076
+          ]
+        },
+        {
+          "repeat": 7,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            9.525014216457123,
+            5.618558731817793
+          ]
+        },
+        {
+          "repeat": 8,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.02136300308355362,
+            1.1079485226513321
+          ]
+        },
+        {
+          "repeat": 8,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            2.73471643324298,
+            0.7205173545574495
+          ]
+        },
+        {
+          "repeat": 9,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.10957775538427549,
+            1.2618015177939426
+          ]
+        },
+        {
+          "repeat": 9,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            2.000610911611415,
+            0.6551156140231091
+          ]
+        },
+        {
+          "repeat": 10,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.10296109212296009,
+            1.034983188277827
+          ]
+        },
+        {
+          "repeat": 10,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            5.444752950920643,
+            3.094409220794785
+          ]
+        },
+        {
+          "repeat": 11,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.34319122538510877,
+            1.5575034391899076
+          ]
+        },
+        {
+          "repeat": 11,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            2.539245937076751,
+            0.6401162210905594
+          ]
+        }
+      ],
+      "decoderCorrect": 12,
+      "perBitDecoderCorrect": [
+        6,
+        6
+      ]
+    },
+    {
+      "state": 2,
+      "byCondition": {
+        "none": {
+          "stateCorrect": 12,
+          "meanTargetCountsAt90": [
+            0,
+            0
+          ],
+          "meanActiveKcAt240": 7.666666666666667,
+          "meanMbonRates": [
+            0.7559523809523809,
+            0.6904761904761906,
+            1.7261904761904763
+          ]
+        },
+        "bit0": {
+          "stateCorrect": 12,
+          "meanTargetCountsAt90": [
+            16.083333333333332,
+            0
+          ],
+          "meanActiveKcAt240": 8.5,
+          "meanMbonRates": [
+            0.9285714285714285,
+            0.5714285714285715,
+            1.4404761904761905
+          ]
+        },
+        "bit1": {
+          "stateCorrect": 11,
+          "meanTargetCountsAt90": [
+            0,
+            15.666666666666666
+          ],
+          "meanActiveKcAt240": 10.833333333333334,
+          "meanMbonRates": [
+            0.7619047619047619,
+            0.6904761904761906,
+            1.6726190476190477
+          ]
+        }
+      },
+      "targetedExtraAt90": [
+        16.083333333333332,
+        15.666666666666666
+      ],
+      "bitTraining": [
+        [
+          1.6039700592466222,
+          0.7393767676669566,
+          1.2244121797333802
+        ],
+        [
+          1.0444037780269624,
+          0.7650438417786297,
+          1.2741549739753992
+        ]
+      ],
+      "bitTest": [
+        {
+          "repeat": 6,
+          "bit": 0,
+          "predicted": 1,
+          "distances": [
+            1.1414211034878414,
+            0.9418374590454761
+          ]
+        },
+        {
+          "repeat": 6,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            0.5751535983856912,
+            0.23768304878935784
+          ]
+        },
+        {
+          "repeat": 7,
+          "bit": 0,
+          "predicted": 1,
+          "distances": [
+            0.9621022875970116,
+            0.505583301241137
+          ]
+        },
+        {
+          "repeat": 7,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            1.2693004282307612,
+            0.692505292297825
+          ]
+        },
+        {
+          "repeat": 8,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.7146007956643854,
+            1.777970718100478
+          ]
+        },
+        {
+          "repeat": 8,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            0.7032961774097345,
+            0.18920899844167477
+          ]
+        },
+        {
+          "repeat": 9,
+          "bit": 0,
+          "predicted": 0,
+          "distances": [
+            0.044478852682049805,
+            0.18391614255810104
+          ]
+        },
+        {
+          "repeat": 9,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            1.0873777635377984,
+            0.28652451488710257
+          ]
+        },
+        {
+          "repeat": 10,
+          "bit": 0,
+          "predicted": 1,
+          "distances": [
+            0.6571017476625747,
+            0.17072528479030694
+          ]
+        },
+        {
+          "repeat": 10,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            0.5626309797821178,
+            0.4197560211844252
+          ]
+        },
+        {
+          "repeat": 11,
+          "bit": 0,
+          "predicted": 1,
+          "distances": [
+            1.0330777288645738,
+            0.584868721663127
+          ]
+        },
+        {
+          "repeat": 11,
+          "bit": 1,
+          "predicted": 1,
+          "distances": [
+            0.5946753268895748,
+            0.08276205855030355
+          ]
+        }
+      ],
+      "decoderCorrect": 8,
+      "perBitDecoderCorrect": [
+        2,
+        6
+      ]
+    }
+  ],
+  "gates": {
+    "validity": true,
+    "physicalRecruitment": true,
+    "bitDistinguishable": false,
+    "cuePreserved": false
+  },
+  "passed": false,
+  "rows": [
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 0,
+      "condition": "none",
+      "streamSeed": 72100001,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.42857142857142855,
+        0.21428571428571427,
+        0.14285714285714285
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.4912666234292062,
+        -0.8435359974954221
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 0,
+      "condition": "bit0",
+      "streamSeed": 72100001,
+      "windowTargetCounts": [
+        12,
+        0
+      ],
+      "decisionTargetCounts": [
+        12,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        506,
+        545,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 8,
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.5434930422017814
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 0,
+      "condition": "bit1",
+      "streamSeed": 72100001,
+      "windowTargetCounts": [
+        0,
+        16
+      ],
+      "decisionTargetCounts": [
+        0,
+        16
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        162,
+        354,
+        961,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.7857142857142857,
+        0.7857142857142857,
+        1.1428571428571428
+      ],
+      "features": [
+        1.060187171984674,
+        1.228004280978124,
+        0.7577947785809099
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 1,
+      "condition": "none",
+      "streamSeed": 72100002,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.40576107796734173
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 1,
+      "condition": "bit0",
+      "streamSeed": 72100002,
+      "windowTargetCounts": [
+        18,
+        0
+      ],
+      "decisionTargetCounts": [
+        18,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        506,
+        545,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.7142857142857143,
+        0.42857142857142855,
+        0.35714285714285715
+      ],
+      "features": [
+        0.8561940259691435,
+        0.23323752411624413,
+        -0.40576107796734173
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 1,
+      "condition": "bit1",
+      "streamSeed": 72100002,
+      "windowTargetCounts": [
+        0,
+        17
+      ],
+      "decisionTargetCounts": [
+        0,
+        17
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        354,
+        961,
+        1155,
+        1194,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.5,
+        0.5714285714285714,
+        0.42857142857142855
+      ],
+      "features": [
+        0.1889192101882625,
+        0.6581272325639078,
+        -0.2750954727804774
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 2,
+      "condition": "none",
+      "streamSeed": 72100003,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        162,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 8,
+      "rates": [
+        0.42857142857142855,
+        0.21428571428571427,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.4912666234292062,
+        -0.6890995746948642
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 2,
+      "condition": "bit0",
+      "streamSeed": 72100003,
+      "windowTargetCounts": [
+        14,
+        0
+      ],
+      "decisionTargetCounts": [
+        14,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        506,
+        545,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.6428571428571429,
+        0.42857142857142855,
+        0.5
+      ],
+      "features": [
+        0.6435177532752572,
+        0.23323752411624413,
+        -0.15080639358433515
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 2,
+      "condition": "bit1",
+      "streamSeed": 72100003,
+      "windowTargetCounts": [
+        0,
+        15
+      ],
+      "decisionTargetCounts": [
+        0,
+        15
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        162,
+        354,
+        961,
+        1155,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.42857142857142855,
+        0.6428571428571429,
+        0.6428571428571429
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.8562917568306991,
+        0.08093700671988797
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 3,
+      "condition": "none",
+      "streamSeed": 72100004,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        162,
+        241,
+        329,
+        354,
+        474,
+        739,
+        1155,
+        1194,
+        1270,
+        1808,
+        1841,
+        2006,
+        2041
+      ],
+      "activeKcCount": 15,
+      "rates": [
+        0.7857142857142857,
+        0.9285714285714286,
+        1
+      ],
+      "features": [
+        1.060187171984674,
+        1.57109412088077,
+        0.5820409024834114
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 3,
+      "condition": "bit0",
+      "streamSeed": 72100004,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        162,
+        172,
+        241,
+        264,
+        310,
+        329,
+        354,
+        506,
+        545,
+        548,
+        744,
+        806,
+        1155,
+        1194,
+        1270,
+        1808,
+        1841,
+        2005,
+        2041
+      ],
+      "activeKcCount": 20,
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        0.8571428571428571
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        0.39325671253698385
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 3,
+      "condition": "bit1",
+      "streamSeed": 72100004,
+      "windowTargetCounts": [
+        0,
+        17
+      ],
+      "decisionTargetCounts": [
+        0,
+        17
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        162,
+        354,
+        1155,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.35714285714285715,
+        0.2857142857142857,
+        0.6428571428571429
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.23645625750977636,
+        0.08093700671988797
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 4,
+      "condition": "none",
+      "streamSeed": 72100005,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        806,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.5714285714285714,
+        0.6428571428571429,
+        0.6428571428571429
+      ],
+      "features": [
+        0.4213861548728199,
+        0.8562917568306991,
+        0.08093700671988797
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 4,
+      "condition": "bit0",
+      "streamSeed": 72100005,
+      "windowTargetCounts": [
+        14,
+        0
+      ],
+      "decisionTargetCounts": [
+        14,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        506,
+        545,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.6428571428571429,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        0.6435177532752572,
+        0.00457367160447321,
+        -0.5434930422017814
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 4,
+      "condition": "bit1",
+      "streamSeed": 72100005,
+      "windowTargetCounts": [
+        0,
+        18
+      ],
+      "decisionTargetCounts": [
+        0,
+        18
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        162,
+        354,
+        806,
+        961,
+        1155,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 12,
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        0.6428571428571429
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        0.08093700671988797
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 5,
+      "condition": "none",
+      "streamSeed": 72100006,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.5714285714285714,
+        0.7857142857142857,
+        0.6428571428571429
+      ],
+      "features": [
+        0.4213861548728199,
+        1.228004280978124,
+        0.08093700671988797
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 5,
+      "condition": "bit0",
+      "streamSeed": 72100006,
+      "windowTargetCounts": [
+        13,
+        0
+      ],
+      "decisionTargetCounts": [
+        13,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        162,
+        354,
+        506,
+        545,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.6428571428571429,
+        0.42857142857142855,
+        0.42857142857142855
+      ],
+      "features": [
+        0.6435177532752572,
+        0.23323752411624413,
+        -0.2750954727804774
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 5,
+      "condition": "bit1",
+      "streamSeed": 72100006,
+      "windowTargetCounts": [
+        0,
+        12
+      ],
+      "decisionTargetCounts": [
+        0,
+        12
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        354,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 8,
+      "rates": [
+        0.2857142857142857,
+        0.2857142857142857,
+        0.6428571428571429
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.23645625750977636,
+        0.08093700671988797
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 6,
+      "condition": "none",
+      "streamSeed": 72100007,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        162,
+        310,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.5,
+        0.42857142857142855,
+        0.5714285714285714
+      ],
+      "features": [
+        0.1889192101882625,
+        0.23323752411624413,
+        -0.03230033799140362
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 6,
+      "condition": "bit0",
+      "streamSeed": 72100007,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        241,
+        354,
+        506,
+        545,
+        806,
+        1155,
+        1194,
+        1808,
+        1841,
+        2005,
+        2006,
+        2041
+      ],
+      "activeKcCount": 13,
+      "rates": [
+        1,
+        0.7142857142857143,
+        0.7142857142857143
+      ],
+      "features": [
+        1.6265062683754379,
+        1.0460211456449109,
+        0.18935425386596533
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 6,
+      "condition": "bit1",
+      "streamSeed": 72100007,
+      "windowTargetCounts": [
+        0,
+        14
+      ],
+      "decisionTargetCounts": [
+        0,
+        14
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        162,
+        264,
+        329,
+        354,
+        548,
+        739,
+        806,
+        1155,
+        1194,
+        1270,
+        1421,
+        1808,
+        1841,
+        2005,
+        2041
+      ],
+      "activeKcCount": 18,
+      "rates": [
+        1.0714285714285714,
+        1,
+        1.5
+      ],
+      "features": [
+        1.8018624412000224,
+        1.7332199059796476,
+        1.1504814271983563
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 7,
+      "condition": "none",
+      "streamSeed": 72100008,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        162,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 8,
+      "rates": [
+        0.5714285714285714,
+        0.42857142857142855,
+        0.35714285714285715
+      ],
+      "features": [
+        0.4213861548728199,
+        0.23323752411624413,
+        -0.40576107796734173
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 7,
+      "condition": "bit0",
+      "streamSeed": 72100008,
+      "windowTargetCounts": [
+        17,
+        0
+      ],
+      "decisionTargetCounts": [
+        17,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        162,
+        354,
+        506,
+        545,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.7857142857142857,
+        0.42857142857142855,
+        0.6428571428571429
+      ],
+      "features": [
+        1.060187171984674,
+        0.23323752411624413,
+        0.08093700671988797
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 7,
+      "condition": "bit1",
+      "streamSeed": 72100008,
+      "windowTargetCounts": [
+        0,
+        18
+      ],
+      "decisionTargetCounts": [
+        0,
+        18
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        354,
+        961,
+        1155,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        1
+      ],
+      "features": [
+        0.6435177532752572,
+        0.6581272325639078,
+        0.5820409024834114
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 8,
+      "condition": "none",
+      "streamSeed": 72100009,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        162,
+        310,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.5,
+        0.2857142857142857,
+        0.2857142857142857
+      ],
+      "features": [
+        0.1889192101882625,
+        -0.23645625750977636,
+        -0.5434930422017814
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 8,
+      "condition": "bit0",
+      "streamSeed": 72100009,
+      "windowTargetCounts": [
+        14,
+        0
+      ],
+      "decisionTargetCounts": [
+        14,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        162,
+        354,
+        506,
+        545,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.23645625750977636,
+        -0.6890995746948642
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 8,
+      "condition": "bit1",
+      "streamSeed": 72100009,
+      "windowTargetCounts": [
+        0,
+        15
+      ],
+      "decisionTargetCounts": [
+        0,
+        15
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        162,
+        354,
+        1155,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.35714285714285715,
+        0.42857142857142855,
+        0.5
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.23323752411624413,
+        -0.15080639358433515
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 9,
+      "condition": "none",
+      "streamSeed": 72100010,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.5,
+        0.42857142857142855,
+        0.42857142857142855
+      ],
+      "features": [
+        0.1889192101882625,
+        0.23323752411624413,
+        -0.2750954727804774
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 9,
+      "condition": "bit0",
+      "streamSeed": 72100010,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        162,
+        354,
+        506,
+        545,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.7857142857142857,
+        0.21428571428571427,
+        0.35714285714285715
+      ],
+      "features": [
+        1.060187171984674,
+        -0.4912666234292062,
+        -0.40576107796734173
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 9,
+      "condition": "bit1",
+      "streamSeed": 72100010,
+      "windowTargetCounts": [
+        0,
+        16
+      ],
+      "decisionTargetCounts": [
+        0,
+        16
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        162,
+        354,
+        1155,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.5714285714285714,
+        0.7142857142857143,
+        0.6428571428571429
+      ],
+      "features": [
+        0.4213861548728199,
+        1.0460211456449109,
+        0.08093700671988797
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 10,
+      "condition": "none",
+      "streamSeed": 72100011,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.42857142857142855,
+        0.35714285714285715,
+        0.5
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.00457367160447321,
+        -0.15080639358433515
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 10,
+      "condition": "bit0",
+      "streamSeed": 72100011,
+      "windowTargetCounts": [
+        17,
+        0
+      ],
+      "decisionTargetCounts": [
+        17,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        506,
+        545,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 8,
+      "rates": [
+        0.5714285714285714,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        0.4213861548728199,
+        0.00457367160447321,
+        -0.5434930422017814
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 10,
+      "condition": "bit1",
+      "streamSeed": 72100011,
+      "windowTargetCounts": [
+        0,
+        15
+      ],
+      "decisionTargetCounts": [
+        0,
+        15
+      ],
+      "activeKcIds": [
+        67,
+        113,
+        162,
+        354,
+        1155,
+        1194,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.6428571428571429
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        0.08093700671988797
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 11,
+      "condition": "none",
+      "streamSeed": 72100012,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        1155,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.42857142857142855,
+        0.42857142857142855,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.23323752411624413,
+        -0.2750954727804774
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 11,
+      "condition": "bit0",
+      "streamSeed": 72100012,
+      "windowTargetCounts": [
+        11,
+        0
+      ],
+      "decisionTargetCounts": [
+        11,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        354,
+        506,
+        545,
+        806,
+        1155,
+        1194,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.5714285714285714,
+        0.2857142857142857,
+        0.35714285714285715
+      ],
+      "features": [
+        0.4213861548728199,
+        -0.23645625750977636,
+        -0.40576107796734173
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 0,
+      "repeat": 11,
+      "condition": "bit1",
+      "streamSeed": 72100012,
+      "windowTargetCounts": [
+        0,
+        11
+      ],
+      "decisionTargetCounts": [
+        0,
+        11
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        354,
+        806,
+        1155,
+        1194,
+        1421,
+        1808,
+        1841,
+        2041
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.5,
+        0.5714285714285714,
+        0.7857142857142857
+      ],
+      "features": [
+        0.1889192101882625,
+        0.6581272325639078,
+        0.29334505193446747
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 0,
+      "condition": "none",
+      "streamSeed": 72100001,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 0,
+      "condition": "bit0",
+      "streamSeed": 72100001,
+      "windowTargetCounts": [
+        12,
+        0
+      ],
+      "decisionTargetCounts": [
+        12,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        506,
+        545,
+        1374,
+        1669
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 0,
+      "condition": "bit1",
+      "streamSeed": 72100001,
+      "windowTargetCounts": [
+        0,
+        14
+      ],
+      "decisionTargetCounts": [
+        0,
+        14
+      ],
+      "activeKcIds": [
+        81,
+        113,
+        283,
+        310,
+        823,
+        1374,
+        1421,
+        1669,
+        1851
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.14285714285714285,
+        0.2857142857142857,
+        0.2857142857142857
+      ],
+      "features": [
+        -1.169971132655612,
+        -0.23645625750977636,
+        -0.5434930422017814
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 1,
+      "condition": "none",
+      "streamSeed": 72100002,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        354,
+        823,
+        1374,
+        1851
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 1,
+      "condition": "bit0",
+      "streamSeed": 72100002,
+      "windowTargetCounts": [
+        18,
+        0
+      ],
+      "decisionTargetCounts": [
+        18,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        336,
+        506,
+        545,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.35714285714285715,
+        0.14285714285714285,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.7615292327456353,
+        -0.5434930422017814
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 1,
+      "condition": "bit1",
+      "streamSeed": 72100002,
+      "windowTargetCounts": [
+        0,
+        20
+      ],
+      "decisionTargetCounts": [
+        0,
+        20
+      ],
+      "activeKcIds": [
+        81,
+        113,
+        283,
+        310,
+        961,
+        1374,
+        1421
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.07142857142857142,
+        0.21428571428571427,
+        0.42857142857142855
+      ],
+      "features": [
+        -1.4924790385226445,
+        -0.4912666234292062,
+        -0.2750954727804774
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 2,
+      "condition": "none",
+      "streamSeed": 72100003,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        739,
+        1374,
+        1669
+      ],
+      "activeKcCount": 5,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 2,
+      "condition": "bit0",
+      "streamSeed": 72100003,
+      "windowTargetCounts": [
+        15,
+        0
+      ],
+      "decisionTargetCounts": [
+        15,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        506,
+        545,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 8,
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 2,
+      "condition": "bit1",
+      "streamSeed": 72100003,
+      "windowTargetCounts": [
+        0,
+        16
+      ],
+      "decisionTargetCounts": [
+        0,
+        16
+      ],
+      "activeKcIds": [
+        81,
+        113,
+        283,
+        310,
+        739,
+        823,
+        961,
+        1374,
+        1421,
+        1669,
+        1851
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.2857142857142857,
+        0.2857142857142857,
+        0.7142857142857143
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.23645625750977636,
+        0.18935425386596533
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 3,
+      "condition": "none",
+      "streamSeed": 72100004,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 3,
+      "condition": "bit0",
+      "streamSeed": 72100004,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        506,
+        545,
+        616,
+        823,
+        1374,
+        1851
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 3,
+      "condition": "bit1",
+      "streamSeed": 72100004,
+      "windowTargetCounts": [
+        0,
+        17
+      ],
+      "decisionTargetCounts": [
+        0,
+        17
+      ],
+      "activeKcIds": [
+        113,
+        251,
+        283,
+        310,
+        739,
+        1374,
+        1421
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 4,
+      "condition": "none",
+      "streamSeed": 72100005,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        336,
+        616,
+        823,
+        1374,
+        1851
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 4,
+      "condition": "bit0",
+      "streamSeed": 72100005,
+      "windowTargetCounts": [
+        12,
+        0
+      ],
+      "decisionTargetCounts": [
+        12,
+        0
+      ],
+      "activeKcIds": [
+        251,
+        283,
+        310,
+        336,
+        506,
+        545,
+        739,
+        823,
+        1374,
+        1851
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 4,
+      "condition": "bit1",
+      "streamSeed": 72100005,
+      "windowTargetCounts": [
+        0,
+        14
+      ],
+      "decisionTargetCounts": [
+        0,
+        14
+      ],
+      "activeKcIds": [
+        113,
+        251,
+        283,
+        336,
+        739,
+        823,
+        1374,
+        1421,
+        1851
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 5,
+      "condition": "none",
+      "streamSeed": 72100006,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        412,
+        616,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 8,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 5,
+      "condition": "bit0",
+      "streamSeed": 72100006,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        336,
+        506,
+        545,
+        1374,
+        1669
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 5,
+      "condition": "bit1",
+      "streamSeed": 72100006,
+      "windowTargetCounts": [
+        0,
+        15
+      ],
+      "decisionTargetCounts": [
+        0,
+        15
+      ],
+      "activeKcIds": [
+        81,
+        113,
+        251,
+        264,
+        283,
+        310,
+        336,
+        739,
+        823,
+        1374,
+        1421,
+        1669
+      ],
+      "activeKcCount": 12,
+      "rates": [
+        0.42857142857142855,
+        0.35714285714285715,
+        0.7857142857142857
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.00457367160447321,
+        0.29334505193446747
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 6,
+      "condition": "none",
+      "streamSeed": 72100007,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        251,
+        283,
+        310,
+        336,
+        616,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.21428571428571427,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.049239879038443,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 6,
+      "condition": "bit0",
+      "streamSeed": 72100007,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        251,
+        283,
+        310,
+        336,
+        506,
+        545,
+        739,
+        1374,
+        1669
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.35714285714285715,
+        0,
+        0
+      ],
+      "features": [
+        -0.3112116583567229,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 6,
+      "condition": "bit1",
+      "streamSeed": 72100007,
+      "windowTargetCounts": [
+        0,
+        20
+      ],
+      "decisionTargetCounts": [
+        0,
+        20
+      ],
+      "activeKcIds": [
+        81,
+        113,
+        251,
+        264,
+        283,
+        310,
+        336,
+        616,
+        739,
+        823,
+        961,
+        1374,
+        1421,
+        1669,
+        1851
+      ],
+      "activeKcCount": 15,
+      "rates": [
+        0.5,
+        0.2857142857142857,
+        0.5714285714285714
+      ],
+      "features": [
+        0.1889192101882625,
+        -0.23645625750977636,
+        -0.03230033799140362
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 7,
+      "condition": "none",
+      "streamSeed": 72100008,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        251,
+        283,
+        310,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 8,
+      "rates": [
+        0.14285714285714285,
+        0.14285714285714285,
+        0.21428571428571427
+      ],
+      "features": [
+        -1.169971132655612,
+        -0.7615292327456353,
+        -0.6890995746948642
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 7,
+      "condition": "bit0",
+      "streamSeed": 72100008,
+      "windowTargetCounts": [
+        17,
+        0
+      ],
+      "decisionTargetCounts": [
+        17,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        506,
+        545,
+        823,
+        1374,
+        1851
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.35714285714285715,
+        0,
+        0
+      ],
+      "features": [
+        -0.3112116583567229,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 7,
+      "condition": "bit1",
+      "streamSeed": 72100008,
+      "windowTargetCounts": [
+        0,
+        17
+      ],
+      "decisionTargetCounts": [
+        0,
+        17
+      ],
+      "activeKcIds": [
+        81,
+        113,
+        264,
+        283,
+        310,
+        354,
+        616,
+        739,
+        823,
+        961,
+        1374,
+        1421,
+        1669,
+        1851
+      ],
+      "activeKcCount": 14,
+      "rates": [
+        0.5714285714285714,
+        0.6428571428571429,
+        1.1428571428571428
+      ],
+      "features": [
+        0.4213861548728199,
+        0.8562917568306991,
+        0.7577947785809099
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 8,
+      "condition": "none",
+      "streamSeed": 72100009,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        251,
+        283,
+        310,
+        336,
+        739,
+        1374,
+        1669
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 8,
+      "condition": "bit0",
+      "streamSeed": 72100009,
+      "windowTargetCounts": [
+        13,
+        0
+      ],
+      "decisionTargetCounts": [
+        13,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        506,
+        545,
+        823,
+        1374,
+        1669
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 8,
+      "condition": "bit1",
+      "streamSeed": 72100009,
+      "windowTargetCounts": [
+        0,
+        14
+      ],
+      "decisionTargetCounts": [
+        0,
+        14
+      ],
+      "activeKcIds": [
+        81,
+        113,
+        283,
+        310,
+        336,
+        823,
+        961,
+        1374,
+        1421,
+        1669
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.2857142857142857,
+        0.2857142857142857,
+        0.7142857142857143
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.23645625750977636,
+        0.18935425386596533
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 9,
+      "condition": "none",
+      "streamSeed": 72100010,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        251,
+        283,
+        310,
+        336,
+        616,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 9,
+      "condition": "bit0",
+      "streamSeed": 72100010,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        506,
+        545,
+        823,
+        1374,
+        1851
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.2857142857142857,
+        0,
+        0
+      ],
+      "features": [
+        -0.5813930322180321,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 9,
+      "condition": "bit1",
+      "streamSeed": 72100010,
+      "windowTargetCounts": [
+        0,
+        13
+      ],
+      "decisionTargetCounts": [
+        0,
+        13
+      ],
+      "activeKcIds": [
+        81,
+        113,
+        251,
+        283,
+        310,
+        616,
+        739,
+        823,
+        1374,
+        1421,
+        1669,
+        1851
+      ],
+      "activeKcCount": 12,
+      "rates": [
+        0.35714285714285715,
+        0.21428571428571427,
+        0.5714285714285714
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.4912666234292062,
+        -0.03230033799140362
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 10,
+      "condition": "none",
+      "streamSeed": 72100011,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0.07142857142857142
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.007942768848224
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 10,
+      "condition": "bit0",
+      "streamSeed": 72100011,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        251,
+        283,
+        310,
+        506,
+        545,
+        739,
+        1374,
+        1669
+      ],
+      "activeKcCount": 8,
+      "rates": [
+        0.2857142857142857,
+        0,
+        0.07142857142857142
+      ],
+      "features": [
+        -0.5813930322180321,
+        -1.3568078755655855,
+        -1.007942768848224
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 10,
+      "condition": "bit1",
+      "streamSeed": 72100011,
+      "windowTargetCounts": [
+        0,
+        14
+      ],
+      "decisionTargetCounts": [
+        0,
+        14
+      ],
+      "activeKcIds": [
+        81,
+        113,
+        251,
+        283,
+        310,
+        412,
+        616,
+        739,
+        823,
+        1374,
+        1421,
+        1669,
+        1851
+      ],
+      "activeKcCount": 13,
+      "rates": [
+        0.5714285714285714,
+        0.35714285714285715,
+        0.8571428571428571
+      ],
+      "features": [
+        0.4213861548728199,
+        0.00457367160447321,
+        0.39325671253698385
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 11,
+      "condition": "none",
+      "streamSeed": 72100012,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        616,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 11,
+      "condition": "bit0",
+      "streamSeed": 72100012,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        283,
+        310,
+        336,
+        506,
+        545,
+        739,
+        823,
+        1374,
+        1669,
+        1851
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.35714285714285715,
+        0,
+        0
+      ],
+      "features": [
+        -0.3112116583567229,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "statePrediction": 1,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 1,
+      "repeat": 11,
+      "condition": "bit1",
+      "streamSeed": 72100012,
+      "windowTargetCounts": [
+        0,
+        14
+      ],
+      "decisionTargetCounts": [
+        0,
+        14
+      ],
+      "activeKcIds": [
+        81,
+        113,
+        251,
+        283,
+        310,
+        616,
+        739,
+        823,
+        1374,
+        1421,
+        1669,
+        1851
+      ],
+      "activeKcCount": 12,
+      "rates": [
+        0.2857142857142857,
+        0.35714285714285715,
+        0.5
+      ],
+      "features": [
+        -0.5813930322180321,
+        0.00457367160447321,
+        -0.15080639358433515
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 0,
+      "condition": "none",
+      "streamSeed": 72100001,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        1.5714285714285714
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        1.2222445052273527
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 0,
+      "condition": "bit0",
+      "streamSeed": 72100001,
+      "windowTargetCounts": [
+        18,
+        0
+      ],
+      "decisionTargetCounts": [
+        18,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        506,
+        519,
+        545,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        1.3571428571428572,
+        0.8571428571428571,
+        2
+      ],
+      "features": [
+        2.4475513134975753,
+        1.402848955608052,
+        1.6149311538447986
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 0,
+      "condition": "bit1",
+      "streamSeed": 72100001,
+      "windowTargetCounts": [
+        0,
+        18
+      ],
+      "decisionTargetCounts": [
+        0,
+        18
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        255,
+        264,
+        309,
+        519,
+        1421,
+        1777,
+        2005
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        0.7857142857142857,
+        0.7857142857142857,
+        1.7857142857142858
+      ],
+      "features": [
+        1.060187171984674,
+        1.228004280978124,
+        1.4261469638983715
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 1,
+      "condition": "none",
+      "streamSeed": 72100002,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        309,
+        519,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        1.5714285714285714
+      ],
+      "features": [
+        0.8561940259691435,
+        0.6581272325639078,
+        1.2222445052273527
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 1,
+      "condition": "bit0",
+      "streamSeed": 72100002,
+      "windowTargetCounts": [
+        14,
+        0
+      ],
+      "decisionTargetCounts": [
+        14,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        506,
+        519,
+        545,
+        1777,
+        2005
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        1.0714285714285714,
+        0.5714285714285714,
+        1.5714285714285714
+      ],
+      "features": [
+        1.8018624412000224,
+        0.6581272325639078,
+        1.2222445052273527
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 1,
+      "condition": "bit1",
+      "streamSeed": 72100002,
+      "windowTargetCounts": [
+        0,
+        15
+      ],
+      "decisionTargetCounts": [
+        0,
+        15
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        519,
+        1421,
+        1777
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.5,
+        0.2857142857142857,
+        1
+      ],
+      "features": [
+        0.1889192101882625,
+        -0.23645625750977636,
+        0.5820409024834114
+      ],
+      "statePrediction": 0,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 2,
+      "condition": "none",
+      "streamSeed": 72100003,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        1.2222445052273527
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 2,
+      "condition": "bit0",
+      "streamSeed": 72100003,
+      "windowTargetCounts": [
+        15,
+        0
+      ],
+      "decisionTargetCounts": [
+        15,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        506,
+        519,
+        545,
+        561,
+        789,
+        1165,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKcCount": 13,
+      "rates": [
+        0.8571428571428571,
+        0.6428571428571429,
+        1.4285714285714286
+      ],
+      "features": [
+        1.25617849379872,
+        0.8562917568306991,
+        1.07663797273427
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 2,
+      "condition": "bit1",
+      "streamSeed": 72100003,
+      "windowTargetCounts": [
+        0,
+        14
+      ],
+      "decisionTargetCounts": [
+        0,
+        14
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1421,
+        1777,
+        2005
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.8571428571428571,
+        0.6428571428571429,
+        1.7142857142857142
+      ],
+      "features": [
+        1.25617849379872,
+        0.8562917568306991,
+        1.3599764694617922
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 3,
+      "condition": "none",
+      "streamSeed": 72100004,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.9285714285714286,
+        0.6428571428571429,
+        2
+      ],
+      "features": [
+        1.4447721264067237,
+        0.8562917568306991,
+        1.6149311538447986
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 3,
+      "condition": "bit0",
+      "streamSeed": 72100004,
+      "windowTargetCounts": [
+        15,
+        0
+      ],
+      "decisionTargetCounts": [
+        15,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        506,
+        519,
+        545,
+        1777,
+        2005
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.7142857142857142
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        1.3599764694617922
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 3,
+      "condition": "bit1",
+      "streamSeed": 72100004,
+      "windowTargetCounts": [
+        0,
+        15
+      ],
+      "decisionTargetCounts": [
+        0,
+        15
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1421,
+        1777,
+        2005
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.8571428571428571,
+        0.7857142857142857,
+        1.8571428571428572
+      ],
+      "features": [
+        1.25617849379872,
+        1.228004280978124,
+        1.490642074648657
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 4,
+      "condition": "none",
+      "streamSeed": 72100005,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.6428571428571429,
+        0.6428571428571429,
+        1.7857142857142858
+      ],
+      "features": [
+        0.6435177532752572,
+        0.8562917568306991,
+        1.4261469638983715
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 4,
+      "condition": "bit0",
+      "streamSeed": 72100005,
+      "windowTargetCounts": [
+        18,
+        0
+      ],
+      "decisionTargetCounts": [
+        18,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        506,
+        519,
+        545,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        1.0714285714285714,
+        0.5714285714285714,
+        1.5
+      ],
+      "features": [
+        1.8018624412000224,
+        0.6581272325639078,
+        1.1504814271983563
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 4,
+      "condition": "bit1",
+      "streamSeed": 72100005,
+      "windowTargetCounts": [
+        0,
+        15
+      ],
+      "decisionTargetCounts": [
+        0,
+        15
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        255,
+        264,
+        309,
+        519,
+        961,
+        1421,
+        1777,
+        2005
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.7857142857142857,
+        0.5714285714285714,
+        1.7857142857142858
+      ],
+      "features": [
+        1.060187171984674,
+        0.6581272325639078,
+        1.4261469638983715
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 5,
+      "condition": "none",
+      "streamSeed": 72100006,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.4285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.07663797273427
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 5,
+      "condition": "bit0",
+      "streamSeed": 72100006,
+      "windowTargetCounts": [
+        15,
+        0
+      ],
+      "decisionTargetCounts": [
+        15,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        506,
+        519,
+        545,
+        1777
+      ],
+      "activeKcCount": 5,
+      "rates": [
+        0.8571428571428571,
+        0.35714285714285715,
+        1.2857142857142858
+      ],
+      "features": [
+        1.25617849379872,
+        0.00457367160447321,
+        0.922201549933712
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 5,
+      "condition": "bit1",
+      "streamSeed": 72100006,
+      "windowTargetCounts": [
+        0,
+        16
+      ],
+      "decisionTargetCounts": [
+        0,
+        16
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        255,
+        264,
+        309,
+        519,
+        961,
+        1421,
+        1777,
+        2005
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.9285714285714286,
+        0.6428571428571429,
+        1.7142857142857142
+      ],
+      "features": [
+        1.4447721264067237,
+        0.8562917568306991,
+        1.3599764694617922
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 6,
+      "condition": "none",
+      "streamSeed": 72100007,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKcCount": 5,
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.3571428571428572
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        1.0005899133699838
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 6,
+      "condition": "bit0",
+      "streamSeed": 72100007,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        309,
+        506,
+        519,
+        545,
+        1777
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.7857142857142857,
+        0.35714285714285715,
+        1.0714285714285714
+      ],
+      "features": [
+        1.060187171984674,
+        0.00457367160447321,
+        0.671433260581945
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 6,
+      "condition": "bit1",
+      "streamSeed": 72100007,
+      "windowTargetCounts": [
+        0,
+        19
+      ],
+      "decisionTargetCounts": [
+        0,
+        19
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1421,
+        1777,
+        2005
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.7857142857142857,
+        0.7857142857142857,
+        1.7857142857142858
+      ],
+      "features": [
+        1.060187171984674,
+        1.228004280978124,
+        1.4261469638983715
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 7,
+      "condition": "none",
+      "streamSeed": 72100008,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        249,
+        255,
+        264,
+        309,
+        519,
+        1014,
+        1777,
+        2005
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.8571428571428571,
+        0.9285714285714286,
+        1.7142857142857142
+      ],
+      "features": [
+        1.25617849379872,
+        1.57109412088077,
+        1.3599764694617922
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 7,
+      "condition": "bit0",
+      "streamSeed": 72100008,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        309,
+        506,
+        519,
+        545,
+        1777,
+        2005
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.7142857142857143,
+        0.42857142857142855,
+        1.2142857142857142
+      ],
+      "features": [
+        0.8561940259691435,
+        0.23323752411624413,
+        0.8413242553730278
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 7,
+      "condition": "bit1",
+      "streamSeed": 72100008,
+      "windowTargetCounts": [
+        0,
+        18
+      ],
+      "decisionTargetCounts": [
+        0,
+        18
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        255,
+        309,
+        519,
+        961,
+        1014,
+        1421,
+        1777,
+        2005
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.7142857142857143,
+        0.9285714285714286,
+        1.7142857142857142
+      ],
+      "features": [
+        0.8561940259691435,
+        1.57109412088077,
+        1.3599764694617922
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 8,
+      "condition": "none",
+      "streamSeed": 72100009,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1014,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKcCount": 10,
+      "rates": [
+        1,
+        1,
+        2.4285714285714284
+      ],
+      "features": [
+        1.6265062683754379,
+        1.7332199059796476,
+        1.9550918012950993
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 8,
+      "condition": "bit0",
+      "streamSeed": 72100009,
+      "windowTargetCounts": [
+        17,
+        0
+      ],
+      "decisionTargetCounts": [
+        17,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        249,
+        255,
+        264,
+        309,
+        427,
+        506,
+        519,
+        545,
+        789,
+        1014,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKcCount": 14,
+      "rates": [
+        1.2857142857142858,
+        0.7857142857142857,
+        1.5714285714285714
+      ],
+      "features": [
+        2.293781084156319,
+        1.228004280978124,
+        1.2222445052273527
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 8,
+      "condition": "bit1",
+      "streamSeed": 72100009,
+      "windowTargetCounts": [
+        0,
+        16
+      ],
+      "decisionTargetCounts": [
+        0,
+        16
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        255,
+        264,
+        309,
+        519,
+        961,
+        1421,
+        1777,
+        2005
+      ],
+      "activeKcCount": 11,
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        1.3571428571428572
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        1.0005899133699838
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 9,
+      "condition": "none",
+      "streamSeed": 72100010,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1777,
+        2005
+      ],
+      "activeKcCount": 8,
+      "rates": [
+        0.9285714285714286,
+        0.6428571428571429,
+        1.6428571428571428
+      ],
+      "features": [
+        1.4447721264067237,
+        0.8562917568306991,
+        1.2920412220601514
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 9,
+      "condition": "bit0",
+      "streamSeed": 72100010,
+      "windowTargetCounts": [
+        18,
+        0
+      ],
+      "decisionTargetCounts": [
+        18,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        309,
+        506,
+        519,
+        545,
+        1777,
+        2005
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.9285714285714286,
+        0.6428571428571429,
+        1.5
+      ],
+      "features": [
+        1.4447721264067237,
+        0.8562917568306991,
+        1.1504814271983563
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 9,
+      "condition": "bit1",
+      "streamSeed": 72100010,
+      "windowTargetCounts": [
+        0,
+        17
+      ],
+      "decisionTargetCounts": [
+        0,
+        17
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        255,
+        264,
+        309,
+        519,
+        961,
+        1014,
+        1421,
+        1777,
+        2005
+      ],
+      "activeKcCount": 12,
+      "rates": [
+        0.6428571428571429,
+        0.7142857142857143,
+        1.8571428571428572
+      ],
+      "features": [
+        0.6435177532752572,
+        1.0460211456449109,
+        1.490642074648657
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 10,
+      "condition": "none",
+      "streamSeed": 72100011,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        1777,
+        2005
+      ],
+      "activeKcCount": 7,
+      "rates": [
+        0.6428571428571429,
+        0.7142857142857143,
+        1.7142857142857142
+      ],
+      "features": [
+        0.6435177532752572,
+        1.0460211456449109,
+        1.3599764694617922
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 10,
+      "condition": "bit0",
+      "streamSeed": 72100011,
+      "windowTargetCounts": [
+        16,
+        0
+      ],
+      "decisionTargetCounts": [
+        16,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        309,
+        506,
+        519,
+        545,
+        1777
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        1.2857142857142858
+      ],
+      "features": [
+        0.8561940259691435,
+        0.6581272325639078,
+        0.922201549933712
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 10,
+      "condition": "bit1",
+      "streamSeed": 72100011,
+      "windowTargetCounts": [
+        0,
+        11
+      ],
+      "decisionTargetCounts": [
+        0,
+        11
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1014,
+        1421,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKcCount": 13,
+      "rates": [
+        0.8571428571428571,
+        0.7857142857142857,
+        2.0714285714285716
+      ],
+      "features": [
+        1.25617849379872,
+        1.228004280978124,
+        1.6748732324568762
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 11,
+      "condition": "none",
+      "streamSeed": 72100012,
+      "windowTargetCounts": [
+        0,
+        0
+      ],
+      "decisionTargetCounts": [
+        0,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        255,
+        264,
+        309,
+        519,
+        789,
+        1669,
+        1777,
+        2005
+      ],
+      "activeKcCount": 9,
+      "rates": [
+        0.6428571428571429,
+        0.7857142857142857,
+        1.9285714285714286
+      ],
+      "features": [
+        0.6435177532752572,
+        1.228004280978124,
+        1.5535445496464173
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 11,
+      "condition": "bit0",
+      "streamSeed": 72100012,
+      "windowTargetCounts": [
+        15,
+        0
+      ],
+      "decisionTargetCounts": [
+        15,
+        0
+      ],
+      "activeKcIds": [
+        67,
+        309,
+        506,
+        519,
+        545,
+        1777
+      ],
+      "activeKcCount": 6,
+      "rates": [
+        0.7142857142857143,
+        0.42857142857142855,
+        1.1428571428571428
+      ],
+      "features": [
+        0.8561940259691435,
+        0.23323752411624413,
+        0.7577947785809099
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    },
+    {
+      "seed": 721,
+      "state": 2,
+      "repeat": 11,
+      "condition": "bit1",
+      "streamSeed": 72100012,
+      "windowTargetCounts": [
+        0,
+        14
+      ],
+      "decisionTargetCounts": [
+        0,
+        14
+      ],
+      "activeKcIds": [
+        67,
+        81,
+        113,
+        249,
+        255,
+        264,
+        309,
+        519,
+        1014,
+        1421,
+        1777,
+        2005
+      ],
+      "activeKcCount": 12,
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.4285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.07663797273427
+      ],
+      "statePrediction": 2,
+      "action": 0,
+      "cueActiveBeforeDecision": true
+    }
+  ]
+}

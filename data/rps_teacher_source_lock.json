@@ -1,0 +1,17 @@
+{
+  "lockedBeforeEvaluation": true,
+  "calibrationSeeds": [41, 42, 43],
+  "neuron": 2132,
+  "role": "mbon",
+  "feature": "trace>=0.5",
+  "sampleMs": 120,
+  "encoding": "label 0 if the selected neuron's own 200 ms spike trace is at least 0.5; otherwise label 1",
+  "channel": {
+    "target": "the first eight VPN neurons of label lane 0 or 1",
+    "strengthHz": 300,
+    "startMs": 120,
+    "endMs": 240
+  },
+  "selectionRule": "highest calibration increase in conditional information about next opponent move given previous move, among mid/mbon/dn/pam/ppl1 neurons and three prespecified binary activity thresholds with 10-90% activation; positive gain on each of three calibration seeds",
+  "note": "The encoded bit is raw Fly A neural activity; it uses no opponent move, hidden strategy label, learned weights, or external decoder at transmission time."
+}

@@ -1,0 +1,4271 @@
+{
+  "protocol": {
+    "teacherSeed": 830,
+    "calibrationSeed": 11000,
+    "heldoutSeeds": [
+      11001,
+      11002
+    ],
+    "code": [
+      [
+        1,
+        0
+      ],
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        1
+      ]
+    ],
+    "dn": [
+      3141,
+      3165
+    ],
+    "dnHz": 300,
+    "dnWindow": [
+      240,
+      280
+    ],
+    "cueHz": 150,
+    "cueWindow": [
+      280,
+      520
+    ],
+    "countReset": 330,
+    "decision": 520,
+    "update": 620,
+    "end": 680,
+    "repeats": 12,
+    "probeConditions": [
+      "none",
+      0,
+      1,
+      2
+    ],
+    "probeKey": "seed*10000000+(100+48*cue+12*condition+repeat)*1000",
+    "trainingKey": "seed*10000000+episode*1000+round",
+    "teacherTraining": "12*24 Strategy A, opponent seeds 41000+episode",
+    "heldout": "3*24 Strategy A, opponent seeds 51000..51002",
+    "studentRewardAlpha": 0.03,
+    "imitationAlpha": 0.03,
+    "epsilon": 0.2,
+    "checkpointRounds": [
+      0,
+      6,
+      12,
+      24,
+      48,
+      96,
+      288
+    ],
+    "arms": [
+      "trained",
+      "alone",
+      "untrained",
+      "shuffled",
+      "generic"
+    ],
+    "receiverFloor": ">=11/12 decoded per cue/action; >=10/12 pooled cue recognition per condition; VPN 12/12; <=2/12 loss vs none",
+    "sourceFloor": "archived 61/72 teacher and >=70% per cue preference on source tape",
+    "aloneFloor": "initial <=50/72; final >=58/72 and >=70% per observed cue for both",
+    "pilotGate": "both seeds: mean frozen 6/12/24/48 >=4/72 over every control, first 58/72 <=48 and earlier than every control, final >=58/72 and >=70% per cue"
+  },
+  "status": "stopped_receiver",
+  "teacher": {
+    "wins": 61,
+    "byCue": [
+      {
+        "cue": 0,
+        "wins": 22,
+        "n": 23
+      },
+      {
+        "cue": 1,
+        "wins": 17,
+        "n": 24
+      },
+      {
+        "cue": 2,
+        "wins": 22,
+        "n": 22
+      }
+    ],
+    "synapsesFrozen": true,
+    "archivedResultReproduced": true
+  },
+  "receiver": {
+    "batches": [
+      {
+        "seed": 11000,
+        "passed": false,
+        "conditions": [
+          {
+            "cue": 0,
+            "message": null,
+            "n": 12,
+            "decoded": 0,
+            "pooled": 11,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          {
+            "cue": 0,
+            "message": 0,
+            "n": 12,
+            "decoded": 12,
+            "pooled": 10,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                9,
+                0
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                10,
+                0
+              ],
+              [
+                6,
+                0
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                8,
+                0
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                10,
+                0
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                7,
+                0
+              ]
+            ]
+          },
+          {
+            "cue": 0,
+            "message": 1,
+            "n": 12,
+            "decoded": 12,
+            "pooled": 10,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                0,
+                6
+              ],
+              [
+                0,
+                9
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                9
+              ],
+              [
+                0,
+                7
+              ],
+              [
+                0,
+                10
+              ],
+              [
+                0,
+                9
+              ],
+              [
+                0,
+                6
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                10
+              ],
+              [
+                0,
+                7
+              ]
+            ]
+          },
+          {
+            "cue": 0,
+            "message": 2,
+            "n": 12,
+            "decoded": 12,
+            "pooled": 10,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                8,
+                9
+              ],
+              [
+                7,
+                7
+              ],
+              [
+                9,
+                9
+              ],
+              [
+                7,
+                9
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                10,
+                7
+              ],
+              [
+                9,
+                9
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                7,
+                9
+              ],
+              [
+                9,
+                7
+              ],
+              [
+                7,
+                9
+              ],
+              [
+                7,
+                7
+              ]
+            ]
+          },
+          {
+            "cue": 1,
+            "message": null,
+            "n": 12,
+            "decoded": 0,
+            "pooled": 12,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          {
+            "cue": 1,
+            "message": 0,
+            "n": 12,
+            "decoded": 12,
+            "pooled": 12,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                7,
+                0
+              ],
+              [
+                10,
+                0
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                6,
+                0
+              ],
+              [
+                10,
+                0
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                7,
+                0
+              ],
+              [
+                8,
+                0
+              ],
+              [
+                8,
+                0
+              ],
+              [
+                5,
+                0
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                7,
+                0
+              ]
+            ]
+          },
+          {
+            "cue": 1,
+            "message": 1,
+            "n": 12,
+            "decoded": 12,
+            "pooled": 11,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                0,
+                6
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                9
+              ],
+              [
+                0,
+                7
+              ],
+              [
+                0,
+                7
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                10
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                7
+              ],
+              [
+                0,
+                7
+              ],
+              [
+                0,
+                10
+              ],
+              [
+                0,
+                8
+              ]
+            ]
+          },
+          {
+            "cue": 1,
+            "message": 2,
+            "n": 12,
+            "decoded": 12,
+            "pooled": 12,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                6,
+                7
+              ],
+              [
+                5,
+                6
+              ],
+              [
+                7,
+                9
+              ],
+              [
+                7,
+                8
+              ],
+              [
+                8,
+                6
+              ],
+              [
+                9,
+                6
+              ],
+              [
+                11,
+                6
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                8,
+                7
+              ],
+              [
+                6,
+                9
+              ],
+              [
+                9,
+                8
+              ],
+              [
+                8,
+                8
+              ]
+            ]
+          },
+          {
+            "cue": 2,
+            "message": null,
+            "n": 12,
+            "decoded": 0,
+            "pooled": 12,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                0
+              ]
+            ]
+          },
+          {
+            "cue": 2,
+            "message": 0,
+            "n": 12,
+            "decoded": 12,
+            "pooled": 12,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                8,
+                0
+              ],
+              [
+                6,
+                0
+              ],
+              [
+                10,
+                0
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                10,
+                0
+              ],
+              [
+                8,
+                0
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                8,
+                0
+              ],
+              [
+                9,
+                0
+              ],
+              [
+                8,
+                0
+              ]
+            ]
+          },
+          {
+            "cue": 2,
+            "message": 1,
+            "n": 12,
+            "decoded": 12,
+            "pooled": 12,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                0,
+                6
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                6
+              ],
+              [
+                0,
+                7
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                7
+              ],
+              [
+                0,
+                8
+              ],
+              [
+                0,
+                6
+              ],
+              [
+                0,
+                6
+              ]
+            ]
+          },
+          {
+            "cue": 2,
+            "message": 2,
+            "n": 12,
+            "decoded": 12,
+            "pooled": 12,
+            "vpn": 12,
+            "targetSpikes": [
+              [
+                8,
+                6
+              ],
+              [
+                8,
+                6
+              ],
+              [
+                5,
+                9
+              ],
+              [
+                6,
+                8
+              ],
+              [
+                10,
+                3
+              ],
+              [
+                9,
+                8
+              ],
+              [
+                6,
+                10
+              ],
+              [
+                9,
+                5
+              ],
+              [
+                8,
+                8
+              ],
+              [
+                9,
+                6
+              ],
+              [
+                7,
+                9
+              ],
+              [
+                7,
+                5
+              ]
+            ]
+          }
+        ],
+        "rows": [
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 0,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.35714285714285715,
+              0.35714285714285715,
+              0.35714285714285715
+            ],
+            "laneCounts": [
+              410,
+              9,
+              1
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 1,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.6428571428571429,
+              0.5,
+              0.42857142857142855
+            ],
+            "laneCounts": [
+              433,
+              11,
+              3
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 2,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.35714285714285715,
+              0.2857142857142857,
+              0.42857142857142855
+            ],
+            "laneCounts": [
+              402,
+              10,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 3,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.7857142857142857,
+              0.5,
+              0.42857142857142855
+            ],
+            "laneCounts": [
+              426,
+              9,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 4,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.35714285714285715,
+              0.2857142857142857,
+              0.2857142857142857
+            ],
+            "laneCounts": [
+              415,
+              9,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 5,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.7142857142857143,
+              0.6428571428571429,
+              0.9285714285714286
+            ],
+            "laneCounts": [
+              413,
+              9,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 6,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.35714285714285715,
+              0.42857142857142855,
+              0.2857142857142857
+            ],
+            "laneCounts": [
+              409,
+              12,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 7,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.35714285714285715,
+              0.2857142857142857,
+              0.21428571428571427
+            ],
+            "laneCounts": [
+              414,
+              16,
+              1
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 8,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5,
+              0.42857142857142855,
+              0.6428571428571429
+            ],
+            "laneCounts": [
+              408,
+              14,
+              3
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 9,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.7142857142857143,
+              0.6428571428571429,
+              0.7142857142857143
+            ],
+            "laneCounts": [
+              419,
+              11,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 10,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.7857142857142857,
+              0.35714285714285715,
+              0.5714285714285714
+            ],
+            "laneCounts": [
+              419,
+              14,
+              3
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": null,
+            "repeat": 11,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 0,
+            "pooledCue": 2,
+            "rates": [
+              0.9285714285714286,
+              0.7857142857142857,
+              1.1428571428571428
+            ],
+            "laneCounts": [
+              424,
+              15,
+              7
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 0,
+            "counts": [
+              9,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5,
+              0.5,
+              0.5714285714285714
+            ],
+            "laneCounts": [
+              410,
+              10,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 1,
+            "counts": [
+              7,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.6428571428571429,
+              0.42857142857142855,
+              0.5
+            ],
+            "laneCounts": [
+              450,
+              10,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 2,
+            "counts": [
+              7,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0.07142857142857142
+            ],
+            "laneCounts": [
+              422,
+              10,
+              1
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 3,
+            "counts": [
+              10,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5714285714285714,
+              0.7142857142857143,
+              0.8571428571428571
+            ],
+            "laneCounts": [
+              432,
+              14,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 4,
+            "counts": [
+              6,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.7857142857142857,
+              0.5714285714285714,
+              0.5
+            ],
+            "laneCounts": [
+              404,
+              12,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 5,
+            "counts": [
+              9,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 2,
+            "rates": [
+              1.1428571428571428,
+              0.7857142857142857,
+              0.8571428571428571
+            ],
+            "laneCounts": [
+              427,
+              16,
+              8
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 6,
+            "counts": [
+              8,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.42857142857142855,
+              0.21428571428571427,
+              0.35714285714285715
+            ],
+            "laneCounts": [
+              412,
+              8,
+              3
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 7,
+            "counts": [
+              7,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.2857142857142857,
+              0.21428571428571427,
+              0.5714285714285714
+            ],
+            "laneCounts": [
+              413,
+              9,
+              0
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 8,
+            "counts": [
+              5,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5,
+              0.35714285714285715,
+              0.5
+            ],
+            "laneCounts": [
+              411,
+              11,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 9,
+            "counts": [
+              10,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5,
+              0.35714285714285715,
+              0.5
+            ],
+            "laneCounts": [
+              394,
+              11,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 10,
+            "counts": [
+              7,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.7142857142857143,
+              0.6428571428571429,
+              0.8571428571428571
+            ],
+            "laneCounts": [
+              415,
+              13,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 0,
+            "repeat": 11,
+            "counts": [
+              7,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.7142857142857143,
+              0.5714285714285714,
+              0.5
+            ],
+            "laneCounts": [
+              439,
+              9,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 0,
+            "counts": [
+              0,
+              6
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.7857142857142857,
+              0.5,
+              0.7857142857142857
+            ],
+            "laneCounts": [
+              406,
+              10,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 1,
+            "counts": [
+              0,
+              9
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.35714285714285715,
+              0.35714285714285715,
+              0.5
+            ],
+            "laneCounts": [
+              416,
+              11,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 2,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.42857142857142855,
+              0.42857142857142855,
+              0.42857142857142855
+            ],
+            "laneCounts": [
+              428,
+              11,
+              3
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 3,
+            "counts": [
+              0,
+              9
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.2857142857142857,
+              0.2857142857142857,
+              0.2857142857142857
+            ],
+            "laneCounts": [
+              402,
+              15,
+              1
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 4,
+            "counts": [
+              0,
+              7
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.35714285714285715,
+              0.21428571428571427,
+              0.2857142857142857
+            ],
+            "laneCounts": [
+              407,
+              11,
+              1
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 5,
+            "counts": [
+              0,
+              10
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.42857142857142855,
+              0.35714285714285715,
+              0.42857142857142855
+            ],
+            "laneCounts": [
+              424,
+              11,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 6,
+            "counts": [
+              0,
+              9
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5714285714285714,
+              0.35714285714285715,
+              0.42857142857142855
+            ],
+            "laneCounts": [
+              433,
+              12,
+              3
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 7,
+            "counts": [
+              0,
+              6
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5,
+              0.5,
+              0.5
+            ],
+            "laneCounts": [
+              434,
+              15,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 8,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.35714285714285715,
+              0.2857142857142857,
+              0.21428571428571427
+            ],
+            "laneCounts": [
+              417,
+              12,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 9,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5,
+              0.2857142857142857,
+              0.35714285714285715
+            ],
+            "laneCounts": [
+              408,
+              10,
+              1
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 10,
+            "counts": [
+              0,
+              10
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 2,
+            "rates": [
+              0.9285714285714286,
+              0.7857142857142857,
+              1.2142857142857142
+            ],
+            "laneCounts": [
+              423,
+              11,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 1,
+            "repeat": 11,
+            "counts": [
+              0,
+              7
+            ],
+            "decoded": 1,
+            "routedCue": 0,
+            "pooledCue": 2,
+            "rates": [
+              1.4285714285714286,
+              1.0714285714285714,
+              1.7857142857142858
+            ],
+            "laneCounts": [
+              435,
+              13,
+              9
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 0,
+            "counts": [
+              8,
+              9
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.2857142857142857,
+              0.35714285714285715,
+              0.21428571428571427
+            ],
+            "laneCounts": [
+              414,
+              9,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 1,
+            "counts": [
+              7,
+              7
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5,
+              0.35714285714285715,
+              0.2857142857142857
+            ],
+            "laneCounts": [
+              398,
+              10,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 2,
+            "counts": [
+              9,
+              9
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.21428571428571427,
+              0.2857142857142857,
+              0.42857142857142855
+            ],
+            "laneCounts": [
+              415,
+              9,
+              1
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 3,
+            "counts": [
+              7,
+              9
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              1.0714285714285714,
+              0.7857142857142857,
+              0.7142857142857143
+            ],
+            "laneCounts": [
+              421,
+              11,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 4,
+            "counts": [
+              8,
+              8
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 1,
+            "rates": [
+              0.21428571428571427,
+              0.14285714285714285,
+              0.14285714285714285
+            ],
+            "laneCounts": [
+              416,
+              15,
+              1
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 5,
+            "counts": [
+              10,
+              7
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5714285714285714,
+              0.7857142857142857,
+              0.7142857142857143
+            ],
+            "laneCounts": [
+              424,
+              12,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 6,
+            "counts": [
+              9,
+              9
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 2,
+            "rates": [
+              0.9285714285714286,
+              0.7142857142857143,
+              1.2857142857142858
+            ],
+            "laneCounts": [
+              401,
+              11,
+              8
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 7,
+            "counts": [
+              8,
+              7
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.7857142857142857,
+              0.6428571428571429,
+              0.7142857142857143
+            ],
+            "laneCounts": [
+              416,
+              8,
+              2
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 8,
+            "counts": [
+              7,
+              9
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.2857142857142857,
+              0.5,
+              0.6428571428571429
+            ],
+            "laneCounts": [
+              422,
+              11,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 9,
+            "counts": [
+              9,
+              7
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.5714285714285714,
+              0.42857142857142855,
+              0.42857142857142855
+            ],
+            "laneCounts": [
+              433,
+              11,
+              3
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 10,
+            "counts": [
+              7,
+              9
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.7142857142857143,
+              0.5,
+              0.35714285714285715
+            ],
+            "laneCounts": [
+              443,
+              13,
+              3
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 0,
+            "condition": 2,
+            "repeat": 11,
+            "counts": [
+              7,
+              7
+            ],
+            "decoded": 2,
+            "routedCue": 0,
+            "pooledCue": 0,
+            "rates": [
+              0.2857142857142857,
+              0.35714285714285715,
+              0.42857142857142855
+            ],
+            "laneCounts": [
+              415,
+              11,
+              3
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 0,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              16,
+              406,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 1,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              17,
+              421,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 2,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              16,
+              420,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 3,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.2857142857142857,
+              0.07142857142857142,
+              0
+            ],
+            "laneCounts": [
+              16,
+              404,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 4,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              16,
+              430,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 5,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              19,
+              446,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 6,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.21428571428571427,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "laneCounts": [
+              22,
+              433,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 7,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              18,
+              425,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 8,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              17,
+              423,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 9,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              12,
+              414,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 10,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.21428571428571427,
+              0,
+              0
+            ],
+            "laneCounts": [
+              19,
+              417,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": null,
+            "repeat": 11,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              14,
+              403,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 0,
+            "counts": [
+              7,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              19,
+              399,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 1,
+            "counts": [
+              10,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              14,
+              392,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 2,
+            "counts": [
+              9,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0.07142857142857142,
+              0
+            ],
+            "laneCounts": [
+              15,
+              413,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 3,
+            "counts": [
+              6,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0
+            ],
+            "laneCounts": [
+              17,
+              428,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 4,
+            "counts": [
+              10,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              16,
+              402,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 5,
+            "counts": [
+              7,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.21428571428571427,
+              0,
+              0
+            ],
+            "laneCounts": [
+              16,
+              394,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 6,
+            "counts": [
+              7,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0
+            ],
+            "laneCounts": [
+              20,
+              441,
+              8
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 7,
+            "counts": [
+              8,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0.07142857142857142
+            ],
+            "laneCounts": [
+              19,
+              410,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 8,
+            "counts": [
+              8,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              17,
+              426,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 9,
+            "counts": [
+              5,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              18,
+              402,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 10,
+            "counts": [
+              9,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              16,
+              408,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 0,
+            "repeat": 11,
+            "counts": [
+              7,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              16,
+              398,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 0,
+            "counts": [
+              0,
+              6
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              21,
+              445,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 1,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0.07142857142857142
+            ],
+            "laneCounts": [
+              18,
+              410,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 2,
+            "counts": [
+              0,
+              9
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              19,
+              410,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 3,
+            "counts": [
+              0,
+              7
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              15,
+              424,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 4,
+            "counts": [
+              0,
+              7
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.21428571428571427,
+              0,
+              0
+            ],
+            "laneCounts": [
+              16,
+              402,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 5,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.21428571428571427,
+              0.07142857142857142,
+              0
+            ],
+            "laneCounts": [
+              20,
+              429,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 6,
+            "counts": [
+              0,
+              10
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              15,
+              428,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 7,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              19,
+              423,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 8,
+            "counts": [
+              0,
+              7
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              15,
+              397,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 9,
+            "counts": [
+              0,
+              7
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              19,
+              435,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 10,
+            "counts": [
+              0,
+              10
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 0,
+            "rates": [
+              0.35714285714285715,
+              0.2857142857142857,
+              0.42857142857142855
+            ],
+            "laneCounts": [
+              22,
+              428,
+              8
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 1,
+            "repeat": 11,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              18,
+              414,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 0,
+            "counts": [
+              6,
+              7
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              17,
+              408,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 1,
+            "counts": [
+              5,
+              6
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              17,
+              404,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 2,
+            "counts": [
+              7,
+              9
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0
+            ],
+            "laneCounts": [
+              20,
+              420,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 3,
+            "counts": [
+              7,
+              8
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              19,
+              419,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 4,
+            "counts": [
+              8,
+              6
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.21428571428571427,
+              0,
+              0.07142857142857142
+            ],
+            "laneCounts": [
+              19,
+              408,
+              7
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 5,
+            "counts": [
+              9,
+              6
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              19,
+              415,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 6,
+            "counts": [
+              11,
+              6
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.07142857142857142,
+              0,
+              0
+            ],
+            "laneCounts": [
+              17,
+              399,
+              6
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 7,
+            "counts": [
+              8,
+              7
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              14,
+              409,
+              3
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 8,
+            "counts": [
+              8,
+              7
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0,
+              0,
+              0
+            ],
+            "laneCounts": [
+              19,
+              432,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 9,
+            "counts": [
+              6,
+              9
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0
+            ],
+            "laneCounts": [
+              18,
+              398,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 10,
+            "counts": [
+              9,
+              8
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              15,
+              426,
+              4
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 1,
+            "condition": 2,
+            "repeat": 11,
+            "counts": [
+              8,
+              8
+            ],
+            "decoded": 2,
+            "routedCue": 1,
+            "pooledCue": 1,
+            "rates": [
+              0.14285714285714285,
+              0,
+              0
+            ],
+            "laneCounts": [
+              19,
+              410,
+              5
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 0,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.6428571428571429,
+              1.7142857142857142
+            ],
+            "laneCounts": [
+              6,
+              4,
+              397
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 1,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.7857142857142857,
+              1.4285714285714286
+            ],
+            "laneCounts": [
+              4,
+              3,
+              384
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 2,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7142857142857143,
+              0.8571428571428571,
+              1.5
+            ],
+            "laneCounts": [
+              5,
+              5,
+              420
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 3,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.6428571428571429,
+              0.42857142857142855,
+              1.3571428571428572
+            ],
+            "laneCounts": [
+              5,
+              5,
+              386
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 4,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7142857142857143,
+              0.6428571428571429,
+              1.5714285714285714
+            ],
+            "laneCounts": [
+              6,
+              4,
+              385
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 5,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.6428571428571429,
+              0.5,
+              1.1428571428571428
+            ],
+            "laneCounts": [
+              3,
+              3,
+              378
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 6,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7142857142857143,
+              0.7142857142857143,
+              1.4285714285714286
+            ],
+            "laneCounts": [
+              2,
+              4,
+              371
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 7,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7857142857142857,
+              0.5714285714285714,
+              1.3571428571428572
+            ],
+            "laneCounts": [
+              4,
+              4,
+              379
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 8,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.5714285714285714,
+              1.8571428571428572
+            ],
+            "laneCounts": [
+              5,
+              4,
+              399
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 9,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.5714285714285714,
+              2
+            ],
+            "laneCounts": [
+              6,
+              4,
+              383
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 10,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              1.0714285714285714,
+              0.9285714285714286,
+              1.9285714285714286
+            ],
+            "laneCounts": [
+              5,
+              6,
+              394
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": null,
+            "repeat": 11,
+            "counts": [
+              0,
+              0
+            ],
+            "decoded": -1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7142857142857143,
+              0.5,
+              1.3571428571428572
+            ],
+            "laneCounts": [
+              4,
+              2,
+              376
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 0,
+            "counts": [
+              8,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.6428571428571429,
+              0.6428571428571429,
+              1.7142857142857142
+            ],
+            "laneCounts": [
+              3,
+              3,
+              371
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 1,
+            "counts": [
+              6,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.5714285714285714,
+              0.5,
+              1.2857142857142858
+            ],
+            "laneCounts": [
+              5,
+              3,
+              411
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 2,
+            "counts": [
+              10,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              1,
+              0.7857142857142857,
+              1.8571428571428572
+            ],
+            "laneCounts": [
+              6,
+              5,
+              401
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 3,
+            "counts": [
+              9,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7142857142857143,
+              0.5714285714285714,
+              1.2857142857142858
+            ],
+            "laneCounts": [
+              4,
+              5,
+              382
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 4,
+            "counts": [
+              10,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.6428571428571429,
+              1.7857142857142858
+            ],
+            "laneCounts": [
+              5,
+              3,
+              411
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 5,
+            "counts": [
+              8,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.6428571428571429,
+              0.42857142857142855,
+              1.2857142857142858
+            ],
+            "laneCounts": [
+              4,
+              3,
+              418
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 6,
+            "counts": [
+              9,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.9285714285714286,
+              1.7857142857142858
+            ],
+            "laneCounts": [
+              4,
+              7,
+              391
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 7,
+            "counts": [
+              9,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7857142857142857,
+              0.5714285714285714,
+              1.9285714285714286
+            ],
+            "laneCounts": [
+              5,
+              3,
+              387
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 8,
+            "counts": [
+              9,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.6428571428571429,
+              2
+            ],
+            "laneCounts": [
+              6,
+              5,
+              403
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 9,
+            "counts": [
+              8,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.9285714285714286,
+              0.7857142857142857,
+              1.5714285714285714
+            ],
+            "laneCounts": [
+              4,
+              4,
+              403
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 10,
+            "counts": [
+              9,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              1,
+              1.0714285714285714,
+              2.0714285714285716
+            ],
+            "laneCounts": [
+              4,
+              4,
+              410
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 0,
+            "repeat": 11,
+            "counts": [
+              8,
+              0
+            ],
+            "decoded": 0,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7142857142857143,
+              0.5714285714285714,
+              1.5
+            ],
+            "laneCounts": [
+              3,
+              3,
+              389
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 0,
+            "counts": [
+              0,
+              6
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.5714285714285714,
+              0.5714285714285714,
+              1.2142857142857142
+            ],
+            "laneCounts": [
+              3,
+              5,
+              379
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 1,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7857142857142857,
+              0.9285714285714286,
+              1.6428571428571428
+            ],
+            "laneCounts": [
+              6,
+              2,
+              402
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 2,
+            "counts": [
+              0,
+              6
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.5714285714285714,
+              0.5,
+              1.5
+            ],
+            "laneCounts": [
+              6,
+              4,
+              406
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 3,
+            "counts": [
+              0,
+              7
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.6428571428571429,
+              0.6428571428571429,
+              1.7142857142857142
+            ],
+            "laneCounts": [
+              3,
+              6,
+              393
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 4,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              1.0714285714285714,
+              1,
+              2.2142857142857144
+            ],
+            "laneCounts": [
+              5,
+              8,
+              385
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 5,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7857142857142857,
+              0.7142857142857143,
+              1.7142857142857142
+            ],
+            "laneCounts": [
+              3,
+              7,
+              406
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 6,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.6428571428571429,
+              0.5,
+              1.3571428571428572
+            ],
+            "laneCounts": [
+              4,
+              5,
+              384
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 7,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.5714285714285714,
+              0.5714285714285714,
+              1.2142857142857142
+            ],
+            "laneCounts": [
+              4,
+              4,
+              407
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 8,
+            "counts": [
+              0,
+              7
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.9285714285714286,
+              2.0714285714285716
+            ],
+            "laneCounts": [
+              5,
+              4,
+              419
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 9,
+            "counts": [
+              0,
+              8
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.7857142857142857,
+              0.5714285714285714,
+              1.4285714285714286
+            ],
+            "laneCounts": [
+              4,
+              7,
+              408
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 10,
+            "counts": [
+              0,
+              6
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.8571428571428571,
+              2
+            ],
+            "laneCounts": [
+              4,
+              7,
+              411
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 1,
+            "repeat": 11,
+            "counts": [
+              0,
+              6
+            ],
+            "decoded": 1,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.5714285714285714,
+              0.6428571428571429,
+              1.4285714285714286
+            ],
+            "laneCounts": [
+              3,
+              3,
+              367
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 0,
+            "counts": [
+              8,
+              6
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.6428571428571429,
+              0.5714285714285714,
+              1.5
+            ],
+            "laneCounts": [
+              5,
+              3,
+              404
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 1,
+            "counts": [
+              8,
+              6
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.8571428571428571,
+              2
+            ],
+            "laneCounts": [
+              5,
+              3,
+              399
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 2,
+            "counts": [
+              5,
+              9
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.9285714285714286,
+              0.9285714285714286,
+              2
+            ],
+            "laneCounts": [
+              5,
+              4,
+              413
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 3,
+            "counts": [
+              6,
+              8
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              1.0714285714285714,
+              1.9285714285714286
+            ],
+            "laneCounts": [
+              3,
+              6,
+              405
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 4,
+            "counts": [
+              10,
+              3
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.6428571428571429,
+              0.6428571428571429,
+              1.6428571428571428
+            ],
+            "laneCounts": [
+              5,
+              4,
+              385
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 5,
+            "counts": [
+              9,
+              8
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.6428571428571429,
+              0.6428571428571429,
+              1.4285714285714286
+            ],
+            "laneCounts": [
+              5,
+              6,
+              396
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 6,
+            "counts": [
+              6,
+              10
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.8571428571428571,
+              0.2857142857142857,
+              1.2857142857142858
+            ],
+            "laneCounts": [
+              4,
+              3,
+              406
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 7,
+            "counts": [
+              9,
+              5
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              1,
+              0.9285714285714286,
+              1.7857142857142858
+            ],
+            "laneCounts": [
+              3,
+              7,
+              394
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 8,
+            "counts": [
+              8,
+              8
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              1,
+              0.7857142857142857,
+              1.8571428571428572
+            ],
+            "laneCounts": [
+              4,
+              7,
+              408
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 9,
+            "counts": [
+              9,
+              6
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.9285714285714286,
+              0.9285714285714286,
+              1.8571428571428572
+            ],
+            "laneCounts": [
+              5,
+              1,
+              402
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 10,
+            "counts": [
+              7,
+              9
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.6428571428571429,
+              0.5714285714285714,
+              1.0714285714285714
+            ],
+            "laneCounts": [
+              3,
+              6,
+              424
+            ],
+            "weightsUnchanged": true
+          },
+          {
+            "seed": 11000,
+            "cue": 2,
+            "condition": 2,
+            "repeat": 11,
+            "counts": [
+              7,
+              5
+            ],
+            "decoded": 2,
+            "routedCue": 2,
+            "pooledCue": 2,
+            "rates": [
+              0.5714285714285714,
+              0.7142857142857143,
+              1.5714285714285714
+            ],
+            "laneCounts": [
+              3,
+              7,
+              399
+            ],
+            "weightsUnchanged": true
+          }
+        ]
+      }
+    ],
+    "summary": {
+      "passed": false,
+      "stoppedAt": 11000
+    }
+  },
+  "synthetic": null,
+  "independent": null,
+  "source": null,
+  "pilot": null
+}

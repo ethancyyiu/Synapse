@@ -1,0 +1,31 @@
+{
+  "status": "stopped_protocol_incomplete",
+  "kind": "read_only_protocol_audit",
+  "date": "",
+  "source": "docs/lab-notebook.md:2003",
+  "plannedStudents": [10917, 10918],
+  "plannedTeachers": [861, 862],
+  "task": "previous_opponent offset 2 noise 0.5",
+  "recoverable": {
+    "receiverBranches": ["no message", "forced bit 0", "forced bit 1"],
+    "receiverProbes": "Earlier noisy protocol specifies cues 0/1/2, repeats 0..11, two-round cue to (cue+2)%3 transitions, DN 3141/3165, and keyed streams; new text says reuse this check.",
+    "checkpoints": [0, 6, 12, 24, 48, 96, 288],
+    "learningBudget": "12 episodes x 24 rounds",
+    "heldOutEvaluation": "72 rounds, frozen, disconnected, actual simulator instances"
+  },
+  "unresolvedEssentialSetting": {
+    "name": "training action-selection schedule",
+    "choicesInExistingCode": [
+      "Autonomous epsilon-greedy provisional actions from the current teacher-guided exploration runner.",
+      "VPN-cue-specific forced balanced 0/1/2 action cycle after epsilon-greedy proposal from the earlier noise-0.5 prerequisite runner."
+    ],
+    "whyMaterial": "The chosen action determines own reward, selected-head Q update, exploration exposure, and every later frozen checkpoint. The line-2003 protocol names epsilon and cue heads but does not say whether the earlier balanced override is retained or removed."
+  },
+  "newNeuralProbes": 0,
+  "newTrainingRounds": 0,
+  "newFrozenEvaluations": 0,
+  "receiverGates": "not evaluated",
+  "learningGates": "not evaluated",
+  "previousNoisyReceiverFailure": "unchanged; 863 second cue 0 was 9/12 and 864 first cue 0 was 8/12 in no-message and both forced-bit branches",
+  "previousTeachingFailures": "unchanged"
+}

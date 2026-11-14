@@ -1,0 +1,72 @@
+{
+ "status": "completed",
+ "teacherSeed": 29023,
+ "studentSeed": 29024,
+ "teacherWins": 65,
+ "staleTeacherWins": 68,
+ "newRuleSlot": 1,
+ "messages": {
+  "newRule": 92,
+  "oldRule": 92
+ },
+ "points": [
+  {
+   "rounds": 0,
+   "alone": 1,
+   "trained": 1,
+   "bothUngated": 1,
+   "bothGated": 1,
+   "trust": {
+    "newRule": 1,
+    "oldRule": 1
+   }
+  },
+  {
+   "rounds": 24,
+   "alone": 2,
+   "trained": 52,
+   "bothUngated": 4,
+   "bothGated": 47,
+   "trust": {
+    "newRule": 1,
+    "oldRule": 0.028147497671065603
+   }
+  },
+  {
+   "rounds": 48,
+   "alone": 2,
+   "trained": 69,
+   "bothUngated": 48,
+   "bothGated": 69,
+   "trust": {
+    "newRule": 1,
+    "oldRule": 0.014411518807585589
+   }
+  },
+  {
+   "rounds": 96,
+   "alone": 24,
+   "trained": 71,
+   "bothUngated": 44,
+   "bothGated": 71,
+   "trust": {
+    "newRule": 0.9976941569907863,
+    "oldRule": 0.26830295810358706
+   }
+  }
+ ],
+ "verdict": {
+  "choosingHelps": true,
+  "badAdviserCostsLittle": true
+ },
+ "finalTrust": {
+  "newRule": 0.9976941569907863,
+  "oldRule": 0.26830295810358706
+ },
+ "agreement": {
+  "bothSent": 92,
+  "agreed": 0
+ },
+ "teachersFrozen": true,
+ "synapsesUnchanged": true
+}

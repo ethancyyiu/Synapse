@@ -1,0 +1,982 @@
+{
+ "protocol": "docs/two-teacher-cohort-protocol.md",
+ "seedsFound": 15,
+ "completed": 14,
+ "stoppedTeacher": 0,
+ "stoppedStaleTeacher": 1,
+ "choosingHelps96": {
+  "mean": 8.428571428571429,
+  "bootstrap95": [
+   3.7857142857142856,
+   13.571428571428571
+  ],
+  "perSeed": [
+   0,
+   1,
+   1,
+   4,
+   0,
+   23,
+   23,
+   13,
+   27,
+   11,
+   9,
+   0,
+   6,
+   0
+  ]
+ },
+ "badAdviserCost96": {
+  "mean": 0,
+  "bootstrap95": [
+   0,
+   0
+  ],
+  "perSeed": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ]
+ },
+ "holds": {
+  "choosingHelps": false,
+  "badAdviserCostsLittle": true
+ },
+ "passed": false,
+ "reportedNotTested": {
+  "choosingHelps48": {
+   "mean": 17.928571428571427,
+   "bootstrap95": [
+    14.357142857142858,
+    20.928571428571427
+   ],
+   "perSeed": [
+    17,
+    19,
+    24,
+    17,
+    1,
+    7,
+    14,
+    19,
+    21,
+    21,
+    24,
+    21,
+    23,
+    23
+   ]
+  },
+  "badAdviserCost48": {
+   "mean": -1.5714285714285714,
+   "bootstrap95": [
+    -2.7142857142857144,
+    -0.5714285714285714
+   ],
+   "perSeed": [
+    0,
+    -2,
+    0,
+    -5,
+    0,
+    0,
+    -6,
+    -1,
+    0,
+    -5,
+    -2,
+    -1,
+    0,
+    0
+   ]
+  },
+  "choosingHelps24": {
+   "mean": 36.07142857142857,
+   "bootstrap95": [
+    27.714285714285715,
+    44.357142857142854
+   ],
+   "perSeed": [
+    37,
+    53,
+    45,
+    24,
+    47,
+    49,
+    24,
+    26,
+    43,
+    0,
+    31,
+    31,
+    26,
+    69
+   ]
+  },
+  "badAdviserCost24": {
+   "mean": -5.571428571428571,
+   "bootstrap95": [
+    -10.214285714285714,
+    -1.7142857142857142
+   ],
+   "perSeed": [
+    -4,
+    0,
+    -7,
+    0,
+    0,
+    -1,
+    0,
+    -23,
+    -5,
+    -23,
+    -15,
+    0,
+    0,
+    0
+   ]
+  },
+  "gatedMinusAlone96": {
+   "mean": 33.92857142857143,
+   "bootstrap95": [
+    26.571428571428573,
+    40.785714285714285
+   ],
+   "perSeed": [
+    18,
+    46,
+    46,
+    22,
+    46,
+    15,
+    23,
+    11,
+    47,
+    45,
+    43,
+    46,
+    21,
+    46
+   ]
+  },
+  "newRuleInSlot0": {
+   "seeds": 7,
+   "choosing96": 9.571428571428571,
+   "cost96": 0
+  },
+  "newRuleInSlot1": {
+   "seeds": 7,
+   "choosing96": 7.285714285714286,
+   "cost96": 0
+  }
+ },
+ "meanWins": {
+  "0": {
+   "alone": 1.5,
+   "trained": 1.5,
+   "bothUngated": 1.5,
+   "bothGated": 1.5
+  },
+  "24": {
+   "alone": 1.5714285714285714,
+   "trained": 51.714285714285715,
+   "bothUngated": 10.071428571428571,
+   "bothGated": 46.142857142857146
+  },
+  "48": {
+   "alone": 13,
+   "trained": 69.42857142857143,
+   "bothUngated": 49.92857142857143,
+   "bothGated": 67.85714285714286
+  },
+  "96": {
+   "alone": 36.42857142857143,
+   "trained": 70.35714285714286,
+   "bothUngated": 61.92857142857143,
+   "bothGated": 70.35714285714286
+  }
+ },
+ "meanTrust": {
+  "0": {
+   "newRule": 1,
+   "oldRule": 1
+  },
+  "24": {
+   "newRule": 0.8784091428571428,
+   "oldRule": 0.04083053707786042
+  },
+  "48": {
+   "newRule": 0.9905075401472623,
+   "oldRule": 0.04463517776191295
+  },
+  "96": {
+   "newRule": 0.9994013360919632,
+   "oldRule": 0.1034543040272288
+  }
+ },
+ "integrity": true,
+ "seeds": [
+  {
+   "file": "seed_3.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 61,
+   "newRuleSlot": 1,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "bothUngated": 2,
+     "bothGated": 2,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 67,
+     "bothUngated": 26,
+     "bothGated": 63,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.06871947673600001
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 26,
+     "trained": 71,
+     "bothUngated": 54,
+     "bothGated": 71,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.06871947673600001
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 53,
+     "trained": 71,
+     "bothUngated": 71,
+     "bothGated": 71,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.04398046511104001
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_4.json",
+   "status": "completed",
+   "teacherWins": 64,
+   "staleTeacherWins": 63,
+   "newRuleSlot": 0,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "bothUngated": 2,
+     "bothGated": 2,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 55,
+     "bothUngated": 2,
+     "bothGated": 55,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.028147497671065603
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 23,
+     "trained": 69,
+     "bothUngated": 48,
+     "bothGated": 67,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.1715292150460685
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 70,
+     "bothUngated": 69,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.30977869762948385
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_5.json",
+   "status": "completed",
+   "teacherWins": 64,
+   "staleTeacherWins": 61,
+   "newRuleSlot": 1,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "bothUngated": 1,
+     "bothGated": 1,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 53,
+     "bothUngated": 1,
+     "bothGated": 46,
+     "trust": {
+      "newRule": 0.672064,
+      "oldRule": 0.04398046511104001
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "bothUngated": 46,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 0.9907694222037414,
+      "oldRule": 0.01152921504606847
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 70,
+     "bothUngated": 69,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 0.9999992147492849,
+      "oldRule": 0.009223372036854777
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_6.json",
+   "status": "completed",
+   "teacherWins": 63,
+   "staleTeacherWins": 63,
+   "newRuleSlot": 0,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "bothUngated": 1,
+     "bothGated": 1,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 25,
+     "bothUngated": 1,
+     "bothGated": 25,
+     "trust": {
+      "newRule": 0.5696,
+      "oldRule": 0.04398046511104001
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 24,
+     "trained": 68,
+     "bothUngated": 46,
+     "bothGated": 63,
+     "trust": {
+      "newRule": 0.9848566462529666,
+      "oldRule": 0.01152921504606847
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 70,
+     "bothUngated": 66,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 0.9954924689332251,
+      "oldRule": 0.0037778931862957168
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_7.json",
+   "status": "completed",
+   "teacherWins": 64,
+   "staleTeacherWins": 67,
+   "newRuleSlot": 1,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "bothUngated": 1,
+     "bothGated": 1,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 70,
+     "bothUngated": 23,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.02251799813685248
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "bothUngated": 69,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.007378697629483821
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 70,
+     "bothUngated": 70,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.0037778931862957168
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_8.json",
+   "status": "completed",
+   "teacherWins": 68,
+   "staleTeacherWins": 69,
+   "newRuleSlot": 0,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 4,
+     "trained": 4,
+     "bothUngated": 4,
+     "bothGated": 4,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 4,
+     "trained": 68,
+     "bothUngated": 18,
+     "bothGated": 67,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.05497558138880001
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 50,
+     "trained": 70,
+     "bothUngated": 63,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.19518437208883202
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 55,
+     "trained": 70,
+     "bothUngated": 47,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.07994751880758559
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_9.json",
+   "status": "completed",
+   "teacherWins": 64,
+   "staleTeacherWins": 67,
+   "newRuleSlot": 1,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "bothUngated": 2,
+     "bothGated": 2,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 48,
+     "bothUngated": 24,
+     "bothGated": 48,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.02251799813685248
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 24,
+     "trained": 68,
+     "bothUngated": 48,
+     "bothGated": 62,
+     "trust": {
+      "newRule": 0.9862561046528,
+      "oldRule": 0.004722366482869646
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 71,
+     "bothUngated": 48,
+     "bothGated": 71,
+     "trust": {
+      "newRule": 0.9992408532435091,
+      "oldRule": 0.32899035203142835
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_10.json",
+   "status": "completed",
+   "teacherWins": 58,
+   "staleTeacherWins": 62,
+   "newRuleSlot": 0,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "bothUngated": 1,
+     "bothGated": 1,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 50,
+     "bothUngated": 1,
+     "bothGated": 27,
+     "trust": {
+      "newRule": 0.712,
+      "oldRule": 0.04398046511104001
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 67,
+     "bothUngated": 47,
+     "bothGated": 66,
+     "trust": {
+      "newRule": 0.975066733697519,
+      "oldRule": 0.014411518807585589
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 59,
+     "trained": 70,
+     "bothUngated": 57,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 0.9992343072283428,
+      "oldRule": 0.1637778931862957
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_11.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 68,
+   "newRuleSlot": 1,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "bothUngated": 1,
+     "bothGated": 1,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 52,
+     "bothUngated": 4,
+     "bothGated": 47,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.028147497671065603
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 2,
+     "trained": 69,
+     "bothUngated": 48,
+     "bothGated": 69,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.014411518807585589
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 71,
+     "bothUngated": 44,
+     "bothGated": 71,
+     "trust": {
+      "newRule": 0.9976941569907863,
+      "oldRule": 0.26830295810358706
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_12.json",
+   "status": "completed",
+   "teacherWins": 62,
+   "staleTeacherWins": 64,
+   "newRuleSlot": 0,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "bothUngated": 1,
+     "bothGated": 1,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 24,
+     "bothUngated": 1,
+     "bothGated": 1,
+     "trust": {
+      "newRule": 0.5696,
+      "oldRule": 0.035184372088832
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "bothUngated": 44,
+     "bothGated": 65,
+     "trust": {
+      "newRule": 0.9532432680288256,
+      "oldRule": 0.005902958103587057
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 26,
+     "trained": 71,
+     "bothUngated": 60,
+     "bothGated": 71,
+     "trust": {
+      "newRule": 0.9999629555004075,
+      "oldRule": 0.001934281311383407
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_13.json",
+   "status": "stopped_stale_teacher",
+   "teacherWins": 69,
+   "staleTeacherWins": 48,
+   "newRuleSlot": null,
+   "points": null
+  },
+  {
+   "file": "seed_14.json",
+   "status": "completed",
+   "teacherWins": 68,
+   "staleTeacherWins": 64,
+   "newRuleSlot": 0,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "bothUngated": 2,
+     "bothGated": 2,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 48,
+     "bothUngated": 2,
+     "bothGated": 33,
+     "trust": {
+      "newRule": 0.8400000000000001,
+      "oldRule": 0.014411518807585589
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 2,
+     "trained": 71,
+     "bothUngated": 45,
+     "bothGated": 69,
+     "trust": {
+      "newRule": 0.9792192302350335,
+      "oldRule": 0.0037778931862957168
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 28,
+     "trained": 71,
+     "bothUngated": 62,
+     "bothGated": 71,
+     "trust": {
+      "newRule": 0.9999956840029773,
+      "oldRule": 0.0015474250491067257
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_15.json",
+   "status": "completed",
+   "teacherWins": 64,
+   "staleTeacherWins": 66,
+   "newRuleSlot": 1,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "bothUngated": 1,
+     "bothGated": 1,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 47,
+     "bothUngated": 16,
+     "bothGated": 47,
+     "trust": {
+      "newRule": 0.934464,
+      "oldRule": 0.035184372088832
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 24,
+     "trained": 69,
+     "bothUngated": 47,
+     "bothGated": 68,
+     "trust": {
+      "newRule": 0.9976941569907863,
+      "oldRule": 0.007378697629483821
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 70,
+     "bothUngated": 70,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 0.9999990646389522,
+      "oldRule": 0.0037778931862957168
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_16.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 64,
+   "newRuleSlot": 0,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "bothUngated": 1,
+     "bothGated": 1,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 47,
+     "bothUngated": 21,
+     "bothGated": 47,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.04398046511104001
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "bothUngated": 47,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.02251799813685248
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 49,
+     "trained": 70,
+     "bothUngated": 64,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.21152921504606848
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_17.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 67,
+   "newRuleSlot": 1,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "bothUngated": 1,
+     "bothGated": 1,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 70,
+     "bothUngated": 1,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.08589934592000002
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 2,
+     "trained": 70,
+     "bothUngated": 47,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.08589934592000002
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 70,
+     "bothUngated": 70,
+     "bothGated": 70,
+     "trust": {
+      "newRule": 1,
+      "oldRule": 0.018014398509481985
+     }
+    }
+   ]
+  }
+ ]
+}

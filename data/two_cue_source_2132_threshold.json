@@ -1,0 +1,319 @@
+{
+  "command": "node tools/check_two_cue_source_2132.mjs threshold",
+  "sourceNeuron": 2132,
+  "sampleMs": 120,
+  "bitRule": "trace<threshold",
+  "calibrationSeed": 11,
+  "evaluationSeed": 12,
+  "selectedThreshold": 1.9148564006774822,
+  "selection": "Maximize the weaker cue mapping accuracy on seed 11; break ties by mean accuracy",
+  "calibration": {
+    "distributions": [
+      {
+        "cue": 0,
+        "mappingAQuantiles": [
+          0,
+          0.9483042766076386,
+          1.2001438082463394,
+          1.735021360925346,
+          2.6925679077174913
+        ],
+        "mappingBQuantiles": [
+          0,
+          0.029558280389068135,
+          0.25301206735667076,
+          1.6032549992517147,
+          1.8727470523459493
+        ],
+        "beforeTrainingQuantiles": [
+          2.3255267694887568e-17,
+          2.7966884559269975e-11,
+          9.031159314419882e-8,
+          0.00042432962371621066,
+          0.8025187979624789
+        ]
+      },
+      {
+        "cue": 1,
+        "mappingAQuantiles": [
+          0.74453158746591,
+          1.2193607636894024,
+          1.4028806949332833,
+          1.7905636343991795,
+          2.115375051386664
+        ],
+        "mappingBQuantiles": [
+          2.5529764338126566,
+          3.154985009525858,
+          4.009720027711666,
+          4.955268279292787,
+          6.648122170781239
+        ],
+        "beforeTrainingQuantiles": [
+          0,
+          6.4625315742796166e-12,
+          0.000004881783175635412,
+          0.00035978641293048984,
+          0.1451481984836253
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "threshold": 0.5,
+        "byCue": [
+          {
+            "cue": 0,
+            "bitInformation": 0.1639560440835478,
+            "bestBitMappingAccuracy": 0.7083333333333334,
+            "mappingABit1": 3,
+            "mappingBBit1": 18,
+            "nPerMapping": 36
+          },
+          {
+            "cue": 1,
+            "bitInformation": 0,
+            "bestBitMappingAccuracy": 0.5,
+            "mappingABit1": 0,
+            "mappingBBit1": 0,
+            "nPerMapping": 36
+          }
+        ],
+        "conditionalBitInformation": 0.0819780220417739,
+        "bestBitMappingAccuracy": 0.6041666666666667,
+        "mappingAccuracyByCue": [
+          {
+            "cue": 0,
+            "correct": 51,
+            "total": 72,
+            "byTest": [
+              18,
+              17,
+              16
+            ]
+          },
+          {
+            "cue": 1,
+            "correct": 36,
+            "total": 72,
+            "byTest": [
+              12,
+              12,
+              12
+            ]
+          }
+        ],
+        "pairedShuffle": {
+          "permutations": 2000,
+          "percentile95": 0.027959440042805594,
+          "pAtLeastObserved": 0.0014992503748125937
+        }
+      },
+      {
+        "threshold": 1.9148564006774822,
+        "byCue": [
+          {
+            "cue": 0,
+            "bitInformation": 0.12115608152133572,
+            "bestBitMappingAccuracy": 0.6111111111111112,
+            "mappingABit1": 28,
+            "mappingBBit1": 36,
+            "nPerMapping": 36
+          },
+          {
+            "cue": 1,
+            "bitInformation": 0.5819765115539188,
+            "bestBitMappingAccuracy": 0.8888888888888888,
+            "mappingABit1": 28,
+            "mappingBBit1": 0,
+            "nPerMapping": 36
+          }
+        ],
+        "conditionalBitInformation": 0.3515662965376273,
+        "bestBitMappingAccuracy": 0.75,
+        "mappingAccuracyByCue": [
+          {
+            "cue": 0,
+            "correct": 44,
+            "total": 72,
+            "byTest": [
+              15,
+              13,
+              16
+            ]
+          },
+          {
+            "cue": 1,
+            "correct": 64,
+            "total": 72,
+            "byTest": [
+              20,
+              22,
+              22
+            ]
+          }
+        ],
+        "pairedShuffle": {
+          "permutations": 2000,
+          "percentile95": 0.046063820938392674,
+          "pAtLeastObserved": 0.0004997501249375312
+        }
+      }
+    ]
+  },
+  "evaluation": {
+    "distributions": [
+      {
+        "cue": 0,
+        "mappingAQuantiles": [
+          0.16247861617952075,
+          1.1055276483182666,
+          1.3852558748280437,
+          1.9941932516686398,
+          2.654074320944431
+        ],
+        "mappingBQuantiles": [
+          0,
+          0.023099052605883495,
+          0.1983419482828676,
+          1.3835138736614114,
+          1.6828363536602482
+        ],
+        "beforeTrainingQuantiles": [
+          0,
+          0,
+          2.589232469329697e-16,
+          0.000008719052374380909,
+          0.9559974818331
+        ]
+      },
+      {
+        "cue": 1,
+        "mappingAQuantiles": [
+          0.37914481965873786,
+          1.0556681411602786,
+          1.3067473519844295,
+          1.721395152386227,
+          2.7237822940130805
+        ],
+        "mappingBQuantiles": [
+          2.199309327578725,
+          3.1604564258288024,
+          3.9785292163462977,
+          4.613243565038768,
+          5.552855109938364
+        ],
+        "beforeTrainingQuantiles": [
+          0,
+          0,
+          1.9131983969049826e-15,
+          0.000006858649510262859,
+          0.21013623089577982
+        ]
+      }
+    ],
+    "comparisons": [
+      {
+        "threshold": 0.5,
+        "byCue": [
+          {
+            "cue": 0,
+            "bitInformation": 0.25907019533384423,
+            "bestBitMappingAccuracy": 0.7638888888888888,
+            "mappingABit1": 2,
+            "mappingBBit1": 21,
+            "nPerMapping": 36
+          },
+          {
+            "cue": 1,
+            "bitInformation": 0.02835035372621017,
+            "bestBitMappingAccuracy": 0.5277777777777778,
+            "mappingABit1": 2,
+            "mappingBBit1": 0,
+            "nPerMapping": 36
+          }
+        ],
+        "conditionalBitInformation": 0.14371027453002722,
+        "bestBitMappingAccuracy": 0.6458333333333333,
+        "mappingAccuracyByCue": [
+          {
+            "cue": 0,
+            "correct": 55,
+            "total": 72,
+            "byTest": [
+              20,
+              18,
+              17
+            ]
+          },
+          {
+            "cue": 1,
+            "correct": 34,
+            "total": 72,
+            "byTest": [
+              12,
+              12,
+              10
+            ]
+          }
+        ],
+        "pairedShuffle": {
+          "permutations": 2000,
+          "percentile95": 0.039939420682707616,
+          "pAtLeastObserved": 0.0004997501249375312
+        }
+      },
+      {
+        "threshold": 1.9148564006774822,
+        "byCue": [
+          {
+            "cue": 0,
+            "bitInformation": 0.20949007123452656,
+            "bestBitMappingAccuracy": 0.6805555555555556,
+            "mappingABit1": 23,
+            "mappingBBit1": 36,
+            "nPerMapping": 36
+          },
+          {
+            "cue": 1,
+            "bitInformation": 0.5819765115539188,
+            "bestBitMappingAccuracy": 0.8888888888888888,
+            "mappingABit1": 28,
+            "mappingBBit1": 0,
+            "nPerMapping": 36
+          }
+        ],
+        "conditionalBitInformation": 0.3957332913942227,
+        "bestBitMappingAccuracy": 0.7847222222222222,
+        "mappingAccuracyByCue": [
+          {
+            "cue": 0,
+            "correct": 49,
+            "total": 72,
+            "byTest": [
+              15,
+              19,
+              15
+            ]
+          },
+          {
+            "cue": 1,
+            "correct": 64,
+            "total": 72,
+            "byTest": [
+              19,
+              23,
+              22
+            ]
+          }
+        ],
+        "pairedShuffle": {
+          "permutations": 2000,
+          "percentile95": 0.04368986538339342,
+          "pAtLeastObserved": 0.0004997501249375312
+        }
+      }
+    ]
+  },
+  "note": "Mapping accuracy is a diagnostic using cue-wise bit polarity fixed from calibration; no decoder was added to Fly B."
+}

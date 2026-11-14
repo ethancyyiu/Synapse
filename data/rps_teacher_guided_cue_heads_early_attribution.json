@@ -1,0 +1,3085 @@
+{
+  "source": [
+    "data/rps_teacher_guided_cue_heads_early.json",
+    "data/rps_teacher_guided_cue_heads_early_continuation.json",
+    "data/rps_teacher_guided_cue_heads_attribution.json"
+  ],
+  "command": "node tools/analyze_rps_teacher_guided_cue_heads_early.mjs",
+  "scope": "read-only trial and saved-checkpoint analysis; no neural simulation or training",
+  "limitations": [
+    "No frozen evaluations or full controller snapshots were saved after individual training rounds 1–11; the exact first margin-crossing round cannot be determined.",
+    "A positive round-12 margin after one rewarded correct-action update is association, not proof that that update alone caused dominance.",
+    "Seed 842 shuffled advice violates its locked <=60% quality limit; it is descriptive, not a valid shuffled control.",
+    "Saved arms do not match action-change frequency or action distributions; causal attribution to teacher information versus exploration remains unresolved."
+  ],
+  "students": [
+    {
+      "seed": 841,
+      "shuffle": {
+        "moved": 12,
+        "quality": 0.4356060606060606,
+        "valid": true
+      },
+      "arms": {
+        "correct": {
+          "training12": {
+            "n": 11,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              5,
+              4,
+              2
+            ],
+            "playedActions": [
+              4,
+              6,
+              1
+            ],
+            "approvals": 4,
+            "rejections": 7,
+            "noMessage": 0,
+            "changed": 7,
+            "helpfulChanges": 4,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 3,
+            "unchanged": 4,
+            "correctProposals": 4,
+            "correctPlayed": 8,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 3,
+                "provisionalActions": [
+                  2,
+                  0,
+                  1
+                ],
+                "playedActions": [
+                  3,
+                  0,
+                  0
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 3,
+                "rewardedUpdatesByAction": [
+                  3,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 1,
+                "n": 4,
+                "provisionalActions": [
+                  1,
+                  2,
+                  1
+                ],
+                "playedActions": [
+                  0,
+                  4,
+                  0
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 4,
+                "rewardedUpdatesByAction": [
+                  0,
+                  4,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 2,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 2,
+                "n": 4,
+                "provisionalActions": [
+                  2,
+                  2,
+                  0
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  1
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  1
+                ],
+                "firstCorrectReward": {
+                  "round": 10,
+                  "candidate": "paper",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": true
+              }
+            ]
+          },
+          "training24": {
+            "n": 23,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              9,
+              6,
+              8
+            ],
+            "playedActions": [
+              7,
+              10,
+              6
+            ],
+            "approvals": 12,
+            "rejections": 11,
+            "noMessage": 0,
+            "changed": 11,
+            "helpfulChanges": 6,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 5,
+            "unchanged": 12,
+            "correctProposals": 11,
+            "correctPlayed": 17,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 7,
+                "provisionalActions": [
+                  4,
+                  1,
+                  2
+                ],
+                "playedActions": [
+                  5,
+                  1,
+                  1
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 5,
+                "rewardedUpdatesByAction": [
+                  5,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                }
+              },
+              {
+                "cue": 1,
+                "n": 8,
+                "provisionalActions": [
+                  3,
+                  3,
+                  2
+                ],
+                "playedActions": [
+                  1,
+                  7,
+                  0
+                ],
+                "correctProposals": 3,
+                "correctPlayed": 7,
+                "rewardedUpdatesByAction": [
+                  0,
+                  7,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 2,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              },
+              {
+                "cue": 2,
+                "n": 8,
+                "provisionalActions": [
+                  2,
+                  2,
+                  4
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  5
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 5,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  5
+                ],
+                "firstCorrectReward": {
+                  "round": 10,
+                  "candidate": "paper",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              }
+            ]
+          },
+          "frozen12": {
+            "wins": 69,
+            "actions": [
+              22,
+              24,
+              23
+            ],
+            "winsByAction": [
+              23,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 22,
+                "correctMarginMean": 0.1505366528537167,
+                "correctMarginMin": -0.006638579954933013,
+                "correctMarginMax": 0.3937234002683332,
+                "positiveMarginTrials": 22
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.5043155818564106,
+                "correctMarginMin": 0.3808986772919035,
+                "correctMarginMax": 0.5788697744088344,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.13299373522567934,
+                "correctMarginMin": 0.06107503749999592,
+                "correctMarginMax": 0.18115299328289328,
+                "positiveMarginTrials": 23
+              }
+            ]
+          },
+          "frozen24": {
+            "wins": 69,
+            "actions": [
+              22,
+              24,
+              23
+            ],
+            "winsByAction": [
+              23,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 22,
+                "correctMarginMean": 0.22564368053987724,
+                "correctMarginMin": -0.01178921404189396,
+                "correctMarginMax": 0.5485280404072213,
+                "positiveMarginTrials": 22
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.7244419908054202,
+                "correctMarginMin": 0.5478890368976824,
+                "correctMarginMax": 0.826403009396206,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.49496485559561126,
+                "correctMarginMin": 0.21723967119280152,
+                "correctMarginMax": 0.6823669192929774,
+                "positiveMarginTrials": 23
+              }
+            ]
+          }
+        },
+        "shuffled": {
+          "training12": {
+            "n": 11,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              5,
+              4,
+              2
+            ],
+            "playedActions": [
+              2,
+              5,
+              4
+            ],
+            "approvals": 6,
+            "rejections": 5,
+            "noMessage": 0,
+            "changed": 5,
+            "helpfulChanges": 2,
+            "harmfulChanges": 2,
+            "neutralWrongChanges": 1,
+            "unchanged": 6,
+            "correctProposals": 4,
+            "correctPlayed": 4,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 3,
+                "provisionalActions": [
+                  2,
+                  0,
+                  1
+                ],
+                "playedActions": [
+                  1,
+                  1,
+                  1
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  1,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                },
+                "oneRewardPositiveAt12": true
+              },
+              {
+                "cue": 1,
+                "n": 4,
+                "provisionalActions": [
+                  1,
+                  2,
+                  1
+                ],
+                "playedActions": [
+                  0,
+                  2,
+                  2
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 2,
+                "rewardedUpdatesByAction": [
+                  0,
+                  2,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 2,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 2,
+                "n": 4,
+                "provisionalActions": [
+                  2,
+                  2,
+                  0
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  1
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  1
+                ],
+                "firstCorrectReward": {
+                  "round": 10,
+                  "candidate": "paper",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": true
+              }
+            ]
+          },
+          "training24": {
+            "n": 23,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              9,
+              6,
+              8
+            ],
+            "playedActions": [
+              5,
+              8,
+              10
+            ],
+            "approvals": 12,
+            "rejections": 11,
+            "noMessage": 0,
+            "changed": 11,
+            "helpfulChanges": 2,
+            "harmfulChanges": 6,
+            "neutralWrongChanges": 3,
+            "unchanged": 12,
+            "correctProposals": 11,
+            "correctPlayed": 7,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 7,
+                "provisionalActions": [
+                  4,
+                  1,
+                  2
+                ],
+                "playedActions": [
+                  1,
+                  4,
+                  2
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  1,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                }
+              },
+              {
+                "cue": 1,
+                "n": 8,
+                "provisionalActions": [
+                  3,
+                  3,
+                  2
+                ],
+                "playedActions": [
+                  2,
+                  2,
+                  4
+                ],
+                "correctProposals": 3,
+                "correctPlayed": 2,
+                "rewardedUpdatesByAction": [
+                  0,
+                  2,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 2,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              },
+              {
+                "cue": 2,
+                "n": 8,
+                "provisionalActions": [
+                  2,
+                  2,
+                  4
+                ],
+                "playedActions": [
+                  2,
+                  2,
+                  4
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 4,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  4
+                ],
+                "firstCorrectReward": {
+                  "round": 10,
+                  "candidate": "paper",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              }
+            ]
+          },
+          "frozen12": {
+            "wins": 69,
+            "actions": [
+              22,
+              24,
+              23
+            ],
+            "winsByAction": [
+              23,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 22,
+                "correctMarginMean": 0.040347213675072234,
+                "correctMarginMin": -0.04589407095052636,
+                "correctMarginMax": 0.09414512684247033,
+                "positiveMarginTrials": 22
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.31819834168156297,
+                "correctMarginMin": 0.2376243519900205,
+                "correctMarginMax": 0.3684850186523575,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.13299373522567934,
+                "correctMarginMin": 0.06107503749999592,
+                "correctMarginMax": 0.18115299328289328,
+                "positiveMarginTrials": 23
+              }
+            ]
+          },
+          "frozen24": {
+            "wins": 69,
+            "actions": [
+              22,
+              24,
+              23
+            ],
+            "winsByAction": [
+              23,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 22,
+                "correctMarginMean": 0.0410815046555814,
+                "correctMarginMin": -0.04346000845483099,
+                "correctMarginMax": 0.09414512684247033,
+                "positiveMarginTrials": 22
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.31819834168156297,
+                "correctMarginMin": 0.2376243519900205,
+                "correctMarginMax": 0.3684850186523575,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.4060592875507124,
+                "correctMarginMin": 0.1827779640414935,
+                "correctMarginMax": 0.5571765572836583,
+                "positiveMarginTrials": 23
+              }
+            ]
+          }
+        },
+        "untrained": {
+          "training12": {
+            "n": 11,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              5,
+              4,
+              2
+            ],
+            "playedActions": [
+              3,
+              6,
+              2
+            ],
+            "approvals": 0,
+            "rejections": 11,
+            "noMessage": 0,
+            "changed": 11,
+            "helpfulChanges": 4,
+            "harmfulChanges": 4,
+            "neutralWrongChanges": 3,
+            "unchanged": 0,
+            "correctProposals": 4,
+            "correctPlayed": 4,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 3,
+                "provisionalActions": [
+                  2,
+                  0,
+                  1
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  0
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  1,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 6,
+                  "candidate": "scissors",
+                  "played": "rock",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": true
+              },
+              {
+                "cue": 1,
+                "n": 4,
+                "provisionalActions": [
+                  1,
+                  2,
+                  1
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  1
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 2,
+                "rewardedUpdatesByAction": [
+                  0,
+                  2,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 2,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 2,
+                "n": 4,
+                "provisionalActions": [
+                  2,
+                  2,
+                  0
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  1
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  1
+                ],
+                "firstCorrectReward": {
+                  "round": 10,
+                  "candidate": "paper",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": true
+              }
+            ]
+          },
+          "training24": {
+            "n": 23,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              9,
+              6,
+              8
+            ],
+            "playedActions": [
+              5,
+              13,
+              5
+            ],
+            "approvals": 0,
+            "rejections": 23,
+            "noMessage": 0,
+            "changed": 23,
+            "helpfulChanges": 6,
+            "harmfulChanges": 11,
+            "neutralWrongChanges": 6,
+            "unchanged": 0,
+            "correctProposals": 11,
+            "correctPlayed": 6,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 7,
+                "provisionalActions": [
+                  4,
+                  1,
+                  2
+                ],
+                "playedActions": [
+                  1,
+                  5,
+                  1
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  1,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 6,
+                  "candidate": "scissors",
+                  "played": "rock",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              },
+              {
+                "cue": 1,
+                "n": 8,
+                "provisionalActions": [
+                  3,
+                  3,
+                  2
+                ],
+                "playedActions": [
+                  1,
+                  4,
+                  3
+                ],
+                "correctProposals": 3,
+                "correctPlayed": 4,
+                "rewardedUpdatesByAction": [
+                  0,
+                  4,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 2,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              },
+              {
+                "cue": 2,
+                "n": 8,
+                "provisionalActions": [
+                  2,
+                  2,
+                  4
+                ],
+                "playedActions": [
+                  3,
+                  4,
+                  1
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  1
+                ],
+                "firstCorrectReward": {
+                  "round": 10,
+                  "candidate": "paper",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              }
+            ]
+          },
+          "frozen12": {
+            "wins": 69,
+            "actions": [
+              22,
+              24,
+              23
+            ],
+            "winsByAction": [
+              23,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 22,
+                "correctMarginMean": 0.029998255063397337,
+                "correctMarginMin": -0.007478245289516905,
+                "correctMarginMax": 0.04102717305950179,
+                "positiveMarginTrials": 22
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.2729774147058175,
+                "correctMarginMin": 0.20644271080498638,
+                "correctMarginMax": 0.31463431697350736,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.13299373522567934,
+                "correctMarginMin": 0.06107503749999592,
+                "correctMarginMax": 0.18115299328289328,
+                "positiveMarginTrials": 23
+              }
+            ]
+          },
+          "frozen24": {
+            "wins": 69,
+            "actions": [
+              22,
+              24,
+              23
+            ],
+            "winsByAction": [
+              23,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 22,
+                "correctMarginMean": 0.030118621106777974,
+                "correctMarginMin": -0.004709826291762323,
+                "correctMarginMax": 0.04102717305950179,
+                "positiveMarginTrials": 22
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.49357414507296893,
+                "correctMarginMin": 0.3732813686326785,
+                "correctMarginMax": 0.5639038075781466,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.13299373522567934,
+                "correctMarginMin": 0.06107503749999592,
+                "correctMarginMax": 0.18115299328289328,
+                "positiveMarginTrials": 23
+              }
+            ]
+          }
+        },
+        "disconnected": {
+          "training12": {
+            "n": 11,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              7,
+              2,
+              2
+            ],
+            "playedActions": [
+              7,
+              2,
+              2
+            ],
+            "approvals": 0,
+            "rejections": 0,
+            "noMessage": 11,
+            "changed": 0,
+            "helpfulChanges": 0,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 0,
+            "unchanged": 11,
+            "correctProposals": 2,
+            "correctPlayed": 2,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 3,
+                "provisionalActions": [
+                  2,
+                  0,
+                  1
+                ],
+                "playedActions": [
+                  2,
+                  0,
+                  1
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 2,
+                "rewardedUpdatesByAction": [
+                  2,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": null
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 1,
+                "n": 4,
+                "provisionalActions": [
+                  3,
+                  0,
+                  1
+                ],
+                "playedActions": [
+                  3,
+                  0,
+                  1
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 0,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": null,
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 2,
+                "n": 4,
+                "provisionalActions": [
+                  2,
+                  2,
+                  0
+                ],
+                "playedActions": [
+                  2,
+                  2,
+                  0
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 0,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": null,
+                "oneRewardPositiveAt12": false
+              }
+            ]
+          },
+          "training24": {
+            "n": 23,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              12,
+              5,
+              6
+            ],
+            "playedActions": [
+              12,
+              5,
+              6
+            ],
+            "approvals": 0,
+            "rejections": 0,
+            "noMessage": 23,
+            "changed": 0,
+            "helpfulChanges": 0,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 0,
+            "unchanged": 23,
+            "correctProposals": 6,
+            "correctPlayed": 6,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 7,
+                "provisionalActions": [
+                  4,
+                  1,
+                  2
+                ],
+                "playedActions": [
+                  4,
+                  1,
+                  2
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 4,
+                "rewardedUpdatesByAction": [
+                  4,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": null
+                }
+              },
+              {
+                "cue": 1,
+                "n": 8,
+                "provisionalActions": [
+                  6,
+                  0,
+                  2
+                ],
+                "playedActions": [
+                  6,
+                  0,
+                  2
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 0,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": null
+              },
+              {
+                "cue": 2,
+                "n": 8,
+                "provisionalActions": [
+                  2,
+                  4,
+                  2
+                ],
+                "playedActions": [
+                  2,
+                  4,
+                  2
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 2,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  2
+                ],
+                "firstCorrectReward": {
+                  "round": 19,
+                  "candidate": "scissors",
+                  "played": "scissors",
+                  "changedByMessage": false,
+                  "emittedBit": null
+                }
+              }
+            ]
+          },
+          "frozen12": {
+            "wins": 23,
+            "actions": [
+              45,
+              24,
+              0
+            ],
+            "winsByAction": [
+              23,
+              0,
+              0
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 22,
+                "correctMarginMean": 0.12295620323540399,
+                "correctMarginMin": -0.04121761182961574,
+                "correctMarginMax": 0.36807690126501136,
+                "positiveMarginTrials": 22
+              },
+              {
+                "cue": 1,
+                "wins": 0,
+                "correctMarginMean": 0,
+                "correctMarginMin": 0,
+                "correctMarginMax": 0,
+                "positiveMarginTrials": 0
+              },
+              {
+                "cue": 2,
+                "wins": 0,
+                "correctMarginMean": 0,
+                "correctMarginMin": 0,
+                "correctMarginMax": 0,
+                "positiveMarginTrials": 0
+              }
+            ]
+          },
+          "frozen24": {
+            "wins": 46,
+            "actions": [
+              45,
+              1,
+              23
+            ],
+            "winsByAction": [
+              23,
+              0,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 22,
+                "correctMarginMean": 0.2018286636691825,
+                "correctMarginMin": -0.022718433106818675,
+                "correctMarginMax": 0.5284995547281242,
+                "positiveMarginTrials": 22
+              },
+              {
+                "cue": 1,
+                "wins": 0,
+                "correctMarginMean": 0,
+                "correctMarginMin": 0,
+                "correctMarginMax": 0,
+                "positiveMarginTrials": 0
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.23748213138314805,
+                "correctMarginMin": 0.09984514845127362,
+                "correctMarginMax": 0.33263870321596034,
+                "positiveMarginTrials": 23
+              }
+            ]
+          }
+        },
+        "lookup": {
+          "training12": {
+            "n": 11,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              5,
+              4,
+              2
+            ],
+            "playedActions": [
+              4,
+              6,
+              1
+            ],
+            "approvals": 4,
+            "rejections": 7,
+            "noMessage": 0,
+            "changed": 7,
+            "helpfulChanges": 4,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 3,
+            "unchanged": 4,
+            "correctProposals": 4,
+            "correctPlayed": 8,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 3,
+                "provisionalActions": [
+                  2,
+                  0,
+                  1
+                ],
+                "playedActions": [
+                  3,
+                  0,
+                  0
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 3,
+                "rewardedUpdatesByAction": [
+                  3,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 1,
+                "n": 4,
+                "provisionalActions": [
+                  1,
+                  2,
+                  1
+                ],
+                "playedActions": [
+                  0,
+                  4,
+                  0
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 4,
+                "rewardedUpdatesByAction": [
+                  0,
+                  4,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 2,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 2,
+                "n": 4,
+                "provisionalActions": [
+                  2,
+                  2,
+                  0
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  1
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  1
+                ],
+                "firstCorrectReward": {
+                  "round": 10,
+                  "candidate": "paper",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": true
+              }
+            ]
+          },
+          "training24": {
+            "n": 23,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              9,
+              6,
+              8
+            ],
+            "playedActions": [
+              6,
+              10,
+              7
+            ],
+            "approvals": 11,
+            "rejections": 12,
+            "noMessage": 0,
+            "changed": 12,
+            "helpfulChanges": 6,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 6,
+            "unchanged": 11,
+            "correctProposals": 11,
+            "correctPlayed": 17,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 7,
+                "provisionalActions": [
+                  4,
+                  1,
+                  2
+                ],
+                "playedActions": [
+                  5,
+                  1,
+                  1
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 5,
+                "rewardedUpdatesByAction": [
+                  5,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                }
+              },
+              {
+                "cue": 1,
+                "n": 8,
+                "provisionalActions": [
+                  3,
+                  3,
+                  2
+                ],
+                "playedActions": [
+                  0,
+                  7,
+                  1
+                ],
+                "correctProposals": 3,
+                "correctPlayed": 7,
+                "rewardedUpdatesByAction": [
+                  0,
+                  7,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 2,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              },
+              {
+                "cue": 2,
+                "n": 8,
+                "provisionalActions": [
+                  2,
+                  2,
+                  4
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  5
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 5,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  5
+                ],
+                "firstCorrectReward": {
+                  "round": 10,
+                  "candidate": "paper",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              }
+            ]
+          },
+          "frozen12": {
+            "wins": 69,
+            "actions": [
+              22,
+              24,
+              23
+            ],
+            "winsByAction": [
+              23,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 22,
+                "correctMarginMean": 0.1505366528537167,
+                "correctMarginMin": -0.006638579954933013,
+                "correctMarginMax": 0.3937234002683332,
+                "positiveMarginTrials": 22
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.5043155818564106,
+                "correctMarginMin": 0.3808986772919035,
+                "correctMarginMax": 0.5788697744088344,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.13299373522567934,
+                "correctMarginMin": 0.06107503749999592,
+                "correctMarginMax": 0.18115299328289328,
+                "positiveMarginTrials": 23
+              }
+            ]
+          },
+          "frozen24": {
+            "wins": 69,
+            "actions": [
+              22,
+              24,
+              23
+            ],
+            "winsByAction": [
+              23,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 22,
+                "correctMarginMean": 0.22564368053987724,
+                "correctMarginMin": -0.01178921404189396,
+                "correctMarginMax": 0.5485280404072213,
+                "positiveMarginTrials": 22
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.7244419908054202,
+                "correctMarginMin": 0.5478890368976824,
+                "correctMarginMax": 0.826403009396206,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.49496485559561126,
+                "correctMarginMin": 0.21723967119280152,
+                "correctMarginMax": 0.6823669192929774,
+                "positiveMarginTrials": 23
+              }
+            ]
+          }
+        }
+      }
+    },
+    {
+      "seed": 842,
+      "shuffle": {
+        "moved": 8,
+        "quality": 0.6166666666666667,
+        "valid": false
+      },
+      "arms": {
+        "correct": {
+          "training12": {
+            "n": 11,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              6,
+              2,
+              3
+            ],
+            "playedActions": [
+              4,
+              2,
+              5
+            ],
+            "approvals": 7,
+            "rejections": 4,
+            "noMessage": 0,
+            "changed": 4,
+            "helpfulChanges": 3,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 1,
+            "unchanged": 7,
+            "correctProposals": 6,
+            "correctPlayed": 9,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 3,
+                "provisionalActions": [
+                  2,
+                  1,
+                  0
+                ],
+                "playedActions": [
+                  3,
+                  0,
+                  0
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 3,
+                "rewardedUpdatesByAction": [
+                  3,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 1,
+                "n": 4,
+                "provisionalActions": [
+                  3,
+                  1,
+                  0
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  1
+                ],
+                "correctProposals": 1,
+                "correctPlayed": 2,
+                "rewardedUpdatesByAction": [
+                  0,
+                  2,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 5,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 2,
+                "n": 4,
+                "provisionalActions": [
+                  1,
+                  0,
+                  3
+                ],
+                "playedActions": [
+                  0,
+                  0,
+                  4
+                ],
+                "correctProposals": 3,
+                "correctPlayed": 4,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  4
+                ],
+                "firstCorrectReward": {
+                  "round": 1,
+                  "candidate": "rock",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": false
+              }
+            ]
+          },
+          "training24": {
+            "n": 23,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              10,
+              5,
+              8
+            ],
+            "playedActions": [
+              8,
+              7,
+              8
+            ],
+            "approvals": 15,
+            "rejections": 8,
+            "noMessage": 0,
+            "changed": 8,
+            "helpfulChanges": 4,
+            "harmfulChanges": 1,
+            "neutralWrongChanges": 3,
+            "unchanged": 15,
+            "correctProposals": 15,
+            "correctPlayed": 18,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 7,
+                "provisionalActions": [
+                  5,
+                  1,
+                  1
+                ],
+                "playedActions": [
+                  6,
+                  1,
+                  0
+                ],
+                "correctProposals": 5,
+                "correctPlayed": 6,
+                "rewardedUpdatesByAction": [
+                  6,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                }
+              },
+              {
+                "cue": 1,
+                "n": 8,
+                "provisionalActions": [
+                  3,
+                  4,
+                  1
+                ],
+                "playedActions": [
+                  2,
+                  5,
+                  1
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 5,
+                "rewardedUpdatesByAction": [
+                  0,
+                  5,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 5,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              },
+              {
+                "cue": 2,
+                "n": 8,
+                "provisionalActions": [
+                  2,
+                  0,
+                  6
+                ],
+                "playedActions": [
+                  0,
+                  1,
+                  7
+                ],
+                "correctProposals": 6,
+                "correctPlayed": 7,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  7
+                ],
+                "firstCorrectReward": {
+                  "round": 1,
+                  "candidate": "rock",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              }
+            ]
+          },
+          "frozen12": {
+            "wins": 70,
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "winsByAction": [
+              24,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 23,
+                "correctMarginMean": 0.12907492559987943,
+                "correctMarginMin": 0.004553880981493577,
+                "correctMarginMax": 0.31367944137297055,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.3063433200934938,
+                "correctMarginMin": 0.2475488422975478,
+                "correctMarginMax": 0.351219101991725,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.4213119225173377,
+                "correctMarginMin": 0.1468039474728994,
+                "correctMarginMax": 0.5449171117831401,
+                "positiveMarginTrials": 23
+              }
+            ]
+          },
+          "frozen24": {
+            "wins": 70,
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "winsByAction": [
+              24,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 23,
+                "correctMarginMean": 0.2205278414152483,
+                "correctMarginMin": 0.0569752134672159,
+                "correctMarginMax": 0.4465209561214624,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.5975279907303372,
+                "correctMarginMin": 0.48447496160803005,
+                "correctMarginMax": 0.6841792182099051,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.5697377309049046,
+                "correctMarginMin": 0.22359781695553166,
+                "correctMarginMax": 0.7266840352581755,
+                "positiveMarginTrials": 23
+              }
+            ]
+          }
+        },
+        "shuffled": {
+          "training12": {
+            "n": 11,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              6,
+              2,
+              3
+            ],
+            "playedActions": [
+              6,
+              2,
+              3
+            ],
+            "approvals": 7,
+            "rejections": 4,
+            "noMessage": 0,
+            "changed": 4,
+            "helpfulChanges": 3,
+            "harmfulChanges": 1,
+            "neutralWrongChanges": 0,
+            "unchanged": 7,
+            "correctProposals": 6,
+            "correctPlayed": 8,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 3,
+                "provisionalActions": [
+                  2,
+                  1,
+                  0
+                ],
+                "playedActions": [
+                  3,
+                  0,
+                  0
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 3,
+                "rewardedUpdatesByAction": [
+                  3,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 1,
+                "n": 4,
+                "provisionalActions": [
+                  3,
+                  1,
+                  0
+                ],
+                "playedActions": [
+                  2,
+                  2,
+                  0
+                ],
+                "correctProposals": 1,
+                "correctPlayed": 2,
+                "rewardedUpdatesByAction": [
+                  0,
+                  2,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 5,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 2,
+                "n": 4,
+                "provisionalActions": [
+                  1,
+                  0,
+                  3
+                ],
+                "playedActions": [
+                  1,
+                  0,
+                  3
+                ],
+                "correctProposals": 3,
+                "correctPlayed": 3,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  3
+                ],
+                "firstCorrectReward": {
+                  "round": 1,
+                  "candidate": "rock",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": false
+              }
+            ]
+          },
+          "training24": {
+            "n": 23,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              10,
+              5,
+              8
+            ],
+            "playedActions": [
+              8,
+              6,
+              9
+            ],
+            "approvals": 15,
+            "rejections": 8,
+            "noMessage": 0,
+            "changed": 8,
+            "helpfulChanges": 3,
+            "harmfulChanges": 4,
+            "neutralWrongChanges": 1,
+            "unchanged": 15,
+            "correctProposals": 15,
+            "correctPlayed": 14,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 7,
+                "provisionalActions": [
+                  5,
+                  1,
+                  1
+                ],
+                "playedActions": [
+                  5,
+                  0,
+                  2
+                ],
+                "correctProposals": 5,
+                "correctPlayed": 5,
+                "rewardedUpdatesByAction": [
+                  5,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                }
+              },
+              {
+                "cue": 1,
+                "n": 8,
+                "provisionalActions": [
+                  3,
+                  4,
+                  1
+                ],
+                "playedActions": [
+                  2,
+                  4,
+                  2
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 4,
+                "rewardedUpdatesByAction": [
+                  0,
+                  4,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 5,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              },
+              {
+                "cue": 2,
+                "n": 8,
+                "provisionalActions": [
+                  2,
+                  0,
+                  6
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  5
+                ],
+                "correctProposals": 6,
+                "correctPlayed": 5,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  5
+                ],
+                "firstCorrectReward": {
+                  "round": 1,
+                  "candidate": "rock",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              }
+            ]
+          },
+          "frozen12": {
+            "wins": 70,
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "winsByAction": [
+              24,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 23,
+                "correctMarginMean": 0.12907492559987943,
+                "correctMarginMin": 0.004553880981493577,
+                "correctMarginMax": 0.31367944137297055,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.3063433200934938,
+                "correctMarginMin": 0.2475488422975478,
+                "correctMarginMax": 0.351219101991725,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.32251761947963453,
+                "correctMarginMin": 0.12098100439296494,
+                "correctMarginMax": 0.41736474786816735,
+                "positiveMarginTrials": 23
+              }
+            ]
+          },
+          "frozen24": {
+            "wins": 70,
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "winsByAction": [
+              24,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 23,
+                "correctMarginMean": 0.18757384053464665,
+                "correctMarginMin": 0.039984066639278976,
+                "correctMarginMax": 0.39631682075620395,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.503301611807771,
+                "correctMarginMin": 0.40677731133058137,
+                "correctMarginMax": 0.5777308153643127,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.4801250049124425,
+                "correctMarginMin": 0.17072792400966155,
+                "correctMarginMax": 0.6204252741719954,
+                "positiveMarginTrials": 23
+              }
+            ]
+          }
+        },
+        "untrained": {
+          "training12": {
+            "n": 11,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              5,
+              2,
+              4
+            ],
+            "playedActions": [
+              3,
+              4,
+              4
+            ],
+            "approvals": 0,
+            "rejections": 11,
+            "noMessage": 0,
+            "changed": 11,
+            "helpfulChanges": 3,
+            "harmfulChanges": 5,
+            "neutralWrongChanges": 3,
+            "unchanged": 0,
+            "correctProposals": 5,
+            "correctPlayed": 3,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 3,
+                "provisionalActions": [
+                  1,
+                  1,
+                  1
+                ],
+                "playedActions": [
+                  1,
+                  2,
+                  0
+                ],
+                "correctProposals": 1,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  1,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 6,
+                  "candidate": "paper",
+                  "played": "rock",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": true
+              },
+              {
+                "cue": 1,
+                "n": 4,
+                "provisionalActions": [
+                  3,
+                  1,
+                  0
+                ],
+                "playedActions": [
+                  0,
+                  1,
+                  3
+                ],
+                "correctProposals": 1,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  0,
+                  1,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 5,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": true
+              },
+              {
+                "cue": 2,
+                "n": 4,
+                "provisionalActions": [
+                  1,
+                  0,
+                  3
+                ],
+                "playedActions": [
+                  2,
+                  1,
+                  1
+                ],
+                "correctProposals": 3,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  1
+                ],
+                "firstCorrectReward": {
+                  "round": 1,
+                  "candidate": "rock",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": true
+              }
+            ]
+          },
+          "training24": {
+            "n": 23,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              9,
+              5,
+              9
+            ],
+            "playedActions": [
+              6,
+              11,
+              6
+            ],
+            "approvals": 0,
+            "rejections": 23,
+            "noMessage": 0,
+            "changed": 23,
+            "helpfulChanges": 4,
+            "harmfulChanges": 14,
+            "neutralWrongChanges": 5,
+            "unchanged": 0,
+            "correctProposals": 14,
+            "correctPlayed": 4,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 7,
+                "provisionalActions": [
+                  4,
+                  1,
+                  2
+                ],
+                "playedActions": [
+                  1,
+                  5,
+                  1
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  1,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 6,
+                  "candidate": "paper",
+                  "played": "rock",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              },
+              {
+                "cue": 1,
+                "n": 8,
+                "provisionalActions": [
+                  3,
+                  4,
+                  1
+                ],
+                "playedActions": [
+                  2,
+                  2,
+                  4
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 2,
+                "rewardedUpdatesByAction": [
+                  0,
+                  2,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 5,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              },
+              {
+                "cue": 2,
+                "n": 8,
+                "provisionalActions": [
+                  2,
+                  0,
+                  6
+                ],
+                "playedActions": [
+                  3,
+                  4,
+                  1
+                ],
+                "correctProposals": 6,
+                "correctPlayed": 1,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  1
+                ],
+                "firstCorrectReward": {
+                  "round": 1,
+                  "candidate": "rock",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              }
+            ]
+          },
+          "frozen12": {
+            "wins": 68,
+            "actions": [
+              21,
+              23,
+              25
+            ],
+            "winsByAction": [
+              22,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 21,
+                "correctMarginMean": 0.018603372355804126,
+                "correctMarginMin": -0.008801759306155357,
+                "correctMarginMax": 0.03245391352924038,
+                "positiveMarginTrials": 21
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.16724781612427939,
+                "correctMarginMin": 0.13514903228744438,
+                "correctMarginMax": 0.19174770245135203,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.15047827841320097,
+                "correctMarginMin": 0.0481849235174445,
+                "correctMarginMax": 0.1988694070393209,
+                "positiveMarginTrials": 23
+              }
+            ]
+          },
+          "frozen24": {
+            "wins": 68,
+            "actions": [
+              21,
+              23,
+              25
+            ],
+            "winsByAction": [
+              22,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 21,
+                "correctMarginMean": 0.020392412291060768,
+                "correctMarginMin": -0.008801759306155357,
+                "correctMarginMax": 0.04016217713831692,
+                "positiveMarginTrials": 21
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.2904489227850181,
+                "correctMarginMin": 0.23788511696945372,
+                "correctMarginMax": 0.33068302370609637,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.15047827841320097,
+                "correctMarginMin": 0.0481849235174445,
+                "correctMarginMax": 0.1988694070393209,
+                "positiveMarginTrials": 23
+              }
+            ]
+          }
+        },
+        "disconnected": {
+          "training12": {
+            "n": 11,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              7,
+              4,
+              0
+            ],
+            "playedActions": [
+              7,
+              4,
+              0
+            ],
+            "approvals": 0,
+            "rejections": 0,
+            "noMessage": 11,
+            "changed": 0,
+            "helpfulChanges": 0,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 0,
+            "unchanged": 11,
+            "correctProposals": 2,
+            "correctPlayed": 2,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 3,
+                "provisionalActions": [
+                  2,
+                  1,
+                  0
+                ],
+                "playedActions": [
+                  2,
+                  1,
+                  0
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 2,
+                "rewardedUpdatesByAction": [
+                  2,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": null
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 1,
+                "n": 4,
+                "provisionalActions": [
+                  4,
+                  0,
+                  0
+                ],
+                "playedActions": [
+                  4,
+                  0,
+                  0
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 0,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": null,
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 2,
+                "n": 4,
+                "provisionalActions": [
+                  1,
+                  3,
+                  0
+                ],
+                "playedActions": [
+                  1,
+                  3,
+                  0
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 0,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": null,
+                "oneRewardPositiveAt12": false
+              }
+            ]
+          },
+          "training24": {
+            "n": 23,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              14,
+              7,
+              2
+            ],
+            "playedActions": [
+              14,
+              7,
+              2
+            ],
+            "approvals": 0,
+            "rejections": 0,
+            "noMessage": 23,
+            "changed": 0,
+            "helpfulChanges": 0,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 0,
+            "unchanged": 23,
+            "correctProposals": 5,
+            "correctPlayed": 5,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 7,
+                "provisionalActions": [
+                  5,
+                  1,
+                  1
+                ],
+                "playedActions": [
+                  5,
+                  1,
+                  1
+                ],
+                "correctProposals": 5,
+                "correctPlayed": 5,
+                "rewardedUpdatesByAction": [
+                  5,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": null
+                }
+              },
+              {
+                "cue": 1,
+                "n": 8,
+                "provisionalActions": [
+                  7,
+                  0,
+                  1
+                ],
+                "playedActions": [
+                  7,
+                  0,
+                  1
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 0,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": null
+              },
+              {
+                "cue": 2,
+                "n": 8,
+                "provisionalActions": [
+                  2,
+                  6,
+                  0
+                ],
+                "playedActions": [
+                  2,
+                  6,
+                  0
+                ],
+                "correctProposals": 0,
+                "correctPlayed": 0,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": null
+              }
+            ]
+          },
+          "frozen12": {
+            "wins": 22,
+            "actions": [
+              44,
+              23,
+              2
+            ],
+            "winsByAction": [
+              22,
+              0,
+              0
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 21,
+                "correctMarginMean": 0.107523142739797,
+                "correctMarginMin": -0.03539973974378394,
+                "correctMarginMax": 0.3115975121212707,
+                "positiveMarginTrials": 21
+              },
+              {
+                "cue": 1,
+                "wins": 0,
+                "correctMarginMean": 0,
+                "correctMarginMin": 0,
+                "correctMarginMax": 0,
+                "positiveMarginTrials": 0
+              },
+              {
+                "cue": 2,
+                "wins": 0,
+                "correctMarginMean": 0,
+                "correctMarginMin": 0,
+                "correctMarginMax": 0,
+                "positiveMarginTrials": 0
+              }
+            ]
+          },
+          "frozen24": {
+            "wins": 24,
+            "actions": [
+              46,
+              23,
+              0
+            ],
+            "winsByAction": [
+              24,
+              0,
+              0
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 23,
+                "correctMarginMean": 0.20047141859662523,
+                "correctMarginMin": 0.020204766192025256,
+                "correctMarginMax": 0.443091729325071,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 1,
+                "wins": 0,
+                "correctMarginMean": 0,
+                "correctMarginMin": 0,
+                "correctMarginMax": 0,
+                "positiveMarginTrials": 0
+              },
+              {
+                "cue": 2,
+                "wins": 0,
+                "correctMarginMean": 0,
+                "correctMarginMin": 0,
+                "correctMarginMax": 0,
+                "positiveMarginTrials": 0
+              }
+            ]
+          }
+        },
+        "lookup": {
+          "training12": {
+            "n": 11,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              6,
+              2,
+              3
+            ],
+            "playedActions": [
+              3,
+              2,
+              6
+            ],
+            "approvals": 6,
+            "rejections": 5,
+            "noMessage": 0,
+            "changed": 5,
+            "helpfulChanges": 3,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 2,
+            "unchanged": 6,
+            "correctProposals": 6,
+            "correctPlayed": 9,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 3,
+                "provisionalActions": [
+                  2,
+                  1,
+                  0
+                ],
+                "playedActions": [
+                  3,
+                  0,
+                  0
+                ],
+                "correctProposals": 2,
+                "correctPlayed": 3,
+                "rewardedUpdatesByAction": [
+                  3,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 1,
+                "n": 4,
+                "provisionalActions": [
+                  3,
+                  1,
+                  0
+                ],
+                "playedActions": [
+                  0,
+                  2,
+                  2
+                ],
+                "correctProposals": 1,
+                "correctPlayed": 2,
+                "rewardedUpdatesByAction": [
+                  0,
+                  2,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 5,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": false
+              },
+              {
+                "cue": 2,
+                "n": 4,
+                "provisionalActions": [
+                  1,
+                  0,
+                  3
+                ],
+                "playedActions": [
+                  0,
+                  0,
+                  4
+                ],
+                "correctProposals": 3,
+                "correctPlayed": 4,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  4
+                ],
+                "firstCorrectReward": {
+                  "round": 1,
+                  "candidate": "rock",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                },
+                "oneRewardPositiveAt12": false
+              }
+            ]
+          },
+          "training24": {
+            "n": 23,
+            "firstCueFreeRound": {
+              "action": "rock",
+              "reward": 1
+            },
+            "provisionalActions": [
+              10,
+              5,
+              8
+            ],
+            "playedActions": [
+              6,
+              8,
+              9
+            ],
+            "approvals": 15,
+            "rejections": 8,
+            "noMessage": 0,
+            "changed": 8,
+            "helpfulChanges": 4,
+            "harmfulChanges": 0,
+            "neutralWrongChanges": 4,
+            "unchanged": 15,
+            "correctProposals": 15,
+            "correctPlayed": 19,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 7,
+                "provisionalActions": [
+                  5,
+                  1,
+                  1
+                ],
+                "playedActions": [
+                  6,
+                  1,
+                  0
+                ],
+                "correctProposals": 5,
+                "correctPlayed": 6,
+                "rewardedUpdatesByAction": [
+                  6,
+                  0,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 3,
+                  "candidate": "rock",
+                  "played": "rock",
+                  "changedByMessage": false,
+                  "emittedBit": 1
+                }
+              },
+              {
+                "cue": 1,
+                "n": 8,
+                "provisionalActions": [
+                  3,
+                  4,
+                  1
+                ],
+                "playedActions": [
+                  0,
+                  6,
+                  2
+                ],
+                "correctProposals": 4,
+                "correctPlayed": 6,
+                "rewardedUpdatesByAction": [
+                  0,
+                  6,
+                  0
+                ],
+                "firstCorrectReward": {
+                  "round": 5,
+                  "candidate": "rock",
+                  "played": "paper",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              },
+              {
+                "cue": 2,
+                "n": 8,
+                "provisionalActions": [
+                  2,
+                  0,
+                  6
+                ],
+                "playedActions": [
+                  0,
+                  1,
+                  7
+                ],
+                "correctProposals": 6,
+                "correctPlayed": 7,
+                "rewardedUpdatesByAction": [
+                  0,
+                  0,
+                  7
+                ],
+                "firstCorrectReward": {
+                  "round": 1,
+                  "candidate": "rock",
+                  "played": "scissors",
+                  "changedByMessage": true,
+                  "emittedBit": 0
+                }
+              }
+            ]
+          },
+          "frozen12": {
+            "wins": 70,
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "winsByAction": [
+              24,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 23,
+                "correctMarginMean": 0.12907492559987943,
+                "correctMarginMin": 0.004553880981493577,
+                "correctMarginMax": 0.31367944137297055,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.3063433200934938,
+                "correctMarginMin": 0.2475488422975478,
+                "correctMarginMax": 0.351219101991725,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.4213119225173377,
+                "correctMarginMin": 0.1468039474728994,
+                "correctMarginMax": 0.5449171117831401,
+                "positiveMarginTrials": 23
+              }
+            ]
+          },
+          "frozen24": {
+            "wins": 70,
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "winsByAction": [
+              24,
+              23,
+              23
+            ],
+            "byCue": [
+              {
+                "cue": 0,
+                "wins": 23,
+                "correctMarginMean": 0.2205278414152483,
+                "correctMarginMin": 0.0569752134672159,
+                "correctMarginMax": 0.4465209561214624,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 1,
+                "wins": 23,
+                "correctMarginMean": 0.6545453041212317,
+                "correctMarginMin": 0.5326959418257092,
+                "correctMarginMax": 0.7477597230945772,
+                "positiveMarginTrials": 23
+              },
+              {
+                "cue": 2,
+                "wins": 23,
+                "correctMarginMean": 0.5697377309049046,
+                "correctMarginMin": 0.22359781695553166,
+                "correctMarginMax": 0.7266840352581755,
+                "positiveMarginTrials": 23
+              }
+            ]
+          }
+        }
+      }
+    }
+  ]
+}

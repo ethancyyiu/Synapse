@@ -1,0 +1,6657 @@
+{
+  "protocol": {
+    "source": "data/rps_teacher_guided_exploration_preflight.json",
+    "seeds": [
+      831,
+      832
+    ],
+    "firstCues": [
+      0,
+      1,
+      2
+    ],
+    "repeats": 12,
+    "branches": [
+      "none",
+      "bit0",
+      "bit1"
+    ],
+    "secondCue": "(first+2)%3",
+    "revisedKeys": "seed*10000000+(200+12*firstCue+repeat)*1000+roundIndex; rng(key+2)",
+    "teacherFirstAdditionalStream": "rng(key+3) from 280ms",
+    "conditions": "saved revised continuous none/bit0/bit1; new revised isolated second; new teacher-first continuous no message",
+    "decoder": "archived fixed log1p three-MBON centroids, no fit",
+    "gates": "history or schedule contribution >=3 paired net corrections/12; DN interference >2 paired net losses/12; original >=10/12 floor unchanged",
+    "command": "node tools/check_rps_teacher_guided_receiver_history.mjs"
+  },
+  "archivedFailureCounts": [
+    6,
+    9,
+    9
+  ],
+  "isolated": [
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 0,
+      "second": {
+        "cue": 2,
+        "key": 8310200001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.8571428571428571,
+          1,
+          1.7142857142857142
+        ],
+        "features": [
+          1.25617849379872,
+          1.7332199059796476,
+          1.3599764694617922
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 1,
+      "second": {
+        "cue": 2,
+        "key": 8310201001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.8571428571428571,
+          1.6428571428571428
+        ],
+        "features": [
+          1.4447721264067237,
+          1.402848955608052,
+          1.2920412220601514
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 2,
+      "second": {
+        "cue": 2,
+        "key": 8310202001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          1.5
+        ],
+        "features": [
+          0.8561940259691435,
+          0.4507425028249607,
+          1.1504814271983563
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 3,
+      "second": {
+        "cue": 2,
+        "key": 8310203001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          1.2142857142857142
+        ],
+        "features": [
+          1.060187171984674,
+          0.6581272325639078,
+          0.8413242553730278
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 4,
+      "second": {
+        "cue": 2,
+        "key": 8310204001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.42857142857142855,
+          1.0714285714285714
+        ],
+        "features": [
+          1.060187171984674,
+          0.23323752411624413,
+          0.671433260581945
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 5,
+      "second": {
+        "cue": 2,
+        "key": 8310205001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          1.4285714285714286
+        ],
+        "features": [
+          0.4213861548728199,
+          0.4507425028249607,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 6,
+      "second": {
+        "cue": 2,
+        "key": 8310206001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.35714285714285715,
+          1.2857142857142858
+        ],
+        "features": [
+          1.060187171984674,
+          0.00457367160447321,
+          0.922201549933712
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 7,
+      "second": {
+        "cue": 2,
+        "key": 8310207001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.5
+        ],
+        "features": [
+          1.25617849379872,
+          1.228004280978124,
+          1.1504814271983563
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 8,
+      "second": {
+        "cue": 2,
+        "key": 8310208001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.35714285714285715,
+          1.3571428571428572
+        ],
+        "features": [
+          0.8561940259691435,
+          0.00457367160447321,
+          1.0005899133699838
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 9,
+      "second": {
+        "cue": 2,
+        "key": 8310209001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.0714285714285714
+        ],
+        "features": [
+          0.6435177532752572,
+          0.6581272325639078,
+          0.671433260581945
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 10,
+      "second": {
+        "cue": 2,
+        "key": 8310210001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.6428571428571429,
+          1.5
+        ],
+        "features": [
+          1.060187171984674,
+          0.8562917568306991,
+          1.1504814271983563
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 11,
+      "second": {
+        "cue": 2,
+        "key": 8310211001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.8571428571428571,
+          1.8571428571428572
+        ],
+        "features": [
+          1.4447721264067237,
+          1.402848955608052,
+          1.490642074648657
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 0,
+      "second": {
+        "cue": 0,
+        "key": 8310212001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.35714285714285715
+        ],
+        "features": [
+          -0.3112116583567229,
+          -0.23645625750977636,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 1,
+      "second": {
+        "cue": 0,
+        "key": 8310213001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          0.5
+        ],
+        "features": [
+          0.6435177532752572,
+          0.6581272325639078,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 2,
+      "second": {
+        "cue": 0,
+        "key": 8310214001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.2857142857142857
+        ],
+        "features": [
+          0.4213861548728199,
+          -0.23645625750977636,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 3,
+      "second": {
+        "cue": 0,
+        "key": 8310215001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          0.9285714285714286
+        ],
+        "features": [
+          1.060187171984674,
+          1.402848955608052,
+          0.4893972091596061
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 4,
+      "second": {
+        "cue": 0,
+        "key": 8310216001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "features": [
+          0.1889192101882625,
+          0.4507425028249607,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 5,
+      "second": {
+        "cue": 0,
+        "key": 8310217001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          0.8571428571428571
+        ],
+        "features": [
+          1.060187171984674,
+          1.0460211456449109,
+          0.39325671253698385
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 6,
+      "second": {
+        "cue": 0,
+        "key": 8310218001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.42857142857142855
+        ],
+        "features": [
+          -0.3112116583567229,
+          0.23323752411624413,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 7,
+      "second": {
+        "cue": 0,
+        "key": 8310219001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          0.7857142857142857
+        ],
+        "features": [
+          0.6435177532752572,
+          1.0460211456449109,
+          0.29334505193446747
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 8,
+      "second": {
+        "cue": 0,
+        "key": 8310220001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.21428571428571427,
+          0.21428571428571427
+        ],
+        "features": [
+          0.4213861548728199,
+          -0.4912666234292062,
+          -0.6890995746948642
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 9,
+      "second": {
+        "cue": 0,
+        "key": 8310221001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.35714285714285715
+        ],
+        "features": [
+          0.1889192101882625,
+          0.23323752411624413,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 10,
+      "second": {
+        "cue": 0,
+        "key": 8310222001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          1.1428571428571428,
+          0.8571428571428571,
+          1.3571428571428572
+        ],
+        "features": [
+          1.9712731782892863,
+          1.402848955608052,
+          1.0005899133699838
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 11,
+      "second": {
+        "cue": 0,
+        "key": 8310223001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.6428571428571429,
+          0.6428571428571429
+        ],
+        "features": [
+          0.8561940259691435,
+          0.8562917568306991,
+          0.08093700671988797
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 0,
+      "second": {
+        "cue": 1,
+        "key": 8310224001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 1,
+      "second": {
+        "cue": 1,
+        "key": 8310225001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 2,
+      "second": {
+        "cue": 1,
+        "key": 8310226001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.049239879038443,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 3,
+      "second": {
+        "cue": 1,
+        "key": 8310227001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 4,
+      "second": {
+        "cue": 1,
+        "key": 8310228001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 5,
+      "second": {
+        "cue": 1,
+        "key": 8310229001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "features": [
+          -1.837245948436493,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 6,
+      "second": {
+        "cue": 1,
+        "key": 8310230001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 7,
+      "second": {
+        "cue": 1,
+        "key": 8310231001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.049239879038443,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 8,
+      "second": {
+        "cue": 1,
+        "key": 8310232001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 9,
+      "second": {
+        "cue": 1,
+        "key": 8310233001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 10,
+      "second": {
+        "cue": 1,
+        "key": 8310234001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 11,
+      "second": {
+        "cue": 1,
+        "key": 8310235001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 0,
+      "second": {
+        "cue": 2,
+        "key": 8320200001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.9285714285714286,
+          1.8571428571428572
+        ],
+        "features": [
+          0.8561940259691435,
+          1.57109412088077,
+          1.490642074648657
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 1,
+      "second": {
+        "cue": 2,
+        "key": 8320201001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "features": [
+          0.8561940259691435,
+          0.6581272325639078,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 2,
+      "second": {
+        "cue": 2,
+        "key": 8320202001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          2
+        ],
+        "features": [
+          1.25617849379872,
+          1.228004280978124,
+          1.6149311538447986
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 3,
+      "second": {
+        "cue": 2,
+        "key": 8320203001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          1.4285714285714286
+        ],
+        "features": [
+          0.8561940259691435,
+          0.4507425028249607,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 4,
+      "second": {
+        "cue": 2,
+        "key": 8320204001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.35714285714285715,
+          1.2142857142857142
+        ],
+        "features": [
+          0.6435177532752572,
+          0.00457367160447321,
+          0.8413242553730278
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 5,
+      "second": {
+        "cue": 2,
+        "key": 8320205001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.7857142857142857,
+          2
+        ],
+        "features": [
+          1.060187171984674,
+          1.228004280978124,
+          1.6149311538447986
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 6,
+      "second": {
+        "cue": 2,
+        "key": 8320206001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.7142857142857143,
+          1.5714285714285714
+        ],
+        "features": [
+          1.25617849379872,
+          1.0460211456449109,
+          1.2222445052273527
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 7,
+      "second": {
+        "cue": 2,
+        "key": 8320207001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.6428571428571429,
+          1.3571428571428572
+        ],
+        "features": [
+          1.060187171984674,
+          0.8562917568306991,
+          1.0005899133699838
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 8,
+      "second": {
+        "cue": 2,
+        "key": 8320208001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.7857142857142857,
+          1.8571428571428572
+        ],
+        "features": [
+          0.8561940259691435,
+          1.228004280978124,
+          1.490642074648657
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 9,
+      "second": {
+        "cue": 2,
+        "key": 8320209001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          1.4285714285714286
+        ],
+        "features": [
+          0.6435177532752572,
+          0.4507425028249607,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 10,
+      "second": {
+        "cue": 2,
+        "key": 8320210001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.7857142857142857,
+          2
+        ],
+        "features": [
+          1.060187171984674,
+          1.228004280978124,
+          1.6149311538447986
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 11,
+      "second": {
+        "cue": 2,
+        "key": 8320211001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.5,
+          1.5714285714285714
+        ],
+        "features": [
+          1.25617849379872,
+          0.4507425028249607,
+          1.2222445052273527
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 0,
+      "second": {
+        "cue": 0,
+        "key": 8320212001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.35714285714285715,
+          0.2857142857142857
+        ],
+        "features": [
+          -0.8670215223860789,
+          0.00457367160447321,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 1,
+      "second": {
+        "cue": 0,
+        "key": 8320213001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          0.5714285714285714
+        ],
+        "features": [
+          0.8561940259691435,
+          0.4507425028249607,
+          -0.03230033799140362
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 2,
+      "second": {
+        "cue": 0,
+        "key": 8320214001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          0.9285714285714286
+        ],
+        "features": [
+          0.6435177532752572,
+          1.0460211456449109,
+          0.4893972091596061
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 3,
+      "second": {
+        "cue": 0,
+        "key": 8320215001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.14285714285714285
+        ],
+        "features": [
+          0.1889192101882625,
+          0.23323752411624413,
+          -0.8435359974954221
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 4,
+      "second": {
+        "cue": 0,
+        "key": 8320216001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          1.0714285714285714
+        ],
+        "features": [
+          1.25617849379872,
+          1.57109412088077,
+          0.671433260581945
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 5,
+      "second": {
+        "cue": 0,
+        "key": 8320217001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.5,
+          0.7142857142857143
+        ],
+        "features": [
+          1.060187171984674,
+          0.4507425028249607,
+          0.18935425386596533
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 6,
+      "second": {
+        "cue": 0,
+        "key": 8320218001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.21428571428571427,
+          0.35714285714285715
+        ],
+        "features": [
+          -0.5813930322180321,
+          -0.4912666234292062,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 7,
+      "second": {
+        "cue": 0,
+        "key": 8320219001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          0.7857142857142857
+        ],
+        "features": [
+          0.8561940259691435,
+          0.6581272325639078,
+          0.29334505193446747
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 8,
+      "second": {
+        "cue": 0,
+        "key": 8320220001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.14285714285714285,
+          0.42857142857142855
+        ],
+        "features": [
+          -0.3112116583567229,
+          -0.7615292327456353,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 9,
+      "second": {
+        "cue": 0,
+        "key": 8320221001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.35714285714285715,
+          0.42857142857142855
+        ],
+        "features": [
+          0.8561940259691435,
+          0.00457367160447321,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 10,
+      "second": {
+        "cue": 0,
+        "key": 8320222001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.42857142857142855,
+          0.5714285714285714
+        ],
+        "features": [
+          0.8561940259691435,
+          0.23323752411624413,
+          -0.03230033799140362
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 11,
+      "second": {
+        "cue": 0,
+        "key": 8320223001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          0.7857142857142857
+        ],
+        "features": [
+          0.4213861548728199,
+          0.6581272325639078,
+          0.29334505193446747
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 0,
+      "second": {
+        "cue": 1,
+        "key": 8320224001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "features": [
+          -0.8670215223860789,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 1,
+      "second": {
+        "cue": 1,
+        "key": 8320225001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 2,
+      "second": {
+        "cue": 1,
+        "key": 8320226001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.049239879038443,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 3,
+      "second": {
+        "cue": 1,
+        "key": 8320227001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.14285714285714285,
+          0.21428571428571427
+        ],
+        "features": [
+          -0.3112116583567229,
+          -0.7615292327456353,
+          -0.6890995746948642
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 4,
+      "second": {
+        "cue": 1,
+        "key": 8320228001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 5,
+      "second": {
+        "cue": 1,
+        "key": 8320229001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 6,
+      "second": {
+        "cue": 1,
+        "key": 8320230001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 7,
+      "second": {
+        "cue": 1,
+        "key": 8320231001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 8,
+      "second": {
+        "cue": 1,
+        "key": 8320232001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 9,
+      "second": {
+        "cue": 1,
+        "key": 8320233001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.14285714285714285,
+          0.14285714285714285
+        ],
+        "features": [
+          -0.5813930322180321,
+          -0.7615292327456353,
+          -0.8435359974954221
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 10,
+      "second": {
+        "cue": 1,
+        "key": 8320234001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "features": [
+          -1.837245948436493,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 11,
+      "second": {
+        "cue": 1,
+        "key": 8320235001,
+        "schedule": "revised",
+        "decisionMs": 240,
+        "countResetMs": [
+          50,
+          280
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    }
+  ],
+  "teacherFirst": [
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 0,
+      "first": {
+        "cue": 0,
+        "key": 8310200000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          1.2857142857142858,
+          1,
+          1.7857142857142858
+        ],
+        "features": [
+          2.293781084156319,
+          1.7332199059796476,
+          1.4261469638983715
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310200001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.9285714285714286,
+          1.6428571428571428
+        ],
+        "features": [
+          1.4447721264067237,
+          1.57109412088077,
+          1.2920412220601514
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 1,
+      "first": {
+        "cue": 0,
+        "key": 8310201000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.5,
+          0.6428571428571429
+        ],
+        "features": [
+          1.25617849379872,
+          0.4507425028249607,
+          0.08093700671988797
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310201001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.8571428571428571,
+          1.7857142857142858
+        ],
+        "features": [
+          0.4213861548728199,
+          1.402848955608052,
+          1.4261469638983715
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 2,
+      "first": {
+        "cue": 0,
+        "key": 8310202000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          0.42857142857142855
+        ],
+        "features": [
+          0.4213861548728199,
+          0.23323752411624413,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310202001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.6428571428571429,
+          1.5
+        ],
+        "features": [
+          0.8561940259691435,
+          0.8562917568306991,
+          1.1504814271983563
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 3,
+      "first": {
+        "cue": 0,
+        "key": 8310203000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          0.5714285714285714
+        ],
+        "features": [
+          0.4213861548728199,
+          0.23323752411624413,
+          -0.03230033799140362
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310203001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          1,
+          1.1428571428571428,
+          2.142857142857143
+        ],
+        "features": [
+          1.6265062683754379,
+          2.04078790250679,
+          1.7334372094377306
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 4,
+      "first": {
+        "cue": 0,
+        "key": 8310204000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          0.5714285714285714
+        ],
+        "features": [
+          0.4213861548728199,
+          0.4507425028249607,
+          -0.03230033799140362
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310204001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "features": [
+          -0.05489198033546922,
+          0.6581272325639078,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 5,
+      "first": {
+        "cue": 0,
+        "key": 8310205000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.7142857142857143,
+          0.5
+        ],
+        "features": [
+          1.25617849379872,
+          1.0460211456449109,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310205001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "features": [
+          0.6435177532752572,
+          0.6581272325639078,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 6,
+      "first": {
+        "cue": 0,
+        "key": 8310206000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.21428571428571427,
+          0.14285714285714285
+        ],
+        "features": [
+          -0.5813930322180321,
+          -0.4912666234292062,
+          -0.8435359974954221
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310206001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.42857142857142855,
+          1.1428571428571428
+        ],
+        "features": [
+          0.8561940259691435,
+          0.23323752411624413,
+          0.7577947785809099
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 7,
+      "first": {
+        "cue": 0,
+        "key": 8310207000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.35714285714285715,
+          0.7142857142857143
+        ],
+        "features": [
+          0.6435177532752572,
+          0.00457367160447321,
+          0.18935425386596533
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310207001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.6428571428571429,
+          1.4285714285714286
+        ],
+        "features": [
+          0.8561940259691435,
+          0.8562917568306991,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 8,
+      "first": {
+        "cue": 0,
+        "key": 8310208000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          1
+        ],
+        "features": [
+          0.6435177532752572,
+          1.0460211456449109,
+          0.5820409024834114
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310208001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          2.142857142857143
+        ],
+        "features": [
+          1.060187171984674,
+          1.402848955608052,
+          1.7334372094377306
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 9,
+      "first": {
+        "cue": 0,
+        "key": 8310209000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          0.5714285714285714
+        ],
+        "features": [
+          0.4213861548728199,
+          0.23323752411624413,
+          -0.03230033799140362
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310209001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.6428571428571428
+        ],
+        "features": [
+          0.8561940259691435,
+          1.0460211456449109,
+          1.2920412220601514
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 10,
+      "first": {
+        "cue": 0,
+        "key": 8310210000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5,
+          0.5,
+          0.14285714285714285
+        ],
+        "features": [
+          0.1889192101882625,
+          0.4507425028249607,
+          -0.8435359974954221
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310210001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.5,
+          1.4285714285714286
+        ],
+        "features": [
+          1.060187171984674,
+          0.4507425028249607,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "repeat": 11,
+      "first": {
+        "cue": 0,
+        "key": 8310211000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.6428571428571429
+        ],
+        "features": [
+          0.1889192101882625,
+          0.23323752411624413,
+          0.08093700671988797
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8310211001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.6428571428571428
+        ],
+        "features": [
+          0.8561940259691435,
+          1.0460211456449109,
+          1.2920412220601514
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 0,
+      "first": {
+        "cue": 1,
+        "key": 8310212000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "features": [
+          -0.8670215223860789,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310212001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          1.0714285714285714,
+          0.7857142857142857,
+          1.4285714285714286
+        ],
+        "features": [
+          1.8018624412000224,
+          1.228004280978124,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 1,
+      "first": {
+        "cue": 1,
+        "key": 8310213000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310213001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.2857142857142857,
+          0.5
+        ],
+        "features": [
+          -0.5813930322180321,
+          -0.23645625750977636,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 2,
+      "first": {
+        "cue": 1,
+        "key": 8310214000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310214001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "features": [
+          0.1889192101882625,
+          0.4507425028249607,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 3,
+      "first": {
+        "cue": 1,
+        "key": 8310215000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310215001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5,
+          0.5,
+          0.5
+        ],
+        "features": [
+          0.1889192101882625,
+          0.4507425028249607,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 4,
+      "first": {
+        "cue": 1,
+        "key": 8310216000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310216001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.35714285714285715,
+          0.42857142857142855
+        ],
+        "features": [
+          0.4213861548728199,
+          0.00457367160447321,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 5,
+      "first": {
+        "cue": 1,
+        "key": 8310217000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.7142857142857143
+        ],
+        "features": [
+          -0.3112116583567229,
+          -0.23645625750977636,
+          0.18935425386596533
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310217001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0,
+          0.35714285714285715
+        ],
+        "features": [
+          -0.8670215223860789,
+          -1.3568078755655855,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 6,
+      "first": {
+        "cue": 1,
+        "key": 8310218000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "features": [
+          -0.8670215223860789,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310218001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          0.7857142857142857
+        ],
+        "features": [
+          1.25617849379872,
+          0.8562917568306991,
+          0.29334505193446747
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 7,
+      "first": {
+        "cue": 1,
+        "key": 8310219000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310219001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          0.5
+        ],
+        "features": [
+          1.25617849379872,
+          0.8562917568306991,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 8,
+      "first": {
+        "cue": 1,
+        "key": 8310220000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310220001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          1,
+          0.7857142857142857,
+          0.7142857142857143
+        ],
+        "features": [
+          1.6265062683754379,
+          1.228004280978124,
+          0.18935425386596533
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 9,
+      "first": {
+        "cue": 1,
+        "key": 8310221000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310221001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.35714285714285715
+        ],
+        "features": [
+          -0.05489198033546922,
+          -0.23645625750977636,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 10,
+      "first": {
+        "cue": 1,
+        "key": 8310222000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310222001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          0.5
+        ],
+        "features": [
+          0.8561940259691435,
+          0.4507425028249607,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "repeat": 11,
+      "first": {
+        "cue": 1,
+        "key": 8310223000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0
+        ],
+        "features": [
+          -0.8670215223860789,
+          -1.049239879038443,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8310223001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.35714285714285715,
+          0.42857142857142855
+        ],
+        "features": [
+          -0.5813930322180321,
+          0.00457367160447321,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 0,
+      "first": {
+        "cue": 2,
+        "key": 8310224000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.7142857142857142
+        ],
+        "features": [
+          1.25617849379872,
+          1.228004280978124,
+          1.3599764694617922
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310224001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.2857142857142857
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.049239879038443,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 1,
+      "first": {
+        "cue": 2,
+        "key": 8310225000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.7857142857142857,
+          2.0714285714285716
+        ],
+        "features": [
+          0.8561940259691435,
+          1.228004280978124,
+          1.6748732324568762
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310225001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.42857142857142855
+        ],
+        "features": [
+          -0.8670215223860789,
+          -1.049239879038443,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 2,
+      "first": {
+        "cue": 2,
+        "key": 8310226000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "features": [
+          0.8561940259691435,
+          0.6581272325639078,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310226001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.21428571428571427
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -0.6890995746948642
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 3,
+      "first": {
+        "cue": 2,
+        "key": 8310227000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.2857142857142858
+        ],
+        "features": [
+          0.6435177532752572,
+          0.6581272325639078,
+          0.922201549933712
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310227001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 4,
+      "first": {
+        "cue": 2,
+        "key": 8310228000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          2
+        ],
+        "features": [
+          1.25617849379872,
+          1.57109412088077,
+          1.6149311538447986
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310228001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0,
+          0.07142857142857142,
+          0.42857142857142855
+        ],
+        "features": [
+          -1.837245948436493,
+          -1.049239879038443,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 5,
+      "first": {
+        "cue": 2,
+        "key": 8310229000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.7857142857142857,
+          1.9285714285714286
+        ],
+        "features": [
+          1.060187171984674,
+          1.228004280978124,
+          1.5535445496464173
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310229001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.35714285714285715,
+          0.5
+        ],
+        "features": [
+          -0.8670215223860789,
+          0.00457367160447321,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 6,
+      "first": {
+        "cue": 2,
+        "key": 8310230000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          1,
+          1.9285714285714286
+        ],
+        "features": [
+          0.8561940259691435,
+          1.7332199059796476,
+          1.5535445496464173
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310230001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.42857142857142855
+        ],
+        "features": [
+          -1.169971132655612,
+          -0.7615292327456353,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 7,
+      "first": {
+        "cue": 2,
+        "key": 8310231000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "features": [
+          0.6435177532752572,
+          0.6581272325639078,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310231001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.5
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.049239879038443,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 8,
+      "first": {
+        "cue": 2,
+        "key": 8310232000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          1.5
+        ],
+        "features": [
+          0.8561940259691435,
+          0.6581272325639078,
+          1.1504814271983563
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310232001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.35714285714285715
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.049239879038443,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 9,
+      "first": {
+        "cue": 2,
+        "key": 8310233000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          1.4285714285714286
+        ],
+        "features": [
+          0.1889192101882625,
+          0.23323752411624413,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310233001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0,
+          0.21428571428571427
+        ],
+        "features": [
+          -0.8670215223860789,
+          -1.3568078755655855,
+          -0.6890995746948642
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 10,
+      "first": {
+        "cue": 2,
+        "key": 8310234000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          1,
+          2.142857142857143
+        ],
+        "features": [
+          1.25617849379872,
+          1.7332199059796476,
+          1.7334372094377306
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310234001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0,
+          0.2857142857142857
+        ],
+        "features": [
+          -0.8670215223860789,
+          -1.3568078755655855,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "repeat": 11,
+      "first": {
+        "cue": 2,
+        "key": 8310235000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          1.4285714285714286
+        ],
+        "features": [
+          0.6435177532752572,
+          0.4507425028249607,
+          1.07663797273427
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8310235001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 0,
+      "first": {
+        "cue": 0,
+        "key": 8320200000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          0.9285714285714286
+        ],
+        "features": [
+          0.8561940259691435,
+          1.0460211456449109,
+          0.4893972091596061
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320200001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.7142857142857142
+        ],
+        "features": [
+          0.8561940259691435,
+          1.0460211456449109,
+          1.3599764694617922
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 1,
+      "first": {
+        "cue": 0,
+        "key": 8320201000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.2857142857142857,
+          0.35714285714285715
+        ],
+        "features": [
+          -0.8670215223860789,
+          -0.23645625750977636,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320201001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.7857142857142858
+        ],
+        "features": [
+          0.8561940259691435,
+          1.0460211456449109,
+          1.4261469638983715
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 2,
+      "first": {
+        "cue": 0,
+        "key": 8320202000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.35714285714285715,
+          0.5
+        ],
+        "features": [
+          0.4213861548728199,
+          0.00457367160447321,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320202001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.7857142857142858
+        ],
+        "features": [
+          0.8561940259691435,
+          1.0460211456449109,
+          1.4261469638983715
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 3,
+      "first": {
+        "cue": 0,
+        "key": 8320203000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          0.5714285714285714
+        ],
+        "features": [
+          0.6435177532752572,
+          0.4507425028249607,
+          -0.03230033799140362
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320203001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.7142857142857143,
+          1.3571428571428572
+        ],
+        "features": [
+          1.4447721264067237,
+          1.0460211456449109,
+          1.0005899133699838
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 4,
+      "first": {
+        "cue": 0,
+        "key": 8320204000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5,
+          0.2857142857142857,
+          0.42857142857142855
+        ],
+        "features": [
+          0.1889192101882625,
+          -0.23645625750977636,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320204001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.6428571428571429,
+          1.6428571428571428
+        ],
+        "features": [
+          0.4213861548728199,
+          0.8562917568306991,
+          1.2920412220601514
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 5,
+      "first": {
+        "cue": 0,
+        "key": 8320205000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.21428571428571427,
+          0.35714285714285715
+        ],
+        "features": [
+          -0.3112116583567229,
+          -0.4912666234292062,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320205001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          2.0714285714285716
+        ],
+        "features": [
+          1.060187171984674,
+          1.402848955608052,
+          1.6748732324568762
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 6,
+      "first": {
+        "cue": 0,
+        "key": 8320206000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.42857142857142855,
+          0.5
+        ],
+        "features": [
+          0.6435177532752572,
+          0.23323752411624413,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320206001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          1.3571428571428572
+        ],
+        "features": [
+          0.6435177532752572,
+          0.4507425028249607,
+          1.0005899133699838
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 7,
+      "first": {
+        "cue": 0,
+        "key": 8320207000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.42857142857142855,
+          0.5
+        ],
+        "features": [
+          -0.5813930322180321,
+          0.23323752411624413,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320207001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          1.8571428571428572
+        ],
+        "features": [
+          1.25617849379872,
+          1.57109412088077,
+          1.490642074648657
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 8,
+      "first": {
+        "cue": 0,
+        "key": 8320208000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          0.5714285714285714
+        ],
+        "features": [
+          0.8561940259691435,
+          0.4507425028249607,
+          -0.03230033799140362
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320208001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.2857142857142858
+        ],
+        "features": [
+          0.6435177532752572,
+          0.6581272325639078,
+          0.922201549933712
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 9,
+      "first": {
+        "cue": 0,
+        "key": 8320209000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.42857142857142855,
+          0.5
+        ],
+        "features": [
+          1.25617849379872,
+          0.23323752411624413,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320209001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.21428571428571427,
+          1.1428571428571428
+        ],
+        "features": [
+          -0.05489198033546922,
+          -0.4912666234292062,
+          0.7577947785809099
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 10,
+      "first": {
+        "cue": 0,
+        "key": 8320210000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.5
+        ],
+        "features": [
+          -0.3112116583567229,
+          0.00457367160447321,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320210001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          1.3571428571428572
+        ],
+        "features": [
+          0.4213861548728199,
+          0.4507425028249607,
+          1.0005899133699838
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "repeat": 11,
+      "first": {
+        "cue": 0,
+        "key": 8320211000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.21428571428571427,
+          0.2857142857142857
+        ],
+        "features": [
+          -0.5813930322180321,
+          -0.4912666234292062,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 2,
+        "key": 8320211001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.9285714285714286,
+          2.2142857142857144
+        ],
+        "features": [
+          1.4447721264067237,
+          1.57109412088077,
+          1.7906850299422976
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 0,
+      "first": {
+        "cue": 1,
+        "key": 8320212000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "features": [
+          -1.837245948436493,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320212001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.35714285714285715,
+          0.5
+        ],
+        "features": [
+          1.060187171984674,
+          0.00457367160447321,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 1,
+      "first": {
+        "cue": 1,
+        "key": 8320213000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320213001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          1,
+          0.7142857142857143,
+          1.2142857142857142
+        ],
+        "features": [
+          1.6265062683754379,
+          1.0460211456449109,
+          0.8413242553730278
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 2,
+      "first": {
+        "cue": 1,
+        "key": 8320214000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "features": [
+          -1.837245948436493,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320214001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.5714285714285714,
+          0.42857142857142855
+        ],
+        "features": [
+          -0.05489198033546922,
+          0.6581272325639078,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 3,
+      "first": {
+        "cue": 1,
+        "key": 8320215000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320215001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5,
+          0.5714285714285714,
+          0.2857142857142857
+        ],
+        "features": [
+          0.1889192101882625,
+          0.6581272325639078,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 4,
+      "first": {
+        "cue": 1,
+        "key": 8320216000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320216001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.42857142857142855
+        ],
+        "features": [
+          -0.3112116583567229,
+          0.00457367160447321,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 5,
+      "first": {
+        "cue": 1,
+        "key": 8320217000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320217001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.6428571428571429,
+          0.5714285714285714
+        ],
+        "features": [
+          0.8561940259691435,
+          0.8562917568306991,
+          -0.03230033799140362
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 6,
+      "first": {
+        "cue": 1,
+        "key": 8320218000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.7857142857142857
+        ],
+        "features": [
+          -0.05489198033546922,
+          0.23323752411624413,
+          0.29334505193446747
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320218001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.21428571428571427
+        ],
+        "features": [
+          -0.05489198033546922,
+          0.23323752411624413,
+          -0.6890995746948642
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 7,
+      "first": {
+        "cue": 1,
+        "key": 8320219000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320219001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          0.6428571428571429
+        ],
+        "features": [
+          0.1889192101882625,
+          0.00457367160447321,
+          0.08093700671988797
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 8,
+      "first": {
+        "cue": 1,
+        "key": 8320220000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320220001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          0.8571428571428571
+        ],
+        "features": [
+          0.6435177532752572,
+          1.0460211456449109,
+          0.39325671253698385
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 9,
+      "first": {
+        "cue": 1,
+        "key": 8320221000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320221001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.21428571428571427,
+          0.2857142857142857
+        ],
+        "features": [
+          -0.8670215223860789,
+          -0.4912666234292062,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 10,
+      "first": {
+        "cue": 1,
+        "key": 8320222000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.21428571428571427,
+          0.42857142857142855
+        ],
+        "features": [
+          -0.05489198033546922,
+          -0.4912666234292062,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320222001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.2857142857142857,
+          0.35714285714285715
+        ],
+        "features": [
+          -0.8670215223860789,
+          -0.23645625750977636,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "repeat": 11,
+      "first": {
+        "cue": 1,
+        "key": 8320223000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -1.1836966449457225
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 0,
+        "key": 8320223001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.5714285714285714,
+          0.35714285714285715
+        ],
+        "features": [
+          1.25617849379872,
+          0.6581272325639078,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 0,
+      "first": {
+        "cue": 2,
+        "key": 8320224000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.7142857142857142
+        ],
+        "features": [
+          0.6435177532752572,
+          0.6581272325639078,
+          1.3599764694617922
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320224001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.2857142857142857,
+          0.5
+        ],
+        "features": [
+          -0.5813930322180321,
+          -0.23645625750977636,
+          -0.15080639358433515
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 1,
+      "first": {
+        "cue": 2,
+        "key": 8320225000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.5714285714285714,
+          1.5714285714285714
+        ],
+        "features": [
+          1.25617849379872,
+          0.6581272325639078,
+          1.2222445052273527
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320225001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0.14285714285714285,
+          0.42857142857142855
+        ],
+        "features": [
+          -1.4924790385226445,
+          -0.7615292327456353,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 2,
+      "first": {
+        "cue": 2,
+        "key": 8320226000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.6428571428571429,
+          1.5714285714285714
+        ],
+        "features": [
+          1.060187171984674,
+          0.8562917568306991,
+          1.2222445052273527
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320226001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 3,
+      "first": {
+        "cue": 2,
+        "key": 8320227000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.8571428571428571,
+          2.2857142857142856
+        ],
+        "features": [
+          1.4447721264067237,
+          1.402848955608052,
+          1.8466745541490215
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320227001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.42857142857142855
+        ],
+        "features": [
+          -1.169971132655612,
+          -0.7615292327456353,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 4,
+      "first": {
+        "cue": 2,
+        "key": 8320228000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.7857142857142857,
+          2
+        ],
+        "features": [
+          1.060187171984674,
+          1.228004280978124,
+          1.6149311538447986
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320228001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.42857142857142855
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.049239879038443,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 5,
+      "first": {
+        "cue": 2,
+        "key": 8320229000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          1.1428571428571428,
+          0.8571428571428571,
+          1.5714285714285714
+        ],
+        "features": [
+          1.9712731782892863,
+          1.402848955608052,
+          1.2222445052273527
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320229001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0,
+          0,
+          0.2857142857142857
+        ],
+        "features": [
+          -1.837245948436493,
+          -1.3568078755655855,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 6,
+      "first": {
+        "cue": 2,
+        "key": 8320230000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          1.2142857142857142
+        ],
+        "features": [
+          0.4213861548728199,
+          0.23323752411624413,
+          0.8413242553730278
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320230001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0.14285714285714285,
+          0.42857142857142855
+        ],
+        "features": [
+          -1.169971132655612,
+          -0.7615292327456353,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 7,
+      "first": {
+        "cue": 2,
+        "key": 8320231000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.35714285714285715,
+          1.2142857142857142
+        ],
+        "features": [
+          0.4213861548728199,
+          0.00457367160447321,
+          0.8413242553730278
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320231001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.14285714285714285,
+          0.42857142857142855
+        ],
+        "features": [
+          -0.8670215223860789,
+          -0.7615292327456353,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 8,
+      "first": {
+        "cue": 2,
+        "key": 8320232000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.35714285714285715,
+          1.2857142857142858
+        ],
+        "features": [
+          0.6435177532752572,
+          0.00457367160447321,
+          0.922201549933712
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320232001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.2857142857142857
+        ],
+        "features": [
+          -1.4924790385226445,
+          -1.3568078755655855,
+          -0.5434930422017814
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 9,
+      "first": {
+        "cue": 2,
+        "key": 8320233000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.8571428571428571,
+          1.1428571428571428,
+          1.8571428571428572
+        ],
+        "features": [
+          1.25617849379872,
+          2.04078790250679,
+          1.490642074648657
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320233001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.42857142857142855
+        ],
+        "features": [
+          -1.169971132655612,
+          -1.049239879038443,
+          -0.2750954727804774
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 10,
+      "first": {
+        "cue": 2,
+        "key": 8320234000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          1.2857142857142858
+        ],
+        "features": [
+          0.8561940259691435,
+          0.4507425028249607,
+          0.922201549933712
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320234001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.2857142857142857,
+          0.5714285714285714
+        ],
+        "features": [
+          -0.5813930322180321,
+          -0.23645625750977636,
+          -0.03230033799140362
+        ],
+        "action": 0,
+        "cueGuess": 0,
+        "cueDriveAtDecision": true
+      }
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "repeat": 11,
+      "first": {
+        "cue": 2,
+        "key": 8320235000,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          1,
+          0.8571428571428571,
+          1.6428571428571428
+        ],
+        "features": [
+          1.6265062683754379,
+          1.402848955608052,
+          1.2920412220601514
+        ],
+        "action": 0,
+        "cueGuess": 2,
+        "cueDriveAtDecision": true
+      },
+      "second": {
+        "cue": 1,
+        "key": 8320235001,
+        "schedule": "teacher_first",
+        "decisionMs": 520,
+        "countResetMs": [
+          330,
+          520
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.35714285714285715
+        ],
+        "features": [
+          -0.8670215223860789,
+          -1.049239879038443,
+          -0.40576107796734173
+        ],
+        "action": 0,
+        "cueGuess": 1,
+        "cueDriveAtDecision": true
+      }
+    }
+  ],
+  "summary": [
+    {
+      "seed": 831,
+      "firstCue": 0,
+      "nextCue": 2,
+      "recognition": {
+        "revisedNone": [
+          10,
+          12
+        ],
+        "revisedBit0": [
+          10,
+          12
+        ],
+        "revisedBit1": [
+          10,
+          12
+        ],
+        "isolatedSecond": 12,
+        "teacherFirst": [
+          9,
+          12
+        ]
+      },
+      "pairedSecond": {
+        "bit0": {
+          "gained": 0,
+          "lost": 0
+        },
+        "bit1": {
+          "gained": 0,
+          "lost": 0
+        },
+        "isolated": {
+          "gained": 0,
+          "lost": 0
+        },
+        "teacherFirst": {
+          "gained": 0,
+          "lost": 0
+        }
+      },
+      "rates": {
+        "revisedFirst": [
+          {
+            "mean": 0.5238095238095237,
+            "sd": 0.14964053678543493
+          },
+          {
+            "mean": 0.4702380952380952,
+            "sd": 0.12863204038675183
+          },
+          {
+            "mean": 0.5178571428571429,
+            "sd": 0.2316845292384353
+          }
+        ],
+        "revisedSecond": [
+          {
+            "mean": 0.7261904761904762,
+            "sd": 0.1044638617546681
+          },
+          {
+            "mean": 0.6904761904761904,
+            "sd": 0.1178511301977579
+          },
+          {
+            "mean": 1.5297619047619044,
+            "sd": 0.1582706642893849
+          }
+        ],
+        "revisedBit0Second": [
+          {
+            "mean": 0.8273809523809524,
+            "sd": 0.13189595122714487
+          },
+          {
+            "mean": 0.8095238095238096,
+            "sd": 0.13468700594029473
+          },
+          {
+            "mean": 1.6726190476190474,
+            "sd": 0.20299277267833254
+          }
+        ],
+        "revisedBit1Second": [
+          {
+            "mean": 0.7738095238095238,
+            "sd": 0.10446386175466811
+          },
+          {
+            "mean": 0.7380952380952381,
+            "sd": 0.09816918156232521
+          },
+          {
+            "mean": 1.6011904761904763,
+            "sd": 0.1661343540113436
+          }
+        ],
+        "isolatedSecond": [
+          {
+            "mean": 0.7797619047619048,
+            "sd": 0.1029262884868487
+          },
+          {
+            "mean": 0.619047619047619,
+            "sd": 0.20273079007055236
+          },
+          {
+            "mean": 1.4285714285714286,
+            "sd": 0.23328473740792174
+          }
+        ],
+        "teacherFirstSecond": [
+          {
+            "mean": 0.7261904761904762,
+            "sd": 0.1423602469416833
+          },
+          {
+            "mean": 0.7142857142857143,
+            "sd": 0.1934294858246657
+          },
+          {
+            "mean": 1.613095238095238,
+            "sd": 0.2834108537408908
+          }
+        ]
+      },
+      "dn": [
+        {
+          "bit": 0,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.5,
+            "sd": 1.2583057392117916
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        },
+        {
+          "bit": 1,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.5,
+            "sd": 1.2583057392117916
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        }
+      ]
+    },
+    {
+      "seed": 831,
+      "firstCue": 1,
+      "nextCue": 0,
+      "recognition": {
+        "revisedNone": [
+          12,
+          10
+        ],
+        "revisedBit0": [
+          12,
+          10
+        ],
+        "revisedBit1": [
+          12,
+          10
+        ],
+        "isolatedSecond": 10,
+        "teacherFirst": [
+          11,
+          10
+        ]
+      },
+      "pairedSecond": {
+        "bit0": {
+          "gained": 0,
+          "lost": 0
+        },
+        "bit1": {
+          "gained": 0,
+          "lost": 0
+        },
+        "isolated": {
+          "gained": 0,
+          "lost": 0
+        },
+        "teacherFirst": {
+          "gained": 2,
+          "lost": 2
+        }
+      },
+      "rates": {
+        "revisedFirst": [
+          {
+            "mean": 0.14285714285714282,
+            "sd": 0.08247860988423225
+          },
+          {
+            "mean": 0.017857142857142856,
+            "sd": 0.0425085025508503
+          },
+          {
+            "mean": 0,
+            "sd": 0
+          }
+        ],
+        "revisedSecond": [
+          {
+            "mean": 0.619047619047619,
+            "sd": 0.20062261364705616
+          },
+          {
+            "mean": 0.5178571428571428,
+            "sd": 0.16527908782041456
+          },
+          {
+            "mean": 0.6428571428571429,
+            "sd": 0.2945075446869757
+          }
+        ],
+        "revisedBit0Second": [
+          {
+            "mean": 0.6309523809523809,
+            "sd": 0.1952526127006753
+          },
+          {
+            "mean": 0.49999999999999994,
+            "sd": 0.1675148485651225
+          },
+          {
+            "mean": 0.5952380952380951,
+            "sd": 0.29928107357086986
+          }
+        ],
+        "revisedBit1Second": [
+          {
+            "mean": 0.6309523809523809,
+            "sd": 0.1952526127006753
+          },
+          {
+            "mean": 0.49999999999999994,
+            "sd": 0.1675148485651225
+          },
+          {
+            "mean": 0.5952380952380951,
+            "sd": 0.29928107357086986
+          }
+        ],
+        "isolatedSecond": [
+          {
+            "mean": 0.630952380952381,
+            "sd": 0.2058525769736974
+          },
+          {
+            "mean": 0.5416666666666666,
+            "sd": 0.21120470237154965
+          },
+          {
+            "mean": 0.6011904761904762,
+            "sd": 0.3160372369632925
+          }
+        ],
+        "teacherFirstSecond": [
+          {
+            "mean": 0.6071428571428571,
+            "sd": 0.2774090523269296
+          },
+          {
+            "mean": 0.4702380952380952,
+            "sd": 0.21910907522983292
+          },
+          {
+            "mean": 0.5833333333333334,
+            "sd": 0.2824716789929684
+          }
+        ]
+      },
+      "dn": [
+        {
+          "bit": 0,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.916666666666667,
+            "sd": 1.1873172373979173
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        },
+        {
+          "bit": 1,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.916666666666667,
+            "sd": 1.1873172373979173
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        }
+      ]
+    },
+    {
+      "seed": 831,
+      "firstCue": 2,
+      "nextCue": 1,
+      "recognition": {
+        "revisedNone": [
+          12,
+          11
+        ],
+        "revisedBit0": [
+          12,
+          10
+        ],
+        "revisedBit1": [
+          12,
+          11
+        ],
+        "isolatedSecond": 12,
+        "teacherFirst": [
+          12,
+          11
+        ]
+      },
+      "pairedSecond": {
+        "bit0": {
+          "gained": 1,
+          "lost": 2
+        },
+        "bit1": {
+          "gained": 1,
+          "lost": 1
+        },
+        "isolated": {
+          "gained": 1,
+          "lost": 0
+        },
+        "teacherFirst": {
+          "gained": 1,
+          "lost": 1
+        }
+      },
+      "rates": {
+        "revisedFirst": [
+          {
+            "mean": 0.8214285714285713,
+            "sd": 0.15567496226930974
+          },
+          {
+            "mean": 0.7321428571428571,
+            "sd": 0.24592771738230473
+          },
+          {
+            "mean": 1.6964285714285714,
+            "sd": 0.315588479566942
+          }
+        ],
+        "revisedSecond": [
+          {
+            "mean": 0.10119047619047616,
+            "sd": 0.12528312607053088
+          },
+          {
+            "mean": 0.07738095238095237,
+            "sd": 0.0943034495104456
+          },
+          {
+            "mean": 0.33928571428571425,
+            "sd": 0.059225442684917855
+          }
+        ],
+        "revisedBit0Second": [
+          {
+            "mean": 0.10119047619047616,
+            "sd": 0.045721105642075044
+          },
+          {
+            "mean": 0.07738095238095237,
+            "sd": 0.04572110564207505
+          },
+          {
+            "mean": 0.4226190476190476,
+            "sd": 0.1108805714892688
+          }
+        ],
+        "revisedBit1Second": [
+          {
+            "mean": 0.10119047619047616,
+            "sd": 0.045721105642075044
+          },
+          {
+            "mean": 0.07142857142857141,
+            "sd": 0.06520506636966263
+          },
+          {
+            "mean": 0.3630952380952381,
+            "sd": 0.0681281139420214
+          }
+        ],
+        "isolatedSecond": [
+          {
+            "mean": 0.10714285714285711,
+            "sd": 0.04610694459770734
+          },
+          {
+            "mean": 0.011904761904761904,
+            "sd": 0.0266198568749975
+          },
+          {
+            "mean": 0,
+            "sd": 0
+          }
+        ],
+        "teacherFirstSecond": [
+          {
+            "mean": 0.13690476190476186,
+            "sd": 0.06812811394202141
+          },
+          {
+            "mean": 0.07142857142857141,
+            "sd": 0.09671474291233285
+          },
+          {
+            "mean": 0.3273809523809524,
+            "sd": 0.13819269959814168
+          }
+        ]
+      },
+      "dn": [
+        {
+          "bit": 0,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.416666666666667,
+            "sd": 1.1149240133549707
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        },
+        {
+          "bit": 1,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.416666666666667,
+            "sd": 1.1149240133549707
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        }
+      ]
+    },
+    {
+      "seed": 832,
+      "firstCue": 0,
+      "nextCue": 2,
+      "recognition": {
+        "revisedNone": [
+          11,
+          12
+        ],
+        "revisedBit0": [
+          11,
+          12
+        ],
+        "revisedBit1": [
+          11,
+          12
+        ],
+        "isolatedSecond": 12,
+        "teacherFirst": [
+          10,
+          11
+        ]
+      },
+      "pairedSecond": {
+        "bit0": {
+          "gained": 0,
+          "lost": 0
+        },
+        "bit1": {
+          "gained": 0,
+          "lost": 0
+        },
+        "isolated": {
+          "gained": 0,
+          "lost": 0
+        },
+        "teacherFirst": {
+          "gained": 0,
+          "lost": 1
+        }
+      },
+      "rates": {
+        "revisedFirst": [
+          {
+            "mean": 0.5773809523809522,
+            "sd": 0.15280354348801709
+          },
+          {
+            "mean": 0.48809523809523814,
+            "sd": 0.16452708287006257
+          },
+          {
+            "mean": 0.5773809523809523,
+            "sd": 0.31060936013451784
+          }
+        ],
+        "revisedSecond": [
+          {
+            "mean": 0.761904761904762,
+            "sd": 0.09816918156232521
+          },
+          {
+            "mean": 0.6964285714285715,
+            "sd": 0.10959495618763078
+          },
+          {
+            "mean": 1.7142857142857144,
+            "sd": 0.1271080744289442
+          }
+        ],
+        "revisedBit0Second": [
+          {
+            "mean": 0.7321428571428572,
+            "sd": 0.07783748113465487
+          },
+          {
+            "mean": 0.7142857142857143,
+            "sd": 0.14869042853329517
+          },
+          {
+            "mean": 1.5892857142857142,
+            "sd": 0.16005154356843754
+          }
+        ],
+        "revisedBit1Second": [
+          {
+            "mean": 0.7261904761904762,
+            "sd": 0.1362562278840428
+          },
+          {
+            "mean": 0.6607142857142857,
+            "sd": 0.19370404875324976
+          },
+          {
+            "mean": 1.6309523809523812,
+            "sd": 0.30699516567208635
+          }
+        ],
+        "isolatedSecond": [
+          {
+            "mean": 0.755952380952381,
+            "sd": 0.07410654522612337
+          },
+          {
+            "mean": 0.6547619047619048,
+            "sd": 0.1619222679611362
+          },
+          {
+            "mean": 1.642857142857143,
+            "sd": 0.2719918966379967
+          }
+        ],
+        "teacherFirstSecond": [
+          {
+            "mean": 0.7083333333333334,
+            "sd": 0.14421477904268712
+          },
+          {
+            "mean": 0.6666666666666666,
+            "sd": 0.19416079083690585
+          },
+          {
+            "mean": 1.6309523809523812,
+            "sd": 0.3192163732807601
+          }
+        ]
+      },
+      "dn": [
+        {
+          "bit": 0,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.416666666666667,
+            "sd": 1.6562172428626492
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        },
+        {
+          "bit": 1,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.416666666666667,
+            "sd": 1.6562172428626492
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        }
+      ]
+    },
+    {
+      "seed": 832,
+      "firstCue": 1,
+      "nextCue": 0,
+      "recognition": {
+        "revisedNone": [
+          12,
+          6
+        ],
+        "revisedBit0": [
+          12,
+          9
+        ],
+        "revisedBit1": [
+          12,
+          9
+        ],
+        "isolatedSecond": 11,
+        "teacherFirst": [
+          10,
+          10
+        ]
+      },
+      "pairedSecond": {
+        "bit0": {
+          "gained": 3,
+          "lost": 0
+        },
+        "bit1": {
+          "gained": 3,
+          "lost": 0
+        },
+        "isolated": {
+          "gained": 5,
+          "lost": 0
+        },
+        "teacherFirst": {
+          "gained": 6,
+          "lost": 2
+        }
+      },
+      "rates": {
+        "revisedFirst": [
+          {
+            "mean": 0.14880952380952378,
+            "sd": 0.06157190733802737
+          },
+          {
+            "mean": 0.017857142857142856,
+            "sd": 0.0425085025508503
+          },
+          {
+            "mean": 0.005952380952380952,
+            "sd": 0.019741814228305943
+          }
+        ],
+        "revisedSecond": [
+          {
+            "mean": 0.6964285714285713,
+            "sd": 0.256090771003559
+          },
+          {
+            "mean": 0.5654761904761905,
+            "sd": 0.21715995651136547
+          },
+          {
+            "mean": 0.7678571428571429,
+            "sd": 0.4621056877670591
+          }
+        ],
+        "revisedBit0Second": [
+          {
+            "mean": 0.625,
+            "sd": 0.25106067510670405
+          },
+          {
+            "mean": 0.4761904761904762,
+            "sd": 0.18288442256830018
+          },
+          {
+            "mean": 0.6249999999999999,
+            "sd": 0.37244024311811086
+          }
+        ],
+        "revisedBit1Second": [
+          {
+            "mean": 0.6369047619047619,
+            "sd": 0.2412734309465624
+          },
+          {
+            "mean": 0.49404761904761907,
+            "sd": 0.17364228745017643
+          },
+          {
+            "mean": 0.6369047619047619,
+            "sd": 0.36123646001663706
+          }
+        ],
+        "isolatedSecond": [
+          {
+            "mean": 0.5892857142857143,
+            "sd": 0.19804529475731103
+          },
+          {
+            "mean": 0.4761904761904762,
+            "sd": 0.2027307900705524
+          },
+          {
+            "mean": 0.5892857142857143,
+            "sd": 0.264261581909799
+          }
+        ],
+        "teacherFirstSecond": [
+          {
+            "mean": 0.5535714285714286,
+            "sd": 0.2389122885760652
+          },
+          {
+            "mean": 0.48214285714285715,
+            "sd": 0.16268631391329108
+          },
+          {
+            "mean": 0.5119047619047618,
+            "sd": 0.27173124310746016
+          }
+        ]
+      },
+      "dn": [
+        {
+          "bit": 0,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.666666666666667,
+            "sd": 1.3123346456686351
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        },
+        {
+          "bit": 1,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.666666666666667,
+            "sd": 1.3123346456686351
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        }
+      ]
+    },
+    {
+      "seed": 832,
+      "firstCue": 2,
+      "nextCue": 1,
+      "recognition": {
+        "revisedNone": [
+          10,
+          10
+        ],
+        "revisedBit0": [
+          10,
+          10
+        ],
+        "revisedBit1": [
+          10,
+          10
+        ],
+        "isolatedSecond": 12,
+        "teacherFirst": [
+          12,
+          10
+        ]
+      },
+      "pairedSecond": {
+        "bit0": {
+          "gained": 2,
+          "lost": 2
+        },
+        "bit1": {
+          "gained": 2,
+          "lost": 2
+        },
+        "isolated": {
+          "gained": 2,
+          "lost": 0
+        },
+        "teacherFirst": {
+          "gained": 2,
+          "lost": 2
+        }
+      },
+      "rates": {
+        "revisedFirst": [
+          {
+            "mean": 0.738095238095238,
+            "sd": 0.1314923930617531
+          },
+          {
+            "mean": 0.6428571428571429,
+            "sd": 0.1956151991089879
+          },
+          {
+            "mean": 1.4523809523809526,
+            "sd": 0.2862098876231264
+          }
+        ],
+        "revisedSecond": [
+          {
+            "mean": 0.11904761904761903,
+            "sd": 0.07338588098772592
+          },
+          {
+            "mean": 0.07738095238095237,
+            "sd": 0.07963742952535507
+          },
+          {
+            "mean": 0.3809523809523809,
+            "sd": 0.08908708063747481
+          }
+        ],
+        "revisedBit0Second": [
+          {
+            "mean": 0.14285714285714285,
+            "sd": 0.08247860988423225
+          },
+          {
+            "mean": 0.07142857142857142,
+            "sd": 0.09221388919541469
+          },
+          {
+            "mean": 0.36904761904761907,
+            "sd": 0.12314381467605477
+          }
+        ],
+        "revisedBit1Second": [
+          {
+            "mean": 0.1369047619047619,
+            "sd": 0.09870907114152977
+          },
+          {
+            "mean": 0.08333333333333331,
+            "sd": 0.08666797487238712
+          },
+          {
+            "mean": 0.38690476190476186,
+            "sd": 0.1108805714892688
+          }
+        ],
+        "isolatedSecond": [
+          {
+            "mean": 0.1369047619047619,
+            "sd": 0.09870907114152976
+          },
+          {
+            "mean": 0.029761904761904757,
+            "sd": 0.054228771304430344
+          },
+          {
+            "mean": 0.029761904761904757,
+            "sd": 0.06812811394202141
+          }
+        ],
+        "teacherFirstSecond": [
+          {
+            "mean": 0.14880952380952378,
+            "sd": 0.08480837409985123
+          },
+          {
+            "mean": 0.11309523809523808,
+            "sd": 0.09430344951044559
+          },
+          {
+            "mean": 0.40476190476190466,
+            "sd": 0.08417937871268422
+          }
+        ]
+      },
+      "dn": [
+        {
+          "bit": 0,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.666666666666667,
+            "sd": 1.49071198499986
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        },
+        {
+          "bit": 1,
+          "decoded": 12,
+          "intended": {
+            "mean": 7.666666666666667,
+            "sd": 1.49071198499986
+          },
+          "offTarget": {
+            "mean": 0,
+            "sd": 0
+          }
+        }
+      ]
+    }
+  ],
+  "interpretation": {
+    "baselineBelowFloor": true,
+    "historyNetCorrectionsAtLeast3": true,
+    "earlierScheduleNetCorrectionsAtLeast3": true,
+    "dnInterferenceOverTwoNetLosses": false,
+    "frozenValidity": true
+  }
+}

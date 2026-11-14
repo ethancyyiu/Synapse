@@ -1,0 +1,4469 @@
+{
+  "protocolSha256": "05a7ee1769ff769945566fb644ffac0b5b9aa7630e504317be13b01945d9ab11",
+  "stage": "initial",
+  "config": {
+    "teacher": 12031,
+    "student": 12032,
+    "teacherTrain": 610003,
+    "teacherEval": 610004,
+    "studentTrain": 610005,
+    "studentEval": 610006
+  },
+  "status": "stopped_sensory",
+  "sensory": {
+    "classNames": [
+      "normal",
+      "overheating",
+      "excess_vibration"
+    ],
+    "splits": {
+      "calibration": [
+        {
+          "label": 0,
+          "temperature": 57.31995201697683,
+          "vibration": 2.1131280857797456
+        },
+        {
+          "label": 1,
+          "temperature": 56.35569715131786,
+          "vibration": 3.662399462193369
+        },
+        {
+          "label": 1,
+          "temperature": 82.25800925609632,
+          "vibration": 0.8135368030707744
+        },
+        {
+          "label": 2,
+          "temperature": 66.72654990276172,
+          "vibration": 8.377694175753845
+        },
+        {
+          "label": 2,
+          "temperature": 38.905642664251545,
+          "vibration": 7.973288056805207
+        },
+        {
+          "label": 0,
+          "temperature": 66.13204368929905,
+          "vibration": 3.5705915679949918
+        },
+        {
+          "label": 1,
+          "temperature": 61.09026889832339,
+          "vibration": 3.5814928090795255
+        },
+        {
+          "label": 1,
+          "temperature": 68.45113718746461,
+          "vibration": 2.8464586493705735
+        },
+        {
+          "label": 0,
+          "temperature": 48.38178283420088,
+          "vibration": 2.564719102813979
+        },
+        {
+          "label": 2,
+          "temperature": 43.8787387563794,
+          "vibration": 3.505323501127887
+        },
+        {
+          "label": 0,
+          "temperature": 45.80623502820411,
+          "vibration": 0.4656616496506034
+        },
+        {
+          "label": 0,
+          "temperature": 40.45638586043499,
+          "vibration": 4.132655852770538
+        },
+        {
+          "label": 0,
+          "temperature": 47.472605156949975,
+          "vibration": 5.084849673091816
+        },
+        {
+          "label": 0,
+          "temperature": 45.34951432857542,
+          "vibration": 1.338707620511411
+        },
+        {
+          "label": 2,
+          "temperature": 40.98035877396887,
+          "vibration": 6.572374174260237
+        },
+        {
+          "label": 0,
+          "temperature": 52.97754400940167,
+          "vibration": 0.9190346440661246
+        },
+        {
+          "label": 0,
+          "temperature": 43.513175140190924,
+          "vibration": 0.42464716466015817
+        },
+        {
+          "label": 0,
+          "temperature": 55.08486133194219,
+          "vibration": 3.709762852959188
+        },
+        {
+          "label": 1,
+          "temperature": 53.62051377465878,
+          "vibration": 3.697028878547756
+        },
+        {
+          "label": 0,
+          "temperature": 39.96005530539301,
+          "vibration": 0.5964529059152857
+        },
+        {
+          "label": 0,
+          "temperature": 46.858363623295624,
+          "vibration": 2.8906011784752117
+        },
+        {
+          "label": 0,
+          "temperature": 46.961956412999555,
+          "vibration": 2.4296230179123803
+        },
+        {
+          "label": 1,
+          "temperature": 68.44889158504459,
+          "vibration": 1.2784581740128738
+        },
+        {
+          "label": 2,
+          "temperature": 67.21951355210686,
+          "vibration": 8.100232341005738
+        },
+        {
+          "label": 0,
+          "temperature": 36.90348701702209,
+          "vibration": 0.3611258837529967
+        },
+        {
+          "label": 2,
+          "temperature": 47.726866800358835,
+          "vibration": 5.775030129890812
+        },
+        {
+          "label": 2,
+          "temperature": 63.35505366043378,
+          "vibration": 5.971639962782841
+        },
+        {
+          "label": 0,
+          "temperature": 45.721142548038706,
+          "vibration": 1.0289588993010481
+        },
+        {
+          "label": 2,
+          "temperature": 44.016172976781974,
+          "vibration": 6.583544116814956
+        },
+        {
+          "label": 1,
+          "temperature": 81.78892852836931,
+          "vibration": 3.0984894565432772
+        },
+        {
+          "label": 0,
+          "temperature": 42.99462476175719,
+          "vibration": 2.50629448633424
+        },
+        {
+          "label": 1,
+          "temperature": 84.1123219303287,
+          "vibration": 3.3655246182395597
+        },
+        {
+          "label": 2,
+          "temperature": 53.2170688459729,
+          "vibration": 9.412262166539117
+        },
+        {
+          "label": 0,
+          "temperature": 75.8040403661302,
+          "vibration": 6.572606071771292
+        },
+        {
+          "label": 2,
+          "temperature": 54.661815842619866,
+          "vibration": 7.370138816948051
+        },
+        {
+          "label": 2,
+          "temperature": 44.82133731382155,
+          "vibration": 5.64146503837902
+        },
+        {
+          "label": 1,
+          "temperature": 72.92268611764838,
+          "vibration": 0.9610970190698793
+        },
+        {
+          "label": 1,
+          "temperature": 83.51169674799775,
+          "vibration": 2.7993081302639986
+        },
+        {
+          "label": 0,
+          "temperature": 50.57491964514255,
+          "vibration": 1.4183623474713847
+        },
+        {
+          "label": 2,
+          "temperature": 48.24197274384584,
+          "vibration": 5.298587572460285
+        },
+        {
+          "label": 2,
+          "temperature": 44.83632846841334,
+          "vibration": 9.030787735902907
+        },
+        {
+          "label": 1,
+          "temperature": 75.18746525979574,
+          "vibration": 5.245346884908625
+        },
+        {
+          "label": 1,
+          "temperature": 79.45254378337421,
+          "vibration": 4.442176931422009
+        },
+        {
+          "label": 2,
+          "temperature": 41.83611393629121,
+          "vibration": 5.343511689599704
+        },
+        {
+          "label": 1,
+          "temperature": 62.239799185546126,
+          "vibration": 4.849569670179299
+        },
+        {
+          "label": 0,
+          "temperature": 51.49229071622372,
+          "vibration": 6.1920920498389265
+        },
+        {
+          "label": 1,
+          "temperature": 53.23460615143776,
+          "vibration": 3.520360748285924
+        },
+        {
+          "label": 0,
+          "temperature": 48.59578953351319,
+          "vibration": 4.940606130243423
+        },
+        {
+          "label": 1,
+          "temperature": 69.9183106700221,
+          "vibration": 2.5650295923041644
+        },
+        {
+          "label": 1,
+          "temperature": 71.93035489279612,
+          "vibration": 2.686433167075173
+        },
+        {
+          "label": 1,
+          "temperature": 66.15441524627714,
+          "vibration": 0.7616820524660197
+        },
+        {
+          "label": 2,
+          "temperature": 41.0036915314347,
+          "vibration": 6.957211771059705
+        },
+        {
+          "label": 2,
+          "temperature": 45.58891259561974,
+          "vibration": 7.485610523143064
+        },
+        {
+          "label": 1,
+          "temperature": 73.8946926845865,
+          "vibration": 2.1229499438592776
+        },
+        {
+          "label": 2,
+          "temperature": 42.16515155082989,
+          "vibration": 6.60110278977524
+        },
+        {
+          "label": 2,
+          "temperature": 66.72202460333914,
+          "vibration": 6.591420937291499
+        },
+        {
+          "label": 1,
+          "temperature": 65.49067296208752,
+          "vibration": 1.684755972366929
+        },
+        {
+          "label": 0,
+          "temperature": 51.705127085948526,
+          "vibration": 0.3287612629765335
+        },
+        {
+          "label": 0,
+          "temperature": 71.43930614278078,
+          "vibration": 3.0884322349828843
+        },
+        {
+          "label": 1,
+          "temperature": 63.63629424052033,
+          "vibration": 2.650617799911287
+        },
+        {
+          "label": 1,
+          "temperature": 59.51487174385581,
+          "vibration": 3.9587501150158912
+        },
+        {
+          "label": 2,
+          "temperature": 51.770477632235924,
+          "vibration": 6.367278606071626
+        },
+        {
+          "label": 2,
+          "temperature": 57.794434002093624,
+          "vibration": 6.0083631557112165
+        },
+        {
+          "label": 0,
+          "temperature": 54.243781899229916,
+          "vibration": 1.3328396427969842
+        },
+        {
+          "label": 2,
+          "temperature": 60.2818515469352,
+          "vibration": 7.65306749433141
+        },
+        {
+          "label": 1,
+          "temperature": 55.22879219029621,
+          "vibration": 2.5954198923950953
+        },
+        {
+          "label": 1,
+          "temperature": 65.50871535680947,
+          "vibration": 0.1747395827100342
+        },
+        {
+          "label": 0,
+          "temperature": 47.837454861373374,
+          "vibration": 0.31050867542165306
+        },
+        {
+          "label": 2,
+          "temperature": 39.48657337403765,
+          "vibration": 6.5606217433054645
+        },
+        {
+          "label": 2,
+          "temperature": 53.09086215483474,
+          "vibration": 6.819746012566631
+        },
+        {
+          "label": 2,
+          "temperature": 58.18936921950947,
+          "vibration": 8.673739985525494
+        },
+        {
+          "label": 1,
+          "temperature": 77.50900430507404,
+          "vibration": 0.7978539086576157
+        }
+      ],
+      "sensoryHeldout": [
+        {
+          "label": 0,
+          "temperature": 38.482870984027734,
+          "vibration": 2.5116935199191923
+        },
+        {
+          "label": 0,
+          "temperature": 43.93483446313657,
+          "vibration": 5.472265858986476
+        },
+        {
+          "label": 1,
+          "temperature": 78.02315847008022,
+          "vibration": 3.863550885089476
+        },
+        {
+          "label": 2,
+          "temperature": 40.27183568465731,
+          "vibration": 4.789761709178274
+        },
+        {
+          "label": 1,
+          "temperature": 75.1300695629355,
+          "vibration": 3.137394740155433
+        },
+        {
+          "label": 0,
+          "temperature": 49.26967967262841,
+          "vibration": 3.9316711841612975
+        },
+        {
+          "label": 2,
+          "temperature": 46.3669066925635,
+          "vibration": 6.132552926388964
+        },
+        {
+          "label": 2,
+          "temperature": 51.214519971373505,
+          "vibration": 8.930618574717293
+        },
+        {
+          "label": 2,
+          "temperature": 49.7864330760466,
+          "vibration": 6.578712043783313
+        },
+        {
+          "label": 2,
+          "temperature": 53.53175132451689,
+          "vibration": 4.493307736747828
+        },
+        {
+          "label": 2,
+          "temperature": 56.216590539762315,
+          "vibration": 6.862933999508555
+        },
+        {
+          "label": 1,
+          "temperature": 77.84749990953158,
+          "vibration": 3.375296801012919
+        },
+        {
+          "label": 0,
+          "temperature": 53.47369720968432,
+          "vibration": 1.7315875928437776
+        },
+        {
+          "label": 1,
+          "temperature": 69.54168264078069,
+          "vibration": 2.8499986829570614
+        },
+        {
+          "label": 2,
+          "temperature": 48.257612121797784,
+          "vibration": 5.156501828686796
+        },
+        {
+          "label": 1,
+          "temperature": 67.08506079609616,
+          "vibration": 2.6829467519615715
+        },
+        {
+          "label": 0,
+          "temperature": 56.48766762094201,
+          "vibration": 3.9070365347872
+        },
+        {
+          "label": 0,
+          "temperature": 59.27622688367927,
+          "vibration": 2.3689777941443855
+        },
+        {
+          "label": 1,
+          "temperature": 80.54967485560228,
+          "vibration": 1.9235116352757289
+        },
+        {
+          "label": 1,
+          "temperature": 71.59904436280922,
+          "vibration": 0.2169933727183886
+        },
+        {
+          "label": 1,
+          "temperature": 66.16617885948993,
+          "vibration": 1.2027245153860857
+        },
+        {
+          "label": 1,
+          "temperature": 82.64152570369764,
+          "vibration": 3.403259616396703
+        },
+        {
+          "label": 1,
+          "temperature": 78.19164816192328,
+          "vibration": 3.284865548941415
+        },
+        {
+          "label": 0,
+          "temperature": 52.02372409355873,
+          "vibration": 0.8498174151038267
+        },
+        {
+          "label": 1,
+          "temperature": 75.43857207586235,
+          "vibration": 1.4545583830883286
+        },
+        {
+          "label": 2,
+          "temperature": 50.83550959361795,
+          "vibration": 7.827016861745076
+        },
+        {
+          "label": 2,
+          "temperature": 64.01700957368706,
+          "vibration": 6.8361486841150345
+        },
+        {
+          "label": 0,
+          "temperature": 47.16725191824067,
+          "vibration": 0.9322493280867372
+        },
+        {
+          "label": 2,
+          "temperature": 58.16452821124125,
+          "vibration": 6.810173814722654
+        },
+        {
+          "label": 0,
+          "temperature": 40.45263429848576,
+          "vibration": 5.338906921373891
+        },
+        {
+          "label": 0,
+          "temperature": 58.54172078703215,
+          "vibration": 0.42429930662416826
+        },
+        {
+          "label": 2,
+          "temperature": 50.90820562226344,
+          "vibration": 5.416768291161307
+        },
+        {
+          "label": 2,
+          "temperature": 56.80488468816611,
+          "vibration": 3.6702201195064568
+        },
+        {
+          "label": 1,
+          "temperature": 60.275120809293384,
+          "vibration": 2.4109188198839746
+        },
+        {
+          "label": 0,
+          "temperature": 57.166815443817136,
+          "vibration": 2.325494783257654
+        },
+        {
+          "label": 0,
+          "temperature": 51.16608853359203,
+          "vibration": 2.444414030175874
+        }
+      ],
+      "teacherTrain": [
+        {
+          "label": 2,
+          "temperature": 49.18142274903757,
+          "vibration": 9.835366817038667
+        },
+        {
+          "label": 2,
+          "temperature": 45.241168422207366,
+          "vibration": 8.035068170100994
+        },
+        {
+          "label": 0,
+          "temperature": 43.03483410744761,
+          "vibration": 4.267051812883668
+        },
+        {
+          "label": 0,
+          "temperature": 52.580046652697945,
+          "vibration": 2.25572766205875
+        },
+        {
+          "label": 0,
+          "temperature": 44.104272403453024,
+          "vibration": 2.841956440117528
+        },
+        {
+          "label": 1,
+          "temperature": 60.86443744234186,
+          "vibration": 2.1090612525821
+        },
+        {
+          "label": 1,
+          "temperature": 70.9851674548435,
+          "vibration": 3.429859522968012
+        },
+        {
+          "label": 1,
+          "temperature": 80.10135439680253,
+          "vibration": 3.6477879359826626
+        },
+        {
+          "label": 2,
+          "temperature": 40.658431643234266,
+          "vibration": 8.48453837146024
+        },
+        {
+          "label": 1,
+          "temperature": 68.27448715031461,
+          "vibration": 1.4453670657281015
+        },
+        {
+          "label": 0,
+          "temperature": 50.28829301949215,
+          "vibration": 3.034905355482403
+        },
+        {
+          "label": 2,
+          "temperature": 52.217651974012874,
+          "vibration": 7.031794543599083
+        },
+        {
+          "label": 2,
+          "temperature": 54.201020044852385,
+          "vibration": 8.157008871208902
+        },
+        {
+          "label": 2,
+          "temperature": 51.037115974745205,
+          "vibration": 7.519184714152481
+        },
+        {
+          "label": 1,
+          "temperature": 56.38610896039876,
+          "vibration": 1.1125490013970194
+        },
+        {
+          "label": 1,
+          "temperature": 67.78587538015825,
+          "vibration": 3.9174128688905494
+        },
+        {
+          "label": 0,
+          "temperature": 49.963120007367934,
+          "vibration": 2.451642376271151
+        },
+        {
+          "label": 0,
+          "temperature": 61.461101169970405,
+          "vibration": 0.7388157320903666
+        },
+        {
+          "label": 0,
+          "temperature": 45.912412189812166,
+          "vibration": 0.08036669020609244
+        },
+        {
+          "label": 2,
+          "temperature": 42.781882878987616,
+          "vibration": 4.255901744271231
+        },
+        {
+          "label": 2,
+          "temperature": 37.66943124995845,
+          "vibration": 3.5947250400059665
+        },
+        {
+          "label": 0,
+          "temperature": 60.37765107543097,
+          "vibration": 3.875940372407787
+        },
+        {
+          "label": 1,
+          "temperature": 71.98439566046753,
+          "vibration": 4.223759837883026
+        },
+        {
+          "label": 1,
+          "temperature": 79.84192077459352,
+          "vibration": 1.7779749950742172
+        },
+        {
+          "label": 0,
+          "temperature": 48.60751843612394,
+          "vibration": 2.8987072778396534
+        },
+        {
+          "label": 2,
+          "temperature": 51.35361281376982,
+          "vibration": 8.911804499082558
+        },
+        {
+          "label": 0,
+          "temperature": 57.99856671079989,
+          "vibration": 1.9514522209455323
+        },
+        {
+          "label": 2,
+          "temperature": 47.57773903894417,
+          "vibration": 5.98258357105369
+        },
+        {
+          "label": 1,
+          "temperature": 76.3452538361187,
+          "vibration": 2.3875737816232765
+        },
+        {
+          "label": 0,
+          "temperature": 55.07794090427434,
+          "vibration": 2.344491115472088
+        },
+        {
+          "label": 2,
+          "temperature": 58.58600574381425,
+          "vibration": 5.933551033500505
+        },
+        {
+          "label": 2,
+          "temperature": 46.09119429778395,
+          "vibration": 7.212699093849964
+        },
+        {
+          "label": 1,
+          "temperature": 75.7217682126512,
+          "vibration": 0.6497289104265245
+        },
+        {
+          "label": 1,
+          "temperature": 65.43842579669031,
+          "vibration": 1.318204872717911
+        },
+        {
+          "label": 1,
+          "temperature": 69.50836693233101,
+          "vibration": 3.2325970499909307
+        },
+        {
+          "label": 1,
+          "temperature": 82.64210379526881,
+          "vibration": 3.319488730566695
+        },
+        {
+          "label": 2,
+          "temperature": 64.03485908004556,
+          "vibration": 8.783574206579186
+        },
+        {
+          "label": 2,
+          "temperature": 51.34691298119038,
+          "vibration": 6.622755669604533
+        },
+        {
+          "label": 1,
+          "temperature": 78.24378204164367,
+          "vibration": 2.84149829881311
+        },
+        {
+          "label": 0,
+          "temperature": 38.379357865272375,
+          "vibration": 2.1808239366298907
+        },
+        {
+          "label": 0,
+          "temperature": 47.09775792246308,
+          "vibration": 1.024627440114556
+        },
+        {
+          "label": 2,
+          "temperature": 53.836634172327614,
+          "vibration": 8.994227738364568
+        },
+        {
+          "label": 2,
+          "temperature": 45.22985135060313,
+          "vibration": 8.336129593322188
+        },
+        {
+          "label": 0,
+          "temperature": 45.76500696104914,
+          "vibration": 2.8324335587475016
+        },
+        {
+          "label": 1,
+          "temperature": 69.2783062632821,
+          "vibration": 2.771052818760381
+        },
+        {
+          "label": 0,
+          "temperature": 40.364700872654936,
+          "vibration": 0.19491218312660186
+        },
+        {
+          "label": 1,
+          "temperature": 64.84883777161033,
+          "vibration": 5.436058701818119
+        },
+        {
+          "label": 2,
+          "temperature": 47.75308226151776,
+          "vibration": 8.172327195944813
+        },
+        {
+          "label": 2,
+          "temperature": 38.91559644857194,
+          "vibration": 6.194952916055113
+        },
+        {
+          "label": 1,
+          "temperature": 79.37367620277968,
+          "vibration": 1.1821765437434422
+        },
+        {
+          "label": 0,
+          "temperature": 59.929548417216694,
+          "vibration": 3.3470713304618203
+        },
+        {
+          "label": 1,
+          "temperature": 72.3469266004587,
+          "vibration": 3.116087241613182
+        },
+        {
+          "label": 0,
+          "temperature": 50.39029190467929,
+          "vibration": 1.7175332552996267
+        },
+        {
+          "label": 0,
+          "temperature": 46.77096758737942,
+          "vibration": 3.1424606860357915
+        },
+        {
+          "label": 2,
+          "temperature": 38.525004303276745,
+          "vibration": 6.538058363796942
+        },
+        {
+          "label": 2,
+          "temperature": 65.60814112459282,
+          "vibration": 5.934509168893328
+        },
+        {
+          "label": 1,
+          "temperature": 82.92443168140721,
+          "vibration": 1.1264828383108814
+        },
+        {
+          "label": 1,
+          "temperature": 78.05211740759708,
+          "vibration": 2.9154180275641615
+        },
+        {
+          "label": 0,
+          "temperature": 47.33639637036213,
+          "vibration": 4.676134214218417
+        },
+        {
+          "label": 1,
+          "temperature": 71.17787223840206,
+          "vibration": 4.460147834829496
+        },
+        {
+          "label": 0,
+          "temperature": 51.35156620425974,
+          "vibration": 2.9721721764327595
+        },
+        {
+          "label": 0,
+          "temperature": 47.488471756519324,
+          "vibration": 1.1059615544405497
+        },
+        {
+          "label": 2,
+          "temperature": 44.1549334666326,
+          "vibration": 6.253183230767762
+        },
+        {
+          "label": 0,
+          "temperature": 54.95573463628551,
+          "vibration": 3.32663489543574
+        },
+        {
+          "label": 1,
+          "temperature": 75.31151245319197,
+          "vibration": 1.0771047232468522
+        },
+        {
+          "label": 2,
+          "temperature": 56.37026651161552,
+          "vibration": 5.10361928482679
+        },
+        {
+          "label": 2,
+          "temperature": 53.102252376541685,
+          "vibration": 8.383031210383404
+        },
+        {
+          "label": 1,
+          "temperature": 75.17064453445984,
+          "vibration": 1.434941458519106
+        },
+        {
+          "label": 1,
+          "temperature": 73.94863008169017,
+          "vibration": 4.597340724013591
+        },
+        {
+          "label": 2,
+          "temperature": 61.49532142939141,
+          "vibration": 7.221235803735182
+        },
+        {
+          "label": 1,
+          "temperature": 61.4262297834899,
+          "vibration": 3.202491255176442
+        },
+        {
+          "label": 2,
+          "temperature": 62.99640845414182,
+          "vibration": 8.598276772938148
+        },
+        {
+          "label": 0,
+          "temperature": 39.60876273390287,
+          "vibration": 2.3985351948412608
+        },
+        {
+          "label": 0,
+          "temperature": 47.73966142708937,
+          "vibration": 0.5431801257940034
+        },
+        {
+          "label": 0,
+          "temperature": 46.39833445904028,
+          "vibration": 1.673169225248294
+        },
+        {
+          "label": 2,
+          "temperature": 61.25477331618033,
+          "vibration": 6.610529691842227
+        },
+        {
+          "label": 1,
+          "temperature": 54.60150288178468,
+          "vibration": 0.5462457051980092
+        },
+        {
+          "label": 0,
+          "temperature": 43.06083734717481,
+          "vibration": 3.6636883715679867
+        },
+        {
+          "label": 0,
+          "temperature": 52.916873776871974,
+          "vibration": 1.3482453654395736
+        },
+        {
+          "label": 1,
+          "temperature": 64.1656560349894,
+          "vibration": 0.07572170785122267
+        },
+        {
+          "label": 0,
+          "temperature": 56.75195603536256,
+          "vibration": 2.294253036912072
+        },
+        {
+          "label": 1,
+          "temperature": 63.132978780964066,
+          "vibration": 3.6344585521717594
+        },
+        {
+          "label": 2,
+          "temperature": 40.78344964317907,
+          "vibration": 7.534016729334188
+        },
+        {
+          "label": 1,
+          "temperature": 59.08533055734887,
+          "vibration": 2.719258428746705
+        },
+        {
+          "label": 0,
+          "temperature": 39.295806261141045,
+          "vibration": 2.0744000488473477
+        },
+        {
+          "label": 1,
+          "temperature": 83.48647448200103,
+          "vibration": 2.0459563126066334
+        },
+        {
+          "label": 0,
+          "temperature": 39.76908270600743,
+          "vibration": 5.237271252811679
+        },
+        {
+          "label": 2,
+          "temperature": 43.1182312685244,
+          "vibration": 5.7361230574156465
+        },
+        {
+          "label": 0,
+          "temperature": 42.66209437489705,
+          "vibration": 2.7038885809662734
+        },
+        {
+          "label": 0,
+          "temperature": 45.416193529394945,
+          "vibration": 1.3016137541170107
+        },
+        {
+          "label": 2,
+          "temperature": 53.53263778386076,
+          "vibration": 7.472310672757315
+        },
+        {
+          "label": 2,
+          "temperature": 44.27739088691154,
+          "vibration": 9.63811635685058
+        },
+        {
+          "label": 2,
+          "temperature": 52.97092772824179,
+          "vibration": 8.264314023480958
+        },
+        {
+          "label": 1,
+          "temperature": 57.05051032945725,
+          "vibration": 1.5043765250792442
+        },
+        {
+          "label": 2,
+          "temperature": 50.70182571127265,
+          "vibration": 5.315551370691431
+        },
+        {
+          "label": 1,
+          "temperature": 65.25697391534403,
+          "vibration": 3.4132587222352155
+        }
+      ],
+      "teacherEval": [
+        {
+          "label": 2,
+          "temperature": 48.420428474733164,
+          "vibration": 6.448121828849533
+        },
+        {
+          "label": 0,
+          "temperature": 43.14822731286992,
+          "vibration": 3.8578187742513697
+        },
+        {
+          "label": 0,
+          "temperature": 41.88985999178836,
+          "vibration": 3.9159808839516987
+        },
+        {
+          "label": 0,
+          "temperature": 50.410525369806955,
+          "vibration": 2.4440692470438625
+        },
+        {
+          "label": 1,
+          "temperature": 63.2694027357157,
+          "vibration": 2.6543860815102143
+        },
+        {
+          "label": 1,
+          "temperature": 78.40828886654548,
+          "vibration": 0.7565950412145515
+        },
+        {
+          "label": 2,
+          "temperature": 45.68942178306789,
+          "vibration": 5.229594912039325
+        },
+        {
+          "label": 0,
+          "temperature": 56.26704523212698,
+          "vibration": 2.6033480396140565
+        },
+        {
+          "label": 1,
+          "temperature": 59.25155021286849,
+          "vibration": 2.229372479563374
+        },
+        {
+          "label": 2,
+          "temperature": 50.16783951510602,
+          "vibration": 3.9277667809272607
+        },
+        {
+          "label": 0,
+          "temperature": 54.88292918218737,
+          "vibration": 0.7011465406342348
+        },
+        {
+          "label": 2,
+          "temperature": 55.54168309815069,
+          "vibration": 8.864126540168929
+        },
+        {
+          "label": 0,
+          "temperature": 56.56291153523141,
+          "vibration": 3.924105105548918
+        },
+        {
+          "label": 1,
+          "temperature": 72.81517449477673,
+          "vibration": 1.0502404247850745
+        },
+        {
+          "label": 0,
+          "temperature": 55.719182086042906,
+          "vibration": 0.3817525003709523
+        },
+        {
+          "label": 1,
+          "temperature": 76.3767836064554,
+          "vibration": 0.6682032150415678
+        },
+        {
+          "label": 1,
+          "temperature": 72.40544054885618,
+          "vibration": 3.091149894412778
+        },
+        {
+          "label": 2,
+          "temperature": 54.5383030201707,
+          "vibration": 7.917831603429644
+        },
+        {
+          "label": 2,
+          "temperature": 46.937997867834206,
+          "vibration": 4.7855340307622365
+        },
+        {
+          "label": 2,
+          "temperature": 40.00328443502173,
+          "vibration": 8.940800931793481
+        },
+        {
+          "label": 2,
+          "temperature": 53.70048142307417,
+          "vibration": 6.172346750433358
+        },
+        {
+          "label": 0,
+          "temperature": 36.72676443765311,
+          "vibration": 2.1528000370776432
+        },
+        {
+          "label": 2,
+          "temperature": 51.25137054938532,
+          "vibration": 7.647769740784823
+        },
+        {
+          "label": 2,
+          "temperature": 44.61087207532473,
+          "vibration": 7.816981617661647
+        },
+        {
+          "label": 1,
+          "temperature": 69.61406273058807,
+          "vibration": 4.969640838613641
+        },
+        {
+          "label": 0,
+          "temperature": 47.00394076744765,
+          "vibration": 5.798469752150359
+        },
+        {
+          "label": 0,
+          "temperature": 51.40478096430304,
+          "vibration": 2.3256700866577513
+        },
+        {
+          "label": 2,
+          "temperature": 66.89829250154165,
+          "vibration": 6.449538351219413
+        },
+        {
+          "label": 1,
+          "temperature": 65.97745112566918,
+          "vibration": 4.583001243321746
+        },
+        {
+          "label": 1,
+          "temperature": 75.23744126672345,
+          "vibration": 1.3573364394863774
+        },
+        {
+          "label": 1,
+          "temperature": 82.03370771567515,
+          "vibration": 4.992850347583278
+        },
+        {
+          "label": 1,
+          "temperature": 71.22358153155588,
+          "vibration": 6.063185484376088
+        },
+        {
+          "label": 0,
+          "temperature": 43.80177764253507,
+          "vibration": 1.593103685495589
+        },
+        {
+          "label": 1,
+          "temperature": 65.54608055820543,
+          "vibration": 2.8396792117980008
+        },
+        {
+          "label": 2,
+          "temperature": 54.322668965105976,
+          "vibration": 5.099541483347261
+        },
+        {
+          "label": 0,
+          "temperature": 59.253281197483275,
+          "vibration": 1.3822915690243311
+        }
+      ],
+      "studentTrain": [
+        {
+          "label": 0,
+          "temperature": 47.598889816366786,
+          "vibration": 0.4623092006444094
+        },
+        {
+          "label": 1,
+          "temperature": 70.82469856323932,
+          "vibration": 1.5639500118127225
+        },
+        {
+          "label": 1,
+          "temperature": 77.47133459433198,
+          "vibration": 0.8361402206777171
+        },
+        {
+          "label": 1,
+          "temperature": 62.59906778369405,
+          "vibration": 2.877143396227331
+        },
+        {
+          "label": 2,
+          "temperature": 37.91749188552041,
+          "vibration": 4.426841426084509
+        },
+        {
+          "label": 2,
+          "temperature": 39.29940040578079,
+          "vibration": 6.624130600940297
+        },
+        {
+          "label": 2,
+          "temperature": 40.113702217138254,
+          "vibration": 5.211970403131566
+        },
+        {
+          "label": 2,
+          "temperature": 39.54943793525441,
+          "vibration": 6.871649408288363
+        },
+        {
+          "label": 1,
+          "temperature": 76.01000740615892,
+          "vibration": 3.9493779595786336
+        },
+        {
+          "label": 1,
+          "temperature": 71.53995953327487,
+          "vibration": 2.746153965487909
+        },
+        {
+          "label": 0,
+          "temperature": 59.01087669643612,
+          "vibration": 4.884155099684149
+        },
+        {
+          "label": 1,
+          "temperature": 65.50978753046554,
+          "vibration": 4.250538630251245
+        },
+        {
+          "label": 1,
+          "temperature": 73.32450261880676,
+          "vibration": 2.187372515010581
+        },
+        {
+          "label": 1,
+          "temperature": 71.39585662609163,
+          "vibration": 1.6389236679178816
+        },
+        {
+          "label": 1,
+          "temperature": 62.0646224054221,
+          "vibration": 1.9918628947782642
+        },
+        {
+          "label": 0,
+          "temperature": 45.361539510310784,
+          "vibration": 1.074687563709117
+        },
+        {
+          "label": 0,
+          "temperature": 64.47107375836583,
+          "vibration": 1.9129861757737303
+        },
+        {
+          "label": 2,
+          "temperature": 51.73372250623932,
+          "vibration": 8.143684169814396
+        },
+        {
+          "label": 2,
+          "temperature": 49.37453682873873,
+          "vibration": 5.809818658808873
+        },
+        {
+          "label": 0,
+          "temperature": 54.63604209879508,
+          "vibration": 1.80383474545292
+        },
+        {
+          "label": 2,
+          "temperature": 47.521846607846484,
+          "vibration": 7.207274757775369
+        },
+        {
+          "label": 2,
+          "temperature": 59.492297075436255,
+          "vibration": 8.607260731523933
+        },
+        {
+          "label": 2,
+          "temperature": 47.46386775559095,
+          "vibration": 6.652398141767738
+        },
+        {
+          "label": 0,
+          "temperature": 46.27884044079924,
+          "vibration": 2.551554365117882
+        },
+        {
+          "label": 2,
+          "temperature": 42.80117858379299,
+          "vibration": 4.54987446705891
+        },
+        {
+          "label": 0,
+          "temperature": 54.755752601402094,
+          "vibration": 4.031280509463418
+        },
+        {
+          "label": 1,
+          "temperature": 66.29974902632082,
+          "vibration": 3.5000805523208296
+        },
+        {
+          "label": 2,
+          "temperature": 53.64011072839177,
+          "vibration": 6.150654715172497
+        },
+        {
+          "label": 2,
+          "temperature": 53.137039652443875,
+          "vibration": 4.853190189089105
+        },
+        {
+          "label": 2,
+          "temperature": 44.11403131044155,
+          "vibration": 7.240585176182488
+        },
+        {
+          "label": 0,
+          "temperature": 57.49593306510246,
+          "vibration": 1.3632949017721234
+        },
+        {
+          "label": 1,
+          "temperature": 77.41090493632889,
+          "vibration": 2.660247364518547
+        },
+        {
+          "label": 2,
+          "temperature": 45.46867544935199,
+          "vibration": 8.19502299914556
+        },
+        {
+          "label": 1,
+          "temperature": 81.4330107477507,
+          "vibration": 6.31607610201138
+        },
+        {
+          "label": 2,
+          "temperature": 51.93921202149664,
+          "vibration": 8.060210358280008
+        },
+        {
+          "label": 1,
+          "temperature": 77.04986259017132,
+          "vibration": 1.616234545887676
+        },
+        {
+          "label": 0,
+          "temperature": 45.98379833007726,
+          "vibration": 3.6432033756115985
+        },
+        {
+          "label": 2,
+          "temperature": 42.00701917695225,
+          "vibration": 7.953170826798494
+        },
+        {
+          "label": 1,
+          "temperature": 63.12291320184161,
+          "vibration": 0.6989346923619948
+        },
+        {
+          "label": 1,
+          "temperature": 68.55603285760556,
+          "vibration": 1.7512364197308827
+        },
+        {
+          "label": 0,
+          "temperature": 48.05419270450727,
+          "vibration": 1.5335780759247344
+        },
+        {
+          "label": 2,
+          "temperature": 51.41260017605905,
+          "vibration": 9.753797118621796
+        },
+        {
+          "label": 1,
+          "temperature": 67.88843085935542,
+          "vibration": 0.29290864648272974
+        },
+        {
+          "label": 0,
+          "temperature": 59.1181512811043,
+          "vibration": 4.610912349692697
+        },
+        {
+          "label": 1,
+          "temperature": 66.58272293686485,
+          "vibration": 2.876306727205126
+        },
+        {
+          "label": 2,
+          "temperature": 56.74136390110773,
+          "vibration": 5.447882088685596
+        },
+        {
+          "label": 0,
+          "temperature": 65.90822343001936,
+          "vibration": 2.2591867830588495
+        },
+        {
+          "label": 1,
+          "temperature": 63.911551182839645,
+          "vibration": 2.3884011006308556
+        },
+        {
+          "label": 2,
+          "temperature": 52.1619578151698,
+          "vibration": 7.23732351555213
+        },
+        {
+          "label": 1,
+          "temperature": 83.73054464252877,
+          "vibration": 1.0963833599822617
+        },
+        {
+          "label": 2,
+          "temperature": 55.77852137604772,
+          "vibration": 9.872823658685256
+        },
+        {
+          "label": 1,
+          "temperature": 79.09443856942737,
+          "vibration": 5.690411667183431
+        },
+        {
+          "label": 0,
+          "temperature": 65.9646853719505,
+          "vibration": 3.160584466703391
+        },
+        {
+          "label": 0,
+          "temperature": 41.40721675297647,
+          "vibration": 2.0102029994239645
+        },
+        {
+          "label": 2,
+          "temperature": 47.55411314044712,
+          "vibration": 5.490360550394764
+        },
+        {
+          "label": 1,
+          "temperature": 68.73133761490736,
+          "vibration": 4.595831856773167
+        },
+        {
+          "label": 1,
+          "temperature": 61.4761786228379,
+          "vibration": 2.5503546635685277
+        },
+        {
+          "label": 2,
+          "temperature": 60.10058095527837,
+          "vibration": 6.9684838536546785
+        },
+        {
+          "label": 2,
+          "temperature": 52.54404756060048,
+          "vibration": 7.10723303610273
+        },
+        {
+          "label": 1,
+          "temperature": 57.37251043447016,
+          "vibration": 2.094760654163008
+        },
+        {
+          "label": 2,
+          "temperature": 43.76946885608941,
+          "vibration": 9.107795820005808
+        },
+        {
+          "label": 1,
+          "temperature": 62.10015999622682,
+          "vibration": 6.177447791926342
+        },
+        {
+          "label": 0,
+          "temperature": 42.15048830056337,
+          "vibration": 2.6641454793723853
+        },
+        {
+          "label": 0,
+          "temperature": 39.77825564080429,
+          "vibration": 4.407916598307935
+        },
+        {
+          "label": 1,
+          "temperature": 76.20839728467372,
+          "vibration": 2.2279737548173832
+        },
+        {
+          "label": 1,
+          "temperature": 79.07130284096155,
+          "vibration": 2.6732675365188374
+        },
+        {
+          "label": 2,
+          "temperature": 54.18901498495129,
+          "vibration": 8.897588288487329
+        },
+        {
+          "label": 0,
+          "temperature": 51.22605855550434,
+          "vibration": 2.7636257039901917
+        },
+        {
+          "label": 0,
+          "temperature": 46.09117967605092,
+          "vibration": 3.050717991037887
+        },
+        {
+          "label": 2,
+          "temperature": 55.27073892804566,
+          "vibration": 9.811189156717369
+        },
+        {
+          "label": 0,
+          "temperature": 63.869440213685024,
+          "vibration": 1.7098366602049366
+        },
+        {
+          "label": 0,
+          "temperature": 46.87643070464654,
+          "vibration": 3.3616193611215994
+        },
+        {
+          "label": 0,
+          "temperature": 37.222649075173834,
+          "vibration": 2.310842280218453
+        },
+        {
+          "label": 2,
+          "temperature": 49.52100586183324,
+          "vibration": 4.208426905156346
+        },
+        {
+          "label": 0,
+          "temperature": 62.40027566694553,
+          "vibration": 2.36892361476375
+        },
+        {
+          "label": 0,
+          "temperature": 53.122715529189456,
+          "vibration": 0.42274197639296296
+        },
+        {
+          "label": 1,
+          "temperature": 74.42509886388147,
+          "vibration": 3.770313410266044
+        },
+        {
+          "label": 2,
+          "temperature": 65.6985538168672,
+          "vibration": 8.815560823753144
+        },
+        {
+          "label": 2,
+          "temperature": 49.22159585840211,
+          "vibration": 8.966647309289419
+        },
+        {
+          "label": 0,
+          "temperature": 45.218217410765035,
+          "vibration": 4.16468834856602
+        },
+        {
+          "label": 0,
+          "temperature": 45.62602799427685,
+          "vibration": 1.7162199020418258
+        },
+        {
+          "label": 0,
+          "temperature": 50.621020814695214,
+          "vibration": 0.3247208667673953
+        },
+        {
+          "label": 0,
+          "temperature": 48.129970724511715,
+          "vibration": 0.835569183742118
+        },
+        {
+          "label": 0,
+          "temperature": 53.1714937981625,
+          "vibration": 2.210489307339667
+        },
+        {
+          "label": 2,
+          "temperature": 52.17777500149954,
+          "vibration": 6.04203046189648
+        },
+        {
+          "label": 0,
+          "temperature": 39.18199029026454,
+          "vibration": 2.283139296775639
+        },
+        {
+          "label": 1,
+          "temperature": 80.62770424536019,
+          "vibration": 0.4211316707323629
+        },
+        {
+          "label": 0,
+          "temperature": 49.33754324198861,
+          "vibration": 3.4269338652079857
+        },
+        {
+          "label": 2,
+          "temperature": 46.036948006356305,
+          "vibration": 5.72351104368507
+        },
+        {
+          "label": 1,
+          "temperature": 70.94015562313204,
+          "vibration": 3.8590269584636254
+        },
+        {
+          "label": 1,
+          "temperature": 77.93156145938353,
+          "vibration": 4.039416224949766
+        },
+        {
+          "label": 1,
+          "temperature": 54.21877527317699,
+          "vibration": 4.206510505730214
+        },
+        {
+          "label": 2,
+          "temperature": 48.40669205521942,
+          "vibration": 5.674166816313416
+        },
+        {
+          "label": 1,
+          "temperature": 73.52170747270895,
+          "vibration": 4.057148782840517
+        },
+        {
+          "label": 0,
+          "temperature": 44.11220352731596,
+          "vibration": 0.11171282192704979
+        },
+        {
+          "label": 0,
+          "temperature": 55.39268378906974,
+          "vibration": 1.6091034468692866
+        }
+      ],
+      "studentEval": [
+        {
+          "label": 2,
+          "temperature": 61.272294264641246,
+          "vibration": 8.214282600931357
+        },
+        {
+          "label": 0,
+          "temperature": 56.36466431611659,
+          "vibration": 2.363228999179026
+        },
+        {
+          "label": 0,
+          "temperature": 59.89295373754578,
+          "vibration": 2.118224864294888
+        },
+        {
+          "label": 0,
+          "temperature": 55.30836433504845,
+          "vibration": 2.448566980273948
+        },
+        {
+          "label": 1,
+          "temperature": 72.60359922853232,
+          "vibration": 4.791977132339232
+        },
+        {
+          "label": 1,
+          "temperature": 69.75752535038474,
+          "vibration": 3.2724836049755175
+        },
+        {
+          "label": 1,
+          "temperature": 70.31395135379582,
+          "vibration": 1.087012932135311
+        },
+        {
+          "label": 0,
+          "temperature": 62.72793784821056,
+          "vibration": 2.4040759089930237
+        },
+        {
+          "label": 1,
+          "temperature": 70.64158069086376,
+          "vibration": 2.295559271878564
+        },
+        {
+          "label": 0,
+          "temperature": 45.38068240931777,
+          "vibration": 2.323575955315039
+        },
+        {
+          "label": 0,
+          "temperature": 40.57495341289318,
+          "vibration": 2.9107112189915987
+        },
+        {
+          "label": 1,
+          "temperature": 72.9708519886453,
+          "vibration": 1.6087356378638116
+        },
+        {
+          "label": 0,
+          "temperature": 63.870243316266496,
+          "vibration": 3.036005305128193
+        },
+        {
+          "label": 2,
+          "temperature": 42.813496127666355,
+          "vibration": 6.421322187753683
+        },
+        {
+          "label": 1,
+          "temperature": 76.035578920794,
+          "vibration": 3.255588756690345
+        },
+        {
+          "label": 0,
+          "temperature": 45.414821755215875,
+          "vibration": 2.740244090925696
+        },
+        {
+          "label": 2,
+          "temperature": 61.87397452869621,
+          "vibration": 7.090282043052891
+        },
+        {
+          "label": 0,
+          "temperature": 51.05275065447431,
+          "vibration": 3.689256429215805
+        },
+        {
+          "label": 2,
+          "temperature": 64.62064062791951,
+          "vibration": 8.543144416515151
+        },
+        {
+          "label": 2,
+          "temperature": 41.723387198337335,
+          "vibration": 7.660918027794709
+        },
+        {
+          "label": 0,
+          "temperature": 62.39836933553307,
+          "vibration": 2.6280090138628394
+        },
+        {
+          "label": 0,
+          "temperature": 56.370739735436125,
+          "vibration": 3.5589264897820736
+        },
+        {
+          "label": 2,
+          "temperature": 37.28604630588153,
+          "vibration": 6.150252394463459
+        },
+        {
+          "label": 2,
+          "temperature": 58.29426045430361,
+          "vibration": 7.406060702820575
+        },
+        {
+          "label": 1,
+          "temperature": 66.32522026545928,
+          "vibration": 2.1842903951973573
+        },
+        {
+          "label": 1,
+          "temperature": 63.77186475632689,
+          "vibration": 3.6006808885862256
+        },
+        {
+          "label": 1,
+          "temperature": 70.111689658489,
+          "vibration": 3.392178991342183
+        },
+        {
+          "label": 2,
+          "temperature": 40.69892352040775,
+          "vibration": 7.7925106082325435
+        },
+        {
+          "label": 2,
+          "temperature": 55.134739877304526,
+          "vibration": 4.012043947337642
+        },
+        {
+          "label": 1,
+          "temperature": 80.61483956922234,
+          "vibration": 2.9922482954477028
+        },
+        {
+          "label": 1,
+          "temperature": 78.68313700282988,
+          "vibration": 3.6041029218368186
+        },
+        {
+          "label": 0,
+          "temperature": 52.37749336424087,
+          "vibration": 3.206187463247044
+        },
+        {
+          "label": 2,
+          "temperature": 45.96395878448665,
+          "vibration": 7.76261327901398
+        },
+        {
+          "label": 2,
+          "temperature": 51.324540800088705,
+          "vibration": 5.733263652336233
+        },
+        {
+          "label": 2,
+          "temperature": 55.65018577140684,
+          "vibration": 7.514993654008414
+        },
+        {
+          "label": 1,
+          "temperature": 65.51888448075556,
+          "vibration": 2.7830160739591183
+        }
+      ]
+    },
+    "calibration": [
+      {
+        "label": 0,
+        "temperature": 57.31995201697683,
+        "vibration": 2.1131280857797456,
+        "hz": [
+          106.95985605093048,
+          71.69692128669618
+        ],
+        "rates": [
+          0.35714285714285715,
+          0,
+          0.42857142857142855
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 56.35569715131786,
+        "vibration": 3.662399462193369,
+        "hz": [
+          104.0670914539536,
+          94.93599193290054
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.14285714285714285,
+          0.14285714285714285
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 82.25800925609632,
+        "vibration": 0.8135368030707744,
+        "hz": [
+          181.77402776828893,
+          52.203052046061615
+        ],
+        "rates": [
+          1.2142857142857142,
+          0.5714285714285714,
+          0.7142857142857143
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 66.72654990276172,
+        "vibration": 8.377694175753845,
+        "hz": [
+          135.17964970828515,
+          165.66541263630768
+        ],
+        "rates": [
+          1.7857142857142858,
+          1.2142857142857142,
+          1.2857142857142858
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 38.905642664251545,
+        "vibration": 7.973288056805207,
+        "hz": [
+          51.716927992754634,
+          159.5993208520781
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.35714285714285715,
+          0.7142857142857143
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 66.13204368929905,
+        "vibration": 3.5705915679949918,
+        "hz": [
+          133.39613106789716,
+          93.55887351992487
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.14285714285714285,
+          0.5
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 61.09026889832339,
+        "vibration": 3.5814928090795255,
+        "hz": [
+          118.27080669497016,
+          93.72239213619288
+        ],
+        "rates": [
+          1.0714285714285714,
+          0.5714285714285714,
+          0.9285714285714286
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 68.45113718746461,
+        "vibration": 2.8464586493705735,
+        "hz": [
+          140.35341156239383,
+          82.6968797405586
+        ],
+        "rates": [
+          1.3571428571428572,
+          0.9285714285714286,
+          1
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 48.38178283420088,
+        "vibration": 2.564719102813979,
+        "hz": [
+          80.14534850260263,
+          78.47078654220968
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.14285714285714285,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 43.8787387563794,
+        "vibration": 3.505323501127887,
+        "hz": [
+          66.6362162691382,
+          92.5798525169183
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.07142857142857142,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 45.80623502820411,
+        "vibration": 0.4656616496506034,
+        "hz": [
+          72.41870508461233,
+          46.98492474475905
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 40.45638586043499,
+        "vibration": 4.132655852770538,
+        "hz": [
+          56.369157581304975,
+          101.98983779155807
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.2857142857142857,
+          0.5
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 47.472605156949975,
+        "vibration": 5.084849673091816,
+        "hz": [
+          77.41781547084992,
+          116.27274509637725
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.14285714285714285,
+          0.14285714285714285
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 45.34951432857542,
+        "vibration": 1.338707620511411,
+        "hz": [
+          71.04854298572624,
+          60.08061430767117
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 40.98035877396887,
+        "vibration": 6.572374174260237,
+        "hz": [
+          57.9410763219066,
+          138.58561261390355
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.07142857142857142,
+          0.35714285714285715
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 52.97754400940167,
+        "vibration": 0.9190346440661246,
+        "hz": [
+          93.932632028205,
+          53.785519660991866
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 43.513175140190924,
+        "vibration": 0.42464716466015817,
+        "hz": [
+          65.53952542057277,
+          46.36970746990237
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 55.08486133194219,
+        "vibration": 3.709762852959188,
+        "hz": [
+          100.25458399582658,
+          95.64644279438782
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.2857142857142857,
+          0.35714285714285715
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 53.62051377465878,
+        "vibration": 3.697028878547756,
+        "hz": [
+          95.86154132397635,
+          95.45543317821634
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.2857142857142857,
+          0.5
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 39.96005530539301,
+        "vibration": 0.5964529059152857,
+        "hz": [
+          54.88016591617904,
+          48.946793588729285
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 46.858363623295624,
+        "vibration": 2.8906011784752117,
+        "hz": [
+          75.57509086988688,
+          83.35901767712818
+        ],
+        "rates": [
+          0.5,
+          0,
+          0.35714285714285715
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 46.961956412999555,
+        "vibration": 2.4296230179123803,
+        "hz": [
+          75.88586923899867,
+          76.44434526868571
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.21428571428571427,
+          0.2857142857142857
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 68.44889158504459,
+        "vibration": 1.2784581740128738,
+        "hz": [
+          140.3466747551338,
+          59.17687261019311
+        ],
+        "rates": [
+          0.35714285714285715,
+          0,
+          0.2857142857142857
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 67.21951355210686,
+        "vibration": 8.100232341005738,
+        "hz": [
+          136.65854065632058,
+          161.50348511508605
+        ],
+        "rates": [
+          1.8571428571428572,
+          1.5,
+          1.7857142857142858
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 36.90348701702209,
+        "vibration": 0.3611258837529967,
+        "hz": [
+          45.71046105106626,
+          45.41688825629495
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 47.726866800358835,
+        "vibration": 5.775030129890812,
+        "hz": [
+          78.1806004010765,
+          126.62545194836218
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.07142857142857142,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 63.35505366043378,
+        "vibration": 5.971639962782841,
+        "hz": [
+          125.06516098130135,
+          129.5745994417426
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.5,
+          0.7142857142857143
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 45.721142548038706,
+        "vibration": 1.0289588993010481,
+        "hz": [
+          72.16342764411613,
+          55.434383489515724
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 44.016172976781974,
+        "vibration": 6.583544116814956,
+        "hz": [
+          67.04851893034592,
+          138.75316175222434
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.21428571428571427,
+          0.42857142857142855
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 81.78892852836931,
+        "vibration": 3.0984894565432772,
+        "hz": [
+          180.36678558510795,
+          86.47734184814917
+        ],
+        "rates": [
+          1.2857142857142858,
+          0.7857142857142857,
+          1.1428571428571428
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 42.99462476175719,
+        "vibration": 2.50629448633424,
+        "hz": [
+          63.98387428527156,
+          77.5944172950136
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.14285714285714285,
+          0.5714285714285714
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 84.1123219303287,
+        "vibration": 3.3655246182395597,
+        "hz": [
+          187.3369657909861,
+          90.4828692735934
+        ],
+        "rates": [
+          1.2857142857142858,
+          0.7142857142857143,
+          0.8571428571428571
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 53.2170688459729,
+        "vibration": 9.412262166539117,
+        "hz": [
+          94.65120653791871,
+          181.18393249808676
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.35714285714285715,
+          0.42857142857142855
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 75.8040403661302,
+        "vibration": 6.572606071771292,
+        "hz": [
+          162.41212109839057,
+          138.5890910765694
+        ],
+        "rates": [
+          1.7142857142857142,
+          1,
+          0.7142857142857143
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 54.661815842619866,
+        "vibration": 7.370138816948051,
+        "hz": [
+          98.9854475278596,
+          150.55208225422075
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 44.82133731382155,
+        "vibration": 5.64146503837902,
+        "hz": [
+          69.46401194146466,
+          124.6219755756853
+        ],
+        "rates": [
+          0.5,
+          0.14285714285714285,
+          0.5
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 72.92268611764838,
+        "vibration": 0.9610970190698793,
+        "hz": [
+          153.76805835294516,
+          54.41645528604819
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.42857142857142855,
+          0.5
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 83.51169674799775,
+        "vibration": 2.7993081302639986,
+        "hz": [
+          185.53509024399324,
+          81.98962195395998
+        ],
+        "rates": [
+          1.2857142857142858,
+          0.7142857142857143,
+          0.7857142857142857
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 50.57491964514255,
+        "vibration": 1.4183623474713847,
+        "hz": [
+          86.72475893542764,
+          61.275435212070775
+        ],
+        "rates": [
+          0.5,
+          0.07142857142857142,
+          0.2857142857142857
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 48.24197274384584,
+        "vibration": 5.298587572460285,
+        "hz": [
+          79.72591823153752,
+          119.47881358690427
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.5
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 44.83632846841334,
+        "vibration": 9.030787735902907,
+        "hz": [
+          69.50898540524003,
+          175.4618160385436
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.14285714285714285,
+          0.5
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 75.18746525979574,
+        "vibration": 5.245346884908625,
+        "hz": [
+          160.56239577938723,
+          118.68020327362937
+        ],
+        "rates": [
+          1.5,
+          1.4285714285714286,
+          1.2142857142857142
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 79.45254378337421,
+        "vibration": 4.442176931422009,
+        "hz": [
+          173.35763135012263,
+          106.63265397133013
+        ],
+        "rates": [
+          1.8571428571428572,
+          1.2142857142857142,
+          1.2857142857142858
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 41.83611393629121,
+        "vibration": 5.343511689599704,
+        "hz": [
+          60.50834180887364,
+          120.15267534399555
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.21428571428571427,
+          0.35714285714285715
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 62.239799185546126,
+        "vibration": 4.849569670179299,
+        "hz": [
+          121.71939755663837,
+          112.74354505268948
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.35714285714285715,
+          0.6428571428571429
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 51.49229071622372,
+        "vibration": 6.1920920498389265,
+        "hz": [
+          89.47687214867116,
+          132.8813807475839
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.2857142857142857,
+          0.7857142857142857
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 53.23460615143776,
+        "vibration": 3.520360748285924,
+        "hz": [
+          94.70381845431328,
+          92.80541122428886
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.07142857142857142,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 48.59578953351319,
+        "vibration": 4.940606130243423,
+        "hz": [
+          80.78736860053957,
+          114.10909195365134
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.21428571428571427,
+          0.42857142857142855
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 69.9183106700221,
+        "vibration": 2.5650295923041644,
+        "hz": [
+          144.75493201006628,
+          78.47544388456247
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.21428571428571427,
+          0.5
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 71.93035489279612,
+        "vibration": 2.686433167075173,
+        "hz": [
+          150.79106467838835,
+          80.2964975061276
+        ],
+        "rates": [
+          1.2857142857142858,
+          1.0714285714285714,
+          1.2142857142857142
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 66.15441524627714,
+        "vibration": 0.7616820524660197,
+        "hz": [
+          133.4632457388314,
+          51.4252307869903
+        ],
+        "rates": [
+          1.0714285714285714,
+          0.9285714285714286,
+          1.3571428571428572
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 41.0036915314347,
+        "vibration": 6.957211771059705,
+        "hz": [
+          58.01107459430409,
+          144.35817656589558
+        ],
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.14285714285714285
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 45.58891259561974,
+        "vibration": 7.485610523143064,
+        "hz": [
+          71.76673778685921,
+          152.28415784714596
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.14285714285714285,
+          0.2857142857142857
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 73.8946926845865,
+        "vibration": 2.1229499438592776,
+        "hz": [
+          156.6840780537595,
+          71.84424915788917
+        ],
+        "rates": [
+          1,
+          0.7857142857142857,
+          0.9285714285714286
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 42.16515155082989,
+        "vibration": 6.60110278977524,
+        "hz": [
+          61.49545465248967,
+          139.0165418466286
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.2857142857142857,
+          0.35714285714285715
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 66.72202460333914,
+        "vibration": 6.591420937291499,
+        "hz": [
+          135.1660738100174,
+          138.87131405937248
+        ],
+        "rates": [
+          1.1428571428571428,
+          0.8571428571428571,
+          1
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 65.49067296208752,
+        "vibration": 1.684755972366929,
+        "hz": [
+          131.47201888626256,
+          65.27133958550394
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.5714285714285714,
+          0.7142857142857143
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 51.705127085948526,
+        "vibration": 0.3287612629765335,
+        "hz": [
+          90.11538125784557,
+          44.931418944648
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.07142857142857142
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 71.43930614278078,
+        "vibration": 3.0884322349828843,
+        "hz": [
+          149.31791842834235,
+          86.32648352474327
+        ],
+        "rates": [
+          1.1428571428571428,
+          0.6428571428571429,
+          1
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 63.63629424052033,
+        "vibration": 2.650617799911287,
+        "hz": [
+          125.90888272156099,
+          79.7592669986693
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.5
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 59.51487174385581,
+        "vibration": 3.9587501150158912,
+        "hz": [
+          113.54461523156742,
+          99.38125172523837
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.21428571428571427,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 51.770477632235924,
+        "vibration": 6.367278606071626,
+        "hz": [
+          90.31143289670777,
+          135.5091790910744
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 57.794434002093624,
+        "vibration": 6.0083631557112165,
+        "hz": [
+          108.38330200628087,
+          130.12544733566824
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.6428571428571429,
+          0.8571428571428571
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 54.243781899229916,
+        "vibration": 1.3328396427969842,
+        "hz": [
+          97.73134569768975,
+          59.99259464195477
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.07142857142857142
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 60.2818515469352,
+        "vibration": 7.65306749433141,
+        "hz": [
+          115.8455546408056,
+          154.79601241497113
+        ],
+        "rates": [
+          0.8571428571428571,
+          0.5,
+          0.7857142857142857
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 55.22879219029621,
+        "vibration": 2.5954198923950953,
+        "hz": [
+          100.68637657088863,
+          78.93129838592642
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.14285714285714285,
+          0.35714285714285715
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 65.50871535680947,
+        "vibration": 0.1747395827100342,
+        "hz": [
+          131.5261460704284,
+          42.621093740650515
+        ],
+        "rates": [
+          0.5,
+          0.07142857142857142,
+          0.2857142857142857
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 47.837454861373374,
+        "vibration": 0.31050867542165306,
+        "hz": [
+          78.51236458412012,
+          44.657630131324794
+        ],
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 39.48657337403765,
+        "vibration": 6.5606217433054645,
+        "hz": [
+          53.45972012211294,
+          138.40932614958197
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.07142857142857142,
+          0.14285714285714285
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 53.09086215483474,
+        "vibration": 6.819746012566631,
+        "hz": [
+          94.27258646450422,
+          142.29619018849945
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.42857142857142855,
+          0.5714285714285714
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 58.18936921950947,
+        "vibration": 8.673739985525494,
+        "hz": [
+          109.56810765852842,
+          170.1060997828824
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.5,
+          0.42857142857142855
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 77.50900430507404,
+        "vibration": 0.7978539086576157,
+        "hz": [
+          167.52701291522214,
+          51.96780862986424
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.42857142857142855,
+          0.7857142857142857
+        ]
+      }
+    ],
+    "heldout": [
+      {
+        "label": 0,
+        "temperature": 38.482870984027734,
+        "vibration": 2.5116935199191923,
+        "hz": [
+          50.4486129520832,
+          77.67540279878789
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 43.93483446313657,
+        "vibration": 5.472265858986476,
+        "hz": [
+          66.8045033894097,
+          122.08398788479714
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.42857142857142855,
+          0.7142857142857143
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 78.02315847008022,
+        "vibration": 3.863550885089476,
+        "hz": [
+          169.06947541024067,
+          97.95326327634214
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.5,
+          0.5714285714285714
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 40.27183568465731,
+        "vibration": 4.789761709178274,
+        "hz": [
+          55.815507053971935,
+          111.8464256376741
+        ],
+        "rates": [
+          0.35714285714285715,
+          0.14285714285714285,
+          0.2857142857142857
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 75.1300695629355,
+        "vibration": 3.137394740155433,
+        "hz": [
+          160.39020868880652,
+          87.06092110233149
+        ],
+        "rates": [
+          1.6428571428571428,
+          1.3571428571428572,
+          1.9285714285714286
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 49.26967967262841,
+        "vibration": 3.9316711841612975,
+        "hz": [
+          82.80903901788524,
+          98.97506776241946
+        ],
+        "rates": [
+          0.42857142857142855,
+          0.21428571428571427,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 46.3669066925635,
+        "vibration": 6.132552926388964,
+        "hz": [
+          74.10072007769048,
+          131.98829389583446
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.14285714285714285,
+          0.14285714285714285
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 51.214519971373505,
+        "vibration": 8.930618574717293,
+        "hz": [
+          88.64355991412052,
+          173.9592786207594
+        ],
+        "rates": [
+          1.0714285714285714,
+          0.5,
+          0.7142857142857143
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 49.7864330760466,
+        "vibration": 6.578712043783313,
+        "hz": [
+          84.3592992281398,
+          138.6806806567497
+        ],
+        "rates": [
+          0.5,
+          0.14285714285714285,
+          0.2857142857142857
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 53.53175132451689,
+        "vibration": 4.493307736747828,
+        "hz": [
+          95.59525397355067,
+          107.39961605121742
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.14285714285714285,
+          0.35714285714285715
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 56.216590539762315,
+        "vibration": 6.862933999508555,
+        "hz": [
+          103.64977161928695,
+          142.9440099926283
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          0.7142857142857143
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 77.84749990953158,
+        "vibration": 3.375296801012919,
+        "hz": [
+          168.54249972859475,
+          90.62945201519378
+        ],
+        "rates": [
+          1,
+          0.42857142857142855,
+          0.5
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 53.47369720968432,
+        "vibration": 1.7315875928437776,
+        "hz": [
+          95.42109162905295,
+          65.97381389265666
+        ],
+        "rates": [
+          0.7142857142857143,
+          0.42857142857142855,
+          0.6428571428571429
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 69.54168264078069,
+        "vibration": 2.8499986829570614,
+        "hz": [
+          143.62504792234208,
+          82.74998024435592
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.2857142857142857,
+          0.5714285714285714
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 48.257612121797784,
+        "vibration": 5.156501828686796,
+        "hz": [
+          79.77283636539335,
+          117.34752743030194
+        ],
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.8571428571428571
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 67.08506079609616,
+        "vibration": 2.6829467519615715,
+        "hz": [
+          136.25518238828846,
+          80.24420127942358
+        ],
+        "rates": [
+          0.5,
+          0.21428571428571427,
+          0.35714285714285715
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 56.48766762094201,
+        "vibration": 3.9070365347872,
+        "hz": [
+          104.46300286282604,
+          98.605548021808
+        ],
+        "rates": [
+          0.7857142857142857,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 59.27622688367927,
+        "vibration": 2.3689777941443855,
+        "hz": [
+          112.82868065103781,
+          75.53466691216579
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.14285714285714285,
+          0.2857142857142857
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 80.54967485560228,
+        "vibration": 1.9235116352757289,
+        "hz": [
+          176.64902456680682,
+          68.85267452913592
+        ],
+        "rates": [
+          0.9285714285714286,
+          0.5,
+          0.5714285714285714
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 71.59904436280922,
+        "vibration": 0.2169933727183886,
+        "hz": [
+          149.79713308842767,
+          43.254900590775826
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.2857142857142857,
+          0.42857142857142855
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 66.16617885948993,
+        "vibration": 1.2027245153860857,
+        "hz": [
+          133.49853657846978,
+          58.040867730791284
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.14285714285714285,
+          0.35714285714285715
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 82.64152570369764,
+        "vibration": 3.403259616396703,
+        "hz": [
+          182.9245771110929,
+          91.04889424595055
+        ],
+        "rates": [
+          1.2142857142857142,
+          0.8571428571428571,
+          1.2142857142857142
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 78.19164816192328,
+        "vibration": 3.284865548941415,
+        "hz": [
+          169.57494448576983,
+          89.27298323412123
+        ],
+        "rates": [
+          1.0714285714285714,
+          0.5,
+          0.6428571428571429
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 52.02372409355873,
+        "vibration": 0.8498174151038267,
+        "hz": [
+          91.07117228067618,
+          52.7472612265574
+        ],
+        "rates": [
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 75.43857207586235,
+        "vibration": 1.4545583830883286,
+        "hz": [
+          161.31571622758707,
+          61.81837574632493
+        ],
+        "rates": [
+          1,
+          0.7857142857142857,
+          1.2857142857142858
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 50.83550959361795,
+        "vibration": 7.827016861745076,
+        "hz": [
+          87.50652878085384,
+          157.40525292617613
+        ],
+        "rates": [
+          0.6428571428571429,
+          0.2857142857142857,
+          0.5
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 64.01700957368706,
+        "vibration": 6.8361486841150345,
+        "hz": [
+          127.05102872106119,
+          142.54223026172554
+        ],
+        "rates": [
+          1.0714285714285714,
+          0.7857142857142857,
+          0.8571428571428571
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 47.16725191824067,
+        "vibration": 0.9322493280867372,
+        "hz": [
+          76.50175575472201,
+          53.98373992130106
+        ],
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 58.16452821124125,
+        "vibration": 6.810173814722654,
+        "hz": [
+          109.49358463372374,
+          142.1526072208398
+        ],
+        "rates": [
+          1.5,
+          0.8571428571428571,
+          1.2142857142857142
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 40.45263429848576,
+        "vibration": 5.338906921373891,
+        "hz": [
+          56.357902895457286,
+          120.08360382060836
+        ],
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 58.54172078703215,
+        "vibration": 0.42429930662416826,
+        "hz": [
+          110.62516236109644,
+          46.36448959936252
+        ],
+        "rates": [
+          0.2857142857142857,
+          0.07142857142857142,
+          0.21428571428571427
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 50.90820562226344,
+        "vibration": 5.416768291161307,
+        "hz": [
+          87.72461686679031,
+          121.2515243674196
+        ],
+        "rates": [
+          0.5714285714285714,
+          0.21428571428571427,
+          0.5
+        ]
+      },
+      {
+        "label": 2,
+        "temperature": 56.80488468816611,
+        "vibration": 3.6702201195064568,
+        "hz": [
+          105.41465406449834,
+          95.05330179259686
+        ],
+        "rates": [
+          1.0714285714285714,
+          0.2857142857142857,
+          0.5714285714285714
+        ]
+      },
+      {
+        "label": 1,
+        "temperature": 60.275120809293384,
+        "vibration": 2.4109188198839746,
+        "hz": [
+          115.82536242788015,
+          76.16378229825962
+        ],
+        "rates": [
+          0.5,
+          0.21428571428571427,
+          0.2857142857142857
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 57.166815443817136,
+        "vibration": 2.325494783257654,
+        "hz": [
+          106.5004463314514,
+          74.8824217488648
+        ],
+        "rates": [
+          0.5,
+          0.21428571428571427,
+          0.35714285714285715
+        ]
+      },
+      {
+        "label": 0,
+        "temperature": 51.16608853359203,
+        "vibration": 2.444414030175874,
+        "hz": [
+          88.4982656007761,
+          76.66621045263811
+        ],
+        "rates": [
+          0.42857142857142855,
+          0,
+          0.2857142857142857
+        ]
+      }
+    ],
+    "neural": {
+      "mean": [
+        0.4783183732897339,
+        0.2757630426252351,
+        0.39165319694557993
+      ],
+      "std": [
+        0.27465066238361263,
+        0.24119717481784356,
+        0.23761366504417614
+      ],
+      "centroids": [
+        [
+          -0.6967315831103453,
+          -0.6124604382503225,
+          -0.6390050538284014
+        ],
+        [
+          0.5335599813284507,
+          0.5206708191798027,
+          0.5169418215877712
+        ],
+        [
+          0.16317160178189405,
+          0.09178961907051944,
+          0.122063232240633
+        ]
+      ],
+      "rows": [
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            2.3920805951979567,
+            12.63313831124339,
+            8.287546938358856
+          ],
+          "features": [
+            -1.7415518649711197,
+            -1.1433095882383213,
+            -1.6482772439571831
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 1,
+          "distances": [
+            4.296968291772716,
+            0.0584499630778951,
+            0.544194740163628
+          ],
+          "features": [
+            0.6497751054030761,
+            0.33545957316707115,
+            0.6200960864759761
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            3.257240258823085,
+            0.09637415943808388,
+            0.25885377477566446
+          ],
+          "features": [
+            0.36956081256938694,
+            0.5377428884931286,
+            0.253907647888267
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 0,
+          "distances": [
+            0.007358345422777909,
+            3.812671736387056,
+            1.6009117058466105
+          ],
+          "features": [
+            -0.6296606832755651,
+            -0.5896903647736685,
+            -0.5906174152003534
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            27.703968506295098,
+            10.727026800381747,
+            15.623391342792711
+          ],
+          "features": [
+            1.7969816837721186,
+            2.4116666775441593,
+            2.873831098966949
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.17649752487383863,
+            3.5087845732693266,
+            1.4609907413588457
+          ],
+          "features": [
+            -0.4429023702156547,
+            -0.33834155912443314,
+            -0.8311692951998557
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 0,
+          "distances": [
+            0.2174438063917013,
+            5.653128747494886,
+            2.904064981711722
+          ],
+          "features": [
+            -0.8265188331924166,
+            -0.5896903647736685,
+            -1.0863087536361529
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 1,
+          "distances": [
+            5.489749638689703,
+            0.15260651938588735,
+            1.004598572260077
+          ],
+          "features": [
+            0.9099563966549286,
+            0.5377428884931286,
+            0.6200960864759761
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 0,
+          "distances": [
+            0.18902935627416023,
+            3.097699471493968,
+            1.1558805342144542
+          ],
+          "features": [
+            -0.2652579263756271,
+            -0.5896903647736685,
+            -0.5906174152003534
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 0,
+          "distances": [
+            0.43767969477666074,
+            2.4035248298316967,
+            0.7668811832926624
+          ],
+          "features": [
+            -0.09587906804279352,
+            -0.5896903647736685,
+            -0.36307485673586504
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 1,
+          "distances": [
+            3.750403192531408,
+            0.10867077256623585,
+            0.45024688848292715
+          ],
+          "features": [
+            0.22092838559479666,
+            0.5377428884931286,
+            0.6200960864759761
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            3.571753235772912,
+            0.3066302334387865,
+            0.446645713403614
+          ],
+          "features": [
+            0.782189292411586,
+            0.33545957316707115,
+            0.0581275961549459
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 1,
+          "distances": [
+            2.9070272945226785,
+            0.1378113973343394,
+            0.16442098606344657
+          ],
+          "features": [
+            0.22092838559479666,
+            0.33545957316707115,
+            0.44098343144040236
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 2,
+          "distances": [
+            1.640225712390246,
+            0.6747548387957312,
+            0.06413940331305994
+          ],
+          "features": [
+            0.06596930394018319,
+            -0.10136360163751121,
+            0.253907647888267
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 1,
+          "distances": [
+            3.631816088918719,
+            0.8660264325592086,
+            0.9399741690491303
+          ],
+          "features": [
+            -0.2652579263756271,
+            0.33545957316707115,
+            0.9569567954703649
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 0,
+          "distances": [
+            0.33744815001678935,
+            2.1504416698763866,
+            0.6039236564284228
+          ],
+          "features": [
+            -0.2652579263756271,
+            -0.33834155912443314,
+            -0.36307485673586504
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 2,
+          "distances": [
+            1.6400653621384418,
+            0.8549154126610408,
+            0.1524108096252851
+          ],
+          "features": [
+            0.36956081256938694,
+            -0.10136360163751121,
+            -0.14720640330321316
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.019704570101996895,
+            4.309403803533735,
+            1.9518158306968183
+          ],
+          "features": [
+            -0.8265188331924166,
+            -0.5896903647736685,
+            -0.5906174152003534
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            3.9333410479500426,
+            0.08298438714810057,
+            0.4530402381825901
+          ],
+          "features": [
+            0.6497751054030761,
+            0.5377428884931286,
+            0.253907647888267
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 2,
+          "distances": [
+            1.084798532161682,
+            1.0466607268877959,
+            0.1192625900015096
+          ],
+          "features": [
+            0.06596930394018319,
+            -0.10136360163751121,
+            -0.14720640330321316
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 0,
+          "distances": [
+            0.43767969477666074,
+            2.4035248298316967,
+            0.7668811832926624
+          ],
+          "features": [
+            -0.09587906804279352,
+            -0.5896903647736685,
+            -0.36307485673586504
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            13.02250577329865,
+            2.5910206846248096,
+            5.233063759966706
+          ],
+          "features": [
+            1.152778947745384,
+            1.4232180208588123,
+            1.6971948050602739
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            5.070789085487124,
+            0.1477353940550413,
+            0.8582719418198951
+          ],
+          "features": [
+            0.9099563966549286,
+            0.5377428884931286,
+            0.44098343144040236
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            2.3920805951979567,
+            12.63313831124339,
+            8.287546938358856
+          ],
+          "features": [
+            -1.7415518649711197,
+            -1.1433095882383213,
+            -1.6482772439571831
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            11.795582356985324,
+            2.3355743101590845,
+            4.669136950176004
+          ],
+          "features": [
+            0.782189292411586,
+            1.2606095111078113,
+            1.8308095881523054
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            1.32892655117609,
+            0.8160783557214736,
+            0.050844218937275275
+          ],
+          "features": [
+            0.06596930394018319,
+            -0.10136360163751121,
+            0.0581275961549459
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 1,
+          "distances": [
+            8.636931523927837,
+            0.8827967065236544,
+            2.6208747317980654
+          ],
+          "features": [
+            0.9099563966549286,
+            1.2606095111078113,
+            0.9569567954703649
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.2110336062365234,
+            6.17533987793062,
+            3.244092508443756
+          ],
+          "features": [
+            -1.0346319807955846,
+            -0.8572661404282211,
+            -0.8311692951998557
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 1,
+          "distances": [
+            14.85225747221574,
+            3.333505836797741,
+            6.302878551734012
+          ],
+          "features": [
+            1.5946524751966276,
+            1.4232180208588123,
+            1.6971948050602739
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.7266864667575044,
+            7.812323796738889,
+            4.5434914143825695
+          ],
+          "features": [
+            -1.4903495890028677,
+            -0.8572661404282211,
+            -0.8311692951998557
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.11370165776454666,
+            5.565928229568675,
+            2.7888462430879537
+          ],
+          "features": [
+            -0.8265188331924166,
+            -0.8572661404282211,
+            -0.8311692951998557
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            0.9221588364290407,
+            1.3446062764127988,
+            0.25620784555367876
+          ],
+          "features": [
+            -0.09587906804279352,
+            -0.33834155912443314,
+            0.0581275961549459
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 1,
+          "distances": [
+            3.6399593336047995,
+            0.5977880586859347,
+            0.6123786464609114
+          ],
+          "features": [
+            0.9099563966549286,
+            -0.10136360163751121,
+            0.253907647888267
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 0,
+          "distances": [
+            0.2636520399212619,
+            2.6026997787433133,
+            0.8764783962895578
+          ],
+          "features": [
+            -0.2652579263756271,
+            -0.33834155912443314,
+            -0.5906174152003534
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.33744815001678935,
+            2.1504416698763866,
+            0.6039236564284228
+          ],
+          "features": [
+            -0.2652579263756271,
+            -0.33834155912443314,
+            -0.36307485673586504
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.34857145293371755,
+            4.948996983249124,
+            2.4007094166647156
+          ],
+          "features": [
+            -0.4429023702156547,
+            -1.1433095882383213,
+            -0.5906174152003534
+          ]
+        }
+      ],
+      "correct": 18,
+      "byClass": [
+        9,
+        7,
+        2
+      ]
+    },
+    "raw": {
+      "mean": [
+        56.688389050189286,
+        3.9882575800068585
+      ],
+      "std": [
+        12.609401566711675,
+        2.5451564604190597
+      ],
+      "centroids": [
+        [
+          -0.48553354254541836,
+          -0.6122275699656194
+        ],
+        [
+          0.9613836915849837,
+          -0.5166463920293323
+        ],
+        [
+          -0.4758501490395575,
+          1.1288739619949497
+        ]
+      ],
+      "rows": [
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.9193135275754427,
+            5.788965323834626,
+            3.8576882933853334
+          ],
+          "features": [
+            -1.4438050822509614,
+            -0.5801466758725513
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 2,
+          "distances": [
+            1.7053093283132443,
+            5.101382000213494,
+            0.5847484095478459
+          ],
+          "features": [
+            -1.0114321857051172,
+            0.5830715329521532
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            5.058763518181434,
+            0.7524563607711744,
+            6.086839581705706
+          ],
+          "features": [
+            1.6919731921468728,
+            -0.04899765372257294
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            1.526093115835234,
+            5.814078991695786,
+            1.34493892269346
+          ],
+          "features": [
+            -1.3019296180455566,
+            0.3149135000680657
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            3.872207782606847,
+            0.2843995565270965,
+            5.898231354308124
+          ],
+          "features": [
+            1.462534158752746,
+            -0.33430669315761086
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.35866432551320737,
+            2.6461112691714153,
+            1.3377028215404956
+          ],
+          "features": [
+            -0.5883474594976794,
+            -0.022232973385158443
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            2.227136434651323,
+            5.015459968793761,
+            0.1994560848154781
+          ],
+          "features": [
+            -0.8185544970567119,
+            0.8425004040926615
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            6.526054787153236,
+            7.991702056440486,
+            0.6627035205413807
+          ],
+          "features": [
+            -0.4341101399503828,
+            1.9418692216260354
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            2.660805709122995,
+            4.630843977984699,
+            0.01745242705978964
+          ],
+          "features": [
+            -0.5473658632907354,
+            1.017797728376171
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 0,
+          "distances": [
+            0.7124910957071503,
+            1.9796168716218498,
+            0.9165699968748531
+          ],
+          "features": [
+            -0.25034001090153213,
+            0.1984357993684258
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            3.234317410149164,
+            3.707298941694803,
+            0.19222450008998354
+          ],
+          "features": [
+            -0.03741640774392506,
+            1.1294694311360258
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            4.8189940116489876,
+            0.5896721013704832,
+            6.515353759161741
+          ],
+          "features": [
+            1.6780424310699655,
+            -0.24083422317110334
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.1284806984767262,
+            1.6163578713273468,
+            4.111147453128741
+          ],
+          "features": [
+            -0.2549440450046122,
+            -0.88665275485324
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            2.291876311838582,
+            0.008178433318785781,
+            4.719689341543906
+          ],
+          "features": [
+            1.0193420776227475,
+            -0.44722551039647396
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            1.1810603146210328,
+            3.6087799614883136,
+            0.4858784596333083
+          ],
+          "features": [
+            -0.6686103923161922,
+            0.45900684961724764
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            1.726107394738661,
+            0.018746696632817392,
+            4.386248752154033
+          ],
+          "features": [
+            0.8245174595243027,
+            -0.5128607409189955
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.5573045423777786,
+            1.1900867937225983,
+            1.5589612795255723
+          ],
+          "features": [
+            -0.015918394555469673,
+            -0.03191200481493598
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.4777310488436213,
+            0.5860650438933448,
+            3.5794284573796524
+          ],
+          "features": [
+            0.20523082081244642,
+            -0.63622013461438
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            5.693894688898901,
+            0.9534697032231082,
+            9.372390992284796
+          ],
+          "features": [
+            1.8923408600457177,
+            -0.8112451933077502
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            3.5384005914989505,
+            0.9803025146677726,
+            9.565448816946361
+          ],
+          "features": [
+            1.1825030104508276,
+            -1.4817416005409474
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            1.7631433797615033,
+            0.3778413607937883,
+            6.449889582789476
+          ],
+          "features": [
+            0.751644696154466,
+            -1.094444725870462
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            6.616982976479138,
+            1.2853407243284758,
+            8.267721732041556
+          ],
+          "features": [
+            2.0582369842216472,
+            -0.22984754482002878
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            4.912710510614087,
+            0.6111993463027569,
+            6.732266877071652
+          ],
+          "features": [
+            1.7053354196048254,
+            -0.2763649473045088
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.3988492607239486,
+            2.285720849347025,
+            5.590153269257856
+          ],
+          "features": [
+            -0.3699354748876499,
+            -1.233103038540227
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            4.037786015538323,
+            0.5055719954682555,
+            8.365739563003228
+          ],
+          "features": [
+            1.4870002296677436,
+            -0.9954984050376834
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            4.4969266890023,
+            6.132445783160895,
+            0.1440707173802576
+          ],
+          "features": [
+            -0.4641679008798252,
+            1.508260628152568
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            4.134886437142081,
+            2.8196979462903418,
+            1.117459685612051
+          ],
+          "features": [
+            0.5812028814154865,
+            1.1189453962446265
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.4189743685673255,
+            3.41420606913714,
+            5.5049566833140045
+          ],
+          "features": [
+            -0.7550823947969142,
+            -1.2007152799623761
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            3.324855521320751,
+            3.354751667313505,
+            0.35195559903243673
+          ],
+          "features": [
+            0.11706655175047406,
+            1.1087397881429917
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 2,
+          "distances": [
+            1.9495213990589826,
+            6.154768966352622,
+            1.0167662998957723
+          ],
+          "features": [
+            -1.2875912203926696,
+            0.5306743857879165
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            1.0211166670943161,
+            1.4440799410635896,
+            6.784590180969046
+          ],
+          "features": [
+            0.14698015025039604,
+            -1.400290445325269
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 2,
+          "distances": [
+            1.3778240958406054,
+            3.1776892397511602,
+            0.32248280013120934
+          ],
+          "features": [
+            -0.45840267655408057,
+            0.5612663635300614
+          ]
+        },
+        {
+          "label": 2,
+          "predicted": 0,
+          "distances": [
+            0.48223137358306944,
+            1.0599997680141326,
+            1.8074056720852627
+          ],
+          "features": [
+            0.00923879197283791,
+            -0.12495792123052304
+          ]
+        },
+        {
+          "label": 1,
+          "predicted": 1,
+          "distances": [
+            0.5929295844058916,
+            0.46886914187111395,
+            3.6357103981656103
+          ],
+          "features": [
+            0.2844490073639124,
+            -0.6197413733311999
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.27571401789667144,
+            0.8714199934506939,
+            3.4401433612955366
+          ],
+          "features": [
+            0.03794203801795607,
+            -0.653304746724856
+          ]
+        },
+        {
+          "label": 0,
+          "predicted": 0,
+          "distances": [
+            0.002295978406223384,
+            1.966225921697298,
+            3.0132402661773128
+          ],
+          "features": [
+            -0.4379510389435064,
+            -0.6065809995731228
+          ]
+        }
+      ],
+      "correct": 32,
+      "byClass": [
+        10,
+        12,
+        10
+      ]
+    },
+    "summary": {
+      "neuralCorrect": 18,
+      "neuralByClass": [
+        9,
+        7,
+        2
+      ],
+      "rawCorrect": 32,
+      "rawByClass": [
+        10,
+        12,
+        10
+      ],
+      "varyingComponents": 3,
+      "exactReplay": true,
+      "weightsUnchanged": true,
+      "passed": false
+    }
+  }
+}

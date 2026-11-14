@@ -1,0 +1,8964 @@
+{
+  "protocol": {
+    "source": "docs/lab-notebook.md prospective epsilon-greedy amendment",
+    "seeds": [
+      10917,
+      10918
+    ],
+    "teacherSeeds": [
+      861,
+      862
+    ],
+    "branches": [
+      null,
+      0,
+      1
+    ],
+    "cues": [
+      0,
+      1,
+      2
+    ],
+    "repeats": 12,
+    "secondCue": "(first+2)%3",
+    "firstKey": "s*10000000+(300+12*cue+repeat)*1000",
+    "secondKey": "firstKey+1",
+    "dnTargets": [
+      3141,
+      3165
+    ],
+    "dnHz": 300,
+    "dnWindowMs": [
+      240,
+      280
+    ],
+    "cueHz": 150,
+    "cueWindowMs": [
+      0,
+      240
+    ],
+    "fixedCentroidDecoder": true
+  },
+  "status": "stopped_receiver",
+  "passed": false,
+  "gates": {
+    "probesAndWeights": true,
+    "recognition": false,
+    "noRecognitionLoss": true,
+    "bit": true
+  },
+  "summary": [
+    {
+      "seed": 10917,
+      "cue": 0,
+      "branches": [
+        {
+          "bit": null,
+          "n": 12,
+          "firstRecognized": 10,
+          "secondRecognized": 11,
+          "firstNewErrors": null,
+          "secondNewErrors": null,
+          "firstRescues": null,
+          "secondRescues": null,
+          "decoded": null,
+          "targetDominance": null,
+          "intendedMeanGain": null
+        },
+        {
+          "bit": 0,
+          "n": 12,
+          "firstRecognized": 10,
+          "secondRecognized": 11,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 7.333333333333333
+        },
+        {
+          "bit": 1,
+          "n": 12,
+          "firstRecognized": 10,
+          "secondRecognized": 11,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 7.333333333333333
+        }
+      ]
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "branches": [
+        {
+          "bit": null,
+          "n": 12,
+          "firstRecognized": 12,
+          "secondRecognized": 7,
+          "firstNewErrors": null,
+          "secondNewErrors": null,
+          "firstRescues": null,
+          "secondRescues": null,
+          "decoded": null,
+          "targetDominance": null,
+          "intendedMeanGain": null
+        },
+        {
+          "bit": 0,
+          "n": 12,
+          "firstRecognized": 12,
+          "secondRecognized": 7,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 7.833333333333333
+        },
+        {
+          "bit": 1,
+          "n": 12,
+          "firstRecognized": 12,
+          "secondRecognized": 7,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 7.833333333333333
+        }
+      ]
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "branches": [
+        {
+          "bit": null,
+          "n": 12,
+          "firstRecognized": 10,
+          "secondRecognized": 12,
+          "firstNewErrors": null,
+          "secondNewErrors": null,
+          "firstRescues": null,
+          "secondRescues": null,
+          "decoded": null,
+          "targetDominance": null,
+          "intendedMeanGain": null
+        },
+        {
+          "bit": 0,
+          "n": 12,
+          "firstRecognized": 10,
+          "secondRecognized": 12,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 7.666666666666667
+        },
+        {
+          "bit": 1,
+          "n": 12,
+          "firstRecognized": 10,
+          "secondRecognized": 12,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 7.666666666666667
+        }
+      ]
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "branches": [
+        {
+          "bit": null,
+          "n": 12,
+          "firstRecognized": 9,
+          "secondRecognized": 12,
+          "firstNewErrors": null,
+          "secondNewErrors": null,
+          "firstRescues": null,
+          "secondRescues": null,
+          "decoded": null,
+          "targetDominance": null,
+          "intendedMeanGain": null
+        },
+        {
+          "bit": 0,
+          "n": 12,
+          "firstRecognized": 9,
+          "secondRecognized": 12,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 6.916666666666667
+        },
+        {
+          "bit": 1,
+          "n": 12,
+          "firstRecognized": 9,
+          "secondRecognized": 12,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 6.916666666666667
+        }
+      ]
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "branches": [
+        {
+          "bit": null,
+          "n": 12,
+          "firstRecognized": 12,
+          "secondRecognized": 12,
+          "firstNewErrors": null,
+          "secondNewErrors": null,
+          "firstRescues": null,
+          "secondRescues": null,
+          "decoded": null,
+          "targetDominance": null,
+          "intendedMeanGain": null
+        },
+        {
+          "bit": 0,
+          "n": 12,
+          "firstRecognized": 12,
+          "secondRecognized": 12,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 7
+        },
+        {
+          "bit": 1,
+          "n": 12,
+          "firstRecognized": 12,
+          "secondRecognized": 12,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 7
+        }
+      ]
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "branches": [
+        {
+          "bit": null,
+          "n": 12,
+          "firstRecognized": 11,
+          "secondRecognized": 12,
+          "firstNewErrors": null,
+          "secondNewErrors": null,
+          "firstRescues": null,
+          "secondRescues": null,
+          "decoded": null,
+          "targetDominance": null,
+          "intendedMeanGain": null
+        },
+        {
+          "bit": 0,
+          "n": 12,
+          "firstRecognized": 11,
+          "secondRecognized": 12,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 8
+        },
+        {
+          "bit": 1,
+          "n": 12,
+          "firstRecognized": 11,
+          "secondRecognized": 12,
+          "firstNewErrors": 0,
+          "secondNewErrors": 0,
+          "firstRescues": 0,
+          "secondRescues": 0,
+          "decoded": 12,
+          "targetDominance": 12,
+          "intendedMeanGain": 8
+        }
+      ]
+    }
+  ],
+  "probes": [
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 0,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 0,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 0,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 1,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.7857142857142857,
+          1.1428571428571428
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.8571428571428571,
+          1.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 1,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.7857142857142857,
+          1.1428571428571428
+        ],
+        "recognized": false,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.8571428571428571,
+          1.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 1,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.7857142857142857,
+          1.1428571428571428
+        ],
+        "recognized": false,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.8571428571428571,
+          1.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 2,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.8571428571428571,
+          0.5714285714285714,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          1.1428571428571428
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 2,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.8571428571428571,
+          0.5714285714285714,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          1.1428571428571428
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 2,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.8571428571428571,
+          0.5714285714285714,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.5714285714285714,
+          1.1428571428571428
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 3,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.5,
+          1.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 3,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.5,
+          1.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 3,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.5,
+          1.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 4,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.5714285714285714,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.6428571428571429,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 4,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.5714285714285714,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.6428571428571429,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 4,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.5714285714285714,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.6428571428571429,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 5,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.2857142857142857,
+          0.35714285714285715,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 5,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.2857142857142857,
+          0.35714285714285715,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 5,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.2857142857142857,
+          0.35714285714285715,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 6,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          0.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          1,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 6,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          0.5
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          1,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 6,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          0.5
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          1,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 7,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.7142857142857143,
+          0.9285714285714286
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.9285714285714286
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 7,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.7142857142857143,
+          0.9285714285714286
+        ],
+        "recognized": false,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.9285714285714286
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 7,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.7142857142857143,
+          0.9285714285714286
+        ],
+        "recognized": false,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.9285714285714286
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 8,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 8,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 8,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 9,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.6428571428571429,
+          0.6428571428571429
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.8571428571428571,
+          2.4285714285714284
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 9,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.6428571428571429,
+          0.6428571428571429
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.8571428571428571,
+          2.4285714285714284
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 9,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.6428571428571429,
+          0.6428571428571429
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.8571428571428571,
+          2.4285714285714284
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 10,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          1.1428571428571428,
+          1.0714285714285714,
+          2.2142857142857144
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 10,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          1.1428571428571428,
+          1.0714285714285714,
+          2.2142857142857144
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 10,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          1.1428571428571428,
+          1.0714285714285714,
+          2.2142857142857144
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 11,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          0.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.7857142857142858
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 11,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          0.5
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.7857142857142858
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 0,
+      "repeat": 11,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.35714285714285715,
+          0.5
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.7857142857142858
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 0,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.21428571428571427,
+          0.21428571428571427,
+          0.21428571428571427
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 0,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.21428571428571427,
+          0.21428571428571427,
+          0.21428571428571427
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 0,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.21428571428571427,
+          0.21428571428571427,
+          0.21428571428571427
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 1,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 1,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          11,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 1,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          11
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 2,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1,
+          1.0714285714285714,
+          1.5
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 2,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1,
+          1.0714285714285714,
+          1.5
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 2,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1,
+          1.0714285714285714,
+          1.5
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 3,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 3,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 3,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 4,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          0.8571428571428571
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 4,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          0.8571428571428571
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 4,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          0.8571428571428571
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 5,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.2857142857142857,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 5,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.2857142857142857,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 5,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.2857142857142857,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.5714285714285714,
+          0.9285714285714286
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 6,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.8571428571428571,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 6,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.8571428571428571,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 6,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.8571428571428571,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 7,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1.1428571428571428,
+          0.7857142857142857,
+          1
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 7,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1.1428571428571428,
+          0.7857142857142857,
+          1
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 7,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1.1428571428571428,
+          0.7857142857142857,
+          1
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 8,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 8,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 8,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 9,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.9285714285714286,
+          1.4285714285714286
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 9,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.9285714285714286,
+          1.4285714285714286
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 9,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.9285714285714286,
+          0.9285714285714286,
+          1.4285714285714286
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 10,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.8571428571428571,
+          0.5,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 10,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.8571428571428571,
+          0.5,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 10,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.8571428571428571,
+          0.5,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 11,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 11,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 1,
+      "repeat": 11,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 0,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          1.7857142857142858
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 0,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          1.7857142857142858
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 0,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          1.7857142857142858
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 1,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.6428571428571428
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 1,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.6428571428571428
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 1,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          1.6428571428571428
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 2,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 2,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          5,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 2,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          5
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 3,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 3,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 3,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 4,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.42857142857142855,
+          1.2142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 4,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.42857142857142855,
+          1.2142857142857142
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 4,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.42857142857142855,
+          1.2142857142857142
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 5,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 5,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 5,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 6,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 6,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          10,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 6,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7142857142857143,
+          1.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          10
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 7,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          1,
+          2
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 7,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          1,
+          2
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 7,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          1,
+          2
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 8,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.7142857142857143,
+          2.0714285714285716
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0.14285714285714285
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 8,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.7142857142857143,
+          2.0714285714285716
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0.14285714285714285
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 8,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.7142857142857143,
+          2.0714285714285716
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0.14285714285714285
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 9,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          1
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 9,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          1
+        ],
+        "recognized": false,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 9,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          1
+        ],
+        "recognized": false,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 10,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 10,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          10,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 10,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          10
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 11,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.9285714285714286
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 11,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.9285714285714286
+        ],
+        "recognized": false,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10917,
+      "cue": 2,
+      "repeat": 11,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.9285714285714286
+        ],
+        "recognized": false,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 0,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1,
+          0.8571428571428571,
+          1.1428571428571428
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7142857142857143,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 0,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1,
+          0.8571428571428571,
+          1.1428571428571428
+        ],
+        "recognized": false,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7142857142857143,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 0,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1,
+          0.8571428571428571,
+          1.1428571428571428
+        ],
+        "recognized": false,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7142857142857143,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 1,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1,
+          1.2142857142857142,
+          1.7142857142857142
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7857142857142857,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 1,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1,
+          1.2142857142857142,
+          1.7142857142857142
+        ],
+        "recognized": false,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7857142857142857,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 1,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1,
+          1.2142857142857142,
+          1.7142857142857142
+        ],
+        "recognized": false,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.7857142857142857,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 2,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.42857142857142855,
+          0.8571428571428571,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 2,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.42857142857142855,
+          0.8571428571428571,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 2,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.42857142857142855,
+          0.8571428571428571,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 3,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.35714285714285715,
+          1.0714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 3,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          5,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.35714285714285715,
+          1.0714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 3,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5,
+          0.42857142857142855,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          5
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.35714285714285715,
+          1.0714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 4,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          0.8571428571428571
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.8571428571428571,
+          2.0714285714285716
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 4,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          0.8571428571428571
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.8571428571428571,
+          2.0714285714285716
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 4,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          0.8571428571428571
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.8571428571428571,
+          2.0714285714285716
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 5,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          2
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 5,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          2
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 5,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.9285714285714286,
+          2
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 6,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.42857142857142855,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.8571428571428571,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 6,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.42857142857142855,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.8571428571428571,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 6,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.42857142857142855,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.8571428571428571,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 7,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.42857142857142855,
+          0.7857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          1.0714285714285714,
+          0.9285714285714286,
+          2
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 7,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.42857142857142855,
+          0.7857142857142857
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          1.0714285714285714,
+          0.9285714285714286,
+          2
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 7,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.42857142857142855,
+          0.7857142857142857
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          1.0714285714285714,
+          0.9285714285714286,
+          2
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 8,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5,
+          0.7142857142857143,
+          1.6428571428571428
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 8,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5,
+          0.7142857142857143,
+          1.6428571428571428
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 8,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5,
+          0.7142857142857143,
+          1.6428571428571428
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 9,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1.2142857142857142,
+          0.9285714285714286,
+          1.2857142857142858
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.7142857142857143,
+          2.142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 9,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1.2142857142857142,
+          0.9285714285714286,
+          1.2857142857142858
+        ],
+        "recognized": false,
+        "bit": 0,
+        "dnCounts": [
+          4,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.7142857142857143,
+          2.142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 9,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          1.2142857142857142,
+          0.9285714285714286,
+          1.2857142857142858
+        ],
+        "recognized": false,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          4
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.7142857142857143,
+          2.142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 10,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 10,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 10,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.5,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 11,
+      "bit": null,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          0.6428571428571429
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.6428571428571429,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 11,
+      "bit": 0,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          0.6428571428571429
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.6428571428571429,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 0,
+      "repeat": 11,
+      "bit": 1,
+      "first": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.7142857142857143,
+          0.6428571428571429
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.6428571428571429,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 0,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.7857142857142857,
+          0.7857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 0,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.7857142857142857,
+          0.7857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 0,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7142857142857143,
+          0.7857142857142857,
+          0.7857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 1,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 1,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 1,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.2857142857142857,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 2,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          0.6428571428571429
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 2,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          0.6428571428571429
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 2,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          0.6428571428571429
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 3,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.2857142857142857,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 3,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.2857142857142857,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 3,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.2857142857142857,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.2857142857142857,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 4,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 4,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 4,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 5,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          0.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 5,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          0.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 5,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.5714285714285714,
+          0.5,
+          0.5
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 6,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.6428571428571429,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 6,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.6428571428571429,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 6,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.6428571428571429,
+          0.7142857142857143
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 7,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 7,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 7,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.35714285714285715,
+          0.5714285714285714
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 8,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 8,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          7,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 8,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          7
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.35714285714285715,
+          0.42857142857142855,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 9,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          0.8571428571428571
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 9,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          0.8571428571428571
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 9,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          0.8571428571428571
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 10,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 10,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 10,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          0.35714285714285715
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 11,
+      "bit": null,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 11,
+      "bit": 0,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          5,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 1,
+      "repeat": 11,
+      "bit": 1,
+      "first": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          5
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 0,
+        "estimatedCue": 0,
+        "rates": [
+          0.42857142857142855,
+          0.42857142857142855,
+          0.42857142857142855
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 0,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.2857142857142858
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 0,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.2857142857142858
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 0,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.5714285714285714,
+          1.2857142857142858
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0.07142857142857142,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 1,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.7857142857142857,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.07142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 1,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.7857142857142857,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.07142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 1,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.9285714285714286,
+          0.7857142857142857,
+          1.7142857142857142
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0.07142857142857142,
+          0.07142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 2,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 2,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          11,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 2,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.7857142857142857,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          11
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 3,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1.2142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.07142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 3,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1.2142857142857142
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          10,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.07142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 3,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1.2142857142857142
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          10
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0.07142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 4,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.6428571428571429,
+          1.7857142857142858
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 4,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.6428571428571429,
+          1.7857142857142858
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 4,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7142857142857143,
+          0.6428571428571429,
+          1.7857142857142858
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 5,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 5,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 5,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.5714285714285714,
+          1.4285714285714286
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 6,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5,
+          0.2857142857142857,
+          1.0714285714285714
+        ],
+        "recognized": false,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.2857142857142857,
+          0.07142857142857142,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 6,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5,
+          0.2857142857142857,
+          1.0714285714285714
+        ],
+        "recognized": false,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.2857142857142857,
+          0.07142857142857142,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 6,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5,
+          0.2857142857142857,
+          1.0714285714285714
+        ],
+        "recognized": false,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.2857142857142857,
+          0.07142857142857142,
+          0.2857142857142857
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 7,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 7,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 7,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.7857142857142857,
+          0.8571428571428571,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.14285714285714285,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 8,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 8,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          9,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 8,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.6428571428571429,
+          0.7142857142857143,
+          1.3571428571428572
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          9
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.21428571428571427,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 9,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1.2142857142857142
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 9,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1.2142857142857142
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          8,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 9,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.5714285714285714,
+          0.5714285714285714,
+          1.2142857142857142
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          8
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 10,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 10,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 10,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          0.6428571428571429,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0.07142857142857142,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 11,
+      "bit": null,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          1,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 11,
+      "bit": 0,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          1,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": 0,
+        "dnCounts": [
+          6,
+          0
+        ],
+        "decodedBit": 0
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    },
+    {
+      "seed": 10918,
+      "cue": 2,
+      "repeat": 11,
+      "bit": 1,
+      "first": {
+        "cue": 2,
+        "estimatedCue": 2,
+        "rates": [
+          0.8571428571428571,
+          1,
+          1.8571428571428572
+        ],
+        "recognized": true,
+        "bit": 1,
+        "dnCounts": [
+          0,
+          6
+        ],
+        "decodedBit": 1
+      },
+      "second": {
+        "cue": 1,
+        "estimatedCue": 1,
+        "rates": [
+          0,
+          0,
+          0
+        ],
+        "recognized": true,
+        "bit": null,
+        "dnCounts": [
+          0,
+          0
+        ],
+        "decodedBit": null
+      },
+      "bufferPreserved": true,
+      "weightsUnchanged": true
+    }
+  ]
+}

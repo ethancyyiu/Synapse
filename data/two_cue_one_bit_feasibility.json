@@ -1,0 +1,947 @@
+{
+  "command": "node tools/check_two_cue_one_bit_feasibility.mjs",
+  "hypothesis": "The fixed one-bit message distinguishes mappings on each cue",
+  "sourceNeuron": 2132,
+  "sampleMs": 120,
+  "bit": "trace < 1.915",
+  "classifier": "bit 1 => A, bit 0 => B",
+  "teachers": [
+    603,
+    606,
+    609,
+    612,
+    615,
+    618,
+    621,
+    624
+  ],
+  "heldOutTest": 2,
+  "shuffle": "Swap mapping labels on alternating source rounds within each teacher and cue",
+  "byCue": [
+    {
+      "cue": 0,
+      "perTeacher": [
+        {
+          "teacher": 603,
+          "trained": {
+            "correct": 9,
+            "total": 24,
+            "balancedAccuracy": 0.375,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 3,
+                "bit1": 9
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 13,
+            "total": 24,
+            "balancedAccuracy": 0.5416666666666666,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 3,
+                "bit1": 9
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 606,
+          "trained": {
+            "correct": 10,
+            "total": 24,
+            "balancedAccuracy": 0.4166666666666667,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 2,
+                "bit1": 10
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 2,
+                "bit1": 10
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 609,
+          "trained": {
+            "correct": 11,
+            "total": 24,
+            "balancedAccuracy": 0.4583333333333333,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 1,
+                "bit1": 11
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 11,
+            "total": 24,
+            "balancedAccuracy": 0.4583333333333333,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 1,
+                "bit1": 11
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 612,
+          "trained": {
+            "correct": 8,
+            "total": 24,
+            "balancedAccuracy": 0.3333333333333333,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 4,
+                "bit1": 8
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 14,
+            "total": 24,
+            "balancedAccuracy": 0.5833333333333334,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 4,
+                "bit1": 8
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 615,
+          "trained": {
+            "correct": 7,
+            "total": 24,
+            "balancedAccuracy": 0.2916666666666667,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 5,
+                "bit1": 7
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 11,
+            "total": 24,
+            "balancedAccuracy": 0.4583333333333333,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 5,
+                "bit1": 7
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 618,
+          "trained": {
+            "correct": 11,
+            "total": 24,
+            "balancedAccuracy": 0.4583333333333333,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 1,
+                "bit1": 11
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 11,
+            "total": 24,
+            "balancedAccuracy": 0.4583333333333333,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 1,
+                "bit1": 11
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 621,
+          "trained": {
+            "correct": 11,
+            "total": 24,
+            "balancedAccuracy": 0.4583333333333333,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 1,
+                "bit1": 11
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 11,
+            "total": 24,
+            "balancedAccuracy": 0.4583333333333333,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 1,
+                "bit1": 11
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 624,
+          "trained": {
+            "correct": 9,
+            "total": 24,
+            "balancedAccuracy": 0.375,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 3,
+                "bit1": 9
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 11,
+            "total": 24,
+            "balancedAccuracy": 0.4583333333333333,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 3,
+                "bit1": 9
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        }
+      ],
+      "meanCorrectOutOf24": {
+        "trained": 9.5,
+        "shuffledLabels": 11.75,
+        "untrained": 12,
+        "disconnected": 12
+      },
+      "pooledMessageDistribution": [
+        {
+          "mapping": "A",
+          "bit0": 20,
+          "bit1": 76
+        },
+        {
+          "mapping": "B",
+          "bit0": 0,
+          "bit1": 96
+        }
+      ],
+      "gate": {
+        "meanAtLeast18": false,
+        "sixTeachersAtLeast16": false,
+        "shuffledMarginAtLeast4": false,
+        "untrainedMarginAtLeast4": false
+      },
+      "pass": false
+    },
+    {
+      "cue": 1,
+      "perTeacher": [
+        {
+          "teacher": 603,
+          "trained": {
+            "correct": 24,
+            "total": 24,
+            "balancedAccuracy": 1,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 606,
+          "trained": {
+            "correct": 22,
+            "total": 24,
+            "balancedAccuracy": 0.9166666666666666,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 2,
+                "bit1": 10
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 2,
+                "bit1": 10
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 609,
+          "trained": {
+            "correct": 24,
+            "total": 24,
+            "balancedAccuracy": 1,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 612,
+          "trained": {
+            "correct": 23,
+            "total": 24,
+            "balancedAccuracy": 0.9583333333333334,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 1,
+                "bit1": 11
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 13,
+            "total": 24,
+            "balancedAccuracy": 0.5416666666666666,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 1,
+                "bit1": 11
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 615,
+          "trained": {
+            "correct": 24,
+            "total": 24,
+            "balancedAccuracy": 1,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 618,
+          "trained": {
+            "correct": 24,
+            "total": 24,
+            "balancedAccuracy": 1,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 621,
+          "trained": {
+            "correct": 18,
+            "total": 24,
+            "balancedAccuracy": 0.75,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 6,
+                "bit1": 6
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 6,
+                "bit1": 6
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        },
+        {
+          "teacher": 624,
+          "trained": {
+            "correct": 24,
+            "total": 24,
+            "balancedAccuracy": 1,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "shuffledLabels": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 12,
+                "bit1": 0
+              }
+            ]
+          },
+          "untrained": {
+            "correct": 12,
+            "total": 24,
+            "balancedAccuracy": 0.5,
+            "messageDistribution": [
+              {
+                "mapping": "A",
+                "bit0": 0,
+                "bit1": 12
+              },
+              {
+                "mapping": "B",
+                "bit0": 0,
+                "bit1": 12
+              }
+            ]
+          }
+        }
+      ],
+      "meanCorrectOutOf24": {
+        "trained": 22.875,
+        "shuffledLabels": 12.125,
+        "untrained": 12,
+        "disconnected": 12
+      },
+      "pooledMessageDistribution": [
+        {
+          "mapping": "A",
+          "bit0": 9,
+          "bit1": 87
+        },
+        {
+          "mapping": "B",
+          "bit0": 96,
+          "bit1": 0
+        }
+      ],
+      "gate": {
+        "meanAtLeast18": true,
+        "sixTeachersAtLeast16": true,
+        "shuffledMarginAtLeast4": true,
+        "untrainedMarginAtLeast4": true
+      },
+      "pass": true
+    }
+  ],
+  "proceedToTwoCueLearning": false
+}

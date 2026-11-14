@@ -1,0 +1,158 @@
+{
+ "protocol": "docs/stale-teacher-control-protocol.md",
+ "note": "3-seed pilot; derived from data/stale_teacher_control/seed_*.json",
+ "criterion": "trained - stale > 4 at 48 rounds on all completed seeds",
+ "supported": true,
+ "seeds": [
+  {
+   "s": 0,
+   "status": "completed",
+   "teacherSeed": 27001,
+   "studentSeed": 27002,
+   "teacherWins": 64,
+   "staleTeacherWins": 66,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 47,
+     "stale": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "stale": 1
+    },
+    {
+     "rounds": 96,
+     "alone": 1,
+     "trained": 70,
+     "stale": 1
+    }
+   ],
+   "trainedMinusStale48": 69,
+   "staleMinusAlone48": 0,
+   "preferences": {
+    "trained": [
+     33,
+     27,
+     32
+    ],
+    "stale": [
+     30,
+     32,
+     30
+    ],
+    "bothSent": 92,
+    "agreed": 3
+   }
+  },
+  {
+   "s": 1,
+   "status": "completed",
+   "teacherSeed": 27003,
+   "studentSeed": 27004,
+   "teacherWins": 67,
+   "staleTeacherWins": 67,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 3,
+     "trained": 3,
+     "stale": 3
+    },
+    {
+     "rounds": 24,
+     "alone": 3,
+     "trained": 48,
+     "stale": 3
+    },
+    {
+     "rounds": 48,
+     "alone": 24,
+     "trained": 67,
+     "stale": 3
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 72,
+     "stale": 3
+    }
+   ],
+   "trainedMinusStale48": 64,
+   "staleMinusAlone48": -21,
+   "preferences": {
+    "trained": [
+     33,
+     28,
+     31
+    ],
+    "stale": [
+     27,
+     28,
+     37
+    ],
+    "bothSent": 92,
+    "agreed": 3
+   }
+  },
+  {
+   "s": 2,
+   "status": "completed",
+   "teacherSeed": 27005,
+   "studentSeed": 27006,
+   "teacherWins": 64,
+   "staleTeacherWins": 62,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "stale": 0
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 48,
+     "stale": 2
+    },
+    {
+     "rounds": 48,
+     "alone": 2,
+     "trained": 66,
+     "stale": 2
+    },
+    {
+     "rounds": 96,
+     "alone": 1,
+     "trained": 70,
+     "stale": 1
+    }
+   ],
+   "trainedMinusStale48": 64,
+   "staleMinusAlone48": 0,
+   "preferences": {
+    "trained": [
+     26,
+     33,
+     33
+    ],
+    "stale": [
+     33,
+     32,
+     27
+    ],
+    "bothSent": 92,
+    "agreed": 1
+   }
+  }
+ ]
+}

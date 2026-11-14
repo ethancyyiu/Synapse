@@ -1,0 +1,46 @@
+{
+ "status": "completed",
+ "teacherSeed": 24005,
+ "studentSeed": 24006,
+ "teacherWins": 65,
+ "messages": 46,
+ "points": [
+  {
+   "rounds": 0,
+   "alone": 1,
+   "trained": 1,
+   "random": 1
+  },
+  {
+   "rounds": 6,
+   "alone": 1,
+   "trained": 1,
+   "random": 1
+  },
+  {
+   "rounds": 12,
+   "alone": 1,
+   "trained": 1,
+   "random": 1
+  },
+  {
+   "rounds": 24,
+   "alone": 1,
+   "trained": 47,
+   "random": 1
+  },
+  {
+   "rounds": 48,
+   "alone": 1,
+   "trained": 67,
+   "random": 23
+  }
+ ],
+ "wins": {
+  "alone": 1,
+  "trained": 67,
+  "random": 23
+ },
+ "advantage": 44,
+ "synapsesUnchanged": true
+}

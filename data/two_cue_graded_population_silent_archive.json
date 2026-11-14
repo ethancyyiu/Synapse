@@ -1,0 +1,242 @@
+{
+  "hypothesis": "Calibration-only MBON mapping information persists on all-zero Fly B decision-rate trials",
+  "gate": "Correct-message zero-rate trials: MBON prediction >= 75% accurate and at least 3 more correct than Fly B for each teacher",
+  "source": [
+    "two_cue_graded_population_ties_02_203_lanes02.json",
+    "two_cue_graded_population_choice_02_203_lanes02.json"
+  ],
+  "teachers": {
+    "505": {
+      "correct": {
+        "zero": {
+          "trials": 10,
+          "mbonCorrect": 9,
+          "flyCorrect": 1,
+          "byMapping": [
+            1,
+            9
+          ],
+          "mbonCorrectByMapping": [
+            0,
+            9
+          ],
+          "predictions": [
+            0,
+            10
+          ]
+        },
+        "nonzero": {
+          "trials": 14,
+          "mbonCorrect": 11,
+          "flyCorrect": 11,
+          "byMapping": [
+            11,
+            3
+          ],
+          "mbonCorrectByMapping": [
+            9,
+            2
+          ],
+          "predictions": [
+            10,
+            4
+          ]
+        }
+      },
+      "shuffled": {
+        "zero": {
+          "trials": 9,
+          "mbonCorrect": 5,
+          "flyCorrect": 1,
+          "byMapping": [
+            4,
+            5
+          ],
+          "mbonCorrectByMapping": [
+            0,
+            5
+          ],
+          "predictions": [
+            0,
+            9
+          ]
+        },
+        "nonzero": {
+          "trials": 15,
+          "mbonCorrect": 7,
+          "flyCorrect": 8,
+          "byMapping": [
+            8,
+            7
+          ],
+          "mbonCorrectByMapping": [
+            5,
+            2
+          ],
+          "predictions": [
+            10,
+            5
+          ]
+        }
+      },
+      "disconnected": {
+        "zero": {
+          "trials": 24,
+          "mbonCorrect": 12,
+          "flyCorrect": 2,
+          "byMapping": [
+            12,
+            12
+          ],
+          "mbonCorrectByMapping": [
+            0,
+            12
+          ],
+          "predictions": [
+            0,
+            24
+          ]
+        },
+        "nonzero": {
+          "trials": 0,
+          "mbonCorrect": 0,
+          "flyCorrect": 0,
+          "byMapping": [
+            0,
+            0
+          ],
+          "mbonCorrectByMapping": [
+            0,
+            0
+          ],
+          "predictions": [
+            0,
+            0
+          ]
+        }
+      }
+    },
+    "506": {
+      "correct": {
+        "zero": {
+          "trials": 10,
+          "mbonCorrect": 8,
+          "flyCorrect": 5,
+          "byMapping": [
+            2,
+            8
+          ],
+          "mbonCorrectByMapping": [
+            0,
+            8
+          ],
+          "predictions": [
+            0,
+            10
+          ]
+        },
+        "nonzero": {
+          "trials": 14,
+          "mbonCorrect": 12,
+          "flyCorrect": 11,
+          "byMapping": [
+            10,
+            4
+          ],
+          "mbonCorrectByMapping": [
+            8,
+            4
+          ],
+          "predictions": [
+            8,
+            6
+          ]
+        }
+      },
+      "shuffled": {
+        "zero": {
+          "trials": 9,
+          "mbonCorrect": 5,
+          "flyCorrect": 3,
+          "byMapping": [
+            4,
+            5
+          ],
+          "mbonCorrectByMapping": [
+            0,
+            5
+          ],
+          "predictions": [
+            0,
+            9
+          ]
+        },
+        "nonzero": {
+          "trials": 15,
+          "mbonCorrect": 4,
+          "flyCorrect": 8,
+          "byMapping": [
+            8,
+            7
+          ],
+          "mbonCorrectByMapping": [
+            2,
+            2
+          ],
+          "predictions": [
+            7,
+            8
+          ]
+        }
+      },
+      "disconnected": {
+        "zero": {
+          "trials": 24,
+          "mbonCorrect": 12,
+          "flyCorrect": 8,
+          "byMapping": [
+            12,
+            12
+          ],
+          "mbonCorrectByMapping": [
+            0,
+            12
+          ],
+          "predictions": [
+            0,
+            24
+          ]
+        },
+        "nonzero": {
+          "trials": 0,
+          "mbonCorrect": 0,
+          "flyCorrect": 0,
+          "byMapping": [
+            0,
+            0
+          ],
+          "mbonCorrectByMapping": [
+            0,
+            0
+          ],
+          "predictions": [
+            0,
+            0
+          ]
+        }
+      }
+    }
+  },
+  "numericalGatePassed": true,
+  "constantClassControl": {
+    "505": {
+      "majorityClassAccuracy": 0.9,
+      "mbonAdvantageOverMajority": 0
+    },
+    "506": {
+      "majorityClassAccuracy": 0.8,
+      "mbonAdvantageOverMajority": 0
+    }
+  },
+  "informativeSilenceSupported": false
+}

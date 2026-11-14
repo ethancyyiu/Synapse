@@ -1,0 +1,83 @@
+{
+ "status": "completed",
+ "task": "traffic_signal_rule_switch",
+ "description": "Pre-switch: normal signal rule (offset 1). Post-switch: construction-zone override (offset 2). Cue = previous signal (R/G/Y). Same architecture and DN channel as validated RPS cohort.",
+ "teacherSeed": 36001,
+ "studentSeed": 36002,
+ "teacherWins": 68,
+ "messages": {
+  "trained": 92,
+  "random": 92,
+  "untrained": 92,
+  "shuffled": 92
+ },
+ "points": [
+  {
+   "rounds": 0,
+   "alone": 2,
+   "trained": 2,
+   "random": 2,
+   "untrained": 2,
+   "shuffled": 2
+  },
+  {
+   "rounds": 24,
+   "alone": 2,
+   "trained": 60,
+   "random": 2,
+   "untrained": 13,
+   "shuffled": 2
+  },
+  {
+   "rounds": 48,
+   "alone": 2,
+   "trained": 71,
+   "random": 25,
+   "untrained": 24,
+   "shuffled": 49
+  },
+  {
+   "rounds": 96,
+   "alone": 49,
+   "trained": 71,
+   "random": 49,
+   "untrained": 24,
+   "shuffled": 49
+  }
+ ],
+ "advantage48": 22,
+ "advantageByCheckpoint": [
+  {
+   "rounds": 0,
+   "advantage": 0
+  },
+  {
+   "rounds": 24,
+   "advantage": 47
+  },
+  {
+   "rounds": 48,
+   "advantage": 22
+  },
+  {
+   "rounds": 96,
+   "advantage": 22
+  }
+ ],
+ "tape": {
+  "trainedPreferences": [
+   24,
+   34,
+   34
+  ],
+  "shuffledMoved": 65,
+  "cuedRounds": 92,
+  "untrainedPreferences": [
+   92,
+   0,
+   0
+  ]
+ },
+ "teachersFrozen": true,
+ "synapsesUnchanged": true
+}

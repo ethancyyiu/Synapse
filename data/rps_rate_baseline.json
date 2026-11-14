@@ -1,0 +1,38 @@
+{
+  "command": "node tools/calibrate_rps_rate_baseline.mjs",
+  "source": "data/rps_frozen_input.json",
+  "method": "pooled mean per-action raw MBON rate over all 108 reward-free initial trials; ignore state, action, reward, and held-out results",
+  "baseline": [
+    0.472883597883598,
+    0.3895502645502646,
+    0.7195767195767195
+  ],
+  "sourceValid": true,
+  "winnerOpportunities": [
+    {
+      "seed": 651,
+      "counts": [
+        12,
+        11,
+        13
+      ]
+    },
+    {
+      "seed": 652,
+      "counts": [
+        7,
+        15,
+        14
+      ]
+    },
+    {
+      "seed": 653,
+      "counts": [
+        11,
+        12,
+        13
+      ]
+    }
+  ],
+  "valid": true
+}

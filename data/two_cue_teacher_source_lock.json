@@ -1,0 +1,26 @@
+{
+  "lockedBeforeTeaching": true,
+  "calibrationSeeds": [11, 12],
+  "neuron": 2132,
+  "role": "mbon",
+  "feature": "trace>=0.5",
+  "sampleMs": 120,
+  "encoding": "bit 0 when the neuron's own spike trace is at least 0.5, otherwise bit 1",
+  "channel": {
+    "targets": "first eight VPN neurons of bit lane 0 or 1",
+    "strengthHz": 300,
+    "startMs": 120,
+    "endMs": 240
+  },
+  "task": {
+    "cueLanes": [0, 2],
+    "cueVpnStart": 8,
+    "cueHz": 150,
+    "rewardedActions": [0, 2]
+  },
+  "selection": "Among 42 MBONs and thresholds 0.05, 0.2, 0.5, 1: require conditional information about mapping/correct action given cue above 0.03 bits on each calibration seed, trained mapping-1 bit occupancy 20-80% on each seed, and at least 0.1 mean bit-frequency change from untrained on mapping 1; rank by mean conditional information.",
+  "conditionalInformationBits": [0.082, 0.144],
+  "trainedMapping1ActiveFractions": [0.75, 0.7083],
+  "untrainedActiveFractions": [0.0417, 0.0139],
+  "note": "Only Fly A neural activity is sampled at transmission time; no answer, mapping label, or weights are transmitted. Calibration teacher evaluation used no reward feedback."
+}

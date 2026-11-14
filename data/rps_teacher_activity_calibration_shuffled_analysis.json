@@ -1,0 +1,51 @@
+{
+  "split": "calibration",
+  "variant": "shuffled",
+  "seeds": [
+    41
+  ],
+  "roundsPerCondition": 480,
+  "candidateNeurons": 1167,
+  "eligibleFeatures": 342,
+  "rankingEligibleFeatures": 185,
+  "ranking": [],
+  "lockedSource": {
+    "neuron": 2132,
+    "role": "mbon",
+    "feature": "trace>=0.5",
+    "gainBits": 0.001492,
+    "metrics": {
+      "next_given_prev": {
+        "trained": 0.003913,
+        "untrained": 0.002421
+      },
+      "next_given_prev_phase": {
+        "trained": 0.015109,
+        "untrained": 0.013177
+      },
+      "phase_given_prev": {
+        "trained": 0.002135,
+        "untrained": 0.003786
+      },
+      "action_given_prev": {
+        "trained": 0.037855,
+        "untrained": 0.023867
+      },
+      "reward_history_given_prev": {
+        "trained": 0.061666,
+        "untrained": 0.037976
+      },
+      "previous_move": {
+        "trained": 0.206286,
+        "untrained": 0.221136
+      },
+      "frequency": {
+        "trained": 0.94375,
+        "untrained": 0.947917
+      },
+      "perSeedNextGain": [
+        0.001492
+      ]
+    }
+  }
+}

@@ -1,0 +1,406 @@
+{
+  "mode": "quick_precue_kc_nocue",
+  "config": {
+    "name": "precue_kc_nocue",
+    "width": 2,
+    "hz": 300,
+    "start": 0,
+    "targetIds": [
+      [
+        1319,
+        2016
+      ],
+      [
+        818,
+        1462
+      ]
+    ],
+    "precue": true,
+    "noCue": true,
+    "trainingEpisodes": 8
+  },
+  "seed": 11,
+  "episodes": 8,
+  "testEpisodes": 1,
+  "roundsPerEpisode": 24,
+  "command": "node tools/calibrate_rps_channel.mjs quick_precue_kc_nocue",
+  "scheduleMs": {
+    "message": [
+      0,
+      40
+    ],
+    "gap": [
+      40,
+      70
+    ],
+    "cue": null,
+    "decision": 240,
+    "learning": 340
+  },
+  "result": {
+    "seed": 11,
+    "before": {
+      "accuracy": 0.4583333333333333,
+      "byLabel": [
+        {
+          "label": 0,
+          "n": 12,
+          "accuracy": 0.08333333333333333,
+          "actions": [
+            1,
+            0,
+            11
+          ],
+          "mbonRates": [
+            0,
+            0,
+            0.35714285714285715
+          ],
+          "targetSpikes": [
+            0,
+            0
+          ],
+          "kcSpikes": 0,
+          "activeKc": 3.6666666666666665,
+          "targetTrace": [
+            2.680288160056047,
+            0.23212366718643995
+          ],
+          "eligibility": 13.836194545759886,
+          "messageKcSpikes": 15.083333333333334,
+          "messageMbonSpikes": [
+            0.9166666666666666,
+            0,
+            0.8333333333333334
+          ]
+        },
+        {
+          "label": 1,
+          "n": 12,
+          "accuracy": 0.8333333333333334,
+          "actions": [
+            1,
+            1,
+            10
+          ],
+          "mbonRates": [
+            0,
+            0,
+            0.30357142857142855
+          ],
+          "targetSpikes": [
+            0,
+            0
+          ],
+          "kcSpikes": 0,
+          "activeKc": 3.5,
+          "targetTrace": [
+            0.2046397934676112,
+            2.7674606511370015
+          ],
+          "eligibility": 22.158887963203867,
+          "messageKcSpikes": 15.5,
+          "messageMbonSpikes": [
+            0.08333333333333333,
+            0,
+            1
+          ]
+        }
+      ],
+      "actionTv": 0.08333333333333329
+    },
+    "training": [
+      0.5416666666666666,
+      0.5,
+      0.4583333333333333,
+      0.5416666666666666,
+      0.5,
+      0.25,
+      0.4583333333333333,
+      0.5
+    ],
+    "evaluations": {
+      "correct": {
+        "accuracy": 0.3333333333333333,
+        "byLabel": [
+          {
+            "label": 0,
+            "n": 12,
+            "accuracy": 0.08333333333333333,
+            "actions": [
+              1,
+              1,
+              10
+            ],
+            "mbonRates": [
+              0,
+              0,
+              0.27380952380952384
+            ],
+            "targetSpikes": [
+              0,
+              0
+            ],
+            "kcSpikes": 0,
+            "activeKc": 3.6666666666666665,
+            "targetTrace": [
+              2.738024484833772,
+              0.25369796797499733
+            ],
+            "eligibility": 14.490042417304407,
+            "messageKcSpikes": 15.333333333333334,
+            "messageMbonSpikes": [
+              3.5,
+              0,
+              1.0833333333333333
+            ]
+          },
+          {
+            "label": 1,
+            "n": 12,
+            "accuracy": 0.5833333333333334,
+            "actions": [
+              2,
+              3,
+              7
+            ],
+            "mbonRates": [
+              0,
+              0,
+              0.18452380952380953
+            ],
+            "targetSpikes": [
+              0,
+              0
+            ],
+            "kcSpikes": 0,
+            "activeKc": 3.5,
+            "targetTrace": [
+              0.19669625573439584,
+              2.8744434686167097
+            ],
+            "eligibility": 21.787561808200177,
+            "messageKcSpikes": 16.25,
+            "messageMbonSpikes": [
+              0,
+              0,
+              0.75
+            ]
+          }
+        ],
+        "actionTv": 0.25
+      },
+      "disconnected": {
+        "accuracy": 0.4583333333333333,
+        "byLabel": [
+          {
+            "label": 0,
+            "n": 12,
+            "accuracy": 0.08333333333333333,
+            "actions": [
+              1,
+              0,
+              11
+            ],
+            "mbonRates": [
+              0,
+              0,
+              0.3511904761904762
+            ],
+            "targetSpikes": [
+              0,
+              0
+            ],
+            "kcSpikes": 0,
+            "activeKc": 0,
+            "targetTrace": [
+              0,
+              0
+            ],
+            "eligibility": 0,
+            "messageKcSpikes": 0,
+            "messageMbonSpikes": [
+              0,
+              0,
+              0.9166666666666666
+            ]
+          },
+          {
+            "label": 1,
+            "n": 12,
+            "accuracy": 0.8333333333333334,
+            "actions": [
+              1,
+              1,
+              10
+            ],
+            "mbonRates": [
+              0,
+              0,
+              0.3214285714285714
+            ],
+            "targetSpikes": [
+              0,
+              0
+            ],
+            "kcSpikes": 0,
+            "activeKc": 0,
+            "targetTrace": [
+              0,
+              0
+            ],
+            "eligibility": 0,
+            "messageKcSpikes": 0,
+            "messageMbonSpikes": [
+              0,
+              0,
+              0.8333333333333334
+            ]
+          }
+        ],
+        "actionTv": 0.08333333333333329
+      },
+      "shuffled": {
+        "accuracy": 0.375,
+        "byLabel": [
+          {
+            "label": 0,
+            "n": 12,
+            "accuracy": 0.16666666666666666,
+            "actions": [
+              2,
+              2,
+              8
+            ],
+            "mbonRates": [
+              0,
+              0,
+              0.22023809523809523
+            ],
+            "targetSpikes": [
+              0,
+              0
+            ],
+            "kcSpikes": 0,
+            "activeKc": 3.5,
+            "targetTrace": [
+              1.2622302405084926,
+              1.6405930502653325
+            ],
+            "eligibility": 20.955805860397017,
+            "messageKcSpikes": 15,
+            "messageMbonSpikes": [
+              1.5,
+              0,
+              0.8333333333333334
+            ]
+          },
+          {
+            "label": 1,
+            "n": 12,
+            "accuracy": 0.5833333333333334,
+            "actions": [
+              3,
+              2,
+              7
+            ],
+            "mbonRates": [
+              0,
+              0,
+              0.22023809523809523
+            ],
+            "targetSpikes": [
+              0,
+              0
+            ],
+            "kcSpikes": 0,
+            "activeKc": 3.6666666666666665,
+            "targetTrace": [
+              1.5960038471281381,
+              1.3042334591242846
+            ],
+            "eligibility": 19.527964667980207,
+            "messageKcSpikes": 15.25,
+            "messageMbonSpikes": [
+              1.9166666666666667,
+              0,
+              0.9166666666666666
+            ]
+          }
+        ],
+        "actionTv": 0.0833333333333333
+      },
+      "signalIndependent": {
+        "accuracy": 0.4583333333333333,
+        "byLabel": [
+          {
+            "label": 0,
+            "n": 12,
+            "accuracy": 0.08333333333333333,
+            "actions": [
+              1,
+              0,
+              11
+            ],
+            "mbonRates": [
+              0,
+              0,
+              0.3511904761904762
+            ],
+            "targetSpikes": [
+              0,
+              0
+            ],
+            "kcSpikes": 0,
+            "activeKc": 0,
+            "targetTrace": [
+              0,
+              0
+            ],
+            "eligibility": 0,
+            "messageKcSpikes": 0,
+            "messageMbonSpikes": [
+              0,
+              0,
+              0.9166666666666666
+            ]
+          },
+          {
+            "label": 1,
+            "n": 12,
+            "accuracy": 0.8333333333333334,
+            "actions": [
+              1,
+              1,
+              10
+            ],
+            "mbonRates": [
+              0,
+              0,
+              0.3214285714285714
+            ],
+            "targetSpikes": [
+              0,
+              0
+            ],
+            "kcSpikes": 0,
+            "activeKc": 0,
+            "targetTrace": [
+              0,
+              0
+            ],
+            "eligibility": 0,
+            "messageKcSpikes": 0,
+            "messageMbonSpikes": [
+              0,
+              0,
+              0.8333333333333334
+            ]
+          }
+        ],
+        "actionTv": 0.08333333333333329
+      }
+    },
+    "changedPlasticWeights": 39
+  }
+}

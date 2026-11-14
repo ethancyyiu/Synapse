@@ -1,0 +1,1032 @@
+{
+ "protocol": "docs/trust-gate-cohort-protocol.md",
+ "seedsFound": 15,
+ "completed": 14,
+ "stoppedTeacher": 1,
+ "stoppedStaleTeacher": 0,
+ "protection96": {
+  "mean": 34.214285714285715,
+  "bootstrap95": [
+   25.571428571428573,
+   42
+  ],
+  "perSeed": [
+   47,
+   45,
+   46,
+   22,
+   23,
+   29,
+   23,
+   59,
+   23,
+   46,
+   0,
+   22,
+   48,
+   46
+  ]
+ },
+ "noHarm96": {
+  "mean": -7.5,
+  "bootstrap95": [
+   -12.928571428571429,
+   -2.2142857142857144
+  ],
+  "perSeed": [
+   0,
+   -24,
+   0,
+   -23,
+   -24,
+   -1,
+   0,
+   -1,
+   -1,
+   -1,
+   -23,
+   -7,
+   0,
+   0
+  ]
+ },
+ "benefitKept48": {
+  "mean": -0.7857142857142857,
+  "bootstrap95": [
+   -1.6428571428571428,
+   -0.14285714285714285
+  ],
+  "perSeed": [
+   0,
+   0,
+   -1,
+   0,
+   0,
+   0,
+   -5,
+   0,
+   0,
+   0,
+   0,
+   -2,
+   -3,
+   0
+  ]
+ },
+ "holds": {
+  "protection": true,
+  "noHarm": false,
+  "benefitKept": true
+ },
+ "passed": false,
+ "gatedTrainedMinusAlone48": {
+  "mean": 49.714285714285715,
+  "bootstrap95": [
+   40.642857142857146,
+   58
+  ],
+  "perSeed": [
+   64,
+   24,
+   67,
+   68,
+   45,
+   42,
+   38,
+   43,
+   46,
+   16,
+   64,
+   44,
+   66,
+   69
+  ]
+ },
+ "meanWins": {
+  "0": {
+   "alone": 1.3571428571428572,
+   "trained": 1.3571428571428572,
+   "stale": 1.3571428571428572,
+   "gatedTrained": 1.3571428571428572,
+   "gatedStale": 1.3571428571428572
+  },
+  "24": {
+   "alone": 4.214285714285714,
+   "trained": 48.57142857142857,
+   "stale": 1,
+   "gatedTrained": 46.285714285714285,
+   "gatedStale": 1.1428571428571428
+  },
+  "48": {
+   "alone": 17.142857142857142,
+   "trained": 67.64285714285714,
+   "stale": 0.9285714285714286,
+   "gatedTrained": 66.85714285714286,
+   "gatedStale": 14.571428571428571
+  },
+  "96": {
+   "alone": 43,
+   "trained": 70,
+   "stale": 1.2857142857142858,
+   "gatedTrained": 69.92857142857143,
+   "gatedStale": 35.5
+  }
+ },
+ "meanTrust": {
+  "0": {
+   "gatedTrained": 1,
+   "gatedStale": 1
+  },
+  "24": {
+   "gatedTrained": 0.8516457691428572,
+   "gatedStale": 0.017377106993640295
+  },
+  "48": {
+   "gatedTrained": 0.9856362223861994,
+   "gatedStale": 0.0003597939073290149
+  },
+  "96": {
+   "gatedTrained": 0.9998986817313563,
+   "gatedStale": 0.002427269548208633
+  }
+ },
+ "integrity": true,
+ "seeds": [
+  {
+   "file": "seed_3.json",
+   "status": "completed",
+   "teacherWins": 62,
+   "staleTeacherWins": 66,
+   "verdict": {
+    "noHarm": true,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "stale": 2,
+     "gatedTrained": 2,
+     "gatedStale": 2,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 53,
+     "stale": 2,
+     "gatedTrained": 53,
+     "gatedStale": 2,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.02251799813685248
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 2,
+     "trained": 66,
+     "stale": 2,
+     "gatedTrained": 66,
+     "gatedStale": 2,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.0004056481920730336
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 49,
+     "trained": 70,
+     "stale": 2,
+     "gatedTrained": 70,
+     "gatedStale": 49,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 4.0173451106474777e-7
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_4.json",
+   "status": "completed",
+   "teacherWins": 66,
+   "staleTeacherWins": 65,
+   "verdict": {
+    "noHarm": false,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "stale": 2,
+     "gatedTrained": 2,
+     "gatedStale": 2,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 24,
+     "trained": 71,
+     "stale": 2,
+     "gatedTrained": 71,
+     "gatedStale": 4,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.02251799813685248
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 47,
+     "trained": 71,
+     "stale": 2,
+     "gatedTrained": 71,
+     "gatedStale": 20,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.0007922816251426436
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 71,
+     "trained": 71,
+     "stale": 2,
+     "gatedTrained": 71,
+     "gatedStale": 47,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.000009134385233318147
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_5.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 64,
+   "verdict": {
+    "noHarm": true,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1,
+     "gatedTrained": 1,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 47,
+     "stale": 1,
+     "gatedTrained": 47,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 0.7376,
+      "gatedStale": 0.014411518807585589
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 69,
+     "stale": 1,
+     "gatedTrained": 68,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 0.9926140966111123,
+      "gatedStale": 0.0002596148429267415
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 46,
+     "trained": 69,
+     "stale": 0,
+     "gatedTrained": 69,
+     "gatedStale": 46,
+     "trust": {
+      "gatedTrained": 0.9999984660078814,
+      "gatedStale": 0.00038696157456834994
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_6.json",
+   "status": "completed",
+   "teacherWins": 59,
+   "staleTeacherWins": 65,
+   "verdict": {
+    "noHarm": false,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 3,
+     "trained": 3,
+     "stale": 3,
+     "gatedTrained": 3,
+     "gatedStale": 3,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 3,
+     "trained": 45,
+     "stale": 3,
+     "gatedTrained": 42,
+     "gatedStale": 3,
+     "trust": {
+      "gatedTrained": 0.7696,
+      "gatedStale": 0.02251799813685248
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 3,
+     "trained": 71,
+     "stale": 3,
+     "gatedTrained": 71,
+     "gatedStale": 3,
+     "trust": {
+      "gatedTrained": 0.9860157602070612,
+      "gatedStale": 0.00016615349947311455
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 72,
+     "stale": 3,
+     "gatedTrained": 72,
+     "gatedStale": 25,
+     "trust": {
+      "gatedTrained": 0.9999963694837827,
+      "gatedStale": 2.5711008708143857e-7
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_7.json",
+   "status": "completed",
+   "teacherWins": 64,
+   "staleTeacherWins": 64,
+   "verdict": {
+    "noHarm": false,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1,
+     "gatedTrained": 1,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 70,
+     "stale": 1,
+     "gatedTrained": 70,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.035184372088832
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 25,
+     "trained": 70,
+     "stale": 1,
+     "gatedTrained": 70,
+     "gatedStale": 24,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.0004056481920730336
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 70,
+     "stale": 1,
+     "gatedTrained": 70,
+     "gatedStale": 24,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.000003741444191567113
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_8.json",
+   "status": "completed",
+   "teacherWins": 60,
+   "staleTeacherWins": 67,
+   "verdict": {
+    "noHarm": true,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1,
+     "gatedTrained": 1,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 23,
+     "trained": 24,
+     "stale": 1,
+     "gatedTrained": 23,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 0.6851712000000001,
+      "gatedStale": 0.018014398509481985
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 23,
+     "trained": 65,
+     "stale": 1,
+     "gatedTrained": 65,
+     "gatedStale": 23,
+     "trust": {
+      "gatedTrained": 0.9724097875984493,
+      "gatedStale": 0.0009903520314283045
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 32,
+     "trained": 71,
+     "stale": 2,
+     "gatedTrained": 70,
+     "gatedStale": 31,
+     "trust": {
+      "gatedTrained": 0.9999910464641764,
+      "gatedStale": 0.0000058460065493236135
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_9.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 66,
+   "verdict": {
+    "noHarm": true,
+    "benefitKept": false,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1,
+     "gatedTrained": 1,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 23,
+     "stale": 1,
+     "gatedTrained": 23,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 0.672064,
+      "gatedStale": 0.018014398509481985
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 23,
+     "trained": 66,
+     "stale": 1,
+     "gatedTrained": 61,
+     "gatedStale": 23,
+     "trust": {
+      "gatedTrained": 0.9819715277416825,
+      "gatedStale": 0.00032451855365842687
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 69,
+     "stale": 1,
+     "gatedTrained": 69,
+     "gatedStale": 24,
+     "trust": {
+      "gatedTrained": 0.9999941494262581,
+      "gatedStale": 7.846377169233355e-7
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_10.json",
+   "status": "completed",
+   "teacherWins": 66,
+   "staleTeacherWins": 67,
+   "verdict": {
+    "noHarm": true,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "stale": 0,
+     "gatedTrained": 0,
+     "gatedStale": 0,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 0,
+     "trained": 54,
+     "stale": 0,
+     "gatedTrained": 54,
+     "gatedStale": 0,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.009223372036854777
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 24,
+     "trained": 67,
+     "stale": 0,
+     "gatedTrained": 67,
+     "gatedStale": 24,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.0002076918743413932
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 63,
+     "trained": 72,
+     "stale": 3,
+     "gatedTrained": 72,
+     "gatedStale": 62,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.000007307508186654517
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_11.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 66,
+   "verdict": {
+    "noHarm": true,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1,
+     "gatedTrained": 1,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 48,
+     "stale": 1,
+     "gatedTrained": 48,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.014411518807585589
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 23,
+     "trained": 69,
+     "stale": 1,
+     "gatedTrained": 69,
+     "gatedStale": 22,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 0.0002076918743413932
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 25,
+     "trained": 70,
+     "stale": 1,
+     "gatedTrained": 70,
+     "gatedStale": 24,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 6.277101735386684e-7
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_12.json",
+   "status": "completed",
+   "teacherWins": 67,
+   "staleTeacherWins": 66,
+   "verdict": {
+    "noHarm": true,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1,
+     "gatedTrained": 1,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 47,
+     "stale": 1,
+     "gatedTrained": 47,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 0.6384455680000001,
+      "gatedStale": 0.018014398509481985
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 47,
+     "trained": 63,
+     "stale": 1,
+     "gatedTrained": 63,
+     "gatedStale": 46,
+     "trust": {
+      "gatedTrained": 0.9898231474673166,
+      "gatedStale": 0.0005070602400912919
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 70,
+     "stale": 1,
+     "gatedTrained": 70,
+     "gatedStale": 47,
+     "trust": {
+      "gatedTrained": 0.9999935496533892,
+      "gatedStale": 0.03356584998154165
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_13.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 64,
+   "verdict": {
+    "noHarm": false,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": false
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "stale": 2,
+     "gatedTrained": 2,
+     "gatedStale": 2,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 0,
+     "trained": 54,
+     "stale": 0,
+     "gatedTrained": 53,
+     "gatedStale": 0,
+     "trust": {
+      "gatedTrained": 0.91808,
+      "gatedStale": 0.018014398509481985
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 0,
+     "trained": 64,
+     "stale": 0,
+     "gatedTrained": 64,
+     "gatedStale": 0,
+     "trust": {
+      "gatedTrained": 0.9971176962384829,
+      "gatedStale": 0.0002596148429267415
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 23,
+     "trained": 67,
+     "stale": 0,
+     "gatedTrained": 67,
+     "gatedStale": 0,
+     "trust": {
+      "gatedTrained": 0.9999996168761148,
+      "gatedStale": 2.2085588309729814e-8
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_14.json",
+   "status": "stopped_teacher",
+   "teacherWins": 54,
+   "staleTeacherWins": null,
+   "verdict": null,
+   "points": null
+  },
+  {
+   "file": "seed_15.json",
+   "status": "completed",
+   "teacherWins": 66,
+   "staleTeacherWins": 65,
+   "verdict": {
+    "noHarm": false,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "stale": 0,
+     "gatedTrained": 0,
+     "gatedStale": 0,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 0,
+     "trained": 46,
+     "stale": 0,
+     "gatedTrained": 46,
+     "gatedStale": 0,
+     "trust": {
+      "gatedTrained": 0.91808,
+      "gatedStale": 0.01152921504606847
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 22,
+     "trained": 68,
+     "stale": 0,
+     "gatedTrained": 66,
+     "gatedStale": 16,
+     "trust": {
+      "gatedTrained": 0.9971176962384829,
+      "gatedStale": 0.0002596148429267415
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 29,
+     "trained": 69,
+     "stale": 0,
+     "gatedTrained": 69,
+     "gatedStale": 22,
+     "trust": {
+      "gatedTrained": 0.9992429598611035,
+      "gatedStale": 2.0568806966515085e-7
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_16.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 66,
+   "verdict": {
+    "noHarm": true,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 3,
+     "trained": 3,
+     "stale": 3,
+     "gatedTrained": 3,
+     "gatedStale": 3,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 0,
+     "trained": 50,
+     "stale": 0,
+     "gatedTrained": 48,
+     "gatedStale": 0,
+     "trust": {
+      "gatedTrained": 0.712,
+      "gatedStale": 0.01152921504606847
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 0,
+     "trained": 69,
+     "stale": 0,
+     "gatedTrained": 66,
+     "gatedStale": 0,
+     "trust": {
+      "gatedTrained": 0.9898669008384164,
+      "gatedStale": 0.00016615349947311455
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 69,
+     "stale": 0,
+     "gatedTrained": 69,
+     "gatedStale": 48,
+     "trust": {
+      "gatedTrained": 0.999393432527835,
+      "gatedStale": 1.3164036458569655e-7
+     }
+    }
+   ]
+  },
+  {
+   "file": "seed_17.json",
+   "status": "completed",
+   "teacherWins": 62,
+   "staleTeacherWins": 62,
+   "verdict": {
+    "noHarm": true,
+    "benefitKept": true,
+    "staleHarmed": true,
+    "protectedFromStale": true
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1,
+     "gatedTrained": 1,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 1,
+      "gatedStale": 1
+     }
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 48,
+     "stale": 1,
+     "gatedTrained": 23,
+     "gatedStale": 1,
+     "trust": {
+      "gatedTrained": 0.8720000000000001,
+      "gatedStale": 0.007378697629483821
+     }
+    },
+    {
+     "rounds": 48,
+     "alone": 0,
+     "trained": 69,
+     "stale": 0,
+     "gatedTrained": 69,
+     "gatedStale": 0,
+     "trust": {
+      "gatedTrained": 0.891970500465787,
+      "gatedStale": 0.00008507059173023465
+     }
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 71,
+     "stale": 2,
+     "gatedTrained": 71,
+     "gatedStale": 48,
+     "trust": {
+      "gatedTrained": 0.9999719539384471,
+      "gatedStale": 5.021681388309347e-7
+     }
+    }
+   ]
+  }
+ ]
+}

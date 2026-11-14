@@ -1,0 +1,43 @@
+{
+  "meta": {
+    "permutations": 200,
+    "excludedFirstRoundOfEachEpisode": true,
+    "meaning": "Empirical mutual information in bits; signals shuffled within previous-move groups for reference."
+  },
+  "conditions": {
+    "trained": {
+      "rounds": 828,
+      "rawSignalToNextBits": 0.7326108641818849,
+      "conditionalBits": 0.021710137266899104,
+      "permutationMedianBits": 0.02301055398167903,
+      "permutation95thBits": 0.03499157251991794,
+      "permutationP": 0.6119402985074627,
+      "allZeroShare": 0.30193236714975846,
+      "allMaxShare": 0.5157004830917874
+    },
+    "untrained": {
+      "rounds": 828,
+      "rawSignalToNextBits": 0.8023979176462928,
+      "conditionalBits": 0.03472969094957315,
+      "permutationMedianBits": 0.030552177846982977,
+      "permutation95thBits": 0.04307864334627749,
+      "permutationP": 0.23383084577114427,
+      "allZeroShare": 0.32367149758454106,
+      "allMaxShare": 0.41545893719806765
+    },
+    "shuffled_signal": {
+      "rounds": 828,
+      "rawSignalToNextBits": 0.03446920249546359,
+      "conditionalBits": 0.03288765779301065,
+      "permutationMedianBits": 0.03662046241697439,
+      "permutation95thBits": 0.04855247369838956,
+      "permutationP": 0.6517412935323383,
+      "allZeroShare": 0.3248792270531401,
+      "allMaxShare": 0.5
+    }
+  },
+  "previousMovePredictor": {
+    "correct": 779,
+    "rounds": 828
+  }
+}

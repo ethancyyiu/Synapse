@@ -1,0 +1,290 @@
+{
+  "command": "node tools/check_two_cue_single_source.mjs calibration",
+  "calibrationTeachers": [
+    501,
+    502
+  ],
+  "evaluationTeacher": 503,
+  "candidateNeurons": [
+    2132,
+    2135,
+    2134
+  ],
+  "rule": "bit = trace < threshold, with one global bit-to-mapping polarity",
+  "selection": "maximize weakest teacher/cue mapping accuracy, then pooled weakest cue",
+  "minimumReliableCueAccuracy": 0.7,
+  "candidates": [
+    {
+      "neuron": 2132,
+      "threshold": 1.915,
+      "bit1MeansA": true,
+      "byTeacher": [
+        {
+          "byCue": [
+            {
+              "cue": 0,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.8333333333333334,
+                0.9722222222222222
+              ],
+              "mappingAccuracy": 0.43055555555555564,
+              "informationBits": 0.04355564117227151
+            },
+            {
+              "cue": 1,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.9444444444444444,
+                0.05555555555555555
+              ],
+              "mappingAccuracy": 0.9444444444444444,
+              "informationBits": 0.6904565708496748
+            }
+          ],
+          "weakestCueAccuracy": 0.43055555555555564,
+          "meanAccuracy": 0.6875,
+          "conditionalInformationBits": 0.36700610601097317
+        },
+        {
+          "byCue": [
+            {
+              "cue": 0,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.8888888888888888,
+                1
+              ],
+              "mappingAccuracy": 0.4444444444444444,
+              "informationBits": 0.05791426176250236
+            },
+            {
+              "cue": 1,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.9722222222222222,
+                0.027777777777777776
+              ],
+              "mappingAccuracy": 0.9722222222222223,
+              "informationBits": 0.8168779316986272
+            }
+          ],
+          "weakestCueAccuracy": 0.4444444444444444,
+          "meanAccuracy": 0.7083333333333334,
+          "conditionalInformationBits": 0.4373960967305648
+        }
+      ],
+      "pooled": {
+        "byCue": [
+          {
+            "cue": 0,
+            "nPerMapping": 72,
+            "bit1ByMapping": [
+              0.8611111111111112,
+              0.9861111111111112
+            ],
+            "mappingAccuracy": 0.4375,
+            "informationBits": 0.04586934688210992
+          },
+          {
+            "cue": 1,
+            "nPerMapping": 72,
+            "bit1ByMapping": [
+              0.9583333333333334,
+              0.041666666666666664
+            ],
+            "mappingAccuracy": 0.9583333333333334,
+            "informationBits": 0.7501177071668146
+          }
+        ],
+        "weakestCueAccuracy": 0.4375,
+        "meanAccuracy": 0.6979166666666667,
+        "conditionalInformationBits": 0.3979935270244622
+      },
+      "weakestTeacherCueAccuracy": 0.43055555555555564
+    },
+    {
+      "neuron": 2135,
+      "threshold": 0.1921617644519683,
+      "bit1MeansA": true,
+      "byTeacher": [
+        {
+          "byCue": [
+            {
+              "cue": 0,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.5833333333333334,
+                0.2222222222222222
+              ],
+              "mappingAccuracy": 0.6805555555555556,
+              "informationBits": 0.10051568498895647
+            },
+            {
+              "cue": 1,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.4444444444444444,
+                0.027777777777777776
+              ],
+              "mappingAccuracy": 0.7083333333333334,
+              "informationBits": 0.20141409646818098
+            }
+          ],
+          "weakestCueAccuracy": 0.6805555555555556,
+          "meanAccuracy": 0.6944444444444444,
+          "conditionalInformationBits": 0.15096489072856872
+        },
+        {
+          "byCue": [
+            {
+              "cue": 0,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.5277777777777778,
+                0.5
+              ],
+              "mappingAccuracy": 0.5138888888888888,
+              "informationBits": 0.0005570970453079305
+            },
+            {
+              "cue": 1,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.6111111111111112,
+                0.19444444444444445
+              ],
+              "mappingAccuracy": 0.7083333333333334,
+              "informationBits": 0.13517450723666702
+            }
+          ],
+          "weakestCueAccuracy": 0.5138888888888888,
+          "meanAccuracy": 0.6111111111111112,
+          "conditionalInformationBits": 0.06786580214098747
+        }
+      ],
+      "pooled": {
+        "byCue": [
+          {
+            "cue": 0,
+            "nPerMapping": 72,
+            "bit1ByMapping": [
+              0.5555555555555556,
+              0.3611111111111111
+            ],
+            "mappingAccuracy": 0.5972222222222222,
+            "informationBits": 0.027645982617167775
+          },
+          {
+            "cue": 1,
+            "nPerMapping": 72,
+            "bit1ByMapping": [
+              0.5277777777777778,
+              0.1111111111111111
+            ],
+            "mappingAccuracy": 0.7083333333333333,
+            "informationBits": 0.15326088480176936
+          }
+        ],
+        "weakestCueAccuracy": 0.5972222222222222,
+        "meanAccuracy": 0.6527777777777777,
+        "conditionalInformationBits": 0.09045343370946857
+      },
+      "weakestTeacherCueAccuracy": 0.5138888888888888
+    },
+    {
+      "neuron": 2134,
+      "threshold": 0.2760075848789586,
+      "bit1MeansA": false,
+      "byTeacher": [
+        {
+          "byCue": [
+            {
+              "cue": 0,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.3611111111111111,
+                0.8611111111111112
+              ],
+              "mappingAccuracy": 0.75,
+              "informationBits": 0.20161719977668668
+            },
+            {
+              "cue": 1,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.16666666666666666,
+                0.6666666666666666
+              ],
+              "mappingAccuracy": 0.75,
+              "informationBits": 0.19570962879973097
+            }
+          ],
+          "weakestCueAccuracy": 0.75,
+          "meanAccuracy": 0.75,
+          "conditionalInformationBits": 0.19866341428820883
+        },
+        {
+          "byCue": [
+            {
+              "cue": 0,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.3888888888888889,
+                0.9166666666666666
+              ],
+              "mappingAccuracy": 0.7638888888888888,
+              "informationBits": 0.24261496092503276
+            },
+            {
+              "cue": 1,
+              "nPerMapping": 36,
+              "bit1ByMapping": [
+                0.19444444444444445,
+                0.8055555555555556
+              ],
+              "mappingAccuracy": 0.8055555555555556,
+              "informationBits": 0.2893231461438771
+            }
+          ],
+          "weakestCueAccuracy": 0.7638888888888888,
+          "meanAccuracy": 0.7847222222222222,
+          "conditionalInformationBits": 0.26596905353445494
+        }
+      ],
+      "pooled": {
+        "byCue": [
+          {
+            "cue": 0,
+            "nPerMapping": 72,
+            "bit1ByMapping": [
+              0.375,
+              0.8888888888888888
+            ],
+            "mappingAccuracy": 0.7569444444444444,
+            "informationBits": 0.22032121905082003
+          },
+          {
+            "cue": 1,
+            "nPerMapping": 72,
+            "bit1ByMapping": [
+              0.18055555555555555,
+              0.7361111111111112
+            ],
+            "mappingAccuracy": 0.7777777777777778,
+            "informationBits": 0.23806026490657772
+          }
+        ],
+        "weakestCueAccuracy": 0.7569444444444444,
+        "meanAccuracy": 0.7673611111111112,
+        "conditionalInformationBits": 0.22919074197869888
+      },
+      "weakestTeacherCueAccuracy": 0.75
+    }
+  ],
+  "locked": {
+    "neuron": 2134,
+    "threshold": 0.2760075848789586,
+    "bit1MeansA": false
+  }
+}

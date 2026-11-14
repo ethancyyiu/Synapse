@@ -1,0 +1,131 @@
+{
+ "protocol": "docs/engine-teacher-scaling-protocol.md",
+ "seeds": 15,
+ "bar": 58,
+ "passes": {
+  "simConstants": 12,
+  "engineConstants": 15
+ },
+ "supported": true,
+ "meanWins": {
+  "simConstants": 60.4,
+  "engineConstants": 63.733333333333334
+ },
+ "simConstants": {
+  "featureMean": [
+   0.36765962731770174,
+   0.30435569515802674,
+   0.46466474775766364
+  ],
+  "featureStd": [
+   0.20011453971667878,
+   0.2243174591178991,
+   0.3925539112928469
+  ]
+ },
+ "engineConstants": {
+  "featureMean": [
+   0.23279136722839322,
+   0.1301922985273442,
+   0.3561955844836273
+  ],
+  "featureStd": [
+   0.18271345689287985,
+   0.14886956995285952,
+   0.31578753093219136
+  ]
+ },
+ "sameConstantsOnEverySeed": true,
+ "perSeed": [
+  {
+   "file": "seed_0.json",
+   "teacherSeed": 32001,
+   "simConstants": 62,
+   "engineConstants": 62
+  },
+  {
+   "file": "seed_1.json",
+   "teacherSeed": 32003,
+   "simConstants": 67,
+   "engineConstants": 69
+  },
+  {
+   "file": "seed_2.json",
+   "teacherSeed": 32005,
+   "simConstants": 61,
+   "engineConstants": 62
+  },
+  {
+   "file": "seed_3.json",
+   "teacherSeed": 32007,
+   "simConstants": 63,
+   "engineConstants": 67
+  },
+  {
+   "file": "seed_4.json",
+   "teacherSeed": 32009,
+   "simConstants": 47,
+   "engineConstants": 65
+  },
+  {
+   "file": "seed_5.json",
+   "teacherSeed": 32011,
+   "simConstants": 62,
+   "engineConstants": 64
+  },
+  {
+   "file": "seed_6.json",
+   "teacherSeed": 32013,
+   "simConstants": 64,
+   "engineConstants": 59
+  },
+  {
+   "file": "seed_7.json",
+   "teacherSeed": 32015,
+   "simConstants": 51,
+   "engineConstants": 62
+  },
+  {
+   "file": "seed_8.json",
+   "teacherSeed": 32017,
+   "simConstants": 45,
+   "engineConstants": 58
+  },
+  {
+   "file": "seed_9.json",
+   "teacherSeed": 32019,
+   "simConstants": 65,
+   "engineConstants": 64
+  },
+  {
+   "file": "seed_10.json",
+   "teacherSeed": 32021,
+   "simConstants": 65,
+   "engineConstants": 59
+  },
+  {
+   "file": "seed_11.json",
+   "teacherSeed": 32023,
+   "simConstants": 68,
+   "engineConstants": 68
+  },
+  {
+   "file": "seed_12.json",
+   "teacherSeed": 32025,
+   "simConstants": 65,
+   "engineConstants": 65
+  },
+  {
+   "file": "seed_13.json",
+   "teacherSeed": 32027,
+   "simConstants": 62,
+   "engineConstants": 64
+  },
+  {
+   "file": "seed_14.json",
+   "teacherSeed": 32029,
+   "simConstants": 59,
+   "engineConstants": 68
+  }
+ ]
+}

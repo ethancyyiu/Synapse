@@ -1,0 +1,131 @@
+{
+  "command": "node tools/check_two_cue_single_source.mjs evaluation504",
+  "calibrationFile": "data/two_cue_single_source_calibration.json",
+  "evaluationTeacher": 504,
+  "locked": {
+    "neuron": 2134,
+    "threshold": 0.2760075848789586,
+    "bit1MeansA": false
+  },
+  "comparisons": [
+    {
+      "neuron": 2132,
+      "threshold": 1.915,
+      "bit1MeansA": true,
+      "measured": {
+        "byCue": [
+          {
+            "cue": 0,
+            "nPerMapping": 36,
+            "bit1ByMapping": [
+              0.6944444444444444,
+              0.9722222222222222
+            ],
+            "mappingAccuracy": 0.3611111111111111,
+            "informationBits": 0.11447322774010049
+          },
+          {
+            "cue": 1,
+            "nPerMapping": 36,
+            "bit1ByMapping": [
+              0.9722222222222222,
+              0
+            ],
+            "mappingAccuracy": 0.9861111111111112,
+            "informationBits": 0.9078822989396126
+          }
+        ],
+        "weakestCueAccuracy": 0.3611111111111111,
+        "meanAccuracy": 0.6736111111111112,
+        "conditionalInformationBits": 0.5111777633398565
+      },
+      "shuffled": {
+        "byCue": [
+          {
+            "cue": 0,
+            "nPerMapping": 36,
+            "bit1ByMapping": [
+              0.8333333333333334,
+              0.8333333333333334
+            ],
+            "mappingAccuracy": 0.5,
+            "informationBits": 0
+          },
+          {
+            "cue": 1,
+            "nPerMapping": 36,
+            "bit1ByMapping": [
+              0.5,
+              0.4722222222222222
+            ],
+            "mappingAccuracy": 0.5138888888888888,
+            "informationBits": 0.0005570970453079305
+          }
+        ],
+        "weakestCueAccuracy": 0.5,
+        "meanAccuracy": 0.5069444444444444,
+        "conditionalInformationBits": 0.00027854852265396524
+      }
+    },
+    {
+      "neuron": 2134,
+      "threshold": 0.2760075848789586,
+      "bit1MeansA": false,
+      "measured": {
+        "byCue": [
+          {
+            "cue": 0,
+            "nPerMapping": 36,
+            "bit1ByMapping": [
+              0.5833333333333334,
+              0.7222222222222222
+            ],
+            "mappingAccuracy": 0.5694444444444444,
+            "informationBits": 0.015425800830648484
+          },
+          {
+            "cue": 1,
+            "nPerMapping": 36,
+            "bit1ByMapping": [
+              0.19444444444444445,
+              0.8888888888888888
+            ],
+            "mappingAccuracy": 0.8472222222222222,
+            "informationBits": 0.38801723387008547
+          }
+        ],
+        "weakestCueAccuracy": 0.5694444444444444,
+        "meanAccuracy": 0.7083333333333333,
+        "conditionalInformationBits": 0.20172151735036697
+      },
+      "shuffled": {
+        "byCue": [
+          {
+            "cue": 0,
+            "nPerMapping": 36,
+            "bit1ByMapping": [
+              0.6388888888888888,
+              0.6666666666666666
+            ],
+            "mappingAccuracy": 0.5138888888888888,
+            "informationBits": 0.0006140358040284122
+          },
+          {
+            "cue": 1,
+            "nPerMapping": 36,
+            "bit1ByMapping": [
+              0.5555555555555556,
+              0.5277777777777778
+            ],
+            "mappingAccuracy": 0.4861111111111111,
+            "informationBits": 0.0005605622218679551
+          }
+        ],
+        "weakestCueAccuracy": 0.4861111111111111,
+        "meanAccuracy": 0.5,
+        "conditionalInformationBits": 0.0005872990129481837
+      }
+    }
+  ],
+  "suitable": false
+}

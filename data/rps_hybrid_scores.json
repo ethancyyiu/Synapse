@@ -1,0 +1,6633 @@
+{
+  "command": "node tools/check_rps_hybrid_scores.mjs",
+  "source": "saved valid hybrid sparse KC-MBON multipliers, readout weights/biases, calibration normalization",
+  "protocol": "12 matched reset probes per state and student; original VPN 150 Hz; counts reset 50 ms; decision 240 ms; no reward or learning",
+  "analysisOnlyCorrectAction": "(previousMove + 2) % 3",
+  "descriptiveGlobalPaperRule": "paper modal in every state and |state2-state0 mean paper-minus-scissors score| < 0.25 for every student",
+  "summaries": [
+    {
+      "seed": 651,
+      "byArm": {
+        "initial": [
+          {
+            "state": 0,
+            "meanRates": [
+              0.6488095238095237,
+              0.5773809523809522,
+              0.7023809523809524
+            ],
+            "meanFeatures": [
+              0.6383282749143193,
+              0.6499796371405443,
+              0.13610440866083032
+            ],
+            "meanScores": [
+              0,
+              0,
+              0
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 0,
+            "meanCorrectMargin": 0,
+            "meanPaperMinusScissors": 0,
+            "paperOverScissors": 0,
+            "crossActionCounts": [
+              2,
+              7,
+              3
+            ],
+            "crossMeanPaperMinusScissors": 0.5063760924372579
+          },
+          {
+            "state": 1,
+            "meanRates": [
+              0.15476190476190474,
+              0.017857142857142856,
+              0.041666666666666664
+            ],
+            "meanFeatures": [
+              -1.1355023302148124,
+              -1.2815706556199946,
+              -1.0976224573322737
+            ],
+            "meanScores": [
+              0,
+              0,
+              0
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 12,
+            "meanCorrectMargin": 0,
+            "meanPaperMinusScissors": 0,
+            "paperOverScissors": 0,
+            "crossActionCounts": [
+              2,
+              0,
+              10
+            ],
+            "crossMeanPaperMinusScissors": -3.480432831145091
+          },
+          {
+            "state": 2,
+            "meanRates": [
+              0.6964285714285715,
+              0.613095238095238,
+              1.458333333333333
+            ],
+            "meanFeatures": [
+              0.7913298163227293,
+              0.747479185406962,
+              1.0832211375572556
+            ],
+            "meanScores": [
+              0,
+              0,
+              0
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 0,
+            "meanCorrectMargin": 0,
+            "meanPaperMinusScissors": 0,
+            "paperOverScissors": 0,
+            "crossActionCounts": [
+              1,
+              11,
+              0
+            ],
+            "crossMeanPaperMinusScissors": 1.5968532372577853
+          }
+        ],
+        "trained": [
+          {
+            "state": 0,
+            "meanRates": [
+              0.45833333333333326,
+              0.8333333333333331,
+              1.3214285714285714
+            ],
+            "meanFeatures": [
+              0.012655814505198001,
+              1.3263808525174634,
+              0.9228758960685018
+            ],
+            "meanScores": [
+              -1.6068639062910794,
+              1.5330584804818594,
+              0.07380542580921966
+            ],
+            "actionCounts": [
+              0,
+              11,
+              1
+            ],
+            "correctTop": 1,
+            "meanCorrectMargin": -1.4592530546726399,
+            "meanPaperMinusScissors": 1.4592530546726399,
+            "paperOverScissors": 11
+          },
+          {
+            "state": 1,
+            "meanRates": [
+              1.607142857142857,
+              0.20238095238095236,
+              0.5476190476190476
+            ],
+            "meanFeatures": [
+              2.899728723809742,
+              -0.5464995689462558,
+              -0.07970983485578959
+            ],
+            "meanScores": [
+              3.15642530215872,
+              -1.240529669674653,
+              -1.9158956324840657
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 12,
+            "meanCorrectMargin": 4.3311074164661685,
+            "meanPaperMinusScissors": 0.6753659628094127,
+            "paperOverScissors": 10
+          },
+          {
+            "state": 2,
+            "meanRates": [
+              0.7916666666666666,
+              1.6309523809523812,
+              1.875
+            ],
+            "meanFeatures": [
+              1.0549044445327114,
+              2.9276482534652364,
+              1.4915697569408886
+            ],
+            "meanScores": [
+              -2.4794598100353062,
+              3.269370951947066,
+              -0.7899111419117594
+            ],
+            "actionCounts": [
+              0,
+              12,
+              0
+            ],
+            "correctTop": 12,
+            "meanCorrectMargin": 4.059282093858824,
+            "meanPaperMinusScissors": 4.059282093858824,
+            "paperOverScissors": 12
+          }
+        ]
+      },
+      "state2MinusState0PaperScissorsGap": 2.600029039186184,
+      "globalPaper": false
+    },
+    {
+      "seed": 652,
+      "byArm": {
+        "initial": [
+          {
+            "state": 0,
+            "meanRates": [
+              0.5238095238095237,
+              0.4464285714285714,
+              0.5297619047619048
+            ],
+            "meanFeatures": [
+              0.2272817325068728,
+              0.2673773927762973,
+              -0.14784001616079603
+            ],
+            "meanScores": [
+              0,
+              0,
+              0
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 0,
+            "meanCorrectMargin": 0,
+            "meanPaperMinusScissors": 0,
+            "paperOverScissors": 0,
+            "crossActionCounts": [
+              1,
+              4,
+              7
+            ],
+            "crossMeanPaperMinusScissors": -0.39062024305209003
+          },
+          {
+            "state": 1,
+            "meanRates": [
+              0.12499999999999996,
+              0.023809523809523808,
+              0.03571428571428571
+            ],
+            "meanFeatures": [
+              -1.2612916540306789,
+              -1.2590487715102923,
+              -1.107979880598619
+            ],
+            "meanScores": [
+              0,
+              0,
+              0
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 12,
+            "meanCorrectMargin": 0,
+            "meanPaperMinusScissors": 0,
+            "paperOverScissors": 0,
+            "crossActionCounts": [
+              0,
+              0,
+              12
+            ],
+            "crossMeanPaperMinusScissors": -4.1724043554274886
+          },
+          {
+            "state": 2,
+            "meanRates": [
+              0.7142857142857143,
+              0.6607142857142857,
+              1.482142857142857
+            ],
+            "meanFeatures": [
+              0.8448866737938485,
+              0.8848631010090057,
+              1.1026880143757847
+            ],
+            "meanScores": [
+              0,
+              0,
+              0
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 0,
+            "meanCorrectMargin": 0,
+            "meanPaperMinusScissors": 0,
+            "paperOverScissors": 0,
+            "crossActionCounts": [
+              0,
+              12,
+              0
+            ],
+            "crossMeanPaperMinusScissors": 2.0895525922160707
+          }
+        ],
+        "trained": [
+          {
+            "state": 0,
+            "meanRates": [
+              0.49999999999999994,
+              0.8273809523809524,
+              1.357142857142857
+            ],
+            "meanFeatures": [
+              0.15193021527002912,
+              1.2844922560528387,
+              0.9641265074163465
+            ],
+            "meanScores": [
+              -1.3682958997371406,
+              1.5492092693932389,
+              -0.18091336965609908
+            ],
+            "actionCounts": [
+              0,
+              11,
+              1
+            ],
+            "correctTop": 1,
+            "meanCorrectMargin": -1.7301226390493383,
+            "meanPaperMinusScissors": 1.7301226390493383,
+            "paperOverScissors": 11
+          },
+          {
+            "state": 1,
+            "meanRates": [
+              1.5,
+              0.1488095238095238,
+              0.5476190476190476
+            ],
+            "meanFeatures": [
+              2.721947142193646,
+              -0.7529435738119669,
+              -0.0756946511007962
+            ],
+            "meanScores": [
+              2.718061232196358,
+              -0.9384474823206549,
+              -1.7796137498757032
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 12,
+            "meanCorrectMargin": 3.5794476100503982,
+            "meanPaperMinusScissors": 0.8411662675550483,
+            "paperOverScissors": 10
+          },
+          {
+            "state": 2,
+            "meanRates": [
+              0.7023809523809524,
+              1.4880952380952384,
+              1.9404761904761907
+            ],
+            "meanFeatures": [
+              0.8048675959910304,
+              2.690494248890668,
+              1.554293081664704
+            ],
+            "meanScores": [
+              -2.4934935506854483,
+              3.3865866498376422,
+              -0.8930930991521951
+            ],
+            "actionCounts": [
+              0,
+              12,
+              0
+            ],
+            "correctTop": 12,
+            "meanCorrectMargin": 4.279679748989838,
+            "meanPaperMinusScissors": 4.279679748989838,
+            "paperOverScissors": 12
+          }
+        ]
+      },
+      "state2MinusState0PaperScissorsGap": 2.5495571099404994,
+      "globalPaper": false
+    },
+    {
+      "seed": 653,
+      "byArm": {
+        "initial": [
+          {
+            "state": 0,
+            "meanRates": [
+              0.49999999999999994,
+              0.4226190476190476,
+              0.5059523809523809
+            ],
+            "meanFeatures": [
+              0.1594335935875764,
+              0.19618242209060124,
+              -0.16417034031076974
+            ],
+            "meanScores": [
+              0,
+              0,
+              0
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 0,
+            "meanCorrectMargin": 0,
+            "meanPaperMinusScissors": 0,
+            "paperOverScissors": 0,
+            "crossActionCounts": [
+              5,
+              3,
+              4
+            ],
+            "crossMeanPaperMinusScissors": -0.16354489624283286
+          },
+          {
+            "state": 1,
+            "meanRates": [
+              0.12499999999999999,
+              0.023809523809523808,
+              0.017857142857142856
+            ],
+            "meanFeatures": [
+              -1.2604158846672282,
+              -1.2559399892427328,
+              -1.1407037679834062
+            ],
+            "meanScores": [
+              0,
+              0,
+              0
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 12,
+            "meanCorrectMargin": 0,
+            "meanPaperMinusScissors": 0,
+            "paperOverScissors": 0,
+            "crossActionCounts": [
+              1,
+              0,
+              11
+            ],
+            "crossMeanPaperMinusScissors": -4.002798847733476
+          },
+          {
+            "state": 2,
+            "meanRates": [
+              0.7678571428571429,
+              0.7202380952380952,
+              1.7023809523809526
+            ],
+            "meanFeatures": [
+              0.9959497777873744,
+              1.050677677949609,
+              1.3363029017919956
+            ],
+            "meanScores": [
+              0,
+              0,
+              0
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 0,
+            "meanCorrectMargin": 0,
+            "meanPaperMinusScissors": 0,
+            "paperOverScissors": 0,
+            "crossActionCounts": [
+              0,
+              12,
+              0
+            ],
+            "crossMeanPaperMinusScissors": 3.0148579503075865
+          }
+        ],
+        "trained": [
+          {
+            "state": 0,
+            "meanRates": [
+              0.4761904761904761,
+              0.8333333333333331,
+              1.0178571428571428
+            ],
+            "meanFeatures": [
+              0.03260135109068409,
+              1.3074892886280935,
+              0.5276242200096817
+            ],
+            "meanScores": [
+              -1.4821605194372365,
+              1.5550722925599867,
+              -0.07291177312275082
+            ],
+            "actionCounts": [
+              0,
+              9,
+              3
+            ],
+            "correctTop": 3,
+            "meanCorrectMargin": -1.6279840656827373,
+            "meanPaperMinusScissors": 1.6279840656827373,
+            "paperOverScissors": 9
+          },
+          {
+            "state": 1,
+            "meanRates": [
+              1.4583333333333337,
+              0.1488095238095238,
+              0.5238095238095237
+            ],
+            "meanFeatures": [
+              2.608379257461158,
+              -0.7531098899435816,
+              -0.13618125580295712
+            ],
+            "meanScores": [
+              2.4869278728982827,
+              -0.7307168742804834,
+              -1.756210998617797
+            ],
+            "actionCounts": [
+              12,
+              0,
+              0
+            ],
+            "correctTop": 12,
+            "meanCorrectMargin": 3.014024856987523,
+            "meanPaperMinusScissors": 1.0254941243373137,
+            "paperOverScissors": 11
+          },
+          {
+            "state": 2,
+            "meanRates": [
+              0.755952380952381,
+              1.5535714285714286,
+              1.5059523809523814
+            ],
+            "meanFeatures": [
+              0.9583702801980176,
+              2.8046524548215803,
+              1.1521826786871554
+            ],
+            "meanScores": [
+              -2.6885113897800714,
+              3.705806210628019,
+              -1.0172948208479475
+            ],
+            "actionCounts": [
+              0,
+              12,
+              0
+            ],
+            "correctTop": 12,
+            "meanCorrectMargin": 4.7231010314759665,
+            "meanPaperMinusScissors": 4.7231010314759665,
+            "paperOverScissors": 12
+          }
+        ]
+      },
+      "state2MinusState0PaperScissorsGap": 3.0951169657932294,
+      "globalPaper": false
+    }
+  ],
+  "allGlobalPaper": false,
+  "rows": [
+    {
+      "seed": 651,
+      "repeat": 0,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        0.9285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        0.4893972091596061
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.2629994186111747,
+        0.7128470911512885,
+        -0.4498476725401134
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 0,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.42857142857142855,
+        0.8571428571428571,
+        1.2857142857142858
+      ],
+      "features": [
+        -0.05489198033546922,
+        1.402848955608052,
+        0.922201549933712
+      ],
+      "scores": [
+        -1.7467758781849803,
+        1.6148654568155827,
+        0.1319104213693973
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -1.4829550354461853,
+      "paperMinusScissors": 1.4829550354461853
+    },
+    {
+      "seed": 651,
+      "repeat": 0,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.3383512795593462,
+        -2.095765243781496,
+        1.7574139642221485
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 0,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.4285714285714286,
+        0.07142857142857142,
+        0.5714285714285714
+      ],
+      "features": [
+        2.5967306944258524,
+        -1.049239879038443,
+        -0.03230033799140362
+      ],
+      "scores": [
+        3.3995846487294834,
+        -1.6542049093875484,
+        -1.745379739341933
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 5.053789558117032,
+      "paperMinusScissors": 0.09117482995438464
+    },
+    {
+      "seed": 651,
+      "repeat": 0,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        1.0714285714285714
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        0.671433260581945
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.27011666704942916,
+        0.489952875758324,
+        -0.21983620870889461
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 0,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.9285714285714286,
+        2,
+        2.0714285714285716
+      ],
+      "features": [
+        1.4447721264067237,
+        3.5407702843701934,
+        1.6748732324568762
+      ],
+      "scores": [
+        -2.8137988519328445,
+        3.9148865297523745,
+        -1.1010876778195298
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 5.0159742075719045,
+      "paperMinusScissors": 5.0159742075719045
+    },
+    {
+      "seed": 651,
+      "repeat": 1,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.7857142857142857,
+        0.8571428571428571,
+        0.9285714285714286
+      ],
+      "features": [
+        1.060187171984674,
+        1.402848955608052,
+        0.4893972091596061
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.6512319878744541,
+        1.2098370296388563,
+        -0.558605041764402
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 1,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.21428571428571427,
+        0.5714285714285714,
+        0.7142857142857143
+      ],
+      "features": [
+        -0.8670215223860789,
+        0.6581272325639078,
+        0.18935425386596533
+      ],
+      "scores": [
+        -1.5244530335315796,
+        0.5714069431464627,
+        0.9530460903851161
+      ],
+      "action": 2,
+      "correctAction": 2,
+      "correctMargin": 0.38163914723865344,
+      "paperMinusScissors": -0.38163914723865344
+    },
+    {
+      "seed": 651,
+      "repeat": 1,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.017433166416537027,
+        -1.8009472666127608,
+        1.7835141001962223
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 1,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.1428571428571428,
+        0.35714285714285715,
+        0.6428571428571429
+      ],
+      "features": [
+        1.9712731782892863,
+        0.00457367160447321,
+        0.08093700671988797
+      ],
+      "scores": [
+        1.7155832741279782,
+        -0.494084084504417,
+        -1.2214991896235599
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 2.2096673586323954,
+      "paperMinusScissors": 0.7274151051191429
+    },
+    {
+      "seed": 651,
+      "repeat": 1,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.2142857142857142
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        0.8413242553730278
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.11130036043550587,
+        0.5618969675638428,
+        -0.4505966071283365
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 1,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.7857142857142857,
+        1.8571428571428572,
+        1.7142857142857142
+      ],
+      "features": [
+        1.060187171984674,
+        3.323265305661478,
+        1.3599764694617922
+      ],
+      "scores": [
+        -2.8570013637305296,
+        3.56946774134214,
+        -0.7124663776116102
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.2819341189537505,
+      "paperMinusScissors": 4.2819341189537505
+    },
+    {
+      "seed": 651,
+      "repeat": 2,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.7857142857142857,
+        0.7857142857142857,
+        1.2857142857142858
+      ],
+      "features": [
+        1.060187171984674,
+        1.228004280978124,
+        0.922201549933712
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.5692197354230496,
+        1.3001712551287834,
+        -0.7309515197057332
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 2,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.9285714285714286,
+        1.1428571428571428,
+        2.2857142857142856
+      ],
+      "features": [
+        1.4447721264067237,
+        2.04078790250679,
+        1.8466745541490215
+      ],
+      "scores": [
+        -1.2885713932161211,
+        2.579470313363676,
+        -1.2908989201475536
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -3.8703692335112296,
+      "paperMinusScissors": 3.8703692335112296
+    },
+    {
+      "seed": 651,
+      "repeat": 2,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.42857142857142855,
+        0.14285714285714285,
+        0.5
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.7615292327456353,
+        -0.15080639358433515
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.7605132099785626,
+        -1.099251705798499,
+        0.3387384958199362
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 651,
+      "repeat": 2,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        2.0714285714285716,
+        0.2857142857142857,
+        0.5
+      ],
+      "features": [
+        3.7702565732045055,
+        -0.23645625750977636,
+        -0.15080639358433515
+      ],
+      "scores": [
+        3.626299703427375,
+        -1.1005463479255255,
+        -2.5257533555018465
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 4.726846051352901,
+      "paperMinusScissors": 1.425207007576321
+    },
+    {
+      "seed": 651,
+      "repeat": 2,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.6428571428571429,
+        1.2857142857142858
+      ],
+      "features": [
+        0.6435177532752572,
+        0.8562917568306991,
+        0.922201549933712
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.5532182400062513,
+        0.9988334836542936,
+        -0.44561524364804184
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 2,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        1.6428571428571428,
+        1.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        2.975715267531204,
+        1.2222445052273527
+      ],
+      "scores": [
+        -2.8342538141930738,
+        3.209209106441318,
+        -0.3749552922482442
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.584164398689562,
+      "paperMinusScissors": 3.584164398689562
+    },
+    {
+      "seed": 651,
+      "repeat": 3,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5,
+        0.5714285714285714,
+        0.6428571428571429
+      ],
+      "features": [
+        0.1889192101882625,
+        0.6581272325639078,
+        0.08093700671988797
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.5569516939691153,
+        0.3674991664678482,
+        0.18945252750126682
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 3,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        0.7857142857142857,
+        1.3571428571428572
+      ],
+      "features": [
+        0.6435177532752572,
+        1.228004280978124,
+        1.0005899133699838
+      ],
+      "scores": [
+        -0.9592531970090784,
+        1.4018526634478294,
+        -0.4425994664387508
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -1.8444521298865801,
+      "paperMinusScissors": 1.8444521298865801
+    },
+    {
+      "seed": 651,
+      "repeat": 3,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.6261647466725204,
+        -2.138309431283062,
+        1.5121446846105404
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 3,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        2,
+        0.21428571428571427,
+        0.5714285714285714
+      ],
+      "features": [
+        3.6526714270001928,
+        -0.4912666234292062,
+        -0.03230033799140362
+      ],
+      "scores": [
+        3.7597381097588287,
+        -1.2586582963699537,
+        -2.501079813388873
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 5.018396406128782,
+      "paperMinusScissors": 1.2424215170189192
+    },
+    {
+      "seed": 651,
+      "repeat": 3,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.5,
+        1.5
+      ],
+      "features": [
+        0.8561940259691435,
+        0.4507425028249607,
+        1.1504814271983563
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.006764496898672423,
+        0.7180844032025775,
+        -0.7248489001012491
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 3,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.9285714285714286,
+        1.5714285714285714,
+        2.2857142857142856
+      ],
+      "features": [
+        1.4447721264067237,
+        2.853571524035457,
+        1.8466745541490215
+      ],
+      "scores": [
+        -2.1366342253688817,
+        3.3585605499312954,
+        -1.2219263245624128
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.580486874493708,
+      "paperMinusScissors": 4.580486874493708
+    },
+    {
+      "seed": 651,
+      "repeat": 4,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.7857142857142857,
+        0.5714285714285714,
+        0.5714285714285714
+      ],
+      "features": [
+        1.060187171984674,
+        0.6581272325639078,
+        -0.03230033799140362
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.24686180615116624,
+        0.1850802680916264,
+        -0.4319420742427923
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 651,
+      "repeat": 4,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.2857142857142857,
+        0.7857142857142857,
+        1
+      ],
+      "features": [
+        -0.5813930322180321,
+        1.228004280978124,
+        0.5820409024834114
+      ],
+      "scores": [
+        -1.9552777046759744,
+        1.314003550682004,
+        0.6412741539939698
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.6727293966880342,
+      "paperMinusScissors": 0.6727293966880342
+    },
+    {
+      "seed": 651,
+      "repeat": 4,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.2857142857142857,
+        0,
+        0
+      ],
+      "features": [
+        -0.5813930322180321,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        1.1514253702792745,
+        -2.2159527281101976,
+        1.0645273578309222
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 651,
+      "repeat": 4,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.9285714285714286,
+        0.14285714285714285,
+        0.5714285714285714
+      ],
+      "features": [
+        3.5322526327777557,
+        -0.7615292327456353,
+        -0.03230033799140362
+      ],
+      "scores": [
+        3.934267080422871,
+        -1.501832102197671,
+        -2.432434978225198
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 5.436099182620542,
+      "paperMinusScissors": 0.9306028760275269
+    },
+    {
+      "seed": 651,
+      "repeat": 4,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7857142857142857,
+        0.8571428571428571,
+        1.6428571428571428
+      ],
+      "features": [
+        1.060187171984674,
+        1.402848955608052,
+        1.2920412220601514
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.8374658372104837,
+        1.6881747463431562,
+        -0.8507089091326719
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 4,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        1.0714285714285714,
+        1.6428571428571428,
+        2.2142857142857144
+      ],
+      "features": [
+        1.8018624412000224,
+        2.975715267531204,
+        1.7906850299422976
+      ],
+      "scores": [
+        -1.9324130698381135,
+        3.395167625329436,
+        -1.4627545554913222
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.857922180820758,
+      "paperMinusScissors": 4.857922180820758
+    },
+    {
+      "seed": 651,
+      "repeat": 5,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5714285714285714,
+        0.42857142857142855,
+        0.35714285714285715
+      ],
+      "features": [
+        0.4213861548728199,
+        0.23323752411624413,
+        -0.40576107796734173
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.20676572155837886,
+        -0.3604922572138195,
+        0.15372653565544048
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 651,
+      "repeat": 5,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.5,
+        0.9285714285714286,
+        1.2857142857142858
+      ],
+      "features": [
+        0.1889192101882625,
+        1.57109412088077,
+        0.922201549933712
+      ],
+      "scores": [
+        -1.7047410850020182,
+        1.743973360338969,
+        -0.03923227533695128
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -1.7832056356759205,
+      "paperMinusScissors": 1.7832056356759205
+    },
+    {
+      "seed": 651,
+      "repeat": 5,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.6261647466725204,
+        -2.138309431283062,
+        1.5121446846105404
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 5,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1,
+        0.14285714285714285,
+        0.35714285714285715
+      ],
+      "features": [
+        1.6265062683754379,
+        -0.7615292327456353,
+        -0.40576107796734173
+      ],
+      "scores": [
+        2.3201876281196157,
+        -1.4729971451328603,
+        -0.8471904829867546
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.16737811110637,
+      "paperMinusScissors": -0.6258066621461057
+    },
+    {
+      "seed": 651,
+      "repeat": 5,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        1.0714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.6581272325639078,
+        0.671433260581945
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.288267673634344,
+        0.659437740917052,
+        -0.3711700672827075
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 5,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.7857142857142857,
+        1.7857142857142858,
+        1.8571428571428572
+      ],
+      "features": [
+        1.060187171984674,
+        3.210399333998599,
+        1.490642074648657
+      ],
+      "scores": [
+        -2.7695541453391628,
+        3.5391510465630978,
+        -0.7695969012239348
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.308747947787032,
+      "paperMinusScissors": 4.308747947787032
+    },
+    {
+      "seed": 651,
+      "repeat": 6,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.8571428571428571,
+        0.5714285714285714,
+        0.8571428571428571
+      ],
+      "features": [
+        1.25617849379872,
+        0.6581272325639078,
+        0.39325671253698385
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.32302889402559487,
+        0.4128375280981055,
+        -0.7358664221236997
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 6,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.35714285714285715,
+        0.7142857142857143,
+        1
+      ],
+      "features": [
+        -0.3112116583567229,
+        1.0460211456449109,
+        0.5820409024834114
+      ],
+      "scores": [
+        -1.5242794484036242,
+        1.1039229581805288,
+        0.42035649022309507
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.6835664679574337,
+      "paperMinusScissors": 0.6835664679574337
+    },
+    {
+      "seed": 651,
+      "repeat": 6,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.6261647466725204,
+        -2.138309431283062,
+        1.5121446846105404
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 6,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.7142857142857142,
+        0.14285714285714285,
+        0.35714285714285715
+      ],
+      "features": [
+        3.152540558455208,
+        -0.7615292327456353,
+        -0.40576107796734173
+      ],
+      "scores": [
+        3.682055700099637,
+        -1.6743065945754434,
+        -2.007749105524192
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 5.356362294675081,
+      "paperMinusScissors": 0.33344251094874866
+    },
+    {
+      "seed": 651,
+      "repeat": 6,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        1,
+        2.0714285714285716
+      ],
+      "features": [
+        0.8561940259691435,
+        1.7332199059796476,
+        1.6748732324568762
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -1.4530516223380263,
+        2.259910203586145,
+        -0.8068585812481179
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 6,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.9285714285714286,
+        1.9285714285714286,
+        2.2857142857142856
+      ],
+      "features": [
+        1.4447721264067237,
+        3.4333441764166657,
+        1.8466745541490215
+      ],
+      "scores": [
+        -2.741572150493871,
+        3.914299126515274,
+        -1.1727269760214027
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 5.087026102536677,
+      "paperMinusScissors": 5.087026102536677
+    },
+    {
+      "seed": 651,
+      "repeat": 7,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.23645625750977636,
+        -0.40576107796734173
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.2718052030855038,
+        -0.7478861538497777,
+        0.4760809507642735
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 7,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.42857142857142855,
+        0.5714285714285714,
+        0.8571428571428571
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.6581272325639078,
+        0.39325671253698385
+      ],
+      "scores": [
+        -0.8470005282790162,
+        0.5857896544324251,
+        0.2612108738465909
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.3245787805858342,
+      "paperMinusScissors": 0.3245787805858342
+    },
+    {
+      "seed": 651,
+      "repeat": 7,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.3383512795593462,
+        -2.095765243781496,
+        1.7574139642221485
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 7,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.9285714285714286,
+        0.21428571428571427,
+        0.5
+      ],
+      "features": [
+        3.5322526327777557,
+        -0.4912666234292062,
+        -0.15080639358433515
+      ],
+      "scores": [
+        3.679770032823372,
+        -1.3133970247807571,
+        -2.3663730080426126
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 4.993167057604129,
+      "paperMinusScissors": 1.0529759832618555
+    },
+    {
+      "seed": 651,
+      "repeat": 7,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7857142857142857,
+        0.5,
+        1.6428571428571428
+      ],
+      "features": [
+        1.060187171984674,
+        0.4507425028249607,
+        1.2920412220601514
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.1559671915450896,
+        0.7755372104867901,
+        -0.9315044020318787
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 7,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.5714285714285714,
+        1.0714285714285714,
+        1.4285714285714286
+      ],
+      "features": [
+        0.4213861548728199,
+        1.889655878236388,
+        1.07663797273427
+      ],
+      "scores": [
+        -1.8655044863297356,
+        2.1106998552856364,
+        -0.24519536895590088
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 2.355895224241537,
+      "paperMinusScissors": 2.355895224241537
+    },
+    {
+      "seed": 651,
+      "repeat": 8,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.42857142857142855,
+        0.35714285714285715,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.00457367160447321,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.010004477838882697,
+        -0.4389774585573497,
+        0.4489819363962321
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 8,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.35714285714285715,
+        1,
+        1.2142857142857142
+      ],
+      "features": [
+        -0.3112116583567229,
+        1.7332199059796476,
+        0.8413242553730278
+      ],
+      "scores": [
+        -2.301466696511864,
+        1.917154933226675,
+        0.3843117632851887
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -1.5328431699414864,
+      "paperMinusScissors": 1.5328431699414864
+    },
+    {
+      "seed": 651,
+      "repeat": 8,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.6261647466725204,
+        -2.138309431283062,
+        1.5121446846105404
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 8,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        2,
+        0.35714285714285715,
+        0.8571428571428571
+      ],
+      "features": [
+        3.6526714270001928,
+        0.00457367160447321,
+        0.39325671253698385
+      ],
+      "scores": [
+        3.1436355887976077,
+        -0.5297609253170528,
+        -2.6138746634805528
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.6733965141146605,
+      "paperMinusScissors": 2.0841137381635
+    },
+    {
+      "seed": 651,
+      "repeat": 8,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        1.7857142857142858
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        1.4261469638983715
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.6616158141312358,
+        1.1385141426782321,
+        -0.4768983285469959
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 8,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.5,
+        1.0714285714285714,
+        1.3571428571428572
+      ],
+      "features": [
+        0.1889192101882625,
+        1.889655878236388,
+        1.0005899133699838
+      ],
+      "scores": [
+        -2.0553182441080637,
+        2.096045101753152,
+        -0.040726857645088266
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 2.13677195939824,
+      "paperMinusScissors": 2.13677195939824
+    },
+    {
+      "seed": 651,
+      "repeat": 9,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.8571428571428571,
+        0.7857142857142857,
+        0.9285714285714286
+      ],
+      "features": [
+        1.25617849379872,
+        1.228004280978124,
+        0.4893972091596061
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.29389094764879153,
+        1.0163858867426228,
+        -0.7224949390938308
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 9,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.5714285714285714,
+        0.9285714285714286,
+        1.7857142857142858
+      ],
+      "features": [
+        0.4213861548728199,
+        1.57109412088077,
+        1.4261469638983715
+      ],
+      "scores": [
+        -1.6142104093711,
+        2.013634617743195,
+        -0.39942420837209486
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -2.41305882611529,
+      "paperMinusScissors": 2.41305882611529
+    },
+    {
+      "seed": 651,
+      "repeat": 9,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.6261647466725204,
+        -2.138309431283062,
+        1.5121446846105404
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 9,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.1428571428571428,
+        0.14285714285714285,
+        0.5
+      ],
+      "features": [
+        1.9712731782892863,
+        -0.7615292327456353,
+        -0.15080639358433515
+      ],
+      "scores": [
+        2.5687095631189303,
+        -1.366536782689643,
+        -1.2021727804292859
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.770882343548216,
+      "paperMinusScissors": -0.1643640022603572
+    },
+    {
+      "seed": 651,
+      "repeat": 9,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.9285714285714286,
+        0.8571428571428571,
+        1.8571428571428572
+      ],
+      "features": [
+        1.4447721264067237,
+        1.402848955608052,
+        1.490642074648657
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.540333840231346,
+        1.7557982349763372,
+        -1.2154643947449904
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 9,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.9285714285714286,
+        1.7857142857142858,
+        2
+      ],
+      "features": [
+        1.4447721264067237,
+        3.210399333998599,
+        1.6149311538447986
+      ],
+      "scores": [
+        -2.455179924675038,
+        3.562488247081706,
+        -1.1073083224066669
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.669796569488373,
+      "paperMinusScissors": 4.669796569488373
+    },
+    {
+      "seed": 651,
+      "repeat": 10,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.7857142857142857
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        0.29334505193446747
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.39877692514746843,
+        0.46341799626964914,
+        -0.0646410711221807
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 10,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.35714285714285715,
+        0.7142857142857143,
+        1.4285714285714286
+      ],
+      "features": [
+        -0.3112116583567229,
+        1.0460211456449109,
+        1.07663797273427
+      ],
+      "scores": [
+        -1.6390385630082123,
+        1.39867932522484,
+        0.2403592377833721
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -1.1583200874414679,
+      "paperMinusScissors": 1.1583200874414679
+    },
+    {
+      "seed": 651,
+      "repeat": 10,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.6261647466725204,
+        -2.138309431283062,
+        1.5121446846105404
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 10,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.4285714285714286,
+        0.14285714285714285,
+        0.5
+      ],
+      "features": [
+        2.5967306944258524,
+        -0.7615292327456353,
+        -0.15080639358433515
+      ],
+      "scores": [
+        3.12688222486285,
+        -1.449045091344094,
+        -1.6778371335187543
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 4.575927316206943,
+      "paperMinusScissors": 0.22879204217466032
+    },
+    {
+      "seed": 651,
+      "repeat": 10,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.5,
+        0.35714285714285715,
+        0.9285714285714286
+      ],
+      "features": [
+        0.1889192101882625,
+        0.00457367160447321,
+        0.4893972091596061
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.03019646280761741,
+        -0.015538897778000604,
+        -0.014657565029616626
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 651,
+      "repeat": 10,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        1.5714285714285714,
+        2
+      ],
+      "features": [
+        0.6435177532752572,
+        2.853571524035457,
+        1.6149311538447986
+      ],
+      "scores": [
+        -2.797921672549238,
+        3.3261513428150784,
+        -0.5282296702658398
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.854381013080918,
+      "paperMinusScissors": 3.854381013080918
+    },
+    {
+      "seed": 651,
+      "repeat": 11,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5,
+        0.5,
+        0.35714285714285715
+      ],
+      "features": [
+        0.1889192101882625,
+        0.4507425028249607,
+        -0.40576107796734173
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.22763899509754065,
+        -0.1213375189493687,
+        0.34897651404690894
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 11,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.42857142857142855,
+        1,
+        1.6428571428571428
+      ],
+      "features": [
+        -0.05489198033546922,
+        1.7332199059796476,
+        1.2920412220601514
+      ],
+      "scores": [
+        -2.1772989382993826,
+        2.151947989180126,
+        0.02535094911925645
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -2.1265970400608696,
+      "paperMinusScissors": 2.1265970400608696
+    },
+    {
+      "seed": 651,
+      "repeat": 11,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.3383512795593462,
+        -2.095765243781496,
+        1.7574139642221485
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 651,
+      "repeat": 11,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.5,
+        0.21428571428571427,
+        0.6428571428571429
+      ],
+      "features": [
+        2.741585420695581,
+        -0.4912666234292062,
+        0.08093700671988797
+      ],
+      "scores": [
+        2.9203900716161004,
+        -1.0709867318708712,
+        -1.8494033397452279
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.991376803486972,
+      "paperMinusScissors": 0.7784166078743566
+    },
+    {
+      "seed": 651,
+      "repeat": 11,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.8571428571428571,
+        0.5,
+        1.4285714285714286
+      ],
+      "features": [
+        1.25617849379872,
+        0.4507425028249607,
+        1.07663797273427
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.3808533902518157,
+        0.621312568924679,
+        -1.0021659591764935
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 651,
+      "repeat": 11,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.7857142857142857,
+        1.6428571428571428,
+        1.7142857142857142
+      ],
+      "features": [
+        1.060187171984674,
+        2.975715267531204,
+        1.3599764694617922
+      ],
+      "scores": [
+        -2.4943657718651187,
+        3.236325150554279,
+        -0.7419593786891597
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.978284529243439,
+      "paperMinusScissors": 3.978284529243439
+    },
+    {
+      "seed": 652,
+      "repeat": 0,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.42857142857142855,
+        0.2857142857142857,
+        0.5
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.23645625750977636,
+        -0.15080639358433515
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.3248103565778321,
+        -0.7217999073684379,
+        0.39698955079060594
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 0,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.35714285714285715,
+        0.7857142857142857,
+        0.9285714285714286
+      ],
+      "features": [
+        -0.3112116583567229,
+        1.228004280978124,
+        0.4893972091596061
+      ],
+      "scores": [
+        -1.4945127874790896,
+        1.1291969713937162,
+        0.36531581608537267
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.7638811553083436,
+      "paperMinusScissors": 0.7638811553083436
+    },
+    {
+      "seed": 652,
+      "repeat": 0,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.7530660367170243,
+        -2.6496434732610954,
+        1.8965774365440722
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 0,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.6428571428571428,
+        0.21428571428571427,
+        0.5
+      ],
+      "features": [
+        3.0192756436723136,
+        -0.4912666234292062,
+        -0.15080639358433515
+      ],
+      "scores": [
+        2.6810168712563724,
+        -0.708035713398887,
+        -1.9729811578574865
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.3890525846552597,
+      "paperMinusScissors": 1.2649454444585995
+    },
+    {
+      "seed": 652,
+      "repeat": 0,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        1.1428571428571428
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        0.7577947785809099
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.14083783025335547,
+        0.6332786167893403,
+        -0.49244078653598483
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 0,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        1.3571428571428572,
+        1.7857142857142858
+      ],
+      "features": [
+        0.6435177532752572,
+        2.465677610954454,
+        1.4261469638983715
+      ],
+      "scores": [
+        -2.342975697692454,
+        3.064789853012016,
+        -0.7218141553195636
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.7866040083315795,
+      "paperMinusScissors": 3.7866040083315795
+    },
+    {
+      "seed": 652,
+      "repeat": 1,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.5,
+        0.21428571428571427
+      ],
+      "features": [
+        0.6435177532752572,
+        0.4507425028249607,
+        -0.6890995746948642
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.26741286789373653,
+        -0.357238422602914,
+        0.08982555470917658
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 652,
+      "repeat": 1,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.35714285714285715,
+        0.5714285714285714,
+        1.1428571428571428
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.6581272325639078,
+        0.7577947785809099
+      ],
+      "scores": [
+        -1.0007553698281624,
+        0.7546460169615018,
+        0.24610935286666052
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.5085366640948412,
+      "paperMinusScissors": 0.5085366640948412
+    },
+    {
+      "seed": 652,
+      "repeat": 1,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.9735397134655879,
+        -2.6220110628588693,
+        1.6484713493932823
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 1,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.5,
+        0.14285714285714285,
+        0.5714285714285714
+      ],
+      "features": [
+        2.741585420695581,
+        -0.7615292327456353,
+        -0.03230033799140362
+      ],
+      "scores": [
+        2.7278222039195366,
+        -0.9154690417795749,
+        -1.8123531621399613
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.6432912456991113,
+      "paperMinusScissors": 0.8968841203603864
+    },
+    {
+      "seed": 652,
+      "repeat": 1,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.4285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.07663797273427
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.4906832928126805,
+        1.267078898074594,
+        -0.7763956052619136
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 1,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.5714285714285714,
+        1.5714285714285714,
+        1.8571428571428572
+      ],
+      "features": [
+        0.4213861548728199,
+        2.853571524035457,
+        1.490642074648657
+      ],
+      "scores": [
+        -2.9006563776840895,
+        3.4699175130739226,
+        -0.5692611353898347
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.039178648463757,
+      "paperMinusScissors": 4.039178648463757
+    },
+    {
+      "seed": 652,
+      "repeat": 2,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.5434930422017814
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.019518360462002865,
+        -0.776457739700919,
+        0.756939379238916
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 2,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.7142857142857143,
+        1,
+        1.6428571428571428
+      ],
+      "features": [
+        0.8561940259691435,
+        1.7332199059796476,
+        1.2920412220601514
+      ],
+      "scores": [
+        -1.4277895093369346,
+        2.27363940512987,
+        -0.845849895792936
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -3.119489300922806,
+      "paperMinusScissors": 3.119489300922806
+    },
+    {
+      "seed": 652,
+      "repeat": 2,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.7530660367170243,
+        -2.6496434732610954,
+        1.8965774365440722
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 2,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.5,
+        0.14285714285714285,
+        0.5
+      ],
+      "features": [
+        2.741585420695581,
+        -0.7615292327456353,
+        -0.15080639358433515
+      ],
+      "scores": [
+        2.7612594620171573,
+        -0.9965960895631333,
+        -1.7646633724540242
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.7578555515802905,
+      "paperMinusScissors": 0.7680672828908909
+    },
+    {
+      "seed": 652,
+      "repeat": 2,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7857142857142857,
+        0.7142857142857143,
+        1.6428571428571428
+      ],
+      "features": [
+        1.060187171984674,
+        1.0460211456449109,
+        1.2920412220601514
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.6016061245331148,
+        1.6178900833753744,
+        -1.0162839588422599
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 2,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.5714285714285714,
+        1.4285714285714286,
+        1.7142857142857142
+      ],
+      "features": [
+        0.4213861548728199,
+        2.5987611581160275,
+        1.3599764694617922
+      ],
+      "scores": [
+        -2.6091520163366333,
+        3.1308364134864175,
+        -0.5216843971497855
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.652520810636203,
+      "paperMinusScissors": 3.652520810636203
+    },
+    {
+      "seed": 652,
+      "repeat": 3,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.1428571428571428
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        0.7577947785809099
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.40071960174024157,
+        1.0488047607900444,
+        -0.6480851590498031
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 3,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.5,
+        0.5714285714285714,
+        0.9285714285714286
+      ],
+      "features": [
+        0.1889192101882625,
+        0.6581272325639078,
+        0.4893972091596061
+      ],
+      "scores": [
+        -0.5831245021756097,
+        0.6137571277365763,
+        -0.030632625560966992
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.6443897532975433,
+      "paperMinusScissors": 0.6443897532975433
+    },
+    {
+      "seed": 652,
+      "repeat": 3,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.35714285714285715,
+        0.21428571428571427,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.4912666234292062,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.43928962774130276,
+        -1.0784771723102284,
+        0.639187544568926
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 3,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.4285714285714286,
+        0.14285714285714285,
+        0.5714285714285714
+      ],
+      "features": [
+        2.5967306944258524,
+        -0.7615292327456353,
+        -0.03230033799140362
+      ],
+      "scores": [
+        2.6287962466821932,
+        -0.9278801646456221,
+        -1.7009160820365712
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.5566764113278153,
+      "paperMinusScissors": 0.7730359173909491
+    },
+    {
+      "seed": 652,
+      "repeat": 3,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7857142857142857,
+        0.8571428571428571,
+        1.9285714285714286
+      ],
+      "features": [
+        1.060187171984674,
+        1.402848955608052,
+        1.5535445496464173
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -1.031974921015886,
+        2.1464836018534053,
+        -1.1145086808375197
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 3,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.5,
+        1.1428571428571428,
+        1.6428571428571428
+      ],
+      "features": [
+        0.1889192101882625,
+        2.04078790250679,
+        1.2920412220601514
+      ],
+      "scores": [
+        -2.19131139834454,
+        2.5177823092646925,
+        -0.326470910920153
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 2.8442532201848456,
+      "paperMinusScissors": 2.8442532201848456
+    },
+    {
+      "seed": 652,
+      "repeat": 4,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.8571428571428571,
+        0.6428571428571429,
+        1.1428571428571428
+      ],
+      "features": [
+        1.25617849379872,
+        0.8562917568306991,
+        0.7577947785809099
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.12728120019897013,
+        1.083075346932326,
+        -0.9557941467333562
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 4,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.35714285714285715,
+        0.7142857142857143,
+        1.5
+      ],
+      "features": [
+        -0.3112116583567229,
+        1.0460211456449109,
+        1.1504814271983563
+      ],
+      "scores": [
+        -1.4991832676089005,
+        1.4034797062580981,
+        0.09570356135080221
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -1.307776144907296,
+      "paperMinusScissors": 1.307776144907296
+    },
+    {
+      "seed": 652,
+      "repeat": 4,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.7530660367170243,
+        -2.6496434732610954,
+        1.8965774365440722
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 4,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.6428571428571428,
+        0.14285714285714285,
+        0.5
+      ],
+      "features": [
+        3.0192756436723136,
+        -0.7615292327456353,
+        -0.15080639358433515
+      ],
+      "scores": [
+        2.9510947601386563,
+        -0.9728036489240426,
+        -1.9782911112146144
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.9238984090626987,
+      "paperMinusScissors": 1.0054874622905718
+    },
+    {
+      "seed": 652,
+      "repeat": 4,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.5714285714285714,
+        1.7142857142857142
+      ],
+      "features": [
+        0.6435177532752572,
+        0.6581272325639078,
+        1.3599764694617922
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.517990315364937,
+        1.2486894518897123,
+        -0.7306991365247751
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 4,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.8571428571428571,
+        1.9285714285714286,
+        2.2142857142857144
+      ],
+      "features": [
+        1.25617849379872,
+        3.4333441764166657,
+        1.7906850299422976
+      ],
+      "scores": [
+        -2.9940089781763874,
+        4.31483156011126,
+        -1.3208225819348742
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 5.635654142046135,
+      "paperMinusScissors": 5.635654142046135
+    },
+    {
+      "seed": 652,
+      "repeat": 5,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.2857142857142857,
+        0.21428571428571427,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.4912666234292062,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.25458754819370744,
+        -1.101626256316408,
+        0.8470387081227012
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 5,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        1,
+        1.5
+      ],
+      "features": [
+        0.6435177532752572,
+        1.7332199059796476,
+        1.1504814271983563
+      ],
+      "scores": [
+        -1.5332377837288835,
+        2.1585081361298197,
+        -0.6252703524009375
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -2.783778488530757,
+      "paperMinusScissors": 2.783778488530757
+    },
+    {
+      "seed": 652,
+      "repeat": 5,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.7530660367170243,
+        -2.6496434732610954,
+        1.8965774365440722
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 5,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.0714285714285714,
+        0.07142857142857142,
+        0.42857142857142855
+      ],
+      "features": [
+        1.8018624412000224,
+        -1.049239879038443,
+        -0.2750954727804774
+      ],
+      "scores": [
+        2.4414266196154837,
+        -1.4440585965313337,
+        -0.9973680230841496
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.438794642699633,
+      "paperMinusScissors": -0.4466905734471841
+    },
+    {
+      "seed": 652,
+      "repeat": 5,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        1.1428571428571428
+      ],
+      "features": [
+        0.8561940259691435,
+        0.6581272325639078,
+        0.7577947785809099
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.20269051994937157,
+        0.8546690935693791,
+        -0.6519785736200079
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 5,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        1.3571428571428572,
+        1.8571428571428572
+      ],
+      "features": [
+        0.6435177532752572,
+        2.465677610954454,
+        1.490642074648657
+      ],
+      "scores": [
+        -2.3611734147070145,
+        3.1089420096715648,
+        -0.7477685949645516
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.8567106046361164,
+      "paperMinusScissors": 3.8567106046361164
+    },
+    {
+      "seed": 652,
+      "repeat": 6,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5,
+        0.5714285714285714,
+        0.5714285714285714
+      ],
+      "features": [
+        0.1889192101882625,
+        0.6581272325639078,
+        -0.03230033799140362
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.43592412962330135,
+        0.25661266263289095,
+        0.17931146699040976
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 6,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.42857142857142855,
+        1,
+        1.5
+      ],
+      "features": [
+        -0.05489198033546922,
+        1.7332199059796476,
+        1.1504814271983563
+      ],
+      "scores": [
+        -2.0106864262115476,
+        2.0986685351868344,
+        -0.08798210897528752
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -2.186650644162122,
+      "paperMinusScissors": 2.186650644162122
+    },
+    {
+      "seed": 652,
+      "repeat": 6,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.049239879038443,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.6661819350444254,
+        -2.3206961910752,
+        1.6545142560307753
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 6,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.7857142857142858,
+        0.35714285714285715,
+        0.7857142857142857
+      ],
+      "features": [
+        3.2823436524234757,
+        0.00457367160447321,
+        0.29334505193446747
+      ],
+      "scores": [
+        2.2400344652104884,
+        0.10432117189197683,
+        -2.344355637102466
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 2.1357132933185117,
+      "paperMinusScissors": 2.448676808994443
+    },
+    {
+      "seed": 652,
+      "repeat": 6,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7857142857142857,
+        0.8571428571428571,
+        1.7142857142857142
+      ],
+      "features": [
+        1.060187171984674,
+        1.402848955608052,
+        1.3599764694617922
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.9773584221018816,
+        2.0139704841739876,
+        -1.0366120620721069
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 6,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.5714285714285714,
+        1.2857142857142858,
+        1.7142857142857142
+      ],
+      "features": [
+        0.4213861548728199,
+        2.328498548799598,
+        1.3599764694617922
+      ],
+      "scores": [
+        -2.3390741274543494,
+        2.8660684779612615,
+        -0.5269943505069136
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.393062828468175,
+      "paperMinusScissors": 3.393062828468175
+    },
+    {
+      "seed": 652,
+      "repeat": 7,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5714285714285714,
+        0.5,
+        0.5
+      ],
+      "features": [
+        0.4213861548728199,
+        0.4507425028249607,
+        -0.15080639358433515
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.03632424080274935,
+        -0.007765083504809339,
+        0.044089324307558235
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 7,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.5,
+        0.42857142857142855,
+        1
+      ],
+      "features": [
+        0.1889192101882625,
+        0.23323752411624413,
+        0.5820409024834114
+      ],
+      "scores": [
+        -0.1846652230183425,
+        0.2609279506565124,
+        -0.07626272763816988
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.3371906782946823,
+      "paperMinusScissors": 0.3371906782946823
+    },
+    {
+      "seed": 652,
+      "repeat": 7,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        1.1806428983196247,
+        -2.596054403161933,
+        1.4154115048423086
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 7,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.5714285714285714,
+        0.2857142857142857,
+        0.6428571428571429
+      ],
+      "features": [
+        2.882359184593899,
+        -0.23645625750977636,
+        0.08093700671988797
+      ],
+      "scores": [
+        2.2673935706254684,
+        -0.3114896036973231,
+        -1.955903966928146
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 2.5788831743227916,
+      "paperMinusScissors": 1.6444143632308228
+    },
+    {
+      "seed": 652,
+      "repeat": 7,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.7142857142857143,
+        1.2142857142857142
+      ],
+      "features": [
+        0.6435177532752572,
+        1.0460211456449109,
+        0.8413242553730278
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.7592779968568673,
+        1.2736374579454064,
+        -0.5143594610885395
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 7,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.7142857142857143,
+        1.2857142857142858,
+        1.6428571428571428
+      ],
+      "features": [
+        0.8561940259691435,
+        2.328498548799598,
+        1.2920412220601514
+      ],
+      "scores": [
+        -2.0226612881455543,
+        2.8568155156554687,
+        -0.8341542275099159
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.6909697431653843,
+      "paperMinusScissors": 3.6909697431653843
+    },
+    {
+      "seed": 652,
+      "repeat": 8,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.42857142857142855,
+        0.42857142857142855,
+        0.5
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.23323752411624413,
+        -0.15080639358433515
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.14456239640320942,
+        -0.26165540863564596,
+        0.4062178050388552
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 8,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.7142857142857143,
+        1.0714285714285714,
+        1.7857142857142858
+      ],
+      "features": [
+        0.8561940259691435,
+        1.889655878236388,
+        1.4261469638983715
+      ],
+      "scores": [
+        -1.621957371481845,
+        2.518701201745319,
+        -0.8967438302634755
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -3.415445032008795,
+      "paperMinusScissors": 3.415445032008795
+    },
+    {
+      "seed": 652,
+      "repeat": 8,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.7530660367170243,
+        -2.6496434732610954,
+        1.8965774365440722
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 8,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.0714285714285714,
+        0,
+        0.5714285714285714
+      ],
+      "features": [
+        1.8018624412000224,
+        -1.3568078755655855,
+        -0.03230033799140362
+      ],
+      "scores": [
+        2.6802781639360393,
+        -1.579160422044112,
+        -1.101117741891926
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.7813959058279654,
+      "paperMinusScissors": -0.478042680152186
+    },
+    {
+      "seed": 652,
+      "repeat": 8,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.42857142857142855,
+        1.0714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.23323752411624413,
+        0.671433260581945
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.1008859537999067,
+        0.3610742098623838,
+        -0.4619601636622905
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 8,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.7142857142857143,
+        1.5714285714285714,
+        2.142857142857143
+      ],
+      "features": [
+        0.8561940259691435,
+        2.853571524035457,
+        1.7334372094377306
+      ],
+      "scores": [
+        -2.6719181465301123,
+        3.673384807447511,
+        -1.0014666609174003
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.674851468364912,
+      "paperMinusScissors": 4.674851468364912
+    },
+    {
+      "seed": 652,
+      "repeat": 9,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.8571428571428571,
+        0.5714285714285714,
+        0.6428571428571429
+      ],
+      "features": [
+        1.25617849379872,
+        0.6581272325639078,
+        0.08093700671988797
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.2617277256164069,
+        0.4255754024542779,
+        -0.6873031280706856
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 9,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.21428571428571427,
+        0.6428571428571429,
+        0.8571428571428571
+      ],
+      "features": [
+        -0.8670215223860789,
+        0.8562917568306991,
+        0.39325671253698385
+      ],
+      "scores": [
+        -1.4758918099204779,
+        0.6516040113526078,
+        0.8242877985678698
+      ],
+      "action": 2,
+      "correctAction": 2,
+      "correctMargin": 0.172683787215262,
+      "paperMinusScissors": -0.172683787215262
+    },
+    {
+      "seed": 652,
+      "repeat": 9,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.7530660367170243,
+        -2.6496434732610954,
+        1.8965774365440722
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 9,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.7142857142857142,
+        0.07142857142857142,
+        0.5714285714285714
+      ],
+      "features": [
+        3.152540558455208,
+        -1.049239879038443,
+        -0.03230033799140362
+      ],
+      "scores": [
+        3.2962744031923656,
+        -1.1621197296578016,
+        -2.134154673534564
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 4.4583941328501675,
+      "paperMinusScissors": 0.9720349438767621
+    },
+    {
+      "seed": 652,
+      "repeat": 9,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        1,
+        0.8571428571428571,
+        1.9285714285714286
+      ],
+      "features": [
+        1.6265062683754379,
+        1.402848955608052,
+        1.5535445496464173
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.6448264166760451,
+        2.1950057044295184,
+        -1.550179287753474
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 9,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.9285714285714286,
+        1.5714285714285714,
+        2.142857142857143
+      ],
+      "features": [
+        1.4447721264067237,
+        2.853571524035457,
+        1.7334372094377306
+      ],
+      "scores": [
+        -2.269552885100955,
+        3.7238140568680183,
+        -1.4542611717670648
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 5.178075228635083,
+      "paperMinusScissors": 5.178075228635083
+    },
+    {
+      "seed": 652,
+      "repeat": 10,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.2857142857142857,
+        0.2857142857142857,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.23645625750977636,
+        -0.6890995746948642
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.11676530446612438,
+        -1.135415936480816,
+        1.0186506320146915
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 10,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.35714285714285715,
+        0.7142857142857143,
+        1.2142857142857142
+      ],
+      "features": [
+        -0.3112116583567229,
+        1.0460211456449109,
+        0.8413242553730278
+      ],
+      "scores": [
+        -1.411952551040602,
+        1.191836440217277,
+        0.22011611082332472
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.9717203293939523,
+      "paperMinusScissors": 0.9717203293939523
+    },
+    {
+      "seed": 652,
+      "repeat": 10,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.7530660367170243,
+        -2.6496434732610954,
+        1.8965774365440722
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 10,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.5,
+        0.07142857142857142,
+        0.42857142857142855
+      ],
+      "features": [
+        2.741585420695581,
+        -1.049239879038443,
+        -0.2750954727804774
+      ],
+      "scores": [
+        3.0838424384076006,
+        -1.3635433267923953,
+        -1.720299111615205
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 4.447385765199996,
+      "paperMinusScissors": 0.3567557848228098
+    },
+    {
+      "seed": 652,
+      "repeat": 10,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.5,
+        0.42857142857142855,
+        0.8571428571428571
+      ],
+      "features": [
+        0.1889192101882625,
+        0.23323752411624413,
+        0.39325671253698385
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.13139853000079588,
+        0.13168979550963153,
+        -0.0002912655088356808
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 10,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.7857142857142857,
+        1.7857142857142858,
+        2.5
+      ],
+      "features": [
+        1.060187171984674,
+        3.210399333998599,
+        2.0076178024622453
+      ],
+      "scores": [
+        -2.966409601810137,
+        4.228135037114462,
+        -1.2617254353043266
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 5.489860472418789,
+      "paperMinusScissors": 5.489860472418789
+    },
+    {
+      "seed": 652,
+      "repeat": 11,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.35714285714285715,
+        0.35714285714285715,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.3112116583567229,
+        0.00457367160447321,
+        -0.6890995746948642
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.06060219523576979,
+        -0.8761372713506852,
+        0.8155350761149152
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 11,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.8571428571428571,
+        1.4285714285714286,
+        2.2857142857142856
+      ],
+      "features": [
+        1.25617849379872,
+        2.5987611581160275,
+        1.8466745541490215
+      ],
+      "scores": [
+        -2.175794195015292,
+        3.5355457299507367,
+        -1.3597515349354459
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -4.8952972648861826,
+      "paperMinusScissors": 4.8952972648861826
+    },
+    {
+      "seed": 652,
+      "repeat": 11,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.9735397134655879,
+        -2.6220110628588693,
+        1.6484713493932823
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 652,
+      "repeat": 11,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.5714285714285714,
+        0.14285714285714285,
+        0.5
+      ],
+      "features": [
+        2.882359184593899,
+        -0.7615292327456353,
+        -0.15080639358433515
+      ],
+      "scores": [
+        2.857495581354934,
+        -0.98453462270561,
+        -1.8729609586493248
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.842030204060544,
+      "paperMinusScissors": 0.8884263359437148
+    },
+    {
+      "seed": 652,
+      "repeat": 11,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.7857142857142857,
+        2
+      ],
+      "features": [
+        0.8561940259691435,
+        1.228004280978124,
+        1.6149311538447986
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -1.0140246961699002,
+        1.9997397117911535,
+        -0.9857150156212534
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 652,
+      "repeat": 11,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.9285714285714286,
+        1.5714285714285714,
+        2.0714285714285716
+      ],
+      "features": [
+        1.4447721264067237,
+        2.853571524035457,
+        1.6748732324568762
+      ],
+      "scores": [
+        -2.2530286762431526,
+        3.6837222443851094,
+        -1.4306935681419586
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 5.114415812527068,
+      "paperMinusScissors": 5.114415812527068
+    },
+    {
+      "seed": 653,
+      "repeat": 0,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5714285714285714,
+        0.42857142857142855,
+        0.42857142857142855
+      ],
+      "features": [
+        0.4213861548728199,
+        0.23323752411624413,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.10456655496585326,
+        -0.050916226448951385,
+        -0.05365032851690185
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 653,
+      "repeat": 0,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.42857142857142855,
+        1,
+        0.9285714285714286
+      ],
+      "features": [
+        -0.05489198033546922,
+        1.7332199059796476,
+        0.4893972091596061
+      ],
+      "scores": [
+        -1.9920432004799211,
+        1.9852843897977768,
+        0.006758810682143485
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -1.9785255791156333,
+      "paperMinusScissors": 1.9785255791156333
+    },
+    {
+      "seed": 653,
+      "repeat": 0,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.6605370017372421,
+        -2.667775807391672,
+        2.007238805654429
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 0,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.2142857142857142,
+        0.14285714285714285,
+        0.6428571428571429
+      ],
+      "features": [
+        2.1351284527206924,
+        -0.7615292327456353,
+        0.08093700671988797
+      ],
+      "scores": [
+        2.1593443066452136,
+        -0.6767258307175581,
+        -1.4826184759276542
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 2.8360701373627717,
+      "paperMinusScissors": 0.8058926452100961
+    },
+    {
+      "seed": 653,
+      "repeat": 0,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        1.7857142857142858
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        1.4261469638983715
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.6837857722912306,
+        1.724367795040058,
+        -1.0405820227488278
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 0,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.5714285714285714,
+        1.4285714285714286,
+        1.3571428571428572
+      ],
+      "features": [
+        0.4213861548728199,
+        2.5987611581160275,
+        1.0005899133699838
+      ],
+      "scores": [
+        -2.7584303625402344,
+        3.3110995415757403,
+        -0.5526691790355066
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.863768720611247,
+      "paperMinusScissors": 3.863768720611247
+    },
+    {
+      "seed": 653,
+      "repeat": 1,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5,
+        0.5,
+        0.35714285714285715
+      ],
+      "features": [
+        0.1889192101882625,
+        0.4507425028249607,
+        -0.40576107796734173
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.24621871559094705,
+        0.07445349924258088,
+        0.17176521634836614
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 1,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        0.8571428571428571,
+        1
+      ],
+      "features": [
+        0.6435177532752572,
+        1.402848955608052,
+        0.5820409024834114
+      ],
+      "scores": [
+        -1.2250513927249462,
+        1.780600100758349,
+        -0.5555487080334032
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -2.3361488087917524,
+      "paperMinusScissors": 2.3361488087917524
+    },
+    {
+      "seed": 653,
+      "repeat": 1,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.5353209872811766,
+        -2.281349866068288,
+        1.74602887878711
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 1,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.5,
+        0.07142857142857142,
+        0.5
+      ],
+      "features": [
+        2.741585420695581,
+        -1.049239879038443,
+        -0.15080639358433515
+      ],
+      "scores": [
+        2.894838903863075,
+        -1.044486983939204,
+        -1.8503519199238692
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.939325887802279,
+      "paperMinusScissors": 0.8058649359846652
+    },
+    {
+      "seed": 653,
+      "repeat": 1,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.6428571428571429,
+        1.7142857142857142
+      ],
+      "features": [
+        0.6435177532752572,
+        0.8562917568306991,
+        1.3599764694617922
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.7991654536950059,
+        1.653585018869954,
+        -0.8544195651749484
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 1,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        1.1428571428571428,
+        2.0714285714285716,
+        1.5714285714285714
+      ],
+      "features": [
+        1.9712731782892863,
+        3.645668483122645,
+        1.2222445052273527
+      ],
+      "scores": [
+        -3.0034283752038298,
+        4.8150211745669385,
+        -1.8115927993631085
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 6.626613973930047,
+      "paperMinusScissors": 6.626613973930047
+    },
+    {
+      "seed": 653,
+      "repeat": 2,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5,
+        0.35714285714285715,
+        0.42857142857142855
+      ],
+      "features": [
+        0.1889192101882625,
+        0.00457367160447321,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.21222989838385212,
+        -0.33476450800289154,
+        0.12253460961903939
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 653,
+      "repeat": 2,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.07142857142857142,
+        0.5,
+        0.6428571428571429
+      ],
+      "features": [
+        -1.4924790385226445,
+        0.4507425028249607,
+        0.08093700671988797
+      ],
+      "scores": [
+        -1.3802079386367612,
+        0.1265637278857836,
+        1.2536442107509758
+      ],
+      "action": 2,
+      "correctAction": 2,
+      "correctMargin": 1.1270804828651921,
+      "paperMinusScissors": -1.1270804828651921
+    },
+    {
+      "seed": 653,
+      "repeat": 2,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.8711388494091521,
+        -2.6180088508502393,
+        1.7468700014410863
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 2,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.6428571428571428,
+        0.21428571428571427,
+        0.5
+      ],
+      "features": [
+        3.0192756436723136,
+        -0.4912666234292062,
+        -0.15080639358433515
+      ],
+      "scores": [
+        2.4552441297607626,
+        -0.39365396251695867,
+        -2.0615901672438017
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 2.848898092277721,
+      "paperMinusScissors": 1.6679362047268431
+    },
+    {
+      "seed": 653,
+      "repeat": 2,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        1.3571428571428572
+      ],
+      "features": [
+        0.8561940259691435,
+        0.6581272325639078,
+        1.0005899133699838
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.37394719417275124,
+        1.2496771736641656,
+        -0.8757299794914146
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 2,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        1.3571428571428572,
+        1.3571428571428572
+      ],
+      "features": [
+        0.6435177532752572,
+        2.465677610954454,
+        1.0005899133699838
+      ],
+      "scores": [
+        -2.4774334830804707,
+        3.1974930317766184,
+        -0.720059548696148
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.9175525804727664,
+      "paperMinusScissors": 3.9175525804727664
+    },
+    {
+      "seed": 653,
+      "repeat": 3,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.21428571428571427,
+        0.42857142857142855,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.8670215223860789,
+        0.23323752411624413,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.6824609397934371,
+        -0.2368973256728143,
+        0.9193582654662503
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 3,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.2857142857142857,
+        0.7142857142857143,
+        0.6428571428571429
+      ],
+      "features": [
+        -0.5813930322180321,
+        1.0460211456449109,
+        0.08093700671988797
+      ],
+      "scores": [
+        -1.4736229527970504,
+        0.9096610378918089,
+        0.5639619149052403
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.3456991229865686,
+      "paperMinusScissors": 0.3456991229865686
+    },
+    {
+      "seed": 653,
+      "repeat": 3,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        1.0681437211393532,
+        -2.571454972058438,
+        1.5033112509190847
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 3,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.2857142857142858,
+        0.07142857142857142,
+        0.42857142857142855
+      ],
+      "features": [
+        2.293781084156319,
+        -1.049239879038443,
+        -0.2750954727804774
+      ],
+      "scores": [
+        2.648596213731699,
+        -1.184415965645408,
+        -1.464180248086289
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.833012179377107,
+      "paperMinusScissors": 0.27976428244088103
+    },
+    {
+      "seed": 653,
+      "repeat": 3,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.8571428571428571,
+        0.8571428571428571,
+        1.8571428571428572
+      ],
+      "features": [
+        1.25617849379872,
+        1.402848955608052,
+        1.490642074648657
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -1.0503783767342216,
+        2.419426282632724,
+        -1.369047905898503
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 3,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.9285714285714286,
+        1.9285714285714286,
+        1.7142857142857142
+      ],
+      "features": [
+        1.4447721264067237,
+        3.4333441764166657,
+        1.3599764694617922
+      ],
+      "scores": [
+        -3.123469489289957,
+        4.5900458980673555,
+        -1.466576408777399
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 6.056622306844755,
+      "paperMinusScissors": 6.056622306844755
+    },
+    {
+      "seed": 653,
+      "repeat": 4,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.2857142857142857,
+        0.21428571428571427,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.5813930322180321,
+        -0.4912666234292062,
+        -0.6890995746948642
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.3740005121122371,
+        -1.2394822410933033,
+        0.8654817289810658
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 4,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.14285714285714285,
+        0.6428571428571429,
+        0.6428571428571429
+      ],
+      "features": [
+        -1.169971132655612,
+        0.8562917568306991,
+        0.08093700671988797
+      ],
+      "scores": [
+        -1.6260016838159228,
+        0.617025300827424,
+        1.008976382988497
+      ],
+      "action": 2,
+      "correctAction": 2,
+      "correctMargin": 0.391951082161073,
+      "paperMinusScissors": -0.391951082161073
+    },
+    {
+      "seed": 653,
+      "repeat": 4,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.8711388494091521,
+        -2.6180088508502393,
+        1.7468700014410863
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 4,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        0,
+        0
+      ],
+      "features": [
+        0.6435177532752572,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        2.1759185659031717,
+        -2.309678624099043,
+        0.13376005819587244
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 2.042158507707299,
+      "paperMinusScissors": -2.4434386822949152
+    },
+    {
+      "seed": 653,
+      "repeat": 4,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.9285714285714286,
+        0.8571428571428571,
+        2.2142857142857144
+      ],
+      "features": [
+        1.4447721264067237,
+        1.402848955608052,
+        1.7906850299422976
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -1.001079291109105,
+        2.6284019367917115,
+        -1.6273226456826069
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 4,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.7857142857142857,
+        1.3571428571428572,
+        1.5714285714285714
+      ],
+      "features": [
+        1.060187171984674,
+        2.465677610954454,
+        1.2222445052273527
+      ],
+      "scores": [
+        -2.2715957979780006,
+        3.3919072576815994,
+        -1.1203114597035988
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.512218717385198,
+      "paperMinusScissors": 4.512218717385198
+    },
+    {
+      "seed": 653,
+      "repeat": 5,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.5714285714285714,
+        0.7857142857142857
+      ],
+      "features": [
+        0.8561940259691435,
+        0.6581272325639078,
+        0.29334505193446747
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.21860218928989666,
+        0.8212607149238605,
+        -0.6026585256339638
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 5,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.2857142857142857,
+        0.6428571428571429,
+        0.35714285714285715
+      ],
+      "features": [
+        -0.5813930322180321,
+        0.8562917568306991,
+        -0.40576107796734173
+      ],
+      "scores": [
+        -1.1595647570649128,
+        0.4071669494298911,
+        0.7523978076350208
+      ],
+      "action": 2,
+      "correctAction": 2,
+      "correctMargin": 0.3452308582051297,
+      "paperMinusScissors": -0.3452308582051297
+    },
+    {
+      "seed": 653,
+      "repeat": 5,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.2857142857142857,
+        0.07142857142857142,
+        0.07142857142857142
+      ],
+      "features": [
+        -0.5813930322180321,
+        -1.049239879038443,
+        -1.007942768848224
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        1.0532564573404555,
+        -2.0433713621545206,
+        0.9901149048140649
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 653,
+      "repeat": 5,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        2,
+        0.07142857142857142,
+        0.5
+      ],
+      "features": [
+        3.6526714270001928,
+        -1.049239879038443,
+        -0.15080639358433515
+      ],
+      "scores": [
+        3.451378382561073,
+        -0.9129721071414295,
+        -2.53840627541964
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 4.3643504897025025,
+      "paperMinusScissors": 1.6254341682782107
+    },
+    {
+      "seed": 653,
+      "repeat": 5,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.7142857142857143,
+        1.4285714285714286
+      ],
+      "features": [
+        0.6435177532752572,
+        1.0460211456449109,
+        1.07663797273427
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.944086561238122,
+        1.6896263081689367,
+        -0.7455397469308154
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 5,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.8571428571428571,
+        1.6428571428571428,
+        1.7857142857142858
+      ],
+      "features": [
+        1.25617849379872,
+        2.975715267531204,
+        1.4261469638983715
+      ],
+      "scores": [
+        -2.7535449260921188,
+        4.101992287197215,
+        -1.3484473611050973
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 5.4504396483023125,
+      "paperMinusScissors": 5.4504396483023125
+    },
+    {
+      "seed": 653,
+      "repeat": 6,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.2857142857142857,
+        0.35714285714285715,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.5813930322180321,
+        0.00457367160447321,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.258317526180751,
+        -0.4459587519654206,
+        0.7042762781461709
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 6,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.8571428571428571,
+        1.1428571428571428,
+        1.8571428571428572
+      ],
+      "features": [
+        1.25617849379872,
+        2.04078790250679,
+        1.490642074648657
+      ],
+      "scores": [
+        -1.7469114872485358,
+        3.1177039989127513,
+        -1.3707925116642161
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -4.488496510576967,
+      "paperMinusScissors": 4.488496510576967
+    },
+    {
+      "seed": 653,
+      "repeat": 6,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        1.2532013523667576,
+        -2.527724324902377,
+        1.2745229725356195
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 6,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.4285714285714286,
+        0.07142857142857142,
+        0.5714285714285714
+      ],
+      "features": [
+        2.5967306944258524,
+        -1.049239879038443,
+        -0.03230033799140362
+      ],
+      "scores": [
+        2.7803243498210457,
+        -0.993611175547421,
+        -1.7867131742736224
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.7739355253684668,
+      "paperMinusScissors": 0.7931019987262015
+    },
+    {
+      "seed": 653,
+      "repeat": 6,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.8571428571428571,
+        0.7142857142857143,
+        1.2142857142857142
+      ],
+      "features": [
+        1.25617849379872,
+        1.0460211456449109,
+        0.8413242553730278
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.518154789208681,
+        1.6355213811816214,
+        -1.1173665919729405
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 6,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.7142857142857143,
+        1.4285714285714286,
+        1.4285714285714286
+      ],
+      "features": [
+        0.8561940259691435,
+        2.5987611581160275,
+        1.07663797273427
+      ],
+      "scores": [
+        -2.5095305509355055,
+        3.4199302945579286,
+        -0.9103997436224234
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.330330038180352,
+      "paperMinusScissors": 4.330330038180352
+    },
+    {
+      "seed": 653,
+      "repeat": 7,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.42857142857142855,
+        0.21428571428571427,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.05489198033546922,
+        -0.4912666234292062,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.6046799543199142,
+        -0.9126973656800301,
+        0.3080174113601159
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 653,
+      "repeat": 7,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.8571428571428571,
+        1.0714285714285714,
+        1.9285714285714286
+      ],
+      "features": [
+        1.25617849379872,
+        1.889655878236388,
+        1.5535445496464173
+      ],
+      "scores": [
+        -1.5957145222291853,
+        2.9903807453504156,
+        -1.3946662231212308
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -4.385046968471647,
+      "paperMinusScissors": 4.385046968471647
+    },
+    {
+      "seed": 653,
+      "repeat": 7,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        1.0681437211393532,
+        -2.571454972058438,
+        1.5033112509190847
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 7,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.3571428571428572,
+        0.14285714285714285,
+        0.5
+      ],
+      "features": [
+        2.4475513134975753,
+        -0.7615292327456353,
+        -0.15080639358433515
+      ],
+      "scores": [
+        2.401090702318342,
+        -0.7720072335994724,
+        -1.6290834687188678
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 3.1730979359178146,
+      "paperMinusScissors": 0.8570762351193953
+    },
+    {
+      "seed": 653,
+      "repeat": 7,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.5,
+        0.5714285714285714,
+        1.6428571428571428
+      ],
+      "features": [
+        0.1889192101882625,
+        0.6581272325639078,
+        1.2920412220601514
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.8455706458840817,
+        1.3299041570182697,
+        -0.4843335111341887
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 7,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        1.5714285714285714,
+        1.3571428571428572
+      ],
+      "features": [
+        0.6435177532752572,
+        2.853571524035457,
+        1.0005899133699838
+      ],
+      "scores": [
+        -2.900955130632061,
+        3.6220754735633554,
+        -0.7211203429312956
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.343195816494651,
+      "paperMinusScissors": 4.343195816494651
+    },
+    {
+      "seed": 653,
+      "repeat": 8,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.6428571428571429,
+        0.7857142857142857
+      ],
+      "features": [
+        0.8561940259691435,
+        0.8562917568306991,
+        0.29334505193446747
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.43496796089256223,
+        1.0381684176521868,
+        -0.6032004567596246
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 8,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.5714285714285714,
+        0.7142857142857143,
+        1.1428571428571428
+      ],
+      "features": [
+        0.4213861548728199,
+        1.0460211456449109,
+        0.7577947785809099
+      ],
+      "scores": [
+        -1.0097429715340998,
+        1.4644211415871637,
+        -0.45467817005306455
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -1.9190993116402284,
+      "paperMinusScissors": 1.9190993116402284
+    },
+    {
+      "seed": 653,
+      "repeat": 8,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.8711388494091521,
+        -2.6180088508502393,
+        1.7468700014410863
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 8,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.8571428571428572,
+        0.21428571428571427,
+        0.7857142857142857
+      ],
+      "features": [
+        3.4088602364764626,
+        -0.4912666234292062,
+        0.29334505193446747
+      ],
+      "scores": [
+        2.5956659560820072,
+        -0.06837104331185409,
+        -2.5272949127701496
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 2.6640369993938613,
+      "paperMinusScissors": 2.4589238694582956
+    },
+    {
+      "seed": 653,
+      "repeat": 8,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.9285714285714286,
+        0.7142857142857143,
+        1.7142857142857142
+      ],
+      "features": [
+        1.4447721264067237,
+        1.0460211456449109,
+        1.3599764694617922
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.5168728165054404,
+        1.9769204852766804,
+        -1.4600476687712398
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 8,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.7142857142857143,
+        1.5,
+        1.5
+      ],
+      "features": [
+        0.8561940259691435,
+        2.7279866628415275,
+        1.1504814271983563
+      ],
+      "scores": [
+        -2.6668448872007295,
+        3.606109428357177,
+        -0.9392645411564483
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.5453739695136255,
+      "paperMinusScissors": 4.5453739695136255
+    },
+    {
+      "seed": 653,
+      "repeat": 9,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5714285714285714,
+        0.5714285714285714,
+        0.9285714285714286
+      ],
+      "features": [
+        0.4213861548728199,
+        0.6581272325639078,
+        0.4893972091596061
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.5272683021851214,
+        0.8772557776812189,
+        -0.3499874754960977
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 9,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.7857142857142857,
+        1.3571428571428572,
+        1.7142857142857142
+      ],
+      "features": [
+        1.060187171984674,
+        2.465677610954454,
+        1.3599764694617922
+      ],
+      "scores": [
+        -2.3018483651201587,
+        3.4753389566449506,
+        -1.173490591524792
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -4.648829548169743,
+      "paperMinusScissors": 4.648829548169743
+    },
+    {
+      "seed": 653,
+      "repeat": 9,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        1.0681437211393532,
+        -2.571454972058438,
+        1.5033112509190847
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 9,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.4285714285714286,
+        0.21428571428571427,
+        0.42857142857142855
+      ],
+      "features": [
+        2.5967306944258524,
+        -0.4912666234292062,
+        -0.2750954727804774
+      ],
+      "scores": [
+        2.224431208212031,
+        -0.5299367624304316,
+        -1.6944944457815976
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 2.7543679706424626,
+      "paperMinusScissors": 1.164557683351166
+    },
+    {
+      "seed": 653,
+      "repeat": 9,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7857142857142857,
+        0.6428571428571429,
+        1.6428571428571428
+      ],
+      "features": [
+        1.060187171984674,
+        0.8562917568306991,
+        1.2920412220601514
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.5297199045461212,
+        1.672579018786017,
+        -1.1428591142398963
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 9,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        1.2142857142857142,
+        1.2857142857142858
+      ],
+      "features": [
+        0.6435177532752572,
+        2.1869638753977676,
+        0.922201549933712
+      ],
+      "scores": [
+        -2.1559022651466875,
+        2.844933386419933,
+        -0.6890311212732463
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 3.533964507693179,
+      "paperMinusScissors": 3.533964507693179
+    },
+    {
+      "seed": 653,
+      "repeat": 10,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.5714285714285714,
+        0.35714285714285715,
+        0.2857142857142857
+      ],
+      "features": [
+        0.4213861548728199,
+        0.00457367160447321,
+        -0.5434930422017814
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.41318601463553484,
+        -0.46379092571067804,
+        0.050604911075143394
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 653,
+      "repeat": 10,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.35714285714285715,
+        0.7142857142857143,
+        0.5714285714285714
+      ],
+      "features": [
+        -0.3112116583567229,
+        1.0460211456449109,
+        -0.03230033799140362
+      ],
+      "scores": [
+        -1.2837095220047843,
+        0.880067620779112,
+        0.4036419012256715
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.47642571955344054,
+      "paperMinusScissors": 0.47642571955344054
+    },
+    {
+      "seed": 653,
+      "repeat": 10,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.21428571428571427,
+        0.14285714285714285,
+        0.14285714285714285
+      ],
+      "features": [
+        -0.8670215223860789,
+        -0.7615292327456353,
+        -0.8435359974954221
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.5285312124667,
+        -1.670088192431224,
+        1.1415569799645238
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 10,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.5714285714285714,
+        0.21428571428571427,
+        0.5714285714285714
+      ],
+      "features": [
+        2.882359184593899,
+        -0.4912666234292062,
+        -0.03230033799140362
+      ],
+      "scores": [
+        2.3455786888143657,
+        -0.3416322686385925,
+        -2.003946420175771
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 2.687210957452958,
+      "paperMinusScissors": 1.6623141515371787
+    },
+    {
+      "seed": 653,
+      "repeat": 10,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.7142857142857143,
+        0.7142857142857143,
+        1.8571428571428572
+      ],
+      "features": [
+        0.8561940259691435,
+        1.0460211456449109,
+        1.490642074648657
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -0.9051078781284678,
+        1.9711107104265633,
+        -1.066002832298096
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 10,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.6428571428571429,
+        1.5,
+        1.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        2.7279866628415275,
+        1.2222445052273527
+      ],
+      "scores": [
+        -2.8125214186158045,
+        3.6188804761585303,
+        -0.8063590575427269
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 4.425239533701257,
+      "paperMinusScissors": 4.425239533701257
+    },
+    {
+      "seed": 653,
+      "repeat": 11,
+      "state": 0,
+      "arm": "initial",
+      "rates": [
+        0.6428571428571429,
+        0.42857142857142855,
+        0.5714285714285714
+      ],
+      "features": [
+        0.6435177532752572,
+        0.23323752411624413,
+        -0.03230033799140362
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 2,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.1869267786049187,
+        0.12822251807244653,
+        -0.315149296677365
+      ],
+      "trainedReadoutOnInitialAction": 0
+    },
+    {
+      "seed": 653,
+      "repeat": 11,
+      "state": 0,
+      "arm": "trained",
+      "rates": [
+        0.42857142857142855,
+        0.6428571428571429,
+        0.7857142857142857
+      ],
+      "features": [
+        -0.05489198033546922,
+        0.8562917568306991,
+        0.29334505193446747
+      ],
+      "scores": [
+        -0.9915074395905604,
+        0.9066535408544121,
+        0.08485389873614763
+      ],
+      "action": 1,
+      "correctAction": 2,
+      "correctMargin": -0.8217996421182645,
+      "paperMinusScissors": 0.8217996421182645
+    },
+    {
+      "seed": 653,
+      "repeat": 11,
+      "state": 1,
+      "arm": "initial",
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        0.8711388494091521,
+        -2.6180088508502393,
+        1.7468700014410863
+      ],
+      "trainedReadoutOnInitialAction": 2
+    },
+    {
+      "seed": 653,
+      "repeat": 11,
+      "state": 1,
+      "arm": "trained",
+      "rates": [
+        1.5714285714285714,
+        0.35714285714285715,
+        0.8571428571428571
+      ],
+      "features": [
+        2.882359184593899,
+        0.00457367160447321,
+        0.39325671253698385
+      ],
+      "scores": [
+        1.7107230670666023,
+        0.45888946622157145,
+        -2.169612533288172
+      ],
+      "action": 0,
+      "correctAction": 0,
+      "correctMargin": 1.2518336008450308,
+      "paperMinusScissors": 2.6285019995097434
+    },
+    {
+      "seed": 653,
+      "repeat": 11,
+      "state": 2,
+      "arm": "initial",
+      "rates": [
+        0.9285714285714286,
+        1,
+        2
+      ],
+      "features": [
+        1.4447721264067237,
+        1.7332199059796476,
+        1.6149311538447986
+      ],
+      "scores": [
+        0,
+        0,
+        0
+      ],
+      "action": 0,
+      "correctAction": 1,
+      "correctMargin": 0,
+      "paperMinusScissors": 0,
+      "trainedReadoutOnInitialScores": [
+        -1.3231905308567244,
+        2.8835570411737947,
+        -1.5603665103170705
+      ],
+      "trainedReadoutOnInitialAction": 1
+    },
+    {
+      "seed": 653,
+      "repeat": 11,
+      "state": 2,
+      "arm": "trained",
+      "rates": [
+        0.7857142857142857,
+        1.6428571428571428,
+        1.5714285714285714
+      ],
+      "features": [
+        1.060187171984674,
+        2.975715267531204,
+        1.2222445052273527
+      ],
+      "scores": [
+        -2.828479990645463,
+        3.950186277613834,
+        -1.1217062869683714
+      ],
+      "action": 1,
+      "correctAction": 1,
+      "correctMargin": 5.071892564582205,
+      "paperMinusScissors": 5.071892564582205
+    }
+  ]
+}

@@ -1,0 +1,5706 @@
+{
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "trainingEpisodes": 40,
+  "roundsPerEpisode": 24,
+  "heldoutEpisodes": 3,
+  "opponent": {
+    "strategy": "previous_opponent",
+    "offset": 1,
+    "noise": 0.1
+  },
+  "runs": [
+    {
+      "seed": 1,
+      "curve": [
+        0.041666666666666664,
+        0.20833333333333334,
+        0.3333333333333333,
+        0.4583333333333333,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.625,
+        0.625,
+        0.5416666666666666,
+        0.625,
+        0.5833333333333334,
+        0.625,
+        0.625,
+        0.625,
+        0.6666666666666666,
+        0.7083333333333334,
+        0.5833333333333334,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.5833333333333334,
+        0.625,
+        0.5833333333333334,
+        0.5416666666666666,
+        0.5833333333333334,
+        0.625,
+        0.6666666666666666,
+        0.5833333333333334,
+        0.6666666666666666,
+        0.5833333333333334,
+        0.6666666666666666,
+        0.625,
+        0.5416666666666666,
+        0.5833333333333334,
+        0.625,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.5833333333333334,
+        0.6666666666666666,
+        0.625
+      ],
+      "weights": [
+        {
+          "episode": 5,
+          "mean": 0.9999226252600659,
+          "changed": 523,
+          "atZero": 0,
+          "atMax": 15
+        },
+        {
+          "episode": 10,
+          "mean": 1.0024897057472621,
+          "changed": 677,
+          "atZero": 0,
+          "atMax": 42
+        },
+        {
+          "episode": 20,
+          "mean": 1.0040021689890475,
+          "changed": 977,
+          "atZero": 125,
+          "atMax": 36
+        },
+        {
+          "episode": 40,
+          "mean": 1.0014420374287336,
+          "changed": 1004,
+          "atZero": 0,
+          "atMax": 51
+        }
+      ],
+      "noLearning": {
+        "winRate": 0.18055555555555555,
+        "byObservation": [
+          {
+            "observation": null,
+            "n": 3,
+            "winRate": 0.3333333333333333,
+            "actionCounts": [
+              0,
+              2,
+              1
+            ],
+            "opponentCounts": [
+              2,
+              1,
+              0
+            ],
+            "meanRates": [
+              0,
+              0,
+              0
+            ],
+            "zeroRateShare": 1
+          },
+          {
+            "observation": 0,
+            "n": 25,
+            "winRate": 0.36,
+            "actionCounts": [
+              12,
+              4,
+              9
+            ],
+            "opponentCounts": [
+              0,
+              23,
+              2
+            ],
+            "meanRates": [
+              0.562857142857143,
+              0.4542857142857144,
+              0.49428571428571433
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 1,
+            "n": 22,
+            "winRate": 0.13636363636363635,
+            "actionCounts": [
+              3,
+              0,
+              19
+            ],
+            "opponentCounts": [
+              2,
+              0,
+              20
+            ],
+            "meanRates": [
+              0.10064935064935066,
+              0.058441558441558426,
+              0.31493506493506485
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 2,
+            "n": 22,
+            "winRate": 0,
+            "actionCounts": [
+              0,
+              0,
+              22
+            ],
+            "opponentCounts": [
+              22,
+              0,
+              0
+            ],
+            "meanRates": [
+              0.7922077922077921,
+              0.7597402597402599,
+              1.7110389610389611
+            ],
+            "zeroRateShare": 0
+          }
+        ],
+        "actions": [
+          1,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          1,
+          0,
+          2,
+          2,
+          0,
+          0,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0
+        ],
+        "rewards": [
+          0,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          -1,
+          -1,
+          1,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          -1
+        ],
+        "early": null
+      },
+      "trained": {
+        "winRate": 0.5972222222222222,
+        "byObservation": [
+          {
+            "observation": null,
+            "n": 3,
+            "winRate": 0.3333333333333333,
+            "actionCounts": [
+              0,
+              2,
+              1
+            ],
+            "opponentCounts": [
+              2,
+              1,
+              0
+            ],
+            "meanRates": [
+              0,
+              0,
+              0
+            ],
+            "zeroRateShare": 1
+          },
+          {
+            "observation": 0,
+            "n": 25,
+            "winRate": 0.88,
+            "actionCounts": [
+              1,
+              0,
+              24
+            ],
+            "opponentCounts": [
+              0,
+              23,
+              2
+            ],
+            "meanRates": [
+              0.3857142857142857,
+              0.2714285714285714,
+              0.8114285714285715
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 1,
+            "n": 22,
+            "winRate": 0.9090909090909091,
+            "actionCounts": [
+              22,
+              0,
+              0
+            ],
+            "opponentCounts": [
+              2,
+              0,
+              20
+            ],
+            "meanRates": [
+              1.538961038961039,
+              0.28246753246753253,
+              0.4025974025974027
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 2,
+            "n": 22,
+            "winRate": 0,
+            "actionCounts": [
+              0,
+              0,
+              22
+            ],
+            "opponentCounts": [
+              22,
+              0,
+              0
+            ],
+            "meanRates": [
+              0.7045454545454545,
+              0.5844155844155844,
+              1.301948051948052
+            ],
+            "zeroRateShare": 0
+          }
+        ],
+        "actions": [
+          1,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          1,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2
+        ],
+        "rewards": [
+          0,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "early": [
+          {
+            "rates": [
+              0,
+              0,
+              0
+            ],
+            "winners": [
+              0,
+              1,
+              2
+            ],
+            "finalAction": 1,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              1.0714285714285714,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.2857142857142857,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0.35714285714285715
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.2142857142857142,
+              0.21428571428571427,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.42857142857142855,
+              1.1428571428571428
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.35714285714285715,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 2,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.21428571428571427,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.14285714285714285,
+              0.2857142857142857
+            ],
+            "winners": [
+              0,
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              1,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.2857142857142857,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.21428571428571427,
+              0.35714285714285715
+            ],
+            "winners": [
+              0,
+              2
+            ],
+            "finalAction": 0,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.9285714285714286,
+              0.21428571428571427,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.7142857142857143,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.21428571428571427,
+              0.5714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.8571428571428571,
+              0,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.42857142857142855,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.2142857142857142,
+              0.35714285714285715,
+              0.5714285714285714
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.2857142857142857,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.2857142857142857,
+              0.5714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.0714285714285714,
+              0.21428571428571427,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.42857142857142855,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.07142857142857142,
+              0.07142857142857142,
+              0.42857142857142855
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0,
+              0,
+              0
+            ],
+            "winners": [
+              0,
+              1,
+              2
+            ],
+            "finalAction": 1,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.07142857142857142,
+              0.5714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.0714285714285714,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.21428571428571427,
+              0.7857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.21428571428571427,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.8571428571428571,
+              0.14285714285714285,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.42857142857142855,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.14285714285714285,
+              0.6428571428571429
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.9285714285714286,
+              0.21428571428571427,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.14285714285714285,
+              0.5714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.07142857142857142,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.5,
+              1.0714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.35714285714285715,
+              0.7857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.1428571428571428,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.35714285714285715,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0,
+              0,
+              0.21428571428571427
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1,
+              0.21428571428571427,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.5714285714285714,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.14285714285714285,
+              0.5714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7142857142857143,
+              0.14285714285714285,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.5,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.14285714285714285,
+              0.6428571428571429
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.7142857142857142,
+              0.5,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.35714285714285715,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0,
+              0,
+              0
+            ],
+            "winners": [
+              0,
+              1,
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.21428571428571427,
+              0.6428571428571429
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 2,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.14285714285714285,
+              0.7857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.21428571428571427,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.2142857142857142,
+              0.2857142857142857,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.21428571428571427,
+              1.0714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0.2857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1,
+              0.35714285714285715,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.21428571428571427,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.8571428571428571,
+              0.07142857142857142,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.5714285714285714,
+              1.0714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.21428571428571427,
+              0.42857142857142855
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.9285714285714286,
+              0.14285714285714285,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.35714285714285715,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.2857142857142857,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.2142857142857142,
+              0.2857142857142857,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7142857142857143,
+              0.5,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.7142857142857143,
+              0.5714285714285714,
+              1.3571428571428572
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.5714285714285714,
+              0.7857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.14285714285714285,
+              0.6428571428571429
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.2142857142857142,
+              0.21428571428571427,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.42857142857142855,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.14285714285714285,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          }
+        ]
+      },
+      "noNoise": {
+        "winRate": 0.5833333333333334,
+        "byObservation": [
+          {
+            "observation": null,
+            "n": 3,
+            "winRate": 0.3333333333333333,
+            "actionCounts": [
+              0,
+              2,
+              1
+            ],
+            "opponentCounts": [
+              2,
+              1,
+              0
+            ],
+            "meanRates": [
+              0,
+              0,
+              0
+            ],
+            "zeroRateShare": 1
+          },
+          {
+            "observation": 0,
+            "n": 25,
+            "winRate": 0.84,
+            "actionCounts": [
+              2,
+              0,
+              23
+            ],
+            "opponentCounts": [
+              0,
+              23,
+              2
+            ],
+            "meanRates": [
+              0.3057142857142856,
+              0.05714285714285713,
+              0.4971428571428571
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 1,
+            "n": 22,
+            "winRate": 0.9090909090909091,
+            "actionCounts": [
+              22,
+              0,
+              0
+            ],
+            "opponentCounts": [
+              2,
+              0,
+              20
+            ],
+            "meanRates": [
+              1.1168831168831168,
+              0.05844155844155843,
+              0.24350649350649353
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 2,
+            "n": 22,
+            "winRate": 0,
+            "actionCounts": [
+              0,
+              0,
+              22
+            ],
+            "opponentCounts": [
+              22,
+              0,
+              0
+            ],
+            "meanRates": [
+              0.672077922077922,
+              0.1818181818181818,
+              0.9577922077922078
+            ],
+            "zeroRateShare": 0
+          }
+        ],
+        "actions": [
+          1,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          1,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2
+        ],
+        "rewards": [
+          0,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1
+        ],
+        "early": null
+      },
+      "baseline": {
+        "random": 0.3472222222222222,
+        "majority": 0.3611111111111111,
+        "lookup": 0.9305555555555556,
+        "policy": {
+          "majority": 1,
+          "lookup": [
+            2,
+            0,
+            1
+          ],
+          "first": 1
+        },
+        "observations": [
+          null,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          null,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          null,
+          0,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0
+        ],
+        "opponents": [
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          0,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "seed": 2,
+      "curve": [
+        0.125,
+        0.375,
+        0.4166666666666667,
+        0.5416666666666666,
+        0.625,
+        0.625,
+        0.5833333333333334,
+        0.6666666666666666,
+        0.625,
+        0.6666666666666666,
+        0.5416666666666666,
+        0.5833333333333334,
+        0.5833333333333334,
+        0.625,
+        0.6666666666666666,
+        0.625,
+        0.6666666666666666,
+        0.5416666666666666,
+        0.625,
+        0.5416666666666666,
+        0.6666666666666666,
+        0.5416666666666666,
+        0.625,
+        0.7083333333333334,
+        0.5833333333333334,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.5416666666666666,
+        0.625,
+        0.625,
+        0.5416666666666666,
+        0.5833333333333334,
+        0.5833333333333334,
+        0.5416666666666666,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.5833333333333334,
+        0.5833333333333334,
+        0.625,
+        0.625
+      ],
+      "weights": [
+        {
+          "episode": 5,
+          "mean": 0.9997839097321239,
+          "changed": 517,
+          "atZero": 74,
+          "atMax": 5
+        },
+        {
+          "episode": 10,
+          "mean": 1.0030791543772553,
+          "changed": 571,
+          "atZero": 0,
+          "atMax": 50
+        },
+        {
+          "episode": 20,
+          "mean": 1.0032283828631077,
+          "changed": 669,
+          "atZero": 0,
+          "atMax": 24
+        },
+        {
+          "episode": 40,
+          "mean": 1.003668435171811,
+          "changed": 829,
+          "atZero": 0,
+          "atMax": 87
+        }
+      ],
+      "noLearning": {
+        "winRate": 0.2222222222222222,
+        "byObservation": [
+          {
+            "observation": null,
+            "n": 3,
+            "winRate": 0.3333333333333333,
+            "actionCounts": [
+              1,
+              2,
+              0
+            ],
+            "opponentCounts": [
+              1,
+              1,
+              1
+            ],
+            "meanRates": [
+              0,
+              0,
+              0
+            ],
+            "zeroRateShare": 1
+          },
+          {
+            "observation": 0,
+            "n": 22,
+            "winRate": 0.5,
+            "actionCounts": [
+              9,
+              2,
+              11
+            ],
+            "opponentCounts": [
+              1,
+              21,
+              0
+            ],
+            "meanRates": [
+              0.5064935064935066,
+              0.3993506493506493,
+              0.45454545454545453
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 1,
+            "n": 24,
+            "winRate": 0.16666666666666666,
+            "actionCounts": [
+              2,
+              0,
+              22
+            ],
+            "opponentCounts": [
+              0,
+              2,
+              22
+            ],
+            "meanRates": [
+              0.1369047619047619,
+              0.06249999999999999,
+              0.3541666666666667
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 2,
+            "n": 23,
+            "winRate": 0,
+            "actionCounts": [
+              0,
+              0,
+              23
+            ],
+            "opponentCounts": [
+              22,
+              0,
+              1
+            ],
+            "meanRates": [
+              0.736024844720497,
+              0.7018633540372671,
+              1.704968944099379
+            ],
+            "zeroRateShare": 0
+          }
+        ],
+        "actions": [
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          1,
+          2,
+          0,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          0,
+          2
+        ],
+        "rewards": [
+          1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          0,
+          1,
+          -1
+        ],
+        "early": null
+      },
+      "trained": {
+        "winRate": 0.5972222222222222,
+        "byObservation": [
+          {
+            "observation": null,
+            "n": 3,
+            "winRate": 0.3333333333333333,
+            "actionCounts": [
+              1,
+              2,
+              0
+            ],
+            "opponentCounts": [
+              1,
+              1,
+              1
+            ],
+            "meanRates": [
+              0,
+              0,
+              0
+            ],
+            "zeroRateShare": 1
+          },
+          {
+            "observation": 0,
+            "n": 22,
+            "winRate": 0.9090909090909091,
+            "actionCounts": [
+              1,
+              0,
+              21
+            ],
+            "opponentCounts": [
+              1,
+              21,
+              0
+            ],
+            "meanRates": [
+              0.41233766233766234,
+              0.27272727272727276,
+              0.8279220779220782
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 1,
+            "n": 24,
+            "winRate": 0.9166666666666666,
+            "actionCounts": [
+              24,
+              0,
+              0
+            ],
+            "opponentCounts": [
+              0,
+              2,
+              22
+            ],
+            "meanRates": [
+              1.6041666666666667,
+              0.2946428571428571,
+              0.41071428571428575
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 2,
+            "n": 23,
+            "winRate": 0,
+            "actionCounts": [
+              0,
+              0,
+              23
+            ],
+            "opponentCounts": [
+              22,
+              0,
+              1
+            ],
+            "meanRates": [
+              0.7763975155279503,
+              0.5465838509316772,
+              1.3198757763975153
+            ],
+            "zeroRateShare": 0
+          }
+        ],
+        "actions": [
+          1,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          1,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2
+        ],
+        "rewards": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "early": [
+          {
+            "rates": [
+              0,
+              0,
+              0
+            ],
+            "winners": [
+              0,
+              1,
+              2
+            ],
+            "finalAction": 1,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0.2857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.8571428571428571,
+              0.07142857142857142,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.07142857142857142,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.07142857142857142,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.5714285714285714,
+              0.42857142857142855,
+              0.42857142857142855
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.35714285714285715,
+              0.7857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "winners": [
+              0,
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              1,
+              0.2857142857142857,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.21428571428571427,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.14285714285714285,
+              0.6428571428571429
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.1428571428571428,
+              0.21428571428571427,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.42857142857142855,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.14285714285714285,
+              0.35714285714285715
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.1428571428571428,
+              0.21428571428571427,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.2857142857142857,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.21428571428571427,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1,
+              0.2857142857142857,
+              0.42857142857142855
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              1.2857142857142858,
+              0.35714285714285715,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.2857142857142857,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 2,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.42857142857142855,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.07142857142857142,
+              0,
+              0.6428571428571429
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7857142857142857,
+              0.2857142857142857,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.35714285714285715,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0,
+              0,
+              0
+            ],
+            "winners": [
+              0,
+              1,
+              2
+            ],
+            "finalAction": 0,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              1,
+              0.2857142857142857,
+              0.42857142857142855
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.5714285714285714,
+              1.0714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.07142857142857142,
+              0.07142857142857142,
+              0.42857142857142855
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1,
+              0.07142857142857142,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.7142857142857143,
+              0.07142857142857142,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.42857142857142855,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0.42857142857142855
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.3571428571428572,
+              0.21428571428571427,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.42857142857142855,
+              1.0714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.14285714285714285,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.35714285714285715,
+              0.7857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.21428571428571427,
+              0.35714285714285715
+            ],
+            "winners": [
+              0,
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              1.2857142857142858,
+              0.21428571428571427,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7857142857142857,
+              0.6428571428571429,
+              1.1428571428571428
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.5,
+              1.1428571428571428
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7142857142857143,
+              0.07142857142857142,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.21428571428571427,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.42857142857142855,
+              1.7142857142857142
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.9285714285714286,
+              0.21428571428571427,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.5,
+              1.2142857142857142
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.07142857142857142,
+              0.35714285714285715
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.1428571428571428,
+              0.21428571428571427,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0,
+              0,
+              0
+            ],
+            "winners": [
+              0,
+              1,
+              2
+            ],
+            "finalAction": 1,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.2857142857142857,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0.35714285714285715
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.0714285714285714,
+              0,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.21428571428571427,
+              0.6428571428571429
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.21428571428571427,
+              0.35714285714285715
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0,
+              0.07142857142857142,
+              0.2857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.0714285714285714,
+              0.2857142857142857,
+              0.42857142857142855
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.21428571428571427,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7142857142857143,
+              0.07142857142857142,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.21428571428571427,
+              0.7857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.14285714285714285,
+              0.2857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.5,
+              0.35714285714285715,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.5,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.21428571428571427,
+              0.6428571428571429
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7857142857142857,
+              0,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.35714285714285715,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.14285714285714285,
+              0.35714285714285715
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.0714285714285714,
+              0.21428571428571427,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.5,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 0,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.2142857142857142,
+              0.35714285714285715,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.2857142857142857,
+              0.6428571428571429
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          }
+        ]
+      },
+      "noNoise": {
+        "winRate": 0.6111111111111112,
+        "byObservation": [
+          {
+            "observation": null,
+            "n": 3,
+            "winRate": 0.3333333333333333,
+            "actionCounts": [
+              1,
+              2,
+              0
+            ],
+            "opponentCounts": [
+              1,
+              1,
+              1
+            ],
+            "meanRates": [
+              0,
+              0,
+              0
+            ],
+            "zeroRateShare": 1
+          },
+          {
+            "observation": 0,
+            "n": 22,
+            "winRate": 0.9545454545454546,
+            "actionCounts": [
+              1,
+              0,
+              21
+            ],
+            "opponentCounts": [
+              1,
+              21,
+              0
+            ],
+            "meanRates": [
+              0.2532467532467532,
+              0.04545454545454545,
+              0.525974025974026
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 1,
+            "n": 24,
+            "winRate": 0.9166666666666666,
+            "actionCounts": [
+              24,
+              0,
+              0
+            ],
+            "opponentCounts": [
+              0,
+              2,
+              22
+            ],
+            "meanRates": [
+              1.232142857142857,
+              0.07440476190476189,
+              0.24107142857142858
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 2,
+            "n": 23,
+            "winRate": 0,
+            "actionCounts": [
+              0,
+              0,
+              23
+            ],
+            "opponentCounts": [
+              22,
+              0,
+              1
+            ],
+            "meanRates": [
+              0.6894409937888197,
+              0.15217391304347827,
+              1.0124223602484472
+            ],
+            "zeroRateShare": 0
+          }
+        ],
+        "actions": [
+          1,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          1,
+          2,
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2
+        ],
+        "rewards": [
+          1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          1,
+          -1,
+          0,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "early": null
+      },
+      "baseline": {
+        "random": 0.3472222222222222,
+        "majority": 0.3333333333333333,
+        "lookup": 0.9166666666666666,
+        "policy": {
+          "majority": 2,
+          "lookup": [
+            2,
+            0,
+            1
+          ],
+          "first": 2
+        },
+        "observations": [
+          null,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          2,
+          0,
+          1,
+          2,
+          null,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          null,
+          2,
+          0,
+          1,
+          2,
+          0,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2
+        ],
+        "opponents": [
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          2,
+          0,
+          1,
+          2,
+          0,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0
+        ]
+      }
+    },
+    {
+      "seed": 3,
+      "curve": [
+        0.125,
+        0.16666666666666666,
+        0.20833333333333334,
+        0.2916666666666667,
+        0.3333333333333333,
+        0.2916666666666667,
+        0.5416666666666666,
+        0.625,
+        0.6666666666666666,
+        0.6666666666666666,
+        0.7083333333333334,
+        0.5833333333333334,
+        0.7083333333333334,
+        0.6666666666666666,
+        0.625,
+        0.625,
+        0.5833333333333334,
+        0.6666666666666666,
+        0.625,
+        0.6666666666666666,
+        0.5833333333333334,
+        0.6666666666666666,
+        0.625,
+        0.5833333333333334,
+        0.5416666666666666,
+        0.5833333333333334,
+        0.5833333333333334,
+        0.625,
+        0.5833333333333334,
+        0.625,
+        0.625,
+        0.625,
+        0.625,
+        0.5833333333333334,
+        0.5833333333333334,
+        0.5833333333333334,
+        0.5833333333333334,
+        0.5833333333333334,
+        0.5833333333333334,
+        0.6666666666666666
+      ],
+      "weights": [
+        {
+          "episode": 5,
+          "mean": 0.9973877716619511,
+          "changed": 466,
+          "atZero": 75,
+          "atMax": 0
+        },
+        {
+          "episode": 10,
+          "mean": 1.0020416818610713,
+          "changed": 536,
+          "atZero": 0,
+          "atMax": 41
+        },
+        {
+          "episode": 20,
+          "mean": 1.0046967097986024,
+          "changed": 627,
+          "atZero": 104,
+          "atMax": 36
+        },
+        {
+          "episode": 40,
+          "mean": 1.0046200598799844,
+          "changed": 731,
+          "atZero": 106,
+          "atMax": 44
+        }
+      ],
+      "noLearning": {
+        "winRate": 0.125,
+        "byObservation": [
+          {
+            "observation": null,
+            "n": 3,
+            "winRate": 0,
+            "actionCounts": [
+              1,
+              0,
+              2
+            ],
+            "opponentCounts": [
+              2,
+              0,
+              1
+            ],
+            "meanRates": [
+              0,
+              0,
+              0
+            ],
+            "zeroRateShare": 1
+          },
+          {
+            "observation": 0,
+            "n": 24,
+            "winRate": 0.25,
+            "actionCounts": [
+              12,
+              6,
+              6
+            ],
+            "opponentCounts": [
+              0,
+              24,
+              0
+            ],
+            "meanRates": [
+              0.5059523809523809,
+              0.4196428571428572,
+              0.44940476190476186
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 1,
+            "n": 23,
+            "winRate": 0.13043478260869565,
+            "actionCounts": [
+              4,
+              0,
+              19
+            ],
+            "opponentCounts": [
+              2,
+              0,
+              21
+            ],
+            "meanRates": [
+              0.12422360248447205,
+              0.09006211180124221,
+              0.3354037267080745
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 2,
+            "n": 22,
+            "winRate": 0,
+            "actionCounts": [
+              0,
+              0,
+              22
+            ],
+            "opponentCounts": [
+              22,
+              0,
+              0
+            ],
+            "meanRates": [
+              0.7435064935064936,
+              0.7207792207792209,
+              1.6233766233766234
+            ],
+            "zeroRateShare": 0
+          }
+        ],
+        "actions": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          2,
+          1,
+          2,
+          2,
+          1,
+          0,
+          0,
+          0,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2,
+          2,
+          1,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          2,
+          2,
+          2,
+          0,
+          0,
+          2,
+          0,
+          2,
+          2,
+          1,
+          2,
+          2,
+          0,
+          0,
+          2,
+          2,
+          2,
+          0,
+          2,
+          2
+        ],
+        "rewards": [
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          1,
+          -1,
+          0,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          -1,
+          -1,
+          -1,
+          0,
+          -1,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          0,
+          -1,
+          0,
+          0,
+          -1,
+          -1,
+          0,
+          1,
+          0,
+          -1,
+          -1,
+          0,
+          -1
+        ],
+        "early": null
+      },
+      "trained": {
+        "winRate": 0.5972222222222222,
+        "byObservation": [
+          {
+            "observation": null,
+            "n": 3,
+            "winRate": 0,
+            "actionCounts": [
+              1,
+              0,
+              2
+            ],
+            "opponentCounts": [
+              2,
+              0,
+              1
+            ],
+            "meanRates": [
+              0,
+              0,
+              0
+            ],
+            "zeroRateShare": 1
+          },
+          {
+            "observation": 0,
+            "n": 24,
+            "winRate": 0.9166666666666666,
+            "actionCounts": [
+              2,
+              0,
+              22
+            ],
+            "opponentCounts": [
+              0,
+              24,
+              0
+            ],
+            "meanRates": [
+              0.6041666666666667,
+              0.30952380952380953,
+              1.0089285714285714
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 1,
+            "n": 23,
+            "winRate": 0.9130434782608695,
+            "actionCounts": [
+              23,
+              0,
+              0
+            ],
+            "opponentCounts": [
+              2,
+              0,
+              21
+            ],
+            "meanRates": [
+              1.6055900621118013,
+              0.3105590062111801,
+              0.4440993788819875
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 2,
+            "n": 22,
+            "winRate": 0,
+            "actionCounts": [
+              0,
+              0,
+              22
+            ],
+            "opponentCounts": [
+              22,
+              0,
+              0
+            ],
+            "meanRates": [
+              0.7532467532467532,
+              0.5811688311688311,
+              1.272727272727273
+            ],
+            "zeroRateShare": 0
+          }
+        ],
+        "actions": [
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          0,
+          0,
+          2,
+          2,
+          0,
+          2
+        ],
+        "rewards": [
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1
+        ],
+        "early": [
+          {
+            "rates": [
+              0,
+              0,
+              0
+            ],
+            "winners": [
+              0,
+              1,
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.2857142857142857,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.07142857142857142,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.8571428571428571,
+              0,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.42857142857142855,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.14285714285714285,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.2857142857142858,
+              0.14285714285714285,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.2857142857142857,
+              0.7857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0.07142857142857142,
+              0.42857142857142855
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7857142857142857,
+              0.07142857142857142,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.35714285714285715,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.7857142857142857,
+              0.5714285714285714,
+              1.1428571428571428
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.07142857142857142,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.35714285714285715,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.21428571428571427,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7857142857142857,
+              0.14285714285714285,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.5,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.14285714285714285,
+              0.7142857142857143
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.2142857142857142,
+              0.2857142857142857,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.2857142857142857,
+              0.7857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0,
+              0.35714285714285715
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1,
+              0.14285714285714285,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.2857142857142857,
+              0.7857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.7142857142857143,
+              0.42857142857142855,
+              1.2142857142857142
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0,
+              0,
+              0
+            ],
+            "winners": [
+              0,
+              1,
+              2
+            ],
+            "finalAction": 0,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.14285714285714285,
+              0.5714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.2857142857142858,
+              0.21428571428571427,
+              0.21428571428571427
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.2857142857142857,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.2857142857142857,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.1428571428571428,
+              0.2857142857142857,
+              0.42857142857142855
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7857142857142857,
+              0.5714285714285714,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.14285714285714285,
+              0,
+              0.2857142857142857
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1,
+              0.21428571428571427,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1,
+              0.6428571428571429,
+              1.1428571428571428
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.07142857142857142,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7857142857142857,
+              0.07142857142857142,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.35714285714285715,
+              0.8571428571428571
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.21428571428571427,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.7857142857142857,
+              0.14285714285714285,
+              0.14285714285714285
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.42857142857142855,
+              0.7142857142857143
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.07142857142857142,
+              0.35714285714285715
+            ],
+            "winners": [
+              0,
+              2
+            ],
+            "finalAction": 0,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              1.2142857142857142,
+              0.14285714285714285,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0.35714285714285715,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.14285714285714285,
+              0.5714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.9285714285714286,
+              0.21428571428571427,
+              0.42857142857142855
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.42857142857142855,
+              1.0714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.2857142857142857,
+              1.0714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.5,
+              0.42857142857142855,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0,
+              0,
+              0
+            ],
+            "winners": [
+              0,
+              1,
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.07142857142857142,
+              0.35714285714285715
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5,
+              0,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.35714285714285715,
+              1
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.2857142857142857,
+              0.14285714285714285,
+              0.5
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.3571428571428572,
+              0.21428571428571427,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.35714285714285715,
+              0.5714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.42857142857142855,
+              1.2142857142857142
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.3571428571428572,
+              0.21428571428571427,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.5714285714285714,
+              0.35714285714285715,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.21428571428571427,
+              0.21428571428571427,
+              0.42857142857142855
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.0714285714285714,
+              0.14285714285714285,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.21428571428571427,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.14285714285714285,
+              0.5714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.7142857142857142,
+              0.5,
+              0.35714285714285715
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.35714285714285715,
+              0.42857142857142855,
+              0.9285714285714286
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.35714285714285715,
+              0.6428571428571429
+            ],
+            "winners": [
+              0,
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              1.5714285714285714,
+              0.21428571428571427,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.21428571428571427,
+              0.42857142857142855
+            ],
+            "winners": [
+              0,
+              2
+            ],
+            "finalAction": 0,
+            "opponent": 1,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.6428571428571429,
+              0.21428571428571427,
+              0.2857142857142857
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.2857142857142857,
+              0.5714285714285714
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.35714285714285715,
+              1.1428571428571428
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 1,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              1.2142857142857142,
+              0.21428571428571427,
+              0.5
+            ],
+            "winners": [
+              0
+            ],
+            "finalAction": 0,
+            "opponent": 2,
+            "wouldWinFirstTie": true
+          },
+          {
+            "rates": [
+              0.42857142857142855,
+              0.35714285714285715,
+              0.6428571428571429
+            ],
+            "winners": [
+              2
+            ],
+            "finalAction": 2,
+            "opponent": 0,
+            "wouldWinFirstTie": false
+          }
+        ]
+      },
+      "noNoise": {
+        "winRate": 0.5277777777777778,
+        "byObservation": [
+          {
+            "observation": null,
+            "n": 3,
+            "winRate": 0,
+            "actionCounts": [
+              1,
+              0,
+              2
+            ],
+            "opponentCounts": [
+              2,
+              0,
+              1
+            ],
+            "meanRates": [
+              0,
+              0,
+              0
+            ],
+            "zeroRateShare": 1
+          },
+          {
+            "observation": 0,
+            "n": 24,
+            "winRate": 0.7083333333333334,
+            "actionCounts": [
+              7,
+              0,
+              17
+            ],
+            "opponentCounts": [
+              0,
+              24,
+              0
+            ],
+            "meanRates": [
+              0.3720238095238095,
+              0.035714285714285705,
+              0.43154761904761907
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 1,
+            "n": 23,
+            "winRate": 0.9130434782608695,
+            "actionCounts": [
+              23,
+              0,
+              0
+            ],
+            "opponentCounts": [
+              2,
+              0,
+              21
+            ],
+            "meanRates": [
+              1.1583850931677018,
+              0.06521739130434781,
+              0.29192546583850926
+            ],
+            "zeroRateShare": 0
+          },
+          {
+            "observation": 2,
+            "n": 22,
+            "winRate": 0,
+            "actionCounts": [
+              2,
+              0,
+              20
+            ],
+            "opponentCounts": [
+              22,
+              0,
+              0
+            ],
+            "meanRates": [
+              0.7272727272727273,
+              0.19155844155844157,
+              0.983766233766234
+            ],
+            "zeroRateShare": 0
+          }
+        ],
+        "actions": [
+          2,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          0,
+          0,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2,
+          0,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          2,
+          0,
+          2,
+          0,
+          2,
+          0,
+          0,
+          2
+        ],
+        "rewards": [
+          0,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          0,
+          1,
+          0,
+          -1,
+          -1,
+          1,
+          -1,
+          -1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          1,
+          -1,
+          1,
+          0,
+          1,
+          1,
+          -1,
+          -1,
+          1,
+          -1
+        ],
+        "early": null
+      },
+      "baseline": {
+        "random": 0.3194444444444444,
+        "majority": 0.3611111111111111,
+        "lookup": 0.9583333333333334,
+        "policy": {
+          "majority": 1,
+          "lookup": [
+            2,
+            0,
+            1
+          ],
+          "first": 1
+        },
+        "observations": [
+          null,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          null,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          null,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2
+        ],
+        "opponents": [
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0,
+          1,
+          0,
+          1,
+          2,
+          0,
+          1,
+          2,
+          0
+        ]
+      }
+    }
+  ]
+}

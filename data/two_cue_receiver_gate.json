@@ -1,0 +1,50 @@
+{
+  "command": "node tools/check_two_cue_receiver_gate.mjs",
+  "ids": [
+    2146,
+    2134
+  ],
+  "thresholds": [
+    0.000368,
+    0.232596
+  ],
+  "method": "Cue-gated projection of existing receiver bits; cue-aware Laplace-smoothed Bernoulli decoder fitted on teachers 501/502 only",
+  "byTeacher": [
+    {
+      "seed": 603,
+      "byCue": [
+        {
+          "cue": 0,
+          "correct": 22,
+          "total": 24
+        },
+        {
+          "cue": 1,
+          "correct": 18,
+          "total": 24
+        }
+      ]
+    },
+    {
+      "seed": 606,
+      "byCue": [
+        {
+          "cue": 0,
+          "correct": 17,
+          "total": 24
+        },
+        {
+          "cue": 1,
+          "correct": 21,
+          "total": 24
+        }
+      ]
+    }
+  ],
+  "meanByCue": [
+    19.5,
+    19.5
+  ],
+  "gate": "mean >=18/24 per cue; each teacher >=16/24 per cue",
+  "pass": true
+}

@@ -1,0 +1,1821 @@
+{
+  "source": "data/rps_teacher_guided_cue_heads.json",
+  "command": "node tools/analyze_rps_teacher_guided_cue_heads.mjs",
+  "checkpoints": "Only initial and final frozen evaluations were archived; no intermediate frozen checkpoint or time-to-criterion measurement.",
+  "attributionLimit": "Cue-head isolation and VPN-spike routing changed together in training. Fixed-MBON-reroute numbers change only evaluation-time routing of already trained heads and cannot isolate the training contributions.",
+  "originalGates": {
+    "cueHeadTeachingPassed": false,
+    "cueHeadTeachingAdvantage": false,
+    "sharedHeadStatus": "failed_retained_learning"
+  },
+  "students": [
+    {
+      "seed": 831,
+      "initialFrozenWins": 24,
+      "archivedSharedCorrect": {
+        "wins": 49,
+        "cueWins": [
+          2,
+          23,
+          23
+        ]
+      },
+      "arms": {
+        "correct": {
+          "training": {
+            "wins": 19,
+            "provisionalByCueAction": [
+              [
+                6,
+                0,
+                1
+              ],
+              [
+                2,
+                6,
+                0
+              ],
+              [
+                0,
+                4,
+                4
+              ]
+            ],
+            "finalByCueAction": [
+              [
+                6,
+                1,
+                0
+              ],
+              [
+                1,
+                5,
+                2
+              ],
+              [
+                1,
+                0,
+                7
+              ]
+            ],
+            "rewardedByCueAction": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                5,
+                0
+              ],
+              [
+                0,
+                0,
+                7
+              ]
+            ],
+            "advice": {
+              "observed": 23,
+              "delivered": 23,
+              "approved": 14,
+              "rejected": 9,
+              "approvedCorrect": 14,
+              "approvedIncorrect": 0,
+              "rejectedCorrect": 2,
+              "rejectedIncorrect": 7,
+              "correctProposals": 16,
+              "changed": 9,
+              "helpfulChanges": 4,
+              "harmfulChanges": 2,
+              "otherChanges": 3,
+              "changedToRewarded": 4,
+              "bitDecoded": 23,
+              "minDnTargetLead": 6
+            },
+            "targetUpdates": {
+              "byCue": [
+                5,
+                7
+              ],
+              "total": 12
+            },
+            "parameters": {
+              "selectedHeadUpdates": [
+                7,
+                8,
+                8,
+                1
+              ],
+              "headParameterNorms": [
+                0.20139494964635224,
+                0.2911780113767339,
+                0.3015734986312492,
+                0.08279966322485242
+              ],
+              "noCrossHeadUpdate": true
+            }
+          },
+          "frozen": {
+            "wins": 70,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  23,
+                  0,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.2121934560796317,
+                  "min": 0.06593807060895618,
+                  "max": 0.46003208179817623
+                },
+                "fixedMbonCue": {
+                  "wins": 19,
+                  "actionChanges": 4,
+                  "cueCorrect": 19
+                }
+              },
+              {
+                "cue": 1,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  23,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.5780129541653691,
+                  "min": 0.26687576211784464,
+                  "max": 0.7059101571650626
+                },
+                "fixedMbonCue": {
+                  "wins": 22,
+                  "actionChanges": 1,
+                  "cueCorrect": 22
+                }
+              },
+              {
+                "cue": 2,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  0,
+                  23
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.6432425430911193,
+                  "min": 0.43894670317983936,
+                  "max": 0.9952501601700059
+                },
+                "fixedMbonCue": {
+                  "wins": 23,
+                  "actionChanges": 0,
+                  "cueCorrect": 23
+                }
+              }
+            ],
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "vpnRoutingCorrect": 69,
+            "analyticalFixedMbonRoute": {
+              "wins": 65,
+              "observedCueErrors": 5,
+              "observedActionChanges": 5,
+              "note": "evaluation-only counterfactual on saved frozen MBON vectors and the already trained heads; no MBON-routed training"
+            }
+          }
+        },
+        "shuffled": {
+          "training": {
+            "wins": 9,
+            "provisionalByCueAction": [
+              [
+                6,
+                0,
+                1
+              ],
+              [
+                5,
+                3,
+                0
+              ],
+              [
+                1,
+                4,
+                3
+              ]
+            ],
+            "finalByCueAction": [
+              [
+                2,
+                2,
+                3
+              ],
+              [
+                3,
+                4,
+                1
+              ],
+              [
+                2,
+                4,
+                2
+              ]
+            ],
+            "rewardedByCueAction": [
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                4,
+                0
+              ],
+              [
+                0,
+                0,
+                2
+              ]
+            ],
+            "advice": {
+              "observed": 23,
+              "delivered": 23,
+              "approved": 14,
+              "rejected": 9,
+              "approvedCorrect": 6,
+              "approvedIncorrect": 8,
+              "rejectedCorrect": 6,
+              "rejectedIncorrect": 3,
+              "correctProposals": 12,
+              "changed": 9,
+              "helpfulChanges": 2,
+              "harmfulChanges": 6,
+              "otherChanges": 1,
+              "changedToRewarded": 2,
+              "bitDecoded": 23,
+              "minDnTargetLead": 6
+            },
+            "targetUpdates": {
+              "byCue": [
+                4,
+                2
+              ],
+              "total": 6
+            },
+            "parameters": {
+              "selectedHeadUpdates": [
+                7,
+                8,
+                8,
+                1
+              ],
+              "headParameterNorms": [
+                0.1577254921010933,
+                0.23778218451728408,
+                0.15523400832679476,
+                0.08279966322485242
+              ],
+              "noCrossHeadUpdate": true
+            }
+          },
+          "frozen": {
+            "wins": 68,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 23,
+                "wins": 21,
+                "actions": [
+                  21,
+                  1,
+                  1
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.04445712888410284,
+                  "min": -0.009409818219311417,
+                  "max": 0.06799169101335988
+                },
+                "fixedMbonCue": {
+                  "wins": 19,
+                  "actionChanges": 2,
+                  "cueCorrect": 19
+                }
+              },
+              {
+                "cue": 1,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  23,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.5068432909421388,
+                  "min": 0.23133748141190597,
+                  "max": 0.6218751963353482
+                },
+                "fixedMbonCue": {
+                  "wins": 22,
+                  "actionChanges": 1,
+                  "cueCorrect": 22
+                }
+              },
+              {
+                "cue": 2,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  0,
+                  23
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.2612478862560238,
+                  "min": 0.1726491917425447,
+                  "max": 0.4113220856652384
+                },
+                "fixedMbonCue": {
+                  "wins": 23,
+                  "actionChanges": 0,
+                  "cueCorrect": 23
+                }
+              }
+            ],
+            "actions": [
+              21,
+              24,
+              24
+            ],
+            "vpnRoutingCorrect": 69,
+            "analyticalFixedMbonRoute": {
+              "wins": 65,
+              "observedCueErrors": 5,
+              "observedActionChanges": 3,
+              "note": "evaluation-only counterfactual on saved frozen MBON vectors and the already trained heads; no MBON-routed training"
+            }
+          }
+        },
+        "untrained": {
+          "training": {
+            "wins": 6,
+            "provisionalByCueAction": [
+              [
+                5,
+                1,
+                1
+              ],
+              [
+                2,
+                6,
+                0
+              ],
+              [
+                0,
+                4,
+                4
+              ]
+            ],
+            "finalByCueAction": [
+              [
+                1,
+                3,
+                3
+              ],
+              [
+                3,
+                1,
+                4
+              ],
+              [
+                3,
+                2,
+                3
+              ]
+            ],
+            "rewardedByCueAction": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                3
+              ]
+            ],
+            "advice": {
+              "observed": 23,
+              "delivered": 23,
+              "approved": 0,
+              "rejected": 23,
+              "approvedCorrect": 0,
+              "approvedIncorrect": 0,
+              "rejectedCorrect": 15,
+              "rejectedIncorrect": 8,
+              "correctProposals": 15,
+              "changed": 23,
+              "helpfulChanges": 5,
+              "harmfulChanges": 15,
+              "otherChanges": 3,
+              "changedToRewarded": 5,
+              "bitDecoded": 23,
+              "minDnTargetLead": 6
+            },
+            "targetUpdates": {
+              "byCue": [
+                1,
+                3
+              ],
+              "total": 4
+            },
+            "parameters": {
+              "selectedHeadUpdates": [
+                7,
+                8,
+                8,
+                1
+              ],
+              "headParameterNorms": [
+                0.15562891984948632,
+                0.23331899686017546,
+                0.21904403152047092,
+                0.08279966322485242
+              ],
+              "noCrossHeadUpdate": true
+            }
+          },
+          "frozen": {
+            "wins": 68,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 23,
+                "wins": 21,
+                "actions": [
+                  21,
+                  1,
+                  1
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.023817041812684535,
+                  "min": -0.009210222462391525,
+                  "max": 0.041734677298446494
+                },
+                "fixedMbonCue": {
+                  "wins": 19,
+                  "actionChanges": 2,
+                  "cueCorrect": 19
+                }
+              },
+              {
+                "cue": 1,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  23,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.15945074170854526,
+                  "min": 0.07639383932033679,
+                  "max": 0.19174770245135203
+                },
+                "fixedMbonCue": {
+                  "wins": 22,
+                  "actionChanges": 1,
+                  "cueCorrect": 22
+                }
+              },
+              {
+                "cue": 2,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  0,
+                  23
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.3418718829851754,
+                  "min": 0.23229878782037264,
+                  "max": 0.5308139110840286
+                },
+                "fixedMbonCue": {
+                  "wins": 23,
+                  "actionChanges": 0,
+                  "cueCorrect": 23
+                }
+              }
+            ],
+            "actions": [
+              21,
+              24,
+              24
+            ],
+            "vpnRoutingCorrect": 69,
+            "analyticalFixedMbonRoute": {
+              "wins": 65,
+              "observedCueErrors": 5,
+              "observedActionChanges": 3,
+              "note": "evaluation-only counterfactual on saved frozen MBON vectors and the already trained heads; no MBON-routed training"
+            }
+          }
+        },
+        "disconnected": {
+          "training": {
+            "wins": 7,
+            "provisionalByCueAction": [
+              [
+                6,
+                0,
+                1
+              ],
+              [
+                8,
+                0,
+                0
+              ],
+              [
+                1,
+                7,
+                0
+              ]
+            ],
+            "finalByCueAction": [
+              [
+                6,
+                0,
+                1
+              ],
+              [
+                8,
+                0,
+                0
+              ],
+              [
+                1,
+                7,
+                0
+              ]
+            ],
+            "rewardedByCueAction": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "advice": {
+              "observed": 23,
+              "delivered": 0,
+              "approved": 0,
+              "rejected": 0,
+              "approvedCorrect": 0,
+              "approvedIncorrect": 0,
+              "rejectedCorrect": 0,
+              "rejectedIncorrect": 0,
+              "correctProposals": 6,
+              "changed": 0,
+              "helpfulChanges": 0,
+              "harmfulChanges": 0,
+              "otherChanges": 0,
+              "changedToRewarded": 0,
+              "bitDecoded": 0,
+              "minDnTargetLead": null
+            },
+            "targetUpdates": {
+              "byCue": [
+                0,
+                0
+              ],
+              "total": 0
+            },
+            "parameters": {
+              "selectedHeadUpdates": [
+                7,
+                8,
+                8,
+                1
+              ],
+              "headParameterNorms": [
+                0.19887752808764805,
+                0,
+                0.05840308354466261,
+                0.08279966322485242
+              ],
+              "noCrossHeadUpdate": true
+            }
+          },
+          "frozen": {
+            "wins": 24,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  23,
+                  0,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.2121934560796317,
+                  "min": 0.06593807060895618,
+                  "max": 0.46003208179817623
+                },
+                "fixedMbonCue": {
+                  "wins": 21,
+                  "actionChanges": 2,
+                  "cueCorrect": 19
+                }
+              },
+              {
+                "cue": 1,
+                "n": 23,
+                "wins": 0,
+                "actions": [
+                  23,
+                  0,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0,
+                  "min": 0,
+                  "max": 0
+                },
+                "fixedMbonCue": {
+                  "wins": 0,
+                  "actionChanges": 0,
+                  "cueCorrect": 22
+                }
+              },
+              {
+                "cue": 2,
+                "n": 23,
+                "wins": 0,
+                "actions": [
+                  0,
+                  23,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0,
+                  "min": 0,
+                  "max": 0
+                },
+                "fixedMbonCue": {
+                  "wins": 0,
+                  "actionChanges": 0,
+                  "cueCorrect": 23
+                }
+              }
+            ],
+            "actions": [
+              46,
+              23,
+              0
+            ],
+            "vpnRoutingCorrect": 69,
+            "analyticalFixedMbonRoute": {
+              "wins": 22,
+              "observedCueErrors": 5,
+              "observedActionChanges": 2,
+              "note": "evaluation-only counterfactual on saved frozen MBON vectors and the already trained heads; no MBON-routed training"
+            }
+          }
+        },
+        "lookup": {
+          "training": {
+            "wins": 21,
+            "provisionalByCueAction": [
+              [
+                6,
+                0,
+                1
+              ],
+              [
+                2,
+                6,
+                0
+              ],
+              [
+                0,
+                4,
+                4
+              ]
+            ],
+            "finalByCueAction": [
+              [
+                6,
+                1,
+                0
+              ],
+              [
+                0,
+                7,
+                1
+              ],
+              [
+                1,
+                0,
+                7
+              ]
+            ],
+            "rewardedByCueAction": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                7,
+                0
+              ],
+              [
+                0,
+                0,
+                7
+              ]
+            ],
+            "advice": {
+              "observed": 23,
+              "delivered": 23,
+              "approved": 16,
+              "rejected": 7,
+              "approvedCorrect": 16,
+              "approvedIncorrect": 0,
+              "rejectedCorrect": 0,
+              "rejectedIncorrect": 7,
+              "correctProposals": 16,
+              "changed": 7,
+              "helpfulChanges": 4,
+              "harmfulChanges": 0,
+              "otherChanges": 3,
+              "changedToRewarded": 4,
+              "bitDecoded": 23,
+              "minDnTargetLead": 6
+            },
+            "targetUpdates": {
+              "byCue": [
+                7,
+                7
+              ],
+              "total": 14
+            },
+            "parameters": {
+              "selectedHeadUpdates": [
+                7,
+                8,
+                8,
+                1
+              ],
+              "headParameterNorms": [
+                0.20139494964635224,
+                0.3159965359880403,
+                0.3015734986312492,
+                0.08279966322485242
+              ],
+              "noCrossHeadUpdate": true
+            }
+          },
+          "frozen": {
+            "wins": 70,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  23,
+                  0,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.2121934560796317,
+                  "min": 0.06593807060895618,
+                  "max": 0.46003208179817623
+                },
+                "fixedMbonCue": {
+                  "wins": 19,
+                  "actionChanges": 4,
+                  "cueCorrect": 19
+                }
+              },
+              {
+                "cue": 1,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  23,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.685817772187104,
+                  "min": 0.31548988021739655,
+                  "max": 0.8388181476005859
+                },
+                "fixedMbonCue": {
+                  "wins": 22,
+                  "actionChanges": 1,
+                  "cueCorrect": 22
+                }
+              },
+              {
+                "cue": 2,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  0,
+                  23
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.6432425430911193,
+                  "min": 0.43894670317983936,
+                  "max": 0.9952501601700059
+                },
+                "fixedMbonCue": {
+                  "wins": 23,
+                  "actionChanges": 0,
+                  "cueCorrect": 23
+                }
+              }
+            ],
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "vpnRoutingCorrect": 69,
+            "analyticalFixedMbonRoute": {
+              "wins": 65,
+              "observedCueErrors": 5,
+              "observedActionChanges": 5,
+              "note": "evaluation-only counterfactual on saved frozen MBON vectors and the already trained heads; no MBON-routed training"
+            }
+          }
+        }
+      },
+      "correctMinusShuffled": {
+        "trainingWins": 10,
+        "targetUpdates": 6,
+        "frozenWins": 2,
+        "frozenMarginByCue": [
+          0.16773632719552886,
+          0.07116966322323037,
+          0.3819946568350955
+        ]
+      }
+    },
+    {
+      "seed": 832,
+      "initialFrozenWins": 24,
+      "archivedSharedCorrect": {
+        "wins": 56,
+        "cueWins": [
+          10,
+          22,
+          23
+        ]
+      },
+      "arms": {
+        "correct": {
+          "training": {
+            "wins": 15,
+            "provisionalByCueAction": [
+              [
+                5,
+                0,
+                2
+              ],
+              [
+                2,
+                6,
+                0
+              ],
+              [
+                5,
+                0,
+                3
+              ]
+            ],
+            "finalByCueAction": [
+              [
+                6,
+                1,
+                0
+              ],
+              [
+                2,
+                5,
+                1
+              ],
+              [
+                0,
+                4,
+                4
+              ]
+            ],
+            "rewardedByCueAction": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                5,
+                0
+              ],
+              [
+                0,
+                0,
+                4
+              ]
+            ],
+            "advice": {
+              "observed": 23,
+              "delivered": 23,
+              "approved": 12,
+              "rejected": 11,
+              "approvedCorrect": 12,
+              "approvedIncorrect": 0,
+              "rejectedCorrect": 2,
+              "rejectedIncorrect": 9,
+              "correctProposals": 14,
+              "changed": 11,
+              "helpfulChanges": 3,
+              "harmfulChanges": 2,
+              "otherChanges": 6,
+              "changedToRewarded": 3,
+              "bitDecoded": 23,
+              "minDnTargetLead": 5
+            },
+            "targetUpdates": {
+              "byCue": [
+                5,
+                4
+              ],
+              "total": 9
+            },
+            "parameters": {
+              "selectedHeadUpdates": [
+                7,
+                8,
+                8,
+                1
+              ],
+              "headParameterNorms": [
+                0.191582352597457,
+                0.24940071077491816,
+                0.21605078283421772,
+                0.08279966322485242
+              ],
+              "noCrossHeadUpdate": true
+            }
+          },
+          "frozen": {
+            "wins": 70,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  23,
+                  0,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.1968107799948875,
+                  "min": 0.10468484066790254,
+                  "max": 0.3494247103546132
+                },
+                "fixedMbonCue": {
+                  "wins": 19,
+                  "actionChanges": 4,
+                  "cueCorrect": 19
+                }
+              },
+              {
+                "cue": 1,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  23,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.5641975504335296,
+                  "min": 0.12259488093353793,
+                  "max": 0.6239985144370527
+                },
+                "fixedMbonCue": {
+                  "wins": 22,
+                  "actionChanges": 1,
+                  "cueCorrect": 22
+                }
+              },
+              {
+                "cue": 2,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  0,
+                  23
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.4264383104714285,
+                  "min": 0.24664643459884095,
+                  "max": 0.6489803924654032
+                },
+                "fixedMbonCue": {
+                  "wins": 23,
+                  "actionChanges": 0,
+                  "cueCorrect": 23
+                }
+              }
+            ],
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "vpnRoutingCorrect": 69,
+            "analyticalFixedMbonRoute": {
+              "wins": 65,
+              "observedCueErrors": 5,
+              "observedActionChanges": 5,
+              "note": "evaluation-only counterfactual on saved frozen MBON vectors and the already trained heads; no MBON-routed training"
+            }
+          }
+        },
+        "shuffled": {
+          "training": {
+            "wins": 6,
+            "provisionalByCueAction": [
+              [
+                5,
+                0,
+                2
+              ],
+              [
+                2,
+                6,
+                0
+              ],
+              [
+                1,
+                7,
+                0
+              ]
+            ],
+            "finalByCueAction": [
+              [
+                2,
+                3,
+                2
+              ],
+              [
+                4,
+                3,
+                1
+              ],
+              [
+                3,
+                4,
+                1
+              ]
+            ],
+            "rewardedByCueAction": [
+              [
+                2,
+                0,
+                0
+              ],
+              [
+                0,
+                3,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "advice": {
+              "observed": 23,
+              "delivered": 23,
+              "approved": 12,
+              "rejected": 11,
+              "approvedCorrect": 4,
+              "approvedIncorrect": 8,
+              "rejectedCorrect": 7,
+              "rejectedIncorrect": 4,
+              "correctProposals": 11,
+              "changed": 11,
+              "helpfulChanges": 2,
+              "harmfulChanges": 7,
+              "otherChanges": 2,
+              "changedToRewarded": 2,
+              "bitDecoded": 23,
+              "minDnTargetLead": 5
+            },
+            "targetUpdates": {
+              "byCue": [
+                3,
+                1
+              ],
+              "total": 4
+            },
+            "parameters": {
+              "selectedHeadUpdates": [
+                7,
+                8,
+                8,
+                1
+              ],
+              "headParameterNorms": [
+                0.12552936089924727,
+                0.19150491905767175,
+                0.1826264427887126,
+                0.08279966322485242
+              ],
+              "noCrossHeadUpdate": true
+            }
+          },
+          "frozen": {
+            "wins": 70,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  23,
+                  0,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.07586313922909178,
+                  "min": 0.012607148091424582,
+                  "max": 0.19012624900717473
+                },
+                "fixedMbonCue": {
+                  "wins": 19,
+                  "actionChanges": 4,
+                  "cueCorrect": 19
+                }
+              },
+              {
+                "cue": 1,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  23,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.4069028658473282,
+                  "min": 0.08389022183413317,
+                  "max": 0.4502424316491068
+                },
+                "fixedMbonCue": {
+                  "wins": 22,
+                  "actionChanges": 1,
+                  "cueCorrect": 22
+                }
+              },
+              {
+                "cue": 2,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  0,
+                  23
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.1486414336133286,
+                  "min": 0.08348320000336631,
+                  "max": 0.23628312802918724
+                },
+                "fixedMbonCue": {
+                  "wins": 23,
+                  "actionChanges": 0,
+                  "cueCorrect": 23
+                }
+              }
+            ],
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "vpnRoutingCorrect": 69,
+            "analyticalFixedMbonRoute": {
+              "wins": 65,
+              "observedCueErrors": 5,
+              "observedActionChanges": 5,
+              "note": "evaluation-only counterfactual on saved frozen MBON vectors and the already trained heads; no MBON-routed training"
+            }
+          }
+        },
+        "untrained": {
+          "training": {
+            "wins": 3,
+            "provisionalByCueAction": [
+              [
+                5,
+                0,
+                2
+              ],
+              [
+                2,
+                6,
+                0
+              ],
+              [
+                5,
+                0,
+                3
+              ]
+            ],
+            "finalByCueAction": [
+              [
+                1,
+                6,
+                0
+              ],
+              [
+                5,
+                1,
+                2
+              ],
+              [
+                0,
+                7,
+                1
+              ]
+            ],
+            "rewardedByCueAction": [
+              [
+                1,
+                0,
+                0
+              ],
+              [
+                0,
+                1,
+                0
+              ],
+              [
+                0,
+                0,
+                1
+              ]
+            ],
+            "advice": {
+              "observed": 23,
+              "delivered": 23,
+              "approved": 0,
+              "rejected": 23,
+              "approvedCorrect": 0,
+              "approvedIncorrect": 0,
+              "rejectedCorrect": 14,
+              "rejectedIncorrect": 9,
+              "correctProposals": 14,
+              "changed": 23,
+              "helpfulChanges": 3,
+              "harmfulChanges": 14,
+              "otherChanges": 6,
+              "changedToRewarded": 3,
+              "bitDecoded": 23,
+              "minDnTargetLead": 5
+            },
+            "targetUpdates": {
+              "byCue": [
+                1,
+                1
+              ],
+              "total": 2
+            },
+            "parameters": {
+              "selectedHeadUpdates": [
+                7,
+                8,
+                8,
+                1
+              ],
+              "headParameterNorms": [
+                0.1954950293029231,
+                0.12133370441210857,
+                0.06222201542377815,
+                0.08279966322485242
+              ],
+              "noCrossHeadUpdate": true
+            }
+          },
+          "frozen": {
+            "wins": 69,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 23,
+                "wins": 22,
+                "actions": [
+                  22,
+                  0,
+                  1
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.03711165743749368,
+                  "min": -0.0004136358590368719,
+                  "max": 0.105968457237255
+                },
+                "fixedMbonCue": {
+                  "wins": 19,
+                  "actionChanges": 4,
+                  "cueCorrect": 19
+                }
+              },
+              {
+                "cue": 1,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  23,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.14080968900031746,
+                  "min": 0.03385500014808899,
+                  "max": 0.15356298379805447
+                },
+                "fixedMbonCue": {
+                  "wins": 22,
+                  "actionChanges": 1,
+                  "cueCorrect": 22
+                }
+              },
+              {
+                "cue": 2,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  0,
+                  23
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.11294931903364827,
+                  "min": 0.06629897294432749,
+                  "max": 0.16427545599905835
+                },
+                "fixedMbonCue": {
+                  "wins": 23,
+                  "actionChanges": 0,
+                  "cueCorrect": 23
+                }
+              }
+            ],
+            "actions": [
+              22,
+              23,
+              24
+            ],
+            "vpnRoutingCorrect": 69,
+            "analyticalFixedMbonRoute": {
+              "wins": 65,
+              "observedCueErrors": 5,
+              "observedActionChanges": 5,
+              "note": "evaluation-only counterfactual on saved frozen MBON vectors and the already trained heads; no MBON-routed training"
+            }
+          }
+        },
+        "disconnected": {
+          "training": {
+            "wins": 5,
+            "provisionalByCueAction": [
+              [
+                5,
+                0,
+                2
+              ],
+              [
+                8,
+                0,
+                0
+              ],
+              [
+                1,
+                7,
+                0
+              ]
+            ],
+            "finalByCueAction": [
+              [
+                5,
+                0,
+                2
+              ],
+              [
+                8,
+                0,
+                0
+              ],
+              [
+                1,
+                7,
+                0
+              ]
+            ],
+            "rewardedByCueAction": [
+              [
+                5,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ],
+              [
+                0,
+                0,
+                0
+              ]
+            ],
+            "advice": {
+              "observed": 23,
+              "delivered": 0,
+              "approved": 0,
+              "rejected": 0,
+              "approvedCorrect": 0,
+              "approvedIncorrect": 0,
+              "rejectedCorrect": 0,
+              "rejectedIncorrect": 0,
+              "correctProposals": 5,
+              "changed": 0,
+              "helpfulChanges": 0,
+              "harmfulChanges": 0,
+              "otherChanges": 0,
+              "changedToRewarded": 0,
+              "bitDecoded": 0,
+              "minDnTargetLead": null
+            },
+            "targetUpdates": {
+              "byCue": [
+                0,
+                0
+              ],
+              "total": 0
+            },
+            "parameters": {
+              "selectedHeadUpdates": [
+                7,
+                8,
+                8,
+                1
+              ],
+              "headParameterNorms": [
+                0.1531210380903346,
+                0,
+                0.06933515449199822,
+                0.08279966322485242
+              ],
+              "noCrossHeadUpdate": true
+            }
+          },
+          "frozen": {
+            "wins": 24,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  23,
+                  0,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.16685996838553688,
+                  "min": 0.10939614851990533,
+                  "max": 0.2625217506198522
+                },
+                "fixedMbonCue": {
+                  "wins": 21,
+                  "actionChanges": 2,
+                  "cueCorrect": 19
+                }
+              },
+              {
+                "cue": 1,
+                "n": 23,
+                "wins": 0,
+                "actions": [
+                  23,
+                  0,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0,
+                  "min": 0,
+                  "max": 0
+                },
+                "fixedMbonCue": {
+                  "wins": 0,
+                  "actionChanges": 0,
+                  "cueCorrect": 22
+                }
+              },
+              {
+                "cue": 2,
+                "n": 23,
+                "wins": 0,
+                "actions": [
+                  0,
+                  23,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0,
+                  "min": 0,
+                  "max": 0
+                },
+                "fixedMbonCue": {
+                  "wins": 0,
+                  "actionChanges": 0,
+                  "cueCorrect": 23
+                }
+              }
+            ],
+            "actions": [
+              46,
+              23,
+              0
+            ],
+            "vpnRoutingCorrect": 69,
+            "analyticalFixedMbonRoute": {
+              "wins": 22,
+              "observedCueErrors": 5,
+              "observedActionChanges": 2,
+              "note": "evaluation-only counterfactual on saved frozen MBON vectors and the already trained heads; no MBON-routed training"
+            }
+          }
+        },
+        "lookup": {
+          "training": {
+            "wins": 17,
+            "provisionalByCueAction": [
+              [
+                5,
+                0,
+                2
+              ],
+              [
+                2,
+                6,
+                0
+              ],
+              [
+                5,
+                0,
+                3
+              ]
+            ],
+            "finalByCueAction": [
+              [
+                6,
+                1,
+                0
+              ],
+              [
+                0,
+                7,
+                1
+              ],
+              [
+                0,
+                4,
+                4
+              ]
+            ],
+            "rewardedByCueAction": [
+              [
+                6,
+                0,
+                0
+              ],
+              [
+                0,
+                7,
+                0
+              ],
+              [
+                0,
+                0,
+                4
+              ]
+            ],
+            "advice": {
+              "observed": 23,
+              "delivered": 23,
+              "approved": 14,
+              "rejected": 9,
+              "approvedCorrect": 14,
+              "approvedIncorrect": 0,
+              "rejectedCorrect": 0,
+              "rejectedIncorrect": 9,
+              "correctProposals": 14,
+              "changed": 9,
+              "helpfulChanges": 3,
+              "harmfulChanges": 0,
+              "otherChanges": 6,
+              "changedToRewarded": 3,
+              "bitDecoded": 23,
+              "minDnTargetLead": 5
+            },
+            "targetUpdates": {
+              "byCue": [
+                7,
+                4
+              ],
+              "total": 11
+            },
+            "parameters": {
+              "selectedHeadUpdates": [
+                7,
+                8,
+                8,
+                1
+              ],
+              "headParameterNorms": [
+                0.191582352597457,
+                0.3018103403393592,
+                0.21605078283421772,
+                0.08279966322485242
+              ],
+              "noCrossHeadUpdate": true
+            }
+          },
+          "frozen": {
+            "wins": 70,
+            "byCue": [
+              {
+                "cue": 0,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  23,
+                  0,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.1968107799948875,
+                  "min": 0.10468484066790254,
+                  "max": 0.3494247103546132
+                },
+                "fixedMbonCue": {
+                  "wins": 19,
+                  "actionChanges": 4,
+                  "cueCorrect": 19
+                }
+              },
+              {
+                "cue": 1,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  23,
+                  0
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.6853034449883267,
+                  "min": 0.1446483486418425,
+                  "max": 0.759325014227487
+                },
+                "fixedMbonCue": {
+                  "wins": 22,
+                  "actionChanges": 1,
+                  "cueCorrect": 22
+                }
+              },
+              {
+                "cue": 2,
+                "n": 23,
+                "wins": 23,
+                "actions": [
+                  0,
+                  0,
+                  23
+                ],
+                "margin": {
+                  "n": 23,
+                  "mean": 0.4264383104714285,
+                  "min": 0.24664643459884095,
+                  "max": 0.6489803924654032
+                },
+                "fixedMbonCue": {
+                  "wins": 23,
+                  "actionChanges": 0,
+                  "cueCorrect": 23
+                }
+              }
+            ],
+            "actions": [
+              23,
+              23,
+              23
+            ],
+            "vpnRoutingCorrect": 69,
+            "analyticalFixedMbonRoute": {
+              "wins": 65,
+              "observedCueErrors": 5,
+              "observedActionChanges": 5,
+              "note": "evaluation-only counterfactual on saved frozen MBON vectors and the already trained heads; no MBON-routed training"
+            }
+          }
+        }
+      },
+      "correctMinusShuffled": {
+        "trainingWins": 9,
+        "targetUpdates": 5,
+        "frozenWins": 0,
+        "frozenMarginByCue": [
+          0.12094764076579571,
+          0.15729468458620138,
+          0.2777968768580999
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "status": "stopped_before_protocol_or_training",
+  "experimentRun": false,
+  "reason": "No archived single frozen teacher is validated to emit the fixed cue-relative Q bit for both mappings under a mixed A/B schedule. Switching between separately trained A and B teachers according to the hidden mapping would require privileged teacher selection.",
+  "fixedSourceRule": "bit = 1 if Q_c > max(Q_other two actions), else 0",
+  "independentTeacherArchives": {
+    "A": [781, 782, 783],
+    "B": [784, 785, 786, 791, 792, 793],
+    "sources": [
+      "data/rps_independent_teachers.json",
+      "data/rps_strategy_b_replication.json",
+      "data/rps_hidden_strategy_continuous_source.json"
+    ]
+  },
+  "singleTeacherReversalArchive": {
+    "source": "data/rps_blocked_teacher_source.json",
+    "adaptationPassed": false,
+    "sourceInformationStatus": "not_evaluated",
+    "teachers": [
+      { "seed": 761, "A_after_6_wins_out_of_24": 13, "B_after_12_wins_out_of_24": 20, "passed": false },
+      { "seed": 762, "A_after_6_wins_out_of_24": 14, "B_after_12_wins_out_of_24": 16, "passed": false },
+      { "seed": 763, "A_after_6_wins_out_of_24": 22, "B_after_12_wins_out_of_24": 15, "passed": false }
+    ]
+  },
+  "previousResultsPreserved": {
+    "offlineInteractionGatePassed": true,
+    "earlierStudentTeachingPilotPassed": false,
+    "frozenForcedBitGatePassed": false
+  },
+  "actions": {
+    "neuralSimulations": 0,
+    "studentTrainingRuns": 0,
+    "teacherTrainingRuns": 0,
+    "controllerChanges": 0,
+    "newStudentOrTeacherSeedsSelected": false
+  },
+  "nextPrerequisite": "A separately designed, prospective nonprivileged single-teacher mixed-strategy source validation would be required before any reward-only student feasibility test. It is not run here."
+}

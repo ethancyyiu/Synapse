@@ -1,0 +1,587 @@
+{
+ "protocol": "docs/action-preference-cohort-protocol.md",
+ "pairsFound": 20,
+ "completed": 19,
+ "stopped": {
+  "stopped_teacher": 1
+ },
+ "perPairPassed": 15,
+ "passRate": 0.7894736842105263,
+ "meanAdvantage": 10.342105263157896,
+ "bootstrap95": [
+  7.25,
+  13.578947368421053
+ ],
+ "finalMean": {
+  "trained": 70,
+  "alone": 70,
+  "untrained": 24,
+  "shuffled": 69.6842105263158,
+  "generic": 69.84210526315789
+ },
+ "cohortPassed": true,
+ "pairs": [
+  {
+   "file": "pair_00.json",
+   "status": "passed",
+   "teacherWins": 65,
+   "completed": true,
+   "passed": true,
+   "advantage": 5.75,
+   "early": {
+    "trained": 69.5,
+    "alone": 63.5,
+    "untrained": 24.5,
+    "shuffled": 53.5,
+    "generic": 63.75
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 12,
+    "untrained": null,
+    "shuffled": 12,
+    "generic": 12
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_01.json",
+   "status": "passed",
+   "teacherWins": 63,
+   "completed": true,
+   "passed": true,
+   "advantage": 9.5,
+   "early": {
+    "trained": 68,
+    "alone": 24,
+    "untrained": 24,
+    "shuffled": 58.5,
+    "generic": 20
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 12,
+    "generic": 288
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_02.json",
+   "status": "passed",
+   "teacherWins": 62,
+   "completed": true,
+   "passed": true,
+   "advantage": 17.25,
+   "early": {
+    "trained": 70,
+    "alone": 52.75,
+    "untrained": 24,
+    "shuffled": 36.5,
+    "generic": 52.75
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 24,
+    "untrained": null,
+    "shuffled": 96,
+    "generic": 24
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_03.json",
+   "status": "passed",
+   "teacherWins": 68,
+   "completed": true,
+   "passed": true,
+   "advantage": 11,
+   "early": {
+    "trained": 69,
+    "alone": 24,
+    "untrained": 24,
+    "shuffled": 58,
+    "generic": 48.75
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 12,
+    "generic": 24
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 69,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_04.json",
+   "status": "stopped_teacher",
+   "teacherWins": 53,
+   "completed": false,
+   "passed": false,
+   "advantage": null,
+   "early": null,
+   "first58": null,
+   "final": null
+  },
+  {
+   "file": "pair_05.json",
+   "status": "passed",
+   "teacherWins": 67,
+   "completed": true,
+   "passed": true,
+   "advantage": 19.75,
+   "early": {
+    "trained": 70,
+    "alone": 35.5,
+    "untrained": 24,
+    "shuffled": 50.25,
+    "generic": 46.5
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 288,
+    "untrained": null,
+    "shuffled": 96,
+    "generic": 24
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_06.json",
+   "status": "failed",
+   "teacherWins": 66,
+   "completed": true,
+   "passed": false,
+   "advantage": 0,
+   "early": {
+    "trained": 64.25,
+    "alone": 41,
+    "untrained": 23.75,
+    "shuffled": 57.25,
+    "generic": 64.25
+   },
+   "first58": {
+    "trained": 12,
+    "alone": 48,
+    "untrained": null,
+    "shuffled": 12,
+    "generic": 12
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_07.json",
+   "status": "failed",
+   "teacherWins": 67,
+   "completed": true,
+   "passed": false,
+   "advantage": 0.25,
+   "early": {
+    "trained": 69.5,
+    "alone": 29.25,
+    "untrained": 23.5,
+    "shuffled": 58.5,
+    "generic": 69.25
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 24,
+    "generic": 6
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 65,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_08.json",
+   "status": "passed",
+   "teacherWins": 63,
+   "completed": true,
+   "passed": true,
+   "advantage": 5.25,
+   "early": {
+    "trained": 69,
+    "alone": 23.25,
+    "untrained": 23.25,
+    "shuffled": 46,
+    "generic": 63.75
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 96,
+    "generic": 12
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 69
+   }
+  },
+  {
+   "file": "pair_09.json",
+   "status": "passed",
+   "teacherWins": 63,
+   "completed": true,
+   "passed": true,
+   "advantage": 21.5,
+   "early": {
+    "trained": 70,
+    "alone": 24,
+    "untrained": 24,
+    "shuffled": 48.5,
+    "generic": 47
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 24,
+    "generic": 48
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_10.json",
+   "status": "passed",
+   "teacherWins": 66,
+   "completed": true,
+   "passed": true,
+   "advantage": 16.5,
+   "early": {
+    "trained": 69,
+    "alone": 41.25,
+    "untrained": 25,
+    "shuffled": 41.75,
+    "generic": 52.5
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 96,
+    "generic": 24
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_11.json",
+   "status": "passed",
+   "teacherWins": 66,
+   "completed": true,
+   "passed": true,
+   "advantage": 10.5,
+   "early": {
+    "trained": 70,
+    "alone": 35.5,
+    "untrained": 24,
+    "shuffled": 52.75,
+    "generic": 59.5
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 48,
+    "generic": 12
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_12.json",
+   "status": "passed",
+   "teacherWins": 66,
+   "completed": true,
+   "passed": true,
+   "advantage": 8,
+   "early": {
+    "trained": 70,
+    "alone": 35.5,
+    "untrained": 24,
+    "shuffled": 62,
+    "generic": 35.5
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 288,
+    "untrained": null,
+    "shuffled": 12,
+    "generic": 288
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_13.json",
+   "status": "failed",
+   "teacherWins": 62,
+   "completed": true,
+   "passed": false,
+   "advantage": 6,
+   "early": {
+    "trained": 64.25,
+    "alone": 41.25,
+    "untrained": 24,
+    "shuffled": 58.25,
+    "generic": 52.75
+   },
+   "first58": {
+    "trained": 12,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 12,
+    "generic": 48
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 69
+   }
+  },
+  {
+   "file": "pair_14.json",
+   "status": "passed",
+   "teacherWins": 63,
+   "completed": true,
+   "passed": true,
+   "advantage": 24.25,
+   "early": {
+    "trained": 70,
+    "alone": 35.5,
+    "untrained": 24,
+    "shuffled": 31.25,
+    "generic": 45.75
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 288,
+    "untrained": null,
+    "shuffled": 288,
+    "generic": 48
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 69
+   }
+  },
+  {
+   "file": "pair_15.json",
+   "status": "passed",
+   "teacherWins": 67,
+   "completed": true,
+   "passed": true,
+   "advantage": 5.75,
+   "early": {
+    "trained": 70,
+    "alone": 35.5,
+    "untrained": 24,
+    "shuffled": 64.25,
+    "generic": 62.5
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 12,
+    "generic": 12
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_16.json",
+   "status": "passed",
+   "teacherWins": 59,
+   "completed": true,
+   "passed": true,
+   "advantage": 11.5,
+   "early": {
+    "trained": 70,
+    "alone": 52.75,
+    "untrained": 24,
+    "shuffled": 58.25,
+    "generic": 58.5
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 24,
+    "untrained": null,
+    "shuffled": 12,
+    "generic": 24
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_17.json",
+   "status": "passed",
+   "teacherWins": 68,
+   "completed": true,
+   "passed": true,
+   "advantage": 17.25,
+   "early": {
+    "trained": 69.75,
+    "alone": 29.5,
+    "untrained": 23.75,
+    "shuffled": 52.5,
+    "generic": 47.5
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 48,
+    "generic": 96
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_18.json",
+   "status": "failed",
+   "teacherWins": 67,
+   "completed": true,
+   "passed": false,
+   "advantage": 0,
+   "early": {
+    "trained": 69.75,
+    "alone": 29.5,
+    "untrained": 23.75,
+    "shuffled": 69.75,
+    "generic": 37.5
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 288,
+    "untrained": null,
+    "shuffled": 6,
+    "generic": 48
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  },
+  {
+   "file": "pair_19.json",
+   "status": "passed",
+   "teacherWins": 65,
+   "completed": true,
+   "passed": true,
+   "advantage": 6.5,
+   "early": {
+    "trained": 70,
+    "alone": 29.5,
+    "untrained": 24,
+    "shuffled": 63.5,
+    "generic": 36.75
+   },
+   "first58": {
+    "trained": 6,
+    "alone": 96,
+    "untrained": null,
+    "shuffled": 12,
+    "generic": 96
+   },
+   "final": {
+    "trained": 70,
+    "alone": 70,
+    "untrained": 24,
+    "shuffled": 70,
+    "generic": 70
+   }
+  }
+ ]
+}

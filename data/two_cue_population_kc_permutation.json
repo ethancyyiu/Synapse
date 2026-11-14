@@ -1,0 +1,109 @@
+{
+  "command": "node tools/check_two_cue_population_kc_permutation.mjs",
+  "source": "data/two_cue_population_kc_fixed_rng.json",
+  "hypothesis": "The archived KC prediction score is unusual under all balanced label assignments",
+  "gate": "one-sided P(score >= observed 20/24) <= 0.05 for each teacher",
+  "evaluation": {
+    "505": {
+      "observed": 20,
+      "predictedOne": 14,
+      "shuffledScore": 16,
+      "totalBalancedAssignments": 2704156,
+      "tailCount": 3731,
+      "oneSidedP": 0.0013797280926100418,
+      "distribution": [
+        {
+          "score": 2,
+          "count": 91
+        },
+        {
+          "score": 4,
+          "count": 3640
+        },
+        {
+          "score": 6,
+          "count": 45045
+        },
+        {
+          "score": 8,
+          "count": 240240
+        },
+        {
+          "score": 10,
+          "count": 630630
+        },
+        {
+          "score": 12,
+          "count": 864864
+        },
+        {
+          "score": 14,
+          "count": 630630
+        },
+        {
+          "score": 16,
+          "count": 240240
+        },
+        {
+          "score": 18,
+          "count": 45045
+        },
+        {
+          "score": 20,
+          "count": 3640
+        },
+        {
+          "score": 22,
+          "count": 91
+        }
+      ]
+    },
+    "506": {
+      "observed": 20,
+      "predictedOne": 16,
+      "shuffledScore": 14,
+      "totalBalancedAssignments": 2704156,
+      "tailCount": 1820,
+      "oneSidedP": 0.0006730380939561179,
+      "distribution": [
+        {
+          "score": 4,
+          "count": 1820
+        },
+        {
+          "score": 6,
+          "count": 34944
+        },
+        {
+          "score": 8,
+          "count": 224224
+        },
+        {
+          "score": 10,
+          "count": 640640
+        },
+        {
+          "score": 12,
+          "count": 900900
+        },
+        {
+          "score": 14,
+          "count": 640640
+        },
+        {
+          "score": 16,
+          "count": 224224
+        },
+        {
+          "score": 18,
+          "count": 34944
+        },
+        {
+          "score": 20,
+          "count": 1820
+        }
+      ]
+    }
+  },
+  "passed": true
+}

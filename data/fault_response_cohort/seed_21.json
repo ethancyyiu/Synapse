@@ -1,0 +1,190 @@
+{
+ "status": "completed",
+ "teacherSeed": 30043,
+ "studentSeed": 30044,
+ "teacherWins": 69,
+ "messages": {
+  "trained": 96,
+  "random": 96,
+  "untrained": 96,
+  "shuffled": 96
+ },
+ "points": [
+  {
+   "rounds": 0,
+   "alone": 0,
+   "trained": 0,
+   "byAlarm": {
+    "alone": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 0
+    },
+    "trained": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 0
+    },
+    "random": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 0
+    },
+    "untrained": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 0
+    },
+    "shuffled": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 0
+    }
+   },
+   "random": 0,
+   "untrained": 0,
+   "shuffled": 0
+  },
+  {
+   "rounds": 24,
+   "alone": 0,
+   "trained": 30,
+   "byAlarm": {
+    "alone": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 0
+    },
+    "trained": {
+     "changed": 25,
+     "changedRounds": 25,
+     "unchanged": 5
+    },
+    "random": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 0
+    },
+    "untrained": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 0
+    },
+    "shuffled": {
+     "changed": 25,
+     "changedRounds": 25,
+     "unchanged": 0
+    }
+   },
+   "random": 0,
+   "untrained": 0,
+   "shuffled": 25
+  },
+  {
+   "rounds": 48,
+   "alone": 0,
+   "trained": 72,
+   "byAlarm": {
+    "alone": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 0
+    },
+    "trained": {
+     "changed": 25,
+     "changedRounds": 25,
+     "unchanged": 47
+    },
+    "random": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 4
+    },
+    "untrained": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 29
+    },
+    "shuffled": {
+     "changed": 25,
+     "changedRounds": 25,
+     "unchanged": 17
+    }
+   },
+   "random": 4,
+   "untrained": 29,
+   "shuffled": 42
+  },
+  {
+   "rounds": 96,
+   "alone": 0,
+   "trained": 72,
+   "byAlarm": {
+    "alone": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 0
+    },
+    "trained": {
+     "changed": 25,
+     "changedRounds": 25,
+     "unchanged": 47
+    },
+    "random": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 37
+    },
+    "untrained": {
+     "changed": 0,
+     "changedRounds": 25,
+     "unchanged": 29
+    },
+    "shuffled": {
+     "changed": 25,
+     "changedRounds": 25,
+     "unchanged": 18
+    }
+   },
+   "random": 37,
+   "untrained": 29,
+   "shuffled": 43
+  }
+ ],
+ "advantage48": 30,
+ "advantageByCheckpoint": [
+  {
+   "rounds": 0,
+   "advantage": 0
+  },
+  {
+   "rounds": 24,
+   "advantage": 5
+  },
+  {
+   "rounds": 48,
+   "advantage": 30
+  },
+  {
+   "rounds": 96,
+   "advantage": 29
+  }
+ ],
+ "aloneWithin4AtRounds": null,
+ "tape": {
+  "trainedPreferences": [
+   28,
+   0,
+   68
+  ],
+  "shuffledMoved": 36,
+  "cuedRounds": 96,
+  "untrainedPreferences": [
+   96,
+   0,
+   0
+  ]
+ },
+ "teachersFrozen": true,
+ "synapsesUnchanged": true
+}

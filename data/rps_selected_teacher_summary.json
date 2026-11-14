@@ -1,0 +1,1654 @@
+{
+  "seeds": [
+    61,
+    62,
+    63
+  ],
+  "calibrationSeeds": [
+    41,
+    42,
+    43
+  ],
+  "lockedSource": {
+    "neuron": 2132,
+    "role": "mbon",
+    "feature": "trace>=0.5",
+    "gainBits": 0.139428,
+    "metrics": {
+      "next_given_prev": {
+        "trained": 0.152498,
+        "untrained": 0.01307
+      },
+      "next_given_prev_phase": {
+        "trained": 0.002433,
+        "untrained": 0.006282
+      },
+      "phase_given_prev": {
+        "trained": 0.194139,
+        "untrained": 0.012528
+      },
+      "action_given_prev": {
+        "trained": 0.055998,
+        "untrained": 0.002616
+      },
+      "reward_history_given_prev": {
+        "trained": 0.259602,
+        "untrained": 0.163403
+      },
+      "previous_move": {
+        "trained": 0.217634,
+        "untrained": 0.159071
+      },
+      "frequency": {
+        "trained": 0.74375,
+        "untrained": 0.700694
+      },
+      "perSeedNextGain": [
+        0.16672,
+        0.159911,
+        0.093209
+      ]
+    },
+    "nextGivenStudentPreviousMoveAndPreviousRewardBits": 0.10060488019371405,
+    "studentObservationConditionedPermutation": {
+      "null95Bits": 0.0103011615041396,
+      "permutationP": 0.001996007984031936
+    }
+  },
+  "sourcePermutation": {
+    "trained": {
+      "observedBits": 0.152498,
+      "null95Bits": 0.006308,
+      "permutationP": 0.001996
+    },
+    "untrained": {
+      "observedBits": 0.01307,
+      "null95Bits": 0.006388,
+      "permutationP": 0.001996
+    }
+  },
+  "sourceEpisodeFrequency": {
+    "trained": [
+      0.694,
+      0.75,
+      0.722,
+      0.694,
+      0.639,
+      0.681,
+      0.625,
+      0.694,
+      0.639,
+      0.694,
+      0.667,
+      0.653,
+      0.694,
+      0.694,
+      0.764,
+      0.861,
+      0.931,
+      0.903,
+      0.958,
+      0.917
+    ],
+    "untrained": [
+      0.681,
+      0.667,
+      0.597,
+      0.625,
+      0.667,
+      0.667,
+      0.694,
+      0.667,
+      0.625,
+      0.667,
+      0.75,
+      0.778,
+      0.667,
+      0.792,
+      0.708,
+      0.792,
+      0.75,
+      0.75,
+      0.75,
+      0.722
+    ]
+  },
+  "randomWiringOneSeed": {
+    "neuron": 2132,
+    "role": "mbon",
+    "feature": "trace>=0.5",
+    "gainBits": 0.001492,
+    "metrics": {
+      "next_given_prev": {
+        "trained": 0.003913,
+        "untrained": 0.002421
+      },
+      "next_given_prev_phase": {
+        "trained": 0.015109,
+        "untrained": 0.013177
+      },
+      "phase_given_prev": {
+        "trained": 0.002135,
+        "untrained": 0.003786
+      },
+      "action_given_prev": {
+        "trained": 0.037855,
+        "untrained": 0.023867
+      },
+      "reward_history_given_prev": {
+        "trained": 0.061666,
+        "untrained": 0.037976
+      },
+      "previous_move": {
+        "trained": 0.206286,
+        "untrained": 0.221136
+      },
+      "frequency": {
+        "trained": 0.94375,
+        "untrained": 0.947917
+      },
+      "perSeedNextGain": [
+        0.001492
+      ]
+    }
+  },
+  "calibrationAssociationLeaders": {
+    "previous_move": [
+      {
+        "neuron": 2441,
+        "role": "mid",
+        "feature": "spike>0",
+        "gainBits": -0.000758,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.0,
+            "untrained": 0.000758
+          },
+          "next_given_prev_phase": {
+            "trained": 0.0,
+            "untrained": 9.9e-05
+          },
+          "phase_given_prev": {
+            "trained": 0.0,
+            "untrained": 0.000687
+          },
+          "action_given_prev": {
+            "trained": 0.0,
+            "untrained": 0.000504
+          },
+          "reward_history_given_prev": {
+            "trained": 0.0,
+            "untrained": 8.5e-05
+          },
+          "previous_move": {
+            "trained": 0.908265,
+            "untrained": 0.900369
+          },
+          "frequency": {
+            "trained": 0.323611,
+            "untrained": 0.322917
+          },
+          "perSeedNextGain": [
+            0.0,
+            -0.002378,
+            0.0
+          ]
+        }
+      },
+      {
+        "neuron": 2542,
+        "role": "mid",
+        "feature": "spike>0",
+        "gainBits": -0.000691,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.0,
+            "untrained": 0.000691
+          },
+          "next_given_prev_phase": {
+            "trained": 0.0,
+            "untrained": 5.3e-05
+          },
+          "phase_given_prev": {
+            "trained": 0.0,
+            "untrained": 0.000682
+          },
+          "action_given_prev": {
+            "trained": 0.0,
+            "untrained": 0.0
+          },
+          "reward_history_given_prev": {
+            "trained": 0.0,
+            "untrained": 0.000983
+          },
+          "previous_move": {
+            "trained": 0.902254,
+            "untrained": 0.89435
+          },
+          "frequency": {
+            "trained": 0.318056,
+            "untrained": 0.317361
+          },
+          "perSeedNextGain": [
+            -0.002113,
+            0.0,
+            0.0
+          ]
+        }
+      },
+      {
+        "neuron": 2538,
+        "role": "mid",
+        "feature": "spike>0",
+        "gainBits": -0.001618,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.000182,
+            "untrained": 0.0018
+          },
+          "next_given_prev_phase": {
+            "trained": 0.001311,
+            "untrained": 0.000845
+          },
+          "phase_given_prev": {
+            "trained": 0.00019,
+            "untrained": 0.001856
+          },
+          "action_given_prev": {
+            "trained": 5e-05,
+            "untrained": 0.002972
+          },
+          "reward_history_given_prev": {
+            "trained": 0.000231,
+            "untrained": 0.001523
+          },
+          "previous_move": {
+            "trained": 0.893308,
+            "untrained": 0.889857
+          },
+          "frequency": {
+            "trained": 0.631944,
+            "untrained": 0.631944
+          },
+          "perSeedNextGain": [
+            -0.001991,
+            -0.00202,
+            -0.002401
+          ]
+        }
+      },
+      {
+        "neuron": 3266,
+        "role": "dn",
+        "feature": "spike>0",
+        "gainBits": 9.7e-05,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 9.7e-05,
+            "untrained": 0.0
+          },
+          "next_given_prev_phase": {
+            "trained": 0.000166,
+            "untrained": 0.0
+          },
+          "phase_given_prev": {
+            "trained": 0.0,
+            "untrained": 0.0
+          },
+          "action_given_prev": {
+            "trained": 0.00048,
+            "untrained": 0.0
+          },
+          "reward_history_given_prev": {
+            "trained": 0.000248,
+            "untrained": 0.0
+          },
+          "previous_move": {
+            "trained": 0.890854,
+            "untrained": 0.902254
+          },
+          "frequency": {
+            "trained": 0.319444,
+            "untrained": 0.318056
+          },
+          "perSeedNextGain": [
+            0.0,
+            0.002132,
+            0.00237
+          ]
+        }
+      },
+      {
+        "neuron": 2530,
+        "role": "mid",
+        "feature": "spike>0",
+        "gainBits": -0.000706,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.001258,
+            "untrained": 0.001964
+          },
+          "next_given_prev_phase": {
+            "trained": 0.001704,
+            "untrained": 0.002058
+          },
+          "phase_given_prev": {
+            "trained": 0.000761,
+            "untrained": 0.001533
+          },
+          "action_given_prev": {
+            "trained": 0.002166,
+            "untrained": 0.000821
+          },
+          "reward_history_given_prev": {
+            "trained": 0.001285,
+            "untrained": 0.000344
+          },
+          "previous_move": {
+            "trained": 0.871009,
+            "untrained": 0.87572
+          },
+          "frequency": {
+            "trained": 0.628472,
+            "untrained": 0.629167
+          },
+          "perSeedNextGain": [
+            0.000889,
+            0.002177,
+            0.004838
+          ]
+        }
+      }
+    ],
+    "action_given_prev": [
+      {
+        "neuron": 2108,
+        "role": "mbon",
+        "feature": "spike>0",
+        "gainBits": 0.089882,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.091989,
+            "untrained": 0.002107
+          },
+          "next_given_prev_phase": {
+            "trained": 0.00644,
+            "untrained": 0.009456
+          },
+          "phase_given_prev": {
+            "trained": 0.113076,
+            "untrained": 0.000497
+          },
+          "action_given_prev": {
+            "trained": 0.124885,
+            "untrained": 0.001222
+          },
+          "reward_history_given_prev": {
+            "trained": 0.005379,
+            "untrained": 0.00199
+          },
+          "previous_move": {
+            "trained": 0.080797,
+            "untrained": 0.360055
+          },
+          "frequency": {
+            "trained": 0.653472,
+            "untrained": 0.446528
+          },
+          "perSeedNextGain": [
+            0.051622,
+            0.116173,
+            0.135555
+          ]
+        }
+      },
+      {
+        "neuron": 2542,
+        "role": "mid",
+        "feature": "trace>=0.5",
+        "gainBits": 0.004672,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.340599,
+            "untrained": 0.335927
+          },
+          "next_given_prev_phase": {
+            "trained": 0.003019,
+            "untrained": 0.003693
+          },
+          "phase_given_prev": {
+            "trained": 0.421548,
+            "untrained": 0.411819
+          },
+          "action_given_prev": {
+            "trained": 0.118561,
+            "untrained": 0.018407
+          },
+          "reward_history_given_prev": {
+            "trained": 0.120971,
+            "untrained": 0.159298
+          },
+          "previous_move": {
+            "trained": 0.325654,
+            "untrained": 0.323868
+          },
+          "frequency": {
+            "trained": 0.613194,
+            "untrained": 0.615278
+          },
+          "perSeedNextGain": [
+            0.0,
+            0.001728,
+            0.016779
+          ]
+        }
+      },
+      {
+        "neuron": 3266,
+        "role": "dn",
+        "feature": "trace>=0.5",
+        "gainBits": -0.005129,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.333114,
+            "untrained": 0.338243
+          },
+          "next_given_prev_phase": {
+            "trained": 0.004296,
+            "untrained": 0.002842
+          },
+          "phase_given_prev": {
+            "trained": 0.407155,
+            "untrained": 0.419501
+          },
+          "action_given_prev": {
+            "trained": 0.117888,
+            "untrained": 0.024733
+          },
+          "reward_history_given_prev": {
+            "trained": 0.115352,
+            "untrained": 0.171386
+          },
+          "previous_move": {
+            "trained": 0.322935,
+            "untrained": 0.325235
+          },
+          "frequency": {
+            "trained": 0.616667,
+            "untrained": 0.613889
+          },
+          "perSeedNextGain": [
+            0.000152,
+            -0.007625,
+            -0.008028
+          ]
+        }
+      },
+      {
+        "neuron": 3266,
+        "role": "dn",
+        "feature": "trace>=1.5",
+        "gainBits": 0.007149,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.332868,
+            "untrained": 0.325719
+          },
+          "next_given_prev_phase": {
+            "trained": 0.002711,
+            "untrained": 0.003055
+          },
+          "phase_given_prev": {
+            "trained": 0.405126,
+            "untrained": 0.406045
+          },
+          "action_given_prev": {
+            "trained": 0.110088,
+            "untrained": 0.023475
+          },
+          "reward_history_given_prev": {
+            "trained": 0.111309,
+            "untrained": 0.164855
+          },
+          "previous_move": {
+            "trained": 0.330559,
+            "untrained": 0.332178
+          },
+          "frequency": {
+            "trained": 0.600694,
+            "untrained": 0.60625
+          },
+          "perSeedNextGain": [
+            0.014748,
+            0.005869,
+            -0.002249
+          ]
+        }
+      },
+      {
+        "neuron": 2132,
+        "role": "mbon",
+        "feature": "spike>0",
+        "gainBits": 0.078611,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.079608,
+            "untrained": 0.000997
+          },
+          "next_given_prev_phase": {
+            "trained": 0.005541,
+            "untrained": 0.00716
+          },
+          "phase_given_prev": {
+            "trained": 0.092728,
+            "untrained": 0.001311
+          },
+          "action_given_prev": {
+            "trained": 0.109945,
+            "untrained": 0.021938
+          },
+          "reward_history_given_prev": {
+            "trained": 0.005727,
+            "untrained": 0.005999
+          },
+          "previous_move": {
+            "trained": 0.502798,
+            "untrained": 0.355901
+          },
+          "frequency": {
+            "trained": 0.372222,
+            "untrained": 0.374306
+          },
+          "perSeedNextGain": [
+            0.04196,
+            0.151965,
+            0.070938
+          ]
+        }
+      }
+    ],
+    "reward_history_given_prev": [
+      {
+        "neuron": 2145,
+        "role": "mbon",
+        "feature": "trace>=1.5",
+        "gainBits": -0.048492,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.085139,
+            "untrained": 0.133631
+          },
+          "next_given_prev_phase": {
+            "trained": 0.002517,
+            "untrained": 0.003404
+          },
+          "phase_given_prev": {
+            "trained": 0.09472,
+            "untrained": 0.146768
+          },
+          "action_given_prev": {
+            "trained": 0.001773,
+            "untrained": 0.037909
+          },
+          "reward_history_given_prev": {
+            "trained": 0.434886,
+            "untrained": 0.640862
+          },
+          "previous_move": {
+            "trained": 0.552376,
+            "untrained": 0.273922
+          },
+          "frequency": {
+            "trained": 0.501389,
+            "untrained": 0.329861
+          },
+          "perSeedNextGain": [
+            0.024857,
+            -0.09413,
+            -0.089922
+          ]
+        }
+      },
+      {
+        "neuron": 2133,
+        "role": "mbon",
+        "feature": "trace>=0.5",
+        "gainBits": -0.0376,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.083708,
+            "untrained": 0.121308
+          },
+          "next_given_prev_phase": {
+            "trained": 0.003824,
+            "untrained": 0.005115
+          },
+          "phase_given_prev": {
+            "trained": 0.093396,
+            "untrained": 0.130867
+          },
+          "action_given_prev": {
+            "trained": 0.001715,
+            "untrained": 0.04152
+          },
+          "reward_history_given_prev": {
+            "trained": 0.396564,
+            "untrained": 0.532127
+          },
+          "previous_move": {
+            "trained": 0.476661,
+            "untrained": 0.189811
+          },
+          "frequency": {
+            "trained": 0.519444,
+            "untrained": 0.379167
+          },
+          "perSeedNextGain": [
+            0.023389,
+            -0.079868,
+            -0.066591
+          ]
+        }
+      },
+      {
+        "neuron": 2114,
+        "role": "mbon",
+        "feature": "trace>=0.5",
+        "gainBits": -0.008161,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.101546,
+            "untrained": 0.109707
+          },
+          "next_given_prev_phase": {
+            "trained": 0.003695,
+            "untrained": 0.006173
+          },
+          "phase_given_prev": {
+            "trained": 0.114261,
+            "untrained": 0.118457
+          },
+          "action_given_prev": {
+            "trained": 0.008741,
+            "untrained": 0.043261
+          },
+          "reward_history_given_prev": {
+            "trained": 0.393112,
+            "untrained": 0.498108
+          },
+          "previous_move": {
+            "trained": 0.394992,
+            "untrained": 0.174122
+          },
+          "frequency": {
+            "trained": 0.548611,
+            "untrained": 0.403472
+          },
+          "perSeedNextGain": [
+            0.037325,
+            -0.039097,
+            -0.036039
+          ]
+        }
+      },
+      {
+        "neuron": 2114,
+        "role": "mbon",
+        "feature": "trace>=1.5",
+        "gainBits": -0.037323,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.0768,
+            "untrained": 0.114123
+          },
+          "next_given_prev_phase": {
+            "trained": 0.002293,
+            "untrained": 0.002563
+          },
+          "phase_given_prev": {
+            "trained": 0.086993,
+            "untrained": 0.126334
+          },
+          "action_given_prev": {
+            "trained": 0.000148,
+            "untrained": 0.037869
+          },
+          "reward_history_given_prev": {
+            "trained": 0.385256,
+            "untrained": 0.589488
+          },
+          "previous_move": {
+            "trained": 0.507986,
+            "untrained": 0.254881
+          },
+          "frequency": {
+            "trained": 0.485417,
+            "untrained": 0.319444
+          },
+          "perSeedNextGain": [
+            0.025862,
+            -0.081052,
+            -0.06675
+          ]
+        }
+      },
+      {
+        "neuron": 2130,
+        "role": "mbon",
+        "feature": "trace>=0.5",
+        "gainBits": -0.034368,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.083247,
+            "untrained": 0.117614
+          },
+          "next_given_prev_phase": {
+            "trained": 0.003183,
+            "untrained": 0.002611
+          },
+          "phase_given_prev": {
+            "trained": 0.091994,
+            "untrained": 0.129991
+          },
+          "action_given_prev": {
+            "trained": 0.001752,
+            "untrained": 0.035702
+          },
+          "reward_history_given_prev": {
+            "trained": 0.364105,
+            "untrained": 0.608591
+          },
+          "previous_move": {
+            "trained": 0.485274,
+            "untrained": 0.263592
+          },
+          "frequency": {
+            "trained": 0.475694,
+            "untrained": 0.324306
+          },
+          "perSeedNextGain": [
+            0.025854,
+            -0.079193,
+            -0.051693
+          ]
+        }
+      }
+    ],
+    "phase_given_prev": [
+      {
+        "neuron": 2577,
+        "role": "mid",
+        "feature": "trace>=0.5",
+        "gainBits": -0.010642,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.351514,
+            "untrained": 0.362156
+          },
+          "next_given_prev_phase": {
+            "trained": 0.006055,
+            "untrained": 0.005509
+          },
+          "phase_given_prev": {
+            "trained": 0.425994,
+            "untrained": 0.435934
+          },
+          "action_given_prev": {
+            "trained": 0.045526,
+            "untrained": 0.001016
+          },
+          "reward_history_given_prev": {
+            "trained": 0.187654,
+            "untrained": 0.090891
+          },
+          "previous_move": {
+            "trained": 0.317026,
+            "untrained": 0.322476
+          },
+          "frequency": {
+            "trained": 0.6125,
+            "untrained": 0.614583
+          },
+          "perSeedNextGain": [
+            -0.012435,
+            -0.003757,
+            -0.012338
+          ]
+        }
+      },
+      {
+        "neuron": 2542,
+        "role": "mid",
+        "feature": "trace>=0.5",
+        "gainBits": 0.004672,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.340599,
+            "untrained": 0.335927
+          },
+          "next_given_prev_phase": {
+            "trained": 0.003019,
+            "untrained": 0.003693
+          },
+          "phase_given_prev": {
+            "trained": 0.421548,
+            "untrained": 0.411819
+          },
+          "action_given_prev": {
+            "trained": 0.118561,
+            "untrained": 0.018407
+          },
+          "reward_history_given_prev": {
+            "trained": 0.120971,
+            "untrained": 0.159298
+          },
+          "previous_move": {
+            "trained": 0.325654,
+            "untrained": 0.323868
+          },
+          "frequency": {
+            "trained": 0.613194,
+            "untrained": 0.615278
+          },
+          "perSeedNextGain": [
+            0.0,
+            0.001728,
+            0.016779
+          ]
+        }
+      },
+      {
+        "neuron": 3266,
+        "role": "dn",
+        "feature": "trace>=0.5",
+        "gainBits": -0.005129,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.333114,
+            "untrained": 0.338243
+          },
+          "next_given_prev_phase": {
+            "trained": 0.004296,
+            "untrained": 0.002842
+          },
+          "phase_given_prev": {
+            "trained": 0.407155,
+            "untrained": 0.419501
+          },
+          "action_given_prev": {
+            "trained": 0.117888,
+            "untrained": 0.024733
+          },
+          "reward_history_given_prev": {
+            "trained": 0.115352,
+            "untrained": 0.171386
+          },
+          "previous_move": {
+            "trained": 0.322935,
+            "untrained": 0.325235
+          },
+          "frequency": {
+            "trained": 0.616667,
+            "untrained": 0.613889
+          },
+          "perSeedNextGain": [
+            0.000152,
+            -0.007625,
+            -0.008028
+          ]
+        }
+      },
+      {
+        "neuron": 3266,
+        "role": "dn",
+        "feature": "trace>=1.5",
+        "gainBits": 0.007149,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.332868,
+            "untrained": 0.325719
+          },
+          "next_given_prev_phase": {
+            "trained": 0.002711,
+            "untrained": 0.003055
+          },
+          "phase_given_prev": {
+            "trained": 0.405126,
+            "untrained": 0.406045
+          },
+          "action_given_prev": {
+            "trained": 0.110088,
+            "untrained": 0.023475
+          },
+          "reward_history_given_prev": {
+            "trained": 0.111309,
+            "untrained": 0.164855
+          },
+          "previous_move": {
+            "trained": 0.330559,
+            "untrained": 0.332178
+          },
+          "frequency": {
+            "trained": 0.600694,
+            "untrained": 0.60625
+          },
+          "perSeedNextGain": [
+            0.014748,
+            0.005869,
+            -0.002249
+          ]
+        }
+      },
+      {
+        "neuron": 2441,
+        "role": "mid",
+        "feature": "trace>=0.5",
+        "gainBits": 0.0,
+        "metrics": {
+          "next_given_prev": {
+            "trained": 0.346019,
+            "untrained": 0.346019
+          },
+          "next_given_prev_phase": {
+            "trained": 0.00558,
+            "untrained": 0.00558
+          },
+          "phase_given_prev": {
+            "trained": 0.40266,
+            "untrained": 0.40266
+          },
+          "action_given_prev": {
+            "trained": 0.076238,
+            "untrained": 0.003575
+          },
+          "reward_history_given_prev": {
+            "trained": 0.079602,
+            "untrained": 0.206275
+          },
+          "previous_move": {
+            "trained": 0.328969,
+            "untrained": 0.328969
+          },
+          "frequency": {
+            "trained": 0.615972,
+            "untrained": 0.615972
+          },
+          "perSeedNextGain": [
+            0.0,
+            0.0,
+            0.0
+          ]
+        }
+      }
+    ]
+  },
+  "students": {
+    "full": {
+      "alone": {
+        "early24BySeed": [
+          0.16666666666666666,
+          0.08333333333333333,
+          0.125
+        ],
+        "early24Mean": 0.125,
+        "early72BySeed": [
+          0.16666666666666666,
+          0.1527777777777778,
+          0.09722222222222222
+        ],
+        "early72Mean": 0.13888888888888887,
+        "postSwitchBySeed": [
+          0.30416666666666664,
+          0.30416666666666664,
+          0.2708333333333333
+        ],
+        "postSwitchMean": 0.29305555555555557,
+        "frozenDisconnectedBySeed": [
+          0.4305555555555556,
+          0.3888888888888889,
+          0.4166666666666667
+        ],
+        "frozenDisconnectedMean": 0.41203703703703703,
+        "stableRecoveryRoundsBySeed": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trained": {
+        "early24BySeed": [
+          0.3333333333333333,
+          0.625,
+          0.2916666666666667
+        ],
+        "early24Mean": 0.4166666666666667,
+        "early72BySeed": [
+          0.3611111111111111,
+          0.6111111111111112,
+          0.3472222222222222
+        ],
+        "early72Mean": 0.4398148148148149,
+        "postSwitchBySeed": [
+          0.4791666666666667,
+          0.5833333333333334,
+          0.4708333333333333
+        ],
+        "postSwitchMean": 0.5111111111111111,
+        "frozenDisconnectedBySeed": [
+          0.3611111111111111,
+          0.4305555555555556,
+          0.3888888888888889
+        ],
+        "frozenDisconnectedMean": 0.39351851851851855,
+        "stableRecoveryRoundsBySeed": [
+          122,
+          72,
+          null
+        ]
+      },
+      "untrained": {
+        "early24BySeed": [
+          0.375,
+          0.3333333333333333,
+          0.375
+        ],
+        "early24Mean": 0.3611111111111111,
+        "early72BySeed": [
+          0.3888888888888889,
+          0.4305555555555556,
+          0.4444444444444444
+        ],
+        "early72Mean": 0.4212962962962963,
+        "postSwitchBySeed": [
+          0.5,
+          0.5208333333333334,
+          0.4875
+        ],
+        "postSwitchMean": 0.5027777777777779,
+        "frozenDisconnectedBySeed": [
+          0.4166666666666667,
+          0.40277777777777785,
+          0.34722222222222227
+        ],
+        "frozenDisconnectedMean": 0.3888888888888889,
+        "stableRecoveryRoundsBySeed": [
+          132,
+          87,
+          87
+        ]
+      },
+      "shuffled": {
+        "early24BySeed": [
+          0.4166666666666667,
+          0.5416666666666666,
+          0.375
+        ],
+        "early24Mean": 0.4444444444444444,
+        "early72BySeed": [
+          0.4166666666666667,
+          0.4583333333333333,
+          0.5
+        ],
+        "early72Mean": 0.4583333333333333,
+        "postSwitchBySeed": [
+          0.4708333333333333,
+          0.5416666666666666,
+          0.4875
+        ],
+        "postSwitchMean": 0.5,
+        "frozenDisconnectedBySeed": [
+          0.4444444444444444,
+          0.5138888888888888,
+          0.4444444444444444
+        ],
+        "frozenDisconnectedMean": 0.46759259259259256,
+        "stableRecoveryRoundsBySeed": [
+          163,
+          105,
+          null
+        ]
+      },
+      "signalEffect": {
+        "trained": {
+          "rounds": 1440,
+          "labelZeroFraction": 0.74375,
+          "targetSpikesMeanByLabel": {
+            "0": [
+              181.74883286647992,
+              16.92623716153128
+            ],
+            "1": [
+              4.056910569105691,
+              184.15718157181573
+            ]
+          },
+          "mbonRatesMeanByLabel": {
+            "0": [
+              0.5257436307856479,
+              0.26410564225690314,
+              0.6740696278511421
+            ],
+            "1": [
+              0.7152535811072394,
+              0.5735578784359269,
+              1.0100658149438642
+            ]
+          },
+          "actionProbabilitiesByLabel": {
+            "0": [
+              0.3034547152194211,
+              0.014005602240896359,
+              0.6825396825396826
+            ],
+            "1": [
+              0.07859078590785908,
+              0.04065040650406504,
+              0.8807588075880759
+            ]
+          },
+          "actionSignalInformationGivenPreviousMoveBits": 0.07624319707974792
+        },
+        "untrained": {
+          "rounds": 1440,
+          "labelZeroFraction": 0.7006944444444444,
+          "targetSpikesMeanByLabel": {
+            "0": [
+              181.57086223984143,
+              16.501486620416255
+            ],
+            "1": [
+              1.691415313225058,
+              184.97911832946636
+            ]
+          },
+          "mbonRatesMeanByLabel": {
+            "0": [
+              0.46878097125867174,
+              0.27346736514229103,
+              0.6854735947897516
+            ],
+            "1": [
+              0.6299303944315552,
+              0.46105402717931715,
+              0.7799138216771621
+            ]
+          },
+          "actionProbabilitiesByLabel": {
+            "0": [
+              0.222001982160555,
+              0.019821605550049554,
+              0.7581764122893955
+            ],
+            "1": [
+              0.19721577726218098,
+              0.060324825986078884,
+              0.7424593967517401
+            ]
+          },
+          "actionSignalInformationGivenPreviousMoveBits": 0.024271101225167513
+        },
+        "shuffled": {
+          "rounds": 1440,
+          "labelZeroFraction": 0.74375,
+          "targetSpikesMeanByLabel": {
+            "0": [
+              181.43323996265173,
+              17.277310924369747
+            ],
+            "1": [
+              2.4850948509485096,
+              183.01084010840108
+            ]
+          },
+          "mbonRatesMeanByLabel": {
+            "0": [
+              0.414432439642523,
+              0.26730692276910767,
+              0.6621982126183827
+            ],
+            "1": [
+              0.6629887727448704,
+              0.49883855981416936,
+              0.7622919086333716
+            ]
+          },
+          "actionProbabilitiesByLabel": {
+            "0": [
+              0.1895424836601307,
+              0.03454715219421102,
+              0.7759103641456583
+            ],
+            "1": [
+              0.2899728997289973,
+              0.05962059620596206,
+              0.6504065040650406
+            ]
+          },
+          "actionSignalInformationGivenPreviousMoveBits": 0.033950825687497854
+        }
+      },
+      "trainedMinusControls_early24": {
+        "alone": [
+          0.166667,
+          0.541667,
+          0.166667
+        ],
+        "untrained": [
+          -0.041667,
+          0.291667,
+          -0.083333
+        ],
+        "shuffled": [
+          -0.083333,
+          0.083333,
+          -0.083333
+        ]
+      },
+      "trainedMinusControls_early72": {
+        "alone": [
+          0.194444,
+          0.458333,
+          0.25
+        ],
+        "untrained": [
+          -0.027778,
+          0.180556,
+          -0.097222
+        ],
+        "shuffled": [
+          -0.055556,
+          0.152778,
+          -0.152778
+        ]
+      },
+      "trainedMinusControls_frozenDisconnected": {
+        "alone": [
+          -0.069444,
+          0.041667,
+          -0.027778
+        ],
+        "untrained": [
+          -0.055556,
+          0.027778,
+          0.041667
+        ],
+        "shuffled": [
+          -0.083333,
+          -0.083333,
+          -0.055556
+        ]
+      }
+    },
+    "postonly": {
+      "alone": {
+        "early24BySeed": [
+          0.16666666666666666,
+          0.08333333333333333,
+          0.125
+        ],
+        "early24Mean": 0.125,
+        "early72BySeed": [
+          0.16666666666666666,
+          0.1527777777777778,
+          0.09722222222222222
+        ],
+        "early72Mean": 0.13888888888888887,
+        "postSwitchBySeed": [
+          0.30416666666666664,
+          0.30416666666666664,
+          0.2708333333333333
+        ],
+        "postSwitchMean": 0.29305555555555557,
+        "frozenDisconnectedBySeed": [
+          0.4305555555555556,
+          0.3888888888888889,
+          0.4166666666666667
+        ],
+        "frozenDisconnectedMean": 0.41203703703703703,
+        "stableRecoveryRoundsBySeed": [
+          null,
+          null,
+          null
+        ]
+      },
+      "trained": {
+        "early24BySeed": [
+          0.375,
+          0.2916666666666667,
+          0.20833333333333334
+        ],
+        "early24Mean": 0.2916666666666667,
+        "early72BySeed": [
+          0.3611111111111111,
+          0.4722222222222222,
+          0.4444444444444444
+        ],
+        "early72Mean": 0.4259259259259259,
+        "postSwitchBySeed": [
+          0.5083333333333333,
+          0.55,
+          0.5375
+        ],
+        "postSwitchMean": 0.5319444444444444,
+        "frozenDisconnectedBySeed": [
+          0.40277777777777785,
+          0.375,
+          0.3888888888888889
+        ],
+        "frozenDisconnectedMean": 0.3888888888888889,
+        "stableRecoveryRoundsBySeed": [
+          106,
+          80,
+          78
+        ]
+      },
+      "untrained": {
+        "early24BySeed": [
+          0.3333333333333333,
+          0.375,
+          0.3333333333333333
+        ],
+        "early24Mean": 0.34722222222222215,
+        "early72BySeed": [
+          0.3888888888888889,
+          0.4722222222222222,
+          0.4722222222222222
+        ],
+        "early72Mean": 0.4444444444444445,
+        "postSwitchBySeed": [
+          0.49583333333333335,
+          0.55,
+          0.5333333333333333
+        ],
+        "postSwitchMean": 0.5263888888888889,
+        "frozenDisconnectedBySeed": [
+          0.36111111111111116,
+          0.375,
+          0.4444444444444444
+        ],
+        "frozenDisconnectedMean": 0.39351851851851855,
+        "stableRecoveryRoundsBySeed": [
+          112,
+          78,
+          75
+        ]
+      },
+      "shuffled": {
+        "early24BySeed": [
+          0.2916666666666667,
+          0.5,
+          0.4166666666666667
+        ],
+        "early24Mean": 0.40277777777777785,
+        "early72BySeed": [
+          0.3888888888888889,
+          0.5277777777777778,
+          0.5
+        ],
+        "early72Mean": 0.47222222222222227,
+        "postSwitchBySeed": [
+          0.48333333333333334,
+          0.5333333333333333,
+          0.5375
+        ],
+        "postSwitchMean": 0.5180555555555556,
+        "frozenDisconnectedBySeed": [
+          0.3611111111111111,
+          0.36111111111111116,
+          0.375
+        ],
+        "frozenDisconnectedMean": 0.36574074074074076,
+        "stableRecoveryRoundsBySeed": [
+          140,
+          72,
+          72
+        ]
+      },
+      "signalEffect": {
+        "trained": {
+          "rounds": 720,
+          "labelZeroFraction": 0.8041666666666667,
+          "targetSpikesMeanByLabel": {
+            "0": [
+              181.5250431778929,
+              16.818652849740932
+            ],
+            "1": [
+              1.1843971631205674,
+              186.39007092198582
+            ]
+          },
+          "mbonRatesMeanByLabel": {
+            "0": [
+              0.8830495928941516,
+              0.5157907722674564,
+              0.8361707377251419
+            ],
+            "1": [
+              0.7659574468085104,
+              0.6514690982776093,
+              1.022289766970618
+            ]
+          },
+          "actionProbabilitiesByLabel": {
+            "0": [
+              0.4749568221070812,
+              0.05181347150259067,
+              0.47322970639032813
+            ],
+            "1": [
+              0.11347517730496454,
+              0.07801418439716312,
+              0.8085106382978723
+            ]
+          },
+          "actionSignalInformationGivenPreviousMoveBits": 0.030153681291267276
+        },
+        "untrained": {
+          "rounds": 720,
+          "labelZeroFraction": 0.7458333333333333,
+          "targetSpikesMeanByLabel": {
+            "0": [
+              182.01862197392924,
+              17.08193668528864
+            ],
+            "1": [
+              1.9344262295081966,
+              184.81967213114754
+            ]
+          },
+          "mbonRatesMeanByLabel": {
+            "0": [
+              0.8173716413939872,
+              0.44280393721734546,
+              0.8057994147379615
+            ],
+            "1": [
+              0.8298204527712717,
+              0.6670569867291182,
+              0.8750975800156137
+            ]
+          },
+          "actionProbabilitiesByLabel": {
+            "0": [
+              0.46368715083798884,
+              0.061452513966480445,
+              0.4748603351955307
+            ],
+            "1": [
+              0.3224043715846995,
+              0.04918032786885246,
+              0.6284153005464481
+            ]
+          },
+          "actionSignalInformationGivenPreviousMoveBits": 0.027809832245111465
+        },
+        "shuffled": {
+          "rounds": 720,
+          "labelZeroFraction": 0.7527777777777778,
+          "targetSpikesMeanByLabel": {
+            "0": [
+              181.1771217712177,
+              17.571955719557195
+            ],
+            "1": [
+              2.696629213483146,
+              183.90449438202248
+            ]
+          },
+          "mbonRatesMeanByLabel": {
+            "0": [
+              0.7882182393252517,
+              0.5745914602003164,
+              0.8140484976278335
+            ],
+            "1": [
+              0.8800160513643657,
+              0.6593097913322633,
+              0.8531300160513648
+            ]
+          },
+          "actionProbabilitiesByLabel": {
+            "0": [
+              0.43726937269372695,
+              0.05904059040590406,
+              0.503690036900369
+            ],
+            "1": [
+              0.42696629213483145,
+              0.056179775280898875,
+              0.5168539325842697
+            ]
+          },
+          "actionSignalInformationGivenPreviousMoveBits": 0.03000790416263044
+        }
+      },
+      "trainedMinusControls_early24": {
+        "alone": [
+          0.208333,
+          0.208333,
+          0.083333
+        ],
+        "untrained": [
+          0.041667,
+          -0.083333,
+          -0.125
+        ],
+        "shuffled": [
+          0.083333,
+          -0.208333,
+          -0.208333
+        ]
+      },
+      "trainedMinusControls_early72": {
+        "alone": [
+          0.194444,
+          0.319444,
+          0.347222
+        ],
+        "untrained": [
+          -0.027778,
+          0.0,
+          -0.027778
+        ],
+        "shuffled": [
+          -0.027778,
+          -0.055556,
+          -0.055556
+        ]
+      },
+      "trainedMinusControls_frozenDisconnected": {
+        "alone": [
+          -0.027778,
+          -0.013889,
+          -0.027778
+        ],
+        "untrained": [
+          0.041667,
+          0.0,
+          -0.055556
+        ],
+        "shuffled": [
+          0.041667,
+          0.013889,
+          0.013889
+        ]
+      }
+    }
+  },
+  "noSwitchControl": {
+    "episodeFrequencyMean": [
+      0.6944444444444445,
+      0.75,
+      0.7222222222222223,
+      0.6944444444444445,
+      0.6388888888888888,
+      0.6805555555555555,
+      0.625,
+      0.6944444444444445,
+      0.6388888888888888,
+      0.6944444444444443,
+      0.7083333333333334,
+      0.7361111111111112,
+      0.7222222222222223,
+      0.7222222222222223,
+      0.6388888888888888,
+      0.7916666666666666,
+      0.7916666666666666,
+      0.8194444444444443,
+      0.7777777777777778,
+      0.8472222222222223
+    ],
+    "lateSourceFrequencyBySeed": [
+      0.7604166666666667,
+      0.7708333333333334,
+      0.8958333333333334
+    ],
+    "lateWinRateBySeed": [
+      0.625,
+      0.6562499999999999,
+      0.6145833333333334
+    ]
+  },
+  "teacherPerformance": {
+    "pretrainingLast3": [
+      0.6388888888888888,
+      0.6111111111111112,
+      0.611111111111111
+    ],
+    "trained": {
+      "preSwitchLast3": [
+        0.625,
+        0.5555555555555556,
+        0.6388888888888888
+      ],
+      "postSwitchFirst3": [
+        0.3611111111111111,
+        0.34722222222222215,
+        0.3333333333333333
+      ],
+      "postSwitchLast3": [
+        0.5694444444444445,
+        0.5555555555555555,
+        0.611111111111111
+      ]
+    },
+    "untrained": {
+      "preSwitchLast3": [
+        0.06944444444444443,
+        0.13888888888888887,
+        0.16666666666666666
+      ],
+      "postSwitchFirst3": [
+        0.4861111111111111,
+        0.48611111111111116,
+        0.4583333333333333
+      ],
+      "postSwitchLast3": [
+        0.4444444444444444,
+        0.4861111111111111,
+        0.5
+      ]
+    }
+  }
+}

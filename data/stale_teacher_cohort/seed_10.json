@@ -1,0 +1,55 @@
+{
+ "status": "completed",
+ "teacherSeed": 27021,
+ "studentSeed": 27022,
+ "teacherWins": 65,
+ "staleTeacherWins": 64,
+ "messages": {
+  "trained": 92,
+  "stale": 92
+ },
+ "points": [
+  {
+   "rounds": 0,
+   "alone": 2,
+   "trained": 2,
+   "stale": 2
+  },
+  {
+   "rounds": 24,
+   "alone": 2,
+   "trained": 46,
+   "stale": 2
+  },
+  {
+   "rounds": 48,
+   "alone": 24,
+   "trained": 61,
+   "stale": 2
+  },
+  {
+   "rounds": 96,
+   "alone": 47,
+   "trained": 71,
+   "stale": 2
+  }
+ ],
+ "trainedMinusStale48": 59,
+ "staleMinusAlone48": -22,
+ "preferences": {
+  "trained": [
+   33,
+   26,
+   33
+  ],
+  "stale": [
+   31,
+   33,
+   28
+  ],
+  "bothSent": 92,
+  "agreed": 5
+ },
+ "teachersFrozen": true,
+ "synapsesUnchanged": true
+}

@@ -1,0 +1,82 @@
+{
+ "status": "completed",
+ "teacherSeed": 26009,
+ "studentSeed": 26010,
+ "teacherWins": 64,
+ "messages": {
+  "trained": 92,
+  "random": 92,
+  "untrained": 92,
+  "shuffled": 92
+ },
+ "points": [
+  {
+   "rounds": 0,
+   "alone": 0,
+   "trained": 0,
+   "random": 0,
+   "untrained": 0,
+   "shuffled": 0
+  },
+  {
+   "rounds": 24,
+   "alone": 0,
+   "trained": 48,
+   "random": 0,
+   "untrained": 1,
+   "shuffled": 24
+  },
+  {
+   "rounds": 48,
+   "alone": 17,
+   "trained": 69,
+   "random": 48,
+   "untrained": 20,
+   "shuffled": 25
+  },
+  {
+   "rounds": 96,
+   "alone": 48,
+   "trained": 69,
+   "random": 48,
+   "untrained": 21,
+   "shuffled": 62
+  }
+ ],
+ "advantage48": 21,
+ "advantageByCheckpoint": [
+  {
+   "rounds": 0,
+   "advantage": 0
+  },
+  {
+   "rounds": 24,
+   "advantage": 24
+  },
+  {
+   "rounds": 48,
+   "advantage": 21
+  },
+  {
+   "rounds": 96,
+   "advantage": 7
+  }
+ ],
+ "aloneWithin4AtRounds": null,
+ "tape": {
+  "trainedPreferences": [
+   29,
+   31,
+   32
+  ],
+  "shuffledMoved": 53,
+  "cuedRounds": 92,
+  "untrainedPreferences": [
+   92,
+   0,
+   0
+  ]
+ },
+ "teachersFrozen": true,
+ "synapsesUnchanged": true
+}

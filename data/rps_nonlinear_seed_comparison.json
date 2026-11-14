@@ -1,0 +1,604 @@
+{
+  "command": "node tools/analyze_rps_nonlinear_seeds.mjs",
+  "source": "data/rps_nonlinear_readout.json",
+  "method": "Exact frozen 72-round replay per seed; population SD; fixed pre-existing centroid; correct action used only for analysis",
+  "validation": {
+    "archivedTrialsMatched": 216,
+    "frozenWeightsAndControllerUnchanged": true
+  },
+  "students": [
+    {
+      "seed": 681,
+      "wins": 61,
+      "states": [
+        {
+          "previous": 0,
+          "trials": 23,
+          "accuracy": 17,
+          "feature": [
+            {
+              "mean": 0.1678713638496736,
+              "sd": 0.7087072918806898
+            },
+            {
+              "mean": 0.20676147168821343,
+              "sd": 0.48126729200149937
+            },
+            {
+              "mean": -0.29520846967128106,
+              "sd": 0.3557426397559498
+            }
+          ],
+          "logits": [
+            {
+              "mean": -0.5224960522473746,
+              "sd": 0.6619185749354466
+            },
+            {
+              "mean": -0.12622865778751116,
+              "sd": 1.0763592493697178
+            },
+            {
+              "mean": 0.648724710034886,
+              "sd": 0.45551704117982383
+            }
+          ],
+          "correctMargin": {
+            "mean": 0.24960785373111757,
+            "sd": 1.1056748335131454
+          },
+          "correctProbability": {
+            "mean": 0.5109726916866267,
+            "sd": 0.1948373860010848
+          },
+          "selected": [
+            0,
+            6,
+            17
+          ],
+          "fixedCentroidCorrect": 18,
+          "fixedCentroidPredictions": [
+            18,
+            3,
+            2
+          ],
+          "wrong": {
+            "count": 6,
+            "selectedProbabilityMean": 0.7335257143742028,
+            "correctProbabilityMean": 0.2106739276452677,
+            "selectedProbabilityAtLeast07": 2
+          }
+        },
+        {
+          "previous": 1,
+          "trials": 24,
+          "accuracy": 22,
+          "feature": [
+            {
+              "mean": -1.2906243331957798,
+              "sd": 0.39074775634536124
+            },
+            {
+              "mean": -0.9754952402520903,
+              "sd": 0.32734862336185566
+            },
+            {
+              "mean": -0.3692194477122763,
+              "sd": 0.26464012439788254
+            }
+          ],
+          "logits": [
+            {
+              "mean": 0.9521500016519662,
+              "sd": 0.3067031435420612
+            },
+            {
+              "mean": -1.6503267831804471,
+              "sd": 0.45629822644309015
+            },
+            {
+              "mean": 0.6981767815284817,
+              "sd": 0.19980573143023503
+            }
+          ],
+          "correctMargin": {
+            "mean": 0.2539732201234843,
+            "sd": 0.24447949952255132
+          },
+          "correctProbability": {
+            "mean": 0.5359941708399566,
+            "sd": 0.07010127917415515
+          },
+          "selected": [
+            22,
+            0,
+            2
+          ],
+          "fixedCentroidCorrect": 20,
+          "fixedCentroidPredictions": [
+            4,
+            20,
+            0
+          ],
+          "wrong": {
+            "count": 2,
+            "selectedProbabilityMean": 0.5007876566906849,
+            "correctProbabilityMean": 0.3905641204416914,
+            "selectedProbabilityAtLeast07": 0
+          }
+        },
+        {
+          "previous": 2,
+          "trials": 22,
+          "accuracy": 22,
+          "feature": [
+            {
+              "mean": 0.954344603941662,
+              "sd": 0.3756134237886018
+            },
+            {
+              "mean": 1.0778572530736965,
+              "sd": 0.4851530121777844
+            },
+            {
+              "mean": 1.3196332709381169,
+              "sd": 0.3368465361446609
+            }
+          ],
+          "logits": [
+            {
+              "mean": -1.5810408449075455,
+              "sd": 0.2693882288713777
+            },
+            {
+              "mean": 2.452147106844791,
+              "sd": 0.39381436904680006
+            },
+            {
+              "mean": -0.8711062619372452,
+              "sd": 0.15815811981553565
+            }
+          ],
+          "correctMargin": {
+            "mean": 3.3232533687820354,
+            "sd": 0.5363184486927253
+          },
+          "correctProbability": {
+            "mean": 0.9409673131280006,
+            "sd": 0.0348922330563843
+          },
+          "selected": [
+            0,
+            22,
+            0
+          ],
+          "fixedCentroidCorrect": 22,
+          "fixedCentroidPredictions": [
+            0,
+            0,
+            22
+          ],
+          "wrong": {
+            "count": 0,
+            "selectedProbabilityMean": null,
+            "correctProbabilityMean": null,
+            "selectedProbabilityAtLeast07": 0
+          }
+        }
+      ]
+    },
+    {
+      "seed": 682,
+      "wins": 56,
+      "states": [
+        {
+          "previous": 0,
+          "trials": 23,
+          "accuracy": 10,
+          "feature": [
+            {
+              "mean": -0.05801377400461995,
+              "sd": 0.4936102015155767
+            },
+            {
+              "mean": 0.05953436127240475,
+              "sd": 0.4774160532038262
+            },
+            {
+              "mean": -0.3714041438565046,
+              "sd": 0.2845269948183685
+            }
+          ],
+          "logits": [
+            {
+              "mean": -0.2922907476712653,
+              "sd": 1.0529283877992557
+            },
+            {
+              "mean": -0.22547755038193756,
+              "sd": 1.0784018621911886
+            },
+            {
+              "mean": 0.5177682980532027,
+              "sd": 0.26451831290053734
+            }
+          ],
+          "correctMargin": {
+            "mean": -0.13406334316309873,
+            "sd": 0.773732301236747
+          },
+          "correctProbability": {
+            "mean": 0.4271155265686705,
+            "sd": 0.13149723010264905
+          },
+          "selected": [
+            7,
+            6,
+            10
+          ],
+          "fixedCentroidCorrect": 18,
+          "fixedCentroidPredictions": [
+            18,
+            4,
+            1
+          ],
+          "wrong": {
+            "count": 13,
+            "selectedProbabilityMean": 0.5880921171439373,
+            "correctProbabilityMean": 0.34988181227381243,
+            "selectedProbabilityAtLeast07": 3
+          }
+        },
+        {
+          "previous": 1,
+          "trials": 24,
+          "accuracy": 24,
+          "feature": [
+            {
+              "mean": -1.2270051250818492,
+              "sd": 0.4189746093662903
+            },
+            {
+              "mean": -1.0747083473887489,
+              "sd": 0.337515717415901
+            },
+            {
+              "mean": -0.45533008969821503,
+              "sd": 0.2889880467832494
+            }
+          ],
+          "logits": [
+            {
+              "mean": 1.9325229406730677,
+              "sd": 0.4931835499246491
+            },
+            {
+              "mean": -2.130892531352869,
+              "sd": 0.49748448396125505
+            },
+            {
+              "mean": 0.19836959067980384,
+              "sd": 0.29670550913115046
+            }
+          ],
+          "correctMargin": {
+            "mean": 1.734153349993263,
+            "sd": 0.6442340679814376
+          },
+          "correctProbability": {
+            "mean": 0.8151967828750263,
+            "sd": 0.10454415929964231
+          },
+          "selected": [
+            24,
+            0,
+            0
+          ],
+          "fixedCentroidCorrect": 20,
+          "fixedCentroidPredictions": [
+            4,
+            20,
+            0
+          ],
+          "wrong": {
+            "count": 0,
+            "selectedProbabilityMean": null,
+            "correctProbabilityMean": null,
+            "selectedProbabilityAtLeast07": 0
+          }
+        },
+        {
+          "previous": 2,
+          "trials": 22,
+          "accuracy": 22,
+          "feature": [
+            {
+              "mean": 0.986397289638171,
+              "sd": 0.43324649183776026
+            },
+            {
+              "mean": 1.0467593030132782,
+              "sd": 0.46631249465990354
+            },
+            {
+              "mean": 1.2838878990111808,
+              "sd": 0.2984640332562931
+            }
+          ],
+          "logits": [
+            {
+              "mean": -1.9015555034156761,
+              "sd": 0.38295688089627417
+            },
+            {
+              "mean": 2.52304869035611,
+              "sd": 0.37752109494818636
+            },
+            {
+              "mean": -0.6214931869404358,
+              "sd": 0.1256134712788525
+            }
+          ],
+          "correctMargin": {
+            "mean": 3.1445418772965468,
+            "sd": 0.41224491503158445
+          },
+          "correctProbability": {
+            "mean": 0.9410840887322071,
+            "sd": 0.03459675074873504
+          },
+          "selected": [
+            0,
+            22,
+            0
+          ],
+          "fixedCentroidCorrect": 22,
+          "fixedCentroidPredictions": [
+            0,
+            0,
+            22
+          ],
+          "wrong": {
+            "count": 0,
+            "selectedProbabilityMean": null,
+            "correctProbabilityMean": null,
+            "selectedProbabilityAtLeast07": 0
+          }
+        }
+      ]
+    },
+    {
+      "seed": 683,
+      "wins": 62,
+      "states": [
+        {
+          "previous": 0,
+          "trials": 23,
+          "accuracy": 18,
+          "feature": [
+            {
+              "mean": 0.025706975046045934,
+              "sd": 0.598208334778015
+            },
+            {
+              "mean": 0.15328907303691605,
+              "sd": 0.5998153318986756
+            },
+            {
+              "mean": -0.33191142595899203,
+              "sd": 0.5032519653564389
+            }
+          ],
+          "logits": [
+            {
+              "mean": -0.5158097707346423,
+              "sd": 0.9052000348753296
+            },
+            {
+              "mean": -0.30952110603558547,
+              "sd": 1.2977183106687848
+            },
+            {
+              "mean": 0.8253308767702277,
+              "sd": 0.4866368618819483
+            }
+          ],
+          "correctMargin": {
+            "mean": 0.3684353832829444,
+            "sd": 1.304489592189535
+          },
+          "correctProbability": {
+            "mean": 0.5518432850530368,
+            "sd": 0.21865238720059416
+          },
+          "selected": [
+            1,
+            4,
+            18
+          ],
+          "fixedCentroidCorrect": 17,
+          "fixedCentroidPredictions": [
+            17,
+            4,
+            2
+          ],
+          "wrong": {
+            "count": 5,
+            "selectedProbabilityMean": 0.8077081332868113,
+            "correctProbabilityMean": 0.17505691281936286,
+            "selectedProbabilityAtLeast07": 4
+          }
+        },
+        {
+          "previous": 1,
+          "trials": 24,
+          "accuracy": 22,
+          "feature": [
+            {
+              "mean": -1.3020015004386163,
+              "sd": 0.36231865088121656
+            },
+            {
+              "mean": -1.0433308484632875,
+              "sd": 0.4013316271221004
+            },
+            {
+              "mean": -0.43381739175210504,
+              "sd": 0.24210127584641117
+            }
+          ],
+          "logits": [
+            {
+              "mean": 1.4868373593902182,
+              "sd": 0.45494791158218273
+            },
+            {
+              "mean": -2.1483768136095036,
+              "sd": 0.5221678738845206
+            },
+            {
+              "mean": 0.6615394542192845,
+              "sd": 0.16774949920749985
+            }
+          ],
+          "correctMargin": {
+            "mean": 0.8252979051709334,
+            "sd": 0.4444948874370018
+          },
+          "correctProbability": {
+            "mean": 0.6739751983883853,
+            "sd": 0.1160815988527947
+          },
+          "selected": [
+            22,
+            0,
+            2
+          ],
+          "fixedCentroidCorrect": 20,
+          "fixedCentroidPredictions": [
+            4,
+            20,
+            0
+          ],
+          "wrong": {
+            "count": 2,
+            "selectedProbabilityMean": 0.5341177209340373,
+            "correctProbabilityMean": 0.3482617966428373,
+            "selectedProbabilityAtLeast07": 0
+          }
+        },
+        {
+          "previous": 2,
+          "trials": 22,
+          "accuracy": 22,
+          "feature": [
+            {
+              "mean": 0.7946057351789989,
+              "sd": 0.48854297341793873
+            },
+            {
+              "mean": 0.9196726972928597,
+              "sd": 0.45841031138372806
+            },
+            {
+              "mean": 1.156943909668029,
+              "sd": 0.3450599146925894
+            }
+          ],
+          "logits": [
+            {
+              "mean": -1.691450410804474,
+              "sd": 0.5432514134388673
+            },
+            {
+              "mean": 2.3021658294593577,
+              "sd": 0.6220899437493722
+            },
+            {
+              "mean": -0.610715418654883,
+              "sd": 0.15356531491937714
+            }
+          ],
+          "correctMargin": {
+            "mean": 2.908609207904133,
+            "sd": 0.7401545063438785
+          },
+          "correctProbability": {
+            "mean": 0.9057605785068616,
+            "sd": 0.1183855698900212
+          },
+          "selected": [
+            0,
+            22,
+            0
+          ],
+          "fixedCentroidCorrect": 20,
+          "fixedCentroidPredictions": [
+            2,
+            0,
+            20
+          ],
+          "wrong": {
+            "count": 0,
+            "selectedProbabilityMean": null,
+            "correctProbabilityMean": null,
+            "selectedProbabilityAtLeast07": 0
+          }
+        }
+      ]
+    }
+  ],
+  "crossPolicyState0": [
+    {
+      "neuralSeed": 681,
+      "controllers": [
+        {
+          "controllerSeed": 681,
+          "scissorsChoices": 17
+        },
+        {
+          "controllerSeed": 682,
+          "scissorsChoices": 7
+        },
+        {
+          "controllerSeed": 683,
+          "scissorsChoices": 17
+        }
+      ]
+    },
+    {
+      "neuralSeed": 682,
+      "controllers": [
+        {
+          "controllerSeed": 681,
+          "scissorsChoices": 21
+        },
+        {
+          "controllerSeed": 682,
+          "scissorsChoices": 10
+        },
+        {
+          "controllerSeed": 683,
+          "scissorsChoices": 20
+        }
+      ]
+    },
+    {
+      "neuralSeed": 683,
+      "controllers": [
+        {
+          "controllerSeed": 681,
+          "scissorsChoices": 18
+        },
+        {
+          "controllerSeed": 682,
+          "scissorsChoices": 12
+        },
+        {
+          "controllerSeed": 683,
+          "scissorsChoices": 18
+        }
+      ]
+    }
+  ]
+}

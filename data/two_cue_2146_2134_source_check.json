@@ -1,0 +1,422 @@
+{
+  "command": "node tools/check_two_cue_2146_2134_source.mjs",
+  "representation": {
+    "ids": [
+      2146,
+      2134
+    ],
+    "thresholds": [
+      0.000368234652025819,
+      0.2325956107189357
+    ],
+    "bit": "trace > threshold",
+    "method": "Per-neuron pooled calibration median; bit = trace > median. Cue-aware Bernoulli naive Bayes fitted on 501-502 only, for analysis only; Laplace smoothing 1.",
+    "calibrationTeachers": [
+      501,
+      502
+    ],
+    "archivedVerificationTeachers": [
+      503,
+      504
+    ]
+  },
+  "evaluationTeachers": [
+    603,
+    606,
+    609,
+    612,
+    615,
+    618,
+    621,
+    624
+  ],
+  "heldOutTest": 2,
+  "shuffle": "Swap mapping labels on alternating source rounds within teacher and cue",
+  "byCue": [
+    {
+      "cue": 0,
+      "perTeacher": [
+        {
+          "teacher": 603,
+          "trainedCorrect": 22,
+          "shuffledLabelCorrect": 12,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 4,
+              "11": 7,
+              "00": 1,
+              "01": 0
+            },
+            {
+              "10": 1,
+              "11": 0,
+              "00": 8,
+              "01": 3
+            }
+          ]
+        },
+        {
+          "teacher": 606,
+          "trainedCorrect": 17,
+          "shuffledLabelCorrect": 11,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 3,
+              "11": 4,
+              "00": 5,
+              "01": 0
+            },
+            {
+              "10": 1,
+              "11": 1,
+              "00": 5,
+              "01": 5
+            }
+          ]
+        },
+        {
+          "teacher": 609,
+          "trainedCorrect": 20,
+          "shuffledLabelCorrect": 14,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 4,
+              "11": 7,
+              "00": 0,
+              "01": 1
+            },
+            {
+              "10": 1,
+              "11": 2,
+              "00": 6,
+              "01": 3
+            }
+          ]
+        },
+        {
+          "teacher": 612,
+          "trainedCorrect": 24,
+          "shuffledLabelCorrect": 12,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 4,
+              "11": 8,
+              "00": 0,
+              "01": 0
+            },
+            {
+              "10": 0,
+              "11": 0,
+              "00": 9,
+              "01": 3
+            }
+          ]
+        },
+        {
+          "teacher": 615,
+          "trainedCorrect": 18,
+          "shuffledLabelCorrect": 12,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 2,
+              "11": 6,
+              "00": 2,
+              "01": 2
+            },
+            {
+              "10": 1,
+              "11": 1,
+              "00": 10,
+              "01": 0
+            }
+          ]
+        },
+        {
+          "teacher": 618,
+          "trainedCorrect": 21,
+          "shuffledLabelCorrect": 11,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 3,
+              "11": 8,
+              "00": 1,
+              "01": 0
+            },
+            {
+              "10": 1,
+              "11": 1,
+              "00": 5,
+              "01": 5
+            }
+          ]
+        },
+        {
+          "teacher": 621,
+          "trainedCorrect": 22,
+          "shuffledLabelCorrect": 12,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 4,
+              "11": 6,
+              "00": 1,
+              "01": 1
+            },
+            {
+              "10": 0,
+              "11": 0,
+              "00": 7,
+              "01": 5
+            }
+          ]
+        },
+        {
+          "teacher": 624,
+          "trainedCorrect": 20,
+          "shuffledLabelCorrect": 12,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 5,
+              "11": 6,
+              "00": 0,
+              "01": 1
+            },
+            {
+              "10": 2,
+              "11": 1,
+              "00": 9,
+              "01": 0
+            }
+          ]
+        }
+      ],
+      "meanCorrectOutOf24": {
+        "trained": 20.5,
+        "shuffled": 12,
+        "untrained": 12,
+        "disconnected": 12
+      },
+      "pooledMessageDistribution": [
+        {
+          "10": 29,
+          "11": 52,
+          "00": 10,
+          "01": 5
+        },
+        {
+          "10": 7,
+          "11": 6,
+          "00": 59,
+          "01": 24
+        }
+      ],
+      "gate": {
+        "meanAtLeast18": true,
+        "sixTeachersAtLeast16": true,
+        "shuffledMarginAtLeast4": true,
+        "untrainedMarginAtLeast4": true
+      },
+      "pass": true
+    },
+    {
+      "cue": 1,
+      "perTeacher": [
+        {
+          "teacher": 603,
+          "trainedCorrect": 19,
+          "shuffledLabelCorrect": 11,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 1,
+              "11": 10,
+              "00": 1,
+              "01": 0
+            },
+            {
+              "10": 1,
+              "11": 3,
+              "00": 7,
+              "01": 1
+            }
+          ]
+        },
+        {
+          "teacher": 606,
+          "trainedCorrect": 22,
+          "shuffledLabelCorrect": 12,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 0,
+              "11": 12,
+              "00": 0,
+              "01": 0
+            },
+            {
+              "10": 0,
+              "11": 2,
+              "00": 9,
+              "01": 1
+            }
+          ]
+        },
+        {
+          "teacher": 609,
+          "trainedCorrect": 20,
+          "shuffledLabelCorrect": 12,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 2,
+              "11": 8,
+              "00": 2,
+              "01": 0
+            },
+            {
+              "10": 2,
+              "11": 0,
+              "00": 4,
+              "01": 6
+            }
+          ]
+        },
+        {
+          "teacher": 612,
+          "trainedCorrect": 24,
+          "shuffledLabelCorrect": 12,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 4,
+              "11": 8,
+              "00": 0,
+              "01": 0
+            },
+            {
+              "10": 0,
+              "11": 0,
+              "00": 12,
+              "01": 0
+            }
+          ]
+        },
+        {
+          "teacher": 615,
+          "trainedCorrect": 21,
+          "shuffledLabelCorrect": 11,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 2,
+              "11": 9,
+              "00": 0,
+              "01": 1
+            },
+            {
+              "10": 1,
+              "11": 1,
+              "00": 9,
+              "01": 1
+            }
+          ]
+        },
+        {
+          "teacher": 618,
+          "trainedCorrect": 21,
+          "shuffledLabelCorrect": 11,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 3,
+              "11": 8,
+              "00": 0,
+              "01": 1
+            },
+            {
+              "10": 2,
+              "11": 0,
+              "00": 7,
+              "01": 3
+            }
+          ]
+        },
+        {
+          "teacher": 621,
+          "trainedCorrect": 23,
+          "shuffledLabelCorrect": 11,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 3,
+              "11": 8,
+              "00": 1,
+              "01": 0
+            },
+            {
+              "10": 0,
+              "11": 0,
+              "00": 9,
+              "01": 3
+            }
+          ]
+        },
+        {
+          "teacher": 624,
+          "trainedCorrect": 23,
+          "shuffledLabelCorrect": 11,
+          "untrainedCorrect": 12,
+          "messageDistribution": [
+            {
+              "10": 2,
+              "11": 10,
+              "00": 0,
+              "01": 0
+            },
+            {
+              "10": 0,
+              "11": 1,
+              "00": 7,
+              "01": 4
+            }
+          ]
+        }
+      ],
+      "meanCorrectOutOf24": {
+        "trained": 21.625,
+        "shuffled": 11.375,
+        "untrained": 12,
+        "disconnected": 12
+      },
+      "pooledMessageDistribution": [
+        {
+          "10": 17,
+          "11": 73,
+          "00": 4,
+          "01": 2
+        },
+        {
+          "10": 6,
+          "11": 7,
+          "00": 64,
+          "01": 19
+        }
+      ],
+      "gate": {
+        "meanAtLeast18": true,
+        "sixTeachersAtLeast16": true,
+        "shuffledMarginAtLeast4": true,
+        "untrainedMarginAtLeast4": true
+      },
+      "pass": true
+    }
+  ],
+  "receivingDiagnosticJustified": true
+}

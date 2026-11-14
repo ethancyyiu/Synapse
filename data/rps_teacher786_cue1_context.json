@@ -1,0 +1,2342 @@
+{
+  "command": "node tools/analyze_rps_teacher786_cue1_context.mjs",
+  "hypothesis": "Preceding neural state/history changes cue-1 B786 MBON features and Q preference",
+  "design": {
+    "teacherSeed": 786,
+    "cue": 1,
+    "archivedEvalSeeds": [
+      52000,
+      52003,
+      52004
+    ],
+    "matchedStream": "rng(786*10000000+(100+evalSeedIndex)*1000+round+1)",
+    "cueHz": 150,
+    "cueMs": [
+      0,
+      240
+    ],
+    "countResetMs": 50,
+    "decisionMs": 240,
+    "singleChangedFactor": "carry neural state across original episode versus reset before each matched cue",
+    "materialEffectCriterion": "at least 6/23 archived-positive margins flip nonpositive and mean paired margin falls at least 0.20",
+    "teacherFirstComparison": "12 saved receiving-study held-out repeats, unmatched different streams"
+  },
+  "archive": [
+    {
+      "label": "archived_continuous",
+      "key": 7860100004,
+      "rates": [
+        0,
+        0,
+        0.35714285714285715
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -0.40576107796734173
+      ],
+      "scores": [
+        0.48982311324146044,
+        1.1371743060730688,
+        -0.5012446485309996
+      ],
+      "margin": 0.6473511928316084,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 3,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860100007,
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0.5
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -0.15080639358433515
+      ],
+      "scores": [
+        0.39590953319760575,
+        0.9667382771140529,
+        -0.3049850224210879
+      ],
+      "margin": 0.5708287439164472,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 6,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860100010,
+      "rates": [
+        0.07142857142857142,
+        0.14285714285714285,
+        0.5
+      ],
+      "features": [
+        -1.4924790385226445,
+        -0.7615292327456353,
+        -0.15080639358433515
+      ],
+      "scores": [
+        0.41478485224129025,
+        0.8928633252257673,
+        -0.25785487965676634
+      ],
+      "margin": 0.47807847298447703,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 9,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860100013,
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0.42857142857142855
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0.46763035570946215,
+        0.9562268269190829,
+        -0.3528029246385481
+      ],
+      "margin": 0.48859647120962074,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 12,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860100016,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0.35714285714285715
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -0.40576107796734173
+      ],
+      "scores": [
+        0.5537497723475497,
+        0.9184224080128728,
+        -0.4087547747694272
+      ],
+      "margin": 0.36467263566532304,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 15,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860100019,
+      "rates": [
+        0,
+        0,
+        0.35714285714285715
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -0.40576107796734173
+      ],
+      "scores": [
+        0.48982311324146044,
+        1.1371743060730688,
+        -0.5012446485309996
+      ],
+      "margin": 0.6473511928316084,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 18,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860100022,
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0.42857142857142855
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0.46763035570946215,
+        0.9562268269190829,
+        -0.3528029246385481
+      ],
+      "margin": 0.48859647120962074,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 21,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860101002,
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.9919372684679795,
+        0.8793840662350632,
+        -0.7023702581989048
+      ],
+      "margin": -0.11255320223291632,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 1,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860101005,
+      "rates": [
+        0.07142857142857142,
+        0.21428571428571427,
+        0.5
+      ],
+      "features": [
+        -1.4924790385226445,
+        -0.4912666234292062,
+        -0.15080639358433515
+      ],
+      "scores": [
+        0.4325154890535082,
+        0.8234684748171578,
+        -0.2135829157059496
+      ],
+      "margin": 0.3909529857636496,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 4,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860101008,
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0.42857142857142855
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0.46763035570946215,
+        0.9562268269190829,
+        -0.3528029246385481
+      ],
+      "margin": 0.48859647120962074,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 7,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860101011,
+      "rates": [
+        0,
+        0,
+        0.2857142857142857
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -0.5434930422017814
+      ],
+      "scores": [
+        0.5693011319455704,
+        1.1255259561804691,
+        -0.554234449731374
+      ],
+      "margin": 0.5562248242348987,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 10,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860101014,
+      "rates": [
+        0.07142857142857142,
+        0.14285714285714285,
+        0.5
+      ],
+      "features": [
+        -1.4924790385226445,
+        -0.7615292327456353,
+        -0.15080639358433515
+      ],
+      "scores": [
+        0.41478485224129025,
+        0.8928633252257673,
+        -0.25785487965676634
+      ],
+      "margin": 0.47807847298447703,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 13,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860101017,
+      "rates": [
+        0.14285714285714285,
+        0.07142857142857142,
+        0.42857142857142855
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.049239879038443,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0.4985274500846688,
+        0.8504994491140747,
+        -0.3081006298788639
+      ],
+      "margin": 0.3519719990294059,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 16,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860101020,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 19,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860101023,
+      "rates": [
+        0.14285714285714285,
+        0.07142857142857142,
+        0.42857142857142855
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.049239879038443,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0.4985274500846688,
+        0.8504994491140747,
+        -0.3081006298788639
+      ],
+      "margin": 0.3519719990294059,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 22,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860102003,
+      "rates": [
+        0.21428571428571427,
+        0.07142857142857142,
+        0.21428571428571427
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.049239879038443,
+        -0.6890995746948642
+      ],
+      "scores": [
+        0.7664512409806166,
+        0.7161704417359953,
+        -0.42538962557099397
+      ],
+      "margin": -0.050280799244621255,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 2,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860102006,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0.2857142857142857
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -0.5434930422017814
+      ],
+      "scores": [
+        0.6332277910516597,
+        0.906774058120273,
+        -0.46174457596980156
+      ],
+      "margin": 0.2735462670686133,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 5,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860102009,
+      "rates": [
+        0.21428571428571427,
+        0.07142857142857142,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.049239879038443,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0.5275508089826954,
+        0.7511838437656198,
+        -0.26610927856859984
+      ],
+      "margin": 0.2236330347829244,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 8,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860102012,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0.21428571428571427
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -0.6890995746948642
+      ],
+      "scores": [
+        0.6863527229159667,
+        1.0001871133455156,
+        -0.5624662650158487
+      ],
+      "margin": 0.31383439042954886,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 11,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860102015,
+      "rates": [
+        0,
+        0,
+        0.2857142857142857
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -0.5434930422017814
+      ],
+      "scores": [
+        0.5693011319455704,
+        1.1255259561804691,
+        -0.554234449731374
+      ],
+      "margin": 0.5562248242348987,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 14,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860102018,
+      "rates": [
+        0,
+        0,
+        0.42857142857142855
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0.4144227261871627,
+        1.148225035630328,
+        -0.4509734970153428
+      ],
+      "margin": 0.7338023094431654,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 17,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860102021,
+      "rates": [
+        0.21428571428571427,
+        0.14285714285714285,
+        0.42857142857142855
+      ],
+      "features": [
+        -0.8670215223860789,
+        -0.7615292327456353,
+        -0.2750954727804774
+      ],
+      "scores": [
+        0.5464261280263798,
+        0.6773088918773341,
+        -0.21897913580427825
+      ],
+      "margin": 0.13088276385095432,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 20,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    },
+    {
+      "label": "archived_continuous",
+      "key": 7860102024,
+      "rates": [
+        0.14285714285714285,
+        0.07142857142857142,
+        0.35714285714285715
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.049239879038443,
+        -0.40576107796734173
+      ],
+      "scores": [
+        0.5739278371389666,
+        0.8394487195568155,
+        -0.35837178139452075
+      ],
+      "margin": 0.265520882417849,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 23,
+      "initialNeuralState": "carried from earlier rounds within this evaluation episode"
+    }
+  ],
+  "matchedResetReplay": [
+    {
+      "label": "matched_reset_replay",
+      "key": 7860100004,
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.031679656949796,
+        0.7533147715376572,
+        -0.6660596055038629
+      ],
+      "margin": -0.27836488541213866,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 3,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860100007,
+      "rates": [
+        0.2857142857142857,
+        0.07142857142857142,
+        0.14285714285714285
+      ],
+      "features": [
+        -0.5813930322180321,
+        -1.049239879038443,
+        -0.8435359974954221
+      ],
+      "scores": [
+        0.8829324925179363,
+        0.609472108965998,
+        -0.44521565615464487
+      ],
+      "margin": -0.27346038355193825,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 6,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860100010,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 9,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860100013,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 12,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860100016,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 15,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860100019,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.9717592036765627,
+        0.9583577546911203,
+        -0.7527532515738111
+      ],
+      "margin": -0.013401448985442377,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 18,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860100022,
+      "rates": [
+        0.14285714285714285,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.049239879038443,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0228343628431862,
+        0.773656688430055,
+        -0.6576679634392205
+      ],
+      "margin": -0.2491776744131312,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52000,
+      "round": 21,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860101002,
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.9919372684679795,
+        0.8793840662350632,
+        -0.7023702581989048
+      ],
+      "margin": -0.11255320223291632,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 1,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860101005,
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.031679656949796,
+        0.7533147715376572,
+        -0.6660596055038629
+      ],
+      "margin": -0.27836488541213866,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 4,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860101008,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 7,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860101011,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.9717592036765627,
+        0.9583577546911203,
+        -0.7527532515738111
+      ],
+      "margin": -0.013401448985442377,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 10,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860101014,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 13,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860101017,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 16,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860101020,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 19,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860101023,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52003,
+      "round": 22,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860102003,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.9717592036765627,
+        0.9583577546911203,
+        -0.7527532515738111
+      ],
+      "margin": -0.013401448985442377,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 2,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860102006,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.9717592036765627,
+        0.9583577546911203,
+        -0.7527532515738111
+      ],
+      "margin": -0.013401448985442377,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 5,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860102009,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 8,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860102012,
+      "rates": [
+        0.21428571428571427,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.049239879038443,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0518577217412126,
+        0.6743410830816,
+        -0.6156766121289565
+      ],
+      "margin": -0.3775166386596126,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 11,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860102015,
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.93872963894568,
+        1.0713822749463084,
+        -0.8005408305756994
+      ],
+      "margin": 0.1326526360006285,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 14,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860102018,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 17,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860102021,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 20,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "matched_reset_replay",
+      "key": 7860102024,
+      "rates": [
+        0.07142857142857142,
+        0.07142857142857142,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.049239879038443,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.9919372684679795,
+        0.8793840662350632,
+        -0.7023702581989048
+      ],
+      "margin": -0.11255320223291632,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "sequenceSeed": 52004,
+      "round": 23,
+      "initialNeuralState": "reset immediately before this cue"
+    }
+  ],
+  "savedTeacherFirst": [
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761461,
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.93872963894568,
+        1.0713822749463084,
+        -0.8005408305756994
+      ],
+      "margin": 0.1326526360006285,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 6,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761471,
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.93872963894568,
+        1.0713822749463084,
+        -0.8005408305756994
+      ],
+      "margin": 0.1326526360006285,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 7,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761481,
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.93872963894568,
+        1.0713822749463084,
+        -0.8005408305756994
+      ],
+      "margin": 0.1326526360006285,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 8,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761491,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 9,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761501,
+      "rates": [
+        0.35714285714285715,
+        0.14285714285714285,
+        0.14285714285714285
+      ],
+      "features": [
+        -0.3112116583567229,
+        -0.7615292327456353,
+        -0.8435359974954221
+      ],
+      "scores": [
+        0.9276918883695164,
+        0.4470239231493382,
+        -0.3606361138772948
+      ],
+      "margin": -0.48066796522017824,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 10,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761511,
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.93872963894568,
+        1.0713822749463084,
+        -0.8005408305756994
+      ],
+      "margin": 0.1326526360006285,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 11,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761521,
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.031679656949796,
+        0.7533147715376572,
+        -0.6660596055038629
+      ],
+      "margin": -0.27836488541213866,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 12,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761531,
+      "rates": [
+        0.07142857142857142,
+        0,
+        0
+      ],
+      "features": [
+        -1.4924790385226445,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.9717592036765627,
+        0.9583577546911203,
+        -0.7527532515738111
+      ],
+      "margin": -0.013401448985442377,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 13,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761541,
+      "rates": [
+        0.21428571428571427,
+        0,
+        0
+      ],
+      "features": [
+        -0.8670215223860789,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.031679656949796,
+        0.7533147715376572,
+        -0.6660596055038629
+      ],
+      "margin": -0.27836488541213866,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 14,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761551,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 15,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761561,
+      "rates": [
+        0.14285714285714285,
+        0,
+        0
+      ],
+      "features": [
+        -1.169971132655612,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        1.0026562980517693,
+        0.8526303768861122,
+        -0.7080509568141269
+      ],
+      "margin": -0.15002592116565705,
+      "bit": 0,
+      "expectedBBit": 1,
+      "correct": false,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 16,
+      "initialNeuralState": "reset immediately before this cue"
+    },
+    {
+      "label": "saved_teacher_first_unmatched",
+      "key": 2104761571,
+      "rates": [
+        0,
+        0,
+        0
+      ],
+      "features": [
+        -1.837245948436493,
+        -1.3568078755655855,
+        -1.1836966449457225
+      ],
+      "scores": [
+        0.93872963894568,
+        1.0713822749463084,
+        -0.8005408305756994
+      ],
+      "margin": 0.1326526360006285,
+      "bit": 1,
+      "expectedBBit": 1,
+      "correct": true,
+      "cueHz": 150,
+      "cueMs": [
+        0,
+        240
+      ],
+      "countResetMs": 50,
+      "decisionMs": 240,
+      "repeat": 17,
+      "initialNeuralState": "reset immediately before this cue"
+    }
+  ],
+  "pairs": [
+    {
+      "sequenceSeed": 52000,
+      "round": 3,
+      "key": 7860100004,
+      "archivedMargin": 0.6473511928316084,
+      "replayMargin": -0.27836488541213866,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.970224426050414,
+        0,
+        -0.7779355669783807
+      ]
+    },
+    {
+      "sequenceSeed": 52000,
+      "round": 6,
+      "key": 7860100007,
+      "archivedMargin": 0.5708287439164472,
+      "replayMargin": -0.27346038355193825,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.9110860063046125,
+        0,
+        -0.692729603911087
+      ]
+    },
+    {
+      "sequenceSeed": 52000,
+      "round": 9,
+      "key": 7860100010,
+      "archivedMargin": 0.47807847298447703,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.3225079058670326,
+        -0.5952786428199501,
+        -1.0328902513613873
+      ]
+    },
+    {
+      "sequenceSeed": 52000,
+      "round": 12,
+      "key": 7860100013,
+      "archivedMargin": 0.48859647120962074,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.3225079058670326,
+        -0.3075679965271425,
+        -0.908601172165245
+      ]
+    },
+    {
+      "sequenceSeed": 52000,
+      "round": 15,
+      "key": 7860100016,
+      "archivedMargin": 0.36467263566532304,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0,
+        0,
+        -0.7779355669783807
+      ]
+    },
+    {
+      "sequenceSeed": 52000,
+      "round": 18,
+      "key": 7860100019,
+      "archivedMargin": 0.6473511928316084,
+      "replayMargin": -0.013401448985442377,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.3447669099138484,
+        0,
+        -0.7779355669783807
+      ]
+    },
+    {
+      "sequenceSeed": 52000,
+      "round": 21,
+      "key": 7860100022,
+      "archivedMargin": 0.48859647120962074,
+      "replayMargin": -0.2491776744131312,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.3225079058670326,
+        0,
+        -0.908601172165245
+      ]
+    },
+    {
+      "sequenceSeed": 52003,
+      "round": 1,
+      "key": 7860101002,
+      "archivedMargin": -0.11255320223291632,
+      "replayMargin": -0.11255320223291632,
+      "archivedBit": 0,
+      "replayBit": 0,
+      "featureDelta": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "sequenceSeed": 52003,
+      "round": 4,
+      "key": 7860101005,
+      "archivedMargin": 0.3909529857636496,
+      "replayMargin": -0.27836488541213866,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.6254575161365656,
+        -0.8655412521363792,
+        -1.0328902513613873
+      ]
+    },
+    {
+      "sequenceSeed": 52003,
+      "round": 7,
+      "key": 7860101008,
+      "archivedMargin": 0.48859647120962074,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.3225079058670326,
+        -0.3075679965271425,
+        -0.908601172165245
+      ]
+    },
+    {
+      "sequenceSeed": 52003,
+      "round": 10,
+      "key": 7860101011,
+      "archivedMargin": 0.5562248242348987,
+      "replayMargin": -0.013401448985442377,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.3447669099138484,
+        0,
+        -0.6402036027439411
+      ]
+    },
+    {
+      "sequenceSeed": 52003,
+      "round": 13,
+      "key": 7860101014,
+      "archivedMargin": 0.47807847298447703,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.3225079058670326,
+        -0.5952786428199501,
+        -1.0328902513613873
+      ]
+    },
+    {
+      "sequenceSeed": 52003,
+      "round": 16,
+      "key": 7860101017,
+      "archivedMargin": 0.3519719990294059,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0,
+        -0.3075679965271425,
+        -0.908601172165245
+      ]
+    },
+    {
+      "sequenceSeed": 52003,
+      "round": 19,
+      "key": 7860101020,
+      "archivedMargin": -0.15002592116565705,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 0,
+      "replayBit": 0,
+      "featureDelta": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "sequenceSeed": 52003,
+      "round": 22,
+      "key": 7860101023,
+      "archivedMargin": 0.3519719990294059,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0,
+        -0.3075679965271425,
+        -0.908601172165245
+      ]
+    },
+    {
+      "sequenceSeed": 52004,
+      "round": 2,
+      "key": 7860102003,
+      "archivedMargin": -0.050280799244621255,
+      "replayMargin": -0.013401448985442377,
+      "archivedBit": 0,
+      "replayBit": 0,
+      "featureDelta": [
+        -0.6254575161365656,
+        -0.3075679965271425,
+        -0.4945970702508583
+      ]
+    },
+    {
+      "sequenceSeed": 52004,
+      "round": 5,
+      "key": 7860102006,
+      "archivedMargin": 0.2735462670686133,
+      "replayMargin": -0.013401448985442377,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        -0.3225079058670326,
+        0,
+        -0.6402036027439411
+      ]
+    },
+    {
+      "sequenceSeed": 52004,
+      "round": 8,
+      "key": 7860102009,
+      "archivedMargin": 0.2236330347829244,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        -0.30294961026953304,
+        -0.3075679965271425,
+        -0.908601172165245
+      ]
+    },
+    {
+      "sequenceSeed": 52004,
+      "round": 11,
+      "key": 7860102012,
+      "archivedMargin": 0.31383439042954886,
+      "replayMargin": -0.3775166386596126,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.6254575161365656,
+        0.3075679965271425,
+        -0.4945970702508583
+      ]
+    },
+    {
+      "sequenceSeed": 52004,
+      "round": 14,
+      "key": 7860102015,
+      "archivedMargin": 0.5562248242348987,
+      "replayMargin": 0.1326526360006285,
+      "archivedBit": 1,
+      "replayBit": 1,
+      "featureDelta": [
+        0,
+        0,
+        -0.6402036027439411
+      ]
+    },
+    {
+      "sequenceSeed": 52004,
+      "round": 17,
+      "key": 7860102018,
+      "archivedMargin": 0.7338023094431654,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        0.667274815780881,
+        0,
+        -0.908601172165245
+      ]
+    },
+    {
+      "sequenceSeed": 52004,
+      "round": 20,
+      "key": 7860102021,
+      "archivedMargin": 0.13088276385095432,
+      "replayMargin": -0.15002592116565705,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        -0.30294961026953304,
+        -0.5952786428199501,
+        -0.908601172165245
+      ]
+    },
+    {
+      "sequenceSeed": 52004,
+      "round": 23,
+      "key": 7860102024,
+      "archivedMargin": 0.265520882417849,
+      "replayMargin": -0.11255320223291632,
+      "archivedBit": 1,
+      "replayBit": 0,
+      "featureDelta": [
+        -0.3225079058670326,
+        0,
+        -0.7779355669783807
+      ]
+    }
+  ],
+  "summary": {
+    "archived": {
+      "n": 23,
+      "bitOne": 20,
+      "meanMargin": 0.36903723836890967,
+      "medianMargin": 0.3909529857636496,
+      "minMargin": -0.15002592116565705,
+      "maxMargin": 0.7338023094431654,
+      "nearZeroAbsLt0_1": 1,
+      "meanRates": [
+        0.09316770186335402,
+        0.05900621118012421,
+        0.3540372670807454
+      ],
+      "meanFeatures": [
+        -1.4017144544338334,
+        -1.107805390962644,
+        -0.42622196671030627
+      ],
+      "meanScores": [
+        0.5596909468937489,
+        0.9287281852626588,
+        -0.40795895985915365
+      ]
+    },
+    "matchedReset": {
+      "n": 23,
+      "bitOne": 1,
+      "meanMargin": -0.14144474629035478,
+      "medianMargin": -0.15002592116565705,
+      "minMargin": -0.3775166386596126,
+      "maxMargin": 0.1326526360006285,
+      "nearZeroAbsLt0_1": 4,
+      "meanRates": [
+        0.13354037267080746,
+        0.015527950310559004,
+        0.006211180124223602
+      ],
+      "meanFeatures": [
+        -1.2180100596006944,
+        -1.2899452676249026,
+        -1.1689070515783184
+      ],
+      "meanScores": [
+        0.9939062678330121,
+        0.8524615215426572,
+        -0.6980667096067259
+      ]
+    },
+    "teacherFirstUnmatched": {
+      "n": 12,
+      "bitOne": 5,
+      "meanMargin": -0.0698011473769772,
+      "medianMargin": -0.013401448985442377,
+      "minMargin": -0.48066796522017824,
+      "maxMargin": 0.1326526360006285,
+      "nearZeroAbsLt0_1": 1,
+      "meanRates": [
+        0.10714285714285714,
+        0.011904761904761904,
+        0.011904761904761904
+      ],
+      "meanFeatures": [
+        -1.3528230734834017,
+        -1.3072013219972567,
+        -1.1553499243248644
+      ],
+      "meanScores": [
+        0.9720356245691151,
+        0.9022344771921378,
+        -0.7143637999816423
+      ]
+    },
+    "positiveToZero": 19,
+    "zeroToPositive": 0,
+    "meanPairedMarginDrop": 0.5104819846592646,
+    "meanAbsoluteFeatureDelta": [
+      0.34686722512963464,
+      0.20888491983853155,
+      0.7426850848680119
+    ],
+    "materialStateHistoryEffect": true
+  },
+  "teacherWeightsUnchanged": true,
+  "priorReceivingGatePassed": false,
+  "studentTrainingStatus": "not_started"
+}

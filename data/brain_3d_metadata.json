@@ -1,0 +1,18 @@
+{
+  "source": "Janelia/Google male CNS v1.0 somaLocation, derived from raw annotations",
+  "coordinateOrder": [
+    "viewer x (mirrored source x)",
+    "viewer y (source z)",
+    "viewer z (source y depth)"
+  ],
+  "units": "source coordinate axes normalized with one common x-axis scale; no neural positions are synthesized",
+  "backgroundPoints": 139662,
+  "simulatedNeurons": 6900,
+  "placedSimulatedNeurons": 6827,
+  "unplacedSimulatedNeurons": 73,
+  "topDownProjectionExact": true,
+  "depthRange": [
+    4758.0,
+    68996.0
+  ]
+}

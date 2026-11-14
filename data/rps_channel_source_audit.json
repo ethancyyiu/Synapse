@@ -1,0 +1,1166 @@
+{
+  "seed": 1,
+  "episodes": 3,
+  "source": [
+    2709,
+    2360,
+    2325
+  ],
+  "sampledMs": 180,
+  "countsResetMs": 50,
+  "matchesPublished": 72,
+  "rounds": [
+    {
+      "episode": 0,
+      "round": 0,
+      "previousOpponent": null,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 0,
+      "round": 1,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        4,
+        6
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 0,
+      "round": 2,
+      "previousOpponent": 0,
+      "raw": [
+        2,
+        1,
+        1
+      ],
+      "quantized": [
+        2,
+        1,
+        1
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 0,
+      "round": 3,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 0,
+      "round": 4,
+      "previousOpponent": 2,
+      "raw": [
+        6,
+        5,
+        5
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 0,
+      "round": 5,
+      "previousOpponent": 0,
+      "raw": [
+        2,
+        1,
+        0
+      ],
+      "quantized": [
+        2,
+        1,
+        0
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 0,
+      "round": 6,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 0,
+      "round": 7,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        4,
+        5
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 0,
+      "round": 8,
+      "previousOpponent": 0,
+      "raw": [
+        2,
+        3,
+        3
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 0,
+      "round": 9,
+      "previousOpponent": 1,
+      "raw": [
+        1,
+        1,
+        1
+      ],
+      "quantized": [
+        1,
+        1,
+        1
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 0,
+      "round": 10,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        4,
+        5
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 0,
+      "round": 11,
+      "previousOpponent": 0,
+      "raw": [
+        3,
+        2,
+        2
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 0,
+      "round": 12,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 0,
+      "round": 13,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        2,
+        3
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 0,
+      "round": 14,
+      "previousOpponent": 0,
+      "raw": [
+        3,
+        2,
+        2
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 0,
+      "round": 15,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 0,
+      "round": 16,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        3,
+        4
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 0,
+      "round": 17,
+      "previousOpponent": 0,
+      "raw": [
+        2,
+        2,
+        2
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 0,
+      "round": 18,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 0,
+      "round": 19,
+      "previousOpponent": 2,
+      "raw": [
+        3,
+        4,
+        3
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 0,
+      "round": 20,
+      "previousOpponent": 0,
+      "raw": [
+        3,
+        1,
+        2
+      ],
+      "quantized": [
+        2,
+        1,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 0,
+      "round": 21,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 0,
+      "round": 22,
+      "previousOpponent": 2,
+      "raw": [
+        6,
+        6,
+        6
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 0,
+      "round": 23,
+      "previousOpponent": 0,
+      "raw": [
+        2,
+        2,
+        2
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 1,
+      "round": 0,
+      "previousOpponent": null,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 1,
+      "round": 1,
+      "previousOpponent": 1,
+      "raw": [
+        1,
+        0,
+        0
+      ],
+      "quantized": [
+        1,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 1,
+      "round": 2,
+      "previousOpponent": 2,
+      "raw": [
+        5,
+        5,
+        5
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 1,
+      "round": 3,
+      "previousOpponent": 0,
+      "raw": [
+        2,
+        2,
+        2
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 1,
+      "round": 4,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 1,
+      "round": 5,
+      "previousOpponent": 2,
+      "raw": [
+        3,
+        2,
+        3
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 1,
+      "round": 6,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        6,
+        5
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 1,
+      "round": 7,
+      "previousOpponent": 0,
+      "raw": [
+        3,
+        3,
+        2
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 1,
+      "round": 8,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 1,
+      "round": 9,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        4,
+        4
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 1,
+      "round": 10,
+      "previousOpponent": 0,
+      "raw": [
+        4,
+        4,
+        3
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 1,
+      "round": 11,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 1,
+      "round": 12,
+      "previousOpponent": 2,
+      "raw": [
+        6,
+        4,
+        5
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 1,
+      "round": 13,
+      "previousOpponent": 0,
+      "raw": [
+        3,
+        3,
+        3
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 1,
+      "round": 14,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 1,
+      "round": 15,
+      "previousOpponent": 2,
+      "raw": [
+        6,
+        4,
+        6
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 1,
+      "round": 16,
+      "previousOpponent": 0,
+      "raw": [
+        1,
+        1,
+        1
+      ],
+      "quantized": [
+        1,
+        1,
+        1
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 1,
+      "round": 17,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 1,
+      "round": 18,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        3,
+        5
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 1,
+      "round": 19,
+      "previousOpponent": 0,
+      "raw": [
+        2,
+        4,
+        3
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 1,
+      "round": 20,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 1,
+      "round": 21,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        4,
+        4
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 1,
+      "round": 22,
+      "previousOpponent": 0,
+      "raw": [
+        1,
+        0,
+        0
+      ],
+      "quantized": [
+        1,
+        0,
+        0
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 1,
+      "round": 23,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 2,
+      "round": 0,
+      "previousOpponent": null,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 2,
+      "round": 1,
+      "previousOpponent": 2,
+      "raw": [
+        5,
+        5,
+        6
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 2,
+      "round": 2,
+      "previousOpponent": 0,
+      "raw": [
+        3,
+        3,
+        3
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 2,
+      "round": 3,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 2,
+      "round": 4,
+      "previousOpponent": 2,
+      "raw": [
+        5,
+        5,
+        6
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 2,
+      "round": 5,
+      "previousOpponent": 0,
+      "raw": [
+        1,
+        1,
+        2
+      ],
+      "quantized": [
+        1,
+        1,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 2,
+      "round": 6,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 2,
+      "round": 7,
+      "previousOpponent": 0,
+      "raw": [
+        1,
+        0,
+        0
+      ],
+      "quantized": [
+        1,
+        0,
+        0
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 2,
+      "round": 8,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 2,
+      "round": 9,
+      "previousOpponent": 2,
+      "raw": [
+        3,
+        2,
+        5
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 2,
+      "round": 10,
+      "previousOpponent": 0,
+      "raw": [
+        2,
+        2,
+        2
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 2,
+      "round": 11,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 2,
+      "round": 12,
+      "previousOpponent": 2,
+      "raw": [
+        7,
+        4,
+        6
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 2,
+      "round": 13,
+      "previousOpponent": 0,
+      "raw": [
+        3,
+        3,
+        2
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 2,
+      "round": 14,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 2,
+      "round": 15,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        2,
+        4
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 2,
+      "round": 16,
+      "previousOpponent": 0,
+      "raw": [
+        2,
+        2,
+        2
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 2,
+      "round": 17,
+      "previousOpponent": 1,
+      "raw": [
+        0,
+        0,
+        0
+      ],
+      "quantized": [
+        0,
+        0,
+        0
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 2,
+      "round": 18,
+      "previousOpponent": 2,
+      "raw": [
+        4,
+        5,
+        5
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 2,
+      "round": 19,
+      "previousOpponent": 2,
+      "raw": [
+        5,
+        4,
+        6
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 2,
+      "round": 20,
+      "previousOpponent": 0,
+      "raw": [
+        3,
+        4,
+        4
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 1
+    },
+    {
+      "episode": 2,
+      "round": 21,
+      "previousOpponent": 1,
+      "raw": [
+        2,
+        1,
+        1
+      ],
+      "quantized": [
+        2,
+        1,
+        1
+      ],
+      "nextOpponent": 2
+    },
+    {
+      "episode": 2,
+      "round": 22,
+      "previousOpponent": 2,
+      "raw": [
+        3,
+        5,
+        5
+      ],
+      "quantized": [
+        2,
+        2,
+        2
+      ],
+      "nextOpponent": 0
+    },
+    {
+      "episode": 2,
+      "round": 23,
+      "previousOpponent": 0,
+      "raw": [
+        1,
+        1,
+        1
+      ],
+      "quantized": [
+        1,
+        1,
+        1
+      ],
+      "nextOpponent": 1
+    }
+  ]
+}

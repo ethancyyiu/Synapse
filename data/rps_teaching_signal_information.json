@@ -1,0 +1,33 @@
+{
+  "seeds": [
+    1,
+    2,
+    3
+  ],
+  "permutations": 500,
+  "conditions": {
+    "trained": {
+      "n": 1440,
+      "noninitialN": 1380,
+      "labelCounts": {
+        "1": 745,
+        "0": 695
+      },
+      "conditionalNextMoveBits": 0.006307984980972349,
+      "permutationMedianBits": 0.005659377969165124,
+      "permutationP": 0.38323353293413176
+    },
+    "untrained": {
+      "n": 1440,
+      "noninitialN": 1380,
+      "labelCounts": {
+        "1": 696,
+        "0": 744
+      },
+      "conditionalNextMoveBits": 0.003091241497941107,
+      "permutationMedianBits": 0.003998054799743843,
+      "permutationP": 0.6846307385229541
+    }
+  },
+  "trainedUntrainedAgreement": 0.79375
+}

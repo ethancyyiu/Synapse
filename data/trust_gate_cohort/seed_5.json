@@ -1,0 +1,87 @@
+{
+ "status": "completed",
+ "teacherSeed": 28011,
+ "studentSeed": 28012,
+ "teacherWins": 65,
+ "staleTeacherWins": 64,
+ "messages": {
+  "trained": 92,
+  "stale": 92
+ },
+ "points": [
+  {
+   "rounds": 0,
+   "alone": 1,
+   "trained": 1,
+   "stale": 1,
+   "gatedTrained": 1,
+   "gatedStale": 1,
+   "trust": {
+    "gatedTrained": 1,
+    "gatedStale": 1
+   }
+  },
+  {
+   "rounds": 24,
+   "alone": 1,
+   "trained": 47,
+   "stale": 1,
+   "gatedTrained": 47,
+   "gatedStale": 1,
+   "trust": {
+    "gatedTrained": 0.7376,
+    "gatedStale": 0.014411518807585589
+   }
+  },
+  {
+   "rounds": 48,
+   "alone": 1,
+   "trained": 69,
+   "stale": 1,
+   "gatedTrained": 68,
+   "gatedStale": 1,
+   "trust": {
+    "gatedTrained": 0.9926140966111123,
+    "gatedStale": 0.0002596148429267415
+   }
+  },
+  {
+   "rounds": 96,
+   "alone": 46,
+   "trained": 69,
+   "stale": 0,
+   "gatedTrained": 69,
+   "gatedStale": 46,
+   "trust": {
+    "gatedTrained": 0.9999984660078814,
+    "gatedStale": 0.00038696157456834994
+   }
+  }
+ ],
+ "verdict": {
+  "noHarm": true,
+  "benefitKept": true,
+  "staleHarmed": true,
+  "protectedFromStale": true
+ },
+ "finalTrust": {
+  "gatedTrained": 0.9999984660078814,
+  "gatedStale": 0.00038696157456834994
+ },
+ "preferences": {
+  "trained": [
+   31,
+   30,
+   31
+  ],
+  "stale": [
+   30,
+   31,
+   31
+  ],
+  "bothSent": 92,
+  "agreed": 0
+ },
+ "teachersFrozen": true,
+ "synapsesUnchanged": true
+}

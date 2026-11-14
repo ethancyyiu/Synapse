@@ -1,0 +1,46 @@
+{
+  "kind": "prospective_protocol_completeness_audit",
+  "date": "",
+  "status": "stopped_before_data_collection",
+  "sourceDesign": "docs/lab-notebook.md:1889",
+  "fixedDesignRecovered": {
+    "opponent": "previous_opponent, offset 2, noise 0.5",
+    "training": "12 episodes x 24 rounds per agent",
+    "frozenEvaluation": "72 rounds, at least 15 observed rounds per cue",
+    "heldOutTeacherTrace": "288 rounds per teacher",
+    "teacherSeeds": [861, 862],
+    "studentSeeds": [863, 864],
+    "studentGate": ">=70% expected-optimal action per cue for both and >=20 percentage-point overall gain over initial",
+    "teacherGate": ">=75% expected-optimal action per cue for both",
+    "sourceGate": ">=80% balanced approval classification per cue and >=15 percentage points over within-cue shuffled and untrained controls for both",
+    "rewardOpportunityGate": ">=4 rewarded suboptimal candidates per cue; reject >=75% of them and approve >=75% of rewarded optimal candidates",
+    "receiverGate": "12/12 forced-bit decoding and >=10/12 cue recognition per cue"
+  },
+  "staticEnvironmentCheck": {
+    "implementation": "js/rps.js Opponent.move/play",
+    "transition": "P(next=j | previous=c) = 0.5*I(j=(c+2)%3) + 1/6",
+    "allCueStatesReachable": true,
+    "stationaryDistributionRule": true,
+    "suboptimalActionCanWinByChance": true,
+    "finiteStreamCueCountsAndMisleadingWinCounts": "not measured; no stream is locked"
+  },
+  "essentialMissingSettings": [
+    "Exact training, initial/final evaluation, and 288-round source-trace opponent seed or stream schedule",
+    "Exact label-free balanced action-exposure algorithm, including first cue-free round and how the VPN-derived cue selects its counter; the generic js/rps.js balancedActions path reads the opponent observation directly",
+    "Neural-state reset schedule and keyed neural/action random streams for the new noisy task",
+    "Exact held-out candidate-action schedule for the teacher source test",
+    "Predetermined receiver identities, forced-bit probe streams, and which student neural-state schedule they inherit"
+  ],
+  "results": {
+    "studentsTrained": 0,
+    "teachersTrained": 0,
+    "neuralProbes": 0,
+    "studentLearningGate": "not evaluated",
+    "teacherLearningGate": "not evaluated",
+    "sourceAndRewardOpportunityGates": "not evaluated",
+    "receiverGate": "not evaluated",
+    "allPrerequisitesPassed": null
+  },
+  "conclusion": "Protocol completeness prerequisite failed; stop before simulation, training, or held-out inspection. This is not a negative biological or learning result.",
+  "reproduction": "Read docs/lab-notebook.md section beginning line 1889 and inspect js/rps.js Opponent and balancedActions paths; no simulation command was run."
+}

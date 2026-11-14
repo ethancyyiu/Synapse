@@ -1,0 +1,784 @@
+{
+  "command": "node tools/check_two_cue_population.mjs",
+  "method": "Top four MBONs by minimum stable standardized mapping separation across calibration teachers and cues; per-cue nearest standardized class centroid.",
+  "calibrationTeachers": [
+    501,
+    502
+  ],
+  "evaluationTeachers": [
+    503,
+    504
+  ],
+  "selected": [
+    {
+      "id": 2146,
+      "score": 0.9793791047175368,
+      "contrasts": [
+        [
+          1.255448632859137,
+          1.4342498768967318
+        ],
+        [
+          0.9793791047175368,
+          1.413882241682966
+        ]
+      ]
+    },
+    {
+      "id": 2134,
+      "score": 0.7972096748608732,
+      "contrasts": [
+        [
+          1.0318546507018402,
+          1.4682397811420687
+        ],
+        [
+          0.7972096748608732,
+          1.7370513951476476
+        ]
+      ]
+    },
+    {
+      "id": 2124,
+      "score": 0.6003422711678786,
+      "contrasts": [
+        [
+          1.0782123990151813,
+          1.0868737390580296
+        ],
+        [
+          0.6003422711678786,
+          0.8629476560241569
+        ]
+      ]
+    },
+    {
+      "id": 2122,
+      "score": 0.5778899588343478,
+      "contrasts": [
+        [
+          0.5778899588343478,
+          0.832338155470285
+        ],
+        [
+          0.7334852437962195,
+          0.9255741510008867
+        ]
+      ]
+    }
+  ],
+  "singleRule": [
+    [
+      0,
+      1
+    ],
+    [
+      1,
+      0
+    ]
+  ],
+  "cueAwareRule": [
+    {
+      "10": 0,
+      "11": 1,
+      "00": 0,
+      "01": 0
+    },
+    {
+      "10": 0,
+      "11": 0,
+      "00": 1,
+      "01": 1
+    }
+  ],
+  "calibration": {
+    "population": [
+      {
+        "cue": 0,
+        "correct": 106,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 42,
+            "n": 72
+          },
+          {
+            "correct": 64,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.18999922276756487
+      },
+      {
+        "cue": 1,
+        "correct": 117,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 48,
+            "n": 72
+          },
+          {
+            "correct": 69,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.3536452305429666
+      }
+    ],
+    "neuron2132Locked": [
+      {
+        "cue": 0,
+        "correct": 63,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 62,
+            "n": 72
+          },
+          {
+            "correct": 1,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.04586934688210992
+      },
+      {
+        "cue": 1,
+        "correct": 138,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 69,
+            "n": 72
+          },
+          {
+            "correct": 69,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.7501177071668146
+      }
+    ],
+    "neuron2132CueAware": [
+      {
+        "cue": 0,
+        "correct": 81,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 10,
+            "n": 72
+          },
+          {
+            "correct": 71,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.045869346882109974
+      },
+      {
+        "cue": 1,
+        "correct": 138,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 69,
+            "n": 72
+          },
+          {
+            "correct": 69,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.7501177071668146
+      }
+    ],
+    "twoBitGlobal": [
+      {
+        "cue": 0,
+        "correct": 102,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 38,
+            "n": 72
+          },
+          {
+            "correct": 64,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.15326088480176936
+      },
+      {
+        "cue": 1,
+        "correct": 128,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 58,
+            "n": 72
+          },
+          {
+            "correct": 70,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.532969295572405
+      }
+    ],
+    "twoBitCueAware": [
+      {
+        "cue": 0,
+        "correct": 111,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 48,
+            "n": 72
+          },
+          {
+            "correct": 63,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.23753087013311902
+      },
+      {
+        "cue": 1,
+        "correct": 138,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 69,
+            "n": 72
+          },
+          {
+            "correct": 69,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.7501177071668146
+      }
+    ]
+  },
+  "evaluation": {
+    "population": [
+      {
+        "cue": 0,
+        "correct": 98,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 39,
+            "n": 72
+          },
+          {
+            "correct": 59,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.10546377376428828
+      },
+      {
+        "cue": 1,
+        "correct": 117,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 52,
+            "n": 72
+          },
+          {
+            "correct": 65,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.32008784762696885
+      }
+    ],
+    "neuron2132Locked": [
+      {
+        "cue": 0,
+        "correct": 60,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 57,
+            "n": 72
+          },
+          {
+            "correct": 3,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.04948086371127847
+      },
+      {
+        "cue": 1,
+        "correct": 143,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 71,
+            "n": 72
+          },
+          {
+            "correct": 72,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.9470653285111476
+      }
+    ],
+    "neuron2132CueAware": [
+      {
+        "cue": 0,
+        "correct": 84,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 15,
+            "n": 72
+          },
+          {
+            "correct": 69,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.049480863711278356
+      },
+      {
+        "cue": 1,
+        "correct": 143,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 71,
+            "n": 72
+          },
+          {
+            "correct": 72,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.9470653285111476
+      }
+    ],
+    "twoBitGlobal": [
+      {
+        "cue": 0,
+        "correct": 76,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 28,
+            "n": 72
+          },
+          {
+            "correct": 48,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.0024143318680227566
+      },
+      {
+        "cue": 1,
+        "correct": 129,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 57,
+            "n": 72
+          },
+          {
+            "correct": 72,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.5993185756884367
+      }
+    ],
+    "twoBitCueAware": [
+      {
+        "cue": 0,
+        "correct": 88,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 43,
+            "n": 72
+          },
+          {
+            "correct": 45,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.0359501733433949
+      },
+      {
+        "cue": 1,
+        "correct": 143,
+        "n": 144,
+        "byMapping": [
+          {
+            "correct": 71,
+            "n": 72
+          },
+          {
+            "correct": 72,
+            "n": 72
+          }
+        ],
+        "decodedInformationBits": 0.9470653285111476
+      }
+    ]
+  },
+  "evaluationByTeacher": {
+    "503": {
+      "population": [
+        {
+          "cue": 0,
+          "correct": 47,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 20,
+              "n": 36
+            },
+            {
+              "correct": 27,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.07137522442016553
+        },
+        {
+          "cue": 1,
+          "correct": 58,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 27,
+              "n": 36
+            },
+            {
+              "correct": 31,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.2947762482268045
+        }
+      ],
+      "neuron2132Locked": [
+        {
+          "cue": 0,
+          "correct": 34,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 32,
+              "n": 36
+            },
+            {
+              "correct": 2,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.007415968340648282
+        },
+        {
+          "cue": 1,
+          "correct": 72,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 36,
+              "n": 36
+            },
+            {
+              "correct": 36,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 1
+        }
+      ],
+      "neuron2132CueAware": [
+        {
+          "cue": 0,
+          "correct": 38,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 4,
+              "n": 36
+            },
+            {
+              "correct": 34,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.007415968340648282
+        },
+        {
+          "cue": 1,
+          "correct": 72,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 36,
+              "n": 36
+            },
+            {
+              "correct": 36,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 1
+        }
+      ],
+      "twoBitGlobal": [
+        {
+          "cue": 0,
+          "correct": 39,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 17,
+              "n": 36
+            },
+            {
+              "correct": 22,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.005114413391337891
+        },
+        {
+          "cue": 1,
+          "correct": 65,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 29,
+              "n": 36
+            },
+            {
+              "correct": 36,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.6172138896407816
+        }
+      ],
+      "twoBitCueAware": [
+        {
+          "cue": 0,
+          "correct": 41,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 21,
+              "n": 36
+            },
+            {
+              "correct": 20,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.013970924845611465
+        },
+        {
+          "cue": 1,
+          "correct": 72,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 36,
+              "n": 36
+            },
+            {
+              "correct": 36,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 1
+        }
+      ]
+    },
+    "504": {
+      "population": [
+        {
+          "cue": 0,
+          "correct": 51,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 19,
+              "n": 36
+            },
+            {
+              "correct": 32,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.15326088480176936
+        },
+        {
+          "cue": 1,
+          "correct": 59,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 25,
+              "n": 36
+            },
+            {
+              "correct": 34,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.355674128592235
+        }
+      ],
+      "neuron2132Locked": [
+        {
+          "cue": 0,
+          "correct": 26,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 25,
+              "n": 36
+            },
+            {
+              "correct": 1,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.11447322774010049
+        },
+        {
+          "cue": 1,
+          "correct": 71,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 35,
+              "n": 36
+            },
+            {
+              "correct": 36,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.9078822989396126
+        }
+      ],
+      "neuron2132CueAware": [
+        {
+          "cue": 0,
+          "correct": 46,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 11,
+              "n": 36
+            },
+            {
+              "correct": 35,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.11447322774010049
+        },
+        {
+          "cue": 1,
+          "correct": 71,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 35,
+              "n": 36
+            },
+            {
+              "correct": 36,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.9078822989396126
+        }
+      ],
+      "twoBitGlobal": [
+        {
+          "cue": 0,
+          "correct": 37,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 11,
+              "n": 36
+            },
+            {
+              "correct": 26,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.0006737201530578885
+        },
+        {
+          "cue": 1,
+          "correct": 64,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 28,
+              "n": 36
+            },
+            {
+              "correct": 36,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.5819765115539188
+        }
+      ],
+      "twoBitCueAware": [
+        {
+          "cue": 0,
+          "correct": 47,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 22,
+              "n": 36
+            },
+            {
+              "correct": 25,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.06895728602428797
+        },
+        {
+          "cue": 1,
+          "correct": 71,
+          "n": 72,
+          "byMapping": [
+            {
+              "correct": 35,
+              "n": 36
+            },
+            {
+              "correct": 36,
+              "n": 36
+            }
+          ],
+          "decodedInformationBits": 0.9078822989396126
+        }
+      ]
+    }
+  }
+}

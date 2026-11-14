@@ -1,0 +1,552 @@
+{
+ "protocol": "docs/stale-teacher-cohort-protocol.md",
+ "seedsFound": 15,
+ "completed": 15,
+ "stoppedTeacher": 0,
+ "stoppedStaleTeacher": 0,
+ "meanTrainedMinusStale48": 67.13333333333334,
+ "bootstrap95": [
+  65.6,
+  68.4
+ ],
+ "passed": true,
+ "staleMinusAlone48": {
+  "mean": -12.866666666666667,
+  "bootstrap95": [
+   -20.866666666666667,
+   -5.8
+  ]
+ },
+ "staleMinusAlone96": {
+  "mean": -30,
+  "bootstrap95": [
+   -38.93333333333333,
+   -20.666666666666668
+  ],
+  "shareStaleBelowAloneBy4": 0.8
+ },
+ "meanWins": {
+  "0": {
+   "alone": 0.8666666666666667,
+   "trained": 0.8666666666666667,
+   "stale": 0.8666666666666667
+  },
+  "24": {
+   "alone": 2.8,
+   "trained": 48.2,
+   "stale": 0.9333333333333333
+  },
+  "48": {
+   "alone": 13.733333333333333,
+   "trained": 68,
+   "stale": 0.8666666666666667
+  },
+  "96": {
+   "alone": 31,
+   "trained": 69.86666666666666,
+   "stale": 1
+  }
+ },
+ "messageAgreement": {
+  "agreed": 27,
+  "bothSent": 1380
+ },
+ "integrity": true,
+ "seeds": [
+  {
+   "file": "seed_3.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 66,
+   "trainedMinusStale48": 69,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 47,
+     "stale": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "stale": 1
+    },
+    {
+     "rounds": 96,
+     "alone": 1,
+     "trained": 70,
+     "stale": 1
+    }
+   ]
+  },
+  {
+   "file": "seed_4.json",
+   "status": "completed",
+   "teacherWins": 66,
+   "staleTeacherWins": 64,
+   "trainedMinusStale48": 69,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 48,
+     "stale": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 9,
+     "trained": 70,
+     "stale": 1
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 70,
+     "stale": 1
+    }
+   ]
+  },
+  {
+   "file": "seed_5.json",
+   "status": "completed",
+   "teacherWins": 62,
+   "staleTeacherWins": 64,
+   "trainedMinusStale48": 69,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "stale": 2
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 48,
+     "stale": 2
+    },
+    {
+     "rounds": 48,
+     "alone": 2,
+     "trained": 71,
+     "stale": 2
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 71,
+     "stale": 2
+    }
+   ]
+  },
+  {
+   "file": "seed_6.json",
+   "status": "completed",
+   "teacherWins": 63,
+   "staleTeacherWins": 67,
+   "trainedMinusStale48": 66,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 47,
+     "stale": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 67,
+     "stale": 1
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 70,
+     "stale": 1
+    }
+   ]
+  },
+  {
+   "file": "seed_7.json",
+   "status": "completed",
+   "teacherWins": 64,
+   "staleTeacherWins": 65,
+   "trainedMinusStale48": 65,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "stale": 0
+    },
+    {
+     "rounds": 24,
+     "alone": 0,
+     "trained": 47,
+     "stale": 0
+    },
+    {
+     "rounds": 48,
+     "alone": 38,
+     "trained": 67,
+     "stale": 2
+    },
+    {
+     "rounds": 96,
+     "alone": 48,
+     "trained": 69,
+     "stale": 1
+    }
+   ]
+  },
+  {
+   "file": "seed_8.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 61,
+   "trainedMinusStale48": 67,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 0,
+     "trained": 47,
+     "stale": 0
+    },
+    {
+     "rounds": 48,
+     "alone": 0,
+     "trained": 67,
+     "stale": 0
+    },
+    {
+     "rounds": 96,
+     "alone": 0,
+     "trained": 69,
+     "stale": 0
+    }
+   ]
+  },
+  {
+   "file": "seed_9.json",
+   "status": "completed",
+   "teacherWins": 68,
+   "staleTeacherWins": 67,
+   "trainedMinusStale48": 69,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "stale": 0
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 56,
+     "stale": 2
+    },
+    {
+     "rounds": 48,
+     "alone": 46,
+     "trained": 69,
+     "stale": 0
+    },
+    {
+     "rounds": 96,
+     "alone": 49,
+     "trained": 69,
+     "stale": 0
+    }
+   ]
+  },
+  {
+   "file": "seed_10.json",
+   "status": "completed",
+   "teacherWins": 65,
+   "staleTeacherWins": 64,
+   "trainedMinusStale48": 59,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "stale": 2
+    },
+    {
+     "rounds": 24,
+     "alone": 2,
+     "trained": 46,
+     "stale": 2
+    },
+    {
+     "rounds": 48,
+     "alone": 24,
+     "trained": 61,
+     "stale": 2
+    },
+    {
+     "rounds": 96,
+     "alone": 47,
+     "trained": 71,
+     "stale": 2
+    }
+   ]
+  },
+  {
+   "file": "seed_11.json",
+   "status": "completed",
+   "teacherWins": 66,
+   "staleTeacherWins": 68,
+   "trainedMinusStale48": 69,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 47,
+     "stale": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 11,
+     "trained": 70,
+     "stale": 1
+    },
+    {
+     "rounds": 96,
+     "alone": 47,
+     "trained": 70,
+     "stale": 1
+    }
+   ]
+  },
+  {
+   "file": "seed_12.json",
+   "status": "completed",
+   "teacherWins": 70,
+   "staleTeacherWins": 67,
+   "trainedMinusStale48": 69,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 2,
+     "trained": 2,
+     "stale": 2
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 57,
+     "stale": 2
+    },
+    {
+     "rounds": 48,
+     "alone": 25,
+     "trained": 70,
+     "stale": 1
+    },
+    {
+     "rounds": 96,
+     "alone": 47,
+     "trained": 71,
+     "stale": 2
+    }
+   ]
+  },
+  {
+   "file": "seed_13.json",
+   "status": "completed",
+   "teacherWins": 63,
+   "staleTeacherWins": 65,
+   "trainedMinusStale48": 69,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "stale": 0
+    },
+    {
+     "rounds": 24,
+     "alone": 0,
+     "trained": 45,
+     "stale": 0
+    },
+    {
+     "rounds": 48,
+     "alone": 0,
+     "trained": 69,
+     "stale": 0
+    },
+    {
+     "rounds": 96,
+     "alone": 0,
+     "trained": 69,
+     "stale": 0
+    }
+   ]
+  },
+  {
+   "file": "seed_14.json",
+   "status": "completed",
+   "teacherWins": 66,
+   "staleTeacherWins": 66,
+   "trainedMinusStale48": 65,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "stale": 0
+    },
+    {
+     "rounds": 24,
+     "alone": 6,
+     "trained": 49,
+     "stale": 0
+    },
+    {
+     "rounds": 48,
+     "alone": 24,
+     "trained": 65,
+     "stale": 0
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 69,
+     "stale": 0
+    }
+   ]
+  },
+  {
+   "file": "seed_15.json",
+   "status": "completed",
+   "teacherWins": 68,
+   "staleTeacherWins": 68,
+   "trainedMinusStale48": 64,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 0,
+     "trained": 0,
+     "stale": 0
+    },
+    {
+     "rounds": 24,
+     "alone": 0,
+     "trained": 45,
+     "stale": 0
+    },
+    {
+     "rounds": 48,
+     "alone": 0,
+     "trained": 64,
+     "stale": 0
+    },
+    {
+     "rounds": 96,
+     "alone": 25,
+     "trained": 70,
+     "stale": 2
+    }
+   ]
+  },
+  {
+   "file": "seed_16.json",
+   "status": "completed",
+   "teacherWins": 66,
+   "staleTeacherWins": 68,
+   "trainedMinusStale48": 69,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "trained": 47,
+     "stale": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 1,
+     "trained": 70,
+     "stale": 1
+    },
+    {
+     "rounds": 96,
+     "alone": 33,
+     "trained": 70,
+     "stale": 1
+    }
+   ]
+  },
+  {
+   "file": "seed_17.json",
+   "status": "completed",
+   "teacherWins": 67,
+   "staleTeacherWins": 66,
+   "trainedMinusStale48": 69,
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "trained": 1,
+     "stale": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 24,
+     "trained": 47,
+     "stale": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 24,
+     "trained": 70,
+     "stale": 1
+    },
+    {
+     "rounds": 96,
+     "alone": 24,
+     "trained": 70,
+     "stale": 1
+    }
+   ]
+  }
+ ]
+}

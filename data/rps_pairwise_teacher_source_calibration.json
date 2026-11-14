@@ -1,0 +1,22 @@
+{
+  "status": "stopped_after_calibration",
+  "source": "data/rps_hybrid_message_source.json calibration.rows",
+  "calibrationTeacher": 711,
+  "heldoutTeachersReserved": [712, 713, 714],
+  "message": "bit = 1 if trained contextual-bandit Q_paper > Q_scissors, else 0",
+  "comparisonThreshold": 0,
+  "candidateCount": 1,
+  "trainingControl": "Untrained contextual-bandit Q values are all zero, so this strict comparison emits bit 0",
+  "byPreviousMove": [
+    { "cue": 0, "trials": 23, "bit0": 23, "bit1": 0, "contrastMean": -0.7146749189237893, "contrastMin": -1.1849261660603991, "contrastMax": -0.1659954061894139 },
+    { "cue": 1, "trials": 24, "bit0": 24, "bit1": 0, "contrastMean": -0.8399236898290244, "contrastMin": -1.5841657300933334, "contrastMax": -0.47442189943548896 },
+    { "cue": 2, "trials": 22, "bit0": 0, "bit1": 22, "contrastMean": 0.9624506405877877, "contrastMin": 0.42929137127549244, "contrastMax": 1.3412538275902284 }
+  ],
+  "overallBitCounts": [47, 22],
+  "cueOnlyRule": "bit = 1 if previous opponent move is 2, else 0",
+  "cueOnlyAgreement": "69/69 calibration recordings",
+  "calibrationNonredundancy": false,
+  "heldoutEvaluated": false,
+  "receivingTestRun": false,
+  "studentTrainingRun": false
+}
