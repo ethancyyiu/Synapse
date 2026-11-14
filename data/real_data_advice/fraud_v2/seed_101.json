@@ -1,0 +1,84 @@
+{
+ "status": "completed",
+ "seed": 101,
+ "teacherGate": {
+  "teacherAP": 0.7809393742056313,
+  "oldOnlyStudentAP": 0.5954936247932222,
+  "margin": 0.1854457494124091,
+  "passed": true,
+  "setting": {
+   "learning_rate": 0.05,
+   "max_leaf_nodes": 31
+  },
+  "cvAP": 0.7767666692067742
+ },
+ "staleTeacherSetting": {
+  "learning_rate": 0.1,
+  "max_leaf_nodes": 31
+ },
+ "metrics": {
+  "alone": {
+   "ap": 0.833288064834495,
+   "recallTop1": 0.9146341463414634
+  },
+  "taught": {
+   "ap": 0.8562810930380977,
+   "recallTop1": 0.9024390243902439
+  },
+  "shuffled": {
+   "ap": 0.29492452256632623,
+   "recallTop1": 0.43902439024390244
+  },
+  "random": {
+   "ap": 0.47856520184244417,
+   "recallTop1": 0.573170731707317
+  },
+  "stale": {
+   "ap": 0.8181707343072778,
+   "recallTop1": 0.8902439024390244
+  },
+  "fullLabels": {
+   "ap": 0.8482840177661993,
+   "recallTop1": 0.9024390243902439
+  },
+  "oldOnlyStudent": {
+   "ap": 0.8266337149410414,
+   "recallTop1": 0.926829268292683
+  },
+  "newSiteStudent": {
+   "ap": 0.8674839873843307,
+   "recallTop1": 0.926829268292683
+  },
+  "teacher": {
+   "ap": 0.865203544818195,
+   "recallTop1": 0.926829268292683
+  },
+  "staleTeacher": {
+   "ap": 0.7878674096921826,
+   "recallTop1": 0.926829268292683
+  }
+ },
+ "advantage": 0.022993028203602717,
+ "change": 0.040850272443289315,
+ "headroom": 0.014995952931704304,
+ "adviceBits": 24500,
+ "adviceBytes": 3062,
+ "teacherFlagRate": 0.001142857142857143,
+ "teacherBitAccuracy": 0.9995102040816326,
+ "teacherBitRecall": 0.7,
+ "labelledPositives": 1,
+ "advisedTruePositives": 40,
+ "counts": {
+  "teacherUnits": 56008,
+  "streamUnits": 28004,
+  "testUnits": 56009,
+  "testCases": 56009,
+  "testPositives": 82,
+  "oldCases": 144786
+ },
+ "hashes": {
+  "protocol": "665bee6df59e89f28c378bbf5e3361c1726746dfba060b3e263e42c87825f383",
+  "runner": "7f74383433dee38fefc2be384fcbdb755550633aa7da3e7b8d669c2021e7ae47",
+  "v1Runner": "61aea2b571a2f0398f3fe849f782db8b3effd6b2cc6600e857247dd9f701038a"
+ }
+}

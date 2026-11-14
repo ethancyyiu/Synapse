@@ -1,0 +1,84 @@
+{
+ "status": "completed",
+ "seed": 111,
+ "teacherGate": {
+  "teacherAP": 0.7816578716448584,
+  "oldOnlyStudentAP": 0.6811781095708731,
+  "margin": 0.10047976207398535,
+  "passed": true,
+  "setting": {
+   "learning_rate": 0.05,
+   "max_leaf_nodes": 31
+  },
+  "cvAP": 0.8256526650796056
+ },
+ "staleTeacherSetting": {
+  "learning_rate": 0.05,
+  "max_leaf_nodes": 15
+ },
+ "metrics": {
+  "alone": {
+   "ap": 0.7167063493372565,
+   "recallTop1": 0.8295454545454546
+  },
+  "taught": {
+   "ap": 0.7401228682299182,
+   "recallTop1": 0.7840909090909091
+  },
+  "shuffled": {
+   "ap": 0.23955796762932127,
+   "recallTop1": 0.4659090909090909
+  },
+  "random": {
+   "ap": 0.1853534766148817,
+   "recallTop1": 0.4318181818181818
+  },
+  "stale": {
+   "ap": 0.6928945544494614,
+   "recallTop1": 0.7613636363636364
+  },
+  "fullLabels": {
+   "ap": 0.7069180748427115,
+   "recallTop1": 0.7954545454545454
+  },
+  "oldOnlyStudent": {
+   "ap": 0.7214974564121555,
+   "recallTop1": 0.8295454545454546
+  },
+  "newSiteStudent": {
+   "ap": 0.7668823472018211,
+   "recallTop1": 0.8409090909090909
+  },
+  "teacher": {
+   "ap": 0.7314361988932382,
+   "recallTop1": 0.8295454545454546
+  },
+  "staleTeacher": {
+   "ap": 0.6958107117423812,
+   "recallTop1": 0.7954545454545454
+  }
+ },
+ "advantage": 0.02341651889266172,
+ "change": 0.04538489078966568,
+ "headroom": -0.009788274494545002,
+ "adviceBits": 24500,
+ "adviceBytes": 3062,
+ "teacherFlagRate": 0.0012653061224489797,
+ "teacherBitAccuracy": 0.9996734693877551,
+ "teacherBitRecall": 0.8108108108108109,
+ "labelledPositives": 0,
+ "advisedTruePositives": 37,
+ "counts": {
+  "teacherUnits": 56008,
+  "streamUnits": 28004,
+  "testUnits": 56009,
+  "testCases": 56009,
+  "testPositives": 88,
+  "oldCases": 144786
+ },
+ "hashes": {
+  "protocol": "665bee6df59e89f28c378bbf5e3361c1726746dfba060b3e263e42c87825f383",
+  "runner": "7f74383433dee38fefc2be384fcbdb755550633aa7da3e7b8d669c2021e7ae47",
+  "v1Runner": "61aea2b571a2f0398f3fe849f782db8b3effd6b2cc6600e857247dd9f701038a"
+ }
+}
