@@ -1,0 +1,584 @@
+RASPBERRY PI HARDWARE DEMO — COMPLETE BEGINNER GUIDE
+=====================================================
+For: someone who has never touched a Raspberry Pi
+Time to build: 3-4 hours at the hackathon
+What you'll have: a physical second "agent" that shows Fly B's
+wins in real time, connected to your laptop by a USB cable.
+Unplugging the cable physically disconnects the teacher.
+
+
+===============================================================
+WHAT YOU ARE BUILDING AND WHY
+===============================================================
+
+Your laptop runs the full simulation.
+The Pi is "the other agent" — Fly B.
+
+The USB cable between them IS the 12-byte message channel.
+When you unplug it, Fly B loses the teacher signal.
+When you plug it back in, teaching resumes.
+
+This makes the concept physical. Judges see two separate machines.
+They understand "incompatible systems communicating through
+a constrained channel" immediately, without explanation.
+
+The Pi shows one screen:
+
+  ┌─────────────────────────┐
+  │  FLY B                  │
+  │                         │
+  │  Wins: 68 / 72          │
+  │  Round: 48              │
+  │                         │
+  │  ● TEACHER CONNECTED    │
+  └─────────────────────────┘
+
+When you unplug:
+
+  ┌─────────────────────────┐
+  │  FLY B                  │
+  │                         │
+  │  Wins: 12 / 72          │
+  │  Round: 48              │
+  │                         │
+  │  ○ learning alone       │
+  └─────────────────────────┘
+
+
+===============================================================
+WHAT TO BUY — SHOPPING LIST
+===============================================================
+
+You can get all of this at a Micro Center, Best Buy,
+or order on Amazon the day before.
+
+REQUIRED:
+  1. Raspberry Pi 4 Model B (2GB RAM is fine) — ~$45
+     OR Raspberry Pi Zero 2 W — ~$15 (slower but works)
+     
+  2. MicroSD card (16GB or larger, Class 10) — ~$8
+     Get one that says "Raspberry Pi" compatible if possible.
+     
+  3. USB-C power supply for the Pi — ~$10
+     Must be 5V 3A. Phone chargers often don't work.
+     Get the official Raspberry Pi power supply if you can.
+     
+  4. SSD1306 OLED display (128x64, I2C) — ~$4-8 on Amazon
+     Search: "SSD1306 0.96 inch OLED I2C"
+     This is the small screen that shows Fly B's status.
+     
+  5. 4x female-to-female jumper wires — ~$3
+     (Usually come in a pack of 40, any color is fine)
+     
+  6. Micro-HDMI to HDMI cable — ~$8
+     (Pi 4 uses micro-HDMI, not regular HDMI)
+     Only needed for setup. Not needed during the demo.
+     
+  7. USB keyboard + mouse — you probably have these
+     Only needed for setup.
+
+OPTIONAL BUT NICE:
+  8. Small breadboard — ~$3
+     Makes wiring neater. Not strictly required.
+     
+  9. USB-A to USB-C cable (if Pi 4) or USB-A to micro-USB (if Pi Zero)
+     This is the cable that connects laptop to Pi.
+     You probably have one already.
+
+TOTAL COST: ~$70-80 with everything, ~$55 if you have
+            a keyboard/mouse/HDMI cable already.
+
+WHERE TO GET IT FAST:
+  - Micro Center (if there's one near Princeton): has everything same-day
+  - Amazon same-day delivery in many areas
+  - Best Buy: has Pi 4, power supply, HDMI cable. No OLED display.
+  - Adafruit.com: ships fast, has everything, slightly more expensive
+
+
+===============================================================
+STEP 1 — SET UP THE PI (do this before the hackathon if possible)
+===============================================================
+
+This takes about 45 minutes. Do it at home if you can.
+
+1a. DOWNLOAD THE PI IMAGER
+    Go to: https://www.raspberrypi.com/software/
+    Download "Raspberry Pi Imager" for your OS (Windows/Mac).
+    Install it.
+
+1b. FLASH THE SD CARD
+    - Insert your microSD card into your laptop
+      (use a USB adapter if your laptop has no SD slot)
+    - Open Raspberry Pi Imager
+    - Click "Choose Device" → select your Pi model
+    - Click "Choose OS" → "Raspberry Pi OS (64-bit)"
+      (the one that says "Recommended")
+    - Click "Choose Storage" → select your SD card
+    - Click the gear icon (⚙) BEFORE clicking Write:
+        ✓ Set hostname: flyhero
+        ✓ Enable SSH
+        ✓ Set username: pi
+        ✓ Set password: flyhero2026
+        ✓ Configure WiFi: enter your phone hotspot name + password
+          (you'll want WiFi at the hackathon for setup)
+    - Click "Write" and wait ~5 minutes
+
+1c. BOOT THE PI
+    - Put the SD card in the Pi (small slot on the underside)
+    - Connect HDMI cable to Pi and to a monitor/TV
+    - Connect keyboard and mouse via USB
+    - Connect the power supply LAST (this turns it on)
+    - Wait about 90 seconds for it to boot
+    - You should see a desktop
+
+1d. OPEN A TERMINAL
+    - Click the terminal icon at the top of the screen
+      (looks like a black rectangle with ">_")
+    - You'll type all commands here
+
+
+===============================================================
+STEP 2 — WIRE THE OLED DISPLAY
+===============================================================
+
+The OLED has 4 pins. You connect them to the Pi's GPIO pins
+with jumper wires. GPIO = the row of metal pins on the Pi board.
+
+THE 4 PINS ON THE OLED (labeled on the back of the display):
+  VCC  (power)
+  GND  (ground)
+  SCL  (clock)
+  SDA  (data)
+
+WHERE TO PLUG THEM ON THE PI:
+  Look at the Pi board. The GPIO pins are the 2 rows of 20 pins
+  each along one edge. Count them from the corner nearest the
+  SD card slot.
+
+  OLED VCC  → Pi Pin 1  (3.3V power — first pin, corner)
+  OLED GND  → Pi Pin 6  (Ground — 3rd pin on outer row)
+  OLED SCL  → Pi Pin 5  (GPIO 3 / SCL)
+  OLED SDA  → Pi Pin 3  (GPIO 2 / SDA)
+
+PIN MAP (Pi 4, looking at the board with pins facing you,
+         SD card slot at the bottom-right):
+
+  [1 ] [2 ]     ← Pin 1 = 3.3V (connect OLED VCC here)
+  [3 ] [4 ]     ← Pin 3 = SDA  (connect OLED SDA here)
+  [5 ] [6 ]     ← Pin 5 = SCL  (connect OLED SCL here)
+                   Pin 6 = GND  (connect OLED GND here)
+
+If you are unsure, search "Raspberry Pi 4 GPIO pinout diagram" —
+every result will show the same map. Pinout.xyz is a good reference.
+
+IMPORTANT:
+  - Push the jumper wires FULLY onto the pins until they click
+  - Double-check VCC goes to 3.3V, NOT 5V (Pin 2)
+    5V will fry the display
+  - The Pi should be powered OFF when you wire this
+
+
+===============================================================
+STEP 3 — INSTALL SOFTWARE ON THE PI
+===============================================================
+
+Do this after wiring the display. Pi should be powered on
+and connected to WiFi (from Step 1c setup).
+
+Open the terminal and run these commands one at a time.
+Wait for each one to finish before typing the next.
+
+3a. UPDATE THE PI
+    sudo apt update
+    sudo apt upgrade -y
+    [this takes 5-10 minutes]
+
+3b. ENABLE I2C (the communication protocol for the display)
+    sudo raspi-config
+    
+    In the menu that appears:
+    → "Interface Options"
+    → "I2C"
+    → "Yes" to enable
+    → "Finish"
+    → Reboot if asked
+
+3c. INSTALL PYTHON LIBRARIES
+    pip3 install adafruit-circuitpython-ssd1306
+    pip3 install pillow
+    pip3 install pyserial
+    
+    [each takes 1-3 minutes]
+
+3d. VERIFY THE DISPLAY IS DETECTED
+    sudo i2cdetect -y 1
+    
+    You should see a grid with "3c" or "3d" somewhere in it.
+    That means the Pi found the display. If you see only "--",
+    check your wiring.
+
+
+===============================================================
+STEP 4 — PUT THE DISPLAY CODE ON THE PI
+===============================================================
+
+4a. CREATE THE SCRIPT
+    In the terminal, type:
+    nano ~/flyhero_display.py
+    
+    This opens a text editor. Copy and paste this entire block:
+
+---CUT HERE---
+import serial
+import time
+import board
+import busio
+from PIL import Image, ImageDraw, ImageFont
+import adafruit_ssd1306
+
+# Display setup
+i2c = busio.I2C(board.SCL, board.SDA)
+oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c)
+oled.fill(0)
+oled.show()
+
+# Serial setup - reads from laptop
+# /dev/ttyUSB0 is the USB connection to the laptop
+# Try /dev/ttyACM0 if this doesn't work
+PORT = '/dev/ttyUSB0'
+BAUD = 9600
+
+def draw_screen(wins, total, rounds, connected):
+    img = Image.new('1', (128, 64))
+    draw = ImageDraw.Draw(img)
+    
+    # Title
+    draw.text((0, 0), 'FLY B', fill=255)
+    
+    # Wins
+    draw.text((0, 18), f'Wins: {wins} / {total}', fill=255)
+    
+    # Round
+    draw.text((0, 32), f'Round: {rounds}', fill=255)
+    
+    # Connection status
+    if connected:
+        draw.text((0, 50), '* TEACHER CONNECTED', fill=255)
+    else:
+        draw.text((0, 50), 'o learning alone', fill=255)
+    
+    oled.image(img)
+    oled.show()
+
+# Show startup screen
+draw_screen(0, 72, 0, False)
+print('Display ready. Waiting for serial connection...')
+
+# Try to connect to laptop
+ser = None
+while True:
+    try:
+        if ser is None:
+            ser = serial.Serial(PORT, BAUD, timeout=1)
+            print(f'Connected on {PORT}')
+        
+        line = ser.readline().decode('utf-8').strip()
+        if line:
+            # Expected format: wins,total,rounds,connected
+            # Example: 68,72,48,1
+            parts = line.split(',')
+            if len(parts) == 4:
+                wins = int(parts[0])
+                total = int(parts[1])
+                rounds = int(parts[2])
+                connected = parts[3] == '1'
+                draw_screen(wins, total, rounds, connected)
+                
+    except serial.SerialException:
+        # Cable was unplugged
+        ser = None
+        draw_screen(0, 72, 0, False)
+        print('Cable disconnected. Waiting...')
+        time.sleep(1)
+    except (ValueError, IndexError):
+        pass  # bad line, skip it
+    except KeyboardInterrupt:
+        break
+
+if ser:
+    ser.close()
+---CUT HERE---
+
+    After pasting, press:
+    Ctrl+X  →  Y  →  Enter
+    (this saves and exits)
+
+4b. TEST THE SCRIPT (before connecting to laptop)
+    python3 ~/flyhero_display.py
+    
+    You should see the display turn on and show:
+    "FLY B" and "learning alone"
+    
+    Press Ctrl+C to stop it.
+
+
+===============================================================
+STEP 5 — ADD SERIAL OUTPUT TO THE SIMULATION
+===============================================================
+
+This is the code that runs on YOUR LAPTOP (not the Pi).
+It makes the Node.js simulation send data to the Pi
+through the USB cable.
+
+5a. FIND THE SERIAL PORT NAME
+    When you plug the Pi into your laptop with a USB cable:
+    
+    On Windows:
+    - Open Device Manager
+    - Look under "Ports (COM & LPT)"
+    - You'll see something like "USB Serial Device (COM3)"
+    - Your port name is "COM3" (or whatever number it shows)
+    
+    On Mac:
+    - Open Terminal and type: ls /dev/tty.*
+    - Look for something like /dev/tty.usbserial-1234
+    
+    On Linux:
+    - In terminal: ls /dev/ttyUSB*
+    - Usually /dev/ttyUSB0
+
+5b. CREATE THE SERIAL BRIDGE SCRIPT
+    In your project folder, create a new file:
+    tools/pi_bridge.js
+    
+    Paste this:
+
+---CUT HERE---
+// Pi serial bridge — run this alongside the simulation
+// node tools/pi_bridge.js COM3   (Windows)
+// node tools/pi_bridge.js /dev/ttyUSB0   (Mac/Linux)
+import { SerialPort } from 'serialport';
+import { readFileSync, watchFile } from 'fs';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const portName = process.argv[2];
+if (!portName) {
+  console.error('Usage: node tools/pi_bridge.js COM3');
+  process.exit(1);
+}
+
+// Connect to Pi
+const port = new SerialPort({ path: portName, baudRate: 9600 });
+port.on('open', () => console.log(`Connected to Pi on ${portName}`));
+port.on('error', err => console.error('Serial error:', err.message));
+
+// Watch the status file that the simulation writes to
+// The simulation writes: wins,total,rounds,connected
+const statusFile = join(__dirname, '../data/pi_status.txt');
+
+function sendStatus() {
+  try {
+    const data = readFileSync(statusFile, 'utf8').trim();
+    if (data && port.isOpen) {
+      port.write(data + '\n');
+    }
+  } catch (e) {
+    // file not ready yet
+  }
+}
+
+// Send status every 500ms
+setInterval(sendStatus, 500);
+console.log('Bridge running. Watching for simulation data...');
+---CUT HERE---
+
+5c. INSTALL THE SERIALPORT PACKAGE
+    In your project folder, run:
+    npm install serialport
+    
+    (This adds serialport to your existing Node project)
+
+5d. ADD STATUS WRITING TO THE SIMULATION
+    Open tools/check_rule_switch_cohort.mjs
+    Find the measure() function (around line 100).
+    
+    After the line:
+      console.log(JSON.stringify({ s, ...point }));
+    
+    Add this:
+      // Write status for Pi display
+      import { writeFileSync } from 'fs';
+      const connected = point.rounds <= 48 ? 1 : 0;
+      writeFileSync('data/pi_status.txt',
+        `${point.trained},72,${point.rounds},${connected}`);
+    
+    NOTE: For the live demo page, the rps_challenge.js already
+    has win counters. The easiest approach is to add a small
+    button to the page that writes the current status to
+    pi_status.txt via a fetch to the serve.py server.
+    
+    Ask your teammate who knows the JS to add:
+    // In js/rps_challenge.js, after updating win counters:
+    fetch('/pi_status', {
+      method: 'POST',
+      body: JSON.stringify({
+        wins: studentWins,
+        total: 72,
+        rounds: currentRound,
+        connected: teacherConnected ? 1 : 0
+      })
+    });
+    
+    And in tools/serve.py, add a /pi_status POST handler
+    that writes to data/pi_status.txt.
+
+
+===============================================================
+STEP 6 — RUN THE FULL DEMO
+===============================================================
+
+TERMINAL 1 (laptop) — start the simulation server:
+  python tools/serve.py
+
+TERMINAL 2 (laptop) — start the Pi bridge:
+  node tools/pi_bridge.js COM3
+  (replace COM3 with your actual port name)
+
+ON THE PI — start the display:
+  python3 ~/flyhero_display.py
+
+BROWSER (laptop):
+  Open http://localhost:8766
+  Run the demo as normal
+
+The Pi display will update every 500ms as the simulation runs.
+
+
+===============================================================
+STEP 7 — THE DEMO MOMENT
+===============================================================
+
+This is the moment that makes judges understand the concept:
+
+1. Start the demo with the USB cable plugged in
+2. Let Fly B get to ~60/72 wins with teacher
+3. SAY: "Now watch what happens when I physically disconnect
+         the communication channel"
+4. UNPLUG the USB cable from the laptop
+5. The Pi screen changes to "learning alone"
+6. SAY: "That's it. That cable was carrying 12 bytes per round.
+         Without it, the agent is on its own."
+7. PLUG IT BACK IN
+8. SAY: "Plug it back in — teaching resumes.
+         This is the fraud detection problem.
+         Bank A and Bank B, one cable, 12 bytes."
+
+
+===============================================================
+TROUBLESHOOTING
+===============================================================
+
+PROBLEM: Pi display shows nothing
+FIX: Check i2cdetect -y 1 — do you see 3c?
+     Check wiring: VCC to Pin 1 (3.3V), not Pin 2 (5V)
+     Check I2C is enabled: sudo raspi-config → Interface → I2C
+
+PROBLEM: "No module named adafruit_ssd1306"
+FIX: pip3 install adafruit-circuitpython-ssd1306
+
+PROBLEM: Serial port not found on laptop
+FIX: Try different port names:
+     Windows: COM3, COM4, COM5 (check Device Manager)
+     Mac: /dev/tty.usbserial-* or /dev/tty.usbmodem*
+     Linux: /dev/ttyUSB0 or /dev/ttyACM0
+
+PROBLEM: Pi display shows "learning alone" even when connected
+FIX: The simulation isn't writing to pi_status.txt yet.
+     Check serve.py has the /pi_status handler.
+     Check data/pi_status.txt exists after a demo run.
+
+PROBLEM: Pi won't boot
+FIX: Most common cause is the wrong power supply.
+     Must be 5V 3A. Try a different cable.
+     
+PROBLEM: Can't find /dev/ttyUSB0 on Pi
+FIX: Try /dev/ttyACM0 instead in flyhero_display.py
+
+PROBLEM: "Permission denied" on serial port
+FIX: sudo usermod -a -G dialout pi
+     Then log out and log back in.
+
+PROBLEM: Display text is too small
+FIX: In flyhero_display.py, change the font size:
+     font = ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf', 14)
+     Add this after "draw = ImageDraw.Draw(img)"
+     Change draw.text(...) to draw.text(..., font=font)
+
+
+===============================================================
+IF YOU ONLY HAVE 1 HOUR
+===============================================================
+
+Skip the serial bridge. Do the simplest possible version:
+
+1. Wire the OLED to the Pi (10 minutes)
+2. Install libraries (15 minutes)
+3. Write a simple script that just shows static text:
+   "FLY B — TEACHER CONNECTED" in a loop
+4. During the demo, manually run a different script
+   that shows "FLY B — LEARNING ALONE"
+5. Switch between them by pressing a key
+
+It's not automated but it still makes the concept physical.
+Two machines. One message. That's the story.
+
+Script for connected:
+  python3 -c "
+  import board, busio, adafruit_ssd1306
+  from PIL import Image, ImageDraw
+  i2c = busio.I2C(board.SCL, board.SDA)
+  oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c)
+  img = Image.new('1', (128, 64))
+  d = ImageDraw.Draw(img)
+  d.text((0,0), 'FLY B', fill=255)
+  d.text((0,20), 'Wins: 68/72', fill=255)
+  d.text((0,40), '* TEACHER ON', fill=255)
+  oled.image(img); oled.show()
+  input()
+  "
+
+Script for disconnected:
+  python3 -c "
+  import board, busio, adafruit_ssd1306
+  from PIL import Image, ImageDraw
+  i2c = busio.I2C(board.SCL, board.SDA)
+  oled = adafruit_ssd1306.SSD1306_I2C(128, 64, i2c)
+  img = Image.new('1', (128, 64))
+  d = ImageDraw.Draw(img)
+  d.text((0,0), 'FLY B', fill=255)
+  d.text((0,20), 'Wins: 10/72', fill=255)
+  d.text((0,40), 'o alone', fill=255)
+  oled.image(img); oled.show()
+  input()
+  "
+
+
+===============================================================
+WHAT TO SAY TO JUDGES ABOUT THE HARDWARE
+===============================================================
+
+DO say:
+  "The two machines represent the two AI systems.
+   This cable is the 12-byte message channel.
+   When I unplug it, Fly B loses the teacher signal — 
+   exactly like Bank of America losing JPMorgan's fraud signal."
+
+DO NOT say:
+  "It's just a Raspberry Pi showing some numbers"
+  "The hardware is just for show"
+  "We added this last minute"
+
+The hardware is not decoration. It's a physical demonstration
+of the core concept. Treat it that way.
