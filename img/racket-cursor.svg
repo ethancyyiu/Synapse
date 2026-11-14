@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="56" height="56" viewBox="0 0 32 32">
+  <!-- Fly swatter racket cursor; drawn at 56px; hotspot is the centre of the head (19,19). -->
+  <defs><clipPath id="h"><ellipse cx="11" cy="11" rx="7.4" ry="8.4" transform="rotate(-45 11 11)"/></clipPath></defs>
+  <g fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <g stroke="#121212" stroke-width="4">
+      <ellipse cx="11" cy="11" rx="8" ry="9" transform="rotate(-45 11 11)"/>
+      <path d="M17.5 17.5 L21 21 M21 21 L29 29"/>
+    </g>
+    <g stroke="#edebe6" stroke-width="1.6">
+      <ellipse cx="11" cy="11" rx="8" ry="9" transform="rotate(-45 11 11)"/>
+      <path d="M17.5 17.5 L21 21"/>
+    </g>
+    <path d="M21 21 L29 29" stroke="#5cc17a" stroke-width="2.6"/>
+    <g stroke="#edebe6" stroke-width=".8" opacity=".6" clip-path="url(#h)">
+      <path d="M1 7 L15 21 M3 4 L18 19 M6 2 L20 16 M9 1 L21 13"/>
+      <path d="M7 21 L21 7 M4 18 L18 4 M1 15 L15 1 M10 22 L22 10"/>
+    </g>
+  </g>
+</svg>
