@@ -125,7 +125,7 @@ async function hold(ms, token) {
 }
 const PICK_HINT = 'Click a dot to identify a neuron.';
 
-const STORY_IDLE = 'Or set up your own game in Step 1 and press Train Fly A live.';
+const STORY_IDLE = 'Follow the recording, or use Step 1 to train your own flies.';
 function mission(step, title, progress = 0) {
   [1, 2, 3, 4].forEach(i => { $(`mission-step-${i}`).className = i === step ? 'step now' : i < step ? 'step done' : 'step'; });
   $('mission-title').textContent = title;
@@ -299,9 +299,11 @@ const opponentName = config => config.mode === 'custom' ? `Own: ${config.sequenc
   config.noise ? 'Noisy circle' : config.offset === 1 ? 'Circle R→P→S' : 'Circle R→S→P';
 function showStudentPlan() {
   const plan = studentPlan();
+  $('step1-teacher-rounds').textContent = `${teacherRounds()} rounds`;
+  $('step1-student-rounds').textContent = plan.pauseAtSix ? '6, then 288 rounds' : `${plan.rounds} rounds`;
   $('compare-plan').textContent = plan.pauseAtSix ?
-    'Two Fly B brains are shown: With Teacher and Alone. A third matched student receives random messages in the background. After 6 rounds all three pause for the same 72-game frozen test; then you can continue training.' :
-    `Two Fly B brains are shown: With Teacher and Alone. A third matched student receives random messages in the background. All three train for ${plan.rounds} rounds; the random-message score appears above and in the frozen comparison.${plan.preview ? ' Quick mode: only the final test runs, so there is no Fly B curve.' : ''}`;
+    'Taught vs. alone · pause after 6 rounds, then continue.' :
+    'Taught vs. alone · random-message control.';
   if (!comparisonRunning) $('compare-round').textContent = `0 / ${plan.first} training rounds`;
 }
 let runKind = 'live';
@@ -475,7 +477,7 @@ function clearComparisonDisplay() {
   $('compare-continue').disabled = true;
   $('compare-continue').onclick = null;
   $('compare-status').textContent = 'Both students idle. Train Fly A first.';
-  $('compare-teacher-score').textContent = 'Fly A frozen score: pending training.';
+  $('compare-teacher-score').textContent = '';
   $('compare-result').textContent = 'Waiting for the final test.';
   $('compare-eval-loading').hidden = true;
   $('compare-learning').hidden = true;
@@ -697,7 +699,7 @@ async function runChallenge() {
     const byCueText = byCue.map((entry, action) =>
       `${move(action)} ${entry.total ? `${entry.wins}/${entry.total}` : 'not observed'}`).join(', ');
     $('challenge-teacher-eval').textContent = `Test score: won ${wins} of 72 new games with learning switched off. After each opponent move: ${byCueText}.`;
-    $('compare-teacher-score').textContent = `Fly A frozen before student training: ${wins}/72 wins (own-reward hybrid contextual bandit).`;
+    $('compare-teacher-score').textContent = `Fly A: ${wins}/72 frozen wins.`;
     $('challenge-status').textContent = `Live Fly A training and frozen evaluation complete for seed ${seed}. This result belongs only to this Challenge run; the Fly B replay is independent.`;
     const run = { opponent: opponentName(config), seed, teacherRounds: totalRounds, teacherWins: wins,
       studentRounds: null, taught: null, alone: null };
@@ -1224,8 +1226,6 @@ async function playRecordedRun(kind = 'normal', startAt = 0, startPaused = false
   challengeRunning = true;
   setChallengeDisabled(true);
   $('compare-start').disabled = true;
-  $('challenge-replay').disabled = true;
-  if ($('challenge-replay-switch')) $('challenge-replay-switch').disabled = true;
   mission(1, 'Loading the recorded run');
   setPlayback({ active: true, paused: startPaused, step: 0, where: '' });
   try {
@@ -1279,7 +1279,7 @@ async function playRecordedRun(kind = 'normal', startAt = 0, startPaused = false
       } else if (event.type === 'teacherDone') {
         mission(2, `Fly A scored ${event.wins}/72`, 1);
         $('teacher-badge').textContent = `Fly A passed its test: won ${event.wins} of 72 games`;
-        $('compare-teacher-score').textContent = `Fly A frozen before student training: ${event.wins}/72 wins.`;
+        $('compare-teacher-score').textContent = `Fly A: ${event.wins}/72 frozen wins.`;
         $('live-story').textContent = 'Fly A is frozen and ready to teach.';
         if (live) { await hold(2400, token); roundDone('Fly A test'); }
       } else if (event.type === 'frame') {
@@ -1331,8 +1331,6 @@ async function playRecordedRun(kind = 'normal', startAt = 0, startPaused = false
       setPlayback({ active: false, paused: false, step: 0 });
       setChallengeDisabled(false);
       renderPattern();
-      $('challenge-replay').disabled = false;
-      if ($('challenge-replay-switch')) $('challenge-replay-switch').disabled = false;
     }
   }
 }
@@ -1353,8 +1351,11 @@ if (typeof document !== 'undefined') {
   $('ablation-evidence').ontoggle = () => { if ($('ablation-evidence').open) loadAblationEvidence(); };
   $('ablation-evidence-seed').onchange = loadAblationEvidence;
   $('challenge-train').onclick = runChallenge;
-  $('challenge-replay').onclick = () => playRecordedRun('normal');
-  if ($('challenge-replay-switch')) $('challenge-replay-switch').onclick = () => playRecordedRun('ruleSwitch');
+  addEventListener('synapse:play-rule-switch', event => {
+    if (challengeRunning || comparisonRunning) return;
+    setPlayback({ speed: event.detail?.speed === 4 ? 4 : 1 });
+    void playRecordedRun('ruleSwitch');
+  });
   const togglePlayback = () => { if (playback.active) setPlayback({ paused: !playback.paused, step: 0 }); };
   const stepPlayback = () => { if (playback.active) setPlayback({ paused: true, step: 1 }); };
   $('play-toggle').onclick = togglePlayback;

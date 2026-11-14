@@ -3,28 +3,23 @@
 ## Before judges arrive
 - Run `python tools/serve.py`, open `http://localhost:8766/`, and stay at the top of the **Simulation** tab.
 - Leave the CPU idle: close other simulations, and keep the tab in front.
-- Do not press anything yet. **▶ Watch the demo** starts the 1½-minute recorded run. The page scrolls by itself to whichever brain is active, so don't scroll during the run (scrolling turns the auto-follow off).
+- Do not press anything yet. **▶ Watch the 90-second story** starts the recorded rule-change run. The page scrolls by itself to whichever brain is active, so don't scroll during the run (scrolling turns the auto-follow off).
 
 ## Script (about 2 minutes)
 
-**Hook, 15 s.** *(Top of page.)*
-"When AI systems from different companies need to cooperate, they hit a wall: incompatible architectures, privacy constraints, no way to share what they've learned. We built a proof-of-concept that breaks through that wall with 12 bytes."
+**Question, 15 s.** *(Top of page.)*
+"When the rules change, can one learner help another adapt faster? We tested that with two separate simulated fly brains."
 
-**Bridge to demo, 5 s.**
-"We used the most detailed neural substrate we have — the real fruit-fly connectome, 6,900 neurons — as a controlled test bed. Watch."
+**Demo, 90 s.** *(Press **Watch the 90-second story**.)*
+- "Fly A learns from wins and losses. Then the opponent changes its rule."
+- "Fly A sends the move it now prefers as spikes on two neurons. Fly B still plays and learns from its own results."
+- "We disconnect Fly A and test Fly B alone. This recording is one example, so the study result matters more than its final score."
 
-**Demo, 55 s.** *(Press ▶ Watch the demo.)*
-- "Fly A learns Rock-Paper-Scissors from its own wins and losses. Think of it as one AI system adapting to a new environment."
-- *(Fly A's brain is on screen, with its round count and then its test score, 67 of 72.)*
-- "Now the opponent changes strategy — the world shifted. Fly A has already adapted. Fly B hasn't. Fly A sends its current best guess as spikes on two neurons. That's the 12-byte message. Fly B's architecture is different — there's nothing to copy, no weight transfer possible. It just gets the hint."
-- "Three Fly Bs: one taught, one getting random noise, one learning alone. Green squares are wins."
-- "We unplug Fly A completely, then test Fly B on its own." *(Scoreboard: taught 71, alone 32, random 57, out of 72.)*
+**Result, 25 s.** *(Click **Stats**. Point to the 48-round checkpoint in the 15-run chart.)*
+"Across 15 independent runs, taught Fly Bs averaged 68 wins out of 72. The shuffled-message control averaged 33. Comparing each taught fly with its strongest control in the same run, the average lead was 25 wins. That is the result: faster adaptation after a rule change, measured after the teacher was disconnected."
 
-**Result, 30 s.** *(Click the **Stats** tab on the right edge, then point at the 15-run chart.)*
-"This was one recorded run, one of the stronger ones. We repeated the hardest case 15 times, with fresh brains and locked rules decided before running. After the opponent changed strategy, taught flies won 68 of 72 games; flies learning alone won 10, and the strongest control, shuffled messages, 33. Against the best control in each run the lead is 25. The teacher beat random, shuffled, and untrained-teacher messages in 14 of 15 runs. And the speed-up is the point: within 48 rounds, the taught fly reached 58 of 72 wins in all 15 runs; the fly learning alone, in none." *(Point at the "How much faster?" bars.)*
-
-**Real-world stakes, 15 s.** *(Click the Research tab.)*
-"Think about what 48-versus-6 decisions means at scale. A network intrusion detector running 1,000 decisions per second: 48 seconds of blind exposure versus 6. Two hospitals with different model architectures that can't share patient data — one has seen the new strain, the other hasn't. A fleet of robots from two manufacturers, one has adapted to the new layout. In every case, the message is 12 bytes. Fly B's learner has a different structure than Fly A's — weights couldn't be copied even if we tried. The hint still works. That is what this result shows."
+**Boundary, 10 s.**
+"This is a hybrid simulation with an engineered learning step. The same advice sent digitally worked equally well. We have a controlled learning-speed result, not biological fly-to-fly teaching."
 
 ## Three answers to have ready (15 seconds each)
 
@@ -54,5 +49,5 @@
 | Real-world use? | Robots or drones of different makes, privacy-sensitive organisations (advice instead of patient data or weights), and low-bandwidth devices. Not tested outside simulation: our practical package-recovery task stopped because the teacher didn't learn it well enough. A sensor-drift benchmark is the next step. |
 
 ## Fallbacks
-- If the recording stalls, reload and press ▶ Watch the demo again. It's display only, so nothing is lost.
+- If the recording stalls, reload and press **▶ Watch the 90-second story** again. It's display only, so nothing is lost.
 - If there's no time for the demo, show the Result chart and say the headline.
