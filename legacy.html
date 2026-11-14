@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Synapse — legacy RPS demos</title>
+    <link rel="icon" href="data:,">
+    <style>
+@font-face {
+  font-family: Atkinson;
+  src: url('fonts/atkinson-hyperlegible-next-latin.woff2') format('woff2');
+  font-display: swap;
+}
+:root {
+  color-scheme: dark;
+  --paper: #15181c;
+  --ink: #e6e8eb;
+  --graphite: #a3abb4;
+  --rule: #343a42;
+  --gfp: #5cc17a;
+  --magenta: #e466b8;
+  --lane1: #f0555a;
+  --lane2: #5b9bff;
+  --lane3: #4cc76a;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 16px/1.5 Atkinson,system-ui,sans-serif;
+}
+button,select {
+  font: inherit;
+}
+button {
+  background: #22282e;
+  color: var(--ink);
+  border: 1px solid #69717a;
+  border-radius: 3px;
+  padding: 9px 14px;
+  cursor: pointer;
+}
+button:hover {
+  background: #303841;
+}
+button:focus-visible,select:focus-visible {
+  outline: 3px solid var(--lane2);
+  outline-offset: 2px;
+}
+button[aria-pressed=true] {
+  border-color: var(--gfp);
+  color: var(--gfp);
+}
+select {
+  background: #22282e;
+  color: var(--ink);
+  border: 1px solid #69717a;
+  padding: 8px;
+}
+a {
+  color: #8cbbff;
+}
+h1,h2,h3,p {
+  margin: 0 0 12px;
+}
+h1 {
+  font-size: clamp(2rem,5vw,3rem);
+  line-height: 1.1;
+}
+h2 {
+  font-size: 1.45rem;
+}
+h3 {
+  font-size: 1.1rem;
+}
+small,.muted {
+  color: var(--graphite);
+}
+.wrap {
+  max-width: 1300px;
+  margin: auto;
+  padding: 32px 20px 70px;
+}
+.lede {
+  max-width: 75ch;
+  color: var(--graphite);
+  font-size: 1.1rem;
+}
+.panel {
+  border: 1px solid var(--rule);
+  background: #1b2025;
+  padding: 18px;
+  margin-top: 18px;
+}
+.controls {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.controls label {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2,minmax(0,1fr));
+  gap: 18px;
+}
+.flyhead {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: baseline;
+}
+.move {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.rps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+}
+.brain {
+  width: 100%;
+  height: auto;
+  background: var(--paper);
+}
+.signal {
+  border: 1px solid var(--rule);
+  padding: 15px;
+  margin: 18px 0;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 14px;
+}
+.signal .line {
+  height: 5px;
+  background: var(--rule);
+  position: relative;
+}
+.signal .pulse {
+  position: absolute;
+  top: -5px;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: var(--gfp);
+  opacity: 0;
+}
+.signal .pulse.active {
+  opacity: 1;
+}
+.signal code {
+  color: var(--gfp);
+}
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 10px;
+}
+.stat {
+  border: 1px solid var(--rule);
+  padding: 10px;
+}
+.stat strong {
+  display: block;
+  font-size: 1.4rem;
+}
+.chart {
+  width: 100%;
+  max-width: 800px;
+  height: auto;
+  background: var(--paper);
+  border: 1px solid var(--rule);
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  font-size: .93rem;
+}
+th,td {
+  padding: 8px;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+}
+th:not(:first-child),td:not(:first-child) {
+  text-align: right;
+}
+caption {
+  text-align: left;
+  color: var(--graphite);
+  padding: 0 0 8px;
+}
+.scroll {
+  overflow: auto;
+}
+footer {
+  margin-top: 30px;
+  color: var(--graphite);
+  font-size: .92rem;
+}
+.legend {
+  font-size: .92rem;
+  color: var(--graphite);
+}
+.game-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+[hidden] { display: none !important; }
+.game-actions button { min-width: 110px; font-size: 1.1rem; }
+.game-metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 7px; font-size: .88rem; }
+.pattern-list { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0; }
+.pattern-item { border: 1px solid var(--rule); padding: 6px; display: flex; gap: 5px; align-items: center; }
+.pattern-item button { padding: 3px 7px; }
+.game-metrics span { padding: 7px; border: 1px solid var(--rule); }
+.game-metrics strong { display: block; color: var(--gfp); }
+.history { max-height: 250px; overflow: auto; }
+.neural-bars { display: grid; gap: 6px; margin: 10px 0 16px; }
+.neural-bar { display: grid; grid-template-columns: 74px 1fr 48px; gap: 8px; align-items: center; font-size: .88rem; }
+.neural-track { height: 10px; background: var(--paper); border: 1px solid var(--rule); }
+.neural-fill { display: block; height: 100%; background: var(--gfp); }
+.replay-step { border-left: 3px solid var(--lane2); padding-left: 12px; margin: 10px 0; }
+.replay-step strong { color: var(--ink); }
+.finding { border-left: 3px solid var(--gfp); padding: 5px 12px; margin: 12px 0; }
+.finding.caution { border-color: var(--magenta); }
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+@media(max-width:750px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .stats {
+    grid-template-columns: 1fr;
+  }
+  .signal {
+    grid-template-columns: 1fr;
+  }
+  .signal .line {
+    width: 100%;
+  }
+  .game-metrics { grid-template-columns: repeat(2,1fr); }
+}
+    </style>
+  </head>
+  <body>
+    <div class="wrap">
+      <header>
+        <h1>Synapse: legacy RPS demos</h1><p><a href="index.html">Return to the main teaching challenge</a></p>
+        <p><a href="rhythm.html">Open the original Fly Hero rhythm game</a></p>
+        <p><a href="docs/demo-guide.md">Synapse demonstration guide</a></p>
+        <p class="lede">Play against two simulated fly brains, or watch them face a patterned opponent. Their decisions and neural spikes are calculated live. Saved research snapshots provide the starting weights; this demonstration does not train the flies.</p>
+      </header>
+      <main>
+        <section class="panel" aria-labelledby="game-title">
+          <h2 id="game-title">Play the fly brains</h2>
+          <div class="controls">
+            <label>Opponent <select id="game-opponent"><option value="human">You choose each move</option><option value="pattern">Patterned opponent</option></select></label>
+            <label>Fly A policy <select id="game-model"><option value="bio">Original dopamine-only MBON</option><option value="hybrid">Experimental linear hybrid reward-trained readout</option><option value="nonlinear">Experimental nonlinear RL controller</option></select></label>
+            <label id="game-seed-a-wrap" hidden>Fly A saved student <select id="game-seed-a"><option value="681">681</option><option value="682">682</option><option value="683">683</option></select></label>
+            <label>Fly B policy <select id="game-model-b"><option value="bio">Original dopamine-only MBON</option><option value="hybrid">Experimental linear hybrid reward-trained readout</option><option value="nonlinear">Experimental nonlinear RL controller</option></select></label>
+            <label id="game-seed-b-wrap" hidden>Fly B saved student <select id="game-seed-b"><option value="682">682</option><option value="681">681</option><option value="683">683</option></select></label>
+            <button id="game-reset">Reset session</button>
+          </div>
+          <p id="game-model-note" class="legend" style="margin-top:12px">Original MBON action policy, with saved KC-to-MBON weights from the autonomous RPS experiment. Live play is frozen.</p>
+          <p id="game-status" role="status">Loading saved brains...</p>
+          <div id="game-human" class="game-actions" aria-label="Choose your move"><button data-move="0">Rock</button><button data-move="1">Paper</button><button data-move="2">Scissors</button></div>
+          <div id="game-pattern" class="game-actions" hidden><button id="game-watch">Watch both flies play</button><button id="game-next">Next round</button></div>
+          <p class="legend">Each fly sees the opponent's previous move. Your current choice is hidden until both brains decide. In watch mode, each faces the same deterministic Rock to Paper to Scissors pattern. Changing either model resets the shared round history but keeps the other fly's model choice. No teacher messages or learning occur in this game.</p>
+          <p class="legend">The brain images show recent simulated spikes. Active KCs and the three MBON group spike rates are measured in the decision window of the latest round.</p>
+          <div class="grid">
+            <article class="panel"><div class="flyhead"><h3>Fly A</h3><span id="game-a-score">0 wins / 0 rounds</span></div><p id="game-a-model" class="legend">Original dopamine-only MBON</p><div class="rps"><span class="move" id="game-a-move">--</span><span id="game-a-outcome">waiting</span><span class="move" id="game-a-opponent">--</span></div><p id="game-a-header" class="legend">Neural activity</p><canvas id="game-a-brain" class="brain" width="480" height="655" role="img" aria-label="Live Fly A neuron spikes"></canvas><div class="game-metrics"><span>Active KCs<strong id="game-a-kc">--</strong></span><span>Rock MBON<strong id="game-a-mbon-0">--</strong></span><span>Paper MBON<strong id="game-a-mbon-1">--</strong></span><span>Scissors MBON<strong id="game-a-mbon-2">--</strong></span></div></article>
+            <article class="panel"><div class="flyhead"><h3>Fly B</h3><span id="game-b-score">0 wins / 0 rounds</span></div><p id="game-b-model" class="legend">Original dopamine-only MBON</p><div class="rps"><span class="move" id="game-b-move">--</span><span id="game-b-outcome">waiting</span><span class="move" id="game-b-opponent">--</span></div><p id="game-b-header" class="legend">Neural activity</p><canvas id="game-b-brain" class="brain" width="480" height="655" role="img" aria-label="Live Fly B neuron spikes"></canvas><div class="game-metrics"><span>Active KCs<strong id="game-b-kc">--</strong></span><span>Rock MBON<strong id="game-b-mbon-0">--</strong></span><span>Paper MBON<strong id="game-b-mbon-1">--</strong></span><span>Scissors MBON<strong id="game-b-mbon-2">--</strong></span></div></article>
+          </div>
+          <h3 style="margin-top:18px">Round history</h3>
+          <div class="history scroll"><table><thead><tr><th>Round</th><th>Fly</th><th>Fly move</th><th>Opponent</th><th>Outcome</th></tr></thead><tbody id="game-history"></tbody></table></div>
+        </section>
+        <section class="panel" aria-labelledby="challenge-title">
+          <h2 id="challenge-title">RPS Challenge · live training and archived neural advice</h2>
+          <p class="legend">Train a new Fly A against a preset rule or a repeating pattern. The Fly B panel replays a separate, previously recorded Strategy B experiment; it never uses the Fly A you train here. This is hybrid simulated neural communication, not proven brain-to-brain teaching.</p>
+          <div class="controls">
+            <label>Opponent mode <select id="challenge-mode"><option value="preset">Preset Strategy</option><option value="custom">Custom Pattern</option></select></label>
+            <label id="challenge-preset-wrap">Preset rule <select id="challenge-strategy"><option value="1">Strategy A: next = previous + 1</option><option value="2">Strategy B: next = previous + 2</option></select></label>
+            <label>Fly A seed <input id="challenge-seed" type="number" min="1" max="9999" step="1" value="830"></label>
+            <button id="challenge-train">Train Fly A from zero</button>
+            <button id="challenge-reset">Reset Challenge</button>
+          </div>
+          <div id="challenge-pattern-wrap" hidden>
+            <p class="legend">Build 1–5 moves. Use the arrows to reorder them. The sequence starts at its first move in every episode and repeats without noise.</p>
+            <div class="controls"><button id="challenge-add-rock">Add Rock</button><button id="challenge-add-paper">Add Paper</button><button id="challenge-add-scissors">Add Scissors</button></div>
+            <div id="challenge-pattern-list" class="pattern-list" aria-label="Custom opponent pattern"></div>
+            <p id="challenge-pattern-preview" class="legend"></p>
+            <p id="challenge-pattern-warning" class="finding caution"></p>
+          </div>
+          <p id="challenge-rule" class="legend">Strategy A: after the first move, the opponent plays (previous opponent move + 1) mod 3. Both flies observe only the previous move.</p>
+          <p id="challenge-status" role="status">Ready to train Fly A. Fixed budget: 12 episodes × 24 rounds; frozen check: three new 24-round sequences.</p>
+          <p class="legend">Demonstrated: own-reward hybrid RPS learning, trained advice from simulated MBON activity, DN spike transmission, advice-driven action changes, and disconnected student policies in the archived run. Not demonstrated: a reliable retained advantage over shuffled, untrained, and generic controls, or transfer between actual flies.</p>
+          <article class="panel"><h3>Fly A · live simulated training</h3><p id="challenge-teacher-progress">0 / 288 training rounds</p><p id="challenge-teacher-last">No decision yet</p><p id="challenge-teacher-kc" class="legend">KC activity: waiting</p><p class="legend">Real simulated action-MBON spike rates</p><div id="challenge-teacher-bars" class="neural-bars"></div><p id="challenge-teacher-q" class="legend">Learned reward estimates: waiting</p><p id="challenge-teacher-eval">Frozen evaluation pending</p></article>
+          <section class="panel" aria-labelledby="compare-title">
+            <h3 id="compare-title">Live Fly B comparison</h3>
+            <p class="legend">Does neural advice help Fly B learn compared with training alone? Both students start only after Fly A finishes. They have separate simulated brains, matched initial conditions and opponent rounds, and learn only from their own rewards. Their cue-based action controller is an additional reward-trained hybrid readout, not the original dopamine-only policy. This comparison is not proof of teacher-specific learning.</p>
+            <div class="controls"><button id="compare-start" disabled>Start Student Comparison</button><span id="compare-round">0 / 288 training rounds</span></div>
+            <p id="compare-status" role="status">Both students idle. Train Fly A first.</p>
+            <div class="grid">
+              <article class="panel"><h4>Fly B Alone</h4><p id="alone-status">Idle until Fly A finishes</p><p id="alone-action">No action yet</p><p id="alone-recent">Recent wins: waiting</p><p id="alone-kc" class="legend">KC activity: waiting</p><div id="alone-bars" class="neural-bars"></div><p id="alone-q" class="legend">Learned action values: waiting</p></article>
+              <article class="panel"><h4>Fly B With Teacher</h4><p id="guided-status">Idle until Fly A finishes</p><p id="guided-action">No action yet</p><p id="guided-recent">Recent wins: waiting</p><p id="guided-kc" class="legend">KC activity: waiting</p><div id="guided-bars" class="neural-bars"></div><p id="guided-q" class="legend">Learned action values: waiting</p><p id="guided-proposal" class="legend">Provisional action: waiting</p><p id="guided-advice" class="legend">Fly A advice: waiting</p><p id="guided-dn" class="legend">Measured DN spikes: waiting</p></article>
+            </div>
+            <p id="compare-result" class="finding">Frozen, teacher-disconnected comparison pending. After training, both students will play 72 matched rounds without advice, exploration, or updates.</p>
+            <p class="legend">The live comparison has no shuffled or untrained-advice arms. A higher score here alone cannot establish a trained-teacher-specific advantage; inspect the archived controls below.</p>
+          </section>
+          <article class="panel"><h3>Research Replay · archived teaching controls</h3><p class="legend">Recorded students 851 and 852, fixed Strategy B, pretrained teacher 830. This replay is separate from the judge-trained flies above. Step through measured neural events and compare the disconnected checkpoints.</p><div class="controls"><label>Student <select id="replay-seed"><option value="851">851</option><option value="852">852</option></select></label><label>Training message <select id="replay-arm"><option value="correct">Trained Fly A</option><option value="shuffled">Shuffled</option><option value="untrained">Untrained teacher</option><option value="generic">Generic veto</option><option value="disconnected">Disconnected</option></select></label><button id="replay-load">Load archived replay</button></div><p id="replay-status" role="status">Replay loads only when requested. No new training or neural simulation occurs.</p></article>
+          <div id="replay-details" hidden>
+            <div class="controls"><button id="replay-prev">Previous round</button><button id="replay-next">Next round</button><span id="replay-round">Round 1 of 12</span></div>
+            <div class="grid">
+              <article class="panel"><h3>Fly A · archived neural source</h3><p id="replay-teacher-source"></p><div id="replay-teacher-bars" class="neural-bars"></div><p id="replay-teacher-q" class="legend"></p></article>
+              <article class="panel"><h3>Fly B · archived neural receiver</h3><p id="replay-cue"></p><div id="replay-student-bars" class="neural-bars"></div><p id="replay-proposal" class="replay-step"></p><p id="replay-advice" class="replay-step"></p><p id="replay-dn" class="replay-step"></p><p id="replay-final" class="replay-step"></p><p id="replay-update" class="replay-step"></p></article>
+            </div>
+            <h3>Frozen, disconnected evaluation on identical held-out sequences</h3>
+            <p class="legend">All rows below turn messages and learning off during evaluation. Scores come from the archived experiment; they are not outcomes of the live Challenge above.</p>
+            <div class="scroll"><table><thead><tr><th>Training condition</th><th>Before training</th><th>After 6 rounds</th><th>After 12 rounds</th></tr></thead><tbody id="replay-controls"></tbody></table></div>
+            <div class="controls" style="margin-top:12px"><label>Inspect frozen checkpoint <select id="replay-checkpoint"><option value="6">After 6 rounds</option><option value="12">After 12 rounds</option><option value="0">Before training</option></select></label></div>
+            <p id="replay-frozen-detail" class="legend"></p>
+            <p class="finding caution" id="replay-conclusion">The locked teacher-specific advantage failed. The generic-veto control also failed its rejection-count matching gate.</p>
+            <p class="legend">Source: <a href="data/rps_teacher_guided_matched_veto.json">archived matched-veto trials and checkpoints</a> and <a href="data/rps_teacher_guided_reset_preflight.json">teacher neural source</a>. See the <a href="docs/lab-notebook.md">lab notebook</a>. The DN counts are actual recorded spikes from the simulated 240–280 ms window, held in an engineered measurement buffer.</p>
+          </div>
+        </section>
+        <section class="panel" aria-labelledby="findings-title">
+          <h2 id="findings-title">What the experiments actually showed</h2>
+          <p class="finding">An optional contextual-bandit readout learned all three RPS actions from game rewards in four saved students (<strong>65, 65, 63, 65/72</strong> held-out wins); its stricter all-arm paired comparison failed for one student. KC→MBON synaptic weights were frozen. <a href="docs/lab-notebook.md">Contextual-bandit experiment</a></p>
+          <p class="finding caution">The cue-specific DNge175 teaching pilots demonstrated real message delivery, immediate action changes, own-reward updates, and disconnected student performance. <strong>The locked trained-teacher-specific retained-learning gates failed.</strong> Shuffled, untrained, or generic vetoes could also produce strong policies; one generic control failed its matching gate. The Challenge replay above shows those recorded trials. <a href="docs/research-story.md">Teaching research story</a></p>
+          <p class="finding">An <strong>external analytical decoder</strong> classified <strong>98/108</strong> held-out RPS neural input states from three MBON rates. This decoder is not the fly's action policy. <a href="docs/lab-notebook.md">RPS information analysis</a></p>
+          <p class="finding caution">The experimental hybrid readout won <strong>50/72, 50/72, and 54/72</strong> held-out rounds in the original locked comparison. <strong>Reliable three-action learning failed</strong> its predefined gates. <a href="docs/lab-notebook.md">Hybrid experiment</a></p>
+          <div class="finding caution"><p>The later <strong>experimental nonlinear RL controller</strong> used simulated MBON rates, a small additional network trained from RPS rewards, and frozen KC→MBON weights. Individual students <strong>681 and 683 passed</strong> the three-action criteria; student <strong>682 failed</strong>, so the <strong>locked all-student success criterion failed</strong>. This does not show reliable three-action learning by the original dopamine-only fly. <a href="docs/lab-notebook.md">Nonlinear experiment</a></p><table><thead><tr><th>Saved student</th><th>Linear wins</th><th>Nonlinear wins</th></tr></thead><tbody><tr><td>681</td><td>55/72</td><td>61/72</td></tr><tr><td>682</td><td>58/72</td><td>56/72</td></tr><tr><td>683</td><td>59/72</td><td>62/72</td></tr></tbody></table></div>
+          <p class="finding caution">In a separate <strong>one-bit cue task</strong>, eight pairs averaged <strong>+2.75/24</strong> over disconnected training, below the predefined <strong>+4/24</strong> practical threshold. The measured effect depended on teacher messages during evaluation. These are <strong>not RPS results</strong>. <a href="docs/research-story.md">Cue research story</a></p>
+        </section>
+        <section class="panel" aria-labelledby="live-title">
+          <h2 id="live-title">Experimental RPS neural message demo</h2>
+          <p class="legend">This older exploratory teacher/student simulation is separate from the game above. It illustrates real measured neural messages. It has not established reliable RPS teacher-to-student learning.</p>
+          <p class="muted">The opponent usually advances its previous move by one (Rock → Paper → Scissors → Rock), with a 10% random deviation. Each fly sees the opponent’s previous move, never its current move or rule. The teacher’s saved weights came from 12 training episodes.</p>
+          <div class="controls">
+            <button id="play">Start experimental simulation</button>
+            <button id="disconnect">Disconnect teacher &amp; test student</button>
+            <button id="reset">New student</button>
+            <label>Speed <select id="speed"><option value="1">1×</option><option value="4">4×</option><option value="max" selected>Max</option></select></label>
+          </div>
+          <p id="status" role="status" style="margin-top:12px">Loading brain data…</p>
+          <div class="stats" aria-label="Live progress">
+            <div class="stat">Teacher training episodes<strong id="teacher-training">—</strong></div>
+            <div class="stat">Student training episodes<strong id="student-training">0</strong></div>
+            <div class="stat">Student win rate this episode<strong id="student-rate">—</strong></div>
+          </div>
+          <p class="legend" style="margin-top:16px">Teacher pretraining win rate (mean across experiment seeds)</p>
+          <canvas id="teacher-chart" class="chart" width="800" height="145" role="img" aria-label="Measured teacher win rate during pretraining"></canvas>
+          <div class="grid">
+            <article class="panel"><div class="flyhead"><h3>Fly A · teacher</h3><span id="teacher-score">—</span></div><div class="rps"><span class="move" id="teacher-move">—</span><span>vs</span><span class="move" id="teacher-opponent">—</span></div><p id="teacher-header" class="legend">Neural activity</p><canvas id="teacher-brain" class="brain" width="480" height="655" role="img" aria-label="Actual teacher neuron activity"></canvas></article>
+            <article class="panel"><div class="flyhead"><h3>Fly B · student</h3><span id="student-score">—</span></div><div class="rps"><span class="move" id="student-move">—</span><span>vs</span><span class="move" id="student-opponent">—</span></div><p id="student-header" class="legend">Neural activity</p><canvas id="student-brain" class="brain" width="480" height="655" role="img" aria-label="Actual student neuron activity"></canvas></article>
+          </div>
+          <div class="signal" aria-live="polite"><span>Fly A: intermediate-neuron spike counts</span><div class="line" aria-hidden="true"><span id="pulse" class="pulse"></span></div><span>Fly B: visual input<br><code id="signal-values">No signal yet</code></span></div>
+          <p class="legend">At 180 ms of each round, the channel reads three intermediate neurons downstream of the learning synapses. It quantizes each spike count to 0, 1 or 2 and drives two reserved student visual neurons per value until 240 ms. The pulse above appears only when a recorded nonzero signal is delivered. These source and target cells are engineering choices, not a known biological communication pathway.</p>
+          <p class="legend">Live episode win rate: <span style="color:var(--gfp)">green = teacher</span>, white = student.</p>
+          <canvas id="live-chart" class="chart" width="800" height="190" role="img" aria-label="Live teacher and student win rates by episode"></canvas>
+        </section>
+        <section class="panel" aria-labelledby="results-title">
+          <h2 id="results-title">Controlled experiment</h2>
+          <p id="experiment-intro" class="muted">Loading measured results…</p>
+          <p id="experiment-conclusion"></p>
+          <canvas id="experiment-chart" class="chart" width="800" height="280" role="img" aria-label="Measured student win rates over training episodes by condition"></canvas>
+          <div id="experiment-table" class="scroll"></div>
+          <p class="legend" style="margin-top:12px">A threshold is reached after three consecutive episode rates average at least 60%. Final tests use three unseen, seeded opponent sequences per run, with learning frozen and the teacher disconnected. Variation is the standard deviation across seeds. A 33.3% win rate is random play against this balanced opponent.</p>
+        </section>
+      </main>
+      <footer>Built from <a href="https://github.com/bsgelman/fly-hero">Fly Hero</a> by Benjamin Gelman (MIT). Connectome data: Janelia and Google male CNS (CC-BY). Neuron model after Shiu et al. 2024; dopamine learning rule inspired by Bennett et al. 2021. See <a href="README.md">README</a> for method and limitations.</footer>
+    </div>
+    <script type="importmap">
+      {"imports":{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}
+    </script>
+    <script type="module" src="js/rps_app.js"></script>
+    <script type="module" src="js/rps_challenge.js"></script>
+  </body>
+</html>
