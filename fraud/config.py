@@ -5,7 +5,8 @@ import os
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-ALLOWED = {"NESSIE_API_KEY", "OPENAI_API_KEY", "SYNAPSE_FRAUD_TEACHER_MODEL",
+ALLOWED = {"NESSIE_API_KEY", "OPENAI_API_KEY", "GEMINI_API_KEY", "TEACHER_PROVIDER",
+           "GEMINI_MODEL", "SYNAPSE_FRAUD_TEACHER_MODEL",
            "NESSIE_BASE_URL", "SYNAPSE_FRAUD_PORT"}
 
 

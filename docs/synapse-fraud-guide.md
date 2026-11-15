@@ -4,17 +4,28 @@ Synapse Fraud is an experimental, human-reviewed queue for **mock** banking purc
 
 ## Start and data sources
 
-From the repository root, install `requirements.txt` if needed, put your keys in the root `.env` file, run `python -m fraud.server`, and open <http://localhost:8767/fraud.html>. The `.env` file is ignored by Git and blocked from both local web servers. Existing process environment variables take precedence. Restart the server after editing `.env`. With no `NESSIE_API_KEY`, the page clearly says **Offline fixture mode** and uses deterministic generated mock purchases. With `NESSIE_API_KEY`, it retrieves read-only Nessie mock accounts, purchases, and merchants. `NESSIE_BASE_URL` can override the default HTTPS API host. Nessie mock purchases are *not* verified fraud labels; the adapter has not yet been exercised against a live credential in this project.
+From the repository root, install `requirements.txt` if needed, put keys in the root `.env` file, run `python -m fraud.server`, and open <http://localhost:8767/fraud.html>. Restart after editing `.env` or training a student. The `.env` file is ignored by Git and blocked from both local web servers; existing process environment variables take precedence. Use:
+
+```dotenv
+NESSIE_API_KEY=your_nessie_key
+GEMINI_API_KEY=your_gemini_key
+TEACHER_PROVIDER=gemini
+GEMINI_MODEL=gemini-3.5-flash-lite
+```
+
+Choose **Offline generated fixtures** or **Nessie live mock API** in the dashboard. An `nsk_` key uses Nessie v2 bearer authentication; older keys use the v1 adapter. Both adapters only read mock banking data. `NESSIE_BASE_URL` can override the detected HTTPS host. The configured v2 key authenticated successfully on 14 November 2026, but its sandbox returned **zero accounts**. Transactions and merchant lookup therefore could not be verified live. The page displays labeled offline fixtures and never marks them LIVE NESSIE. Live Nessie purchases have no verified fraud labels.
 
 ## Models and teacher
 
 The saved baseline, rule-guided, and shuffled-control students are seven-parameter **NumPy logistic classifiers**, not LLMs. Scoring reads purchase amount and merchant/category patterns against account history. Their displayed scores rank human review work and are not calibrated probabilities. The saved study used a deterministic LOW/REVIEW/HIGH **rule fixture**, never OpenAI.
 
-With `OPENAI_API_KEY` in `.env`, the server offers an on-demand structured teacher comparison for a selected purchase. It sends only six derived numerical features, without customer or account identifiers. The configured cost-oriented model is [`gpt-5.6-luna`](https://developers.openai.com/api/docs/models/gpt-5.6-luna); change `SYNAPSE_FRAUD_TEACHER_MODEL` in `.env` if that model is unavailable to your account. To train a separate local student from **20 training-only teacher responses** by default, run `python -m fraud.train_frontier --teacher-examples 20`, then restart the server. Successful responses are cached in `fraud/.teacher-cache/`; repeating the same run reuses them. `--teacher-examples` may be raised to 408 if that API spend is intended. The model is saved at `data/fraud/frontier-student.json` and appears as a separate local option. Its inference needs no API key or teacher call. This optional path has **not** been run with a real key or given a held-out scientific result. scikit-learn is not installed; the NumPy implementation keeps the working demo dependency-light.
+With `TEACHER_PROVIDER=gemini`, the server uses `GEMINI_API_KEY` and the [Gemini 3.5 Flash-Lite](https://aistudio.google.com/docs/models/gemini-3.5-flash-lite) model. One real structured response succeeded with mock features; its risk, explanation, and indicators were checked against the supplied values. The dashboard's optional teacher button reports **live Gemini** or **cached Gemini** explicitly. Successful responses are cached in `fraud/.teacher-cache/`. No teacher API is called while local students score transactions. To use OpenAI instead, set `TEACHER_PROVIDER=openai`, `OPENAI_API_KEY`, and optionally `SYNAPSE_FRAUD_TEACHER_MODEL`. Both providers receive only six derived numerical features, without account or merchant identifiers. An API or validation failure is shown as an error; it never becomes fixture advice.
 
 ## Experiment and limits
 
 The [locked protocol](synapse-fraud-protocol.md) uses account-disjoint synthetic training, development, and held-out sets with independently assigned suspicious and challenging benign scenarios. All three saved models saw the same 72 true training labels; the guided and shuffled arms received 408 extra compact fixture messages. At the fixed 0.5 evaluation threshold, guided caught 28/36 suspicious cases versus 25/36 for the independent model, but added five false alerts versus zero. F1 fell from 0.820 to 0.812, so the predeclared success gate **failed**. See the [research report](synapse-fraud-research.md) and [raw predictions](../data/fraud/experiment.json). The dashboard's priority bands use separate 0.35 and 0.7 cutoffs. No real-world fraud accuracy, neural transport for fraud, or frontier-teacher benefit is established.
+
+The separate [prospective Gemini protocol](synapse-fraud-gemini-protocol.md) used 12 valid training-only Gemini messages and the same local learner. On the untouched 120-case synthetic test, the Gemini-guided student **matched** the baseline: TP 25, FN 11, FP 0, TN 84; fraud recall 25/36, precision 1.000, F1 0.820. The strict improvement gate **failed**. See the [separate result](../data/fraud/gemini-experiment.json). The trained local model appears as a separate dashboard option, with no teacher needed for inference. Neither synthetic result establishes live fraud accuracy.
 
 ## 60-second judge path
 

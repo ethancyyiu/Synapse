@@ -11,7 +11,7 @@ from fraud.core import (FEATURE_NAMES, evaluate, features, fixture_teacher, make
                         normalize_purchase, score, train_models, validate_teacher_output)
 from fraud.config import load_env
 from fraud.nessie import NessieClient, NessieUnavailable
-from fraud.server import Handler, mode
+from fraud.server import Handler, accounts, mode, scored_rows, source_mode
 from fraud.teacher import SCHEMA, cached_frontier_teacher, frontier_available, frontier_teacher
 from fraud import train_frontier
 from tools.serve import NoCache
@@ -170,6 +170,17 @@ class FraudChecks(unittest.TestCase):
             self.assertEqual(mode(), "nessie")
             self.assertTrue(frontier_available())
             self.assertIsInstance(NessieClient(), NessieClient)
+
+    def test_explicit_fixture_source_with_nessie_configured(self):
+        with patch.dict("os.environ", {"NESSIE_API_KEY": "nsk_fake"}):
+            self.assertEqual(mode(), "nessie")
+            self.assertEqual(source_mode("fixture"), "fixture")
+            self.assertTrue(accounts("fixture"))
+            rows = scored_rows("mock-060", "fixture")
+            self.assertTrue(rows)
+            self.assertTrue(all(row["synthetic_label"] is not None for row in rows))
+            with self.assertRaises(ValueError):
+                source_mode("unknown")
 
 
 if __name__ == "__main__": unittest.main()

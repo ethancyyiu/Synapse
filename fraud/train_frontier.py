@@ -1,4 +1,4 @@
-"""Optional bounded OpenAI teacher training; never changes the locked fixture study.
+"""Optional bounded frontier teacher training; never changes the locked fixture study.
 
 Run: python -m fraud.train_frontier --teacher-examples 20
 """
@@ -6,13 +6,12 @@ from __future__ import annotations
 
 import argparse
 import json
-import os
 from pathlib import Path
 
 import numpy as np
 
 from .core import FEATURE_NAMES, SEED, feature_vector, fit_student, make_dataset
-from .teacher import DEFAULT_MODEL, cached_frontier_teacher, frontier_available
+from .teacher import cached_frontier_teacher, frontier_available, teacher_model, teacher_provider
 
 OUTPUT = Path(__file__).resolve().parent.parent / "data" / "fraud" / "frontier-student.json"
 TARGETS = {"LOW": .05, "REVIEW": .5, "HIGH": .95}
@@ -20,7 +19,7 @@ TARGETS = {"LOW": .05, "REVIEW": .5, "HIGH": .95}
 
 def train(teacher_examples: int = 20, save: bool = True) -> dict:
     if not frontier_available():
-        raise RuntimeError("Set OPENAI_API_KEY before training a frontier-guided student")
+        raise RuntimeError("Configure the selected teacher API key before training")
     data = make_dataset()
     rows = data["train"]
     if not 1 <= teacher_examples <= len(rows) - round(.15 * len(rows)):
@@ -37,7 +36,7 @@ def train(teacher_examples: int = 20, save: bool = True) -> dict:
         targets[i] = TARGETS[cached_frontier_teacher(rows[i]["features"])["risk"]]
     weights = fit_student(rows, labeled, targets, mean, scale)
     artifact = {"kind": "optional frontier-guided demo model", "seed": SEED,
-        "teacher_model": os.environ.get("SYNAPSE_FRAUD_TEACHER_MODEL", DEFAULT_MODEL),
+        "teacher_provider": teacher_provider(), "teacher_model": teacher_model(),
         "teacher_examples": len(candidates), "true_label_examples": len(labeled),
         "feature_names": FEATURE_NAMES, "weights": weights.tolist(),
         "mean": mean.tolist(), "scale": scale.tolist(),

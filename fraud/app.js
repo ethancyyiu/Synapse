@@ -17,7 +17,7 @@ function el(tag, text, className) {
   return node;
 }
 
-function reviewKey(id) { return `synapse-fraud-review:${state.account}:${id}`; }
+function reviewKey(id) { return `synapse-fraud-review:${state.mode}:${state.account}:${id}`; }
 function reviewStatus(id) { return sessionStorage.getItem(reviewKey(id)) || 'Not reviewed'; }
 
 function renderQueue() {
@@ -94,7 +94,7 @@ function renderDetail() {
       try {
         const result = await getJson('/api/fraud/frontier', { method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ account_id: state.account, transaction_id: txn.id }) });
+          body: JSON.stringify({ source: state.mode, account_id: state.account, transaction_id: txn.id }) });
         const box = el('div', undefined, 'callout');
         box.append(el('strong', `${result.source}: ${result.risk}`), el('p', result.explanation),
           el('p', `Indicators: ${result.indicators.join('; ') || 'none'}. Uncertainty: ${result.uncertainty || 'not supplied'}`));
@@ -113,32 +113,48 @@ async function scan() {
   $('scan-btn').disabled = true;
   $('workspace-status').textContent = 'Retrieving transactions, building history context, scoring locally, and ranking review candidates…';
   try {
-    const data = await getJson(`/api/fraud/account?id=${encodeURIComponent(state.account)}`);
+    const data = await getJson(`/api/fraud/account?id=${encodeURIComponent(state.account)}&source=${state.mode}`);
     state.rows = data.transactions;
     state.selected = state.rows.length ? [...state.rows].sort((a, b) => b.scores[state.model] - a.scores[state.model])[0].transaction.id : null;
     renderQueue(); renderDetail();
+    $('source-mode').textContent = data.live_nessie ? 'LIVE NESSIE · mock API records · read-only'
+      : (data.mode === 'fixture' ? 'Offline fixtures · generated mock purchases' : 'Nessie API · no purchase records');
     $('workspace-status').textContent = `Analyzed ${state.rows.length} ${data.mode === 'fixture' ? 'generated mock' : 'Nessie mock'} purchases. Teacher disconnected for local scoring.`;
   } catch (error) {
     $('workspace-status').textContent = error.message;
     state.rows = []; state.selected = null; renderQueue(); renderDetail();
-  } finally { $('scan-btn').disabled = false; }
+  } finally { $('scan-btn').disabled = !state.account; }
+}
+
+async function loadAccounts(source, notice = '', initialData = null) {
+  const data = initialData || await getJson(`/api/fraud/accounts?source=${source}`);
+  state.mode = data.mode;
+  $('source-select').value = data.mode;
+  $('source-mode').textContent = data.mode === 'fixture'
+    ? 'Offline fixtures - generated mock purchases' : 'Nessie API - live mock purchases - read-only';
+  $('account-select').replaceChildren(...data.accounts.map(account => {
+    const option = el('option', account.name); option.value = account.id; return option;
+  }));
+  state.account = $('account-select').value;
+  state.rows = []; state.selected = null;
+  renderQueue(); renderDetail();
+  $('scan-btn').disabled = !state.account;
+  if (state.account) await scan();
+  $('workspace-status').textContent = notice || (state.account
+    ? $('workspace-status').textContent
+    : 'This Nessie sandbox has no accounts yet. Select offline fixtures to run the demo.');
 }
 
 async function init() {
   try {
-    const [status, accounts, research] = await Promise.all([
-      getJson('/api/fraud/status'), getJson('/api/fraud/accounts'), getJson('/api/fraud/research')]);
-    state.mode = status.mode; state.frontier = status.frontier_configured;
+    const [status, research] = await Promise.all([
+      getJson('/api/fraud/status'), getJson('/api/fraud/research')]);
+    state.frontier = status.frontier_configured;
     if (status.frontier_student_trained) {
-      const option = el('option', `OpenAI-guided local student (${status.frontier_student_messages} messages)`);
+      const option = el('option', `${status.frontier_student_provider === 'gemini' ? 'Gemini' : 'OpenAI'}-guided local student (${status.frontier_student_messages} messages)`);
       option.value = 'frontier_guided';
       $('model-select').append(option);
     }
-    $('source-mode').textContent = status.mode === 'fixture'
-      ? 'Offline fixture mode · generated mock purchases' : 'Nessie mock-data mode · read-only';
-    $('account-select').replaceChildren(...accounts.accounts.map(account => {
-      const option = el('option', account.name); option.value = account.id; return option;
-    }));
     const labels = { independent: 'Independent', guided: 'Teacher-guided', shuffled: 'Shuffled advice' };
     $('metric-body').replaceChildren(...['independent', 'guided', 'shuffled'].map(name => {
       const result = research.arms[name]; const tr = el('tr');
@@ -148,7 +164,18 @@ async function init() {
       return tr;
     }));
     $('gate-result').textContent = `Predefined gate: ${research.success_gate_passed ? 'passed' : 'failed'}.`;
-    await scan();
+    try {
+      const source = status.mode;
+      const available = await getJson(`/api/fraud/accounts?source=${source}`);
+      if (source === 'nessie' && !available.accounts.length) {
+        await loadAccounts('fixture', 'Nessie connected but returned no accounts. Showing clearly labeled offline fixtures.');
+      } else {
+        await loadAccounts(source, '', available);
+      }
+    } catch (error) {
+      if (status.mode !== 'nessie') throw error;
+      await loadAccounts('fixture', `Nessie could not load (${error.message}). Showing clearly labeled offline fixtures.`);
+    }
   } catch (error) {
     $('workspace-status').textContent = `Could not start Synapse Fraud: ${error.message}. Run python -m fraud.server from the repository root.`;
     $('metric-body').replaceChildren(el('tr', `Could not load saved result: ${error.message}`));
@@ -156,6 +183,15 @@ async function init() {
 }
 
 $('scan-btn').addEventListener('click', scan);
+$('source-select').addEventListener('change', async event => {
+  const selected = event.target.value;
+  $('workspace-status').textContent = `Loading ${selected} accounts...`;
+  try { await loadAccounts(selected); }
+  catch (error) {
+    $('workspace-status').textContent = error.message;
+    $('source-select').value = state.mode;
+  }
+});
 $('model-select').addEventListener('change', event => {
   state.model = event.target.value;
   if (state.rows.length) {

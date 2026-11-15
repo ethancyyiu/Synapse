@@ -1,0 +1,42 @@
+{
+  "kind": "optional frontier-guided demo model",
+  "seed": 720260,
+  "teacher_provider": "gemini",
+  "teacher_model": "gemini-3.5-flash-lite",
+  "teacher_examples": 12,
+  "true_label_examples": 72,
+  "feature_names": [
+    "log_amount_ratio",
+    "new_merchant",
+    "new_category",
+    "recent_count",
+    "same_merchant_count",
+    "recent_spend_ratio"
+  ],
+  "weights": [
+    -1.779864005252395,
+    0.4020297978986379,
+    0.6530664232492006,
+    1.4704949756249108,
+    0.6892416620340744,
+    0.06386907946193175,
+    1.1471388745624327
+  ],
+  "mean": [
+    0.9223389374787949,
+    0.3,
+    0.1,
+    1.0,
+    0.6,
+    1.014586319722458
+  ],
+  "scale": [
+    0.5081062036009703,
+    0.4582575694955852,
+    0.30000000000000004,
+    1.5491933384829668,
+    1.200000000000003,
+    1.597641481984464
+  ],
+  "evaluation": "Separate prospective Gemini experiment; see data/fraud/gemini-experiment.json"
+}

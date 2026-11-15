@@ -15,7 +15,7 @@ import numpy as np
 from .config import load_env
 from .core import evidence, features, fixture_teacher, make_dataset, risk_band, score
 from .nessie import NessieClient, NessieUnavailable
-from .teacher import frontier_available, teacher_for_demo
+from .teacher import frontier_available, teacher_for_demo, teacher_model, teacher_provider
 
 ROOT = Path(__file__).resolve().parent.parent
 load_env()
@@ -45,14 +45,23 @@ def mode() -> str:
     return "nessie" if os.environ.get("NESSIE_API_KEY") else "fixture"
 
 
-def accounts() -> list[dict]:
-    if mode() == "nessie":
+def source_mode(requested: str | None = None) -> str:
+    selected = requested or mode()
+    if selected not in {"nessie", "fixture"}:
+        raise ValueError("Unknown data source")
+    if selected == "nessie" and not os.environ.get("NESSIE_API_KEY"):
+        raise ValueError("Nessie API key is not configured")
+    return selected
+
+
+def accounts(source: str | None = None) -> list[dict]:
+    if source_mode(source) == "nessie":
         return NessieClient().accounts()
     return [{"id": account_id, "name": f"Mock account {account_id[-3:]}"} for account_id in FIXTURE_IDS]
 
 
-def rows_for(account_id: str) -> list[dict]:
-    if mode() == "fixture":
+def rows_for(account_id: str, source: str | None = None) -> list[dict]:
+    if source_mode(source) == "fixture":
         if account_id not in FIXTURE_IDS:
             raise ValueError("Unknown fixture account")
         return [row for row in DATASET["test"] if row["account_id"] == account_id]
@@ -65,9 +74,10 @@ def rows_for(account_id: str) -> list[dict]:
     return rows
 
 
-def scored_rows(account_id: str) -> list[dict]:
+def scored_rows(account_id: str, source: str | None = None) -> list[dict]:
+    selected_source = source_mode(source)
     scored = []
-    for row in rows_for(account_id):
+    for row in rows_for(account_id, selected_source):
         f = row["features"]
         scores = {name: round(score(model, f, MEAN, SCALE), 4) for name, model in MODELS.items()}
         scored.append({"transaction": row["transaction"], "scores": scores,
@@ -76,7 +86,7 @@ def scored_rows(account_id: str) -> list[dict]:
                          "historical_median": f["history_median"], "purchases_last_24h": f["recent_count"],
                          "same_merchant_last_24h": f["same_merchant_count"]},
                        "teacher_fixture": fixture_teacher(f),
-                       "synthetic_label": row["label"] if mode() == "fixture" else None})
+                       "synthetic_label": row["label"] if selected_source == "fixture" else None})
     return scored
 
 
@@ -137,17 +147,23 @@ class Handler(SimpleHTTPRequestHandler):
         try:
             if parsed.path == "/api/fraud/status":
                 return self.json_response({"mode": mode(), "frontier_configured": frontier_available(),
+                    "teacher_provider": teacher_provider(), "teacher_model": teacher_model(),
                     "frontier_student_trained": FRONTIER_STUDENT is not None,
                     "frontier_student_messages": FRONTIER_STUDENT["teacher_examples"] if FRONTIER_STUDENT else 0,
+                    "frontier_student_provider": FRONTIER_STUDENT.get("teacher_provider", "openai") if FRONTIER_STUDENT else None,
                     "model": "local NumPy logistic classifier", "prototype": True})
             if parsed.path == "/api/fraud/accounts":
-                return self.json_response({"mode": mode(), "accounts": accounts()})
+                selected_source = source_mode(query.get("source", [None])[0])
+                return self.json_response({"mode": selected_source, "accounts": accounts(selected_source)})
             if parsed.path == "/api/fraud/account":
+                selected_source = source_mode(query.get("source", [None])[0])
                 account_id = query.get("id", [""])[0]
                 if not account_id:
                     return self.json_response({"error": "Choose an account"}, 400)
-                return self.json_response({"mode": mode(), "account_id": account_id,
-                    "transactions": scored_rows(account_id)})
+                transactions = scored_rows(account_id, selected_source)
+                return self.json_response({"mode": selected_source, "account_id": account_id,
+                    "live_nessie": selected_source == "nessie" and bool(transactions),
+                    "transactions": transactions})
             if parsed.path == "/api/fraud/research":
                 return self.json_response(research_summary())
             return self.json_response({"error": "Unknown endpoint"}, 404)
@@ -167,13 +183,15 @@ class Handler(SimpleHTTPRequestHandler):
                 raise ValueError("Invalid request size")
             body = json.loads(self.rfile.read(length))
             account_id, transaction_id = body["account_id"], body["transaction_id"]
-            matches = [r for r in rows_for(account_id) if r["transaction"]["id"] == transaction_id]
+            matches = [r for r in rows_for(account_id, body.get("source")) if r["transaction"]["id"] == transaction_id]
             if len(matches) != 1:
                 raise ValueError("Transaction not found")
             result = teacher_for_demo(matches[0]["features"], use_frontier=True)
             return self.json_response(result)
         except (ValueError, KeyError, TypeError) as error:
             return self.json_response({"error": str(error)}, 400)
+        except NessieUnavailable as error:
+            return self.json_response({"error": str(error), "mode": "nessie"}, 502)
         except RuntimeError as error:
             return self.json_response({"error": str(error)}, 502)
 

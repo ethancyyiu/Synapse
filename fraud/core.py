@@ -108,11 +108,11 @@ def fixture_teacher(f: dict) -> dict:
         "indicators": indicators, "uncertainty": "Rule-based fixture; this is not a calibrated probability."})
 
 
-def make_dataset() -> dict[str, list[dict]]:
+def make_dataset(account_ids: range | None = None) -> dict[str, list[dict]]:
     splits = {"train": [], "development": [], "test": []}
     scenarios = ("ordinary", "ordinary", "ordinary", "ordinary", "large_known_benign",
                  "new_small_benign", "known_burst_benign", "large_new_fraud", "repeat_new_fraud", "unfamiliar_burst_fraud")
-    for account in range(72):
+    for account in (range(72) if account_ids is None else account_ids):
         rng = np.random.default_rng(SEED + account * 1009)
         split = "train" if account < 48 else "development" if account < 60 else "test"
         account_id = f"mock-{account:03d}"
