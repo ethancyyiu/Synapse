@@ -4,7 +4,13 @@
 
 It uses real card-fraud data and ordinary machine-learning models. **It does not use the fly connectome, spikes, or either fly.**
 
-## Run it
+## Present the saved demo
+
+The saved 200-purchase ledger marked as a Nessie readback and the agent run are already in `data/bank_demo/`. Start the site with `python -m fraud.server` from the repository root and open <http://localhost:8767/index.html#bank>. No sampling, syncing, retraining, or Nessie writes are needed.
+
+The saved ledger and the local dashboard both name the same Nessie v2 API host. The restored bank script expects `NESSIE_KEY`, while the current `.env` supplies `NESSIE_API_KEY`. With that current key, a read-only account-list request succeeded and returned only the separate six-purchase dashboard account, with no further page; the saved 200-purchase account was absent. The earlier direct transaction request for that account returned HTTP 404. The original account may belong to another key's sandbox or may have been removed. Its current API access is **unverified**; the saved files remain the presentation source.
+
+## Historical generation procedure (not needed for the presentation)
 
 ```bash
 pip install scikit-learn pandas numpy
@@ -15,7 +21,7 @@ python tools/bank_demo.py run                   # the agent
 python tools/serve.py                           # then open http://localhost:8766/#bank
 ```
 
-`python tools/bank_demo.py sync --offline` skips Nessie and writes the same file marked `offline`; the page then says Nessie was not used. Commit `data/bank_demo/` after a Nessie run so the page works without a network.
+`python tools/bank_demo.py sync --offline` skips Nessie and writes the same file marked `offline`; the page then says Nessie was not used. The saved `data/bank_demo/` files let the page work without a network.
 
 ## What it does
 

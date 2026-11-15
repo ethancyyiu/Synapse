@@ -1,0 +1,1532 @@
+{
+  "protocol": "docs/synapse-fraud-tenure-protocol.md",
+  "teacher_model": "gemini-3.5-flash-lite",
+  "teacher_messages": 12,
+  "teacher_risk_counts": {
+    "LOW": 4,
+    "REVIEW": 8,
+    "HIGH": 0
+  },
+  "true_label_examples": 72,
+  "features": [
+    "log_amount_ratio",
+    "new_merchant",
+    "new_category",
+    "recent_count",
+    "same_merchant_count",
+    "recent_spend_ratio",
+    "merchant_older_count"
+  ],
+  "threshold": 0.5,
+  "mean": [
+    0.9223389374787949,
+    0.3,
+    0.1,
+    1.0,
+    0.6,
+    1.014586319722458,
+    6.0
+  ],
+  "scale": [
+    0.5081062036009703,
+    0.4582575694955852,
+    0.30000000000000004,
+    1.5491933384829668,
+    1.200000000000003,
+    1.597641481984464,
+    4.898979485566356
+  ],
+  "weights": {
+    "matched_control": [
+      -2.0082011427590833,
+      0.7070457808817467,
+      -0.028487258383164498,
+      1.2114767989072068,
+      0.8670880069232113,
+      -0.1296400723259226,
+      1.0792824954613258,
+      -1.685493309685626
+    ],
+    "gemini_teacher": [
+      -1.980257479850103,
+      0.6737970172333897,
+      0.06472156143964833,
+      1.2005215263385915,
+      0.8548579269895615,
+      -0.17831718679215403,
+      1.0282755087328186,
+      -1.4713498574261124
+    ]
+  },
+  "development_gate_passed": false,
+  "development": {
+    "matched_control": {
+      "confusion": {
+        "tp": 36,
+        "fp": 0,
+        "fn": 0,
+        "tn": 84
+      },
+      "fraud_recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0,
+      "predictions": [
+        {
+          "id": "mock-048-c0",
+          "label": 0,
+          "score": 0.0051829156037202645,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c1",
+          "label": 0,
+          "score": 0.00600634737653507,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c2",
+          "label": 0,
+          "score": 0.006703261152655145,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c3",
+          "label": 0,
+          "score": 0.006457440218088753,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c4",
+          "label": 0,
+          "score": 0.02838846485141346,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c5",
+          "label": 0,
+          "score": 0.11822657198448067,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c6",
+          "label": 0,
+          "score": 0.13862915182961083,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c7",
+          "label": 1,
+          "score": 0.9849619065141738,
+          "prediction": 1
+        },
+        {
+          "id": "mock-048-c8",
+          "label": 1,
+          "score": 0.7898163967564482,
+          "prediction": 1
+        },
+        {
+          "id": "mock-048-c9",
+          "label": 1,
+          "score": 0.9427249269128942,
+          "prediction": 1
+        },
+        {
+          "id": "mock-049-c0",
+          "label": 0,
+          "score": 0.005281596306517059,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c1",
+          "label": 0,
+          "score": 0.005901313714027395,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c2",
+          "label": 0,
+          "score": 0.004999007184190555,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c3",
+          "label": 0,
+          "score": 0.005168850285711335,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c4",
+          "label": 0,
+          "score": 0.018602354486494693,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c5",
+          "label": 0,
+          "score": 0.10639664157349008,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c6",
+          "label": 0,
+          "score": 0.08892585719655184,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c7",
+          "label": 1,
+          "score": 0.9717649668650676,
+          "prediction": 1
+        },
+        {
+          "id": "mock-049-c8",
+          "label": 1,
+          "score": 0.8295901573869879,
+          "prediction": 1
+        },
+        {
+          "id": "mock-049-c9",
+          "label": 1,
+          "score": 0.948640457451424,
+          "prediction": 1
+        },
+        {
+          "id": "mock-050-c0",
+          "label": 0,
+          "score": 0.0059659702005333435,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c1",
+          "label": 0,
+          "score": 0.004522325491500136,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c2",
+          "label": 0,
+          "score": 0.006754874939552415,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c3",
+          "label": 0,
+          "score": 0.004307551788860187,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c4",
+          "label": 0,
+          "score": 0.024636506336020495,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c5",
+          "label": 0,
+          "score": 0.10914200317989917,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c6",
+          "label": 0,
+          "score": 0.09622477957688522,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c7",
+          "label": 1,
+          "score": 0.98326481527241,
+          "prediction": 1
+        },
+        {
+          "id": "mock-050-c8",
+          "label": 1,
+          "score": 0.8728480746717555,
+          "prediction": 1
+        },
+        {
+          "id": "mock-050-c9",
+          "label": 1,
+          "score": 0.9680802835930167,
+          "prediction": 1
+        },
+        {
+          "id": "mock-051-c0",
+          "label": 0,
+          "score": 0.006649343683013607,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c1",
+          "label": 0,
+          "score": 0.0046548426903948665,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c2",
+          "label": 0,
+          "score": 0.003732173876082129,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c3",
+          "label": 0,
+          "score": 0.006395507023945419,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c4",
+          "label": 0,
+          "score": 0.027583084370366065,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c5",
+          "label": 0,
+          "score": 0.10717360634327432,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c6",
+          "label": 0,
+          "score": 0.13988203794075071,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c7",
+          "label": 1,
+          "score": 0.9827538701754258,
+          "prediction": 1
+        },
+        {
+          "id": "mock-051-c8",
+          "label": 1,
+          "score": 0.8908429675733114,
+          "prediction": 1
+        },
+        {
+          "id": "mock-051-c9",
+          "label": 1,
+          "score": 0.9630153972725047,
+          "prediction": 1
+        },
+        {
+          "id": "mock-052-c0",
+          "label": 0,
+          "score": 0.0041327938094838845,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c1",
+          "label": 0,
+          "score": 0.004587841158238484,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c2",
+          "label": 0,
+          "score": 0.004028361084565872,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c3",
+          "label": 0,
+          "score": 0.004258286753404315,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c4",
+          "label": 0,
+          "score": 0.021636108459260138,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c5",
+          "label": 0,
+          "score": 0.10901896385987757,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c6",
+          "label": 0,
+          "score": 0.12645167194580798,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c7",
+          "label": 1,
+          "score": 0.9753641475655308,
+          "prediction": 1
+        },
+        {
+          "id": "mock-052-c8",
+          "label": 1,
+          "score": 0.8053662621596266,
+          "prediction": 1
+        },
+        {
+          "id": "mock-052-c9",
+          "label": 1,
+          "score": 0.9574553731519003,
+          "prediction": 1
+        },
+        {
+          "id": "mock-053-c0",
+          "label": 0,
+          "score": 0.003701816459316338,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c1",
+          "label": 0,
+          "score": 0.004035567121456662,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c2",
+          "label": 0,
+          "score": 0.005348146071489083,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c3",
+          "label": 0,
+          "score": 0.003974051164824851,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c4",
+          "label": 0,
+          "score": 0.02669030184337025,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c5",
+          "label": 0,
+          "score": 0.11381463750290999,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c6",
+          "label": 0,
+          "score": 0.14969149241951957,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c7",
+          "label": 1,
+          "score": 0.9774210541539367,
+          "prediction": 1
+        },
+        {
+          "id": "mock-053-c8",
+          "label": 1,
+          "score": 0.7602630412705653,
+          "prediction": 1
+        },
+        {
+          "id": "mock-053-c9",
+          "label": 1,
+          "score": 0.9481772707856705,
+          "prediction": 1
+        },
+        {
+          "id": "mock-054-c0",
+          "label": 0,
+          "score": 0.004158165638443535,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c1",
+          "label": 0,
+          "score": 0.006297830470746996,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c2",
+          "label": 0,
+          "score": 0.006709196184975434,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c3",
+          "label": 0,
+          "score": 0.004539985233836589,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c4",
+          "label": 0,
+          "score": 0.020963077740513314,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c5",
+          "label": 0,
+          "score": 0.10322792666559341,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c6",
+          "label": 0,
+          "score": 0.13618831673236614,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c7",
+          "label": 1,
+          "score": 0.98281535559837,
+          "prediction": 1
+        },
+        {
+          "id": "mock-054-c8",
+          "label": 1,
+          "score": 0.8685130483886863,
+          "prediction": 1
+        },
+        {
+          "id": "mock-054-c9",
+          "label": 1,
+          "score": 0.9506990892635556,
+          "prediction": 1
+        },
+        {
+          "id": "mock-055-c0",
+          "label": 0,
+          "score": 0.004826042195702121,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c1",
+          "label": 0,
+          "score": 0.004446293346836161,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c2",
+          "label": 0,
+          "score": 0.00557273942496358,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c3",
+          "label": 0,
+          "score": 0.006422378972943321,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c4",
+          "label": 0,
+          "score": 0.02183771000412404,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c5",
+          "label": 0,
+          "score": 0.094212173724633,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c6",
+          "label": 0,
+          "score": 0.14882417789905766,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c7",
+          "label": 1,
+          "score": 0.9821997891661982,
+          "prediction": 1
+        },
+        {
+          "id": "mock-055-c8",
+          "label": 1,
+          "score": 0.8017942444482519,
+          "prediction": 1
+        },
+        {
+          "id": "mock-055-c9",
+          "label": 1,
+          "score": 0.9449900630514844,
+          "prediction": 1
+        },
+        {
+          "id": "mock-056-c0",
+          "label": 0,
+          "score": 0.006114109146426831,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c1",
+          "label": 0,
+          "score": 0.005860166197086554,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c2",
+          "label": 0,
+          "score": 0.004366545728189935,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c3",
+          "label": 0,
+          "score": 0.004355664421725714,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c4",
+          "label": 0,
+          "score": 0.03195220384729349,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c5",
+          "label": 0,
+          "score": 0.12046100411535877,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c6",
+          "label": 0,
+          "score": 0.09839985905826873,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c7",
+          "label": 1,
+          "score": 0.9756904228609289,
+          "prediction": 1
+        },
+        {
+          "id": "mock-056-c8",
+          "label": 1,
+          "score": 0.8754181762599688,
+          "prediction": 1
+        },
+        {
+          "id": "mock-056-c9",
+          "label": 1,
+          "score": 0.954050588298139,
+          "prediction": 1
+        },
+        {
+          "id": "mock-057-c0",
+          "label": 0,
+          "score": 0.0037479210790938217,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c1",
+          "label": 0,
+          "score": 0.004189757552533979,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c2",
+          "label": 0,
+          "score": 0.005190255609746984,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c3",
+          "label": 0,
+          "score": 0.005470254828939899,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c4",
+          "label": 0,
+          "score": 0.02274222519775641,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c5",
+          "label": 0,
+          "score": 0.09485271766995279,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c6",
+          "label": 0,
+          "score": 0.13480278122653044,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c7",
+          "label": 1,
+          "score": 0.972793047196298,
+          "prediction": 1
+        },
+        {
+          "id": "mock-057-c8",
+          "label": 1,
+          "score": 0.8379548121101872,
+          "prediction": 1
+        },
+        {
+          "id": "mock-057-c9",
+          "label": 1,
+          "score": 0.9486742413573851,
+          "prediction": 1
+        },
+        {
+          "id": "mock-058-c0",
+          "label": 0,
+          "score": 0.006390976199721088,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c1",
+          "label": 0,
+          "score": 0.006817654056484744,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c2",
+          "label": 0,
+          "score": 0.005533034223916083,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c3",
+          "label": 0,
+          "score": 0.0062299286358250315,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c4",
+          "label": 0,
+          "score": 0.021243085981484163,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c5",
+          "label": 0,
+          "score": 0.12948165222507083,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c6",
+          "label": 0,
+          "score": 0.13980217032703146,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c7",
+          "label": 1,
+          "score": 0.9775973037849754,
+          "prediction": 1
+        },
+        {
+          "id": "mock-058-c8",
+          "label": 1,
+          "score": 0.902370947500419,
+          "prediction": 1
+        },
+        {
+          "id": "mock-058-c9",
+          "label": 1,
+          "score": 0.9716257457182271,
+          "prediction": 1
+        },
+        {
+          "id": "mock-059-c0",
+          "label": 0,
+          "score": 0.006347915072213567,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c1",
+          "label": 0,
+          "score": 0.006796201490863642,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c2",
+          "label": 0,
+          "score": 0.0047206693272396506,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c3",
+          "label": 0,
+          "score": 0.005350208359676505,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c4",
+          "label": 0,
+          "score": 0.02986078605696595,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c5",
+          "label": 0,
+          "score": 0.11139235914194012,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c6",
+          "label": 0,
+          "score": 0.1592720096240891,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c7",
+          "label": 1,
+          "score": 0.9757797245753869,
+          "prediction": 1
+        },
+        {
+          "id": "mock-059-c8",
+          "label": 1,
+          "score": 0.7936194245605191,
+          "prediction": 1
+        },
+        {
+          "id": "mock-059-c9",
+          "label": 1,
+          "score": 0.9442768693832437,
+          "prediction": 1
+        }
+      ]
+    },
+    "gemini_teacher": {
+      "confusion": {
+        "tp": 36,
+        "fp": 0,
+        "fn": 0,
+        "tn": 84
+      },
+      "fraud_recall": 1.0,
+      "precision": 1.0,
+      "f1": 1.0,
+      "false_positive_rate": 0.0,
+      "predictions": [
+        {
+          "id": "mock-048-c0",
+          "label": 0,
+          "score": 0.006478990626997718,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c1",
+          "label": 0,
+          "score": 0.007455009786390765,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c2",
+          "label": 0,
+          "score": 0.008275856063110888,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c3",
+          "label": 0,
+          "score": 0.007986828107924058,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c4",
+          "label": 0,
+          "score": 0.032623536790247015,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c5",
+          "label": 0,
+          "score": 0.11790545517323181,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c6",
+          "label": 0,
+          "score": 0.1363826584754116,
+          "prediction": 0
+        },
+        {
+          "id": "mock-048-c7",
+          "label": 1,
+          "score": 0.9827266464232391,
+          "prediction": 1
+        },
+        {
+          "id": "mock-048-c8",
+          "label": 1,
+          "score": 0.7071114943147362,
+          "prediction": 1
+        },
+        {
+          "id": "mock-048-c9",
+          "label": 1,
+          "score": 0.9336819734326249,
+          "prediction": 1
+        },
+        {
+          "id": "mock-049-c0",
+          "label": 0,
+          "score": 0.006596339358127359,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c1",
+          "label": 0,
+          "score": 0.007330900712322358,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c2",
+          "label": 0,
+          "score": 0.006259995601202367,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c3",
+          "label": 0,
+          "score": 0.006462255570003926,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c4",
+          "label": 0,
+          "score": 0.021840180444871352,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c5",
+          "label": 0,
+          "score": 0.1066346202509068,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c6",
+          "label": 0,
+          "score": 0.08930477590576696,
+          "prediction": 0
+        },
+        {
+          "id": "mock-049-c7",
+          "label": 1,
+          "score": 0.9685669860922365,
+          "prediction": 1
+        },
+        {
+          "id": "mock-049-c8",
+          "label": 1,
+          "score": 0.7554865648964253,
+          "prediction": 1
+        },
+        {
+          "id": "mock-049-c9",
+          "label": 1,
+          "score": 0.9401699072039168,
+          "prediction": 1
+        },
+        {
+          "id": "mock-050-c0",
+          "label": 0,
+          "score": 0.00740731243145283,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c1",
+          "label": 0,
+          "score": 0.005690485132622925,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c2",
+          "label": 0,
+          "score": 0.008336474258952807,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c3",
+          "label": 0,
+          "score": 0.005432939570958037,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c4",
+          "label": 0,
+          "score": 0.028517253270539812,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c5",
+          "label": 0,
+          "score": 0.10925463408318009,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c6",
+          "label": 0,
+          "score": 0.09627398830128601,
+          "prediction": 0
+        },
+        {
+          "id": "mock-050-c7",
+          "label": 1,
+          "score": 0.9808782881437864,
+          "prediction": 1
+        },
+        {
+          "id": "mock-050-c8",
+          "label": 1,
+          "score": 0.8108551028502113,
+          "prediction": 1
+        },
+        {
+          "id": "mock-050-c9",
+          "label": 1,
+          "score": 0.9618402467598259,
+          "prediction": 1
+        },
+        {
+          "id": "mock-051-c0",
+          "label": 0,
+          "score": 0.008212507496027992,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c1",
+          "label": 0,
+          "score": 0.005849092076930857,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c2",
+          "label": 0,
+          "score": 0.00473977684072506,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c3",
+          "label": 0,
+          "score": 0.007913923719914676,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c4",
+          "label": 0,
+          "score": 0.031744696314408606,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c5",
+          "label": 0,
+          "score": 0.10737639362522255,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c6",
+          "label": 0,
+          "score": 0.13755531850212824,
+          "prediction": 0
+        },
+        {
+          "id": "mock-051-c7",
+          "label": 1,
+          "score": 0.9803237099037263,
+          "prediction": 1
+        },
+        {
+          "id": "mock-051-c8",
+          "label": 1,
+          "score": 0.8348528194265915,
+          "prediction": 1
+        },
+        {
+          "id": "mock-051-c9",
+          "label": 1,
+          "score": 0.956133905527211,
+          "prediction": 1
+        },
+        {
+          "id": "mock-052-c0",
+          "label": 0,
+          "score": 0.005222915485599399,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c1",
+          "label": 0,
+          "score": 0.005768927499561634,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c2",
+          "label": 0,
+          "score": 0.005097201839638536,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c3",
+          "label": 0,
+          "score": 0.005373775825107789,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c4",
+          "label": 0,
+          "score": 0.02520953943930132,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c5",
+          "label": 0,
+          "score": 0.1091372717669135,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c6",
+          "label": 0,
+          "score": 0.12491232570523352,
+          "prediction": 0
+        },
+        {
+          "id": "mock-052-c7",
+          "label": 1,
+          "score": 0.9723860104029091,
+          "prediction": 1
+        },
+        {
+          "id": "mock-052-c8",
+          "label": 1,
+          "score": 0.7257626396893339,
+          "prediction": 1
+        },
+        {
+          "id": "mock-052-c9",
+          "label": 1,
+          "score": 0.9499192297203302,
+          "prediction": 1
+        },
+        {
+          "id": "mock-053-c0",
+          "label": 0,
+          "score": 0.004703066424101414,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c1",
+          "label": 0,
+          "score": 0.005105881368952815,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c2",
+          "label": 0,
+          "score": 0.006675417624645354,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c3",
+          "label": 0,
+          "score": 0.005031762099500442,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c4",
+          "label": 0,
+          "score": 0.030768863689098227,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c5",
+          "label": 0,
+          "score": 0.1137076908001517,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c6",
+          "label": 0,
+          "score": 0.14676563213569319,
+          "prediction": 0
+        },
+        {
+          "id": "mock-053-c7",
+          "label": 1,
+          "score": 0.9745813039678942,
+          "prediction": 1
+        },
+        {
+          "id": "mock-053-c8",
+          "label": 1,
+          "score": 0.6725387912456956,
+          "prediction": 1
+        },
+        {
+          "id": "mock-053-c9",
+          "label": 1,
+          "score": 0.9396598955694885,
+          "prediction": 1
+        },
+        {
+          "id": "mock-054-c0",
+          "label": 0,
+          "score": 0.0052534338915750595,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c1",
+          "label": 0,
+          "score": 0.007798872826544719,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c2",
+          "label": 0,
+          "score": 0.008282827683734397,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c3",
+          "label": 0,
+          "score": 0.005711634721061132,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c4",
+          "label": 0,
+          "score": 0.02446433702262765,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c5",
+          "label": 0,
+          "score": 0.10360704904940567,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c6",
+          "label": 0,
+          "score": 0.1340929531040694,
+          "prediction": 0
+        },
+        {
+          "id": "mock-054-c7",
+          "label": 1,
+          "score": 0.9803904012499375,
+          "prediction": 1
+        },
+        {
+          "id": "mock-054-c8",
+          "label": 1,
+          "score": 0.8051598400446873,
+          "prediction": 1
+        },
+        {
+          "id": "mock-054-c9",
+          "label": 1,
+          "score": 0.9424353311511747,
+          "prediction": 1
+        },
+        {
+          "id": "mock-055-c0",
+          "label": 0,
+          "score": 0.00605366995596903,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c1",
+          "label": 0,
+          "score": 0.005599381353082133,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c2",
+          "label": 0,
+          "score": 0.006941937768758211,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c3",
+          "label": 0,
+          "score": 0.00794556020154335,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c4",
+          "label": 0,
+          "score": 0.025432519077165476,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c5",
+          "label": 0,
+          "score": 0.09497070194291071,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c6",
+          "label": 0,
+          "score": 0.14595741364139847,
+          "prediction": 0
+        },
+        {
+          "id": "mock-055-c7",
+          "label": 1,
+          "score": 0.9797232561388672,
+          "prediction": 1
+        },
+        {
+          "id": "mock-055-c8",
+          "label": 1,
+          "score": 0.7214533974944478,
+          "prediction": 1
+        },
+        {
+          "id": "mock-055-c9",
+          "label": 1,
+          "score": 0.9361613885609069,
+          "prediction": 1
+        },
+        {
+          "id": "mock-056-c0",
+          "label": 0,
+          "score": 0.007582230791762219,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c1",
+          "label": 0,
+          "score": 0.007282250592138902,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c2",
+          "label": 0,
+          "score": 0.005503743469296181,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c3",
+          "label": 0,
+          "score": 0.00549068738432702,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c4",
+          "label": 0,
+          "score": 0.03649667674009672,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c5",
+          "label": 0,
+          "score": 0.12002900730587869,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c6",
+          "label": 0,
+          "score": 0.09833979061885968,
+          "prediction": 0
+        },
+        {
+          "id": "mock-056-c7",
+          "label": 1,
+          "score": 0.9727335853126808,
+          "prediction": 1
+        },
+        {
+          "id": "mock-056-c8",
+          "label": 1,
+          "score": 0.8142389198280797,
+          "prediction": 1
+        },
+        {
+          "id": "mock-056-c9",
+          "label": 1,
+          "score": 0.9461380118311141,
+          "prediction": 1
+        },
+        {
+          "id": "mock-057-c0",
+          "label": 0,
+          "score": 0.004758813770845572,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c1",
+          "label": 0,
+          "score": 0.005291421376580216,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c2",
+          "label": 0,
+          "score": 0.0064877229513357875,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c3",
+          "label": 0,
+          "score": 0.006820388555434405,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c4",
+          "label": 0,
+          "score": 0.026431622132987026,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c5",
+          "label": 0,
+          "score": 0.09558543262815772,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c6",
+          "label": 0,
+          "score": 0.1327889241391998,
+          "prediction": 0
+        },
+        {
+          "id": "mock-057-c7",
+          "label": 1,
+          "score": 0.96965513992322,
+          "prediction": 1
+        },
+        {
+          "id": "mock-057-c8",
+          "label": 1,
+          "score": 0.7659568383398005,
+          "prediction": 1
+        },
+        {
+          "id": "mock-057-c9",
+          "label": 1,
+          "score": 0.9402041787326009,
+          "prediction": 1
+        },
+        {
+          "id": "mock-058-c0",
+          "label": 0,
+          "score": 0.007908588908304327,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c1",
+          "label": 0,
+          "score": 0.00841017462899732,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c2",
+          "label": 0,
+          "score": 0.006894859646372764,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c3",
+          "label": 0,
+          "score": 0.007718840773415488,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c4",
+          "label": 0,
+          "score": 0.024774523060643452,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c5",
+          "label": 0,
+          "score": 0.12858659496017594,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c6",
+          "label": 0,
+          "score": 0.13748958717011406,
+          "prediction": 0
+        },
+        {
+          "id": "mock-058-c7",
+          "label": 1,
+          "score": 0.9747698785841896,
+          "prediction": 1
+        },
+        {
+          "id": "mock-058-c8",
+          "label": 1,
+          "score": 0.8505599536761701,
+          "prediction": 1
+        },
+        {
+          "id": "mock-058-c9",
+          "label": 1,
+          "score": 0.9658664532833349,
+          "prediction": 1
+        },
+        {
+          "id": "mock-059-c0",
+          "label": 0,
+          "score": 0.007857877264526959,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c1",
+          "label": 0,
+          "score": 0.008384993920497854,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c2",
+          "label": 0,
+          "score": 0.00592779578828926,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c3",
+          "label": 0,
+          "score": 0.006677867376199581,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c4",
+          "label": 0,
+          "score": 0.034226701242420644,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c5",
+          "label": 0,
+          "score": 0.11140019959775518,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c6",
+          "label": 0,
+          "score": 0.15574202087285907,
+          "prediction": 0
+        },
+        {
+          "id": "mock-059-c7",
+          "label": 1,
+          "score": 0.9728287586019689,
+          "prediction": 1
+        },
+        {
+          "id": "mock-059-c8",
+          "label": 1,
+          "score": 0.711635929361479,
+          "prediction": 1
+        },
+        {
+          "id": "mock-059-c9",
+          "label": 1,
+          "score": 0.93537877933608,
+          "prediction": 1
+        }
+      ]
+    }
+  }
+}

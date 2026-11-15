@@ -1,5 +1,7 @@
 # Synapse: two brains, one learned message
 
+**New, separate prototype:** [Synapse Fraud](fraud.html) is a local mock-transaction review workflow with read-only Nessie integration when configured and an offline fixture mode otherwise. Its first locked synthetic teacher-student comparison **did not** meet its success criterion: teacher guidance improved fraud recall but added false alerts and slightly lowered F1. It does not change the RPS research below. Run it with `python -m fraud.server`, then open <http://localhost:8767/fraud.html>. See the concise [fraud guide](docs/synapse-fraud-guide.md), [protocol](docs/synapse-fraud-protocol.md), and [research result](docs/synapse-fraud-research.md).
+
 **When the rules of a game changed, a trained simulated fruit-fly brain helped an untrained one recover, by sending spikes on two neurons, never its weights.**
 
 ![Fly A teaching the taught Fly B, with Fly B learning alone beside it](docs/images/demo-teaching.png)
@@ -33,10 +35,11 @@ Open <http://localhost:8766>. Serve the whole repository; opening `index.html` a
 
 | Page | What it shows |
 |---|---|
-| `/` | The problem (Usage tab), the recorded demo and live Challenge (Simulation tab), the 15-run result (Statistics tab), and claims and limits (Research tab) |
+| `/` | The recorded demo and live Challenge (Simulation tab), the banking application (Banking tab), the 15-run result (Stats tab), and claims and limits (Research tab) |
 | `/archive.html` | Earlier experiments that failed their gates |
 | `/legacy.html` | The first RPS experiment, with its older message channel |
 | `/rhythm.html` | The original Fly Hero rhythm game |
+| `/fraud.html` on port 8767 | Separate mock-transaction risk review; `python -m fraud.server` serves its local API |
 
 Checks need Node.js, and NumPy for the Python ones. `npm test` takes under two seconds and needs nothing installed (the two demo checks need `npm ci` once, because Node loads three.js from `node_modules`; the browser uses the vendored copy): it recomputes every headline number from the saved per-seed results and fails if the summary files, this README, or the page disagree. The same checks run on every push (`.github/workflows/checks.yml`). [tools/README.md](tools/README.md) lists which script belongs to which study.
 

@@ -536,11 +536,15 @@ body:has(.tab-rail) { padding-right: 136px; }
 .tabs [role=tab]:hover { background: #2b2a28; text-decoration: none; }
 .tabs [role=tab][aria-selected=true] { background: var(--ink); color: var(--paper); border-color: var(--ink); width: 122px; }
 .tabs [role=tab]:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
+.tab-rail .fraud-link { box-sizing: border-box; display: block; width: 94px; margin-top: 4px; padding: 9px 7px; background: #214138; border: 1px solid #4b9676; border-right: 0; border-radius: 5px 0 0 5px; color: var(--ink); font-weight: 700; font-size: calc(.84rem + 2px); text-align: center; text-decoration: none; }
+.tab-rail .fraud-link:hover { background: #2c5a4b; }
 @media (max-width: 760px) {
   body:has(.tab-rail) { padding-right: 0; padding-bottom: 54px; }
-  .tab-rail { top: auto; bottom: 0; left: 0; transform: none; background: var(--paper); border-top: 1px solid var(--rule); }
-  .tabs { flex-direction: row; gap: 0; }
-  .tabs [role=tab] { flex: 1; width: auto; padding: 11px 6px; border: 0; border-radius: 0; } .tabs [role=tab][aria-selected=true] { width: auto; }
+  .tab-rail { top: auto; bottom: 0; left: 0; transform: none; background: var(--paper); border-top: 1px solid var(--rule); display: flex; }
+  .tabs { flex-direction: row; gap: 0; flex: 3; }
+  .tabs [role=tab] { flex: 1; width: auto; padding: 11px 6px; border: 0; border-radius: 0; }
+  .tabs [role=tab][aria-selected=true] { width: auto; }
+  .tab-rail .fraud-link { flex: 1; width: auto; margin: 0; padding: 11px 6px; border: 0; border-radius: 0; }
 }
 .page-nav .secondary a { color: var(--graphite); }
 .section-title { font-size: 1.6rem; margin: 44px 0 4px; }
@@ -690,7 +694,13 @@ table.bank-summary { max-width: 720px; }
 table.bank-summary td { font-variant-numeric: tabular-nums; }
 table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
 .bank-ledger-all { margin-top: 10px; }
+.bank-quick-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 16px 0; }
+.bank-quick-card { border: 1px solid var(--rule); border-radius: 10px; padding: 16px; }
+.bank-quick-card.taught { border-color: var(--gfp); }
+.bank-quick-card strong { display: block; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; }
+.bank-quick-card span { display: block; color: var(--graphite); }
 @media (max-width: 640px) { .bank-arms li { grid-template-columns: 9em 1fr 3.5em; } }
+@media (max-width: 640px) { .bank-quick-cards { grid-template-columns: 1fr; } }
 </style>
   </head>
   <body>
@@ -713,11 +723,11 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
           <li><a href="#solution"><b>2 · Simulation</b>Advice, not data, tested in fly brains</a></li>
           <li><a href="#stats"><b>3 · Statistics</b>68 vs 10 wins in 15 runs, then real card data</a></li>
         </ol>
-        <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
+        <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a href="fraud.html">Banking: mock review</a> · <a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
       </header>
-      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-bank" role="tab" href="#bank" aria-controls="tab-bank" aria-selected="true">Usage</a><a id="tab-btn-sim" role="tab" href="#solution" aria-controls="tab-sim" aria-selected="false">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Statistics</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a></div></nav>
+      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-sim" role="tab" href="#demo" aria-controls="tab-sim" aria-selected="true">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Stats</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a><a id="tab-btn-bank" role="tab" href="#bank" aria-controls="tab-bank" aria-selected="false">Banking application</a></div><a class="fraud-link" href="fraud.html">Mock review queue</a></nav>
       <main>
-        <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim" hidden>
+        <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim">
         <h2 id="solution" class="section-title">Our solution: advice, not data</h2>
         <p class="section-lede">We rebuilt the bank problem as a controlled experiment, inside two brains built from a real fruit-fly wiring diagram.</p>
         <section class="panel" aria-labelledby="solution-map-title">
@@ -742,7 +752,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
               <tr class="ours"><th>Ours</th><td>One flag per case, only after a change</td><td>No</td><td>No records, weights or updates are sent</td></tr>
             </tbody>
           </table></div>
-          <p class="legend"><strong>What is new:</strong> the smallest possible message, tested against controls fixed in advance (shuffled, random and out-of-date advice), between learners that cannot copy each other. <strong>The catch:</strong> the adviser must see the case it advises on, so this fits where it already sees the payment, such as a card network or the bank on the other side of a transfer.</p>
+          <p class="legend"><strong>What we test:</strong> compact action advice between different learners, compared with controls fixed in advance (shuffled, random and out-of-date advice). <strong>The catch:</strong> the adviser must see the case it advises on, so this fits where it already sees the payment, such as a card network or the bank on the other side of a transfer.</p>
           <p class="story-next"><a href="#demo">Watch it work ↓</a> · <a href="#stats">See the proof →</a></p>
         </section>
         <h2 id="demo" class="section-title">Live demo</h2>
@@ -1123,8 +1133,21 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
             </details>
         </section>
         </div>
-        <div id="tab-bank" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-bank">
-        <h2 id="bank" class="section-title">The problem</h2>
+        <div id="tab-bank" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-bank" hidden>
+        <h2 id="bank" class="section-title">Bank A teaches Bank B</h2>
+        <p class="section-lede">A bank with a newer fraud model sends compact advice to a credit union whose different model learned older patterns.</p>
+        <section id="bank-quick" class="panel" aria-labelledby="bank-quick-title">
+          <h2 id="bank-quick-title">One saved run: what changed?</h2>
+          <p>Bank A's boosted-tree model has learned newer patterns. Bank B starts with an older logistic model. For each case, Bank A sends only a <strong>flag/allow bit</strong>, never customer records or model weights. Bank B checks the advice, retrains its own model, then scores held-out purchases independently.</p>
+          <div class="bank-quick-cards">
+            <div class="bank-quick-card"><h3>Without teacher</h3><strong id="bank-quick-alone">Loading saved result…</strong><span id="bank-quick-alone-alarms"></span></div>
+            <div class="bank-quick-card taught"><h3>With teacher</h3><strong id="bank-quick-taught">Loading saved result…</strong><span id="bank-quick-taught-alarms"></span></div>
+          </div>
+          <p id="bank-quick-note" class="legend"></p>
+          <p id="bank-quick-study" class="legend"></p>
+          <p class="story-next"><a href="#bank-ledger">Inspect the 200 saved purchases →</a> · <a href="#demo">Return to Science →</a></p>
+        </section>
+        <h2 class="section-title">The problem</h2>
         <p class="section-lede">When fraud tactics change, the bank that sees it first adapts. Smaller banks find out last, and keep approving the scam until they do.</p>
         <section id="problem-who" class="panel" aria-labelledby="problem-who-title">
           <h2 id="problem-who-title">Who is affected</h2>
@@ -1144,7 +1167,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
           <ul class="props"><li><strong>Send the data?</strong><span>customer records are private by law</span></li><li><strong>Send the model?</strong><span>it won't run on another bank's system</span></li><li><strong>Send model updates?</strong><span>they can leak the private data (<a href="https://arxiv.org/abs/1906.08935" rel="noopener">Zhu 2019</a>; <a href="https://arxiv.org/abs/2003.14053" rel="noopener">Geiping 2020</a>)</span></li><li><strong>Our idea</strong><span>send only advice: one "block" or "allow" flag per payment</span></li></ul>
           <p class="story-next"><a href="#solution">Next: how our solution works, and how it differs →</a></p>
         </section>
-        <h2 id="bank-evidence" class="section-title">Does it work on real bank data?</h2>
+        <h2 id="bank-evidence" class="section-title">What happened on public card data?</h2>
         <p class="section-lede">We tested the idea on 284,807 real card transactions with ordinary machine-learning models, no fly brain: a bank's model sends a credit union's differently built model one flag per purchase.</p>
         <section id="bank-study" class="panel" aria-labelledby="bank-study-title">
           <h2 id="bank-study-title">Locked study on real fraud data</h2>
@@ -1152,9 +1175,9 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
           <div id="bank-study-body"><p class="legend">Loading the study summary…</p></div>
         </section>
         <section id="bank-agent" class="panel" aria-labelledby="bank-agent-title">
-          <h2 id="bank-agent-title">The credit union's agent</h2>
-          <p class="legend">An engineering demo around one run of that study, not a new tested result. The agent reads its ledger from Capital One's Nessie API, decides whether to ask the bank for advice, checks the advice before trusting it, retrains, and reviews the ledger. Its decision rules were chosen by us and were not tested against controls: <a href="docs/bank-demo.md">notes and limits</a>.</p>
-          <div id="bank-agent-body"><p class="legend">No agent run found. Run <code>python tools/bank_demo.py all</code> and reload.</p></div>
+          <h2 id="bank-agent-title">The credit union's saved agent run</h2>
+          <p class="legend">An engineering demo around one run of that study, not a new tested result. The saved ledger is marked as a Capital One Nessie sandbox readback; current access to that account is unverified. The agent decides whether to ask the bank for advice, checks the advice before trusting it, retrains, and reviews the ledger. Its decision rules were chosen by us and were not tested against controls: <a href="docs/bank-demo.md">notes and limits</a>.</p>
+          <div id="bank-agent-body"><p class="legend">Saved agent run unavailable.</p></div>
         </section>
         <section id="bank-ledger" class="panel" aria-labelledby="bank-ledger-title" hidden>
           <h2 id="bank-ledger-title">What the advice changed</h2>
@@ -1171,7 +1194,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
       <footer>Neural simulator and connectome subset from <a href="https://github.com/bsgelman/fly-hero">Fly Hero</a> by Benjamin Gelman (MIT). The two-fly teaching experiments, learners, message channel, and this page are ours. Connectome data: Janelia and Google male CNS (CC-BY). Neuron model after Shiu et al. 2024; dopamine learning rule inspired by Bennett et al. 2021. See <a href="README.md">README</a> for method and limitations.</footer>
     </div>
     <script>
-      // Four tabs; any in-page link (#results, #how, #evidence…) opens the tab that holds its target.
+      // Four tabs; any in-page link opens the tab that holds its target.
       const tabs = { sim: 'tab-sim', stats: 'tab-stats', research: 'tab-research', bank: 'tab-bank' };
       const showTab = (name, target, scroll = true) => {
         for (const [key, id] of Object.entries(tabs)) {
@@ -1195,9 +1218,9 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
       const route = () => {
         const target = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
         const panel = target?.closest?.('.tab-panel');
-        if (!panel) return showTab('bank', null, false);
+        if (!panel) return showTab('sim', null, false);
         const name = Object.keys(tabs).find(key => tabs[key] === panel.id);
-        const top = ['solution', 'stats', 'research', 'bank'].includes(target.id);
+        const top = ['demo', 'solution', 'stats', 'research', 'bank'].includes(target.id);
         for (let details = target.closest('details'); details; details = details.parentElement.closest('details')) details.open = true;
         showTab(name, top ? null : target);
       };

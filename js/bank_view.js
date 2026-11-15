@@ -26,6 +26,8 @@ function renderStudy(study) {
     return;
   }
   const ap = study.meanAP;
+  document.getElementById('bank-quick-study').textContent =
+    `Full locked study: across ${study.seedsPassingTeacherGate} teacher-gated runs out of ${study.seedsRun} seeds, average precision rose from ${fixed(ap.alone)} to ${fixed(ap.taught)}. Predefined success criterion: ${study.mainTest.passed ? 'PASSED' : 'FAILED'}.`;
   const [low, high] = study.mainTest.bootstrap95;
   const share = (ap.taught - ap.alone) / (ap.fullLabels - ap.alone);
   const arms = [
@@ -55,7 +57,7 @@ function renderStudy(study) {
 
 function renderRun(run) {
   if (!run?.steps) return;
-  const source = run.ledgerSource === 'nessie' ? 'Capital One Nessie API' : 'offline ledger (Nessie was not used for this run)';
+  const source = run.ledgerSource === 'nessie' ? 'saved ledger marked as a Capital One Nessie sandbox readback (current account access unverified)' : 'offline ledger (Nessie was not used for this run)';
   const steps = run.steps.map(step => el('li', {},
     el('h3', { textContent: step.title }),
     el('p', { textContent: step.text }),
@@ -73,6 +75,12 @@ function renderRun(run) {
   );
 
   const { ledger } = run;
+  document.getElementById('bank-quick-alone').textContent = `${ledger.alone.fraudsFlagged} of ${ledger.frauds} frauds detected`;
+  document.getElementById('bank-quick-alone-alarms').textContent = `${ledger.alone.falseAlarms} false alarms`;
+  document.getElementById('bank-quick-taught').textContent = `${ledger.taught.fraudsFlagged} of ${ledger.frauds} frauds detected`;
+  document.getElementById('bank-quick-taught-alarms').textContent = `${ledger.taught.falseAlarms} false alarms`;
+  document.getElementById('bank-quick-note').textContent =
+    `One selected saved engineering run, not the full study: ${ledger.purchases} mock-ledger purchases, with frauds over-sampled for display. Source: ${source}.`;
   document.getElementById('bank-ledger').hidden = false;
 
   // Conclusion first: what each model would have caught on this ledger.

@@ -1,0 +1,802 @@
+{
+  "protocol": "docs/synapse-fraud-new-scenarios-protocol.md",
+  "fingerprint": "515a47876f0362597600496c95f82934304aec2015a3f837c43990fc0a5a7c05",
+  "model": "gemini-3.5-flash-lite",
+  "features": [
+    "log_amount_ratio",
+    "new_merchant",
+    "new_category",
+    "recent_count",
+    "same_merchant_count",
+    "recent_spend_ratio",
+    "merchant_older_count"
+  ],
+  "threshold": 0.5,
+  "splits": {
+    "training_accounts": [
+      1000,
+      1035
+    ],
+    "development_accounts": [
+      2000,
+      2011
+    ],
+    "heldout_accounts": [
+      3000,
+      3023
+    ],
+    "training_families": [
+      "marketplace_probe",
+      "service_charge",
+      "routine_disruption"
+    ],
+    "development_families": [
+      "vendor_cluster",
+      "renewal_jump"
+    ],
+    "heldout_families": [
+      "ticket_exchange",
+      "pharmacy_errand"
+    ]
+  },
+  "base_label_count": 36,
+  "extra_label_count": 12,
+  "teacher_message_count": 12,
+  "teacher_messages": [
+    {
+      "training_id": "new-1005-candidate",
+      "risk": "LOW",
+      "indicators": [
+        "recent_count: 3.0",
+        "recent_spend_ratio: 0.986",
+        "log_amount_ratio: 0.833",
+        "new_merchant: 1.0"
+      ],
+      "grounded_features": [
+        "log_amount_ratio",
+        "new_merchant",
+        "recent_count",
+        "recent_spend_ratio"
+      ],
+      "source": "cached"
+    },
+    {
+      "training_id": "new-1007-candidate",
+      "risk": "LOW",
+      "indicators": [
+        "recent_count: 1.0 indicates low recent transaction volume",
+        "same_merchant_count: 1.0 shows prior history with merchant",
+        "new_merchant: 0.0 confirms familiarity with the merchant"
+      ],
+      "grounded_features": [
+        "new_merchant",
+        "recent_count",
+        "same_merchant_count"
+      ],
+      "source": "cached"
+    },
+    {
+      "training_id": "new-1008-candidate",
+      "risk": "REVIEW",
+      "indicators": [
+        "recent_spend_ratio: 2.101 indicates high recent spending",
+        "new_merchant: 1.0 shows interaction with a new merchant"
+      ],
+      "grounded_features": [
+        "new_merchant",
+        "recent_spend_ratio"
+      ],
+      "source": "cached"
+    },
+    {
+      "training_id": "new-1009-candidate",
+      "risk": "LOW",
+      "indicators": [
+        "recent_spend_ratio: 1.156 indicates slightly elevated spend",
+        "recent_count: 3.0 indicates moderate recent activity",
+        "new_merchant: 1.0 indicates a first-time merchant"
+      ],
+      "grounded_features": [
+        "new_merchant",
+        "recent_count",
+        "recent_spend_ratio"
+      ],
+      "source": "cached"
+    },
+    {
+      "training_id": "new-1012-candidate",
+      "risk": "REVIEW",
+      "indicators": [
+        "recent_spend_ratio: 2.41 indicates high recent spend",
+        "new_merchant: 1.0 indicates transaction with a new merchant"
+      ],
+      "grounded_features": [
+        "new_merchant",
+        "recent_spend_ratio"
+      ],
+      "source": "cached"
+    },
+    {
+      "training_id": "new-1013-candidate",
+      "risk": "LOW",
+      "indicators": [
+        "log_amount_ratio: normal level at 1.037",
+        "recent_spend_ratio: stable ratio of 1.081",
+        "new_merchant: familiar merchant indicated by 0.0"
+      ],
+      "grounded_features": [
+        "log_amount_ratio",
+        "new_merchant",
+        "recent_spend_ratio"
+      ],
+      "source": "cached"
+    },
+    {
+      "training_id": "new-1017-candidate",
+      "risk": "REVIEW",
+      "indicators": [
+        "new_merchant: 1.0 indicates a first-time merchant interaction",
+        "recent_spend_ratio: 2.604 shows heightened recent spending",
+        "log_amount_ratio: 1.121 reflects a higher transaction amount"
+      ],
+      "grounded_features": [
+        "log_amount_ratio",
+        "new_merchant",
+        "recent_spend_ratio"
+      ],
+      "source": "cached"
+    },
+    {
+      "training_id": "new-1024-candidate",
+      "risk": "LOW",
+      "indicators": [
+        "recent_spend_ratio: elevated at 1.688",
+        "new_category: set to 0.0",
+        "new_merchant: set to 0.0"
+      ],
+      "grounded_features": [
+        "new_category",
+        "new_merchant",
+        "recent_spend_ratio"
+      ],
+      "source": "live"
+    },
+    {
+      "training_id": "new-1025-candidate",
+      "risk": "REVIEW",
+      "indicators": [
+        "recent_spend_ratio: 2.419 indicates elevated recent spending",
+        "new_merchant: 1.0 indicates an unfamiliar merchant",
+        "log_amount_ratio: 1.071 shows moderate amount deviation"
+      ],
+      "grounded_features": [
+        "log_amount_ratio",
+        "new_merchant",
+        "recent_spend_ratio"
+      ],
+      "source": "live"
+    },
+    {
+      "training_id": "new-1026-candidate",
+      "risk": "REVIEW",
+      "indicators": [
+        "recent_spend_ratio: 2.501 indicates high recent spending",
+        "log_amount_ratio: 1.135 indicates an unusually large transaction",
+        "new_merchant: 1.0 indicates transaction with a novel merchant"
+      ],
+      "grounded_features": [
+        "log_amount_ratio",
+        "new_merchant",
+        "recent_spend_ratio"
+      ],
+      "source": "live"
+    },
+    {
+      "training_id": "new-1029-candidate",
+      "risk": "REVIEW",
+      "indicators": [
+        "recent_spend_ratio: 2.128 indicates high recent spending",
+        "new_merchant: 1.0 indicates transaction with a new merchant"
+      ],
+      "grounded_features": [
+        "new_merchant",
+        "recent_spend_ratio"
+      ],
+      "source": "live"
+    },
+    {
+      "training_id": "new-1033-candidate",
+      "risk": "LOW",
+      "indicators": [
+        "new_merchant: 1.0 indicates a first-time merchant interaction",
+        "recent_spend_ratio: 1.023 reflects normal recent spend levels",
+        "recent_count: 3.0 indicates low recent transaction frequency"
+      ],
+      "grounded_features": [
+        "new_merchant",
+        "recent_count",
+        "recent_spend_ratio"
+      ],
+      "source": "live"
+    }
+  ],
+  "base_indices": [
+    3,
+    6,
+    10,
+    11,
+    12,
+    14,
+    16,
+    17,
+    18,
+    21,
+    28,
+    30,
+    32,
+    33,
+    36,
+    37,
+    42,
+    45,
+    46,
+    49,
+    55,
+    59,
+    61,
+    63,
+    64,
+    66,
+    68,
+    70,
+    75,
+    76,
+    85,
+    91,
+    97,
+    101,
+    102,
+    105
+  ],
+  "extra_indices": [
+    15,
+    22,
+    26,
+    27,
+    38,
+    40,
+    53,
+    73,
+    77,
+    80,
+    89,
+    99
+  ],
+  "mean": [
+    1.0106624405918159,
+    0.6666666666666666,
+    0.0,
+    2.1666666666666665,
+    0.5,
+    1.6541368159211933,
+    1.0
+  ],
+  "scale": [
+    0.0934071875857185,
+    0.4714045207910313,
+    1.0,
+    0.6871842709362768,
+    0.7637626158259734,
+    0.5789886212774902,
+    1.4142135623730951
+  ],
+  "weights": {
+    "limited_baseline": [
+      0.07890329735786726,
+      -0.18803881693776964,
+      -0.022882646459751996,
+      0.0,
+      1.2849629968885297,
+      1.1287419870269984,
+      1.343481429880713,
+      0.022882646459751955
+    ],
+    "independent_labels": [
+      0.10277853329567745,
+      -0.2761153069553009,
+      -0.015066437438742936,
+      0.0,
+      1.2909491185147148,
+      1.1213476588369804,
+      1.2645047876351705,
+      0.015066437438742933
+    ],
+    "gemini_guided": [
+      -0.1839557588015113,
+      0.04711975520708389,
+      -0.013303762489683622,
+      0.0,
+      1.2489133458569113,
+      0.9727050293395931,
+      1.1440001080980395,
+      0.013303762489683577
+    ]
+  },
+  "development_gate_passed": false,
+  "development": {
+    "limited_baseline": {
+      "confusion": {
+        "tp": 12,
+        "fp": 6,
+        "fn": 0,
+        "tn": 6
+      },
+      "fraud_recall": 1.0,
+      "precision": 0.6666666666666666,
+      "f1": 0.8,
+      "false_positive_rate": 0.5,
+      "predictions": [
+        {
+          "id": "new-2000-candidate",
+          "label": 0,
+          "score": 0.9993424545918078,
+          "prediction": 1
+        },
+        {
+          "id": "new-2000-candidate",
+          "label": 1,
+          "score": 0.9084856787714904,
+          "prediction": 1
+        },
+        {
+          "id": "new-2001-candidate",
+          "label": 1,
+          "score": 0.9996355964495006,
+          "prediction": 1
+        },
+        {
+          "id": "new-2001-candidate",
+          "label": 0,
+          "score": 0.030326504169864432,
+          "prediction": 0
+        },
+        {
+          "id": "new-2002-candidate",
+          "label": 0,
+          "score": 0.9996714701315085,
+          "prediction": 1
+        },
+        {
+          "id": "new-2002-candidate",
+          "label": 1,
+          "score": 0.922321997857497,
+          "prediction": 1
+        },
+        {
+          "id": "new-2003-candidate",
+          "label": 1,
+          "score": 0.9993628083223771,
+          "prediction": 1
+        },
+        {
+          "id": "new-2003-candidate",
+          "label": 0,
+          "score": 0.03676483096064953,
+          "prediction": 0
+        },
+        {
+          "id": "new-2004-candidate",
+          "label": 0,
+          "score": 0.9995571686117453,
+          "prediction": 1
+        },
+        {
+          "id": "new-2004-candidate",
+          "label": 1,
+          "score": 0.9423524096527074,
+          "prediction": 1
+        },
+        {
+          "id": "new-2005-candidate",
+          "label": 1,
+          "score": 0.99973730207962,
+          "prediction": 1
+        },
+        {
+          "id": "new-2005-candidate",
+          "label": 0,
+          "score": 0.055604837029606884,
+          "prediction": 0
+        },
+        {
+          "id": "new-2006-candidate",
+          "label": 0,
+          "score": 0.9982154674288298,
+          "prediction": 1
+        },
+        {
+          "id": "new-2006-candidate",
+          "label": 1,
+          "score": 0.897546826305705,
+          "prediction": 1
+        },
+        {
+          "id": "new-2007-candidate",
+          "label": 1,
+          "score": 0.9997545261532149,
+          "prediction": 1
+        },
+        {
+          "id": "new-2007-candidate",
+          "label": 0,
+          "score": 0.04356090069709888,
+          "prediction": 0
+        },
+        {
+          "id": "new-2008-candidate",
+          "label": 0,
+          "score": 0.9994786188442302,
+          "prediction": 1
+        },
+        {
+          "id": "new-2008-candidate",
+          "label": 1,
+          "score": 0.9293587299897903,
+          "prediction": 1
+        },
+        {
+          "id": "new-2009-candidate",
+          "label": 1,
+          "score": 0.9994642280227222,
+          "prediction": 1
+        },
+        {
+          "id": "new-2009-candidate",
+          "label": 0,
+          "score": 0.033963702289995505,
+          "prediction": 0
+        },
+        {
+          "id": "new-2010-candidate",
+          "label": 0,
+          "score": 0.9991839444699171,
+          "prediction": 1
+        },
+        {
+          "id": "new-2010-candidate",
+          "label": 1,
+          "score": 0.94103943818696,
+          "prediction": 1
+        },
+        {
+          "id": "new-2011-candidate",
+          "label": 1,
+          "score": 0.9988412445651932,
+          "prediction": 1
+        },
+        {
+          "id": "new-2011-candidate",
+          "label": 0,
+          "score": 0.028004265146995635,
+          "prediction": 0
+        }
+      ]
+    },
+    "independent_labels": {
+      "confusion": {
+        "tp": 12,
+        "fp": 6,
+        "fn": 0,
+        "tn": 6
+      },
+      "fraud_recall": 1.0,
+      "precision": 0.6666666666666666,
+      "f1": 0.8,
+      "false_positive_rate": 0.5,
+      "predictions": [
+        {
+          "id": "new-2000-candidate",
+          "label": 0,
+          "score": 0.9993134553931622,
+          "prediction": 1
+        },
+        {
+          "id": "new-2000-candidate",
+          "label": 1,
+          "score": 0.8896578842465009,
+          "prediction": 1
+        },
+        {
+          "id": "new-2001-candidate",
+          "label": 1,
+          "score": 0.9996166230981387,
+          "prediction": 1
+        },
+        {
+          "id": "new-2001-candidate",
+          "label": 0,
+          "score": 0.028419149391783905,
+          "prediction": 0
+        },
+        {
+          "id": "new-2002-candidate",
+          "label": 0,
+          "score": 0.9996742991605891,
+          "prediction": 1
+        },
+        {
+          "id": "new-2002-candidate",
+          "label": 1,
+          "score": 0.9129868707776387,
+          "prediction": 1
+        },
+        {
+          "id": "new-2003-candidate",
+          "label": 1,
+          "score": 0.9994281410135372,
+          "prediction": 1
+        },
+        {
+          "id": "new-2003-candidate",
+          "label": 0,
+          "score": 0.035410345067930823,
+          "prediction": 0
+        },
+        {
+          "id": "new-2004-candidate",
+          "label": 0,
+          "score": 0.9995773002526105,
+          "prediction": 1
+        },
+        {
+          "id": "new-2004-candidate",
+          "label": 1,
+          "score": 0.9260146160083849,
+          "prediction": 1
+        },
+        {
+          "id": "new-2005-candidate",
+          "label": 1,
+          "score": 0.9997027918156965,
+          "prediction": 1
+        },
+        {
+          "id": "new-2005-candidate",
+          "label": 0,
+          "score": 0.049881723196756364,
+          "prediction": 0
+        },
+        {
+          "id": "new-2006-candidate",
+          "label": 0,
+          "score": 0.9984457989566365,
+          "prediction": 1
+        },
+        {
+          "id": "new-2006-candidate",
+          "label": 1,
+          "score": 0.8782966826524004,
+          "prediction": 1
+        },
+        {
+          "id": "new-2007-candidate",
+          "label": 1,
+          "score": 0.9997186374215296,
+          "prediction": 1
+        },
+        {
+          "id": "new-2007-candidate",
+          "label": 0,
+          "score": 0.032525562931970405,
+          "prediction": 0
+        },
+        {
+          "id": "new-2008-candidate",
+          "label": 0,
+          "score": 0.9994471846662255,
+          "prediction": 1
+        },
+        {
+          "id": "new-2008-candidate",
+          "label": 1,
+          "score": 0.9100660945312538,
+          "prediction": 1
+        },
+        {
+          "id": "new-2009-candidate",
+          "label": 1,
+          "score": 0.999485359014279,
+          "prediction": 1
+        },
+        {
+          "id": "new-2009-candidate",
+          "label": 0,
+          "score": 0.028729843774166194,
+          "prediction": 0
+        },
+        {
+          "id": "new-2010-candidate",
+          "label": 0,
+          "score": 0.9991915800051683,
+          "prediction": 1
+        },
+        {
+          "id": "new-2010-candidate",
+          "label": 1,
+          "score": 0.9301708930737753,
+          "prediction": 1
+        },
+        {
+          "id": "new-2011-candidate",
+          "label": 1,
+          "score": 0.998998841395166,
+          "prediction": 1
+        },
+        {
+          "id": "new-2011-candidate",
+          "label": 0,
+          "score": 0.023648477955613652,
+          "prediction": 0
+        }
+      ]
+    },
+    "gemini_guided": {
+      "confusion": {
+        "tp": 12,
+        "fp": 6,
+        "fn": 0,
+        "tn": 6
+      },
+      "fraud_recall": 1.0,
+      "precision": 0.6666666666666666,
+      "f1": 0.8,
+      "false_positive_rate": 0.5,
+      "predictions": [
+        {
+          "id": "new-2000-candidate",
+          "label": 0,
+          "score": 0.9976336601620532,
+          "prediction": 1
+        },
+        {
+          "id": "new-2000-candidate",
+          "label": 1,
+          "score": 0.8855362622629266,
+          "prediction": 1
+        },
+        {
+          "id": "new-2001-candidate",
+          "label": 1,
+          "score": 0.9984840466654489,
+          "prediction": 1
+        },
+        {
+          "id": "new-2001-candidate",
+          "label": 0,
+          "score": 0.04328028052413284,
+          "prediction": 0
+        },
+        {
+          "id": "new-2002-candidate",
+          "label": 0,
+          "score": 0.9984085140728112,
+          "prediction": 1
+        },
+        {
+          "id": "new-2002-candidate",
+          "label": 1,
+          "score": 0.880797204385413,
+          "prediction": 1
+        },
+        {
+          "id": "new-2003-candidate",
+          "label": 1,
+          "score": 0.9968285602277906,
+          "prediction": 1
+        },
+        {
+          "id": "new-2003-candidate",
+          "label": 0,
+          "score": 0.047012829994499086,
+          "prediction": 0
+        },
+        {
+          "id": "new-2004-candidate",
+          "label": 0,
+          "score": 0.997859660431367,
+          "prediction": 1
+        },
+        {
+          "id": "new-2004-candidate",
+          "label": 1,
+          "score": 0.9263977687825017,
+          "prediction": 1
+        },
+        {
+          "id": "new-2005-candidate",
+          "label": 1,
+          "score": 0.9989736015054572,
+          "prediction": 1
+        },
+        {
+          "id": "new-2005-candidate",
+          "label": 0,
+          "score": 0.07343731127922805,
+          "prediction": 0
+        },
+        {
+          "id": "new-2006-candidate",
+          "label": 0,
+          "score": 0.9928685955095172,
+          "prediction": 1
+        },
+        {
+          "id": "new-2006-candidate",
+          "label": 1,
+          "score": 0.8727187336589228,
+          "prediction": 1
+        },
+        {
+          "id": "new-2007-candidate",
+          "label": 1,
+          "score": 0.9990492706773205,
+          "prediction": 1
+        },
+        {
+          "id": "new-2007-candidate",
+          "label": 0,
+          "score": 0.08890008310263807,
+          "prediction": 0
+        },
+        {
+          "id": "new-2008-candidate",
+          "label": 0,
+          "score": 0.9980643502531147,
+          "prediction": 1
+        },
+        {
+          "id": "new-2008-candidate",
+          "label": 1,
+          "score": 0.9141075564590027,
+          "prediction": 1
+        },
+        {
+          "id": "new-2009-candidate",
+          "label": 1,
+          "score": 0.9975735730864719,
+          "prediction": 1
+        },
+        {
+          "id": "new-2009-candidate",
+          "label": 0,
+          "score": 0.057905774257133565,
+          "prediction": 0
+        },
+        {
+          "id": "new-2010-candidate",
+          "label": 0,
+          "score": 0.9969103818696815,
+          "prediction": 1
+        },
+        {
+          "id": "new-2010-candidate",
+          "label": 1,
+          "score": 0.9117326897101372,
+          "prediction": 1
+        },
+        {
+          "id": "new-2011-candidate",
+          "label": 1,
+          "score": 0.9946993735819507,
+          "prediction": 1
+        },
+        {
+          "id": "new-2011-candidate",
+          "label": 0,
+          "score": 0.05055878619630797,
+          "prediction": 0
+        }
+      ]
+    }
+  }
+}

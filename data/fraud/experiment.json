@@ -1,0 +1,3016 @@
+{
+  "protocol": "docs/synapse-fraud-protocol.md",
+  "seed": 720260,
+  "dataset": {
+    "train": {
+      "accounts": 48,
+      "cases": 480,
+      "fraud": 144
+    },
+    "development": {
+      "accounts": 12,
+      "cases": 120,
+      "fraud": 36
+    },
+    "test": {
+      "accounts": 12,
+      "cases": 120,
+      "fraud": 36
+    }
+  },
+  "feature_names": [
+    "log_amount_ratio",
+    "new_merchant",
+    "new_category",
+    "recent_count",
+    "same_merchant_count",
+    "recent_spend_ratio"
+  ],
+  "labeled_training_cases": 72,
+  "teacher_messages": 408,
+  "teacher_categories": {
+    "LOW": 206,
+    "REVIEW": 164,
+    "HIGH": 38
+  },
+  "teacher_source": "deterministic rule fixture; no frontier API call",
+  "evaluation_teacher_disconnected": true,
+  "success_gate_passed": false,
+  "models": {
+    "independent": [
+      -1.7560134145273238,
+      0.43610390604145133,
+      0.8050717149116695,
+      1.4509806954027258,
+      0.8707183608723967,
+      -0.1472865245574297,
+      1.360334513933389
+    ],
+    "guided": [
+      -1.1745702948095726,
+      0.9202397058279453,
+      0.2601610716904229,
+      0.8997100979676025,
+      0.5071772211437652,
+      0.2769498004599896,
+      0.5659574192636185
+    ],
+    "shuffled": [
+      -0.8408349782801912,
+      0.001862661350591847,
+      0.029127312325776037,
+      0.41756427151710035,
+      0.11201479974007789,
+      -0.03983125004413405,
+      0.252740268463103
+    ]
+  },
+  "scaler": {
+    "mean": [
+      0.9223389374787949,
+      0.3,
+      0.1,
+      1.0,
+      0.6,
+      1.014586319722458
+    ],
+    "scale": [
+      0.5081062036009703,
+      0.4582575694955852,
+      0.30000000000000004,
+      1.5491933384829668,
+      1.200000000000003,
+      1.597641481984464
+    ]
+  },
+  "held_out": {
+    "independent": {
+      "precision": 1.0,
+      "recall": 0.6944444444444444,
+      "f1": 0.819672131147541,
+      "false_positive_rate": 0.0,
+      "fraud_recall": 0.6944444444444444,
+      "confusion": {
+        "tn": 84,
+        "fp": 0,
+        "fn": 11,
+        "tp": 25
+      },
+      "mean_inference_ms": 0.006671666051261127,
+      "predictions": [
+        {
+          "id": "mock-060-c0",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.010956892476220606,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c1",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.01418341431963702,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c2",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.011708155998090546,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c3",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.013134883973294894,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c4",
+          "account_id": "mock-060",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.028244727622750026,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c5",
+          "account_id": "mock-060",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.06203567954103194,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c6",
+          "account_id": "mock-060",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.35502030233116266,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c7",
+          "account_id": "mock-060",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9632907752412476,
+          "prediction": 1
+        },
+        {
+          "id": "mock-060-c8",
+          "account_id": "mock-060",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.3331087020647878,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c9",
+          "account_id": "mock-060",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9658473741205936,
+          "prediction": 1
+        },
+        {
+          "id": "mock-061-c0",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.01472609600496686,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c1",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.010720758350274836,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c2",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.011730151360455075,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c3",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.014799115119945357,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c4",
+          "account_id": "mock-061",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.03650526042310159,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c5",
+          "account_id": "mock-061",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.06445164989537543,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c6",
+          "account_id": "mock-061",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3936436067999709,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c7",
+          "account_id": "mock-061",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.961281505555025,
+          "prediction": 1
+        },
+        {
+          "id": "mock-061-c8",
+          "account_id": "mock-061",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.3546772030256007,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c9",
+          "account_id": "mock-061",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9521292198622159,
+          "prediction": 1
+        },
+        {
+          "id": "mock-062-c0",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.015529607257750254,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c1",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.011693626698499512,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c2",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.014920060540578758,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c3",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.01160780296301622,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c4",
+          "account_id": "mock-062",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.03467549495069219,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c5",
+          "account_id": "mock-062",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.05955737318259434,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c6",
+          "account_id": "mock-062",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.38064418800249744,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c7",
+          "account_id": "mock-062",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9686327302239326,
+          "prediction": 1
+        },
+        {
+          "id": "mock-062-c8",
+          "account_id": "mock-062",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.40530029580858595,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c9",
+          "account_id": "mock-062",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9605623828458951,
+          "prediction": 1
+        },
+        {
+          "id": "mock-063-c0",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.013546136209134637,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c1",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.013117373587223586,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c2",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.01294340959105256,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c3",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.014697987433429845,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c4",
+          "account_id": "mock-063",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.02878049458068186,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c5",
+          "account_id": "mock-063",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.06075942827180548,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c6",
+          "account_id": "mock-063",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.2585782206290936,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c7",
+          "account_id": "mock-063",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9673783833113021,
+          "prediction": 1
+        },
+        {
+          "id": "mock-063-c8",
+          "account_id": "mock-063",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.3423594330940197,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c9",
+          "account_id": "mock-063",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9585083392990484,
+          "prediction": 1
+        },
+        {
+          "id": "mock-064-c0",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.01353926197479976,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c1",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.011165598458244002,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c2",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.013901201402775324,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c3",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.013542376724999361,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c4",
+          "account_id": "mock-064",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.027101037555799457,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c5",
+          "account_id": "mock-064",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.060890508598945764,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c6",
+          "account_id": "mock-064",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.27666891068867844,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c7",
+          "account_id": "mock-064",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9685026704125838,
+          "prediction": 1
+        },
+        {
+          "id": "mock-064-c8",
+          "account_id": "mock-064",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.25784914584940277,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c9",
+          "account_id": "mock-064",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9498871890211775,
+          "prediction": 1
+        },
+        {
+          "id": "mock-065-c0",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.012840383625672016,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c1",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.01594879494802137,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c2",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.013453668692059835,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c3",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.012692130931991553,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c4",
+          "account_id": "mock-065",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.04252914727043877,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c5",
+          "account_id": "mock-065",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.0660808312705339,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c6",
+          "account_id": "mock-065",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.43474408308399254,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c7",
+          "account_id": "mock-065",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9712157611962042,
+          "prediction": 1
+        },
+        {
+          "id": "mock-065-c8",
+          "account_id": "mock-065",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.5619843990136913,
+          "prediction": 1
+        },
+        {
+          "id": "mock-065-c9",
+          "account_id": "mock-065",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9781538628469999,
+          "prediction": 1
+        },
+        {
+          "id": "mock-066-c0",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.015438992264601154,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c1",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.013156143788499707,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c2",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.015499336023746691,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c3",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.015186200293092735,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c4",
+          "account_id": "mock-066",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.03181403320709522,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c5",
+          "account_id": "mock-066",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.060485282118484786,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c6",
+          "account_id": "mock-066",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3384742090194121,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c7",
+          "account_id": "mock-066",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9678149361629159,
+          "prediction": 1
+        },
+        {
+          "id": "mock-066-c8",
+          "account_id": "mock-066",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.3397023601329742,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c9",
+          "account_id": "mock-066",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9539900514968175,
+          "prediction": 1
+        },
+        {
+          "id": "mock-067-c0",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.012712046804716158,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c1",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.01569988955876863,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c2",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.011697405129648578,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c3",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.011748972090628373,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c4",
+          "account_id": "mock-067",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.03729346477067197,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c5",
+          "account_id": "mock-067",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.05886134411009764,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c6",
+          "account_id": "mock-067",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.4408128267440801,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c7",
+          "account_id": "mock-067",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9675261866015109,
+          "prediction": 1
+        },
+        {
+          "id": "mock-067-c8",
+          "account_id": "mock-067",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.37569938658261115,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c9",
+          "account_id": "mock-067",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9684392162214324,
+          "prediction": 1
+        },
+        {
+          "id": "mock-068-c0",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.015465272925437314,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c1",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.013328474482110999,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c2",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.01476446031300944,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c3",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.013686705614577032,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c4",
+          "account_id": "mock-068",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.03198740048394902,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c5",
+          "account_id": "mock-068",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.06617312607347099,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c6",
+          "account_id": "mock-068",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.44798810417308144,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c7",
+          "account_id": "mock-068",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9649715233649576,
+          "prediction": 1
+        },
+        {
+          "id": "mock-068-c8",
+          "account_id": "mock-068",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.4764542074148523,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c9",
+          "account_id": "mock-068",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9752163536231304,
+          "prediction": 1
+        },
+        {
+          "id": "mock-069-c0",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.01360693907974912,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c1",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.013184525887108545,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c2",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.010536813462780658,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c3",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.014402857667945855,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c4",
+          "account_id": "mock-069",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.036074962023847454,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c5",
+          "account_id": "mock-069",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.06762585966454611,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c6",
+          "account_id": "mock-069",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.29580465066038303,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c7",
+          "account_id": "mock-069",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9616885516902786,
+          "prediction": 1
+        },
+        {
+          "id": "mock-069-c8",
+          "account_id": "mock-069",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.3703579276871563,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c9",
+          "account_id": "mock-069",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9443122152791067,
+          "prediction": 1
+        },
+        {
+          "id": "mock-070-c0",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.014429567843984937,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c1",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.011813457314859471,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c2",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.015194006336228848,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c3",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.011561841769377567,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c4",
+          "account_id": "mock-070",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.030503982425741788,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c5",
+          "account_id": "mock-070",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.07038570818634822,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c6",
+          "account_id": "mock-070",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.37897614502408816,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c7",
+          "account_id": "mock-070",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9624091254477886,
+          "prediction": 1
+        },
+        {
+          "id": "mock-070-c8",
+          "account_id": "mock-070",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.4280111530846415,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c9",
+          "account_id": "mock-070",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9759991783156334,
+          "prediction": 1
+        },
+        {
+          "id": "mock-071-c0",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.012499257421568802,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c1",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.011696749558166495,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c2",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.012333859141656623,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c3",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.012911851406011164,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c4",
+          "account_id": "mock-071",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.030993436084942035,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c5",
+          "account_id": "mock-071",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.05913897922589393,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c6",
+          "account_id": "mock-071",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.25613759810439896,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c7",
+          "account_id": "mock-071",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9611878084994828,
+          "prediction": 1
+        },
+        {
+          "id": "mock-071-c8",
+          "account_id": "mock-071",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.36154792767207544,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c9",
+          "account_id": "mock-071",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.9667877101578392,
+          "prediction": 1
+        }
+      ]
+    },
+    "guided": {
+      "precision": 0.8484848484848485,
+      "recall": 0.7777777777777778,
+      "f1": 0.8115942028985507,
+      "false_positive_rate": 0.05952380952380952,
+      "fraud_recall": 0.7777777777777778,
+      "confusion": {
+        "tn": 79,
+        "fp": 5,
+        "fn": 8,
+        "tp": 28
+      },
+      "mean_inference_ms": 0.004882500312911968,
+      "predictions": [
+        {
+          "id": "mock-060-c0",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.036268731812482545,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c1",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.06132250902726564,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c2",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.04155417561425905,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c3",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05251907431835525,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c4",
+          "account_id": "mock-060",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.2236578687303308,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c5",
+          "account_id": "mock-060",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.06605522561929403,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c6",
+          "account_id": "mock-060",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.5014133673503305,
+          "prediction": 1
+        },
+        {
+          "id": "mock-060-c7",
+          "account_id": "mock-060",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9410252579920422,
+          "prediction": 1
+        },
+        {
+          "id": "mock-060-c8",
+          "account_id": "mock-060",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.48305283342375055,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c9",
+          "account_id": "mock-060",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.6000791950972626,
+          "prediction": 1
+        },
+        {
+          "id": "mock-061-c0",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.06611659487927747,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c1",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.03467876361679654,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c2",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.041714074664235865,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c3",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.06677371440739463,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c4",
+          "account_id": "mock-061",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.33512254665036467,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c5",
+          "account_id": "mock-061",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.07156695905307026,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c6",
+          "account_id": "mock-061",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.5170561693743113,
+          "prediction": 1
+        },
+        {
+          "id": "mock-061-c7",
+          "account_id": "mock-061",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9341960783334773,
+          "prediction": 1
+        },
+        {
+          "id": "mock-061-c8",
+          "account_id": "mock-061",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.38200671727851593,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c9",
+          "account_id": "mock-061",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.5134973732541155,
+          "prediction": 1
+        },
+        {
+          "id": "mock-062-c0",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.07350164215815076,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c1",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.041448711958917125,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c2",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.06786835594456529,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c3",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.04082833735474911,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c4",
+          "account_id": "mock-062",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.31053486436650574,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c5",
+          "account_id": "mock-062",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.060624069420778436,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c6",
+          "account_id": "mock-062",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.5287652485163731,
+          "prediction": 1
+        },
+        {
+          "id": "mock-062-c7",
+          "account_id": "mock-062",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9574411798645006,
+          "prediction": 1
+        },
+        {
+          "id": "mock-062-c8",
+          "account_id": "mock-062",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.4115307365597286,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c9",
+          "account_id": "mock-062",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.5590735545995796,
+          "prediction": 1
+        },
+        {
+          "id": "mock-063-c0",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05589851941426662,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c1",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05237731822553975,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c2",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.050978532264322085,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c3",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.06586439436953626,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c4",
+          "account_id": "mock-063",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.2308247102335939,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c5",
+          "account_id": "mock-063",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.06322995054120695,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c6",
+          "account_id": "mock-063",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.36992540263282697,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c7",
+          "account_id": "mock-063",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9538189325900769,
+          "prediction": 1
+        },
+        {
+          "id": "mock-063-c8",
+          "account_id": "mock-063",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.4810759222689792,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c9",
+          "account_id": "mock-063",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.5115768157512444,
+          "prediction": 1
+        },
+        {
+          "id": "mock-064-c0",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05584124490401355,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c1",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.037702565607561765,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c2",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05889278055042391,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c3",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05586719298143287,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c4",
+          "account_id": "mock-064",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.20846878848427036,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c5",
+          "account_id": "mock-064",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.0635173557606321,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c6",
+          "account_id": "mock-064",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3916355292327596,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c7",
+          "account_id": "mock-064",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9570723365711014,
+          "prediction": 1
+        },
+        {
+          "id": "mock-064-c8",
+          "account_id": "mock-064",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.3223075180936369,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c9",
+          "account_id": "mock-064",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.598491014413538,
+          "prediction": 1
+        },
+        {
+          "id": "mock-065-c0",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05015834578450352,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c1",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.07748620226057955,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c2",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05513032928306398,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c3",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.04898888742950601,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c4",
+          "account_id": "mock-065",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.4134833532423796,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c5",
+          "account_id": "mock-065",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.07540301221157947,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c6",
+          "account_id": "mock-065",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.49989134385879935,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c7",
+          "account_id": "mock-065",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9644403269701319,
+          "prediction": 1
+        },
+        {
+          "id": "mock-065-c8",
+          "account_id": "mock-065",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.5169021767012082,
+          "prediction": 1
+        },
+        {
+          "id": "mock-065-c9",
+          "account_id": "mock-065",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.6774960336959484,
+          "prediction": 1
+        },
+        {
+          "id": "mock-066-c0",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.0726520372521892,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c1",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05269141966160663,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c2",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.0732173518553719,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c3",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.07030421195010671,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c4",
+          "account_id": "mock-066",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.27178145130122516,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c5",
+          "account_id": "mock-066",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.06263091815034398,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c6",
+          "account_id": "mock-066",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.46120974362640405,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c7",
+          "account_id": "mock-066",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9550960081669395,
+          "prediction": 1
+        },
+        {
+          "id": "mock-066-c8",
+          "account_id": "mock-066",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.42130441083393444,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c9",
+          "account_id": "mock-066",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.5325741609836109,
+          "prediction": 1
+        },
+        {
+          "id": "mock-067-c0",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.04914524780294075,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c1",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.07510953863334094,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c2",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.04147612619348329,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c3",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.04185112604091769,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c4",
+          "account_id": "mock-067",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.34563018007715357,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c5",
+          "account_id": "mock-067",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.059139785461914965,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c6",
+          "account_id": "mock-067",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.5442025082030632,
+          "prediction": 1
+        },
+        {
+          "id": "mock-067-c7",
+          "account_id": "mock-067",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9542532671155265,
+          "prediction": 1
+        },
+        {
+          "id": "mock-067-c8",
+          "account_id": "mock-067",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.5213541427955696,
+          "prediction": 1
+        },
+        {
+          "id": "mock-067-c9",
+          "account_id": "mock-067",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.7072324766025869,
+          "prediction": 1
+        },
+        {
+          "id": "mock-068-c0",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.07289801125613818,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c1",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05409794841560086,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c2",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.0664614926615539,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c3",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05707552502221405,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c4",
+          "account_id": "mock-068",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.2741322255859812,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c5",
+          "account_id": "mock-068",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.07562317531486273,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c6",
+          "account_id": "mock-068",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.5585555351319329,
+          "prediction": 1
+        },
+        {
+          "id": "mock-068-c7",
+          "account_id": "mock-068",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9464668362902102,
+          "prediction": 1
+        },
+        {
+          "id": "mock-068-c8",
+          "account_id": "mock-068",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.4181243214075456,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c9",
+          "account_id": "mock-068",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.7130150925268115,
+          "prediction": 1
+        },
+        {
+          "id": "mock-069-c0",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.056406270355941125,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c1",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05292190502383715,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c2",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.03346409603542325,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c3",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.06324193119353988,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c4",
+          "account_id": "mock-069",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.3293626211205589,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c5",
+          "account_id": "mock-069",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.07912845881301452,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c6",
+          "account_id": "mock-069",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.37822657993914754,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c7",
+          "account_id": "mock-069",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9356076568817187,
+          "prediction": 1
+        },
+        {
+          "id": "mock-069-c8",
+          "account_id": "mock-069",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.5118572798708828,
+          "prediction": 1
+        },
+        {
+          "id": "mock-069-c9",
+          "account_id": "mock-069",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.5085481532231083,
+          "prediction": 1
+        },
+        {
+          "id": "mock-070-c0",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.06347734298504107,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c1",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.04232231601428053,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c2",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.0703762159314257,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c3",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.040497934509908726,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c4",
+          "account_id": "mock-070",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.2540385137568693,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c5",
+          "account_id": "mock-070",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.08599180437292062,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c6",
+          "account_id": "mock-070",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.4649431145377591,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c7",
+          "account_id": "mock-070",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9380716413547688,
+          "prediction": 1
+        },
+        {
+          "id": "mock-070-c8",
+          "account_id": "mock-070",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.5488779448776115,
+          "prediction": 1
+        },
+        {
+          "id": "mock-070-c9",
+          "account_id": "mock-070",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.674149450928513,
+          "prediction": 1
+        },
+        {
+          "id": "mock-071-c0",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.047486586894136755,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c1",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.041471369108655745,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c2",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.046215636653305504,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c3",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.05072664790619951,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c4",
+          "account_id": "mock-071",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.2606615638354814,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c5",
+          "account_id": "mock-071",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.059729673058513594,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c6",
+          "account_id": "mock-071",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3471123303230361,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c7",
+          "account_id": "mock-071",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.9338691484831166,
+          "prediction": 1
+        },
+        {
+          "id": "mock-071-c8",
+          "account_id": "mock-071",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.3731475807406871,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c9",
+          "account_id": "mock-071",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.6247269484271675,
+          "prediction": 1
+        }
+      ]
+    },
+    "shuffled": {
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5,
+      "false_positive_rate": 0.0,
+      "fraud_recall": 0.3333333333333333,
+      "confusion": {
+        "tn": 84,
+        "fp": 0,
+        "fn": 24,
+        "tp": 12
+      },
+      "mean_inference_ms": 0.010204166756011546,
+      "predictions": [
+        {
+          "id": "mock-060-c0",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22906054946560594,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c1",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22925774867403587,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c2",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22911114601801386,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c3",
+          "account_id": "mock-060",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22919898907359235,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c4",
+          "account_id": "mock-060",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.22978888849081092,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c5",
+          "account_id": "mock-060",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24050104613991366,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c6",
+          "account_id": "mock-060",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3378820793606619,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c7",
+          "account_id": "mock-060",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.5613996073470379,
+          "prediction": 1
+        },
+        {
+          "id": "mock-060-c8",
+          "account_id": "mock-060",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.33464576879234653,
+          "prediction": 0
+        },
+        {
+          "id": "mock-060-c9",
+          "account_id": "mock-060",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.457602383299673,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c0",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22928650307939916,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c1",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22904393716082846,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c2",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22911257865937182,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c3",
+          "account_id": "mock-061",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22929029231349995,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c4",
+          "account_id": "mock-061",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.22998933718650758,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c5",
+          "account_id": "mock-061",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24053286650363534,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c6",
+          "account_id": "mock-061",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3449216228027917,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c7",
+          "account_id": "mock-061",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.561341367092851,
+          "prediction": 1
+        },
+        {
+          "id": "mock-061-c8",
+          "account_id": "mock-061",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.3495669999693019,
+          "prediction": 0
+        },
+        {
+          "id": "mock-061-c9",
+          "account_id": "mock-061",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.4468544198434791,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c0",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22932722027964006,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c1",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2291101982137388,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c2",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22929652839045275,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c3",
+          "account_id": "mock-062",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2291045757944154,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c4",
+          "account_id": "mock-062",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.22994900839167925,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c5",
+          "account_id": "mock-062",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24046718198641154,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c6",
+          "account_id": "mock-062",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.340944131085027,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c7",
+          "account_id": "mock-062",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.5615708070547885,
+          "prediction": 1
+        },
+        {
+          "id": "mock-062-c8",
+          "account_id": "mock-062",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.35787276905324805,
+          "prediction": 0
+        },
+        {
+          "id": "mock-062-c9",
+          "account_id": "mock-062",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.45354298921374425,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c0",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22922256762242932,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c1",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2291979690841071,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c2",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2291877621516201,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c3",
+          "account_id": "mock-063",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22928503949695594,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c4",
+          "account_id": "mock-063",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.22980351048506398,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c5",
+          "account_id": "mock-063",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24048376805777155,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c6",
+          "account_id": "mock-063",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.32734789885680154,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c7",
+          "account_id": "mock-063",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.5615282107765034,
+          "prediction": 1
+        },
+        {
+          "id": "mock-063-c8",
+          "account_id": "mock-063",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.33696018508035847,
+          "prediction": 0
+        },
+        {
+          "id": "mock-063-c9",
+          "account_id": "mock-063",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.4555972061795794,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c0",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2292221793193334,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c1",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2290749407082881,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c2",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22924236495247352,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c3",
+          "account_id": "mock-064",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2292223552854507,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c4",
+          "account_id": "mock-064",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.22975675461634198,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c5",
+          "account_id": "mock-064",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.2404855581569916,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c6",
+          "account_id": "mock-064",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.32986330998775476,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c7",
+          "account_id": "mock-064",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.561566314576539,
+          "prediction": 1
+        },
+        {
+          "id": "mock-064-c8",
+          "account_id": "mock-064",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.33214255031391515,
+          "prediction": 0
+        },
+        {
+          "id": "mock-064-c9",
+          "account_id": "mock-064",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.43500443240323794,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c0",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22918165347228436,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c1",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22934764819537,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c2",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22921732812162937,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c3",
+          "account_id": "mock-065",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22917277795371455,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c4",
+          "account_id": "mock-065",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.2301096297765892,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c5",
+          "account_id": "mock-065",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24055370441516102,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c6",
+          "account_id": "mock-065",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.35548161030182884,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c7",
+          "account_id": "mock-065",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.5616639762186152,
+          "prediction": 1
+        },
+        {
+          "id": "mock-065-c8",
+          "account_id": "mock-065",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.38120589791504156,
+          "prediction": 0
+        },
+        {
+          "id": "mock-065-c9",
+          "account_id": "mock-065",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.474970071317831,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c0",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22932273330479552,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c1",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22920022567180393,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c2",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2293257242076467,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c3",
+          "account_id": "mock-066",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2293100777571964,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c4",
+          "account_id": "mock-066",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.22988163973160702,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c5",
+          "account_id": "mock-066",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24048001250158693,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c6",
+          "account_id": "mock-066",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3379792636349136,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c7",
+          "account_id": "mock-066",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.5615428532557781,
+          "prediction": 1
+        },
+        {
+          "id": "mock-066-c8",
+          "account_id": "mock-066",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.34215685385236133,
+          "prediction": 0
+        },
+        {
+          "id": "mock-066-c9",
+          "account_id": "mock-066",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.44719772614394654,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c0",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22917397618557245,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c1",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22933558302308008,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c2",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22911044480755344,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c3",
+          "account_id": "mock-067",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22911380242401358,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c4",
+          "account_id": "mock-067",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.23000611454845163,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c5",
+          "account_id": "mock-067",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24045743458144123,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c6",
+          "account_id": "mock-067",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3524263643363236,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c7",
+          "account_id": "mock-067",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.5615331469610894,
+          "prediction": 1
+        },
+        {
+          "id": "mock-067-c8",
+          "account_id": "mock-067",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.3405712785612373,
+          "prediction": 0
+        },
+        {
+          "id": "mock-067-c9",
+          "account_id": "mock-067",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.44961595767254675,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c0",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2293240372987399,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c1",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22921017747120223,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c2",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22928849624243516,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c3",
+          "account_id": "mock-068",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2292304656993281,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c4",
+          "account_id": "mock-068",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.229885884522734,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c5",
+          "account_id": "mock-068",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24055487059241515,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c6",
+          "account_id": "mock-068",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.35253524328371433,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c7",
+          "account_id": "mock-068",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.5614507290374188,
+          "prediction": 1
+        },
+        {
+          "id": "mock-068-c8",
+          "account_id": "mock-068",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.37264142268846095,
+          "prediction": 0
+        },
+        {
+          "id": "mock-068-c9",
+          "account_id": "mock-068",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.4630827927923315,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c0",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22922599376119232,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c1",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2292018734824372,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c2",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22903074429699485,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c3",
+          "account_id": "mock-069",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22926950415664235,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c4",
+          "account_id": "mock-069",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.22998003077558454,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c5",
+          "account_id": "mock-069",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24057303061318874,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c6",
+          "account_id": "mock-069",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3360044277900074,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c7",
+          "account_id": "mock-069",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.5613529274651763,
+          "prediction": 1
+        },
+        {
+          "id": "mock-069-c8",
+          "account_id": "mock-069",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.34030486589755055,
+          "prediction": 0
+        },
+        {
+          "id": "mock-069-c9",
+          "account_id": "mock-069",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.4383133131861621,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c0",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2292709229718823,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c1",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2291179807887021,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c2",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22931047163801754,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c3",
+          "account_id": "mock-070",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22910154794537776,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c4",
+          "account_id": "mock-070",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.22984882280215718,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c5",
+          "account_id": "mock-070",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24060655835104644,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c6",
+          "account_id": "mock-070",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3467561591680662,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c7",
+          "account_id": "mock-070",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.5613736843278093,
+          "prediction": 1
+        },
+        {
+          "id": "mock-070-c8",
+          "account_id": "mock-070",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.3492321615070865,
+          "prediction": 0
+        },
+        {
+          "id": "mock-070-c9",
+          "account_id": "mock-070",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.46985051703289854,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c0",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.2291610770326749,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c1",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22911040202826466,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c2",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22915090040370786,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c3",
+          "account_id": "mock-071",
+          "scenario": "ordinary",
+          "label": 0,
+          "score": 0.22918589608555512,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c4",
+          "account_id": "mock-071",
+          "scenario": "large_known_benign",
+          "label": 0,
+          "score": 0.22986124011474846,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c5",
+          "account_id": "mock-071",
+          "scenario": "new_small_benign",
+          "label": 0,
+          "score": 0.24046133551955134,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c6",
+          "account_id": "mock-071",
+          "scenario": "known_burst_benign",
+          "label": 0,
+          "score": 0.3290433117218081,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c7",
+          "account_id": "mock-071",
+          "scenario": "large_new_fraud",
+          "label": 1,
+          "score": 0.561338722547393,
+          "prediction": 1
+        },
+        {
+          "id": "mock-071-c8",
+          "account_id": "mock-071",
+          "scenario": "repeat_new_fraud",
+          "label": 1,
+          "score": 0.35205513342066697,
+          "prediction": 0
+        },
+        {
+          "id": "mock-071-c9",
+          "account_id": "mock-071",
+          "scenario": "unfamiliar_burst_fraud",
+          "label": 1,
+          "score": 0.45649235490816265,
+          "prediction": 0
+        }
+      ]
+    }
+  }
+}
