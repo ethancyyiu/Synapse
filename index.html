@@ -428,27 +428,64 @@ summary:hover { color: #4ade80; }
 @media (max-width: 760px) { .story-steps { grid-template-columns: 1fr; } }
 .story-next { margin: 18px 0 0; font-weight: 700; }
 table.uses tr.ours th, table.uses tr.ours td { color: #4ade80; font-weight: 700; }
-table.twin th:first-child { white-space: nowrap; }
-.twin-chart { margin: 10px 0 14px; max-width: 980px; }
-.twin-key { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; color: var(--graphite); font-size: .9rem; }
-.twin-swatch { display: inline-block; width: 18px; height: 10px; margin-left: 10px; }
-.twin-swatch:first-child { margin-left: 0; }
-.twin-swatch.fly, .twin-bar.fly { background: #edebe6; }
-.twin-swatch.bank, .twin-bar.bank { background: #4ade80; }
-.twin-row { display: grid; grid-template-columns: minmax(150px, 230px) 1fr; gap: 14px; align-items: center; padding: 6px 0; border-top: 1px solid var(--rule); }
-.twin-name { margin: 0; font-size: .92rem; }
-.twin-bars { display: grid; gap: 4px; }
-.twin-track { position: relative; height: 18px; }
-.twin-track::before { content: ""; position: absolute; left: 33.33%; top: -4px; bottom: -4px; border-left: 1px solid #8a929b; }
-.twin-bar { position: absolute; top: 2px; height: 14px; }
-.twin-bar.clipped { background: repeating-linear-gradient(90deg, #4ade80 0 6px, transparent 6px 10px); }
-.twin-val { position: absolute; top: 0; font-size: .82rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
-.twin-axis { border-top: 1px solid #5f5d58; }
-.twin-ticks::before { display: none; }
-.twin-ticks span { position: absolute; transform: translateX(-50%); font-size: .78rem; color: var(--graphite); white-space: nowrap; }
-.twin-ticks span:first-child { transform: none; }
-.twin-ticks span:last-child { transform: translateX(-100%); }
-@media (max-width: 760px) { .twin-row { grid-template-columns: 1fr; gap: 4px; } }
+/* Mock review queue inside the Research tab: same palette and type as the rest of the page */
+.rq-group { margin: 26px 0 8px; font-size: 1.15rem; }
+.rq .rq-title { margin: .2em 0 .35em; }
+.rq .eyebrow { display: block; text-transform: uppercase; letter-spacing: .14em; color: #4ade80; font-weight: 700; font-size: .72rem; }
+.rq-card { border: 1px solid var(--rule); border-radius: 8px; padding: 16px; background: rgba(255,255,255,.02); }
+.rq-card h3 { margin: 0 0 10px; }
+.rq .toolbar { display: flex; align-items: end; flex-wrap: wrap; gap: 12px; margin: 16px 0; }
+.rq .field { display: grid; gap: 4px; min-width: 200px; color: var(--graphite); font-size: .85rem; }
+.rq .field select { background: #1f1e1d; color: var(--ink); border: 1px solid #5f5d58; border-radius: 5px; padding: 8px; font: inherit; }
+.rq .button { background: #4ade80; color: #121212; border: 0; border-radius: 5px; padding: 9px 14px; font: inherit; font-weight: 700; cursor: pointer; }
+.rq .button:disabled { opacity: .5; cursor: default; }
+.rq .mode { border: 1px solid var(--rule); border-radius: 100px; padding: 5px 10px; color: var(--graphite); font-size: .8rem; }
+.rq .status { color: var(--graphite); font-size: .88rem; min-height: 1.4em; }
+.rq .muted, .rq .tx small { color: var(--graphite); }
+.rq .muted { font-size: .88rem; }
+.rq .dashboard { display: grid; grid-template-columns: 1.05fr .95fr; gap: 16px; }
+.rq .scorecards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; margin-bottom: 14px; }
+.rq .scorecard { border: 1px solid var(--rule); border-radius: 6px; padding: 10px; }
+.rq .scorecard strong { display: block; font-size: 1.6rem; }
+.rq .scorecard span { color: var(--graphite); font-size: .78rem; }
+.rq .scorecard.high strong { color: #f07878; }
+.rq .scorecard.review strong { color: #e0a458; }
+.rq .scorecard.low strong { color: #4ade80; }
+.rq .tx-list { display: grid; gap: 8px; max-height: 520px; overflow: auto; }
+.rq .tx { width: 100%; text-align: left; background: #1f1e1d; border: 1px solid var(--rule); color: var(--ink); border-radius: 6px; padding: 10px 12px; display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; cursor: pointer; font: inherit; }
+.rq .tx:hover, .rq .tx.selected { border-color: #4ade80; }
+.rq .tx .amount { font-weight: 700; }
+.rq .risk { font-size: .7rem; font-weight: 700; letter-spacing: .06em; padding: 3px 7px; border-radius: 4px; justify-self: end; }
+.rq .risk.HIGH { background: #4a2224; color: #ffc9c9; }
+.rq .risk.REVIEW { background: #4a3a1f; color: #ffe0a8; }
+.rq .risk.LOW { background: #1f3a2a; color: #c7ffdf; }
+.rq .detail-placeholder { color: var(--graphite); padding: 30px 0; }
+.rq .detail-head { display: flex; justify-content: space-between; align-items: start; gap: 12px; }
+.rq .detail h3 { margin: 0; }
+.rq .money { font-size: 1.8rem; font-weight: 700; margin: 10px 0 4px; }
+.rq .detail-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin: 14px 0; }
+.rq .detail-grid div { border: 1px solid var(--rule); border-radius: 6px; padding: 9px; }
+.rq .detail-grid span { display: block; color: var(--graphite); font-size: .78rem; }
+.rq .evidence { padding-left: 20px; }
+.rq .callout { border-left: 3px solid #4ade80; padding: 9px 12px; margin: 14px 0; color: var(--ink); font-size: .92rem; background: rgba(255,255,255,.03); }
+.rq .callout p { margin: 4px 0 0; }
+.rq .actions { display: flex; flex-wrap: wrap; gap: 8px; }
+.rq .actions button { padding: 8px 11px; border-radius: 5px; border: 1px solid #5f5d58; background: #1f1e1d; color: var(--ink); cursor: pointer; font: inherit; }
+.rq .actions button:hover:not(:disabled) { border-color: #4ade80; }
+.rq .actions button:disabled { opacity: .5; cursor: default; }
+.rq .research-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 16px 0; }
+.rq .metric-table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+.rq .metric-table th, .rq .metric-table td { padding: 8px 6px; border-bottom: 1px solid var(--rule); text-align: left; }
+.rq .metric-table th { color: var(--graphite); }
+.rq .metric-table td:not(:first-child) { font-variant-numeric: tabular-nums; }
+.rq .fail { color: #e0a458; font-weight: 700; }
+.rq .diagram { display: flex; gap: 8px; align-items: stretch; margin: 14px 0; }
+.rq .diagram div { flex: 1; border: 1px solid var(--rule); border-radius: 6px; padding: 10px; font-size: .88rem; }
+.rq .diagram b { display: block; color: #4ade80; }
+.rq .diagram .arrow { flex: 0; align-self: center; color: #4ade80; }
+.rq .limits { color: var(--graphite); font-size: .9rem; }
+@media (max-width: 850px) { .rq .dashboard, .rq .research-grid { grid-template-columns: 1fr; } }
+@media (max-width: 500px) { .rq .detail-grid { grid-template-columns: 1fr; } .rq .diagram { display: grid; } .rq .diagram .arrow { display: none; } }
 .archive-tools { display: flex; gap: 10px; align-items: center; margin: 0 0 12px; }
 .visually-hidden {
   position: absolute;
@@ -489,15 +526,15 @@ table.twin th:first-child { white-space: nowrap; }
 .stat-tile.accent strong { color: var(--accent); }
 .stat-tile strong small { font-size: calc(.42em + 2px); color: var(--graphite); font-weight: 400; }
 .stat-tile span { color: var(--graphite); font-size: calc(.85rem + 2px); line-height: 1.35; display: block; margin-top: 4px; }
-#tab-research .hero-stats { grid-template-columns: repeat(3,minmax(0,1fr)); text-align: center; }
-#tab-research .hero-stats .stat-tile { padding-right: 0; }
+#tab-research .hero-stats, #tab-bank .hero-stats { grid-template-columns: repeat(3,minmax(0,1fr)); text-align: center; }
+#tab-research .hero-stats .stat-tile, #tab-bank .hero-stats .stat-tile { padding-right: 0; }
 @media (max-width: 760px) {
-  #tab-research .hero-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
-  #tab-research .hero-stats .stat-tile:last-child { grid-column: 1 / -1; }
+  #tab-research .hero-stats, #tab-bank .hero-stats { grid-template-columns: repeat(2,minmax(0,1fr)); }
+  #tab-research .hero-stats .stat-tile:last-child, #tab-bank .hero-stats .stat-tile:last-child { grid-column: 1 / -1; }
 }
 @media (max-width: 520px) {
-  #tab-research .hero-stats { grid-template-columns: 1fr; }
-  #tab-research .hero-stats .stat-tile:last-child { grid-column: auto; }
+  #tab-research .hero-stats, #tab-bank .hero-stats { grid-template-columns: 1fr; }
+  #tab-research .hero-stats .stat-tile:last-child, #tab-bank .hero-stats .stat-tile:last-child { grid-column: auto; }
 }
 .faster { border: 1px solid var(--rule); background: #191918; padding: 14px 16px; margin: 14px 0; }
 .faster-head { margin: 0 0 10px; font-weight: 700; color: var(--ink); }
@@ -536,16 +573,13 @@ body:has(.tab-rail) { padding-right: 136px; }
 .tabs [role=tab]:hover { background: #2b2a28; text-decoration: none; }
 .tabs [role=tab][aria-selected=true] { background: var(--ink); color: var(--paper); border-color: var(--ink); width: 122px; }
 .tabs [role=tab]:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
-.tab-rail .fraud-link { box-sizing: border-box; display: block; width: 94px; margin-top: 4px; padding: 9px 7px; background: #214138; border: 1px solid #4b9676; border-right: 0; border-radius: 5px 0 0 5px; color: var(--ink); font-weight: 700; font-size: calc(.84rem + 2px); text-align: center; text-decoration: none; }
-.tab-rail .fraud-link:hover { background: #2c5a4b; }
 @media (max-width: 760px) {
   body:has(.tab-rail) { padding-right: 0; padding-bottom: 54px; }
   .tab-rail { top: auto; bottom: 0; left: 0; transform: none; background: var(--paper); border-top: 1px solid var(--rule); display: flex; }
   .tabs { flex-direction: row; gap: 0; flex: 3; }
   .tabs [role=tab] { flex: 1; width: auto; padding: 11px 6px; border: 0; border-radius: 0; }
   .tabs [role=tab][aria-selected=true] { width: auto; }
-  .tab-rail .fraud-link { flex: 1; width: auto; margin: 0; padding: 11px 6px; border: 0; border-radius: 0; }
-}
+  }
 .page-nav .secondary a { color: var(--graphite); }
 .section-title { font-size: 1.6rem; margin: 44px 0 4px; }
 main { scroll-margin-top: 12px; }
@@ -719,42 +753,17 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         <div class="hero-actions"><button id="hero-play" type="button" class="primary-btn">▶ Watch the 90-second story</button><a class="button-link" href="#results">See the 15-run result →</a></div>
         <p class="hook-sub"><button id="hero-play-fast" type="button">30-second highlight</button> · <a href="#how">How it works and what we tested</a></p>
         <ol class="story-steps" aria-label="The story in three steps">
-          <li><a href="#bank"><b>1 · Usage</b>Small banks find out about new fraud last</a></li>
-          <li><a href="#solution"><b>2 · Simulation</b>Advice, not data, tested in fly brains</a></li>
-          <li><a href="#stats"><b>3 · Statistics</b>68 vs 10 wins in 15 runs, then real card data</a></li>
+          <li><a href="#solution"><b>1 · Simulation</b>Advice, not data, tested in fly brains</a></li>
+          <li><a href="#stats"><b>2 · Statistics</b>68 vs 10 wins in 15 runs</a></li>
+          <li><a href="#bank"><b>3 · Application</b>Small banks and real card-fraud data</a></li>
         </ol>
-        <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a href="fraud.html">Banking: mock review</a> · <a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
+        <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a href="#review-queue">Mock review queue</a> · <a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
       </header>
-      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-bank" role="tab" href="#bank" aria-controls="tab-bank" aria-selected="true">Usage</a><a id="tab-btn-sim" role="tab" href="#solution" aria-controls="tab-sim" aria-selected="false">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Statistics</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a></div><a class="fraud-link" href="fraud.html">Mock review queue</a></nav>
+      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-sim" role="tab" href="#solution" aria-controls="tab-sim" aria-selected="true">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Statistics</a><a id="tab-btn-bank" role="tab" href="#bank" aria-controls="tab-bank" aria-selected="false">Application</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a></div></nav>
       <main>
-        <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim" hidden>
-        <h2 id="solution" class="section-title">Our solution: advice, not data</h2>
-        <p class="section-lede">We rebuilt the bank problem as a controlled experiment, inside two brains built from a real fruit-fly wiring diagram.</p>
-        <section class="panel" aria-labelledby="solution-map-title">
-          <h2 id="solution-map-title">The bank problem, as an experiment</h2>
-          <div class="scroll"><table class="uses">
-            <thead><tr><th>In the bank</th><th>In our experiment</th></tr></thead>
-            <tbody>
-              <tr><th>The bank that adapted first</th><td>Fly A, trained on the new rule</td></tr>
-              <tr><th>The credit union, built differently</th><td>Fly B, a different learner (48 numbers vs Fly A's 13), so nothing can be copied</td></tr>
-              <tr><th>A new scam</th><td>The opponent reverses its Rock-Paper-Scissors rule</td></tr>
-              <tr><th>"Block" or "allow"</th><td>Fly A's preferred move, sent as spikes on two neurons</td></tr>
-              <tr><th>Waiting for chargebacks</th><td>Fly B learning alone, only from its own wins</td></tr>
-            </tbody>
-          </table></div>
-          <h3>How it differs from other approaches</h3>
-          <div class="scroll"><table class="uses">
-            <thead><tr><th>Approach</th><th>What is sent</th><th>Same model needed?</th><th>Risk to private data</th></tr></thead>
-            <tbody>
-              <tr><th>Pooling data (fraud consortia, US 314(b) sharing)</th><td>Information about customers and cases</td><td>No</td><td>The information itself is shared</td></tr>
-              <tr><th>Federated learning (<a href="https://arxiv.org/abs/1602.05629" rel="noopener">McMahan 2017</a>; Swift 2025 trial)</th><td>Model updates</td><td>Yes</td><td>Updates can leak training data</td></tr>
-              <tr><th>Distillation (<a href="https://arxiv.org/abs/1910.03581" rel="noopener">FedMD 2019</a>; <a href="https://arxiv.org/abs/2006.07242" rel="noopener">FedDF 2020</a>)</th><td>Predictions on a shared dataset</td><td>No</td><td>Needs a dataset both sides can use</td></tr>
-              <tr class="ours"><th>Ours</th><td>One flag per case, only after a change</td><td>No</td><td>No records, weights or updates are sent</td></tr>
-            </tbody>
-          </table></div>
-          <p class="legend"><strong>What we test:</strong> compact action advice between different learners, compared with controls fixed in advance (shuffled, random and out-of-date advice). <strong>The catch:</strong> the adviser must see the case it advises on, so this fits where it already sees the payment, such as a card network or the bank on the other side of a transfer.</p>
-          <p class="story-next"><a href="#demo">Watch it work ↓</a> · <a href="#stats">See the proof →</a></p>
-        </section>
+        <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim">
+        <h2 id="solution" class="section-title">The experiment: advice, not data</h2>
+        <p class="section-lede">Can learned knowledge cross between two differently built brains through a tiny channel, without copying the brain itself? We test it inside two brains built from a real fruit-fly wiring diagram.</p>
         <h2 id="demo" class="section-title">Live demo</h2>
         <p class="section-lede">Watch one recorded run, then see how it holds up across 15.</p>
         <section id="mission" aria-live="polite">
@@ -919,7 +928,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         </div>
         <div id="tab-stats" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-stats" hidden>
         <h2 id="stats" class="section-title">The proof</h2>
-        <p class="section-lede">Does the advice really help? The locked 15-run fly study, then your own live runs. The real card-data result is in the <a href="#bank-evidence">Usage tab</a>.</p>
+        <p class="section-lede">Does the advice really help? The locked 15-run fly study, then your own live runs. The real card-data result is in the <a href="#bank-evidence">Application tab</a>.</p>
         <section id="results" class="panel" aria-labelledby="results-title">
           <h2 id="results-title">The result: teaching helps most when the rules change</h2>
           <p class="section-lede">15 runs. Fly B learned Rock → Paper → Scissors, then the opponent reversed it. Average wins out of 72, tested with Fly A unplugged.</p>
@@ -969,42 +978,6 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
             </details>
           <p class="legend">Locked before running: <a href="docs/rule-switch-cohort-protocol.md">protocol</a> · <a href="data/rule_switch_cohort_summary.json">results</a> · <a href="docs/lab-notebook.md">lab notebook</a>.</p>
         </section>
-        <section id="two-experiments" class="panel" aria-labelledby="two-experiments-title">
-          <h2 id="two-experiments-title">One experiment, two worlds</h2>
-          <p class="legend">The fly test and the fraud test are the same experiment. Every part of one has a match in the other, playing the same role.</p>
-          <h3>On one scale</h3>
-          <p class="legend">Different measures, one question: how much of the possible improvement did each group recover? 0% = the student learning alone; 100% = the best it could reach (fly: a perfect 72 of 72; fraud: the same model given every true label).</p>
-          <div class="twin-chart" role="img" aria-label="Share of the possible improvement recovered. Taught: fly 93%, fraud 91%. Shuffled advice: fly 36%, fraud far below alone. Random advice: fly 36%, fraud far below alone. Bad teacher: fly 20%, fraud minus 40%.">
-            <p class="twin-key"><span class="twin-swatch fly"></span>Fly-brain experiment <span class="twin-swatch bank"></span>Fraud experiment</p>
-            <div class="twin-row"><p class="twin-name">Taught by the current teacher</p><div class="twin-bars"><div class="twin-track"><span class="twin-bar fly" style="left:33.33%;width:62.00%"></span><b class="twin-val" style="left:calc(95.33% + 8px)">93%</b></div><div class="twin-track"><span class="twin-bar bank" style="left:33.33%;width:60.67%"></span><b class="twin-val" style="left:calc(94.00% + 8px)">91%</b></div></div></div>
-            <div class="twin-row"><p class="twin-name">Shuffled advice</p><div class="twin-bars"><div class="twin-track"><span class="twin-bar fly" style="left:33.33%;width:24.00%"></span><b class="twin-val" style="left:calc(57.33% + 8px)">36%</b></div><div class="twin-track"><span class="twin-bar bank clipped" style="left:0.00%;width:33.33%"></span><b class="twin-val" style="left:calc(33.33% + 8px)">−1,269%: far below alone</b></div></div></div>
-            <div class="twin-row"><p class="twin-name">Random advice</p><div class="twin-bars"><div class="twin-track"><span class="twin-bar fly" style="left:33.33%;width:24.00%"></span><b class="twin-val" style="left:calc(57.33% + 8px)">36%</b></div><div class="twin-track"><span class="twin-bar bank clipped" style="left:0.00%;width:33.33%"></span><b class="twin-val" style="left:calc(33.33% + 8px)">−1,132%: far below alone</b></div></div></div>
-            <div class="twin-row"><p class="twin-name">Bad teacher (fly: untrained; fraud: out-of-date)</p><div class="twin-bars"><div class="twin-track"><span class="twin-bar fly" style="left:33.33%;width:13.33%"></span><b class="twin-val" style="left:calc(46.67% + 8px)">20%</b></div><div class="twin-track"><span class="twin-bar bank" style="left:6.67%;width:26.67%"></span><b class="twin-val" style="left:calc(33.33% + 8px)">−40%</b></div></div></div>
-            <div class="twin-row twin-axis"><p class="twin-name"></p><div class="twin-bars"><div class="twin-track twin-ticks"><span style="left:0%">−50%</span><span style="left:33.33%">0% alone</span><span style="left:66.67%">50%</span><span style="left:100%">100% best</span></div></div></div>
-          </div>
-          <p class="finding"><strong>Right advice recovers about 90% of the possible improvement in both experiments</strong> (fly 93%, fraud 91%). Wrong advice differs: in the fly any message helps a little, but on real data wrong advice is far worse than none, so the adviser must be current and checked.</p>
-          <p class="legend">The fraud gap is small (0.036 average precision), so its percentages are noisier: on 2 of 12 runs, even every true label did not beat learning alone. This common scale was worked out afterwards from the saved summaries, not locked in advance (<a href="data/rule_switch_cohort_summary.json">fly</a> · <a href="data/real_data_advice/fraud_v2_summary.json">fraud</a>).</p>
-          <h3>Side by side</h3>
-          <div class="scroll"><table class="uses twin">
-            <thead><tr><th>Role</th><th>Fly-brain experiment</th><th>Fraud experiment</th></tr></thead>
-            <tbody>
-              <tr><th>Teacher: adapted first</th><td>Fly A, trained on the new rule</td><td>The bank's model, trained on its own new-period data</td></tr>
-              <tr><th>Student: built differently</th><td>Fly B (a 48-number learner; Fly A has 13)</td><td>The credit union's model (logistic regression; the bank uses boosted trees)</td></tr>
-              <tr><th>The change</th><td>The opponent reverses its Rock-Paper-Scissors rule</td><td>Fraud patterns shift from day 1 to day 2</td></tr>
-              <tr><th>The message: advice only</th><td>Fly A's preferred move, as spikes on two neurons</td><td>One flag per purchase: "block" or "allow"</td></tr>
-              <tr><th>Message size</th><td>Under 12 bytes before the test point</td><td>3,062 bytes for 24,500 purchases</td></tr>
-              <tr><th>Student's own learning</th><td>Its own wins and losses</td><td>Only 500 labelled purchases (labels are scarce and late)</td></tr>
-              <tr><th>Teacher check before teaching</th><td>Fly A must reach 58 of 72</td><td>The bank's model must beat the student on its own held-out cases</td></tr>
-              <tr><th>Controls</th><td>Alone, shuffled, random, untrained teacher</td><td>Alone, shuffled, random, out-of-date teacher</td></tr>
-              <tr><th>The test: teacher gone</th><td>Fly B plays 72 games with Fly A unplugged</td><td>The credit union scores held-out purchases on its own</td></tr>
-              <tr><th>Measure</th><td>Wins out of 72, 48 rounds after the change</td><td>Average precision (0 to 1) on held-out purchases</td></tr>
-              <tr><th>Rules fixed in advance</th><td>15 runs; lead over the best control must clear +4 wins</td><td>15 runs; lead over the best control must clear +0.02</td></tr>
-              <tr><th>Common scale: improvement recovered</th><td>93% of the way from alone to a perfect score</td><td>91% of the way from alone to every true label</td></tr>
-              <tr class="ours"><th>Result</th><td>Taught 68, alone 10: lead <strong>+24.9</strong>. Passed</td><td>Taught 0.789, alone 0.756, ceiling 0.792: lead <strong>+0.033</strong>. Narrowly failed</td></tr>
-            </tbody>
-          </table></div>
-          <p class="legend">The fly test shows the idea works even between brains that cannot copy each other; the fraud test shows the same setup on real data. Fraud details: <a href="#bank-evidence">Usage tab</a> · <a href="docs/real-data-advice-v2-protocol.md">protocol</a>.</p>
-        </section>
         <details id="live-runs" class="panel"><summary>Your own live runs <small>(empty until you train a fly live on the Simulation tab)</small></summary>
           <section id="rounds-summary" aria-labelledby="rounds-title">
             <h3 id="rounds-title">Training rounds vs. wins</h3>
@@ -1033,6 +1006,28 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         <div id="tab-research" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-research" hidden>
         <h2 id="research" class="section-title">Research</h2>
         <p class="section-lede">How it works, why it matters, and what it does not show. Archived experiments are at the bottom.</p>
+        <h3 class="rq-group">Mock review queue and fraud studies</h3>
+        <p class="legend">An interactive prototype by our team: a local model ranks mock bank purchases for a person to review, plus the controlled fraud studies behind it. Live data needs the fraud server: run <code>python -m fraud.server</code>, then open <a href="http://localhost:8767/#review-queue">localhost:8767</a>. Saved results load either way.</p>
+        <section id="review-queue" class="panel rq">
+          <span class="eyebrow">Live local workflow</span><h2 class="rq-title">Review an account's transactions.</h2><p class="section-lede">Choose a mock account and run the local student. The purchases and features below are loaded now. The model does not call a teacher while scoring. Scores rank work for review; they are not calibrated fraud probabilities.</p><div class="toolbar"><label class="field" for="source-select">Data source<select id="source-select"><option value="fixture">Offline generated fixtures</option><option value="nessie">Nessie live mock API</option></select></label><label class="field" for="account-select">Mock account<select id="account-select"><option value="">Loading accounts…</option></select></label><label class="field" for="model-select">Local student<select id="model-select"><option value="independent">Independent (best held-out F1)</option><option value="guided">Teacher-guided</option><option value="shuffled">Shuffled-teacher control</option></select></label><button id="scan-btn" class="button" type="button">Analyze Transactions</button><span class="mode" id="source-mode">Checking data source…</span></div><p class="status" id="workspace-status" role="status"></p><div class="dashboard"><div class="rq-card"><h3>Ranked review queue</h3><div class="scorecards"><div class="scorecard high"><strong id="high-count">—</strong><span>High priority</span></div><div class="scorecard review"><strong id="review-count">—</strong><span>Review</span></div><div class="scorecard low"><strong id="low-count">—</strong><span>Low</span></div></div><div class="tx-list" id="tx-list"><p class="muted">Load an account to see its purchase queue.</p></div></div><div class="rq-card detail" id="detail"><h3>Transaction evidence</h3><div class="detail-placeholder">Select a transaction from the queue to inspect its history context and make a simulated review decision.</div></div></div>
+        </section>
+        <section id="fraud-results" class="panel rq">
+          <span class="eyebrow">Recorded controlled experiment · teacher disconnected</span><h2 class="rq-title">Did compact advice actually help?</h2><p class="section-lede">We trained three identical local classifiers on account-disjoint synthetic scenarios. Only supervision changed: limited true labels alone, extra compact risk messages from a deterministic teacher, or the same messages shuffled. The teacher was absent for all 120 held-out decisions.</p><div class="research-grid"><div class="rq-card"><h3>Held-out results</h3><table class="metric-table"><thead><tr><th>Student</th><th>Fraud caught</th><th>False alerts</th><th>F1</th></tr></thead><tbody id="metric-body"><tr><td colspan="4">Loading saved results…</td></tr></tbody></table><p class="callout"><b class="fail" id="gate-result">Predefined gate: failed.</b><br>Guidance increased fraud recall but also false positives. It did not improve F1 over the independent student. This is a negative result for the locked claim, not a production-quality fraud model.</p><p class="muted">The result uses synthetic labels. Nessie purchases have no known fraud labels and were not used as held-out ground truth.</p></div><div class="rq-card"><h3>What was transferred?</h3><div class="diagram"><div><b>Rule teacher fixture</b>Reads history features; emits LOW, REVIEW or HIGH</div><span class="arrow" aria-hidden="true">→</span><div><b>408 compact messages</b>Extra training supervision, no weights or account identity</div><span class="arrow" aria-hidden="true">→</span><div><b>Local student</b>Updates seven numeric parameters; runs alone afterward</div></div><p class="muted">The teacher here is a deterministic rule fixture, not a frontier LLM. The original <a href="#solution">Synapse neural experiment</a> independently validated three-symbol delivery via measured simulated spikes. Those earlier rule-fixture messages did not use the neural channel; the separate Neural Teaching study below does.</p><p class="muted">Read the <a href="docs/synapse-fraud-protocol.md">locked protocol</a>, <a href="docs/synapse-fraud-research.md">research report</a>, and <a href="data/fraud/experiment.json">raw predictions</a>.</p></div></div><div class="callout"><strong>Separate real Gemini check: improvement gate failed</strong><p>After the rule-fixture study, we locked a new 12-message Gemini Flash-Lite training run on synthetic training cases only. On the untouched 120-case test, the Gemini-guided local student matched the independent baseline: 25/36 suspicious cases caught, zero false alerts, precision 1.000, F1 0.820. The result does not show a benefit from Gemini supervision. <a href="docs/synapse-fraud-gemini-protocol.md">Locked protocol</a> · <a href="data/fraud/gemini-experiment.json">Separate result</a>.</p></div><p class="section-lede">Synapse began as a study of knowledge transfer between two simulated neural systems. Controlled RPS tasks showed compact teacher information could accelerate a student's independent learning. Synapse Fraud explores the same teacher–student principle in financial risk detection using an engineered classifier; the fraud model does not use fly neurons.</p><p class="limits">Prototype boundaries: the account data is mock, labels are generated from declared scenarios, model scores are uncalibrated, and review decisions only change this browser session. A frontier teacher can be configured for a separate on-demand comparison or optional local-student training; neither was called in the recorded experiment.</p>
+        </section>
+        <section id="fraud-new-study" class="panel rq">
+          <span class="eyebrow">Separate real Gemini experiment · synthetic labels</span><h2 class="rq-title">Does the teacher beat matched controls?</h2><p class="section-lede">We locked new account and scenario-family splits, trained three seven-feature local students, and tested on 48 separate synthetic cases. The limited-label baseline, an arm with 12 additional independent labels, and an arm with 12 structured Gemini messages used the same features. No Gemini call was made for inference.</p><div class="rq-card"><h3>New-family held-out results</h3><table class="metric-table"><thead><tr><th>Student</th><th>Injected cases caught</th><th>False alerts</th><th>F1</th><th>False-positive rate</th></tr></thead><tbody id="new-metric-body"><tr><td colspan="5">Loading saved comparison…</td></tr></tbody></table><p class="callout"><b class="fail" id="new-gate-result">Loading predefined gate…</b><br>On the new held-out families, all three students flagged every case, including every benign case. Recall alone therefore gives a misleading impression. Gemini showed no advantage over either control. This is a failed generalization result on synthetic data, not a measured banking fraud detector.</p><p class="muted">Read the <a href="docs/synapse-fraud-new-scenarios-protocol.md">locked method</a>, <a href="data/fraud/new-scenarios-development.json">development artifact</a>, and <a href="data/fraud/new-scenarios-heldout.json">complete held-out predictions</a>. The earlier <a href="data/fraud/tenure-heldout.json">merchant-tenure study</a> also failed its teacher-advantage gate.</p></div>
+        </section>
+        <section id="fraud-neural" class="panel rq">
+          <span class="eyebrow">Separate synthetic response experiment · simulated connectome</span>
+      <h2 class="rq-title">Neural Teaching: can Fly B adapt after a rule change?</h2>
+      <p class="section-lede">Choose a mock purchase above. Its observable history becomes one of three neural cues. A recorded run shows Fly A learning a changed response rule and sending advice through measured DN spikes. Then disconnect Fly A and run a frozen Fly B on the selected purchase cue. The NumPy classifier alone produces the review score above; the fly learner produces only the action below.</p>
+      <div class="research-grid">
+        <div class="rq-card"><h3>Purchase → neural cue</h3><p id="neural-purchase" class="muted">Select an account and transaction above.</p><p id="neural-cue" class="callout">Waiting for a purchase cue.</p><p class="muted">Cue 0: other activity. Cue 1: at least two earlier purchases in 24 hours. Cue 2: amount at least 3× the historical median plus a new merchant or recent cluster. These are observable patterns, not verified fraud.</p><h3>Controlled policy change</h3><table class="metric-table"><thead><tr><th>Cue</th><th>Before</th><th>After synthetic alert</th></tr></thead><tbody><tr><td>0 · other</td><td>APPROVE</td><td>REVIEW</td></tr><tr><td>1 · cluster</td><td>APPROVE</td><td>REVIEW</td></tr><tr><td>2 · deviation</td><td>REVIEW</td><td>BLOCK</td></tr></tbody></table><p class="muted">Correct actions and rewards are synthetic policy choices. No bank record is modified.</p></div>
+        <div class="rq-card"><h3>Recorded Fly A → Fly B transmission</h3><p id="neural-teacher">Loading saved connectome run…</p><p id="neural-trace" class="callout">Use Next neural message to inspect a measured spike transmission.</p><div class="actions"><button id="neural-next" type="button" disabled>Next neural message</button><button id="neural-probe" type="button" disabled>Disconnect Fly A &amp; test Fly B</button></div><p id="neural-probe-result" class="status" role="status"></p><p class="muted">The trace replays a saved simulation. The purchase probe runs the 6,900-neuron Fly B in this browser with learning disabled and no teacher or Gemini call.</p></div>
+      </div>
+      <div class="rq-card"><h3>Frozen comparison after 48 changed-rule rounds</h3><p class="muted">Correct actions out of 72 balanced synthetic trials. The teacher was disconnected for every check. Random and shuffled advice used the same measured DN spike channel and training budget.</p><table class="metric-table"><thead><tr><th>Seed</th><th>Alone</th><th>Trained advice</th><th>Random</th><th>Shuffled</th><th>Lead over strongest control</th></tr></thead><tbody id="neural-results"><tr><td colspan="6">Loading saved comparison…</td></tr></tbody></table><p id="neural-summary" class="callout">Loading predeclared success gate…</p><p id="neural-recovery" class="muted"></p><p class="muted">Recovery means ≥58/72 at a frozen check after 0, 24, 48, or 96 rounds. Read the <a href="docs/synapse-fraud-neural-protocol.md">fixed protocol</a> and <a href="data/fraud_neural/summary.json">complete summary</a>. This small synthetic study does not establish real-world fraud accuracy or biological fly-to-fly teaching.</p></div>
+        </section>
+        <h3 class="rq-group">The fly experiment</h3>
         <section id="how" class="panel" aria-labelledby="how-title">
           <h2 id="how-title">How it works</h2>
           <ol class="how-steps">
@@ -1046,7 +1041,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
             <div class="stat-tile"><strong>990,102</strong><span>connectome synapses, identical in both flies, never changed</span></div>
           </div>
           <h3 id="uses">Why it matters</h3>
-          <p>Who this affects, how big the problem is and how our approach differs are in the <a href="#bank">Usage</a> and <a href="#solution">Simulation</a> tabs.</p>
+          <p>Who this affects, how big the problem is and how our approach differs are in the <a href="#bank">Application</a> and <a href="#solution">Simulation</a> tabs.</p>
           <h4>What published research already shows</h4>
           <ul>
             <li><strong>Fraud labels arrive late, and late labels hurt.</strong> Most card transactions are confirmed as fraud only days later, while fraud tactics keep changing (<a href="https://boracchi.faculty.polimi.it/docs/2015_04_Credit_Card_Fraud_Detection_DalPozzolo_Boracchi_Caelen_Alippi_Bontempi.pdf" rel="noopener">Dal Pozzolo et al. 2015</a>; <a href="https://doi.org/10.1109/TNNLS.2017.2736643" rel="noopener">2018</a>). Models stuck waiting for delayed labels fall clearly behind (<a href="https://arxiv.org/abs/2312.00923" rel="noopener">Csaba et al. 2024</a>).</li>
@@ -1133,9 +1128,34 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
             </details>
         </section>
         </div>
-        <div id="tab-bank" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-bank">
+        <div id="tab-bank" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-bank" hidden>
         <h2 id="bank" class="section-title">The problem</h2>
         <p class="section-lede">When fraud tactics change, the bank that sees it first adapts. Smaller banks find out last, and keep approving the scam until they do.</p>
+        <section class="panel" aria-labelledby="solution-map-title">
+          <h2 id="solution-map-title">The bank problem, as an experiment</h2>
+          <div class="scroll"><table class="uses">
+            <thead><tr><th>In the bank</th><th>In our experiment</th></tr></thead>
+            <tbody>
+              <tr><th>The bank that adapted first</th><td>Fly A, trained on the new rule</td></tr>
+              <tr><th>The credit union, built differently</th><td>Fly B, a different learner (48 numbers vs Fly A's 13), so nothing can be copied</td></tr>
+              <tr><th>A new scam</th><td>The opponent reverses its Rock-Paper-Scissors rule</td></tr>
+              <tr><th>"Block" or "allow"</th><td>Fly A's preferred move, sent as spikes on two neurons</td></tr>
+              <tr><th>Waiting for chargebacks</th><td>Fly B learning alone, only from its own wins</td></tr>
+            </tbody>
+          </table></div>
+          <h3>How it differs from other approaches</h3>
+          <div class="scroll"><table class="uses">
+            <thead><tr><th>Approach</th><th>What is sent</th><th>Same model needed?</th><th>Risk to private data</th></tr></thead>
+            <tbody>
+              <tr><th>Pooling data (fraud consortia, US 314(b) sharing)</th><td>Information about customers and cases</td><td>No</td><td>The information itself is shared</td></tr>
+              <tr><th>Federated learning (<a href="https://arxiv.org/abs/1602.05629" rel="noopener">McMahan 2017</a>; Swift 2025 trial)</th><td>Model updates</td><td>Yes</td><td>Updates can leak training data</td></tr>
+              <tr><th>Distillation (<a href="https://arxiv.org/abs/1910.03581" rel="noopener">FedMD 2019</a>; <a href="https://arxiv.org/abs/2006.07242" rel="noopener">FedDF 2020</a>)</th><td>Predictions on a shared dataset</td><td>No</td><td>Needs a dataset both sides can use</td></tr>
+              <tr class="ours"><th>Ours</th><td>One flag per case, only after a change</td><td>No</td><td>No records, weights or updates are sent</td></tr>
+            </tbody>
+          </table></div>
+          <p class="legend"><strong>What we test:</strong> compact action advice between different learners, compared with controls fixed in advance (shuffled, random and out-of-date advice). <strong>The catch:</strong> the adviser must see the case it advises on, so this fits where it already sees the payment, such as a card network or the bank on the other side of a transfer.</p>
+          <p class="story-next"><a href="#demo">See it in the fly experiment →</a> · <a href="#stats">See the statistics →</a></p>
+        </section>
         <section id="problem-who" class="panel" aria-labelledby="problem-who-title">
           <h2 id="problem-who-title">Who is affected</h2>
           <div class="scenario-cards">
@@ -1216,7 +1236,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
       const route = () => {
         const target = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
         const panel = target?.closest?.('.tab-panel');
-        if (!panel) return showTab('bank', null, false);
+        if (!panel) return showTab('sim', null, false);
         const name = Object.keys(tabs).find(key => tabs[key] === panel.id);
         const top = ['solution', 'stats', 'research', 'bank'].includes(target.id);
         for (let details = target.closest('details'); details; details = details.parentElement.closest('details')) details.open = true;
@@ -1242,5 +1262,6 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
     <script type="module" src="js/result_chart.js"></script>
     <script type="module" src="js/hero_flies.js"></script>
     <script type="module" src="js/bank_view.js"></script>
+    <script type="module" src="fraud/app.js"></script>
   </body>
 </html>
