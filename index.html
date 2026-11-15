@@ -421,11 +421,6 @@ summary { cursor: pointer; font-weight: 700; }
 summary:focus-visible { outline: 3px solid var(--lane2); }
 summary { padding: 10px 0; border-radius: 4px; }
 summary:hover { color: #4ade80; }
-.story-steps { list-style: none; padding: 0; margin: 18px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; max-width: 980px; }
-.story-steps a { display: block; height: 100%; box-sizing: border-box; padding: 12px 14px; border: 1px solid #5f5d58; border-top: 3px solid #4ade80; color: var(--ink); text-decoration: none; }
-.story-steps a:hover { background: #2b2a28; }
-.story-steps b { display: block; color: #4ade80; margin-bottom: 2px; }
-@media (max-width: 760px) { .story-steps { grid-template-columns: 1fr; } }
 .story-next { margin: 18px 0 0; font-weight: 700; }
 table.uses tr.ours th, table.uses tr.ours td { color: #4ade80; font-weight: 700; }
 /* Mock review queue inside the Research tab: same palette and type as the rest of the page */
@@ -509,7 +504,7 @@ table.uses tr.ours th, table.uses tr.ours td { color: #4ade80; font-weight: 700;
   }
   .game-metrics { grid-template-columns: repeat(2,1fr); }
 }
-.hero { position: relative; padding: 48px 0 10px; }
+.hero { position: relative; padding: 48px 0 10px; border-bottom: 1px solid var(--rule); }
 .hero > :not(.hero-flies) { position: relative; z-index: 1; }
 .hero h1 { margin-bottom: 18px; }
 .hero { cursor: url('img/racket-cursor.svg') 19 19, crosshair; }
@@ -560,7 +555,7 @@ table.uses tr.ours th, table.uses tr.ours td { color: #4ade80; font-weight: 700;
 .button-link { display: inline-block; padding: 9px 14px; border: 1px solid #5f5d58; border-radius: 3px; color: var(--ink); text-decoration: none; }
 .button-link.primary { background: var(--ink); color: var(--paper); font-weight: 700; }
 .button-link:hover { background: #2b2a28; }
-.page-nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: calc(.88rem + 2px); border-top: 1px solid var(--rule); padding-top: 10px; margin: 0; }
+.page-nav { display: flex; flex-wrap: wrap; gap: 4px 18px; font-size: calc(.88rem + 2px); border-top: 1px solid var(--rule); padding-top: 10px; margin: 18px 0 0; }
 .page-nav a { color: var(--ink); text-decoration: none; }
 .page-nav a:hover { text-decoration: underline; }
 .page-nav .secondary { color: var(--graphite); margin-left: auto; align-self: center; }
@@ -729,12 +724,17 @@ table.bank-summary td { font-variant-numeric: tabular-nums; }
 table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
 .bank-ledger-all { margin-top: 10px; }
 .bank-quick-cards { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; margin: 16px 0; }
-.bank-quick-card { border: 1px solid var(--rule); border-radius: 10px; padding: 16px; }
+.bank-quick-card { border: 1px solid var(--rule); border-radius: 3px; padding: 16px; }
 .bank-quick-card.taught { border-color: var(--gfp); }
 .bank-quick-card strong { display: block; font-size: clamp(1.6rem, 4vw, 2.4rem); line-height: 1.2; }
 .bank-quick-card span { display: block; color: var(--graphite); }
+.bank-flow { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; list-style: none; padding: 0; margin: 18px 0; }
+.bank-flow li { border-top: 2px solid var(--gfp); padding: 10px 8px 0 0; }
+.bank-flow strong { display: block; margin-bottom: 5px; }
+.bank-flow span { color: var(--graphite); }
 @media (max-width: 640px) { .bank-arms li { grid-template-columns: 9em 1fr 3.5em; } }
 @media (max-width: 640px) { .bank-quick-cards { grid-template-columns: 1fr; } }
+@media (max-width: 640px) { .bank-flow { grid-template-columns: 1fr; } }
 </style>
   </head>
   <body>
@@ -743,7 +743,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         <canvas class="hero-flies" aria-hidden="true"></canvas>
         <p class="kicker">From a banking problem to a fly-brain experiment</p>
         <h1>Synapse</h1>
-        <p class="hook">When fraud tactics change, small banks find out last. Can the bank that already adapted help them catch up, without sharing customer data or its model?</p>
+        <p class="hook">When the rules change, AI has to relearn through trial and error. Can one adapted system help another learn faster with a small piece of advice?</p>
         <div class="hero-stats">
           <div class="stat-tile"><strong>68<small> / 72</small></strong><span>taught fly wins — 48 rounds after the rule change</span></div>
           <div class="stat-tile dim"><strong>10<small> / 72</small></strong><span>alone fly wins — same point, same conditions</span></div>
@@ -751,20 +751,14 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
           <div class="stat-tile accent"><strong>+19<small> wins</small></strong><span>second task (fault-response, random order) · 15 runs · same result</span></div>
         </div>
         <div class="hero-actions"><button id="hero-play" type="button" class="primary-btn">▶ Watch the 90-second story</button><a class="button-link" href="#results">See the 15-run result →</a></div>
-        <p class="hook-sub"><button id="hero-play-fast" type="button">30-second highlight</button> · <a href="#how">How it works and what we tested</a></p>
-        <ol class="story-steps" aria-label="The story in three steps">
-          <li><a href="#solution"><b>1 · Simulation</b>Advice, not data, tested in fly brains</a></li>
-          <li><a href="#stats"><b>2 · Statistics</b>68 vs 10 wins in 15 runs</a></li>
-          <li><a href="#bank"><b>3 · Application</b>Small banks and real card-fraud data</a></li>
-        </ol>
-        <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a href="#review-queue">Mock review queue</a> · <a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
+        <p class="hook-sub"><button id="hero-play-fast" type="button">Fast replay (4×)</button> · <a href="#how">How it works and what we tested</a></p>
       </header>
       <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-sim" role="tab" href="#solution" aria-controls="tab-sim" aria-selected="true">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Statistics</a><a id="tab-btn-bank" role="tab" href="#bank" aria-controls="tab-bank" aria-selected="false">Application</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a></div></nav>
       <main>
         <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim">
         <h2 id="solution" class="section-title">The experiment: advice, not data</h2>
         <p class="section-lede">Can learned knowledge cross between two differently built brains through a tiny channel, without copying the brain itself? We test it inside two brains built from a real fruit-fly wiring diagram.</p>
-        <h2 id="demo" class="section-title">Live demo</h2>
+        <h2 id="demo" class="section-title">Recorded demonstration</h2>
         <p class="section-lede">Watch one recorded run, then see how it holds up across 15.</p>
         <section id="mission" aria-live="polite">
           <ol class="steps">
@@ -922,17 +916,18 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
             <p id="compare-difference" class="finding" hidden></p>
             <button id="compare-continue" type="button" hidden disabled>Continue training to 288 rounds</button>
             <p class="legend">This is one run with one control. <a href="#results">The 15-run study</a> tests four controls.</p>
-            <p class="legend"><a href="#live-runs">See how training rounds relate to wins in the Statistics tab →</a></p>
+            <p id="live-runs-link" class="legend" hidden><a href="#live-runs">See how training rounds relate to wins in the Statistics tab →</a></p>
           </section>
         </section>
         </div>
         <div id="tab-stats" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-stats" hidden>
-        <h2 id="stats" class="section-title">The proof</h2>
-        <p class="section-lede">Does the advice really help? The locked 15-run fly study, then your own live runs. The real card-data result is in the <a href="#bank-evidence">Application tab</a>.</p>
+        <h2 id="stats" class="section-title">Science results</h2>
+        <p class="section-lede">Does the advice really help? See the locked 15-run fly study. Runs you train on the Simulation tab appear here afterward. The real card-data result is in the <a href="#bank-evidence">Application tab</a>.</p>
         <section id="results" class="panel" aria-labelledby="results-title">
           <h2 id="results-title">The result: teaching helps most when the rules change</h2>
           <p class="section-lede">15 runs. Fly B learned Rock → Paper → Scissors, then the opponent reversed it. Average wins out of 72, tested with Fly A unplugged.</p>
           <p class="finding"><strong>At 48 rounds:</strong> taught Fly B won 68/72, a lead of <strong>+24.9</strong> over the strongest control in each run. The gain is speed after the switch.</p>
+          <p class="legend">Shuffled advice averaged 33/72; the +24.9 lead compares against the best control separately in each run. In another controlled test, sending the same advice digitally worked as well as spikes.</p>
           <figure class="result-chart">
             <svg viewBox="0 0 740 330" role="img" aria-labelledby="result-chart-title result-chart-desc">
 <title id="result-chart-title">Average frozen wins after the rule change, 15 runs</title>
@@ -978,7 +973,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
             </details>
           <p class="legend">Locked before running: <a href="docs/rule-switch-cohort-protocol.md">protocol</a> · <a href="data/rule_switch_cohort_summary.json">results</a> · <a href="docs/lab-notebook.md">lab notebook</a>.</p>
         </section>
-        <details id="live-runs" class="panel"><summary>Your own live runs <small>(empty until you train a fly live on the Simulation tab)</small></summary>
+        <details id="live-runs" class="panel" hidden><summary>Your own live runs</summary>
           <section id="rounds-summary" aria-labelledby="rounds-title">
             <h3 id="rounds-title">Training rounds vs. wins</h3>
             <p class="legend">How the number of training rounds relates to how many games each fly wins.</p>
@@ -1006,27 +1001,6 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         <div id="tab-research" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-research" hidden>
         <h2 id="research" class="section-title">Research</h2>
         <p class="section-lede">How it works, why it matters, and what it does not show. Archived experiments are at the bottom.</p>
-        <h3 class="rq-group">Mock review queue and fraud studies</h3>
-        <p class="legend">An interactive prototype by our team: a local model ranks mock bank purchases for a person to review, plus the controlled fraud studies behind it. Live data needs the fraud server: run <code>python -m fraud.server</code>, then open <a href="http://localhost:8767/#review-queue">localhost:8767</a>. Saved results load either way.</p>
-        <section id="review-queue" class="panel rq">
-          <span class="eyebrow">Live local workflow</span><h2 class="rq-title">Review an account's transactions.</h2><p class="section-lede">Choose a mock account and run the local student. The purchases and features below are loaded now. The model does not call a teacher while scoring. Scores rank work for review; they are not calibrated fraud probabilities.</p><div class="toolbar"><label class="field" for="source-select">Data source<select id="source-select"><option value="fixture">Offline generated fixtures</option><option value="nessie">Nessie live mock API</option></select></label><label class="field" for="account-select">Mock account<select id="account-select"><option value="">Loading accounts…</option></select></label><label class="field" for="model-select">Local student<select id="model-select"><option value="independent">Independent (best held-out F1)</option><option value="guided">Teacher-guided</option><option value="shuffled">Shuffled-teacher control</option></select></label><button id="scan-btn" class="button" type="button">Analyze Transactions</button><span class="mode" id="source-mode">Checking data source…</span></div><p class="status" id="workspace-status" role="status"></p><div class="dashboard"><div class="rq-card"><h3>Ranked review queue</h3><div class="scorecards"><div class="scorecard high"><strong id="high-count">—</strong><span>High priority</span></div><div class="scorecard review"><strong id="review-count">—</strong><span>Review</span></div><div class="scorecard low"><strong id="low-count">—</strong><span>Low</span></div></div><div class="tx-list" id="tx-list"><p class="muted">Load an account to see its purchase queue.</p></div></div><div class="rq-card detail" id="detail"><h3>Transaction evidence</h3><div class="detail-placeholder">Select a transaction from the queue to inspect its history context and make a simulated review decision.</div></div></div>
-        </section>
-        <section id="fraud-results" class="panel rq">
-          <span class="eyebrow">Recorded controlled experiment · teacher disconnected</span><h2 class="rq-title">Did compact advice actually help?</h2><p class="section-lede">We trained three identical local classifiers on account-disjoint synthetic scenarios. Only supervision changed: limited true labels alone, extra compact risk messages from a deterministic teacher, or the same messages shuffled. The teacher was absent for all 120 held-out decisions.</p><div class="research-grid"><div class="rq-card"><h3>Held-out results</h3><table class="metric-table"><thead><tr><th>Student</th><th>Fraud caught</th><th>False alerts</th><th>F1</th></tr></thead><tbody id="metric-body"><tr><td colspan="4">Loading saved results…</td></tr></tbody></table><p class="callout"><b class="fail" id="gate-result">Predefined gate: failed.</b><br>Guidance increased fraud recall but also false positives. It did not improve F1 over the independent student. This is a negative result for the locked claim, not a production-quality fraud model.</p><p class="muted">The result uses synthetic labels. Nessie purchases have no known fraud labels and were not used as held-out ground truth.</p></div><div class="rq-card"><h3>What was transferred?</h3><div class="diagram"><div><b>Rule teacher fixture</b>Reads history features; emits LOW, REVIEW or HIGH</div><span class="arrow" aria-hidden="true">→</span><div><b>408 compact messages</b>Extra training supervision, no weights or account identity</div><span class="arrow" aria-hidden="true">→</span><div><b>Local student</b>Updates seven numeric parameters; runs alone afterward</div></div><p class="muted">The teacher here is a deterministic rule fixture, not a frontier LLM. The original <a href="#solution">Synapse neural experiment</a> independently validated three-symbol delivery via measured simulated spikes. Those earlier rule-fixture messages did not use the neural channel; the separate Neural Teaching study below does.</p><p class="muted">Read the <a href="docs/synapse-fraud-protocol.md">locked protocol</a>, <a href="docs/synapse-fraud-research.md">research report</a>, and <a href="data/fraud/experiment.json">raw predictions</a>.</p></div></div><div class="callout"><strong>Separate real Gemini check: improvement gate failed</strong><p>After the rule-fixture study, we locked a new 12-message Gemini Flash-Lite training run on synthetic training cases only. On the untouched 120-case test, the Gemini-guided local student matched the independent baseline: 25/36 suspicious cases caught, zero false alerts, precision 1.000, F1 0.820. The result does not show a benefit from Gemini supervision. <a href="docs/synapse-fraud-gemini-protocol.md">Locked protocol</a> · <a href="data/fraud/gemini-experiment.json">Separate result</a>.</p></div><p class="section-lede">Synapse began as a study of knowledge transfer between two simulated neural systems. Controlled RPS tasks showed compact teacher information could accelerate a student's independent learning. Synapse Fraud explores the same teacher–student principle in financial risk detection using an engineered classifier; the fraud model does not use fly neurons.</p><p class="limits">Prototype boundaries: the account data is mock, labels are generated from declared scenarios, model scores are uncalibrated, and review decisions only change this browser session. A frontier teacher can be configured for a separate on-demand comparison or optional local-student training; neither was called in the recorded experiment.</p>
-        </section>
-        <section id="fraud-new-study" class="panel rq">
-          <span class="eyebrow">Separate real Gemini experiment · synthetic labels</span><h2 class="rq-title">Does the teacher beat matched controls?</h2><p class="section-lede">We locked new account and scenario-family splits, trained three seven-feature local students, and tested on 48 separate synthetic cases. The limited-label baseline, an arm with 12 additional independent labels, and an arm with 12 structured Gemini messages used the same features. No Gemini call was made for inference.</p><div class="rq-card"><h3>New-family held-out results</h3><table class="metric-table"><thead><tr><th>Student</th><th>Injected cases caught</th><th>False alerts</th><th>F1</th><th>False-positive rate</th></tr></thead><tbody id="new-metric-body"><tr><td colspan="5">Loading saved comparison…</td></tr></tbody></table><p class="callout"><b class="fail" id="new-gate-result">Loading predefined gate…</b><br>On the new held-out families, all three students flagged every case, including every benign case. Recall alone therefore gives a misleading impression. Gemini showed no advantage over either control. This is a failed generalization result on synthetic data, not a measured banking fraud detector.</p><p class="muted">Read the <a href="docs/synapse-fraud-new-scenarios-protocol.md">locked method</a>, <a href="data/fraud/new-scenarios-development.json">development artifact</a>, and <a href="data/fraud/new-scenarios-heldout.json">complete held-out predictions</a>. The earlier <a href="data/fraud/tenure-heldout.json">merchant-tenure study</a> also failed its teacher-advantage gate.</p></div>
-        </section>
-        <section id="fraud-neural" class="panel rq">
-          <span class="eyebrow">Separate synthetic response experiment · simulated connectome</span>
-      <h2 class="rq-title">Neural Teaching: can Fly B adapt after a rule change?</h2>
-      <p class="section-lede">Choose a mock purchase above. Its observable history becomes one of three neural cues. A recorded run shows Fly A learning a changed response rule and sending advice through measured DN spikes. Then disconnect Fly A and run a frozen Fly B on the selected purchase cue. The NumPy classifier alone produces the review score above; the fly learner produces only the action below.</p>
-      <div class="research-grid">
-        <div class="rq-card"><h3>Purchase → neural cue</h3><p id="neural-purchase" class="muted">Select an account and transaction above.</p><p id="neural-cue" class="callout">Waiting for a purchase cue.</p><p class="muted">Cue 0: other activity. Cue 1: at least two earlier purchases in 24 hours. Cue 2: amount at least 3× the historical median plus a new merchant or recent cluster. These are observable patterns, not verified fraud.</p><h3>Controlled policy change</h3><table class="metric-table"><thead><tr><th>Cue</th><th>Before</th><th>After synthetic alert</th></tr></thead><tbody><tr><td>0 · other</td><td>APPROVE</td><td>REVIEW</td></tr><tr><td>1 · cluster</td><td>APPROVE</td><td>REVIEW</td></tr><tr><td>2 · deviation</td><td>REVIEW</td><td>BLOCK</td></tr></tbody></table><p class="muted">Correct actions and rewards are synthetic policy choices. No bank record is modified.</p></div>
-        <div class="rq-card"><h3>Recorded Fly A → Fly B transmission</h3><p id="neural-teacher">Loading saved connectome run…</p><p id="neural-trace" class="callout">Use Next neural message to inspect a measured spike transmission.</p><div class="actions"><button id="neural-next" type="button" disabled>Next neural message</button><button id="neural-probe" type="button" disabled>Disconnect Fly A &amp; test Fly B</button></div><p id="neural-probe-result" class="status" role="status"></p><p class="muted">The trace replays a saved simulation. The purchase probe runs the 6,900-neuron Fly B in this browser with learning disabled and no teacher or Gemini call.</p></div>
-      </div>
-      <div class="rq-card"><h3>Frozen comparison after 48 changed-rule rounds</h3><p class="muted">Correct actions out of 72 balanced synthetic trials. The teacher was disconnected for every check. Random and shuffled advice used the same measured DN spike channel and training budget.</p><table class="metric-table"><thead><tr><th>Seed</th><th>Alone</th><th>Trained advice</th><th>Random</th><th>Shuffled</th><th>Lead over strongest control</th></tr></thead><tbody id="neural-results"><tr><td colspan="6">Loading saved comparison…</td></tr></tbody></table><p id="neural-summary" class="callout">Loading predeclared success gate…</p><p id="neural-recovery" class="muted"></p><p class="muted">Recovery means ≥58/72 at a frozen check after 0, 24, 48, or 96 rounds. Read the <a href="docs/synapse-fraud-neural-protocol.md">fixed protocol</a> and <a href="data/fraud_neural/summary.json">complete summary</a>. This small synthetic study does not establish real-world fraud accuracy or biological fly-to-fly teaching.</p></div>
-        </section>
         <h3 class="rq-group">The fly experiment</h3>
         <section id="how" class="panel" aria-labelledby="how-title">
           <h2 id="how-title">How it works</h2>
@@ -1088,7 +1062,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
               <tr><th>Noticing the change and asking for help</th><td><strong>Not tested:</strong> here the change point is known</td></tr>
             </tbody>
           </table></div>
-          <h3>What we do not claim</h3>
+          <h3>Limits and boundaries</h3>
           <ul class="legend">
             <li><strong>Not a new learning method.</strong> A teacher suggesting moves is "action advising" (<a href="https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2013/docs/p1053.pdf" rel="noopener">Torrey &amp; Taylor 2013</a>). What is new is the test: advice sent as spikes inside a fly connectome, to a differently built student, against controls fixed in advance.</li>
             <li><strong>Spikes are not better than a cable.</strong> Sending the same advice digitally worked just as well.</li>
@@ -1129,10 +1103,49 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         </section>
         </div>
         <div id="tab-bank" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-bank" hidden>
-        <h2 id="bank" class="section-title">The problem</h2>
-        <p class="section-lede">When fraud tactics change, the bank that sees it first adapts. Smaller banks find out last, and keep approving the scam until they do.</p>
+        <h2 id="bank" class="section-title">The proposed banking use</h2>
+        <p class="section-lede">Imagine a credit union seeing a new scam but having too few confirmed cases to teach its fraud model. A partner that has already learned the pattern could help it flag suspicious payments sooner, where both institutions are already allowed to see the same payment.</p>
+        <h2 id="bank-evidence" class="section-title">What we tested on card data</h2>
+        <p class="section-lede">We simulated that handoff on 284,807 anonymized, real card transactions. Bank A has a model trained on newer cases; Bank B has a different model trained on older cases. The saved Nessie ledger is a mock banking display of one run. No real banks exchanged advice.</p>
+        <section id="bank-quick" class="panel" aria-labelledby="bank-quick-title">
+          <h2 id="bank-quick-title">How the proposed handoff works</h2>
+          <ol class="bank-flow">
+            <li><strong>1. Bank A learns first</strong><span>Its model has seen more recent confirmed cases of a changing fraud pattern.</span></li>
+            <li><strong>2. It sends compact advice</strong><span>For each purchase both sides can already see, Bank A sends one flag-or-allow bit. The message carries a judgment, not model weights or another customer record.</span></li>
+            <li><strong>3. Bank B learns and works alone</strong><span>It checks the advice against its known cases, retrains its own model, and ranks later purchases for human review without Bank A connected.</span></li>
+          </ol>
+          <p>The goal is to help Bank B's review team find new suspicious cases while confirmed labels are scarce. These are model flags for review, not automatic payment blocks.</p>
+          <h3>One saved run: what changed?</h3>
+          <div class="bank-quick-cards">
+            <div class="bank-quick-card"><h3>Bank B alone</h3><strong id="bank-quick-alone">Loading saved result…</strong><span id="bank-quick-alone-alarms"></span></div>
+            <div class="bank-quick-card taught"><h3>Bank B with Bank A's advice</h3><strong id="bank-quick-taught">Loading saved result…</strong><span id="bank-quick-taught-alarms"></span></div>
+          </div>
+          <p id="bank-quick-note" class="legend"></p>
+          <p id="bank-quick-study" class="finding"></p>
+          <p class="story-next"><a href="#bank-ledger-all">Open all 200 saved purchases →</a> · <a href="#solution">See the fly experiment →</a></p>
+        </section>
+        <section id="bank-ledger" class="panel" aria-labelledby="bank-ledger-title" hidden>
+          <h2 id="bank-ledger-title">What the advice changed</h2>
+          <p id="bank-ledger-headline" class="finding"></p>
+          <div class="scroll"><table class="bank-summary"><thead><tr><th scope="col"></th><th scope="col">Credit union alone</th><th scope="col">With the bank's advice</th></tr></thead><tbody id="bank-summary-rows"></tbody></table></div>
+          <p id="bank-ledger-note" class="legend"></p>
+          <details id="bank-ledger-all" class="bank-ledger-all"><summary>All 200 purchases in the saved mock ledger</summary>
+          <div class="scroll bank-ledger-scroll"><table class="bank-ledger"><thead><tr><th>Purchase</th><th>Amount</th><th>Fraud score alone</th><th>Fraud score with advice</th><th>Agent</th><th>Truth</th></tr></thead><tbody id="bank-ledger-rows"></tbody></table></div>
+          </details>
+        </section>
+        <section id="bank-study" class="panel" aria-labelledby="bank-study-title">
+          <h2 id="bank-study-title">Locked study on real fraud data</h2>
+          <p class="legend">284,807 real card transactions (Worldline and ULB). The change is time: the credit union's model was trained on day 1 and must cope with day 2. Protocol fixed before the runs: <a href="docs/real-data-advice-v2-protocol.md">v2 protocol</a>; the first version failed outright and is kept in <code>data/real_data_advice/fraud/</code>.</p>
+          <div id="bank-study-body"><p class="legend">Loading the study summary…</p></div>
+        </section>
+        <details id="bank-agent" class="panel">
+          <summary id="bank-agent-title">How the saved credit-union agent decided</summary>
+          <p class="legend">An engineering demo around one run of that study, not a new tested result. The agent decides whether to ask the bank for advice, checks the advice before trusting it, retrains, and reviews the ledger. Its decision rules were chosen by us and were not tested against controls: <a href="docs/bank-demo.md">notes and limits</a>.</p>
+          <div id="bank-agent-body"><p class="legend">Saved agent run unavailable.</p></div>
+        </details>
         <section class="panel" aria-labelledby="solution-map-title">
           <h2 id="solution-map-title">The bank problem, as an experiment</h2>
+          <p class="legend">This maps the Science question onto banking. The saved bank model above does not use fly neurons or simulated spikes.</p>
           <div class="scroll"><table class="uses">
             <thead><tr><th>In the bank</th><th>In our experiment</th></tr></thead>
             <tbody>
@@ -1150,7 +1163,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
               <tr><th>Pooling data (fraud consortia, US 314(b) sharing)</th><td>Information about customers and cases</td><td>No</td><td>The information itself is shared</td></tr>
               <tr><th>Federated learning (<a href="https://arxiv.org/abs/1602.05629" rel="noopener">McMahan 2017</a>; Swift 2025 trial)</th><td>Model updates</td><td>Yes</td><td>Updates can leak training data</td></tr>
               <tr><th>Distillation (<a href="https://arxiv.org/abs/1910.03581" rel="noopener">FedMD 2019</a>; <a href="https://arxiv.org/abs/2006.07242" rel="noopener">FedDF 2020</a>)</th><td>Predictions on a shared dataset</td><td>No</td><td>Needs a dataset both sides can use</td></tr>
-              <tr class="ours"><th>Ours</th><td>One flag per case, only after a change</td><td>No</td><td>No records, weights or updates are sent</td></tr>
+              <tr class="ours"><th>Ours</th><td>One flag per case, only after a change</td><td>No</td><td>Advice reveals a judgment; the adviser must already be allowed to see the case</td></tr>
             </tbody>
           </table></div>
           <p class="legend"><strong>What we test:</strong> compact action advice between different learners, compared with controls fixed in advance (shuffled, random and out-of-date advice). <strong>The catch:</strong> the adviser must see the case it advises on, so this fits where it already sees the payment, such as a card network or the bank on the other side of a transfer.</p>
@@ -1161,55 +1174,49 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
           <div class="scenario-cards">
             <div class="scenario-card"><strong>Credit unions and community banks</strong><p>Small fraud teams, often under 10 analysts, and few confirmed fraud cases of their own to learn from.</p></div>
             <div class="scenario-card"><strong>Their members</strong><p>While a new scam goes unflagged, people lose money, and the bank pays to investigate and refund.</p></div>
-            <div class="scenario-card"><strong>The banks and networks that see fraud first</strong><p>They want to help: 13 global banks trialled joint fraud detection in 2025. But they cannot hand over customer data or their models.</p></div>
+            <div class="scenario-card"><strong>The banks and networks that see fraud first</strong><p>Thirteen global banks trialled joint fraud detection in 2025. Sharing customer data or model parameters still requires a suitable arrangement.</p></div>
           </div>
           <h3>Why it matters</h3>
           <div class="hero-stats">
-            <div class="stat-tile"><strong>$12.5B</strong><span>fraud losses reported to the FTC in 2024, up 25% in a year</span></div>
-            <div class="stat-tile"><strong>70%+</strong><span>of credit unions and community banks saw fraud rise in 2025 (industry survey)</span></div>
-            <div class="stat-tile"><strong>120<small> days</small></strong><span>a cardholder has to dispute a charge, so confirmed fraud cases arrive late</span></div>
+            <div class="stat-tile"><strong>$12.5B</strong><span>losses reported to the FTC across all types of fraud in 2024, up 25% in a year</span></div>
+            <div class="stat-tile"><strong>67%</strong><span>of surveyed fraud leaders reported rising fraud events in 2025 (Alloy/Harris Poll)</span></div>
+            <div class="stat-tile"><strong>0.17%</strong><span>of purchases in the public study dataset are labeled fraud (492 of 284,807)</span></div>
           </div>
-          <p class="legend">Late labels are a known weak point: most transactions are confirmed as fraud only days later (<a href="https://doi.org/10.1109/TNNLS.2017.2736643" rel="noopener">Dal Pozzolo et al. 2018</a>), and models waiting on delayed labels fall clearly behind (<a href="https://arxiv.org/abs/2312.00923" rel="noopener">Csaba et al. 2024</a>). Sources for the figures: FTC 2024 fraud data; Alloy State of Fraud 2025 (industry survey); Visa and Mastercard dispute rules; <a href="https://www.swift.com/news-events/news/swift-led-experiments-reveal-blueprint-collaborative-fraud-defence-using-ai" rel="noopener">Swift 2025</a>.</p>
-          <h3>Why the bank that knows can't help today</h3>
-          <ul class="props"><li><strong>Send the data?</strong><span>customer records are private by law</span></li><li><strong>Send the model?</strong><span>it won't run on another bank's system</span></li><li><strong>Send model updates?</strong><span>they can leak the private data (<a href="https://arxiv.org/abs/1906.08935" rel="noopener">Zhu 2019</a>; <a href="https://arxiv.org/abs/2003.14053" rel="noopener">Geiping 2020</a>)</span></li><li><strong>Our idea</strong><span>send only advice: one "block" or "allow" flag per payment</span></li></ul>
-          <p class="story-next"><a href="#solution">Next: how our solution works, and how it differs →</a></p>
+          <p class="legend">Late labels are a known weak point: most transactions are confirmed as fraud only days later (<a href="https://doi.org/10.1109/TNNLS.2017.2736643" rel="noopener">Dal Pozzolo et al. 2018</a>), and models waiting on delayed labels fall clearly behind (<a href="https://arxiv.org/abs/2312.00923" rel="noopener">Csaba et al. 2024</a>). Sources for the figures: <a href="https://www.ftc.gov/news-events/news/press-releases/2025/03/new-ftc-data-show-big-jump-reported-losses-fraud-125-billion-2024" rel="noopener">FTC 2024 fraud data</a>; <a href="https://www.alloy.com/about/press/alloy-releases-2026-state-of-fraud-report" rel="noopener">Alloy/Harris Poll survey</a>; the public card-fraud dataset; <a href="https://www.swift.com/insights/news/swift-led-experiments-reveal-blueprint-collaborative-fraud-defence-using-ai" rel="noopener">Swift 2025</a>.</p>
+          <h3>Why sharing is hard</h3>
+          <ul class="props"><li><strong>Send the data?</strong><span>customer records require a lawful sharing arrangement</span></li><li><strong>Send the model?</strong><span>different models may not be compatible</span></li><li><strong>Send model updates?</strong><span>they can leak private data (<a href="https://arxiv.org/abs/1906.08935" rel="noopener">Zhu 2019</a>; <a href="https://arxiv.org/abs/2003.14053" rel="noopener">Geiping 2020</a>)</span></li><li><strong>Our idea</strong><span>send one "flag" or "allow" bit when both parties already see the payment</span></li></ul>
+          <p class="story-next"><a href="#solution">See the simulated fly experiment →</a></p>
         </section>
-        <h2 id="bank-evidence" class="section-title">What happened on public card data?</h2>
-        <p class="section-lede">We tested the idea on 284,807 real card transactions with ordinary machine-learning models, no fly brain: a bank's model sends a credit union's differently built model one flag per purchase.</p>
-        <section id="bank-quick" class="panel" aria-labelledby="bank-quick-title">
-          <h2 id="bank-quick-title">One saved run: what changed?</h2>
-          <p>Bank A's boosted-tree model has learned newer patterns. Bank B starts with an older logistic model. For each case, Bank A sends only a <strong>flag/allow bit</strong>, never customer records or model weights. Bank B checks the advice, retrains its own model, then scores held-out purchases independently.</p>
-          <div class="bank-quick-cards">
-            <div class="bank-quick-card"><h3>Without teacher</h3><strong id="bank-quick-alone">Loading saved result…</strong><span id="bank-quick-alone-alarms"></span></div>
-            <div class="bank-quick-card taught"><h3>With teacher</h3><strong id="bank-quick-taught">Loading saved result…</strong><span id="bank-quick-taught-alarms"></span></div>
-          </div>
-          <p id="bank-quick-note" class="legend"></p>
-          <p id="bank-quick-study" class="legend"></p>
-          <p class="story-next"><a href="#bank-ledger">Inspect the 200 saved purchases →</a> · <a href="#solution">How it works →</a></p>
+        <details id="optional-prototypes" class="panel">
+        <summary>Additional prototypes and synthetic studies</summary>
+        <p class="legend">An interactive prototype by our team: a local model ranks mock bank purchases for a person to review, plus the controlled fraud studies behind it. Live data needs the fraud server: run <code>python -m fraud.server</code>, then open <a href="http://localhost:8767/#review-queue">localhost:8767</a>. Saved results load either way.</p>
+        <section id="review-queue" class="panel rq">
+          <span class="eyebrow">Live local workflow</span><h2 class="rq-title">Review an account's transactions.</h2><p class="section-lede">Choose a mock account and run the local student. The purchases and features below are loaded now. The model does not call a teacher while scoring. Scores rank work for review; they are not calibrated fraud probabilities.</p><div class="toolbar"><label class="field" for="source-select">Data source<select id="source-select"><option value="fixture">Offline generated fixtures</option><option value="nessie">Nessie live mock API</option></select></label><label class="field" for="account-select">Mock account<select id="account-select"><option value="">Loading accounts…</option></select></label><label class="field" for="model-select">Local student<select id="model-select"><option value="independent">Independent (best held-out F1)</option><option value="guided">Teacher-guided</option><option value="shuffled">Shuffled-teacher control</option></select></label><button id="scan-btn" class="button" type="button">Analyze Transactions</button><span class="mode" id="source-mode">Checking data source…</span></div><p class="status" id="workspace-status" role="status"></p><div class="dashboard"><div class="rq-card"><h3>Ranked review queue</h3><div class="scorecards"><div class="scorecard high"><strong id="high-count">—</strong><span>High priority</span></div><div class="scorecard review"><strong id="review-count">—</strong><span>Review</span></div><div class="scorecard low"><strong id="low-count">—</strong><span>Low</span></div></div><div class="tx-list" id="tx-list"><p class="muted">Load an account to see its purchase queue.</p></div></div><div class="rq-card detail" id="detail"><h3>Transaction evidence</h3><div class="detail-placeholder">Select a transaction from the queue to inspect its history context and make a simulated review decision.</div></div></div>
         </section>
-        <section id="bank-study" class="panel" aria-labelledby="bank-study-title">
-          <h2 id="bank-study-title">Locked study on real fraud data</h2>
-          <p class="legend">284,807 real card transactions (Worldline and ULB). The change is time: the credit union's model was trained on day 1 and must cope with day 2. Protocol fixed before the runs: <a href="docs/real-data-advice-v2-protocol.md">v2 protocol</a>; the first version failed outright and is kept in <code>data/real_data_advice/fraud/</code>.</p>
-          <div id="bank-study-body"><p class="legend">Loading the study summary…</p></div>
+        <section id="fraud-results" class="panel rq">
+          <span class="eyebrow">Recorded controlled experiment · teacher disconnected</span><h2 class="rq-title">Did compact advice actually help?</h2><p class="section-lede">We trained three identical local classifiers on account-disjoint synthetic scenarios. Only supervision changed: limited true labels alone, extra compact risk messages from a deterministic teacher, or the same messages shuffled. The teacher was absent for all 120 held-out decisions.</p><div class="research-grid"><div class="rq-card"><h3>Held-out results</h3><table class="metric-table"><thead><tr><th>Student</th><th>Fraud caught</th><th>False alerts</th><th>F1</th></tr></thead><tbody id="metric-body"><tr><td colspan="4">Loading saved results…</td></tr></tbody></table><p class="callout"><b class="fail" id="gate-result">Predefined gate: failed.</b><br>Guidance increased fraud recall but also false positives. It did not improve F1 over the independent student. This is a negative result for the locked claim, not a production-quality fraud model.</p><p class="muted">The result uses synthetic labels. Nessie purchases have no known fraud labels and were not used as held-out ground truth.</p></div><div class="rq-card"><h3>What was transferred?</h3><div class="diagram"><div><b>Rule teacher fixture</b>Reads history features; emits LOW, REVIEW or HIGH</div><span class="arrow" aria-hidden="true">→</span><div><b>408 compact messages</b>Extra training supervision, no weights or account identity</div><span class="arrow" aria-hidden="true">→</span><div><b>Local student</b>Updates seven numeric parameters; runs alone afterward</div></div><p class="muted">The teacher here is a deterministic rule fixture, not a frontier LLM. The original <a href="#solution">Synapse neural experiment</a> independently validated three-symbol delivery via measured simulated spikes. Those earlier rule-fixture messages did not use the neural channel; the separate Neural Teaching study below does.</p><p class="muted">Read the <a href="docs/synapse-fraud-protocol.md">locked protocol</a>, <a href="docs/synapse-fraud-research.md">research report</a>, and <a href="data/fraud/experiment.json">raw predictions</a>.</p></div></div><div class="callout"><strong>Separate real Gemini check: improvement gate failed</strong><p>After the rule-fixture study, we locked a new 12-message Gemini Flash-Lite training run on synthetic training cases only. On the untouched 120-case test, the Gemini-guided local student matched the independent baseline: 25/36 suspicious cases caught, zero false alerts, precision 1.000, F1 0.820. The result does not show a benefit from Gemini supervision. <a href="docs/synapse-fraud-gemini-protocol.md">Locked protocol</a> · <a href="data/fraud/gemini-experiment.json">Separate result</a>.</p></div><p class="section-lede">Synapse began as a study of knowledge transfer between two simulated neural systems. Controlled RPS tasks showed compact teacher information could accelerate a student's independent learning. Synapse Fraud explores the same teacher–student principle in financial risk detection using an engineered classifier; the fraud model does not use fly neurons.</p><p class="limits">Prototype boundaries: the account data is mock, labels are generated from declared scenarios, model scores are uncalibrated, and review decisions only change this browser session. A frontier teacher can be configured for a separate on-demand comparison or optional local-student training; neither was called in the recorded experiment.</p>
         </section>
-        <section id="bank-agent" class="panel" aria-labelledby="bank-agent-title">
-          <h2 id="bank-agent-title">The credit union's saved agent run</h2>
-          <p class="legend">An engineering demo around one run of that study, not a new tested result. The saved ledger is marked as a Capital One Nessie sandbox readback; current access to that account is unverified. The agent decides whether to ask the bank for advice, checks the advice before trusting it, retrains, and reviews the ledger. Its decision rules were chosen by us and were not tested against controls: <a href="docs/bank-demo.md">notes and limits</a>.</p>
-          <div id="bank-agent-body"><p class="legend">Saved agent run unavailable.</p></div>
+        <section id="fraud-new-study" class="panel rq">
+          <span class="eyebrow">Separate real Gemini experiment · synthetic labels</span><h2 class="rq-title">Does the teacher beat matched controls?</h2><p class="section-lede">We locked new account and scenario-family splits, trained three seven-feature local students, and tested on 48 separate synthetic cases. The limited-label baseline, an arm with 12 additional independent labels, and an arm with 12 structured Gemini messages used the same features. No Gemini call was made for inference.</p><div class="rq-card"><h3>New-family held-out results</h3><table class="metric-table"><thead><tr><th>Student</th><th>Injected cases caught</th><th>False alerts</th><th>F1</th><th>False-positive rate</th></tr></thead><tbody id="new-metric-body"><tr><td colspan="5">Loading saved comparison…</td></tr></tbody></table><p class="callout"><b class="fail" id="new-gate-result">Loading predefined gate…</b><br>On the new held-out families, all three students flagged every case, including every benign case. Recall alone therefore gives a misleading impression. Gemini showed no advantage over either control. This is a failed generalization result on synthetic data, not a measured banking fraud detector.</p><p class="muted">Read the <a href="docs/synapse-fraud-new-scenarios-protocol.md">locked method</a>, <a href="data/fraud/new-scenarios-development.json">development artifact</a>, and <a href="data/fraud/new-scenarios-heldout.json">complete held-out predictions</a>. The earlier <a href="data/fraud/tenure-heldout.json">merchant-tenure study</a> also failed its teacher-advantage gate.</p></div>
         </section>
-        <section id="bank-ledger" class="panel" aria-labelledby="bank-ledger-title" hidden>
-          <h2 id="bank-ledger-title">What the advice changed</h2>
-          <p id="bank-ledger-headline" class="finding"></p>
-          <div class="scroll"><table class="bank-summary"><thead><tr><th scope="col"></th><th scope="col">Credit union alone</th><th scope="col">With the bank's advice</th></tr></thead><tbody id="bank-summary-rows"></tbody></table></div>
-          <p id="bank-ledger-note" class="legend"></p>
-          <details class="bank-ledger-all"><summary>Show all purchases in the ledger</summary>
-          <div class="scroll bank-ledger-scroll"><table class="bank-ledger"><thead><tr><th>Purchase</th><th>Amount</th><th>Fraud score alone</th><th>Fraud score with advice</th><th>Agent</th><th>Truth</th></tr></thead><tbody id="bank-ledger-rows"></tbody></table></div>
-          </details>
+        <section id="fraud-neural" class="panel rq">
+          <span class="eyebrow">Separate synthetic response experiment · simulated connectome</span>
+      <h2 class="rq-title">Neural Teaching: can Fly B adapt after a rule change?</h2>
+      <p class="section-lede">Choose a mock purchase above. Its observable history becomes one of three neural cues. A recorded run shows Fly A learning a changed response rule and sending advice through measured DN spikes. Then disconnect Fly A and run a frozen Fly B on the selected purchase cue. The NumPy classifier alone produces the review score above; the fly learner produces only the action below.</p>
+      <div class="research-grid">
+        <div class="rq-card"><h3>Purchase → neural cue</h3><p id="neural-purchase" class="muted">Select an account and transaction above.</p><p id="neural-cue" class="callout">Waiting for a purchase cue.</p><p class="muted">Cue 0: other activity. Cue 1: at least two earlier purchases in 24 hours. Cue 2: amount at least 3× the historical median plus a new merchant or recent cluster. These are observable patterns, not verified fraud.</p><h3>Controlled policy change</h3><table class="metric-table"><thead><tr><th>Cue</th><th>Before</th><th>After synthetic alert</th></tr></thead><tbody><tr><td>0 · other</td><td>APPROVE</td><td>REVIEW</td></tr><tr><td>1 · cluster</td><td>APPROVE</td><td>REVIEW</td></tr><tr><td>2 · deviation</td><td>REVIEW</td><td>BLOCK</td></tr></tbody></table><p class="muted">Correct actions and rewards are synthetic policy choices. No bank record is modified.</p></div>
+        <div class="rq-card"><h3>Recorded Fly A → Fly B transmission</h3><p id="neural-teacher">Loading saved connectome run…</p><p id="neural-trace" class="callout">Use Next neural message to inspect a measured spike transmission.</p><div class="actions"><button id="neural-next" type="button" disabled>Next neural message</button><button id="neural-probe" type="button" disabled>Disconnect Fly A &amp; test Fly B</button></div><p id="neural-probe-result" class="status" role="status"></p><p class="muted">The trace replays a saved simulation. The purchase probe runs the 6,900-neuron Fly B in this browser with learning disabled and no teacher or Gemini call.</p></div>
+      </div>
+      <div class="rq-card"><h3>Frozen comparison after 48 changed-rule rounds</h3><p class="muted">Correct actions out of 72 balanced synthetic trials. The teacher was disconnected for every check. Random and shuffled advice used the same measured DN spike channel and training budget.</p><table class="metric-table"><thead><tr><th>Seed</th><th>Alone</th><th>Trained advice</th><th>Random</th><th>Shuffled</th><th>Lead over strongest control</th></tr></thead><tbody id="neural-results"><tr><td colspan="6">Loading saved comparison…</td></tr></tbody></table><p id="neural-summary" class="callout">Loading predeclared success gate…</p><p id="neural-recovery" class="muted"></p><p class="muted">Recovery means ≥58/72 at a frozen check after 0, 24, 48, or 96 rounds. Read the <a href="docs/synapse-fraud-neural-protocol.md">fixed protocol</a> and <a href="data/fraud_neural/summary.json">complete summary</a>. This small synthetic study does not establish real-world fraud accuracy or biological fly-to-fly teaching.</p></div>
         </section>
-        <p class="story-next"><a href="#solution">Next: how the advice works, inside two fly brains →</a></p>
+        </details>
+        <p class="story-next"><a href="#solution">See the simulated fly experiment →</a></p>
         </div>
       </main>
-      <footer>Neural simulator and connectome subset from <a href="https://github.com/bsgelman/fly-hero">Fly Hero</a> by Benjamin Gelman (MIT). The two-fly teaching experiments, learners, message channel, and this page are ours. Connectome data: Janelia and Google male CNS (CC-BY). Neuron model after Shiu et al. 2024; dopamine learning rule inspired by Bennett et al. 2021. See <a href="README.md">README</a> for method and limitations.</footer>
+      <footer>
+        Neural simulator and connectome subset from <a href="https://github.com/bsgelman/fly-hero">Fly Hero</a> by Benjamin Gelman (MIT). The two-fly teaching experiments, learners, message channel, and this page are ours. Connectome data: Janelia and Google male CNS (CC-BY). Neuron model after Shiu et al. 2024; dopamine learning rule inspired by Bennett et al. 2021. See <a href="README.md">README</a> for method and limitations.
+        <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a id="review-queue-link" href="#review-queue">Mock review queue</a> · <a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
+      </footer>
     </div>
     <script>
       // Four tabs; any in-page link opens the tab that holds its target.
@@ -1245,6 +1252,12 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
       addEventListener('hashchange', route);
       addEventListener('popstate', route);
       route();
+      // The static Science server has no fraud API; point its footer link at the combined local server.
+      if (['localhost', '127.0.0.1'].includes(location.hostname) && location.port === '8766') {
+        const reviewLink = document.getElementById('review-queue-link');
+        reviewLink.href = `${location.protocol}//${location.hostname}:8767/#review-queue`;
+        reviewLink.title = 'Start python -m fraud.server from the repository root first';
+      }
       // The same recording at 4x speed.
       document.getElementById('hero-play-fast').addEventListener('click', () => {
         showTab('sim', document.getElementById('demo'));

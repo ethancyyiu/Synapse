@@ -329,6 +329,8 @@ const pearson = points => {
 };
 function renderRuns() {
   saveRuns();
+  $('live-runs').hidden = !runs.length;
+  $('live-runs-link').hidden = !runs.length;
   if ($('runs-clear')) $('runs-clear').hidden = !runs.length;
   const body = $('runs-table'); body.replaceChildren();
   runs.forEach((run, i) => {

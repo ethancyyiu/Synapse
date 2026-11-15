@@ -17,7 +17,7 @@
 | **Does it hold up?** | It passed on a second task (+19.0) and on a simulator we wrote ourselves (+35.0, in the 10 of 15 runs where the teacher learned). |
 | **Where it stops** | Simulation only, on two small tasks. A plain digital message works as well as spikes, and the gain is speed, not a higher final score. Two studies on trusting a teacher missed their bars, and several earlier experiments failed: see the Research tab and the [lab notebook](docs/lab-notebook.md). |
 
-**Run it:** `python tools/serve.py`, then open <http://localhost:8766> and press **▶ Watch the demo** (1½ minutes, recorded real run). Judge script and Q&A: [docs/pitch-script.md](docs/pitch-script.md).
+**Run the full demo:** `python -m fraud.server`, then open <http://localhost:8767/> and press **▶ Watch the 90-second story**. This serves the Science and saved Banking pages plus the mock review queue API. Judge script and Q&A: [docs/pitch-script.md](docs/pitch-script.md).
 
 ---
 
@@ -25,21 +25,21 @@ Synapse adapts [Fly Hero](https://github.com/bsgelman/fly-hero) by Benjamin Gelm
 
 ## Run locally
 
-You need Python 3 and a current browser with WebGL. Three.js is vendored in `vendor/three/`, so there is nothing to install and the demo works offline.
+You need Python 3, NumPy (`pip install numpy` if needed), and a current browser with WebGL. Three.js is vendored in `vendor/three/`. The recorded Science and saved Banking results work without API keys or network access.
 
 ```bash
-python tools/serve.py
+python -m fraud.server
 ```
 
-Open <http://localhost:8766>. Serve the whole repository; opening `index.html` as a file will not load the data.
+Open <http://localhost:8767/>. Serve the whole repository; opening `index.html` as a file will not load the data. `python tools/serve.py` remains a Science-only static option at port 8766; its mock review queue needs the API server on port 8767.
 
 | Page | What it shows |
 |---|---|
-| `/` | The recorded demo and live Challenge (Simulation tab), the banking application (Banking tab), the 15-run result (Stats tab), and claims and limits (Research tab) |
+| `/` | The recorded demo and live Challenge (Simulation tab), the saved banking application (Application tab), the 15-run result (Statistics tab), and claims and limits (Research tab) |
 | `/archive.html` | Earlier experiments that failed their gates |
 | `/legacy.html` | The first RPS experiment, with its older message channel |
 | `/rhythm.html` | The original Fly Hero rhythm game |
-| `/fraud.html` on port 8767 | Separate mock-transaction risk review; `python -m fraud.server` serves its local API |
+| `/fraud.html` | Separate mock-transaction risk review using the same local API; the review queue is also available at `/#review-queue` |
 
 Checks need Node.js, and NumPy for the Python ones. `npm test` takes under two seconds and needs nothing installed (the two demo checks need `npm ci` once, because Node loads three.js from `node_modules`; the browser uses the vendored copy): it recomputes every headline number from the saved per-seed results and fails if the summary files, this README, or the page disagree. The same checks run on every push (`.github/workflows/checks.yml`). [tools/README.md](tools/README.md) lists which script belongs to which study.
 

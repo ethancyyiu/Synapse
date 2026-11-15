@@ -21,12 +21,16 @@ const load = async url => {
 
 function renderStudy(study) {
   const body = document.getElementById('bank-study-body');
+  const quickStudy = document.getElementById('bank-quick-study');
   if (!study?.meanAP) {
+    quickStudy.classList.add('bank-warn');
+    quickStudy.textContent = 'Locked study summary unavailable; do not present this comparison as a validated study.';
     body.replaceChildren(el('p', { className: 'legend', textContent: 'The study summary file is missing.' }));
     return;
   }
   const ap = study.meanAP;
-  document.getElementById('bank-quick-study').textContent =
+  quickStudy.classList.remove('bank-warn');
+  quickStudy.textContent =
     `Full locked study: across ${study.seedsPassingTeacherGate} teacher-gated runs out of ${study.seedsRun} seeds, average precision rose from ${fixed(ap.alone)} to ${fixed(ap.taught)}. Predefined success criterion: ${study.mainTest.passed ? 'PASSED' : 'FAILED'}.`;
   const [low, high] = study.mainTest.bootstrap95;
   const share = (ap.taught - ap.alone) / (ap.fullLabels - ap.alone);
@@ -94,7 +98,7 @@ function renderRun(run) {
     [`Frauds caught (of ${ledger.frauds})`, a.fraudsFlagged, t.fraudsFlagged, 'high'],
     ['Frauds missed', ledger.frauds - a.fraudsFlagged, ledger.frauds - t.fraudsFlagged, 'low'],
     ['False alarms', a.falseAlarms, t.falseAlarms, 'low'],
-    [`Fraud amount stopped (of ${money(fraudAmount)})`, caughtAmount('alone'), caughtAmount('taught'), 'high', money],
+    [`Fraud amount that would be flagged (of ${money(fraudAmount)})`, caughtAmount('alone'), caughtAmount('taught'), 'high', money],
     ['Average precision, all held-out purchases', ap.alone.ap, ap.taught.ap, 'high', v => fixed(v)],
   ];
   document.getElementById('bank-summary-rows').replaceChildren(...rows.map(([label, alone, taught, goal, show = String]) => {
@@ -107,7 +111,7 @@ function renderRun(run) {
   document.getElementById('bank-ledger-headline').textContent = extra > 0
     ? `With the bank's advice, the credit union caught ${extra} more of the ${ledger.frauds} frauds, ` +
       `${alarms > 0 ? `with ${alarms} more false alarm${alarms === 1 ? '' : 's'}` : 'with no extra false alarms'}, ` +
-      `and stopped ${money(caughtAmount('taught'))} of fraud instead of ${money(caughtAmount('alone'))}.`
+      `and would have flagged ${money(caughtAmount('taught'))} in fraudulent purchases instead of ${money(caughtAmount('alone'))}.`
     : `On this ledger, the bank's advice did not help the credit union catch more fraud.`;
 
   document.getElementById('bank-ledger-note').textContent =
