@@ -184,7 +184,7 @@ export class TrustGatedStudent extends PreferenceStudent {
     return super.imitate(decodedAction, .03 * this.trust);
   }
 }
-export function preferenceRound(teacher, alone, guided, key, random = null) {
+export function preferenceRound(teacher, alone, guided, key, random = null, adviceEnabled = true) {
   const students = random ? [alone, guided, random] : [alone, guided];
   const cue = guided.game.observe().previousOpponent;
   if (alone.game.observe().previousOpponent !== cue) throw Error('Student opponent cues diverged');
@@ -223,7 +223,7 @@ export function preferenceRound(teacher, alone, guided, key, random = null) {
         });
         if (teacherVpn.length) teacher.net.setDrive(teacherVpn, 0);
         teacher.agent.decide(teacher.net);
-        if (cue !== null) {
+        if (cue !== null && adviceEnabled) {
           const scores = [...teacher.agent.scores];
           preference = scores.indexOf(Math.max(...scores));
           sent[1] = preference;

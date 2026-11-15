@@ -1,0 +1,90 @@
+{
+ "status": "completed",
+ "pilot": false,
+ "teacherSeed": 26221,
+ "studentSeed": 26222,
+ "teacherWins": 66,
+ "schedule": {
+  "early12": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11
+  ],
+  "spaced12": [
+   1,
+   5,
+   9,
+   13,
+   17,
+   21,
+   24,
+   28,
+   32,
+   36,
+   40,
+   44
+  ]
+ },
+ "messages": {
+  "full": 46,
+  "early12": 12,
+  "spaced12": 12,
+  "random12": 12
+ },
+ "points": [
+  {
+   "rounds": 0,
+   "messages": {
+    "full": 0,
+    "early12": 0,
+    "spaced12": 0,
+    "random12": 0
+   },
+   "alone": 0,
+   "full": 0,
+   "early12": 0,
+   "spaced12": 0,
+   "random12": 0
+  },
+  {
+   "rounds": 24,
+   "messages": {
+    "full": 23,
+    "early12": 12,
+    "spaced12": 6,
+    "random12": 6
+   },
+   "alone": 0,
+   "full": 66,
+   "early12": 14,
+   "spaced12": 0,
+   "random12": 0
+  },
+  {
+   "rounds": 48,
+   "messages": {
+    "full": 46,
+    "early12": 12,
+    "spaced12": 12,
+    "random12": 12
+   },
+   "alone": 0,
+   "full": 68,
+   "early12": 63,
+   "spaced12": 61,
+   "random12": 1
+  }
+ ],
+ "advantage48": 60,
+ "teacherFrozen": true,
+ "synapsesUnchanged": true
+}

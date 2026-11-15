@@ -1,0 +1,859 @@
+{
+  "protocol": "docs/advice-budget-followup-protocol.md",
+  "finalSeeds": [
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    113,
+    114
+  ],
+  "teacherGatePassed": 15,
+  "teacherGateFailed": 0,
+  "invalidSeeds": [],
+  "baselineMean": 12.2,
+  "budgets": {
+    "12": {
+      "messagesPerCompletedSeed": 12,
+      "means": {
+        "trained": 43.733333333333334,
+        "random": 13.666666666666666,
+        "shuffled": 17.533333333333335
+      },
+      "recovered": 2,
+      "pairedVsAlone": {
+        "mean": 31.533333333333335,
+        "bootstrap95": [
+          22.8,
+          39.86666666666667
+        ]
+      },
+      "pairedVsStrongerMatchedControl": {
+        "mean": 24.133333333333333,
+        "bootstrap95": [
+          17.4,
+          30.6
+        ]
+      },
+      "reliableInSample": false
+    },
+    "24": {
+      "messagesPerCompletedSeed": 24,
+      "means": {
+        "trained": 55.6,
+        "random": 22.066666666666666,
+        "shuffled": 16.4
+      },
+      "recovered": 4,
+      "pairedVsAlone": {
+        "mean": 43.4,
+        "bootstrap95": [
+          36.4,
+          50.4
+        ]
+      },
+      "pairedVsStrongerMatchedControl": {
+        "mean": 29,
+        "bootstrap95": [
+          21.133333333333333,
+          37.8
+        ]
+      },
+      "reliableInSample": false
+    },
+    "36": {
+      "messagesPerCompletedSeed": 36,
+      "means": {
+        "trained": 64.46666666666667,
+        "random": 21.6,
+        "shuffled": 25.2
+      },
+      "recovered": 13,
+      "pairedVsAlone": {
+        "mean": 52.266666666666666,
+        "bootstrap95": [
+          45.266666666666666,
+          59.266666666666666
+        ]
+      },
+      "pairedVsStrongerMatchedControl": {
+        "mean": 34.6,
+        "bootstrap95": [
+          23.133333333333333,
+          45.86666666666667
+        ]
+      },
+      "reliableInSample": true
+    },
+    "46": {
+      "messagesPerCompletedSeed": 46,
+      "means": {
+        "trained": 68.06666666666666,
+        "random": 24.6,
+        "shuffled": 23.866666666666667
+      },
+      "recovered": 14,
+      "pairedVsAlone": {
+        "mean": 55.86666666666667,
+        "bootstrap95": [
+          50.13333333333333,
+          61.53333333333333
+        ]
+      },
+      "pairedVsStrongerMatchedControl": {
+        "mean": 36.733333333333334,
+        "bootstrap95": [
+          27.733333333333334,
+          45.8
+        ]
+      },
+      "reliableInSample": true
+    }
+  },
+  "seedResults": [
+    {
+      "seed": 100,
+      "status": "completed",
+      "teacherWins": 67,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 2,
+        "trained12": 47,
+        "random12": 2,
+        "shuffled12": 2,
+        "trained24": 53,
+        "random24": 26,
+        "shuffled24": 2,
+        "trained36": 71,
+        "random36": 24,
+        "shuffled36": 25,
+        "trained46": 71,
+        "random46": 47,
+        "shuffled46": 2
+      }
+    },
+    {
+      "seed": 101,
+      "status": "completed",
+      "teacherWins": 65,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 8,
+        "trained12": 22,
+        "random12": 22,
+        "shuffled12": 22,
+        "trained24": 47,
+        "random24": 22,
+        "shuffled24": 22,
+        "trained36": 40,
+        "random36": 46,
+        "shuffled36": 22,
+        "trained46": 65,
+        "random46": 22,
+        "shuffled46": 22
+      }
+    },
+    {
+      "seed": 102,
+      "status": "completed",
+      "teacherWins": 64,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 30,
+        "trained12": 60,
+        "random12": 26,
+        "shuffled12": 48,
+        "trained24": 48,
+        "random24": 47,
+        "shuffled24": 48,
+        "trained36": 67,
+        "random36": 7,
+        "shuffled36": 24,
+        "trained46": 67,
+        "random46": 24,
+        "shuffled46": 48
+      }
+    },
+    {
+      "seed": 103,
+      "status": "completed",
+      "teacherWins": 63,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 24,
+        "trained12": 56,
+        "random12": 25,
+        "shuffled12": 25,
+        "trained24": 71,
+        "random24": 47,
+        "shuffled24": 26,
+        "trained36": 71,
+        "random36": 25,
+        "shuffled36": 47,
+        "trained46": 71,
+        "random46": 47,
+        "shuffled46": 25
+      }
+    },
+    {
+      "seed": 104,
+      "status": "completed",
+      "teacherWins": 65,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 2,
+        "trained12": 52,
+        "random12": 25,
+        "shuffled12": 17,
+        "trained24": 52,
+        "random24": 49,
+        "shuffled24": 2,
+        "trained36": 55,
+        "random36": 49,
+        "shuffled36": 26,
+        "trained46": 57,
+        "random46": 49,
+        "shuffled46": 49
+      }
+    },
+    {
+      "seed": 105,
+      "status": "completed",
+      "teacherWins": 67,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 25,
+        "trained12": 25,
+        "random12": 25,
+        "shuffled12": 25,
+        "trained24": 55,
+        "random24": 25,
+        "shuffled24": 25,
+        "trained36": 58,
+        "random36": 47,
+        "shuffled36": 46,
+        "trained46": 68,
+        "random46": 47,
+        "shuffled46": 25
+      }
+    },
+    {
+      "seed": 106,
+      "status": "completed",
+      "teacherWins": 66,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 0,
+        "trained12": 19,
+        "random12": 0,
+        "shuffled12": 0,
+        "trained24": 45,
+        "random24": 0,
+        "shuffled24": 22,
+        "trained36": 69,
+        "random36": 0,
+        "shuffled36": 0,
+        "trained46": 69,
+        "random46": 23,
+        "shuffled46": 22
+      }
+    },
+    {
+      "seed": 107,
+      "status": "completed",
+      "teacherWins": 64,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 1,
+        "trained12": 46,
+        "random12": 2,
+        "shuffled12": 23,
+        "trained24": 54,
+        "random24": 23,
+        "shuffled24": 21,
+        "trained36": 69,
+        "random36": 10,
+        "shuffled36": 23,
+        "trained46": 70,
+        "random46": 1,
+        "shuffled46": 23
+      }
+    },
+    {
+      "seed": 108,
+      "status": "completed",
+      "teacherWins": 62,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 0,
+        "trained12": 46,
+        "random12": 0,
+        "shuffled12": 0,
+        "trained24": 57,
+        "random24": 24,
+        "shuffled24": 0,
+        "trained36": 65,
+        "random36": 46,
+        "shuffled36": 24,
+        "trained46": 66,
+        "random46": 46,
+        "shuffled46": 47
+      }
+    },
+    {
+      "seed": 109,
+      "status": "completed",
+      "teacherWins": 67,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 24,
+        "trained12": 56,
+        "random12": 24,
+        "shuffled12": 24,
+        "trained24": 57,
+        "random24": 2,
+        "shuffled24": 24,
+        "trained36": 67,
+        "random36": 24,
+        "shuffled36": 24,
+        "trained46": 69,
+        "random46": 17,
+        "shuffled46": 25
+      }
+    },
+    {
+      "seed": 110,
+      "status": "completed",
+      "teacherWins": 66,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 0,
+        "trained12": 61,
+        "random12": 1,
+        "shuffled12": 24,
+        "trained24": 65,
+        "random24": 36,
+        "shuffled24": 1,
+        "trained36": 67,
+        "random36": 18,
+        "shuffled36": 50,
+        "trained46": 68,
+        "random46": 16,
+        "shuffled46": 0
+      }
+    },
+    {
+      "seed": 111,
+      "status": "completed",
+      "teacherWins": 70,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 2,
+        "trained12": 48,
+        "random12": 2,
+        "shuffled12": 25,
+        "trained24": 71,
+        "random24": 2,
+        "shuffled24": 2,
+        "trained36": 71,
+        "random36": 2,
+        "shuffled36": 17,
+        "trained46": 71,
+        "random46": 2,
+        "shuffled46": 3
+      }
+    },
+    {
+      "seed": 112,
+      "status": "completed",
+      "teacherWins": 64,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 24,
+        "trained12": 46,
+        "random12": 24,
+        "shuffled12": 1,
+        "trained24": 58,
+        "random24": 1,
+        "shuffled24": 1,
+        "trained36": 67,
+        "random36": 1,
+        "shuffled36": 1,
+        "trained46": 69,
+        "random46": 1,
+        "shuffled46": 46
+      }
+    },
+    {
+      "seed": 113,
+      "status": "completed",
+      "teacherWins": 64,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 25,
+        "trained12": 47,
+        "random12": 25,
+        "shuffled12": 25,
+        "trained24": 54,
+        "random24": 2,
+        "shuffled24": 25,
+        "trained36": 65,
+        "random36": 23,
+        "shuffled36": 47,
+        "trained46": 70,
+        "random46": 2,
+        "shuffled46": 2
+      }
+    },
+    {
+      "seed": 114,
+      "status": "completed",
+      "teacherWins": 62,
+      "messages": {
+        "trained12": 12,
+        "random12": 12,
+        "shuffled12": 12,
+        "trained24": 24,
+        "random24": 24,
+        "shuffled24": 24,
+        "trained36": 36,
+        "random36": 36,
+        "shuffled36": 36,
+        "trained46": 46,
+        "random46": 46,
+        "shuffled46": 46
+      },
+      "scores48": {
+        "rounds": 48,
+        "messages": {
+          "trained12": 12,
+          "random12": 12,
+          "shuffled12": 12,
+          "trained24": 24,
+          "random24": 24,
+          "shuffled24": 24,
+          "trained36": 36,
+          "random36": 36,
+          "shuffled36": 36,
+          "trained46": 46,
+          "random46": 46,
+          "shuffled46": 46
+        },
+        "alone": 16,
+        "trained12": 25,
+        "random12": 2,
+        "shuffled12": 2,
+        "trained24": 47,
+        "random24": 25,
+        "shuffled24": 25,
+        "trained36": 65,
+        "random36": 2,
+        "shuffled36": 2,
+        "trained46": 70,
+        "random46": 25,
+        "shuffled46": 19
+      }
+    }
+  ]
+}
