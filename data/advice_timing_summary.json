@@ -1,0 +1,217 @@
+{
+  "protocol": "docs/advice-timing-protocol.md",
+  "tau": 0.2,
+  "completed": 15,
+  "teacherReadinessFailures": [],
+  "invalidSeeds": [],
+  "meanWins": {
+    "24": {
+      "alone": 2.7333333333333334,
+      "early36": 50,
+      "spaced36": 39.86666666666667,
+      "randomTime36": 43.13333333333333,
+      "requested": 11.866666666666667,
+      "requestedRandom": 3.066666666666667,
+      "requestedShuffled": 5.933333333333334,
+      "full46": 50
+    },
+    "48": {
+      "alone": 8.4,
+      "early36": 63.6,
+      "spaced36": 62.666666666666664,
+      "randomTime36": 61.86666666666667,
+      "requested": 38.13333333333333,
+      "requestedRandom": 16.533333333333335,
+      "requestedShuffled": 17.733333333333334,
+      "full46": 67.73333333333333
+    }
+  },
+  "recoveredAt48": {
+    "alone": 0,
+    "early36": 12,
+    "spaced36": 11,
+    "randomTime36": 11,
+    "requested": 1,
+    "requestedRandom": 0,
+    "requestedShuffled": 0,
+    "full46": 15
+  },
+  "messagesUsed": {
+    "requestedMean": 10.2,
+    "requestedPerSeed": [
+      11,
+      12,
+      16,
+      7,
+      9,
+      6,
+      13,
+      11,
+      8,
+      9,
+      6,
+      11,
+      7,
+      9,
+      18
+    ]
+  },
+  "timing": {
+    "early36_minus_spaced36": {
+      "mean": 0.9333333333333333,
+      "bootstrap95": [
+        -3.1333333333333333,
+        4.733333333333333
+      ],
+      "perSeed": [
+        0,
+        -2,
+        0,
+        0,
+        -1,
+        4,
+        0,
+        7,
+        -1,
+        19,
+        -20,
+        2,
+        8,
+        0,
+        -2
+      ]
+    },
+    "randomTime36_minus_spaced36": {
+      "mean": -0.8,
+      "bootstrap95": [
+        -4.733333333333333,
+        2.6666666666666665
+      ],
+      "perSeed": [
+        3,
+        -7,
+        0,
+        -11,
+        4,
+        3,
+        0,
+        7,
+        1,
+        10,
+        -20,
+        3,
+        4,
+        -7,
+        -2
+      ]
+    },
+    "verdict": "no detectable timing difference"
+  },
+  "request": {
+    "requested_minus_spaced36": {
+      "mean": -24.533333333333335,
+      "bootstrap95": [
+        -33.86666666666667,
+        -16.266666666666666
+      ],
+      "perSeed": [
+        -10,
+        -15,
+        -22,
+        -46,
+        -17,
+        -29,
+        -42,
+        -5,
+        -28,
+        -3,
+        -67,
+        -19,
+        -38,
+        -25,
+        -2
+      ]
+    },
+    "requested_minus_strongerYokedControl": {
+      "mean": 15.933333333333334,
+      "bootstrap95": [
+        10,
+        21.666666666666668
+      ],
+      "perSeed": [
+        4,
+        0,
+        23,
+        23,
+        22,
+        0,
+        27,
+        0,
+        23,
+        23,
+        0,
+        15,
+        23,
+        20,
+        36
+      ]
+    },
+    "criteria": {
+      "fewerMessages": true,
+      "recovers": false,
+      "notWorseThanSpaced": false,
+      "contentMatters": true
+    },
+    "verdict": "NOT SUPPORTED"
+  },
+  "reported": {
+    "full46_minus_spaced36": {
+      "mean": 5.066666666666666,
+      "bootstrap95": [
+        2.2,
+        8.333333333333334
+      ],
+      "perSeed": [
+        3,
+        2,
+        0,
+        -1,
+        5,
+        10,
+        0,
+        9,
+        16,
+        20,
+        2,
+        3,
+        8,
+        1,
+        -2
+      ]
+    },
+    "requested_minus_alone": {
+      "mean": 29.733333333333334,
+      "bootstrap95": [
+        22.066666666666666,
+        37.86666666666667
+      ],
+      "perSeed": [
+        25,
+        24,
+        47,
+        23,
+        45,
+        21,
+        16,
+        46,
+        23,
+        23,
+        0,
+        45,
+        23,
+        20,
+        65
+      ]
+    }
+  }
+}

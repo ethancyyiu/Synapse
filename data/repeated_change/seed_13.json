@@ -1,0 +1,71 @@
+{
+ "status": "completed",
+ "check": false,
+ "teacherSeed": 33027,
+ "studentSeed": 33028,
+ "teacherBWins": 66,
+ "teacherAWins": 61,
+ "messagesPerArm": 92,
+ "messages": {
+  "trained": 92,
+  "random": 92,
+  "shuffled": 92
+ },
+ "points": [
+  {
+   "rounds": 0,
+   "rule": "B",
+   "messages": {
+    "trained": 0,
+    "random": 0,
+    "shuffled": 0
+   },
+   "alone": 0,
+   "trained": 0,
+   "random": 0,
+   "shuffled": 0
+  },
+  {
+   "rounds": 48,
+   "rule": "B",
+   "messages": {
+    "trained": 46,
+    "random": 46,
+    "shuffled": 46
+   },
+   "alone": 45,
+   "trained": 69,
+   "random": 23,
+   "shuffled": 23
+  },
+  {
+   "rounds": 72,
+   "rule": "A",
+   "messages": {
+    "trained": 69,
+    "random": 69,
+    "shuffled": 69
+   },
+   "alone": 69,
+   "trained": 66,
+   "random": 69,
+   "shuffled": 65
+  },
+  {
+   "rounds": 96,
+   "rule": "A",
+   "messages": {
+    "trained": 92,
+    "random": 92,
+    "shuffled": 92
+   },
+   "alone": 69,
+   "trained": 69,
+   "random": 69,
+   "shuffled": 69
+  }
+ ],
+ "teachersFrozen": true,
+ "synapsesUnchanged": true,
+ "runtimeSeconds": 180
+}

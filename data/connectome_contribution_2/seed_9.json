@@ -1,0 +1,55 @@
+{
+ "status": "completed",
+ "check": false,
+ "teacherSeed": 37019,
+ "studentSeed": 37020,
+ "worlds": {
+  "real": {
+   "status": "completed",
+   "teacherWins": 66,
+   "counts": {
+    "neural": {
+     "sent": 46,
+     "decoded": 46
+    },
+    "digital": {
+     "delivered": 46
+    },
+    "random": {
+     "sent": 46,
+     "decoded": 46
+    }
+   },
+   "points": [
+    {
+     "rounds": 0,
+     "alone": 1,
+     "neural": 1,
+     "digital": 1,
+     "random": 1
+    },
+    {
+     "rounds": 24,
+     "alone": 1,
+     "neural": 51,
+     "digital": 51,
+     "random": 1
+    },
+    {
+     "rounds": 48,
+     "alone": 23,
+     "neural": 69,
+     "digital": 69,
+     "random": 47
+    }
+   ],
+   "teacherFrozen": true,
+   "synapsesUnchanged": true
+  },
+  "rewired": {
+   "status": "stopped_teacher",
+   "teacherWins": 24
+  }
+ },
+ "runtimeSeconds": 219
+}

@@ -1,0 +1,489 @@
+{
+ "status": "completed",
+ "pilot": false,
+ "teacherSeed": 26621,
+ "studentSeed": 26622,
+ "teacherWins": 69,
+ "schedules": {
+  "early36": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20,
+   21,
+   22,
+   23,
+   24,
+   25,
+   26,
+   27,
+   28,
+   29,
+   30,
+   31,
+   32,
+   33,
+   34,
+   35
+  ],
+  "spaced36": [
+   0,
+   1,
+   3,
+   4,
+   5,
+   7,
+   8,
+   9,
+   10,
+   12,
+   13,
+   14,
+   15,
+   17,
+   18,
+   19,
+   21,
+   22,
+   23,
+   24,
+   26,
+   27,
+   28,
+   30,
+   31,
+   32,
+   33,
+   35,
+   36,
+   37,
+   38,
+   40,
+   41,
+   42,
+   44,
+   45
+  ],
+  "randomTime36": [
+   1,
+   2,
+   4,
+   5,
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   19,
+   20,
+   23,
+   24,
+   25,
+   26,
+   28,
+   29,
+   30,
+   31,
+   34,
+   35,
+   36,
+   37,
+   39,
+   40,
+   41,
+   43,
+   44,
+   45
+  ]
+ },
+ "requestsSent": 6,
+ "requestLog": [
+  {
+   "round": 0,
+   "cue": null,
+   "request": false,
+   "gapUsed": null
+  },
+  {
+   "round": 1,
+   "cue": 1,
+   "request": true,
+   "gapUsed": null
+  },
+  {
+   "round": 2,
+   "cue": 0,
+   "request": true,
+   "gapUsed": null
+  },
+  {
+   "round": 3,
+   "cue": 2,
+   "request": true,
+   "gapUsed": null
+  },
+  {
+   "round": 4,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 1.0281316667059985
+  },
+  {
+   "round": 5,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.8204091626243651
+  },
+  {
+   "round": 6,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.27896026449163047
+  },
+  {
+   "round": 7,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.7443791952335332
+  },
+  {
+   "round": 8,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.8354361068067246
+  },
+  {
+   "round": 9,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.2735926254078249
+  },
+  {
+   "round": 10,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.8150377068681759
+  },
+  {
+   "round": 11,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.6167782130919005
+  },
+  {
+   "round": 12,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.41664845868136613
+  },
+  {
+   "round": 13,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.7023859402251496
+  },
+  {
+   "round": 14,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.39302773353347653
+  },
+  {
+   "round": 15,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.33761904731518244
+  },
+  {
+   "round": 16,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.6985867345280633
+  },
+  {
+   "round": 17,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.4945576319155247
+  },
+  {
+   "round": 18,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.5323054274295579
+  },
+  {
+   "round": 19,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.5318818503479894
+  },
+  {
+   "round": 20,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.8098686980010538
+  },
+  {
+   "round": 21,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.3820455667391116
+  },
+  {
+   "round": 22,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.4836968249737572
+  },
+  {
+   "round": 23,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.4458017592433367
+  },
+  {
+   "round": 24,
+   "cue": null,
+   "request": false,
+   "gapUsed": null
+  },
+  {
+   "round": 25,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.3705817622603548
+  },
+  {
+   "round": 26,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.5478910899183153
+  },
+  {
+   "round": 27,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.24371615805036478
+  },
+  {
+   "round": 28,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.33949122983115027
+  },
+  {
+   "round": 29,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.5879316870820948
+  },
+  {
+   "round": 30,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.4109638344022064
+  },
+  {
+   "round": 31,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.2623388802650335
+  },
+  {
+   "round": 32,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.36812622223364827
+  },
+  {
+   "round": 33,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.35413729214027045
+  },
+  {
+   "round": 34,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.24271950768736675
+  },
+  {
+   "round": 35,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.38100907323986194
+  },
+  {
+   "round": 36,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.22497180200405215
+  },
+  {
+   "round": 37,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.21993142812618738
+  },
+  {
+   "round": 38,
+   "cue": 0,
+   "request": true,
+   "gapUsed": 0.10349684359862983
+  },
+  {
+   "round": 39,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.31977165155549725
+  },
+  {
+   "round": 40,
+   "cue": 1,
+   "request": true,
+   "gapUsed": 0.15670483453548567
+  },
+  {
+   "round": 41,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.4470790205609963
+  },
+  {
+   "round": 42,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.22765352826644009
+  },
+  {
+   "round": 43,
+   "cue": 1,
+   "request": true,
+   "gapUsed": 0.14765175736078565
+  },
+  {
+   "round": 44,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.22770261939030845
+  },
+  {
+   "round": 45,
+   "cue": 2,
+   "request": false,
+   "gapUsed": 0.35586958479290765
+  },
+  {
+   "round": 46,
+   "cue": 1,
+   "request": false,
+   "gapUsed": 0.2897834641887652
+  },
+  {
+   "round": 47,
+   "cue": 0,
+   "request": false,
+   "gapUsed": 0.4961016393680152
+  }
+ ],
+ "messages": {
+  "spaced36": 36,
+  "early36": 36,
+  "randomTime36": 36,
+  "requested": 6,
+  "requestedRandom": 6,
+  "requestedShuffled": 6,
+  "full46": 46
+ },
+ "points": [
+  {
+   "rounds": 0,
+   "messages": {
+    "spaced36": 0,
+    "early36": 0,
+    "randomTime36": 0,
+    "requested": 0,
+    "requestedRandom": 0,
+    "requestedShuffled": 0,
+    "full46": 0
+   },
+   "alone": 2,
+   "spaced36": 2,
+   "early36": 2,
+   "randomTime36": 2,
+   "requested": 2,
+   "requestedRandom": 2,
+   "requestedShuffled": 2,
+   "full46": 2
+  },
+  {
+   "rounds": 24,
+   "messages": {
+    "spaced36": 18,
+    "early36": 23,
+    "randomTime36": 18,
+    "requested": 3,
+    "requestedRandom": 3,
+    "requestedShuffled": 3,
+    "full46": 23
+   },
+   "alone": 2,
+   "spaced36": 26,
+   "early36": 31,
+   "randomTime36": 26,
+   "requested": 2,
+   "requestedRandom": 2,
+   "requestedShuffled": 2,
+   "full46": 31
+  },
+  {
+   "rounds": 48,
+   "messages": {
+    "spaced36": 36,
+    "early36": 36,
+    "randomTime36": 36,
+    "requested": 6,
+    "requestedRandom": 6,
+    "requestedShuffled": 6,
+    "full46": 46
+   },
+   "alone": 2,
+   "spaced36": 69,
+   "early36": 49,
+   "randomTime36": 49,
+   "requested": 2,
+   "requestedRandom": 2,
+   "requestedShuffled": 2,
+   "full46": 71
+  }
+ ],
+ "teacherFrozen": true,
+ "synapsesUnchanged": true,
+ "tau": 0.2,
+ "runtimeSeconds": 409
+}

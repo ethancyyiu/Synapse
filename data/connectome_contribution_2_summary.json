@@ -1,0 +1,169 @@
+{
+  "protocol": "docs/connectome-contribution-2-protocol.md",
+  "part": "A-D teaching",
+  "realCompleted": 15,
+  "rewiredCompleted": 0,
+  "teacherGates": [
+    {
+      "seed": 0,
+      "real": 63,
+      "rewired": 24
+    },
+    {
+      "seed": 1,
+      "real": 67,
+      "rewired": 25
+    },
+    {
+      "seed": 2,
+      "real": 68,
+      "rewired": 23
+    },
+    {
+      "seed": 3,
+      "real": 67,
+      "rewired": 25
+    },
+    {
+      "seed": 4,
+      "real": 66,
+      "rewired": 23
+    },
+    {
+      "seed": 5,
+      "real": 60,
+      "rewired": 22
+    },
+    {
+      "seed": 6,
+      "real": 63,
+      "rewired": 22
+    },
+    {
+      "seed": 7,
+      "real": 67,
+      "rewired": 22
+    },
+    {
+      "seed": 8,
+      "real": 65,
+      "rewired": 23
+    },
+    {
+      "seed": 9,
+      "real": 66,
+      "rewired": 24
+    },
+    {
+      "seed": 10,
+      "real": 69,
+      "rewired": 25
+    },
+    {
+      "seed": 11,
+      "real": 68,
+      "rewired": 24
+    },
+    {
+      "seed": 12,
+      "real": 63,
+      "rewired": 25
+    },
+    {
+      "seed": 13,
+      "real": 65,
+      "rewired": 23
+    },
+    {
+      "seed": 14,
+      "real": 70,
+      "rewired": 25
+    }
+  ],
+  "communication": {
+    "realNeural": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "rewiredNeural": []
+  },
+  "meanWins48": {
+    "real": {
+      "alone": 13.066666666666666,
+      "neural": 65.6,
+      "digital": 65.6,
+      "random": 30.533333333333335
+    },
+    "rewired": null
+  },
+  "q1_neural_minus_digital_48": {
+    "mean": 0,
+    "bootstrap95": [
+      0,
+      0
+    ],
+    "n": 15,
+    "perSeed": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "q1_verdict": "equivalent within +/-4",
+  "q2_neural_minus_random_48": {
+    "mean": 35.06666666666667,
+    "bootstrap95": [
+      24.933333333333334,
+      45.06666666666667
+    ],
+    "n": 15,
+    "perSeed": [
+      28,
+      51,
+      4,
+      39,
+      41,
+      0,
+      43,
+      46,
+      69,
+      22,
+      16,
+      49,
+      23,
+      26,
+      69
+    ]
+  },
+  "q3_realWiringTeachingContribution_48": null,
+  "q3_verdict": "stopped at teacher readiness",
+  "reported": {
+    "alone_real_minus_aloneS": null,
+    "digitalS_minus_neuralS": null
+  }
+}

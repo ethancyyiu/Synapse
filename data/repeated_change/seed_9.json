@@ -1,0 +1,7 @@
+{
+ "status": "stopped_teacher_B",
+ "teacherSeed": 33019,
+ "studentSeed": 33020,
+ "teacherBWins": 57,
+ "runtimeSeconds": 20
+}

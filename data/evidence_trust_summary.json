@@ -1,0 +1,304 @@
+{
+  "protocol": "docs/evidence-trust-protocol.md",
+  "finalSeeds": [
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44
+  ],
+  "completed": 15,
+  "teacherReadinessFailures": [],
+  "invalidSeeds": [],
+  "meanWins": {
+    "0": {
+      "alone": 0.9333333333333333,
+      "trained": 0.9333333333333333,
+      "stale": 0.9333333333333333,
+      "evidenceStale": 0.9333333333333333,
+      "evidenceTrained": 0.9333333333333333,
+      "discountStale": 0.9333333333333333,
+      "discountTrained": 0.9333333333333333
+    },
+    "24": {
+      "alone": 2.1333333333333333,
+      "trained": 54.53333333333333,
+      "stale": 0.6666666666666666,
+      "evidenceStale": 0.6666666666666666,
+      "evidenceTrained": 34.13333333333333,
+      "discountStale": 0.6666666666666666,
+      "discountTrained": 30.2
+    },
+    "48": {
+      "alone": 11.266666666666667,
+      "trained": 67.33333333333333,
+      "stale": 0.6666666666666666,
+      "evidenceStale": 8.4,
+      "evidenceTrained": 60,
+      "discountStale": 0.6666666666666666,
+      "discountTrained": 55.6
+    },
+    "96": {
+      "alone": 25.666666666666668,
+      "trained": 69.73333333333333,
+      "stale": 0.8,
+      "evidenceStale": 24.4,
+      "evidenceTrained": 69.73333333333333,
+      "discountStale": 0.8,
+      "discountTrained": 69.73333333333333
+    }
+  },
+  "meanTrust": {
+    "0": {
+      "evidenceStale": 0.5,
+      "evidenceTrained": 0.5
+    },
+    "24": {
+      "evidenceStale": 0.048831991383478796,
+      "evidenceTrained": 0.6602397602397603
+    },
+    "48": {
+      "evidenceStale": 0.025929633473788228,
+      "evidenceTrained": 0.8940637471913939
+    },
+    "96": {
+      "evidenceStale": 0.0150491113773048,
+      "evidenceTrained": 0.9622192088677068
+    }
+  },
+  "requirement1": {
+    "protection_evidenceStale_minus_stale_96": {
+      "mean": 23.6,
+      "bootstrap95": [
+        16.066666666666666,
+        30.933333333333334
+      ],
+      "perSeed": [
+        24,
+        46,
+        23,
+        24,
+        23,
+        46,
+        0,
+        17,
+        45,
+        35,
+        24,
+        24,
+        0,
+        23,
+        0
+      ]
+    },
+    "noHarm_evidenceStale_minus_alone_96": {
+      "mean": -1.2666666666666666,
+      "bootstrap95": [
+        -2.7333333333333334,
+        0
+      ],
+      "perSeed": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        -4,
+        -8,
+        -7,
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "holds": true
+  },
+  "requirement2": {
+    "benefitKept_evidenceTrained_minus_trained_48": {
+      "mean": -7.333333333333333,
+      "bootstrap95": [
+        -11.733333333333333,
+        -3.2666666666666666
+      ],
+      "perSeed": [
+        -4,
+        -5,
+        0,
+        -2,
+        -13,
+        -3,
+        -24,
+        -5,
+        0,
+        0,
+        -11,
+        0,
+        -21,
+        0,
+        -22
+      ]
+    },
+    "holds": false
+  },
+  "reported": {
+    "evidenceStale_minus_discountStale_96": {
+      "mean": 23.6,
+      "bootstrap95": [
+        16.066666666666666,
+        30.933333333333334
+      ],
+      "perSeed": [
+        24,
+        46,
+        23,
+        24,
+        23,
+        46,
+        0,
+        17,
+        45,
+        35,
+        24,
+        24,
+        0,
+        23,
+        0
+      ]
+    },
+    "evidenceTrained_minus_discountTrained_48": {
+      "mean": 4.4,
+      "bootstrap95": [
+        1.7333333333333334,
+        7.733333333333333
+      ],
+      "perSeed": [
+        3,
+        8,
+        0,
+        3,
+        8,
+        13,
+        0,
+        1,
+        0,
+        0,
+        6,
+        0,
+        0,
+        22,
+        2
+      ]
+    },
+    "discountStale_minus_alone_96": {
+      "mean": -24.866666666666667,
+      "bootstrap95": [
+        -32.93333333333333,
+        -16.866666666666667
+      ],
+      "perSeed": [
+        -24,
+        -46,
+        -23,
+        -24,
+        -23,
+        -46,
+        0,
+        -21,
+        -53,
+        -42,
+        -24,
+        -24,
+        0,
+        -23,
+        0
+      ]
+    },
+    "discountTrained_minus_trained_48": {
+      "mean": -11.733333333333333,
+      "bootstrap95": [
+        -16.333333333333332,
+        -7.133333333333334
+      ],
+      "perSeed": [
+        -7,
+        -13,
+        0,
+        -5,
+        -21,
+        -16,
+        -24,
+        -6,
+        0,
+        0,
+        -17,
+        0,
+        -21,
+        -22,
+        -24
+      ]
+    },
+    "stale_minus_alone_96": {
+      "mean": -24.866666666666667,
+      "bootstrap95": [
+        -32.93333333333333,
+        -16.866666666666667
+      ],
+      "perSeed": [
+        -24,
+        -46,
+        -23,
+        -24,
+        -23,
+        -46,
+        0,
+        -21,
+        -53,
+        -42,
+        -24,
+        -24,
+        0,
+        -23,
+        0
+      ]
+    },
+    "trained_minus_alone_48": {
+      "mean": 56.06666666666667,
+      "bootstrap95": [
+        50.4,
+        61.6
+      ],
+      "perSeed": [
+        39,
+        50,
+        46,
+        67,
+        66,
+        46,
+        69,
+        52,
+        45,
+        45,
+        64,
+        69,
+        68,
+        46,
+        69
+      ]
+    }
+  },
+  "verdict": "PARTIAL"
+}

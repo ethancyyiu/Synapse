@@ -1,0 +1,95 @@
+{
+  "protocol": "docs/connectome-contribution-2-protocol.md",
+  "part": "E diagnostic",
+  "seeds": [
+    {
+      "seed": 0,
+      "gatePassed": true,
+      "teacherGateWins": 61,
+      "heldOutRounds": 69,
+      "identicalAllNeuronsShare": 0.0763888888888889,
+      "identicalMbonShare": 0.8611111111111112,
+      "adviceDiffersFromUntrainedShare": 0.625,
+      "accuracy": {
+        "cueOnly": 0.855072463768116,
+        "trainedActivity": 0.37681159420289856,
+        "untrainedActivity": 0.37681159420289856,
+        "trainedGroupRates": 0.8840579710144928,
+        "untrainedGroupRates": 0.7536231884057971,
+        "permutationNull95th": 0.4057971014492754
+      }
+    },
+    {
+      "seed": 1,
+      "gatePassed": true,
+      "teacherGateWins": 69,
+      "heldOutRounds": 69,
+      "identicalAllNeuronsShare": 0.006944444444444444,
+      "identicalMbonShare": 0.8194444444444444,
+      "adviceDiffersFromUntrainedShare": 0.6875,
+      "accuracy": {
+        "cueOnly": 0.9710144927536232,
+        "trainedActivity": 0.37681159420289856,
+        "untrainedActivity": 0.4057971014492754,
+        "trainedGroupRates": 0.9855072463768116,
+        "untrainedGroupRates": 0.9130434782608695,
+        "permutationNull95th": 0.391304347826087
+      }
+    },
+    {
+      "seed": 2,
+      "gatePassed": true,
+      "teacherGateWins": 63,
+      "heldOutRounds": 69,
+      "identicalAllNeuronsShare": 0.020833333333333332,
+      "identicalMbonShare": 0.7916666666666666,
+      "adviceDiffersFromUntrainedShare": 0.6736111111111112,
+      "accuracy": {
+        "cueOnly": 0.9565217391304348,
+        "trainedActivity": 0.2608695652173913,
+        "untrainedActivity": 0.34782608695652173,
+        "trainedGroupRates": 0.9565217391304348,
+        "untrainedGroupRates": 0.9130434782608695,
+        "permutationNull95th": 0.37681159420289856
+      }
+    },
+    {
+      "seed": 3,
+      "gatePassed": true,
+      "teacherGateWins": 62,
+      "heldOutRounds": 69,
+      "identicalAllNeuronsShare": 0.0,
+      "identicalMbonShare": 0.8472222222222222,
+      "adviceDiffersFromUntrainedShare": 0.6597222222222222,
+      "accuracy": {
+        "cueOnly": 0.9710144927536232,
+        "trainedActivity": 0.391304347826087,
+        "untrainedActivity": 0.37681159420289856,
+        "trainedGroupRates": 0.9420289855072463,
+        "untrainedGroupRates": 0.9130434782608695,
+        "permutationNull95th": 0.391304347826087
+      }
+    },
+    {
+      "seed": 4,
+      "gatePassed": true,
+      "teacherGateWins": 69,
+      "heldOutRounds": 69,
+      "identicalAllNeuronsShare": 0.006944444444444444,
+      "identicalMbonShare": 0.7916666666666666,
+      "adviceDiffersFromUntrainedShare": 0.6944444444444444,
+      "accuracy": {
+        "cueOnly": 0.9420289855072463,
+        "trainedActivity": 0.3333333333333333,
+        "untrainedActivity": 0.34782608695652173,
+        "trainedGroupRates": 0.9565217391304348,
+        "untrainedGroupRates": 0.927536231884058,
+        "permutationNull95th": 0.391304347826087
+      }
+    }
+  ],
+  "gatedSeeds": 5,
+  "meanGainOverCueOnly": -0.591304347826087,
+  "meanGainOverUntrainedActivity": -0.023188405797101453,
+  "decision": "STOP arm E: no endogenous learned teaching signal found"
+}

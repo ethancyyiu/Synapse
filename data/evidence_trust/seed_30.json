@@ -1,0 +1,81 @@
+{
+ "status": "completed",
+ "check": false,
+ "teacherSeed": 28061,
+ "studentSeed": 28062,
+ "teacherWins": 67,
+ "staleTeacherWins": 71,
+ "messages": {
+  "trained": 92,
+  "stale": 92,
+  "evidenceStale": 92,
+  "evidenceTrained": 92,
+  "discountStale": 92,
+  "discountTrained": 92
+ },
+ "points": [
+  {
+   "rounds": 0,
+   "alone": 1,
+   "trained": 1,
+   "stale": 1,
+   "evidenceStale": 1,
+   "evidenceTrained": 1,
+   "discountStale": 1,
+   "discountTrained": 1,
+   "trust": {
+    "evidenceStale": 0.5,
+    "evidenceTrained": 0.5
+   }
+  },
+  {
+   "rounds": 24,
+   "alone": 0,
+   "trained": 54,
+   "stale": 0,
+   "evidenceStale": 0,
+   "evidenceTrained": 48,
+   "discountStale": 0,
+   "discountTrained": 25,
+   "trust": {
+    "evidenceStale": 0.05,
+    "evidenceTrained": 0.8
+   }
+  },
+  {
+   "rounds": 48,
+   "alone": 25,
+   "trained": 64,
+   "stale": 1,
+   "evidenceStale": 25,
+   "evidenceTrained": 60,
+   "discountStale": 1,
+   "discountTrained": 57,
+   "trust": {
+    "evidenceStale": 0.02702702702702703,
+    "evidenceTrained": 0.9545454545454546
+   }
+  },
+  {
+   "rounds": 96,
+   "alone": 25,
+   "trained": 70,
+   "stale": 1,
+   "evidenceStale": 25,
+   "evidenceTrained": 70,
+   "discountStale": 1,
+   "discountTrained": 70,
+   "trust": {
+    "evidenceStale": 0.015384615384615385,
+    "evidenceTrained": 0.9830508474576272
+   }
+  }
+ ],
+ "finalTrust": {
+  "evidenceStale": 0.015384615384615385,
+  "evidenceTrained": 0.9830508474576272
+ },
+ "teachersFrozen": true,
+ "synapsesUnchanged": true,
+ "runtimeSeconds": 500
+}

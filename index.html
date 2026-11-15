@@ -960,6 +960,20 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
                   <tr><th>Does it hold on a simulator we wrote ourselves?</th><td>10 of 15 completed</td><td>Taught 70, shuffled messages 28, alone 4. Lead over the best control in each run: 35.0. On 5 runs the teacher did not learn well enough and the run stopped</td><td class="ok">Yes, at the minimum number of runs</td></tr>
                 </tbody>
               </table></div>
+              <details class="panel"><summary>New studies: five follow-up tests</summary>
+              <p class="legend">Run with rules fixed in advance and fresh seeds. <a href="docs/synapse-five-study-summary.md">Summary and reports</a>.</p>
+              <div class="scroll"><table class="studies">
+                <thead><tr><th>Question</th><th>Runs</th><th>What we found (wins out of 72, Fly A unplugged)</th><th>Met its rule set in advance?</th></tr></thead>
+                <tbody>
+                  <tr><th>Do 36 of the 46 messages reliably bring recovery? (fresh runs)</th><td>15</td><td>36 trained 60, random 25, alone 13. Lead over the best matched control: 26.5. But only 9 of 15 reached 58; all 46 messages: 15 of 15</td><td class="no">Partly: benefit yes, reliable recovery no</td></tr>
+                  <tr><th>Does it matter when 36 messages are sent?</th><td>15</td><td>Early 64, evenly spaced 63, random times 62 at 48 rounds: no detectable difference (early was ahead at 24 rounds)</td><td class="no">No difference found</td></tr>
+                  <tr><th>Can Fly B ask for advice only when unsure?</th><td>15</td><td>It asked about 10 times. The advice helped (16 above random advice at the same moments), but only 1 of 15 recovered: 38 against 63 for 36 spaced messages</td><td class="no">No</td></tr>
+                  <tr><th>Can Fly B reject an outdated teacher without losing a good one?</th><td>15</td><td>Trust that starts neutral removed the outdated teacher's harm (1 below learning alone; the earlier rule left 7.5). But it trusted a good teacher more slowly: 7 behind at 48 rounds, equal by 96</td><td class="no">Partly</td></tr>
+                  <tr><th>Does teaching help when the rule changes back?</th><td>14 of 15 completed</td><td>After the first change: lead 27.8. After changing back to the old rule, Fly B alone recovered within 24 rounds; lead 0. One teacher missed its readiness bar</td><td class="no">No</td></tr>
+                  <tr><th>Does the fly brain add anything beyond a digital message?</th><td>15</td><td>Spike and digital advice: 65.6 and 65.6, identical on every run. Fly A's neurons carry no advice beyond what it senses. A rewired brain could not learn the task (about chance)</td><td class="no">No contribution to teaching</td></tr>
+                </tbody>
+              </table></div>
+              </details>
               <details><summary>Full write-up of each study, with confidence intervals and links</summary>
               <p class="legend">All locked in advance; Fly B is always tested with Fly A unplugged. Scores are wins out of 72.</p>
               <p class="finding"><strong>Fixed rule (20 pairs): passed.</strong> After 6 rounds, taught Fly B led the best control by <strong>+10.3</strong> (95% CI +7.3 to +13.6). Students alone catch up by round 288.</p>
@@ -1047,6 +1061,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
               <tr><th>Fault response, small change</th><td>3 runs: Fly B alone recovered within 24 rounds</td><td>Advice is not needed when recovery is quick</td></tr>
               <tr><th>Fault response, large change (pilot)</th><td>3 runs: leads of 25, 0, 25; the rule needed all three</td><td>Same direction, too few runs</td></tr>
               <tr><th>Fault response, large change (full test)</th><td><strong>Passed</strong>, 15 runs: lead of 19.0 (95% CI 11.8 to 26.2)</td><td>The effect is not specific to Rock-Paper-Scissors</td></tr>
+              <tr><th>Rule changes, then changes back</th><td><strong>Failed</strong>, 14 runs: lead of 27.8 after the first change, 0 after changing back</td><td>Advice helps with a new rule, not with returning to one Fly B already knows</td></tr>
             </tbody>
           </table></div>
           <h4>What the results support</h4>
@@ -1057,17 +1072,18 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
               <tr><th>Advise after a change, not all the time</th><td><strong>Supported, two tasks:</strong> leads of 24.9 and 19.0 after a full change; nothing added after a small one</td></tr>
               <tr><th>Send a suggestion, never the model</th><td><strong>Supported:</strong> under 12 bytes, between differently built learners</td></tr>
               <tr><th>The student keeps what it learned</th><td><strong>Supported:</strong> every score is measured with the teacher unplugged</td></tr>
-              <tr><th>The student checks the adviser</th><td><strong>Partly:</strong> recovered 34 of 42 wins a bad teacher cost; failed its no-harm rule</td></tr>
+              <tr><th>The student checks the adviser</th><td><strong>Partly:</strong> trust that starts neutral removed an outdated teacher's harm, but slowed learning from a good teacher by about 7 wins at 48 rounds</td></tr>
               <tr><th>Choosing among several advisers</th><td><strong>Partly:</strong> matched the good teacher on 14 of 14 runs; lead over following both just missed the bar</td></tr>
-              <tr><th>Noticing the change and asking for help</th><td><strong>Not tested:</strong> here the change point is known</td></tr>
+              <tr><th>Asking for help when unsure</th><td><strong>Not supported:</strong> Fly B asked about 10 times and recovered on 1 of 15 runs; right after a change it is often confidently wrong</td></tr>
+              <tr><th>How many messages</th><td><strong>Partly:</strong> 36 of 46 helped strongly but recovered only 9 of 15 fresh runs; all 46 recovered 15 of 15. When they were sent made no detectable difference</td></tr>
             </tbody>
           </table></div>
           <h3>Limits and boundaries</h3>
           <ul class="legend">
             <li><strong>Not a new learning method.</strong> A teacher suggesting moves is "action advising" (<a href="https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2013/docs/p1053.pdf" rel="noopener">Torrey &amp; Taylor 2013</a>). What is new is the test: advice sent as spikes inside a fly connectome, to a differently built student, against controls fixed in advance.</li>
-            <li><strong>Spikes are not better than a cable.</strong> Sending the same advice digitally worked just as well.</li>
+            <li><strong>Spikes are not better than a cable.</strong> Spike and plain digital advice gave identical learning on 15 of 15 runs, and Fly A's neurons carry no advice beyond what it senses. The fly brain is the setting, not the source of the advantage.</li>
             <li><strong>It is a hybrid brain.</strong> The connectome senses and carries the message; a small learned readout picks the move, and Fly B's imitation step is engineered.</li>
-            <li><strong>Fly B trusts its teacher too much.</strong> An out-of-date teacher kept it stuck at its starting score. Letting Fly B judge the teacher by its own wins fixed most of that, not all.</li>
+            <li><strong>Fly B trusts its teacher too much.</strong> An out-of-date teacher kept it stuck at its starting score. Judging the teacher by its own wins, starting from neutral trust, removed that harm, but made Fly B slower to trust a good teacher.</li>
             <li><strong>Faster, not better in the end.</strong> Fly B learning alone catches up given enough rounds.</li>
             <li><strong>Small tasks, in simulation.</strong> Both confirmed tasks have three cues and three choices. The live Challenge is a demonstration, not a new locked result; failed older experiments are in the <a href="archive.html">archive</a>.</li>
           </ul>
