@@ -1,0 +1,441 @@
+{
+  "protocol": "docs/synapse-fraud-neural-protocol.md",
+  "seedSet": [
+    420,
+    421,
+    422,
+    423,
+    424
+  ],
+  "threshold": 58,
+  "checkpointRounds": [
+    0,
+    24,
+    48,
+    96
+  ],
+  "evaluationTrials": 72,
+  "completedSeeds": 5,
+  "positiveAdvantageSeeds": 4,
+  "meanAdvantage48": 18.8,
+  "totalMessages": 1440,
+  "totalDecoded": 1440,
+  "successGatePassed": true,
+  "seeds": [
+    {
+      "seed": 420,
+      "status": "completed",
+      "teacherWins": 71,
+      "teacherGate": 58,
+      "teacherEpisodeWins": [
+        9,
+        21,
+        23,
+        22,
+        21,
+        19,
+        23,
+        19,
+        20,
+        21,
+        18,
+        18
+      ],
+      "points": [
+        {
+          "rounds": 0,
+          "alone": 1,
+          "trained": 1,
+          "random": 1,
+          "shuffled": 1
+        },
+        {
+          "rounds": 24,
+          "alone": 0,
+          "trained": 47,
+          "random": 1,
+          "shuffled": 47
+        },
+        {
+          "rounds": 48,
+          "alone": 23,
+          "trained": 47,
+          "random": 66,
+          "shuffled": 47
+        },
+        {
+          "rounds": 96,
+          "alone": 24,
+          "trained": 72,
+          "random": 68,
+          "shuffled": 48
+        }
+      ],
+      "recoveryAt": {
+        "alone": null,
+        "trained": 96,
+        "random": 48,
+        "shuffled": null
+      },
+      "advantage48": -19,
+      "messages": {
+        "trained": 96,
+        "random": 96,
+        "shuffled": 96
+      },
+      "decoded": {
+        "trained": 96,
+        "random": 96,
+        "shuffled": 96
+      },
+      "spikeCounts": {
+        "trained": [
+          757,
+          523
+        ],
+        "random": [
+          509,
+          445
+        ],
+        "shuffled": [
+          749,
+          537
+        ]
+      },
+      "teacherFrozen": true,
+      "synapsesUnchanged": true
+    },
+    {
+      "seed": 421,
+      "status": "completed",
+      "teacherWins": 71,
+      "teacherGate": 58,
+      "teacherEpisodeWins": [
+        7,
+        16,
+        19,
+        23,
+        18,
+        21,
+        21,
+        21,
+        20,
+        20,
+        18,
+        22
+      ],
+      "points": [
+        {
+          "rounds": 0,
+          "alone": 0,
+          "trained": 0,
+          "random": 0,
+          "shuffled": 0
+        },
+        {
+          "rounds": 24,
+          "alone": 0,
+          "trained": 48,
+          "random": 0,
+          "shuffled": 24
+        },
+        {
+          "rounds": 48,
+          "alone": 0,
+          "trained": 72,
+          "random": 0,
+          "shuffled": 48
+        },
+        {
+          "rounds": 96,
+          "alone": 3,
+          "trained": 72,
+          "random": 48,
+          "shuffled": 48
+        }
+      ],
+      "recoveryAt": {
+        "alone": null,
+        "trained": 48,
+        "random": null,
+        "shuffled": null
+      },
+      "advantage48": 24,
+      "messages": {
+        "trained": 96,
+        "random": 96,
+        "shuffled": 96
+      },
+      "decoded": {
+        "trained": 96,
+        "random": 96,
+        "shuffled": 96
+      },
+      "spikeCounts": {
+        "trained": [
+          771,
+          446
+        ],
+        "random": [
+          487,
+          529
+        ],
+        "shuffled": [
+          764,
+          445
+        ]
+      },
+      "teacherFrozen": true,
+      "synapsesUnchanged": true
+    },
+    {
+      "seed": 422,
+      "status": "completed",
+      "teacherWins": 70,
+      "teacherGate": 58,
+      "teacherEpisodeWins": [
+        10,
+        21,
+        18,
+        18,
+        22,
+        19,
+        23,
+        22,
+        22,
+        20,
+        17,
+        23
+      ],
+      "points": [
+        {
+          "rounds": 0,
+          "alone": 1,
+          "trained": 1,
+          "random": 1,
+          "shuffled": 1
+        },
+        {
+          "rounds": 24,
+          "alone": 0,
+          "trained": 47,
+          "random": 2,
+          "shuffled": 47
+        },
+        {
+          "rounds": 48,
+          "alone": 0,
+          "trained": 71,
+          "random": 48,
+          "shuffled": 46
+        },
+        {
+          "rounds": 96,
+          "alone": 48,
+          "trained": 71,
+          "random": 71,
+          "shuffled": 47
+        }
+      ],
+      "recoveryAt": {
+        "alone": null,
+        "trained": 48,
+        "random": 96,
+        "shuffled": null
+      },
+      "advantage48": 23,
+      "messages": {
+        "trained": 96,
+        "random": 96,
+        "shuffled": 96
+      },
+      "decoded": {
+        "trained": 96,
+        "random": 96,
+        "shuffled": 96
+      },
+      "spikeCounts": {
+        "trained": [
+          757,
+          484
+        ],
+        "random": [
+          534,
+          474
+        ],
+        "shuffled": [
+          746,
+          486
+        ]
+      },
+      "teacherFrozen": true,
+      "synapsesUnchanged": true
+    },
+    {
+      "seed": 423,
+      "status": "completed",
+      "teacherWins": 69,
+      "teacherGate": 58,
+      "teacherEpisodeWins": [
+        19,
+        22,
+        21,
+        19,
+        22,
+        20,
+        21,
+        22,
+        20,
+        21,
+        20,
+        14
+      ],
+      "points": [
+        {
+          "rounds": 0,
+          "alone": 0,
+          "trained": 0,
+          "random": 0,
+          "shuffled": 0
+        },
+        {
+          "rounds": 24,
+          "alone": 0,
+          "trained": 59,
+          "random": 0,
+          "shuffled": 42
+        },
+        {
+          "rounds": 48,
+          "alone": 26,
+          "trained": 70,
+          "random": 45,
+          "shuffled": 46
+        },
+        {
+          "rounds": 96,
+          "alone": 41,
+          "trained": 72,
+          "random": 63,
+          "shuffled": 48
+        }
+      ],
+      "recoveryAt": {
+        "alone": null,
+        "trained": 24,
+        "random": 96,
+        "shuffled": null
+      },
+      "advantage48": 24,
+      "messages": {
+        "trained": 96,
+        "random": 96,
+        "shuffled": 96
+      },
+      "decoded": {
+        "trained": 96,
+        "random": 96,
+        "shuffled": 96
+      },
+      "spikeCounts": {
+        "trained": [
+          743,
+          534
+        ],
+        "random": [
+          464,
+          456
+        ],
+        "shuffled": [
+          728,
+          537
+        ]
+      },
+      "teacherFrozen": true,
+      "synapsesUnchanged": true
+    },
+    {
+      "seed": 424,
+      "status": "completed",
+      "teacherWins": 71,
+      "teacherGate": 58,
+      "teacherEpisodeWins": [
+        13,
+        19,
+        17,
+        21,
+        21,
+        23,
+        19,
+        20,
+        21,
+        20,
+        20,
+        20
+      ],
+      "points": [
+        {
+          "rounds": 0,
+          "alone": 0,
+          "trained": 0,
+          "random": 0,
+          "shuffled": 0
+        },
+        {
+          "rounds": 24,
+          "alone": 0,
+          "trained": 48,
+          "random": 0,
+          "shuffled": 24
+        },
+        {
+          "rounds": 48,
+          "alone": 1,
+          "trained": 66,
+          "random": 24,
+          "shuffled": 24
+        },
+        {
+          "rounds": 96,
+          "alone": 24,
+          "trained": 72,
+          "random": 59,
+          "shuffled": 48
+        }
+      ],
+      "recoveryAt": {
+        "alone": null,
+        "trained": 48,
+        "random": 96,
+        "shuffled": null
+      },
+      "advantage48": 42,
+      "messages": {
+        "trained": 96,
+        "random": 96,
+        "shuffled": 96
+      },
+      "decoded": {
+        "trained": 96,
+        "random": 96,
+        "shuffled": 96
+      },
+      "spikeCounts": {
+        "trained": [
+          711,
+          459
+        ],
+        "random": [
+          511,
+          446
+        ],
+        "shuffled": [
+          732,
+          457
+        ]
+      },
+      "teacherFrozen": true,
+      "synapsesUnchanged": true
+    }
+  ]
+}

@@ -50,6 +50,8 @@ python -m fraud.server
 
 Open <http://localhost:8767/fraud.html>, select a mock account and purchase, then open **Neural Teaching**. The saved Fly A episode scores and measured DN message trace appear first. Click **Next neural message**, then **Disconnect Fly A & test Fly B** to run the selected purchase cue in a browser worker. The table shows the five frozen comparisons and the predeclared gate. The study tests adaptation in a small synthetic policy task, not real-world fraud detection or biological fly-to-fly teaching.
 
+The [five-seed result](../data/fraud_neural/summary.json) passed its predeclared synthetic teaching gate: trained Fly B led the strongest control after 48 rounds in four of five seeds, with mean lead 18.8/72, and all 1,440 advice messages decoded. Seed 420 failed the per-seed comparison: trained Fly B scored 47/72, versus 66/72 with random advice. No seed or threshold was replaced after this result. The selected live Nessie mock purchase was used only to create a browser probe cue; Nessie purchases supplied no experiment labels or rewards.
+
 None of these synthetic scores measures real banking fraud accuracy. The new family shift showed that even a classifier with high recall can be unusable when false alerts are high. No parameters or thresholds were adjusted after the final test.
 
 ## 60-second judge path
