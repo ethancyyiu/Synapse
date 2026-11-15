@@ -16,6 +16,7 @@ from .config import load_env
 from .core import evidence, features, fixture_teacher, make_dataset, risk_band, score
 from .nessie import NessieClient, NessieUnavailable
 from .teacher import frontier_available, teacher_for_demo, teacher_model, teacher_provider
+from .tenure_experiment import FEATURES as TENURE_FEATURES, extended_features, vector as tenure_vector
 
 ROOT = Path(__file__).resolve().parent.parent
 load_env()
@@ -26,6 +27,15 @@ SCALE = np.array(ARTIFACT["scaler"]["scale"])
 MODELS = {name: np.array(weights) for name, weights in ARTIFACT["models"].items()}
 FRONTIER_PATH = ROOT / "data" / "fraud" / "frontier-student.json"
 FRONTIER_STUDENT = None
+TENURE_PATH = ROOT / "data" / "fraud" / "tenure-development.json"
+TENURE_STUDENTS = None
+if TENURE_PATH.exists():
+    candidate = json.loads(TENURE_PATH.read_text(encoding="utf-8"))
+    if candidate.get("features") == list(TENURE_FEATURES):
+        TENURE_STUDENTS = {"mean": np.array(candidate["mean"]),
+            "scale": np.array(candidate["scale"]),
+            "models": {"tenure_control": np.array(candidate["weights"]["matched_control"]),
+                       "tenure_gemini": np.array(candidate["weights"]["gemini_teacher"])}}
 if FRONTIER_PATH.exists():
     try:
         candidate = json.loads(FRONTIER_PATH.read_text(encoding="utf-8"))
@@ -80,11 +90,21 @@ def scored_rows(account_id: str, source: str | None = None) -> list[dict]:
     for row in rows_for(account_id, selected_source):
         f = row["features"]
         scores = {name: round(score(model, f, MEAN, SCALE), 4) for name, model in MODELS.items()}
+        extended = extended_features(row)
+        if TENURE_STUDENTS:
+            x = (tenure_vector(extended) - TENURE_STUDENTS["mean"]) / TENURE_STUDENTS["scale"]
+            for name, weights in TENURE_STUDENTS["models"].items():
+                scores[name] = round(float(1 / (1 + np.exp(-np.clip(weights[0] + x @ weights[1:], -25, 25)))), 4)
+        indicators = evidence(f)
+        if extended["same_merchant_count"] >= 2:
+            older = extended["merchant_older_count"]
+            indicators.append(f"{older} earlier purchases at this merchant more than 24 hours ago")
         scored.append({"transaction": row["transaction"], "scores": scores,
                        "bands": {name: risk_band(value) for name, value in scores.items()},
-                       "evidence": evidence(f), "context": {"history_purchases": f["history_size"],
+                       "evidence": indicators, "context": {"history_purchases": f["history_size"],
                          "historical_median": f["history_median"], "purchases_last_24h": f["recent_count"],
-                         "same_merchant_last_24h": f["same_merchant_count"]},
+                         "same_merchant_last_24h": f["same_merchant_count"],
+                         "merchant_older_count": extended["merchant_older_count"]},
                        "teacher_fixture": fixture_teacher(f),
                        "synthetic_label": row["label"] if selected_source == "fixture" else None})
     return scored
@@ -151,6 +171,7 @@ class Handler(SimpleHTTPRequestHandler):
                     "frontier_student_trained": FRONTIER_STUDENT is not None,
                     "frontier_student_messages": FRONTIER_STUDENT["teacher_examples"] if FRONTIER_STUDENT else 0,
                     "frontier_student_provider": FRONTIER_STUDENT.get("teacher_provider", "openai") if FRONTIER_STUDENT else None,
+                    "tenure_student_trained": TENURE_STUDENTS is not None,
                     "model": "local NumPy logistic classifier", "prototype": True})
             if parsed.path == "/api/fraud/accounts":
                 selected_source = source_mode(query.get("source", [None])[0])

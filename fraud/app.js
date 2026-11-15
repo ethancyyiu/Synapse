@@ -155,6 +155,17 @@ async function init() {
       option.value = 'frontier_guided';
       $('model-select').append(option);
     }
+    if (status.tenure_student_trained) {
+      for (const [value, label] of [
+        ['tenure_control', 'Seven-feature local control'],
+        ['tenure_gemini', 'Seven-feature Gemini-guided student (12 messages)']]) {
+        const option = el('option', label);
+        option.value = value;
+        $('model-select').append(option);
+      }
+      state.model = 'tenure_control';
+      $('model-select').value = state.model;
+    }
     const labels = { independent: 'Independent', guided: 'Teacher-guided', shuffled: 'Shuffled advice' };
     $('metric-body').replaceChildren(...['independent', 'guided', 'shuffled'].map(name => {
       const result = research.arms[name]; const tr = el('tr');
