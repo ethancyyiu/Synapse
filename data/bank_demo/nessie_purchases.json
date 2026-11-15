@@ -1,0 +1,1410 @@
+{
+ "source": "nessie",
+ "base": "https://v2-prod-api.nessieisreal.com",
+ "customerId": "cust_01m7e5qan662ttf3xz4j87t51z",
+ "accountId": "acct_01m7e5qarat8x9szdjzr9sh1a5",
+ "merchantId": "merch_01m7e5qava4n1yr1cwzdwzmavq",
+ "fetchedAt": "2026-11-14",
+ "purchases": [
+  {
+   "_id": "txn_01m7e5vgkrda9evxpf7qwvhq02",
+   "amount": 5.0,
+   "description": "synapse row 41605",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5vfygznkpx3mwd5x760c5",
+   "amount": 195.66,
+   "description": "synapse row 73656",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5vf9h57sg88zjsaqfwwxy",
+   "amount": 47.5,
+   "description": "synapse row 126511",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5vekzg91v2enpy47pd8cs",
+   "amount": 49.9,
+   "description": "synapse row 4891",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5vdxbz2p897vz9yq0f0w8",
+   "amount": 9.95,
+   "description": "synapse row 132881",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5vd4ezyas441hycf5dxq9",
+   "amount": 1.0,
+   "description": "synapse row 47743",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5vcc0fmc880afbt4sg35b",
+   "amount": 34.95,
+   "description": "synapse row 78962",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5vbk25h3hgye8n8fna547",
+   "amount": 38.0,
+   "description": "synapse row 69573",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5vate2yks4en9a83jj6ab",
+   "amount": 3.96,
+   "description": "synapse row 84062",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v9tdwvqw4anrc983brq8",
+   "amount": 2.0,
+   "description": "synapse row 47596",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v91pg8gkxfjn66vsr12g",
+   "amount": 4.99,
+   "description": "synapse row 103917",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v8c7j7rwf2crh6k68peq",
+   "amount": 18.92,
+   "description": "synapse row 87494",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v7pjwbx7ywtst53ma5ak",
+   "amount": 28.94,
+   "description": "synapse row 117072",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v71kx9ksh7b1hstdgman",
+   "amount": 3.6,
+   "description": "synapse row 117961",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v6chy1n9frhp0v4ymqs1",
+   "amount": 529.52,
+   "description": "synapse row 110913",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v5pswgev5fmaxgzf6b9q",
+   "amount": 1.93,
+   "description": "synapse row 121334",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v51ezpna9vex0h6catf5",
+   "amount": 27.59,
+   "description": "synapse row 113600",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v4bwmhq76ye026mqd2r4",
+   "amount": 1.0,
+   "description": "synapse row 95347",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v3pwfg0sa29q80vkq2ar",
+   "amount": 15.9,
+   "description": "synapse row 115731",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v31aq7kjbwwrde7mjqv3",
+   "amount": 2.69,
+   "description": "synapse row 136649",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v2by00c4e7csgvjdx59e",
+   "amount": 208.04,
+   "description": "synapse row 19969",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v1p57t7qjw0vf5dnk8nw",
+   "amount": 97.0,
+   "description": "synapse row 5911",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v118e7qkkz7j5jj4g9j7",
+   "amount": 94.82,
+   "description": "synapse row 85690",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5v0bj9abrt61sdwetzfwg",
+   "amount": 35.39,
+   "description": "synapse row 66980",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tzpf6yygxyn43e87s3j1",
+   "amount": 18.12,
+   "description": "synapse row 85115",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tz193pcrbhgg273wmt2r",
+   "amount": 1.29,
+   "description": "synapse row 117310",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tybzf9399xg9abqd585c",
+   "amount": 79.65,
+   "description": "synapse row 121665",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5txpvgq2wqw6z7pjg9qn2",
+   "amount": 16.99,
+   "description": "synapse row 89620",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tx20xjq9sb78eg3kxe88",
+   "amount": 24.0,
+   "description": "synapse row 118602",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5twc0zb09q16efqxwh777",
+   "amount": 1.0,
+   "description": "synapse row 102329",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tvq56py0gbtkarh9cbav",
+   "amount": 0.51,
+   "description": "synapse row 100734",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tv27djqehpg6v15k9r9k",
+   "amount": 60.0,
+   "description": "synapse row 51214",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5ttdb4hvt0p9hjm5q8b4a",
+   "amount": 28.75,
+   "description": "synapse row 94743",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tsqbk9b4ftk19zcd42gx",
+   "amount": 1.0,
+   "description": "synapse row 63905",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5ts23grjzkqdxk5h1w3m7",
+   "amount": 90.8,
+   "description": "synapse row 23571",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5trcybsfvw202jjjx00xm",
+   "amount": 2.28,
+   "description": "synapse row 83804",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tqqvgykw75g180sc4k24",
+   "amount": 12.0,
+   "description": "synapse row 36866",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tq2st8d7f7yxz8prb4xk",
+   "amount": 296.0,
+   "description": "synapse row 113617",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tpdm5rzw47amsjkkqwsk",
+   "amount": 18.92,
+   "description": "synapse row 12212",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tnq40k0r48eqar72djyw",
+   "amount": 10.98,
+   "description": "synapse row 51491",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tn1sy5w4dg0e1vmcevj5",
+   "amount": 14.97,
+   "description": "synapse row 137026",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tmcb263p8gawvc0yz02n",
+   "amount": 39.99,
+   "description": "synapse row 83687",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tkpy58pxgzt97f8tbefh",
+   "amount": 112.25,
+   "description": "synapse row 9726",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tk1yfvwtb7w278esypq8",
+   "amount": 1.63,
+   "description": "synapse row 6733",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tjd1pkrhpb8rvj9jsjsp",
+   "amount": 20.0,
+   "description": "synapse row 74224",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5thr66tfdyqxb5fwvfmmk",
+   "amount": 24.87,
+   "description": "synapse row 126650",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5th3ap52rnh84kk0rbv21",
+   "amount": 1.49,
+   "description": "synapse row 10907",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tge520vp5pnbsnpeppnn",
+   "amount": 58.31,
+   "description": "synapse row 32057",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tfrs7bwg2sfpdf9xj1gd",
+   "amount": 127.14,
+   "description": "synapse row 118538",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tf124v8bw2efvam9stvv",
+   "amount": 1.98,
+   "description": "synapse row 128515",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tebhkdrtrp5ra5ssjdk5",
+   "amount": 4.0,
+   "description": "synapse row 12770",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tdpnq5kx22vpfvth2j8y",
+   "amount": 118.0,
+   "description": "synapse row 75652",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5td1mer1yhtfdrq2fgjw7",
+   "amount": 8.99,
+   "description": "synapse row 118455",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tcch5rbc5586ewyqd0g9",
+   "amount": 2.68,
+   "description": "synapse row 99386",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tbpswy9e6x195qn9z37y",
+   "amount": 61.16,
+   "description": "synapse row 28448",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5tazbc8s9ampcpe4jrwqg",
+   "amount": 31.46,
+   "description": "synapse row 78628",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5ta90d6trhfy4p9xmr0c1",
+   "amount": 1.29,
+   "description": "synapse row 131979",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t9jcdas979v3r07yq4dp",
+   "amount": 5.99,
+   "description": "synapse row 93155",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t8sw0t8g0cv3d1eh9a4c",
+   "amount": 207.84,
+   "description": "synapse row 136422",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t84n6x3msxg0s0jsn0d2",
+   "amount": 357.41,
+   "description": "synapse row 23119",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t7brmeehxtm1kxxx3v0w",
+   "amount": 5.86,
+   "description": "synapse row 69659",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t6mv6xrbj5ye50a14xmn",
+   "amount": 113.9,
+   "description": "synapse row 15981",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t5zwaf7jmawf7wxxp4n9",
+   "amount": 75.0,
+   "description": "synapse row 19171",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t5atz0hd3z1d002yyrm1",
+   "amount": 5.47,
+   "description": "synapse row 7044",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t4nm0cp6hg6mq07nazqj",
+   "amount": 360.0,
+   "description": "synapse row 135929",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t40cr221y337mwqacm75",
+   "amount": 129.18,
+   "description": "synapse row 77935",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t3ar494qgn8ca0p8fsp6",
+   "amount": 59.46,
+   "description": "synapse row 25171",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t2necb2fzb18gycj585f",
+   "amount": 110.0,
+   "description": "synapse row 89496",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t206m1thq8j5jxe95vcj",
+   "amount": 1.0,
+   "description": "synapse row 134954",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t1b3v8wp3s9a41pb1nsr",
+   "amount": 4.0,
+   "description": "synapse row 4862",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t0ne6s9zj0hry14z4kz5",
+   "amount": 50.0,
+   "description": "synapse row 117063",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5t00b76pn2zmska0rz1tk",
+   "amount": 1.86,
+   "description": "synapse row 61722",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5szbh28ydyycmf48rnwk4",
+   "amount": 6.0,
+   "description": "synapse row 35981",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5syp9n0569t68rj7akbr1",
+   "amount": 165.6,
+   "description": "synapse row 110377",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5sy13pxnfdhbzkebw5a7g",
+   "amount": 2.74,
+   "description": "synapse row 67479",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5sxbv10b1h2b2ded42ges",
+   "amount": 12.0,
+   "description": "synapse row 88765",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5swpj4zfx5ev8j1xxzd0y",
+   "amount": 250.0,
+   "description": "synapse row 109869",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sw13v5xkc41312n0agn7",
+   "amount": 79.65,
+   "description": "synapse row 19189",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5svc0nh8dt6b0bqxshagn",
+   "amount": 15.0,
+   "description": "synapse row 39273",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5stphqktw5swy8ajnv1sm",
+   "amount": 6.24,
+   "description": "synapse row 65614",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5st1axv6r0fyr02h3bbdx",
+   "amount": 12.0,
+   "description": "synapse row 55534",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5ssbm5h5a483b620sv7y5",
+   "amount": 15.17,
+   "description": "synapse row 110395",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5srp5v2vdzdtvm4ef3kjh",
+   "amount": 1.79,
+   "description": "synapse row 138289",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sr0qe2rwh6sqyngz0drc",
+   "amount": 86.5,
+   "description": "synapse row 76478",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sqbt6gxv1nkcqexnbydf",
+   "amount": 0.77,
+   "description": "synapse row 49932",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sppbhb411mhxp8arwdag",
+   "amount": 74.91,
+   "description": "synapse row 70863",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sp0vsn4vsbdkab7gwn0b",
+   "amount": 12.13,
+   "description": "synapse row 70160",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5snbxf55qxdehxds3wrq6",
+   "amount": 42.9,
+   "description": "synapse row 118795",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5smpfv6f251vjjwaf4j12",
+   "amount": 1335.0,
+   "description": "synapse row 55110",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sm0yt34ejpdkz0m6s2y2",
+   "amount": 29.49,
+   "description": "synapse row 138720",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5skbkvjprfc3e8razvba1",
+   "amount": 45.48,
+   "description": "synapse row 6139",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5sjpetz1tcmn6qz1n7rf4",
+   "amount": 26.99,
+   "description": "synapse row 59342",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sj1048qd9mxja5ktp3ge",
+   "amount": 19.72,
+   "description": "synapse row 43624",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5shbpy573f83tkjm6aky8",
+   "amount": 7.7,
+   "description": "synapse row 130529",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sgpv19a76yymy6r65kwc",
+   "amount": 1.29,
+   "description": "synapse row 17465",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sg0rjt42ft8js5j6fv08",
+   "amount": 60.69,
+   "description": "synapse row 37169",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sfb79r86662btkjkd3bf",
+   "amount": 6.3,
+   "description": "synapse row 90863",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5sep5gqx90x00tr6a6q5k",
+   "amount": 0.89,
+   "description": "synapse row 41521",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5se180tq83tjgc5bfvg12",
+   "amount": 292.54,
+   "description": "synapse row 46343",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5sdbrfrkmabxn5whkpb4e",
+   "amount": 261.86,
+   "description": "synapse row 92382",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5scnx0gm8kzdev7gc0mdr",
+   "amount": 61.76,
+   "description": "synapse row 22884",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sc0qqzjr8c8stwkb981a",
+   "amount": 122.68,
+   "description": "synapse row 90858",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sbbp0h0s1272w93k0kh0",
+   "amount": 727.91,
+   "description": "synapse row 67858",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sapj6q11vm9my8wenypc",
+   "amount": 7.12,
+   "description": "synapse row 136347",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5sa13v286anx43qdcrwdc",
+   "amount": 1.0,
+   "description": "synapse row 12799",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s9bkyzq9sam6zp7kn35r",
+   "amount": 341.0,
+   "description": "synapse row 46040",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s8pfrgd4959rhd1wwjk8",
+   "amount": 1.0,
+   "description": "synapse row 7233",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s817x3c30rzygtmcxzbt",
+   "amount": 0.89,
+   "description": "synapse row 115350",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s7c9qt77gjcx00h4cvww",
+   "amount": 50.33,
+   "description": "synapse row 58127",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s6qg4t1gcg9bms7a2khp",
+   "amount": 124.98,
+   "description": "synapse row 26097",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s62k79sd0eh0kbvg7pr2",
+   "amount": 78.89,
+   "description": "synapse row 75292",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s5dk2jb5ea0a5ex4sdzh",
+   "amount": 238.47,
+   "description": "synapse row 109461",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s4rjym8wedmyyavt1k01",
+   "amount": 8.99,
+   "description": "synapse row 129769",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s43gx2r7cj3ds0gqj4e0",
+   "amount": 150.4,
+   "description": "synapse row 5795",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s3e66z904af7k25mee4w",
+   "amount": 90.0,
+   "description": "synapse row 76549",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s2s9f9g12hxv91nfnm1q",
+   "amount": 6.47,
+   "description": "synapse row 135342",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s249dem6jb2gdxv35g58",
+   "amount": 4.36,
+   "description": "synapse row 41414",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s1f45w18rqsmws6sv2mf",
+   "amount": 200.0,
+   "description": "synapse row 50977",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5s0sqvqypqhre7x37fj95",
+   "amount": 11.98,
+   "description": "synapse row 119857",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5s04rht7rsj5z2yra6j5p",
+   "amount": 2125.87,
+   "description": "synapse row 31263",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rzfx461ajhbn62rfd98a",
+   "amount": 89.1,
+   "description": "synapse row 59869",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rytzhn23sg12rxd1m58d",
+   "amount": 125.41,
+   "description": "synapse row 13473",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5ry5z74qz08v6g8x8jwbm",
+   "amount": 1.79,
+   "description": "synapse row 88334",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rxgqwbdxngdx5dps85ct",
+   "amount": 11.5,
+   "description": "synapse row 111850",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rwvmdmnh9mtg5whnj78f",
+   "amount": 1.51,
+   "description": "synapse row 31950",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rw6pcjgmjz1k9t9fkv2y",
+   "amount": 83.85,
+   "description": "synapse row 115551",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rvhtt9f4cc04095pvt54",
+   "amount": 3.65,
+   "description": "synapse row 68218",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rtwh39z3bph35ng6text",
+   "amount": 17.99,
+   "description": "synapse row 83166",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rt701bjy4xyyfa0emv7p",
+   "amount": 93.3,
+   "description": "synapse row 7449",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rshpfqj5fwhwgjqv2v3t",
+   "amount": 44.82,
+   "description": "synapse row 104419",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rrw0d5fjvgfsybsx09k5",
+   "amount": 0.99,
+   "description": "synapse row 121419",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rr62sv43s712crhf8dyc",
+   "amount": 2.0,
+   "description": "synapse row 51572",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rqgeeeq8tdajkyqrv6gf",
+   "amount": 25.44,
+   "description": "synapse row 115378",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rptj545frrhr09b7d9s1",
+   "amount": 0.92,
+   "description": "synapse row 95064",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rp5r16h5jk2vhb61zz1v",
+   "amount": 40.07,
+   "description": "synapse row 71794",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rngztsedyp4zgatv8adm",
+   "amount": 4.99,
+   "description": "synapse row 123352",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rmw5s0gc5bya2wbs820b",
+   "amount": 19.4,
+   "description": "synapse row 13985",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rm6zd2rrrrf8v2sm44ex",
+   "amount": 138.25,
+   "description": "synapse row 119484",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5rkhd6p5dchhdmrph80tm",
+   "amount": 18.84,
+   "description": "synapse row 135709",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rjwkpxhm752k71kztwxj",
+   "amount": 0.92,
+   "description": "synapse row 139927",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rj77m4mw4e1fn09jt1ad",
+   "amount": 12.95,
+   "description": "synapse row 22588",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rhj1w147a3pb1mwmdkbm",
+   "amount": 7.44,
+   "description": "synapse row 123982",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rgwp1hps0t686ngg9e62",
+   "amount": 73.39,
+   "description": "synapse row 41143",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rg7ps8p33pfrd9tahjgt",
+   "amount": 1.98,
+   "description": "synapse row 32446",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5rfjthx6z01h8ga5fb9kq",
+   "amount": 1.0,
+   "description": "synapse row 5898",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rexqtq3kjc10wdt3p0bw",
+   "amount": 26.99,
+   "description": "synapse row 19833",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5re8etsvrr0g7r59gmb84",
+   "amount": 150.0,
+   "description": "synapse row 98147",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rdjgc4c0t10n8egywyn5",
+   "amount": 36.42,
+   "description": "synapse row 45975",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5rcx6erj1gr3q3fsvqms5",
+   "amount": 46.25,
+   "description": "synapse row 50065",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rc7rmqdgven39ns9e02j",
+   "amount": 8.99,
+   "description": "synapse row 137450",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5rbjcnbtmgb00zyv2mfmg",
+   "amount": 89.35,
+   "description": "synapse row 61654",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5raxccavcj4ettgejprct",
+   "amount": 2.69,
+   "description": "synapse row 87554",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5ra7a16hw2wb63yzzkryd",
+   "amount": 1.63,
+   "description": "synapse row 6676",
+   "purchase_date": "2026-11-14",
+   "status": "pending"
+  },
+  {
+   "_id": "txn_01m7e5r9j2ksv9ebhkpjrvwtqz",
+   "amount": 0.76,
+   "description": "synapse row 111462",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r8wgex9r2q4w4rr36ca6",
+   "amount": 22.7,
+   "description": "synapse row 90841",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r874p7p6y148xx7e10t0",
+   "amount": 12.5,
+   "description": "synapse row 24936",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r7jby7v0hq38ge8b9bke",
+   "amount": 50.0,
+   "description": "synapse row 63049",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r6x2y2hv54aq4hzh1cf0",
+   "amount": 16.99,
+   "description": "synapse row 12491",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r67vbgv9awvcee336782",
+   "amount": 22.43,
+   "description": "synapse row 18935",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r5jtkykfxr0ccer997cb",
+   "amount": 29.99,
+   "description": "synapse row 56085",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r4xht86emdn6egznsfe0",
+   "amount": 10.92,
+   "description": "synapse row 27336",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r48hn1byqc1pf3ajjma0",
+   "amount": 3.93,
+   "description": "synapse row 48837",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r3jzd2bjsddj3r9xkar7",
+   "amount": 42.9,
+   "description": "synapse row 62664",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r2xwsm6msdf0wgv57wzn",
+   "amount": 12.31,
+   "description": "synapse row 1178",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r284jkhq5x3tr7h348sy",
+   "amount": 215.41,
+   "description": "synapse row 97929",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r1jcds46z3yycx9d1d9e",
+   "amount": 30.0,
+   "description": "synapse row 32133",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r0vreaabyr18apretmmn",
+   "amount": 10.47,
+   "description": "synapse row 10358",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5r06xeszswy4ys7w9z707",
+   "amount": 121.54,
+   "description": "synapse row 23046",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qzhycj0ntcwv25ce62tk",
+   "amount": 412.31,
+   "description": "synapse row 70931",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qywags5n683b6qhs45ny",
+   "amount": 19.28,
+   "description": "synapse row 131184",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qy6n8gpms8vgxszr4r3r",
+   "amount": 0.89,
+   "description": "synapse row 96750",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qxhksw97eg2296fvd15c",
+   "amount": 1673.0,
+   "description": "synapse row 53622",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qww80xh4zmjph1jt5mhq",
+   "amount": 44.8,
+   "description": "synapse row 89112",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qw758efdq7xrzhte9bfq",
+   "amount": 24.27,
+   "description": "synapse row 6959",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qvheer3e1dbmg3ryw4bj",
+   "amount": 0.99,
+   "description": "synapse row 66033",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qtvrt2d73ekhz44devrn",
+   "amount": 37.15,
+   "description": "synapse row 117779",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qt6t1sven1zaxb7hc0w9",
+   "amount": 150.06,
+   "description": "synapse row 137568",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qshaed8tewvzp9e1j5y5",
+   "amount": 18.96,
+   "description": "synapse row 12175",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qrvyk2grsnjc0s1q5vhe",
+   "amount": 29.25,
+   "description": "synapse row 76009",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qr6dc6rt1df0vrm7rzfr",
+   "amount": 7.9,
+   "description": "synapse row 67538",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qqhe9047pm8s7stpgbb1",
+   "amount": 52.16,
+   "description": "synapse row 26016",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qpwrf3z1m96vzvj1pqkw",
+   "amount": 23.74,
+   "description": "synapse row 37659",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qp7s1vhcz18wh3pp8c1x",
+   "amount": 11.5,
+   "description": "synapse row 80781",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qnhs2838tehzjs6t3eg8",
+   "amount": 5.49,
+   "description": "synapse row 10167",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qmwszp2w40z0x6an03r6",
+   "amount": 3.03,
+   "description": "synapse row 76340",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qm7tgrr8wnawcaed1zf0",
+   "amount": 143.38,
+   "description": "synapse row 12091",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qkjxp3rjfn7fvhhw3brv",
+   "amount": 12.39,
+   "description": "synapse row 80961",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qjxhbr58yrgtafzw5emn",
+   "amount": 11.4,
+   "description": "synapse row 122734",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qj7e9vkxk7dy6bg6fjyc",
+   "amount": 46.42,
+   "description": "synapse row 72776",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qhj4g847985pf913egfm",
+   "amount": 187.11,
+   "description": "synapse row 109558",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qgx0rsnjnj279kn8y8ty",
+   "amount": 142.7,
+   "description": "synapse row 53170",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qg82mphx6fh4kf136qny",
+   "amount": 61.9,
+   "description": "synapse row 129687",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qfkhs79cypje4qcxmm7p",
+   "amount": 2.27,
+   "description": "synapse row 10174",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qeynbsadywag1mt5rt5r",
+   "amount": 9.82,
+   "description": "synapse row 7509",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qe9ng334hdx0e2za03qc",
+   "amount": 137.06,
+   "description": "synapse row 84468",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qdkwyda4dvkczn7g2rqn",
+   "amount": 1.0,
+   "description": "synapse row 46291",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qcz5vd3zb9rqm7c469sv",
+   "amount": 335.16,
+   "description": "synapse row 9063",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qc98dvtzw45428n9rcr2",
+   "amount": 1.79,
+   "description": "synapse row 130162",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qbm5cnvfa1td4jwqmmgp",
+   "amount": 1.0,
+   "description": "synapse row 96115",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  },
+  {
+   "_id": "txn_01m7e5qaz9tms0s8r0q73dxdes",
+   "amount": 1.52,
+   "description": "synapse row 10517",
+   "purchase_date": "2026-11-14",
+   "status": "completed"
+  }
+ ]
+}

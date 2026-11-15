@@ -638,7 +638,33 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
   .play-status { flex-basis: 100%; min-width: 0; }
 }
 @media (max-width: 760px) { .hero-stats, .setup-grid, .how-steps { grid-template-columns: repeat(2,1fr); } .page-nav .secondary { margin-left: 0; } }
-    </style>
+    /* Bank view */
+.bank-arms { list-style: none; padding: 0; margin: 14px 0; display: grid; gap: 6px; max-width: 720px; }
+.bank-arms li { display: grid; grid-template-columns: 15em 1fr 4em; gap: 10px; align-items: center; }
+.bank-arms b { display: block; height: 14px; background: var(--graphite); width: calc(var(--v) * 100%); }
+.bank-arms li.taught b { background: var(--gfp); }
+.bank-arms em { font-style: normal; font-variant-numeric: tabular-nums; text-align: right; }
+.bank-steps { list-style: none; padding: 0; margin: 12px 0 0; counter-reset: bank; }
+.bank-steps > li { counter-increment: bank; border-top: 1px solid var(--rule); padding: 12px 0 12px 2.4em; position: relative; }
+.bank-steps > li::before { content: counter(bank); position: absolute; left: 0; top: 12px; width: 1.7em; height: 1.7em; border: 1px solid var(--graphite); border-radius: 50%; display: grid; place-items: center; color: var(--graphite); font-size: .85em; }
+.bank-steps h3 { margin: 0 0 4px; font-size: 1.05rem; }
+.bank-steps p { margin: 4px 0; max-width: 80ch; }
+.bank-decision { color: var(--gfp); }
+.bank-checks { list-style: none; padding: 0; margin: 6px 0; }
+.bank-checks li { padding: 2px 0; }
+.bank-pass, .bank-fail { font-weight: 700; margin-right: .5em; }
+.bank-pass { color: #4ade80; }
+.bank-fail, .bank-warn { color: #e0a458; }
+.bank-ledger-scroll { max-height: 460px; }
+table.bank-ledger td, table.bank-ledger th { font-variant-numeric: tabular-nums; }
+table.bank-ledger tr.fraud td:last-child { color: #e0a458; font-weight: 700; }
+table.bank-ledger td.flag { color: var(--gfp); font-weight: 700; }
+table.bank-summary { max-width: 720px; }
+table.bank-summary td { font-variant-numeric: tabular-nums; }
+table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
+.bank-ledger-all { margin-top: 10px; }
+@media (max-width: 640px) { .bank-arms li { grid-template-columns: 9em 1fr 3.5em; } }
+</style>
   </head>
   <body>
     <div class="wrap">
@@ -657,7 +683,7 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
         <p class="hook-sub"><button id="hero-play-fast" type="button">30-second highlight</button> · <a href="#how">How it works and what we tested</a></p>
         <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
       </header>
-      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-sim" role="tab" href="#demo" aria-controls="tab-sim" aria-selected="true">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Stats</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a></div></nav>
+      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-sim" role="tab" href="#demo" aria-controls="tab-sim" aria-selected="true">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Stats</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a><a id="tab-btn-bank" role="tab" href="#bank" aria-controls="tab-bank" aria-selected="false">Bank view</a></div></nav>
       <main>
         <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim">
         <h2 id="demo" class="section-title">Live demo</h2>
@@ -918,7 +944,7 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
           <h3 id="uses">Where this could lead</h3>
           <p>Real systems rarely share one model. When conditions change, a partner that has already adapted could help a differently built one catch up — sending a few bytes of advice, without handing over its model or its data. None of these has been tested here. Three concrete scenarios where this matters today:</p>
           <div class="scenario-cards" style="margin-bottom:20px">
-            <div class="scenario-card"><strong><svg class="scenario-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6z"/><path d="M5.5 10v8M10 10v8M14 10v8M18.5 10v8"/><path d="M3 20.5h18"/></svg>Fraud detection</strong><p>Fraudsters change tactics. Bank A adapts. Bank B runs a different model — private data, incompatible architecture. Bank A sends "I would block this." Bank B adapts faster. <em><a href="https://doi.org/10.1109/TNNLS.2017.2736643" rel="noopener">Dal Pozzolo et al. 2018</a>: fraud drifts continuously across 75M real transactions.</em></p></div>
+            <div class="scenario-card"><strong><svg class="scenario-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6z"/><path d="M5.5 10v8M10 10v8M14 10v8M18.5 10v8"/><path d="M3 20.5h18"/></svg>Fraud detection</strong><p>Fraudsters change tactics. Bank A adapts. Bank B runs a different model — private data, incompatible architecture. Bank A sends one flag per payment: "block" or "allow." Bank B adapts faster. <em><a href="https://doi.org/10.1109/TNNLS.2017.2736643" rel="noopener">Dal Pozzolo et al. 2018</a>: fraud drifts continuously across 75M real transactions.</em></p></div>
             <div class="scenario-card"><strong><svg class="scenario-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M12 8v8M8 12h8"/></svg>Hospital diagnostics</strong><p>Sepsis criteria change. Hospital A updates. Hospital B can't receive it — HIPAA blocks data, different EHR blocks weight transfer. Hospital A sends a per-patient flag. Hospital B recalibrates. <em><a href="https://doi.org/10.1056/NEJMc2104626" rel="noopener">Finlayson et al. 2021</a>: deployed clinical AI degrades as patients shift.</em></p></div>
             <div class="scenario-card"><strong><svg class="scenario-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17H3v-3l2-5.2a2 2 0 0 1 1.9-1.3h10.2a2 2 0 0 1 1.9 1.3L21 14v3h-2"/><path d="M9 17h6M3.5 13.5h17"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>Mixed vehicle fleets</strong><p>Construction zone reverses a street. Tesla learns it. Waymo hasn't — different OS, competitor IP. At the junction, Tesla sends "I now do X." Waymo adapts before its own data catches up. <em><a href="https://arxiv.org/abs/2310.08864" rel="noopener">Open X-Embodiment 2023</a>: cross-robot learning today needs one shared model.</em></p></div>
           </div>
@@ -1022,12 +1048,35 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
             </details>
         </section>
         </div>
+        <div id="tab-bank" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-bank" hidden>
+        <h2 id="bank" class="section-title">Bank view</h2>
+        <p class="section-lede">The same idea outside the fly. After fraud patterns change, a bank's model sends a credit union's differently built model one bit of advice per purchase: no model, no customer data. Real card-fraud data and ordinary machine-learning models; no connectome and no spikes.</p>
+        <section id="bank-study" class="panel" aria-labelledby="bank-study-title">
+          <h2 id="bank-study-title">Locked study on real fraud data</h2>
+          <p class="legend">284,807 real card transactions (Worldline and ULB). The change is time: the credit union's model was trained on day 1 and must cope with day 2. Protocol fixed before the runs: <a href="docs/real-data-advice-v2-protocol.md">v2 protocol</a>; the first version failed outright and is kept in <code>data/real_data_advice/fraud/</code>.</p>
+          <div id="bank-study-body"><p class="legend">Loading the study summary…</p></div>
+        </section>
+        <section id="bank-agent" class="panel" aria-labelledby="bank-agent-title">
+          <h2 id="bank-agent-title">The credit union's agent</h2>
+          <p class="legend">An engineering demo around one run of that study, not a new tested result. The agent reads its ledger from Capital One's Nessie API, decides whether to ask the bank for advice, checks the advice before trusting it, retrains, and reviews the ledger. Its decision rules were chosen by us and were not tested against controls: <a href="docs/bank-demo.md">notes and limits</a>.</p>
+          <div id="bank-agent-body"><p class="legend">No agent run found. Run <code>python tools/bank_demo.py all</code> and reload.</p></div>
+        </section>
+        <section id="bank-ledger" class="panel" aria-labelledby="bank-ledger-title" hidden>
+          <h2 id="bank-ledger-title">What the advice changed</h2>
+          <p id="bank-ledger-headline" class="finding"></p>
+          <div class="scroll"><table class="bank-summary"><thead><tr><th scope="col"></th><th scope="col">Credit union alone</th><th scope="col">With the bank's advice</th></tr></thead><tbody id="bank-summary-rows"></tbody></table></div>
+          <p id="bank-ledger-note" class="legend"></p>
+          <details class="bank-ledger-all"><summary>Show all purchases in the ledger</summary>
+          <div class="scroll bank-ledger-scroll"><table class="bank-ledger"><thead><tr><th>Purchase</th><th>Amount</th><th>Fraud score alone</th><th>Fraud score with advice</th><th>Agent</th><th>Truth</th></tr></thead><tbody id="bank-ledger-rows"></tbody></table></div>
+          </details>
+        </section>
+        </div>
       </main>
       <footer>Neural simulator and connectome subset from <a href="https://github.com/bsgelman/fly-hero">Fly Hero</a> by Benjamin Gelman (MIT). The two-fly teaching experiments, learners, message channel, and this page are ours. Connectome data: Janelia and Google male CNS (CC-BY). Neuron model after Shiu et al. 2024; dopamine learning rule inspired by Bennett et al. 2021. See <a href="README.md">README</a> for method and limitations.</footer>
     </div>
     <script>
-      // Three tabs; any in-page link (#results, #how, #evidence…) opens the tab that holds its target.
-      const tabs = { sim: 'tab-sim', stats: 'tab-stats', research: 'tab-research' };
+      // Four tabs; any in-page link (#results, #how, #evidence…) opens the tab that holds its target.
+      const tabs = { sim: 'tab-sim', stats: 'tab-stats', research: 'tab-research', bank: 'tab-bank' };
       const showTab = (name, target, scroll = true) => {
         for (const [key, id] of Object.entries(tabs)) {
           document.getElementById(id).hidden = key !== name;
@@ -1052,7 +1101,7 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
         const panel = target?.closest?.('.tab-panel');
         if (!panel) return showTab('sim', null, false);
         const name = Object.keys(tabs).find(key => tabs[key] === panel.id);
-        const top = ['demo', 'stats', 'research'].includes(target.id);
+        const top = ['demo', 'stats', 'research', 'bank'].includes(target.id);
         for (let details = target.closest('details'); details; details = details.parentElement.closest('details')) details.open = true;
         showTab(name, top ? null : target);
       };
@@ -1075,5 +1124,6 @@ input:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
     <script type="module" src="js/rps_challenge.js"></script>
     <script type="module" src="js/result_chart.js"></script>
     <script type="module" src="js/hero_flies.js"></script>
+    <script type="module" src="js/bank_view.js"></script>
   </body>
 </html>

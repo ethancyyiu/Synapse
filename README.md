@@ -6,10 +6,14 @@
 
 ## For judges: the 30-second version
 
-- **Problem.** Adapted systems usually can't share what they learned with a differently built partner: the models don't match, and sharing data or weights may not be allowed. A few bytes of advice could travel where a model cannot.
-- **What we built.** Two copies of a real fruit-fly wiring diagram (6,900 simulated neurons, 990,102 synapses) play Rock-Paper-Scissors. Fly A learns from its own wins and losses. When the opponent changes its rule, Fly A sends its preferred move to Fly B as spikes on two neurons. Fly B learns faster, then plays alone with Fly A unplugged.
-- **Result.** 48 rounds after the rule change, taught Fly Bs won **68 of 72** games, against 33 with shuffled messages (the strongest control on average) and 10 alone. Measured against the best control in each run, the lead is **+24.9** (95% CI +17.8 to +32.1, 15 runs, protocol fixed in advance). The same test passed on a second task (+19.0) and on a simulator we wrote ourselves (+35.0, in the 10 of 15 runs where the teacher learned).
-- **Honest limits.** Simulation only, on two small tasks. A plain digital message works as well as spikes, and the gain is speed, not a higher final score. Two follow-up studies on trusting a teacher fell short of the bars we set, and several earlier experiments failed. All of it is below, on the page's Research tab, and in the [lab notebook](docs/lab-notebook.md).
+| Step | What we found |
+|---|---|
+| **The problem** | When conditions change, the system that adapted first can't help a differently built one catch up: the models don't match, and data or weights often can't be shared. A bank that spots a new scam first has no safe way to warn a bank that hasn't. |
+| **The question** | Is a few bytes of advice enough, with no data and no weights sent? |
+| **The test** | Two brains from a real fruit-fly wiring diagram (6,900 simulated neurons, 990,102 synapses), with different learners, linked only by two neurons. The opponent changes its Rock-Paper-Scissors rule, Fly A sends its preferred move as spikes, and Fly B is then tested alone with Fly A unplugged. |
+| **The answer** | **Yes, it speeds up recovery.** 48 rounds after the change, taught Fly B won **68 of 72** games, against 33 with shuffled messages and 10 alone. Lead over the best control in each run: **+24.9** (95% CI +17.8 to +32.1, 15 runs, protocol fixed in advance). |
+| **Does it hold up?** | It passed on a second task (+19.0) and on a simulator we wrote ourselves (+35.0, in the 10 of 15 runs where the teacher learned). |
+| **Where it stops** | Simulation only, on two small tasks. A plain digital message works as well as spikes, and the gain is speed, not a higher final score. Two studies on trusting a teacher missed their bars, and several earlier experiments failed: see the Research tab and the [lab notebook](docs/lab-notebook.md). |
 
 **Run it:** `python tools/serve.py`, then open <http://localhost:8766> and press **▶ Watch the demo** (1½ minutes, recorded real run). Judge script and Q&A: [docs/pitch-script.md](docs/pitch-script.md).
 
