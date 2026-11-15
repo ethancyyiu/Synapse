@@ -419,6 +419,16 @@ footer {
 .step-title { margin-top: 26px; padding-top: 18px; border-top: 1px solid var(--rule); }
 summary { cursor: pointer; font-weight: 700; }
 summary:focus-visible { outline: 3px solid var(--lane2); }
+summary { padding: 10px 0; border-radius: 4px; }
+summary:hover { color: #4ade80; }
+.story-steps { list-style: none; padding: 0; margin: 18px 0 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; max-width: 980px; }
+.story-steps a { display: block; height: 100%; box-sizing: border-box; padding: 12px 14px; border: 1px solid #5f5d58; border-top: 3px solid #4ade80; color: var(--ink); text-decoration: none; }
+.story-steps a:hover { background: #2b2a28; }
+.story-steps b { display: block; color: #4ade80; margin-bottom: 2px; }
+@media (max-width: 760px) { .story-steps { grid-template-columns: 1fr; } }
+.story-next { margin: 18px 0 0; font-weight: 700; }
+table.uses tr.ours th, table.uses tr.ours td { color: #4ade80; font-weight: 700; }
+.archive-tools { display: flex; gap: 10px; align-items: center; margin: 0 0 12px; }
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -498,16 +508,12 @@ summary:focus-visible { outline: 3px solid var(--lane2); }
 .page-nav .secondary { color: var(--graphite); margin-left: auto; align-self: center; }
 /* Compact side tabs leave most of the page width for the demo. */
 html { scroll-padding-top: 12px; }
-body:has(.tab-rail) { padding-right: 100px; }
-@media (min-width: 761px) {
-  body:has(#tab-research:not([hidden])) { padding-right: 86px; }
-  body:has(#tab-research:not([hidden])) .wrap { max-width: none; padding-right: 16px; }
-}
+body:has(.tab-rail) { padding-right: 136px; }
 .tab-rail { position: fixed; right: 0; top: 50%; transform: translateY(-50%); z-index: 20; }
 .tabs { display: flex; flex-direction: column; align-items: flex-end; gap: 4px; }
-.tabs [role=tab] { box-sizing: border-box; width: 94px; padding: 9px 7px; background: #1f1e1d; border: 1px solid #5f5d58; border-right: 0; border-radius: 5px 0 0 5px; color: var(--ink); font-weight: 700; font-size: calc(.84rem + 2px); letter-spacing: .01em; text-align: center; text-decoration: none; }
+.tabs [role=tab] { box-sizing: border-box; width: 94px; padding: 9px 7px; background: #1f1e1d; border: 1px solid #5f5d58; border-right: 0; border-radius: 5px 0 0 5px; color: var(--ink); font-weight: 700; font-size: calc(.84rem + 2px); letter-spacing: .01em; text-align: center; text-decoration: none; transition: width .2s ease, background-color .2s ease, color .2s ease; }
 .tabs [role=tab]:hover { background: #2b2a28; text-decoration: none; }
-.tabs [role=tab][aria-selected=true] { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.tabs [role=tab][aria-selected=true] { background: var(--ink); color: var(--paper); border-color: var(--ink); width: 122px; }
 .tabs [role=tab]:focus-visible { outline: 3px solid var(--lane2); outline-offset: 2px; }
 .tab-rail .fraud-link { box-sizing: border-box; display: block; width: 94px; margin-top: 4px; padding: 9px 7px; background: #214138; border: 1px solid #4b9676; border-right: 0; border-radius: 5px 0 0 5px; color: var(--ink); font-weight: 700; font-size: calc(.84rem + 2px); text-align: center; text-decoration: none; }
 .tab-rail .fraud-link:hover { background: #2c5a4b; }
@@ -516,6 +522,7 @@ body:has(.tab-rail) { padding-right: 100px; }
   .tab-rail { top: auto; bottom: 0; left: 0; transform: none; background: var(--paper); border-top: 1px solid var(--rule); display: flex; }
   .tabs { flex-direction: row; gap: 0; flex: 3; }
   .tabs [role=tab] { flex: 1; width: auto; padding: 11px 6px; border: 0; border-radius: 0; }
+  .tabs [role=tab][aria-selected=true] { width: auto; }
   .tab-rail .fraud-link { flex: 1; width: auto; margin: 0; padding: 11px 6px; border: 0; border-radius: 0; }
 }
 .page-nav .secondary a { color: var(--graphite); }
@@ -673,15 +680,15 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
 .bank-quick-card span { display: block; color: var(--graphite); }
 @media (max-width: 640px) { .bank-arms li { grid-template-columns: 9em 1fr 3.5em; } }
 @media (max-width: 640px) { .bank-quick-cards { grid-template-columns: 1fr; } }
-    </style>
+</style>
   </head>
   <body>
     <div class="wrap">
       <header class="hero">
         <canvas class="hero-flies" aria-hidden="true"></canvas>
-        <p class="kicker">Simulated fly brains · a controlled learning experiment</p>
+        <p class="kicker">From a banking problem to a fly-brain experiment</p>
         <h1>Synapse</h1>
-        <p class="hook">When the rules change, can one fly help another learn faster?</p>
+        <p class="hook">When fraud tactics change, small banks find out last. Can the bank that already adapted help them catch up, without sharing customer data or its model?</p>
         <div class="hero-stats">
           <div class="stat-tile"><strong>68<small> / 72</small></strong><span>taught fly wins — 48 rounds after the rule change</span></div>
           <div class="stat-tile dim"><strong>10<small> / 72</small></strong><span>alone fly wins — same point, same conditions</span></div>
@@ -690,11 +697,43 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         </div>
         <div class="hero-actions"><button id="hero-play" type="button" class="primary-btn">▶ Watch the 90-second story</button><a class="button-link" href="#results">See the 15-run result →</a></div>
         <p class="hook-sub"><button id="hero-play-fast" type="button">30-second highlight</button> · <a href="#how">How it works and what we tested</a></p>
+        <ol class="story-steps" aria-label="The story in three steps">
+          <li><a href="#bank"><b>1 · Usage</b>Small banks find out about new fraud last</a></li>
+          <li><a href="#solution"><b>2 · Simulation</b>Advice, not data, tested in fly brains</a></li>
+          <li><a href="#stats"><b>3 · Statistics</b>68 vs 10 wins in 15 runs, then real card data</a></li>
+        </ol>
         <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a href="fraud.html">Banking: mock review</a> · <a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
       </header>
       <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-sim" role="tab" href="#demo" aria-controls="tab-sim" aria-selected="true">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Stats</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a><a id="tab-btn-bank" role="tab" href="#bank" aria-controls="tab-bank" aria-selected="false">Banking application</a></div><a class="fraud-link" href="fraud.html">Mock review queue</a></nav>
       <main>
         <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim">
+        <h2 id="solution" class="section-title">Our solution: advice, not data</h2>
+        <p class="section-lede">We rebuilt the bank problem as a controlled experiment, inside two brains built from a real fruit-fly wiring diagram.</p>
+        <section class="panel" aria-labelledby="solution-map-title">
+          <h2 id="solution-map-title">The bank problem, as an experiment</h2>
+          <div class="scroll"><table class="uses">
+            <thead><tr><th>In the bank</th><th>In our experiment</th></tr></thead>
+            <tbody>
+              <tr><th>The bank that adapted first</th><td>Fly A, trained on the new rule</td></tr>
+              <tr><th>The credit union, built differently</th><td>Fly B, a different learner (48 numbers vs Fly A's 13), so nothing can be copied</td></tr>
+              <tr><th>A new scam</th><td>The opponent reverses its Rock-Paper-Scissors rule</td></tr>
+              <tr><th>"Block" or "allow"</th><td>Fly A's preferred move, sent as spikes on two neurons</td></tr>
+              <tr><th>Waiting for chargebacks</th><td>Fly B learning alone, only from its own wins</td></tr>
+            </tbody>
+          </table></div>
+          <h3>How it differs from other approaches</h3>
+          <div class="scroll"><table class="uses">
+            <thead><tr><th>Approach</th><th>What is sent</th><th>Same model needed?</th><th>Risk to private data</th></tr></thead>
+            <tbody>
+              <tr><th>Pooling data (fraud consortia, US 314(b) sharing)</th><td>Information about customers and cases</td><td>No</td><td>The information itself is shared</td></tr>
+              <tr><th>Federated learning (<a href="https://arxiv.org/abs/1602.05629" rel="noopener">McMahan 2017</a>; Swift 2025 trial)</th><td>Model updates</td><td>Yes</td><td>Updates can leak training data</td></tr>
+              <tr><th>Distillation (<a href="https://arxiv.org/abs/1910.03581" rel="noopener">FedMD 2019</a>; <a href="https://arxiv.org/abs/2006.07242" rel="noopener">FedDF 2020</a>)</th><td>Predictions on a shared dataset</td><td>No</td><td>Needs a dataset both sides can use</td></tr>
+              <tr class="ours"><th>Ours</th><td>One flag per case, only after a change</td><td>No</td><td>No records, weights or updates are sent</td></tr>
+            </tbody>
+          </table></div>
+          <p class="legend"><strong>What we test:</strong> compact action advice between different learners, compared with controls fixed in advance (shuffled, random and out-of-date advice). <strong>The catch:</strong> the adviser must see the case it advises on, so this fits where it already sees the payment, such as a card network or the bank on the other side of a transfer.</p>
+          <p class="story-next"><a href="#demo">Watch it work ↓</a> · <a href="#stats">See the proof →</a></p>
+        </section>
         <h2 id="demo" class="section-title">Live demo</h2>
         <p class="section-lede">Watch one recorded run, then see how it holds up across 15.</p>
         <section id="mission" aria-live="polite">
@@ -775,9 +814,9 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
                 <label>Fly B <select id="challenge-student-rounds"><option value="six">6 rounds, then continue to 288</option><option value="24" selected>24 rounds</option><option value="48">48 rounds</option><option value="96">96 rounds</option><option value="144">144 rounds</option><option value="288">288 rounds</option></select></label>
               </div>
               <div class="controls"><label><input id="challenge-fast" type="checkbox"> Quick Fly B run: skip the in-between tests (faster, but no Fly B learning curve)</label></div>
-              <p class="legend">One round is one game. After training, each fly takes a 72-game frozen test with no help or learning. Fly A defaults to 288 rounds; Fly B defaults to 24 for a quicker demonstration. Choose 288 for the full student budget.</p>
+              <p class="legend">One round is one game. After training, each fly takes a 72-game test with learning and help switched off. Fly B defaults to 24 rounds for a quick demo.</p>
               <div class="controls"><label>Random seed <input id="challenge-seed" type="number" min="1" max="9999" step="1" value="830"></label></div>
-              <p class="legend">The seed sets the random noise in the simulated neurons. The same seed and settings give the same result.</p>
+              <p class="legend">The seed sets the neurons' random noise: the same seed and settings always give the same result.</p>
               <div class="controls"><button id="challenge-reset">Reset</button></div>
               </div></div>
               </details>
@@ -828,7 +867,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
           </ul>
           </div>
           <p id="brain-pick" class="legend" role="status">Click a dot to identify a neuron.</p>
-          <details class="legend"><summary>About this view</summary><p>Points are measured 3D cell-body positions from the male CNS v1.0 annotations; 73 of the 6,900 simulated neurons have no position and are not drawn. Light and shadow are a display aid estimated from point density. The views turn on their own: drag to take over, and use Reset view to resume. Colored dots mark neuron classes. During live training, every recent spike flashes on top of the surface, including spikes inside the brain or on its far side. Background firing from the nerve cord (VNC) and central brain (Mid) starts hidden; click those classes to show it.</p></details>
+          <details class="legend"><summary>About this view</summary><p>Dots are real 3D cell-body positions (male CNS v1.0), colored by neuron class; 73 of the 6,900 neurons have no position and are not drawn. Shading is a display aid. Drag to rotate; Reset view resumes the turn. During live training, recent spikes flash. Nerve-cord (VNC) and central-brain (Mid) background firing starts hidden: click those classes to show it.</p></details>
         </section>
             <details class="panel"><summary>Round-by-round details</summary><div class="grid">
               <article class="panel"><h4>Fly B Alone</h4><p id="alone-status">Idle until Fly A finishes</p><p id="alone-action">No action yet</p><p id="alone-recent">Recent wins: waiting</p><p id="alone-kc" class="legend">KC activity: waiting</p><div id="alone-bars" class="neural-bars"></div><p id="alone-q" class="legend">Learned action values: waiting</p></article>
@@ -853,22 +892,22 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
             <p id="compare-difference" class="finding" hidden></p>
             <button id="compare-continue" type="button" hidden disabled>Continue training to 288 rounds</button>
             <p class="legend">This is one run with one control. <a href="#results">The 15-run study</a> tests four controls.</p>
-            <p class="legend"><a href="#live-runs">See how training rounds relate to wins in the Stats tab →</a></p>
+            <p class="legend"><a href="#live-runs">See how training rounds relate to wins in the Statistics tab →</a></p>
           </section>
         </section>
         </div>
         <div id="tab-stats" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-stats" hidden>
-        <h2 id="stats" class="section-title">Stats</h2>
-        <p class="section-lede">The locked 15-run study first, then the numbers from your own live runs on this page.</p>
+        <h2 id="stats" class="section-title">The proof</h2>
+        <p class="section-lede">Does the advice really help? The locked 15-run fly study, then your own live runs. The real card-data result is in the <a href="#bank-evidence">Usage tab</a>.</p>
         <section id="results" class="panel" aria-labelledby="results-title">
           <h2 id="results-title">The result: teaching helps most when the rules change</h2>
-          <p class="section-lede">Fifteen independent runs. Each Fly B first learned one rule (Rock → Paper → Scissors), then the opponent switched to the reverse (Rock → Scissors → Paper). Average games won out of 72, tested with Fly A disconnected and learning switched off.</p>
-          <p class="finding"><strong>At 48 rounds:</strong> taught Fly B averaged 68/72 wins. Its average lead over the strongest control in each run was <strong>+24.9/72</strong>. The advantage is learning speed after the switch.</p>
+          <p class="section-lede">15 runs. Fly B learned Rock → Paper → Scissors, then the opponent reversed it. Average wins out of 72, tested with Fly A unplugged.</p>
+          <p class="finding"><strong>At 48 rounds:</strong> taught Fly B won 68/72, a lead of <strong>+24.9</strong> over the strongest control in each run. The gain is speed after the switch.</p>
           <figure class="result-chart">
             <svg viewBox="0 0 740 330" role="img" aria-labelledby="result-chart-title result-chart-desc">
 <title id="result-chart-title">Average frozen wins after the rule change, 15 runs</title>
 <desc id="result-chart-desc">At 48 rounds: taught 67.7, shuffled 32.6, random 32.4, untrained 22.6, alone 10.1 wins out of 72.</desc><line x1="56" x2="584" y1="290.0" y2="290.0" stroke="#2e2d2a" stroke-width="1"/><text x="48" y="294.0" text-anchor="end" fill="#6b6960" font-size="13">0</text><line x1="56" x2="584" y1="206.7" y2="206.7" stroke="#2e2d2a" stroke-width="1"/><text x="48" y="210.7" text-anchor="end" fill="#6b6960" font-size="13">24</text><line x1="56" x2="584" y1="123.3" y2="123.3" stroke="#2e2d2a" stroke-width="1"/><text x="48" y="127.3" text-anchor="end" fill="#6b6960" font-size="13">48</text><line x1="56" x2="584" y1="40.0" y2="40.0" stroke="#2e2d2a" stroke-width="1"/><text x="48" y="44.0" text-anchor="end" fill="#6b6960" font-size="13">72</text><text x="56.0" y="310" text-anchor="middle" fill="#6b6960" font-size="13">0</text><text x="188.0" y="310" text-anchor="middle" fill="#6b6960" font-size="13">24</text><text x="320.0" y="310" text-anchor="middle" fill="#6b6960" font-size="13">48</text><text x="584.0" y="310" text-anchor="middle" fill="#6b6960" font-size="13">96</text><text x="320" y="327" text-anchor="middle" fill="#6b6960" font-size="13">Rounds after the rule change</text><line x1="320.0" x2="320.0" y1="34" y2="290" stroke="#5f5d58" stroke-width="1" stroke-dasharray="3 3"/><text x="326.0" y="46" fill="#a3abb4" font-size="13">test point</text><path d="M56.0 287.6 L188.0 261.9 L320.0 211.5 L584.0 207.0" fill="none" stroke="#6f7882" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 4"/><text x="594.0" y="211.0" fill="#6b6960" font-size="14">Untrained teacher</text><path d="M56.0 287.6 L188.0 275.1 L320.0 254.9 L584.0 168.1" fill="none" stroke="#8a929b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><text x="594.0" y="172.1" fill="#8a929b" font-size="14">Alone</text><path d="M56.0 287.6 L188.0 249.0 L320.0 177.5 L584.0 111.9" fill="none" stroke="#a3abb4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 4"/><text x="594.0" y="124.9" fill="#8a929b" font-size="14">Random messages</text><path d="M56.0 287.6 L188.0 256.7 L320.0 176.8 L584.0 106.0" fill="none" stroke="#a3abb4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 4"/><text x="594.0" y="102.0" fill="#8a929b" font-size="14">Shuffled messages</text><path d="M56.0 287.6 L188.0 111.9 L320.0 54.9 L584.0 47.3" fill="none" stroke="#ffffff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/><text x="594.0" y="51.3" fill="#4ade80" font-size="15" font-weight="700">Taught by Fly A</text><circle cx="56.0" cy="287.6" r="4.5" fill="#ffffff" stroke="#191918" stroke-width="2"/><circle cx="56.0" cy="287.6" r="10" fill="transparent"><title>Taught by Fly A: 0.7 of 72 wins after 0 rounds</title></circle><circle cx="188.0" cy="111.9" r="4.5" fill="#ffffff" stroke="#191918" stroke-width="2"/><circle cx="188.0" cy="111.9" r="10" fill="transparent"><title>Taught by Fly A: 51.3 of 72 wins after 24 rounds</title></circle><circle cx="320.0" cy="54.9" r="4.5" fill="#ffffff" stroke="#191918" stroke-width="2"/><circle cx="320.0" cy="54.9" r="10" fill="transparent"><title>Taught by Fly A: 67.7 of 72 wins after 48 rounds</title></circle><circle cx="584.0" cy="47.3" r="4.5" fill="#ffffff" stroke="#191918" stroke-width="2"/><circle cx="584.0" cy="47.3" r="10" fill="transparent"><title>Taught by Fly A: 69.9 of 72 wins after 96 rounds</title></circle><circle cx="56.0" cy="287.6" r="10" fill="transparent"><title>Shuffled messages: 0.7 of 72 wins after 0 rounds</title></circle><circle cx="188.0" cy="256.7" r="10" fill="transparent"><title>Shuffled messages: 9.6 of 72 wins after 24 rounds</title></circle><circle cx="320.0" cy="176.8" r="10" fill="transparent"><title>Shuffled messages: 32.6 of 72 wins after 48 rounds</title></circle><circle cx="584.0" cy="106.0" r="10" fill="transparent"><title>Shuffled messages: 53 of 72 wins after 96 rounds</title></circle><circle cx="56.0" cy="287.6" r="10" fill="transparent"><title>Random messages: 0.7 of 72 wins after 0 rounds</title></circle><circle cx="188.0" cy="249.0" r="10" fill="transparent"><title>Random messages: 11.8 of 72 wins after 24 rounds</title></circle><circle cx="320.0" cy="177.5" r="10" fill="transparent"><title>Random messages: 32.4 of 72 wins after 48 rounds</title></circle><circle cx="584.0" cy="111.9" r="10" fill="transparent"><title>Random messages: 51.3 of 72 wins after 96 rounds</title></circle><circle cx="56.0" cy="287.6" r="10" fill="transparent"><title>Alone: 0.7 of 72 wins after 0 rounds</title></circle><circle cx="188.0" cy="275.1" r="10" fill="transparent"><title>Alone: 4.3 of 72 wins after 24 rounds</title></circle><circle cx="320.0" cy="254.9" r="10" fill="transparent"><title>Alone: 10.1 of 72 wins after 48 rounds</title></circle><circle cx="584.0" cy="168.1" r="10" fill="transparent"><title>Alone: 35.1 of 72 wins after 96 rounds</title></circle><circle cx="56.0" cy="287.6" r="10" fill="transparent"><title>Untrained teacher: 0.7 of 72 wins after 0 rounds</title></circle><circle cx="188.0" cy="261.9" r="10" fill="transparent"><title>Untrained teacher: 8.1 of 72 wins after 24 rounds</title></circle><circle cx="320.0" cy="211.5" r="10" fill="transparent"><title>Untrained teacher: 22.6 of 72 wins after 48 rounds</title></circle><circle cx="584.0" cy="207.0" r="10" fill="transparent"><title>Untrained teacher: 23.9 of 72 wins after 96 rounds</title></circle><text x="314.0" y="44.9" text-anchor="end" fill="#4ade80" font-size="16" font-weight="700">68</text><text x="326.0" y="270.9" fill="#888" font-size="16" font-weight="700">10</text></svg>
-            <figcaption class="result-chart-side"><ul class="chart-key" aria-label="Chart key"><li><svg width="28" height="8" aria-hidden="true"><line x1="1" x2="27" y1="4" y2="4" stroke="#ffffff" stroke-width="3"/></svg>Taught by Fly A</li><li><svg width="28" height="8" aria-hidden="true"><line x1="1" x2="27" y1="4" y2="4" stroke="#a3abb4" stroke-width="2" stroke-dasharray="2 4"/></svg>Shuffled messages</li><li><svg width="28" height="8" aria-hidden="true"><line x1="1" x2="27" y1="4" y2="4" stroke="#a3abb4" stroke-width="2" stroke-dasharray="7 4"/></svg>Random messages</li><li><svg width="28" height="8" aria-hidden="true"><line x1="1" x2="27" y1="4" y2="4" stroke="#8a929b" stroke-width="2"/></svg>Alone</li><li><svg width="28" height="8" aria-hidden="true"><line x1="1" x2="27" y1="4" y2="4" stroke="#6f7882" stroke-width="2" stroke-dasharray="12 4"/></svg>Untrained teacher</li></ul></figcaption>
+            <figcaption class="result-chart-side"></figcaption>
           </figure>
           <noscript><ul class="legend"><li><strong>Taught by Fly A:</strong> the trained Fly A sends its real suggested move each round.</li><li><strong>Shuffled messages:</strong> Fly A's real suggestions, on the wrong rounds.</li><li><strong>Random messages:</strong> a random move on the same rounds.</li><li><strong>Alone:</strong> no messages.</li><li><strong>Untrained teacher:</strong> a never-trained Fly A; it always suggested one move, so it is a weak control.</li></ul></noscript>
           <details class="faster">
@@ -882,7 +921,6 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
             </ul>
             <p class="legend">Even by 96 rounds, Fly B learning alone reached 58/72 in only 2 of 15 runs. Counted from the saved 24-, 48- and 96-round checkpoints in <a href="data/rule_switch_cohort_summary.json">the cohort results</a>; this is a summary of that data, not the study's locked primary measure.</p>
           </details>
-          <details><summary>Show as a table</summary><div class="scroll"><table><caption>Average wins out of 72, Fly A disconnected (15 runs)</caption><thead><tr><th>Rounds after change</th><th>Taught by Fly A</th><th>Shuffled messages</th><th>Random messages</th><th>Alone</th><th>Untrained teacher</th></tr></thead><tbody><tr><td>0</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td><td>0.7</td></tr><tr><td>24</td><td>51.3</td><td>9.6</td><td>11.8</td><td>4.3</td><td>8.1</td></tr><tr><td>48</td><td>67.7</td><td>32.6</td><td>32.4</td><td>10.1</td><td>22.6</td></tr><tr><td>96</td><td>69.9</td><td>53</td><td>51.3</td><td>35.1</td><td>23.9</td></tr></tbody></table></div></details>
             <details id="study-results" class="panel">
               <summary>Other studies, including failures and limits</summary>
               <div class="scroll"><table class="studies">
@@ -898,14 +936,14 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
                 </tbody>
               </table></div>
               <details><summary>Full write-up of each study, with confidence intervals and links</summary>
-              <p class="finding"><strong>20-pair study:</strong> after 6 rounds, taught Fly Bs won <strong>+10.3/72</strong> more than the best control (95% CI +7.3 to +13.6; 15 of 19 pairs). Alone students catch up by round 288.</p>
-              <p id="study-rule-switch" class="finding"><strong>Rule change (15-seed study):</strong> 48 rounds after the opponent switched rules, taught Fly Bs averaged <strong>68/72</strong>, against 10 alone, 32 random messages, 33 shuffled, and 23 untrained teacher. Lead over the best control: <strong>+24.9/72</strong> (95% CI +17.8 to +32.1); random messages matched the teacher on 1 of 15 seeds. At 96 rounds, alone averaged 35. Random and shuffled messages also beat learning alone (32 and 33 against 10), so part of the gap to "alone" comes from any message loosening the old habit. The teacher's own contribution is the +24.9 over the best control, not the 58 over alone.</p>
-              <p class="legend">Both use locked protocols and frozen tests with Fly A disconnected, with untrained-teacher, shuffled, random, and alone controls.</p>
-              <p id="study-stale" class="finding"><strong>Out-of-date teacher (locked protocol, 15 new runs):</strong> a Fly A trained just as well, but on the <em>old</em> rule, gave Fly B no help. At 48 rounds, average wins of 72: taught by the new-rule Fly A <strong>68</strong>; taught by the old-rule Fly A <strong>1</strong>; alone 14. Difference <strong>+67.1</strong> (95% CI +65.6 to +68.4). So the gain comes from what Fly A knows about the current rule, not from having a confident teacher. It also does harm: by 96 rounds the old-rule teacher held its students at 1 win while those learning alone reached 31 (30 fewer, 95% CI 21 to 39 fewer; 12 of 15 runs). An earlier 3-run pilot agreed. <a href="docs/stale-teacher-cohort-protocol.md">Protocol</a> · <a href="data/stale_teacher_cohort_summary.json">results</a> · <a href="data/stale_teacher_control_summary.json">pilot</a>.</p>
-              <p id="study-trust" class="finding"><strong>Can Fly B learn whom to trust? (locked protocol, 14 completed runs): mostly.</strong> Here Fly B lowers its trust in the teacher whenever it plays the advised move and does not win. With the old-rule Fly A, at 96 rounds it won <strong>36</strong> of 72 on average, against 1 without the check: <strong>+34.2</strong> (95% CI +25.6 to +42.0). With the new-rule Fly A it kept the speed-up (67 against 68 at 48 rounds). It still ended <strong>7.5 wins below</strong> learning alone (43; 95% CI 2.2 to 12.9 below), so this study <strong>failed</strong> its pass rule, which required no remaining harm. <a href="docs/trust-gate-cohort-protocol.md">Protocol</a> · <a href="data/trust_gate_cohort_summary.json">results</a>.</p>
-              <p id="study-two-teachers" class="finding"><strong>Two teachers who disagree (locked protocol, 14 completed runs): a narrow fail.</strong> Fly B heard a new-rule Fly A and an old-rule Fly A on every round and was not told which was which. Keeping a trust value for each, it ended at <strong>70</strong> of 72 at 96 rounds: the same score as hearing only the new-rule teacher, on all 14 runs, and 34 above learning alone (36). But a Fly B that followed both equally also reached 62 by then, so the lead from choosing was <strong>+8.4</strong> (95% CI +3.8 to +13.6), just short of the +4 lower bound the protocol required. This study <strong>failed</strong> its pass rule. Earlier on, the gap was wider (48 rounds: 68 against 50; 24 rounds: 46 against 10), but those were not the locked test. <a href="docs/two-teacher-cohort-protocol.md">Protocol</a> · <a href="data/two_teacher_cohort_summary.json">results</a>.</p>
-              <p id="study-second-task" class="finding"><strong>A second task (locked protocol, 15 runs): passed, on the third test.</strong> We replaced Rock-Paper-Scissors with a fault-response task: one of three alarms in random order, three responses, and a change in which response fixes each fault. 48 rounds after the change, taught Fly Bs won <strong>70</strong> of 72 on average, against 44 with shuffled messages, 36 random, 25 with an untrained teacher, and 8 alone. Lead over the best control in each run: <strong>+19.0</strong> (95% CI +11.8 to +26.2). On 4 of 15 runs a control came within 4 wins of the taught fly, and by 96 rounds the lead had shrunk to 6.3, so here too the gain is speed. <strong>What to hold against it:</strong> two 3-run pilots came first and both failed their rules. With a small change (one alarm), Fly B alone was perfect within 24 rounds and the teacher added nothing. With this large change, the taught fly led by 25, 0, and 25, and the pilot rule needed all three. We had said we would stop there; we reopened it as a 15-run test with the averaged rule the Rock-Paper-Scissors study used. <a href="docs/fault-response-cohort-protocol.md">Protocol</a> · <a href="data/fault_response_cohort_summary.json">results</a> · <a href="docs/fault-response-pilot-protocol.md">pilot 1</a> · <a href="docs/fault-response-full-change-protocol.md">pilot 2</a>.</p>
-              <p id="study-engine" class="finding"><strong>Our own simulator (locked protocol, 10 of 15 runs completed): passed.</strong> Everything above ran on the neural simulator that came with Fly Hero. We wrote a second one for this project (<code>js/engine.js</code>): the same published neuron model and the same connectome, but solved exactly at each step instead of approximately, so its spikes are not the same. We repeated the rule-change study on it with nothing re-tuned. In the 10 runs that completed, taught Fly Bs won <strong>70</strong> of 72 at 48 rounds, against 28 shuffled, 25 random, 24 with an untrained teacher, and 4 alone. Lead over the best control in each run: <strong>+35.0</strong> (95% CI +28.2 to +41.4), and the taught fly led by more than 4 in every one. <strong>What to hold against it:</strong> on 5 of 15 runs Fly A did not reach its 58-of-72 bar on the new simulator (it scored 47 to 54) and the run stopped, which never happened on the original simulator; the protocol needed at least 10 completed runs and got exactly 10. Neurons are less active on the new simulator, and the learner settings were tuned for the old one. So the result holds when the teacher has learned, and the teacher learns less reliably. <strong>Follow-up (locked protocol, 15 new runs, teacher only):</strong> when we re-measured the two numbers that scale the learner's inputs on the new simulator, using no rewards or answers, Fly A reached its bar on <strong>15 of 15</strong> runs, against 12 of 15 with the old numbers on the same runs. The teaching study has not been repeated with the new numbers. <a href="docs/engine-teacher-scaling-protocol.md">Protocol</a> · <a href="data/engine_teacher_scaling_summary.json">results</a>. We wrote this simulator after reading the original, so it is a check on one codebase, not an independent replication. <a href="docs/engine-replication-cohort-protocol.md">Protocol</a> · <a href="data/engine_replication_cohort_summary.json">results</a> · <a href="docs/engine-replication-pilot-protocol.md">pilot</a>.</p>
+              <p class="legend">All locked in advance; Fly B is always tested with Fly A unplugged. Scores are wins out of 72.</p>
+              <p class="finding"><strong>Fixed rule (20 pairs): passed.</strong> After 6 rounds, taught Fly B led the best control by <strong>+10.3</strong> (95% CI +7.3 to +13.6). Students alone catch up by round 288.</p>
+              <p id="study-rule-switch" class="finding"><strong>Rule change (15 runs): passed.</strong> At 48 rounds: taught <strong>68</strong>, shuffled 33, random 32, untrained teacher 23, alone 10. Lead over the best control: <strong>+24.9</strong> (95% CI +17.8 to +32.1). Any message helps a little, so the teacher's own effect is the +24.9, not the gap to alone.</p>
+              <p id="study-stale" class="finding"><strong>Out-of-date teacher (15 runs): passed.</strong> A teacher trained on the old rule gave no help: <strong>1</strong> against <strong>68</strong> at 48 rounds, a difference of <strong>+67.1</strong> (95% CI +65.6 to +68.4). By 96 rounds it held students 30 wins below learning alone, so a wrong teacher does harm. <a href="docs/stale-teacher-cohort-protocol.md">Protocol</a> · <a href="data/stale_teacher_cohort_summary.json">results</a> · <a href="data/stale_teacher_control_summary.json">pilot</a></p>
+              <p id="study-trust" class="finding"><strong>Learning whom to trust (14 runs): failed.</strong> Lowering trust after bad advice recovered most of the harm: 36 against 1 at 96 rounds, <strong>+34.2</strong> (95% CI +25.6 to +42.0). But it still ended <strong>7.5</strong> wins below learning alone, and the rule required no harm. <a href="docs/trust-gate-cohort-protocol.md">Protocol</a> · <a href="data/trust_gate_cohort_summary.json">results</a></p>
+              <p id="study-two-teachers" class="finding"><strong>Two teachers who disagree (14 runs): narrow fail.</strong> Fly B ended level with hearing only the good teacher (70 of 72). Its lead over following both equally was <strong>+8.4</strong> (95% CI +3.8 to +13.6), just under the required bar. <a href="docs/two-teacher-cohort-protocol.md">Protocol</a> · <a href="data/two_teacher_cohort_summary.json">results</a></p>
+              <p id="study-second-task" class="finding"><strong>A second task (15 runs): passed, on the third try.</strong> An alarm-response task: taught <strong>70</strong>, shuffled 44, alone 8 at 48 rounds. Lead: <strong>+19.0</strong> (95% CI +11.8 to +26.2). Two 3-run pilots failed first; we reopened it as a full test. <a href="docs/fault-response-cohort-protocol.md">Protocol</a> · <a href="data/fault_response_cohort_summary.json">results</a> · <a href="docs/fault-response-pilot-protocol.md">pilot 1</a> · <a href="docs/fault-response-full-change-protocol.md">pilot 2</a></p>
+              <p id="study-engine" class="finding"><strong>Our own simulator (10 of 15 runs): passed.</strong> Same neuron model and wiring, solved differently. Taught <strong>70</strong>, alone 4 at 48 rounds. Lead: <strong>+35.0</strong> (95% CI +28.2 to +41.4). But the teacher failed to learn on 5 runs; re-measured input settings fixed that (15 of 15), though teaching was not re-run. <a href="docs/engine-replication-cohort-protocol.md">Protocol</a> · <a href="data/engine_replication_cohort_summary.json">results</a> · <a href="docs/engine-replication-pilot-protocol.md">pilot</a> · <a href="docs/engine-teacher-scaling-protocol.md">follow-up</a></p>
               </details>
             </details>
           <p class="legend">Locked before running: <a href="docs/rule-switch-cohort-protocol.md">protocol</a> · <a href="data/rule_switch_cohort_summary.json">results</a> · <a href="docs/lab-notebook.md">lab notebook</a>.</p>
@@ -937,127 +975,108 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         </div>
         <div id="tab-research" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-research" hidden>
         <h2 id="research" class="section-title">Research</h2>
-        <p class="section-lede">How the system works, what it does and does not show, and the archived experiments behind it.</p>
+        <p class="section-lede">How it works, why it matters, and what it does not show. Archived experiments are at the bottom.</p>
         <section id="how" class="panel" aria-labelledby="how-title">
           <h2 id="how-title">How it works</h2>
           <ol class="how-steps">
-            <li><strong>Fly A learns.</strong> A simulated fruit-fly connectome plays Rock-Paper-Scissors. A small readout of its brain activity learns from its own wins and losses; the connectome's own synapses stay fixed.</li>
-            <li><strong>Fly A sends spikes, not weights.</strong> On each round it sends its preferred move as spikes on two descending neurons (DNge175) in Fly B's brain.</li>
-            <li><strong>Fly B learns for itself.</strong> Fly B plays its own move, learns from its own reward, and leans toward Fly A's suggestion. Then Fly A is disconnected and Fly B is tested alone.</li>
+            <li><strong>Fly A learns.</strong> A simulated fruit-fly connectome plays Rock-Paper-Scissors; a small readout of its brain learns from wins and losses. The wiring never changes.</li>
+            <li><strong>Fly A sends spikes, not weights.</strong> Each round, its preferred move travels as spikes on two neurons (DNge175) into Fly B's brain.</li>
+            <li><strong>Fly B learns for itself.</strong> It learns from its own rewards and leans toward the advice. Then Fly A is unplugged and Fly B is tested alone.</li>
           </ol>
           <div class="hero-stats">
-            <div class="stat-tile"><strong>&lt;12<small> bytes</small></strong><span>everything Fly A sent before the test point: 46 messages on 2 neurons</span></div>
-            <div class="stat-tile"><strong>0<small> weights shared</small></strong><span>Fly B's learner has a different structure (48 numbers vs Fly A's 13), so weights could not be copied anyway</span></div>
-            <div class="stat-tile"><strong>990,102</strong><span>connectome synapses, identical in both flies and never changed</span></div>
+            <div class="stat-tile"><strong>&lt;12<small> bytes</small></strong><span>all Fly A sent before the test point</span></div>
+            <div class="stat-tile"><strong>0<small> weights shared</small></strong><span>Fly B's learner is built differently (48 numbers vs 13), so nothing could be copied</span></div>
+            <div class="stat-tile"><strong>990,102</strong><span>connectome synapses, identical in both flies, never changed</span></div>
           </div>
-          <h3 id="uses">Where this could lead</h3>
-          <p>Real systems rarely share one model. When conditions change, a partner that has already adapted could help a differently built one catch up — sending a few bytes of advice, without handing over its model or its data. None of these has been tested here. Three concrete scenarios where this matters today:</p>
-          <div class="scenario-cards" style="margin-bottom:20px">
-            <div class="scenario-card"><strong><svg class="scenario-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10l9-6 9 6z"/><path d="M5.5 10v8M10 10v8M14 10v8M18.5 10v8"/><path d="M3 20.5h18"/></svg>Fraud detection</strong><p>Fraudsters change tactics. Bank A adapts. Bank B runs a different model — private data, incompatible architecture. Bank A sends "I would block this." Bank B adapts faster. <em><a href="https://doi.org/10.1109/TNNLS.2017.2736643" rel="noopener">Dal Pozzolo et al. 2018</a>: fraud drifts continuously across 75M real transactions.</em></p></div>
-            <div class="scenario-card"><strong><svg class="scenario-icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2.5"/><path d="M12 8v8M8 12h8"/></svg>Hospital diagnostics</strong><p>Sepsis criteria change. Hospital A updates. Hospital B can't receive it — HIPAA blocks data, different EHR blocks weight transfer. Hospital A sends a per-patient flag. Hospital B recalibrates. <em><a href="https://doi.org/10.1056/NEJMc2104626" rel="noopener">Finlayson et al. 2021</a>: deployed clinical AI degrades as patients shift.</em></p></div>
-            <div class="scenario-card"><strong><svg class="scenario-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 17H3v-3l2-5.2a2 2 0 0 1 1.9-1.3h10.2a2 2 0 0 1 1.9 1.3L21 14v3h-2"/><path d="M9 17h6M3.5 13.5h17"/><circle cx="7" cy="17" r="2"/><circle cx="17" cy="17" r="2"/></svg>Mixed vehicle fleets</strong><p>Construction zone reverses a street. Tesla learns it. Waymo hasn't — different OS, competitor IP. At the junction, Tesla sends "I now do X." Waymo adapts before its own data catches up. <em><a href="https://arxiv.org/abs/2310.08864" rel="noopener">Open X-Embodiment 2023</a>: cross-robot learning today needs one shared model.</em></p></div>
-          </div>
-          <p>Our result has four properties that make this possible:</p>
-          <ul class="props"><li><strong>Different builds</strong><span>Fly B's learner has a different structure from Fly A's, so nothing could be copied</span></li><li><strong>Tiny message</strong><span>under 12 bytes in total before the test point</span></li><li><strong>Nothing private sent</strong><span>only "I would play this move", never weights or game history</span></li><li><strong>Works after a change</strong><span>15 of 15 taught flies recovered within 48 rounds; 0 of 15 alone</span></li></ul>
+          <h3 id="uses">Why it matters</h3>
+          <p>Who this affects, how big the problem is and how our approach differs are in the <a href="#bank">Usage</a> and <a href="#solution">Simulation</a> tabs.</p>
           <h4>What published research already shows</h4>
           <ul>
-            <li><strong>Advice works between differently built learners.</strong> A trained agent that may advise only a limited number of times still speeds up a student that uses a different learning method and a different view of the task (<a href="https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2013/docs/p1053.pdf" rel="noopener">Torrey &amp; Taylor 2013</a>). This is the idea we test inside a connectome.</li>
-            <li><strong>Sharing weights has two real problems.</strong> The standard way for separate sites to learn together averages their model weights, so every site must run the same model (<a href="https://arxiv.org/abs/1602.05629" rel="noopener">McMahan et al. 2017</a>). And the updates they share can be turned back into the private training data, pixel for pixel (<a href="https://arxiv.org/abs/1906.08935" rel="noopener">Zhu et al. 2019</a>). Sharing outputs instead of weights lets differently designed models learn together (<a href="https://arxiv.org/abs/1910.03581" rel="noopener">Li &amp; Wang 2019</a>).</li>
-            <li><strong>Checking the adviser is an open problem.</strong> Recent work has students ask for advice only when they are unsure (<a href="https://doi.org/10.1609/aaai.v34i04.6036" rel="noopener">Da Silva et al. 2020</a>). We tried a different approach, where Fly B learns from its wins how much to trust each teacher; the results are in the table further down.</li>
-            <li><strong>Real flies and real brains do this.</strong> Fruit flies copy the mate choices and egg-laying sites of other flies, and the habits spread through groups (<a href="https://doi.org/10.1126/science.aat1590" rel="noopener">Danchin et al. 2018</a>; <a href="https://doi.org/10.1016/j.cub.2011.12.050" rel="noopener">Battesti et al. 2012</a>). Rats have solved a task using brain activity transmitted from another rat (<a href="https://doi.org/10.1038/srep01319" rel="noopener">Pais-Vieira et al. 2013</a>). These are different mechanisms from ours; they show the question is a biological one too.</li>
+            <li><strong>Fraud labels arrive late, and late labels hurt.</strong> Most card transactions are confirmed as fraud only days later, while fraud tactics keep changing (<a href="https://boracchi.faculty.polimi.it/docs/2015_04_Credit_Card_Fraud_Detection_DalPozzolo_Boracchi_Caelen_Alippi_Bontempi.pdf" rel="noopener">Dal Pozzolo et al. 2015</a>; <a href="https://doi.org/10.1109/TNNLS.2017.2736643" rel="noopener">2018</a>). Models stuck waiting for delayed labels fall clearly behind (<a href="https://arxiv.org/abs/2312.00923" rel="noopener">Csaba et al. 2024</a>).</li>
+            <li><strong>Sharing models or updates has limits.</strong> Federated learning needs every site to run the same model (<a href="https://arxiv.org/abs/1602.05629" rel="noopener">McMahan et al. 2017</a>), and shared updates can be turned back into private data (<a href="https://arxiv.org/abs/1906.08935" rel="noopener">Zhu et al. 2019</a>; <a href="https://arxiv.org/abs/2003.14053" rel="noopener">Geiping et al. 2020</a>).</li>
+            <li><strong>Sharing outputs works across different models.</strong> Differently built models can learn from each other's predictions alone (<a href="https://arxiv.org/abs/1910.03581" rel="noopener">Li &amp; Wang 2019</a>; <a href="https://arxiv.org/abs/2006.07242" rel="noopener">Lin et al. 2020</a>), and advice speeds up a differently built learner (<a href="https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2013/docs/p1053.pdf" rel="noopener">Torrey &amp; Taylor 2013</a>).</li>
+            <li><strong>Banks want to collaborate without sharing data.</strong> In a 2025 trial on synthetic transactions, 13 banks training together without sharing customer data detected fraud about twice as well as single banks (<a href="https://www.swift.com/news-events/news/swift-led-experiments-reveal-blueprint-collaborative-fraud-defence-using-ai" rel="noopener">Swift 2025</a>, self-reported).</li>
+            <li><strong>Real flies learn from each other.</strong> Fruit flies copy other flies' choices, and the habits spread (<a href="https://doi.org/10.1126/science.aat1590" rel="noopener">Danchin et al. 2018</a>; <a href="https://doi.org/10.1016/j.cub.2011.12.050" rel="noopener">Battesti et al. 2012</a>).</li>
           </ul>
-          <h4>Four more places the idea could be used</h4>
-          <p class="legend">Also untested; the table below this one lists the second tasks we did try. Each row says what would change, what the few bytes of advice would be, and why a model or data could not be sent instead.</p>
+          <details class="panel"><summary>Other places the idea could be used (untested)</summary>
           <div class="scroll"><table class="uses">
-            <thead><tr><th>Where</th><th>The "rule change"</th><th>The advice</th><th>Why not send the model or data</th><th>Related research</th></tr></thead>
+            <thead><tr><th>Where</th><th>What changes</th><th>Why not send the model or data</th><th>Related research</th></tr></thead>
             <tbody>
-              <tr><th>Underwater and remote vehicles</th><td>Currents, ice, or terrain change mid-mission</td><td>A move suggestion of a few bits</td><td>Underwater sound links carry very little data, so a model cannot be sent</td><td><a href="https://doi.org/10.1109/MCOM.2009.4752682" rel="noopener">Stojanovic &amp; Preisig 2009</a></td></tr>
-              <tr><th>Brain-like chips</th><td>A sensor ages or its surroundings change</td><td>The same spikes the chip already computes with</td><td>These chips learn on the chip itself and talk in spikes; advice as spikes needs no translation step</td><td><a href="https://doi.org/10.1109/MM.2018.112130359" rel="noopener">Davies et al. 2018</a></td></tr>
-              <tr><th>Brain-computer interfaces</th><td>The recorded brain signals drift from day to day</td><td>A second decoder's suggested output</td><td>Each decoder is fitted to one brain's signals and cannot be swapped</td><td><a href="https://doi.org/10.1038/s41551-020-0542-9" rel="noopener">Degenhart et al. 2020</a></td></tr>
-              <tr><th>Old equipment in the field</th><td>Operating conditions move beyond what it was built for</td><td>A newer unit's suggested action</td><td>The old unit's software cannot be replaced, but it can still listen</td><td>No direct study found</td></tr>
+              <tr><th>Hospitals</th><td>Sepsis criteria, scanners, patient mix</td><td>Patient data cannot leave; record systems differ</td><td><a href="https://doi.org/10.1056/NEJMc2104626" rel="noopener">Finlayson et al. 2021</a></td></tr>
+              <tr><th>Mixed robot or vehicle fleets</th><td>Roads, floors, layouts</td><td>Different makers run different models</td><td><a href="https://arxiv.org/abs/2310.08864" rel="noopener">Open X-Embodiment 2023</a></td></tr>
+              <tr><th>Underwater vehicles</th><td>Currents, ice, terrain</td><td>Acoustic links carry too little data for a model</td><td><a href="https://doi.org/10.1109/MCOM.2009.4752682" rel="noopener">Stojanovic &amp; Preisig 2009</a></td></tr>
+              <tr><th>Brain-like chips</th><td>Ageing sensors, new surroundings</td><td>They compute in spikes, so spike advice needs no translation: the one case where spikes matter</td><td><a href="https://doi.org/10.1109/MM.2018.112130359" rel="noopener">Davies et al. 2018</a></td></tr>
+              <tr><th>Brain-computer interfaces</th><td>Brain signals drift day to day</td><td>Each decoder fits one brain (most speculative)</td><td><a href="https://doi.org/10.1038/s41551-020-0542-9" rel="noopener">Degenhart et al. 2020</a></td></tr>
             </tbody>
           </table></div>
-          <p class="legend"><strong>Brain-like chips is the one case where spikes themselves matter.</strong> Everywhere else a network cable would do, as our own digital-message test showed. On hardware that only speaks spikes, a spike message is the natural format. The brain-computer interface row is the most speculative.</p>
+          </details>
           <h4>What we tried beyond Rock-Paper-Scissors</h4>
-          <p>Six tests on a second task; the last one passed. The first three stopped before any teaching because the task itself did not work in this system. The next two were small pilots that failed their rules. The sixth was a full 15-run test.</p>
+          <p>Six tests on a second task. Three stopped because the task did not work in this system, two pilots failed their rules, and the full test passed.</p>
           <div class="scroll"><table class="uses">
             <thead><tr><th>Task</th><th>What happened</th><th>What it tells us</th></tr></thead>
             <tbody>
-              <tr><th>Sensor readings (temperature, vibration)</th><td>Stopped: the simulated senses could not tell the three conditions apart (18 of 36)</td><td>Continuous signals need a better way in than this sensory pathway</td></tr>
-              <tr><th>Warehouse route</th><td>Stopped: the teacher did not learn the route well enough (8 of 12)</td><td>Multi-step tasks are beyond this learner</td></tr>
-              <tr><th>Package recovery</th><td>Stopped: the teacher narrowly missed its bar with uncertain outcomes</td><td>Random outcomes are hard for this learner</td></tr>
-              <tr><th>Fault response, small change</th><td>Ran, 3 runs: Fly B alone was perfect within 24 rounds; the teacher added nothing</td><td>Advice is not needed when recovering alone is quick</td></tr>
-              <tr><th>Fault response, large change (pilot)</th><td>Ran, 3 runs: taught fly led the best control by 25, 0, 25; our rule needed all three</td><td>The same direction as Rock-Paper-Scissors, too few runs to say</td></tr>
-              <tr><th>Fault response, large change (full test)</th><td><strong>Passed</strong>, 15 runs: taught fly led the best control by 19.0 on average (95% CI 11.8 to 26.2)</td><td>The teaching effect is not specific to Rock-Paper-Scissors or to its fixed cycle of cues</td></tr>
+              <tr><th>Sensor readings</th><td>Stopped: the senses could not tell the conditions apart (18 of 36)</td><td>Continuous signals need a better input</td></tr>
+              <tr><th>Warehouse route</th><td>Stopped: the teacher did not learn the route (8 of 12)</td><td>Multi-step tasks are beyond this learner</td></tr>
+              <tr><th>Package recovery</th><td>Stopped: the teacher narrowly missed its bar</td><td>Random outcomes are hard for this learner</td></tr>
+              <tr><th>Fault response, small change</th><td>3 runs: Fly B alone recovered within 24 rounds</td><td>Advice is not needed when recovery is quick</td></tr>
+              <tr><th>Fault response, large change (pilot)</th><td>3 runs: leads of 25, 0, 25; the rule needed all three</td><td>Same direction, too few runs</td></tr>
+              <tr><th>Fault response, large change (full test)</th><td><strong>Passed</strong>, 15 runs: lead of 19.0 (95% CI 11.8 to 26.2)</td><td>The effect is not specific to Rock-Paper-Scissors</td></tr>
             </tbody>
           </table></div>
-          <h4>The idea, sharpened by what we found</h4>
-          <p>The results point to something narrower and more useful than "share advice": <strong>advice as a temporary, checked aid after a change.</strong> Each part is a known research idea; the table says which parts we have actually tested here.</p>
+          <h4>What the results support</h4>
+          <p>Not "share advice" in general, but <strong>advice as a temporary, checked aid after a change.</strong></p>
           <div class="scroll"><table class="uses">
-            <thead><tr><th>Part of the idea</th><th>Research idea it draws on</th><th>Our evidence</th></tr></thead>
+            <thead><tr><th>Part of the idea</th><th>Our evidence</th></tr></thead>
             <tbody>
-              <tr><th>Advise after a change, not all the time</th><td>Spending a limited advice budget where it matters most (<a href="https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2013/docs/p1053.pdf" rel="noopener">Torrey &amp; Taylor 2013</a>)</td><td><strong>Supported, on two tasks:</strong> after a full change the taught fly led the best control by 24.9 wins in Rock-Paper-Scissors and 19.0 in the alarm-response task (15 runs each). After a small change, advice added nothing (3-run pilot)</td></tr>
-              <tr><th>Send a suggestion, never the model</th><td>Sharing outputs instead of weights (<a href="https://arxiv.org/abs/1910.03581" rel="noopener">Li &amp; Wang 2019</a>)</td><td><strong>Supported:</strong> under 12 bytes sent, between learners of different structure</td></tr>
-              <tr><th>The learner checks the adviser against its own results</th><td>Advice the student can question (<a href="https://doi.org/10.1609/aaai.v34i04.6036" rel="noopener">Da Silva et al. 2020</a>)</td><td><strong>Partly:</strong> removed 34 of the 42 wins a bad teacher cost; failed its no-harm rule</td></tr>
-              <tr><th>Several advisers, not all trustworthy</th><td>Choosing among advisers by how their advice pays off</td><td><strong>Partly:</strong> ended level with the good teacher alone on 14 of 14 runs; the lead over following both was just under our bar</td></tr>
-              <tr><th>The learner keeps what it learned once the adviser is gone</th><td>Distilling a teacher into a student</td><td><strong>Supported:</strong> every score on this page is measured with the teacher disconnected</td></tr>
-              <tr><th>Notice the change and ask for help</th><td>Detecting when a deployed model's world has shifted (<a href="https://doi.org/10.1056/NEJMc2104626" rel="noopener">Finlayson et al. 2021</a>)</td><td><strong>Not tested.</strong> Here the change point is known to the experiment</td></tr>
+              <tr><th>Advise after a change, not all the time</th><td><strong>Supported, two tasks:</strong> leads of 24.9 and 19.0 after a full change; nothing added after a small one</td></tr>
+              <tr><th>Send a suggestion, never the model</th><td><strong>Supported:</strong> under 12 bytes, between differently built learners</td></tr>
+              <tr><th>The student keeps what it learned</th><td><strong>Supported:</strong> every score is measured with the teacher unplugged</td></tr>
+              <tr><th>The student checks the adviser</th><td><strong>Partly:</strong> recovered 34 of 42 wins a bad teacher cost; failed its no-harm rule</td></tr>
+              <tr><th>Choosing among several advisers</th><td><strong>Partly:</strong> matched the good teacher on 14 of 14 runs; lead over following both just missed the bar</td></tr>
+              <tr><th>Noticing the change and asking for help</th><td><strong>Not tested:</strong> here the change point is known</td></tr>
             </tbody>
           </table></div>
-          <p class="finding"><strong>What remains to do.</strong> Both confirmed tasks are small: three cues, three choices, fixed outcomes, in one simulated system. The next step is a task this system could not handle: continuous sensor readings, outcomes with chance in them, or more than one step. <span class="legend">Confirmed so far only in simulation, on Rock-Paper-Scissors and one alarm-response task.</span></p>
           <h3>What we do not claim</h3>
           <ul class="legend">
-            <li><strong>Not a new learning method.</strong> A teacher suggesting moves to a student is "action advising", a known idea in reinforcement learning (<a href="https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2013/docs/p1053.pdf" rel="noopener">Torrey &amp; Taylor 2013</a>). What is new here is the test, not the method: (1) the advice travels as spikes on two neurons inside a simulated fly connectome; (2) it works when the student is built differently from the teacher (48 learned numbers against 13), so nothing could have been copied; (3) every claim was run against controls fixed in advance, including a teacher that is confident but out of date; and (4) we measured what happens when Fly B has to judge its teachers for itself, with one teacher and with two who disagree, and report where that fell short.</li>
-            <li><strong>Spikes are a working channel, not a better one.</strong> Sending the same advice digitally worked equally well (archived ablation, 552/552 spike messages decoded). We show learned knowledge survives a neural channel, not that neurons beat a network cable.</li>
-            <li><strong>Two simulators, one starting point.</strong> The demo and most studies run on the simulator that came with Fly Hero. Our own simulator reproduces the main result when the teacher learns, but the teacher failed to learn on 5 of 15 runs there, so we have not moved the demo to it.</li>
-            <li><strong>It is a hybrid brain.</strong> The connectome senses and carries the message; a small learned readout picks the move, and Fly B's imitation step is engineered. The connectome and dopamine rule are unchanged.</li>
-            <li><strong>Fly B trusts its teacher.</strong> It follows advice without checking it. In a locked 15-run study, a teacher trained on the old rule kept Fly B stuck at its starting score, 30 wins below learning alone by 96 rounds. A Fly B that learns from its own wins how much to trust its teacher got most of that back, but not all of it. Given a current and an out-of-date teacher at once, it ended level with having the current one alone (see the Stats tab).</li>
-            <li><strong>Speed, not a higher ceiling.</strong> Students learning alone close the gap given enough rounds. The gain is adapting faster after a change.</li>
+            <li><strong>Not a new learning method.</strong> A teacher suggesting moves is "action advising" (<a href="https://ifaamas.csc.liv.ac.uk/Proceedings/aamas2013/docs/p1053.pdf" rel="noopener">Torrey &amp; Taylor 2013</a>). What is new is the test: advice sent as spikes inside a fly connectome, to a differently built student, against controls fixed in advance.</li>
+            <li><strong>Spikes are not better than a cable.</strong> Sending the same advice digitally worked just as well.</li>
+            <li><strong>It is a hybrid brain.</strong> The connectome senses and carries the message; a small learned readout picks the move, and Fly B's imitation step is engineered.</li>
+            <li><strong>Fly B trusts its teacher too much.</strong> An out-of-date teacher kept it stuck at its starting score. Letting Fly B judge the teacher by its own wins fixed most of that, not all.</li>
+            <li><strong>Faster, not better in the end.</strong> Fly B learning alone catches up given enough rounds.</li>
+            <li><strong>Small tasks, in simulation.</strong> Both confirmed tasks have three cues and three choices. The live Challenge is a demonstration, not a new locked result; failed older experiments are in the <a href="archive.html">archive</a>.</li>
           </ul>
-        <details class="panel"><summary>What is this? Research notes and limits</summary>
-          <ul class="legend">
-            <li>Each simulated connectome produces sensory spikes; engineered controllers learn from game rewards.</li>
-            <li>In the archived action-preference study, Fly A’s learned preference traveled through measured DN spikes. Fly B updated its own controller from its reward and the decoded message, then played without Fly A.</li>
-            <li>On fixed Strategies A and B, trained advice sped early frozen learning against silent, untrained, shuffled, and generic controls; final accuracy was often the same.</li>
-          </ul>
-          <p class="finding">The supported result is faster early retained learning in an engineered hybrid system on two fixed RPS rules.</p>
-          <p class="finding caution">The live Challenge below runs the same action-preference protocol as the archived study, including its engineered imitation update. A live run is a demonstration, not a new locked result, and these results do not establish biological teaching or arbitrary-opponent generalization. Older proposal/veto experiments failed their gate and are in the <a href="archive.html">archive</a>.</p>
-        </details>
         </section>
         <h2 id="evidence" class="section-title">Evidence and archive</h2>
-        <p class="section-lede">Earlier locked studies, ablations, and recorded measurements.</p>
-        <details id="research-evidence" class="panel"><summary>Research Evidence - archived controls and results</summary>
-        <details id="ablation-evidence" class="panel"><summary>Neural spikes versus direct messaging · archived Strategy B ablation</summary>
-          <p class="legend">Fly A’s learned action preference was sent either through <strong>measured DNge175 spikes</strong> or directly as the same digital preference at the same update time. Fly B kept the same sensory simulation and reward plus imitation updates. Silence and globally scrambled neural messages were controls. This archived ablation tests the action-preference mechanism shown in the live Challenge.</p>
-          <p class="legend">Across two fresh students, all <strong>552/552 trained neural messages decoded correctly</strong>. Neural and digital arms had identical training actions, rewards, updates, weights, and frozen predictions. The spike route transports learned information; it has not shown an advantage over direct delivery or a necessary role for detailed DN output wiring.</p>
+        <p class="section-lede">Earlier locked studies and recorded measurements.</p>
+        <div class="archive-tools"><button type="button" id="archive-expand">Expand all</button></div>
+        <details id="research-evidence" class="panel"><summary>Archived studies</summary>
+        <details id="ablation-evidence" class="panel"><summary>Spikes versus a digital message · Strategy B</summary>
+          <p class="legend">Fly A's advice was sent either as measured DNge175 spikes or as the same digital message. All <strong>552/552</strong> spike messages decoded correctly, and both routes gave identical results: spikes carry the advice, but are no better than a cable.</p>
           <div class="controls"><label>Archived student <select id="ablation-evidence-seed"><option value="11017">Strategy B · student 11017</option><option value="11018">Strategy B · student 11018</option></select></label></div>
-          <p class="legend">Frozen, teacher-disconnected wins out of 72 after the labeled training rounds. White: neural spikes, with the direct-digital line drawn dashed on top, because the two were identical at every checkpoint. Grey: no advice. Grey dotted: scrambled neural messages.</p>
-          <div id="ablation-evidence-chart" role="img" aria-label="Archived neural, digital, silent, and scrambled frozen RPS learning curves"></div>
+          <p class="legend">Wins out of 72, Fly A unplugged. Spikes and the digital message gave identical results, so they share one line.</p>
+          <figure id="ablation-evidence-chart" aria-label="Archived spikes, digital, no-advice and scrambled learning curves"></figure>
           <details><summary>Show as a table</summary><div class="scroll"><table><thead><tr><th>Training rounds</th><th>Neural spikes</th><th>Direct digital</th><th>No advice</th><th>Scrambled neural</th></tr></thead><tbody id="ablation-evidence-table"></tbody></table></div></details>
           <p id="ablation-evidence-status" class="legend">Open this comparison to load the archived result.</p>
-          <p class="legend"><a href="docs/connectome-contribution-ablation-report.md">Causal pathway and limits</a> · <a href="docs/connectome-contribution-ablation-protocol.md">Locked protocol</a> · <a href="data/rps_connectome_contribution_ablation.json">Trial-level result</a>.</p>
+          <p class="legend"><a href="docs/connectome-contribution-ablation-report.md">Report</a> · <a href="docs/connectome-contribution-ablation-protocol.md">Locked protocol</a> · <a href="data/rps_connectome_contribution_ablation.json">Raw result</a></p>
         </details>
         <section id="preference-event" class="panel" aria-labelledby="preference-event-title">
-          <h3 id="preference-event-title">One archived teaching round · recorded measurements</h3>
-          <p class="legend">The first message-bearing training round for the selected student, chosen consistently without selecting a favorable outcome. The archive stores MBON group rates and DN counts, but not cell-by-cell spike events for a brain animation.</p>
+          <h3 id="preference-event-title">One recorded teaching round</h3>
+          <p class="legend">The first round with a message for the selected student, not hand-picked. The archive stores firing rates and spike counts, not every spike.</p>
           <div class="grid"><div><h4>Fly A · learned preference</h4><p id="preference-event-teacher">Loading archived round…</p><p id="preference-event-dn" class="legend"></p></div><div><h4>Fly B · own action and update</h4><p id="preference-event-student">Loading archived round…</p><p id="preference-event-update" class="legend"></p></div></div>
           <p id="preference-event-status" class="legend"></p>
         </section>
-        <article class="panel"><h3>Action-preference teaching · archived Strategy A and B</h3><p class="legend">Fly A learned from its own RPS rewards, then its frozen MBON-driven preferred action was encoded as actual simulated DNge175 spikes. Fly B decoded measured spike counts and updated its own cue-specific controller after its own reward. The played action for that round was chosen before the message. This is engineered hybrid imitation with frozen KC→MBON synapses, not natural biological teacher–student plasticity.</p><p class="legend">Strategy A: all four reported trained students reached at least 58/72 frozen wins by round 6; the earliest control did so at round 12. Their early mean advantages over the strongest controls were +11.75, +11, +8, and +11.75 wins/72. Strategy B: teacher frozen wins were 67/72 and 69/72; trained students scored 70/72 and 69/72 at round 6, with +17 and +11 wins/72 early advantages. Both finished 70/72 disconnected. Every reported training message decoded from measured DN spikes (276/276 per messaged arm). Silent students also reached 70/72 eventually in Strategy B.</p><p class="legend">Choose an archived student to inspect its actual five-arm <strong>frozen, teacher-disconnected</strong> learning curve. These are wins on 72 evaluation rounds after the labeled number of training rounds; they are not online training wins or a new live run. Checkpoints are equally spaced in the chart; the labels give the actual training rounds.</p><div class="controls"><label>Archived result <select id="preference-evidence-seed"><option value="a-11007">Strategy A initial · student 11007</option><option value="a-11008">Strategy A initial · student 11008</option><option value="a-11011">Strategy A confirmation · student 11011</option><option value="a-11012">Strategy A confirmation · student 11012</option><option value="b-11015">Strategy B initial · student 11015</option><option value="b-11016">Strategy B confirmation · student 11016</option></select></label></div><figure id="preference-evidence-chart" aria-label="Archived five-arm frozen RPS wins at seven training checkpoints"></figure><div class="scroll"><table><thead><tr><th>Training rounds</th><th>Trained preference</th><th>No message</th><th>Untrained</th><th>Shuffled</th><th>Generic</th></tr></thead><tbody id="preference-evidence-table"></tbody></table></div><p id="preference-evidence-status" class="legend">Open Research Evidence to load the selected archived result.</p><p class="legend"><a href="docs/action-preference-independent-audit.md">Strategy A independent audit</a> · <a href="docs/action-preference-strategy-b-independent-audit.md">Strategy B independent audit</a> · <a href="docs/action-preference-strategy-b-protocol.md">Strategy B locked protocol</a>. Both tasks use fixed observable opponent rules; the evidence does not cover arbitrary patterns. Earlier negative results are preserved below and in the research reports.</p></article>
-        <p class="legend">Older proposal/veto results and the Research Replay are on the <a href="archive.html">archive page</a>. The <a href="legacy.html">legacy RPS page</a> preserves the older frozen-policy game, exploratory quantized neural-message demo, and detailed historical results.</p>
+        <article class="panel"><h3>Teaching a fixed rule · Strategies A and B</h3><p class="legend">Fly A's preferred move travels as spikes; Fly B decodes it and updates its own learner after its own reward. This is engineered imitation, not biological teaching.</p><p class="legend"><strong>Strategy A:</strong> all four taught students reached 58/72 by round 6; the earliest control needed 12 rounds. <strong>Strategy B:</strong> taught students scored 70 and 69 at round 6 (leads of +17 and +11); silent students caught up later.</p><p class="legend">Pick a student to see its five-arm curve: wins out of 72, Fly A unplugged.</p><div class="controls"><label>Archived result <select id="preference-evidence-seed"><option value="a-11007">Strategy A initial · student 11007</option><option value="a-11008">Strategy A initial · student 11008</option><option value="a-11011">Strategy A confirmation · student 11011</option><option value="a-11012">Strategy A confirmation · student 11012</option><option value="b-11015">Strategy B initial · student 11015</option><option value="b-11016">Strategy B confirmation · student 11016</option></select></label></div><figure id="preference-evidence-chart" aria-label="Archived five-arm frozen RPS wins at seven training checkpoints"></figure><div class="scroll"><table><thead><tr><th>Training rounds</th><th>Trained preference</th><th>No message</th><th>Untrained</th><th>Shuffled</th><th>Generic</th></tr></thead><tbody id="preference-evidence-table"></tbody></table></div><p id="preference-evidence-status" class="legend">Loading the selected archived result…</p><p class="legend"><a href="docs/action-preference-independent-audit.md">Strategy A audit</a> · <a href="docs/action-preference-strategy-b-independent-audit.md">Strategy B audit</a> · <a href="docs/action-preference-strategy-b-protocol.md">Strategy B protocol</a></p></article>
+        <p class="legend">Older failed experiments: <a href="archive.html">archive page</a> · <a href="legacy.html">legacy RPS page</a>.</p>
         </details>
-        <p class="legend">The archived engineered action-preference protocol passed its teacher-specific early retained-learning gates on fixed Strategies A and B. The earlier proposal/veto protocol did not. Neither establishes biological transfer or reliable learning on arbitrary opponent patterns. <a href="docs/research-story.md">Read the research story</a> or <a href="docs/lab-notebook.md">full lab notebook</a>.</p>
+        <p class="legend">Teaching a fixed rule passed its locked tests; the older proposal/veto method did not. <a href="docs/research-story.md">Research story</a> · <a href="docs/lab-notebook.md">Lab notebook</a></p>
         <section class="panel" aria-label="Live demo method notes">
             <details><summary>Method notes</summary>
-          <p class="legend">These views show Fly A and two Fly B networks in the live Challenge, not an animation of archived events. A third Fly B with random messages runs as a background control without a brain view. The archive stores measured MBON rates and DN counts, but not cell-by-cell spike events. <a href="#research-evidence">Inspect the archived Strategy A/B controls</a>, or <a href="#challenge-title">start the live Challenge</a>.</p>
-            <p class="legend">Each image uses the same connectome cell positions; bright dots are recent spikes from that fly's own live simulation. Fly A's image continues updating while it teaches. Fly B plays its own move first; afterwards an engineered DN spike-count buffer carries Fly A's preferred action into a small imitation update. This is hybrid simulated neural communication, not proof of biological brain-to-brain teaching. The live run includes Alone and Random messages as controls; the archived evidence also includes untrained, shuffled, and generic advice.</p>
-            <p class="legend">The live comparison shows trained advice, silence, and random messages under matched conditions. It is a live diagnostic, not the final teacher-specific proof. The archived controls below test whether the trained teacher is uniquely helpful.</p>
-          <p class="finding">Archived action-preference teaching reached 58/72 frozen, disconnected wins by round 6 for four Strategy A students and two Strategy B students. Each passed its locked early-speed comparison with silent, untrained, shuffled, and generic controls on a fixed observable rule.</p>
-          <p class="finding caution">This is a separate engineered hybrid imitation protocol, and the live Challenge above runs it as a demonstration only. Some controls reached the same final accuracy. Earlier proposal/veto, receiver, and noisy-task failures remain valid; these results do not establish biological teaching or arbitrary-opponent generalization.</p>
+          <p class="legend">The live brain views show Fly A and two Fly B networks from your own run, not archived events; a third Fly B with random messages runs unseen as a control. Bright dots are recent spikes. Fly B plays first, then a spike-count buffer carries Fly A's advice into a small imitation update. <a href="#challenge-title">Start the live Challenge</a>.</p>
+          <p class="finding caution">The live Challenge is a demonstration, not a new locked result. It does not show biological teaching, or learning against any opponent.</p>
             </details>
         </section>
         </div>
-        <div id="tab-bank" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-bank">
+        <div id="tab-bank" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-bank" hidden>
         <h2 id="bank" class="section-title">Bank A teaches Bank B</h2>
         <p class="section-lede">A bank with a newer fraud model sends compact advice to a credit union whose different model learned older patterns.</p>
         <section id="bank-quick" class="panel" aria-labelledby="bank-quick-title">
@@ -1071,7 +1090,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
           <p id="bank-quick-study" class="legend"></p>
           <p class="story-next"><a href="#bank-ledger">Inspect the 200 saved purchases →</a> · <a href="#demo">Return to Science →</a></p>
         </section>
-        <h2 class="section-title">Why this matters</h2>
+        <h2 class="section-title">The problem</h2>
         <p class="section-lede">When fraud tactics change, the bank that sees it first adapts. Smaller banks find out last, and keep approving the scam until they do.</p>
         <section id="problem-who" class="panel" aria-labelledby="problem-who-title">
           <h2 id="problem-who-title">Who is affected</h2>
@@ -1144,7 +1163,7 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         const panel = target?.closest?.('.tab-panel');
         if (!panel) return showTab('sim', null, false);
         const name = Object.keys(tabs).find(key => tabs[key] === panel.id);
-        const top = ['demo', 'stats', 'research', 'bank'].includes(target.id);
+        const top = ['demo', 'solution', 'stats', 'research', 'bank'].includes(target.id);
         for (let details = target.closest('details'); details; details = details.parentElement.closest('details')) details.open = true;
         showTab(name, top ? null : target);
       };

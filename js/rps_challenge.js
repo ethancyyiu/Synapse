@@ -948,32 +948,24 @@ export async function loadAblationEvidence() {
     const seed = Number($('ablation-evidence-seed').value);
     const pair = archive.pairs.find(p => p.studentSeed === seed);
     if (!pair) throw Error('unknown archived student');
-    // Same look as the 15-run result chart on the Stats tab: white for the taught line, greys and dash
-    // patterns for the controls, and each line named at its right-hand end.
-    const x = i => 56 + 528 * i / 6, y = wins => 290 - 250 * wins / 72;
+    // Same interactive chart as the other archived result. Spikes and the digital message were identical at
+    // every checkpoint (checked above), so they share one line.
     const wins = arm => pair.byArm[arm].checkpoints.map(c => c.wins);
-    const path = arm => wins(arm).map((w, i) => `${i ? 'L' : 'M'}${x(i).toFixed(1)} ${y(w).toFixed(1)}`).join(' ');
-    const grid = [0, 24, 48, 72].map(w => `<line x1="56" x2="584" y1="${y(w)}" y2="${y(w)}" stroke="#2e2d2a"/>` +
-      `<text x="48" y="${y(w) + 4}" text-anchor="end" fill="#a3abb4" font-size="12">${w}</text>`).join('');
-    const ticks = rounds.map((n, i) => `<text x="${x(i)}" y="310" text-anchor="middle" fill="#a3abb4" font-size="12">${n}</text>`).join('');
-    const line = (arm, stroke, width, dash = '') => `<path d="${path(arm)}" fill="none" stroke="${stroke}" stroke-width="${width}" ` +
-      `stroke-linecap="round" stroke-linejoin="round"${dash ? ` stroke-dasharray="${dash}"` : ''}/>`;
-    const dots = wins('neural').map((w, i) => `<circle cx="${x(i)}" cy="${y(w)}" r="4.5" fill="#ffffff" stroke="#191918" stroke-width="2"/>`).join('');
-    // End labels, pushed apart where lines finish at the same score.
-    const labels = [
-      { text: 'Neural spikes = direct digital', w: wins('neural')[6], fill: '#ffffff', bold: true, stroke: '#ffffff', width: 3, dash: '' },
-      { text: 'Scrambled neural', w: wins('scrambled')[6], fill: '#a3abb4', stroke: '#a3abb4', width: 2, dash: '2 4' },
-      { text: 'No advice', w: wins('silent')[6], fill: '#a3abb4', stroke: '#8a929b', width: 2, dash: '' },
-    ].map(l => ({ ...l, at: y(l.w) + 4 })).sort((a, b) => a.at - b.at);
-    labels.forEach((l, i) => { if (i) l.at = Math.max(l.at, labels[i - 1].at + 18); });
-    // A short sample of each line's stroke sits before its name.
-    const names = labels.map(l => `<line x1="596" x2="618" y1="${l.at - 4}" y2="${l.at - 4}" stroke="${l.stroke}" stroke-width="${l.width}"` +
-      `${l.dash ? ` stroke-dasharray="${l.dash}"` : ''}/><text x="626" y="${l.at}" fill="${l.fill}" font-size="13"${l.bold ? ' font-weight="700"' : ''}>${l.text}</text>`).join('');
-    chart.innerHTML = `<svg viewBox="0 0 840 330" style="width:100%;display:block" aria-hidden="true">${grid}` +
-      `<path d="M56 290H584" fill="none" stroke="#5f5d58"/>${ticks}` +
-      `<text x="320" y="327" text-anchor="middle" fill="#a3abb4" font-size="12">Training rounds (checkpoints shown evenly spaced)</text>` +
-      line('silent', '#8a929b', 2) + line('scrambled', '#a3abb4', 2, '2 4') + line('neural', '#ffffff', 3) +
-      line('digital', '#191918', 1.4, '5 5') + dots + names + '</svg>';
+    drawLineChart(chart, {
+      title: `Archived student ${seed}: spikes versus a digital message, wins out of 72 with Fly A unplugged`,
+      ticks: rounds.map(String),
+      tickTitle: k => (k ? `After ${rounds[k]} training rounds` : 'Before training'),
+      xLabel: 'Training rounds (checkpoints equally spaced)',
+      max: 72,
+      yTicks: [0, 24, 48, 72],
+      band: { from: 1, to: 4, label: 'early window (scored)' },
+      series: [
+        { name: 'Spikes = digital message', main: true, values: wins('neural'),
+          about: "Fly A's advice sent as measured spikes on two neurons, or as the same digital message. Both gave identical results at every checkpoint." },
+        { name: 'No advice', values: wins('silent'), about: 'Fly B learns only from its own wins and losses.' },
+        { name: 'Scrambled spikes', values: wins('scrambled'), about: 'Real spike messages, scrambled so they no longer match the game. Tests whether the content matters.' },
+      ],
+    });
     for (let i = 0; i < rounds.length; i++) {
       const row = document.createElement('tr');
       [rounds[i], ...arms.map(arm => `${pair.byArm[arm].checkpoints[i].wins}/72`)].forEach((value, j) => {
@@ -1398,6 +1390,13 @@ if (typeof document !== 'undefined') {
   $('preference-evidence-seed').onchange = loadActionPreferenceEvidence;
   $('ablation-evidence').ontoggle = () => { if ($('ablation-evidence').open) loadAblationEvidence(); };
   $('ablation-evidence-seed').onchange = loadAblationEvidence;
+  // One click opens or closes the whole archive, nested boxes included.
+  if ($('archive-expand')) $('archive-expand').onclick = () => {
+    const boxes = [$('research-evidence'), ...$('research-evidence').querySelectorAll('details')];
+    const open = !boxes.every(box => box.open);
+    boxes.forEach(box => { box.open = open; });
+    $('archive-expand').textContent = open ? 'Collapse all' : 'Expand all';
+  };
   $('challenge-train').onclick = runChallenge;
   addEventListener('synapse:play-rule-switch', event => {
     if (challengeRunning || comparisonRunning) return;
