@@ -1,5 +1,5 @@
 // Hover/keyboard layer for the static 15-run result chart on the Stats tab.
-// Data mirrors the "Show as a table" view; the SVG itself is unchanged.
+// Data mirrors the saved 15-run cohort summary; the SVG itself is unchanged.
 const chart = document.querySelector('.result-chart');
 const svg = chart && chart.querySelector('svg');
 if (svg) {

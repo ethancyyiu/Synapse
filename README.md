@@ -33,7 +33,7 @@ Open <http://localhost:8766>. Serve the whole repository; opening `index.html` a
 
 | Page | What it shows |
 |---|---|
-| `/` | The recorded demo, the live Challenge, the 15-run result (Stats tab), and claims and limits (Research tab) |
+| `/` | The problem (Usage tab), the recorded demo and live Challenge (Simulation tab), the 15-run result (Statistics tab), and claims and limits (Research tab) |
 | `/archive.html` | Earlier experiments that failed their gates |
 | `/legacy.html` | The first RPS experiment, with its older message channel |
 | `/rhythm.html` | The original Fly Hero rhythm game |
