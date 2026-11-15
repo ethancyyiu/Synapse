@@ -156,7 +156,7 @@ class Handler(SimpleHTTPRequestHandler):
         if rel.suffix.lower() in {".html", ".js", ".css", ".woff2", ".png", ".svg", ".jpg", ".jpeg", ".gif", ".webp", ".ico", ".wasm"}:
             return True
         return ((rel.suffix.lower() == ".md" and parts[0] == "docs") or
-                (rel.suffix.lower() == ".json" and parts[0] == "data"))
+                (rel.suffix.lower() in {".json", ".bin"} and parts[0] == "data"))
 
     def end_headers(self):
         self.send_header("Cache-Control", "no-store")
