@@ -15,6 +15,7 @@ import numpy as np
 from .config import load_env
 from .core import evidence, features, fixture_teacher, make_dataset, risk_band, score
 from .nessie import NessieClient, NessieUnavailable
+from .neural_cues import neural_cue
 from .teacher import frontier_available, teacher_for_demo, teacher_model, teacher_provider
 from .tenure_experiment import FEATURES as TENURE_FEATURES, extended_features, vector as tenure_vector
 
@@ -29,6 +30,7 @@ FRONTIER_PATH = ROOT / "data" / "fraud" / "frontier-student.json"
 FRONTIER_STUDENT = None
 TENURE_PATH = ROOT / "data" / "fraud" / "tenure-development.json"
 TENURE_STUDENTS = None
+NEW_STUDY_PATH = ROOT / "data" / "fraud" / "new-scenarios-heldout.json"
 if TENURE_PATH.exists():
     candidate = json.loads(TENURE_PATH.read_text(encoding="utf-8"))
     if candidate.get("features") == list(TENURE_FEATURES):
@@ -99,7 +101,7 @@ def scored_rows(account_id: str, source: str | None = None) -> list[dict]:
         if extended["same_merchant_count"] >= 2:
             older = extended["merchant_older_count"]
             indicators.append(f"{older} earlier purchases at this merchant more than 24 hours ago")
-        scored.append({"transaction": row["transaction"], "scores": scores,
+        scored.append({"transaction": row["transaction"], "neural_cue": neural_cue(f), "scores": scores,
                        "bands": {name: risk_band(value) for name, value in scores.items()},
                        "evidence": indicators, "context": {"history_purchases": f["history_size"],
                          "historical_median": f["history_median"], "purchases_last_24h": f["recent_count"],
@@ -118,6 +120,17 @@ def research_summary() -> dict:
             "arms": {name: {key: result[key] for key in
                             ("precision", "recall", "f1", "false_positive_rate", "fraud_recall", "confusion", "mean_inference_ms")}
                      for name, result in ARTIFACT["held_out"].items()}}
+
+
+def new_study_summary() -> dict:
+    if not NEW_STUDY_PATH.exists():
+        return {"available": False}
+    saved = json.loads(NEW_STUDY_PATH.read_text(encoding="utf-8"))
+    return {"available": True, "teacher_messages": saved["teacher_message_count"],
+            "heldout_cases": saved["heldout_cases"], "success_gate_passed": saved["success_gate_passed"],
+            "arms": {name: {field: result[field] for field in
+                            ("confusion", "fraud_recall", "precision", "f1", "false_positive_rate")}
+                     for name, result in saved["held_out"].items()}}
 
 
 class Handler(SimpleHTTPRequestHandler):
@@ -187,6 +200,8 @@ class Handler(SimpleHTTPRequestHandler):
                     "transactions": transactions})
             if parsed.path == "/api/fraud/research":
                 return self.json_response(research_summary())
+            if parsed.path == "/api/fraud/new-study":
+                return self.json_response(new_study_summary())
             return self.json_response({"error": "Unknown endpoint"}, 404)
         except ValueError as error:
             return self.json_response({"error": str(error)}, 400)

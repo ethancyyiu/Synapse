@@ -1,0 +1,917 @@
+{
+  "protocol": "docs/synapse-fraud-new-scenarios-protocol.md",
+  "fingerprint": "515a47876f0362597600496c95f82934304aec2015a3f837c43990fc0a5a7c05",
+  "model": "gemini-3.5-flash-lite",
+  "teacher_message_count": 12,
+  "heldout_cases": 48,
+  "threshold": 0.5,
+  "success_gate_passed": false,
+  "held_out": {
+    "limited_baseline": {
+      "confusion": {
+        "tp": 24,
+        "fp": 24,
+        "fn": 0,
+        "tn": 0
+      },
+      "fraud_recall": 1.0,
+      "precision": 0.5,
+      "f1": 0.6666666666666666,
+      "false_positive_rate": 1.0,
+      "predictions": [
+        {
+          "id": "new-3000-candidate",
+          "label": 0,
+          "score": 0.9962631641962054,
+          "prediction": 1
+        },
+        {
+          "id": "new-3000-candidate",
+          "label": 1,
+          "score": 0.9780901307925788,
+          "prediction": 1
+        },
+        {
+          "id": "new-3001-candidate",
+          "label": 1,
+          "score": 0.9974274326877665,
+          "prediction": 1
+        },
+        {
+          "id": "new-3001-candidate",
+          "label": 0,
+          "score": 0.999757236770742,
+          "prediction": 1
+        },
+        {
+          "id": "new-3002-candidate",
+          "label": 0,
+          "score": 0.9990445384487204,
+          "prediction": 1
+        },
+        {
+          "id": "new-3002-candidate",
+          "label": 1,
+          "score": 0.9842796969191983,
+          "prediction": 1
+        },
+        {
+          "id": "new-3003-candidate",
+          "label": 1,
+          "score": 0.9989640357052254,
+          "prediction": 1
+        },
+        {
+          "id": "new-3003-candidate",
+          "label": 0,
+          "score": 0.9994773761370048,
+          "prediction": 1
+        },
+        {
+          "id": "new-3004-candidate",
+          "label": 0,
+          "score": 0.9967340436874246,
+          "prediction": 1
+        },
+        {
+          "id": "new-3004-candidate",
+          "label": 1,
+          "score": 0.9651829477769434,
+          "prediction": 1
+        },
+        {
+          "id": "new-3005-candidate",
+          "label": 1,
+          "score": 0.9979915327877956,
+          "prediction": 1
+        },
+        {
+          "id": "new-3005-candidate",
+          "label": 0,
+          "score": 0.9996151941588876,
+          "prediction": 1
+        },
+        {
+          "id": "new-3006-candidate",
+          "label": 0,
+          "score": 0.9997047660446523,
+          "prediction": 1
+        },
+        {
+          "id": "new-3006-candidate",
+          "label": 1,
+          "score": 0.9837276292822633,
+          "prediction": 1
+        },
+        {
+          "id": "new-3007-candidate",
+          "label": 1,
+          "score": 0.9976560695199236,
+          "prediction": 1
+        },
+        {
+          "id": "new-3007-candidate",
+          "label": 0,
+          "score": 0.9997054199633457,
+          "prediction": 1
+        },
+        {
+          "id": "new-3008-candidate",
+          "label": 0,
+          "score": 0.9991155958453967,
+          "prediction": 1
+        },
+        {
+          "id": "new-3008-candidate",
+          "label": 1,
+          "score": 0.9681976991840557,
+          "prediction": 1
+        },
+        {
+          "id": "new-3009-candidate",
+          "label": 1,
+          "score": 0.9983436380745911,
+          "prediction": 1
+        },
+        {
+          "id": "new-3009-candidate",
+          "label": 0,
+          "score": 0.9996817298635007,
+          "prediction": 1
+        },
+        {
+          "id": "new-3010-candidate",
+          "label": 0,
+          "score": 0.9995162947785363,
+          "prediction": 1
+        },
+        {
+          "id": "new-3010-candidate",
+          "label": 1,
+          "score": 0.9677814480848278,
+          "prediction": 1
+        },
+        {
+          "id": "new-3011-candidate",
+          "label": 1,
+          "score": 0.997718523065032,
+          "prediction": 1
+        },
+        {
+          "id": "new-3011-candidate",
+          "label": 0,
+          "score": 0.9995384005057646,
+          "prediction": 1
+        },
+        {
+          "id": "new-3012-candidate",
+          "label": 0,
+          "score": 0.9990993314556895,
+          "prediction": 1
+        },
+        {
+          "id": "new-3012-candidate",
+          "label": 1,
+          "score": 0.9573983783207866,
+          "prediction": 1
+        },
+        {
+          "id": "new-3013-candidate",
+          "label": 1,
+          "score": 0.9986342881362109,
+          "prediction": 1
+        },
+        {
+          "id": "new-3013-candidate",
+          "label": 0,
+          "score": 0.9998038903538523,
+          "prediction": 1
+        },
+        {
+          "id": "new-3014-candidate",
+          "label": 0,
+          "score": 0.9984213704399502,
+          "prediction": 1
+        },
+        {
+          "id": "new-3014-candidate",
+          "label": 1,
+          "score": 0.977044351982724,
+          "prediction": 1
+        },
+        {
+          "id": "new-3015-candidate",
+          "label": 1,
+          "score": 0.9990278993256277,
+          "prediction": 1
+        },
+        {
+          "id": "new-3015-candidate",
+          "label": 0,
+          "score": 0.999766600902749,
+          "prediction": 1
+        },
+        {
+          "id": "new-3016-candidate",
+          "label": 0,
+          "score": 0.9972924877058124,
+          "prediction": 1
+        },
+        {
+          "id": "new-3016-candidate",
+          "label": 1,
+          "score": 0.9530771848455204,
+          "prediction": 1
+        },
+        {
+          "id": "new-3017-candidate",
+          "label": 1,
+          "score": 0.9996543287829637,
+          "prediction": 1
+        },
+        {
+          "id": "new-3017-candidate",
+          "label": 0,
+          "score": 0.9996988080019475,
+          "prediction": 1
+        },
+        {
+          "id": "new-3018-candidate",
+          "label": 0,
+          "score": 0.9982574364492546,
+          "prediction": 1
+        },
+        {
+          "id": "new-3018-candidate",
+          "label": 1,
+          "score": 0.9797594112725136,
+          "prediction": 1
+        },
+        {
+          "id": "new-3019-candidate",
+          "label": 1,
+          "score": 0.9973452259678176,
+          "prediction": 1
+        },
+        {
+          "id": "new-3019-candidate",
+          "label": 0,
+          "score": 0.9997247032991733,
+          "prediction": 1
+        },
+        {
+          "id": "new-3020-candidate",
+          "label": 0,
+          "score": 0.9976516086777815,
+          "prediction": 1
+        },
+        {
+          "id": "new-3020-candidate",
+          "label": 1,
+          "score": 0.9697490567236312,
+          "prediction": 1
+        },
+        {
+          "id": "new-3021-candidate",
+          "label": 1,
+          "score": 0.999581135446317,
+          "prediction": 1
+        },
+        {
+          "id": "new-3021-candidate",
+          "label": 0,
+          "score": 0.9996003727274636,
+          "prediction": 1
+        },
+        {
+          "id": "new-3022-candidate",
+          "label": 0,
+          "score": 0.998381593853902,
+          "prediction": 1
+        },
+        {
+          "id": "new-3022-candidate",
+          "label": 1,
+          "score": 0.976509185974337,
+          "prediction": 1
+        },
+        {
+          "id": "new-3023-candidate",
+          "label": 1,
+          "score": 0.996984939417718,
+          "prediction": 1
+        },
+        {
+          "id": "new-3023-candidate",
+          "label": 0,
+          "score": 0.999798982244561,
+          "prediction": 1
+        }
+      ]
+    },
+    "independent_labels": {
+      "confusion": {
+        "tp": 24,
+        "fp": 24,
+        "fn": 0,
+        "tn": 0
+      },
+      "fraud_recall": 1.0,
+      "precision": 0.5,
+      "f1": 0.6666666666666666,
+      "false_positive_rate": 1.0,
+      "predictions": [
+        {
+          "id": "new-3000-candidate",
+          "label": 0,
+          "score": 0.9950618883134569,
+          "prediction": 1
+        },
+        {
+          "id": "new-3000-candidate",
+          "label": 1,
+          "score": 0.9825174525915064,
+          "prediction": 1
+        },
+        {
+          "id": "new-3001-candidate",
+          "label": 1,
+          "score": 0.9963575450656876,
+          "prediction": 1
+        },
+        {
+          "id": "new-3001-candidate",
+          "label": 0,
+          "score": 0.9998093666389531,
+          "prediction": 1
+        },
+        {
+          "id": "new-3002-candidate",
+          "label": 0,
+          "score": 0.9986453065807579,
+          "prediction": 1
+        },
+        {
+          "id": "new-3002-candidate",
+          "label": 1,
+          "score": 0.9872882142278623,
+          "prediction": 1
+        },
+        {
+          "id": "new-3003-candidate",
+          "label": 1,
+          "score": 0.9981902847020636,
+          "prediction": 1
+        },
+        {
+          "id": "new-3003-candidate",
+          "label": 0,
+          "score": 0.9995898829887929,
+          "prediction": 1
+        },
+        {
+          "id": "new-3004-candidate",
+          "label": 0,
+          "score": 0.9960579313070577,
+          "prediction": 1
+        },
+        {
+          "id": "new-3004-candidate",
+          "label": 1,
+          "score": 0.9709582664549218,
+          "prediction": 1
+        },
+        {
+          "id": "new-3005-candidate",
+          "label": 1,
+          "score": 0.9972817689179833,
+          "prediction": 1
+        },
+        {
+          "id": "new-3005-candidate",
+          "label": 0,
+          "score": 0.9996583921492243,
+          "prediction": 1
+        },
+        {
+          "id": "new-3006-candidate",
+          "label": 0,
+          "score": 0.9994430456251098,
+          "prediction": 1
+        },
+        {
+          "id": "new-3006-candidate",
+          "label": 1,
+          "score": 0.9849334499294394,
+          "prediction": 1
+        },
+        {
+          "id": "new-3007-candidate",
+          "label": 1,
+          "score": 0.9965543260126126,
+          "prediction": 1
+        },
+        {
+          "id": "new-3007-candidate",
+          "label": 0,
+          "score": 0.999757427383193,
+          "prediction": 1
+        },
+        {
+          "id": "new-3008-candidate",
+          "label": 0,
+          "score": 0.9985485286860482,
+          "prediction": 1
+        },
+        {
+          "id": "new-3008-candidate",
+          "label": 1,
+          "score": 0.9720340321883826,
+          "prediction": 1
+        },
+        {
+          "id": "new-3009-candidate",
+          "label": 1,
+          "score": 0.9976740914842576,
+          "prediction": 1
+        },
+        {
+          "id": "new-3009-candidate",
+          "label": 0,
+          "score": 0.9997380511242069,
+          "prediction": 1
+        },
+        {
+          "id": "new-3010-candidate",
+          "label": 0,
+          "score": 0.9992790938357574,
+          "prediction": 1
+        },
+        {
+          "id": "new-3010-candidate",
+          "label": 1,
+          "score": 0.9739898908933254,
+          "prediction": 1
+        },
+        {
+          "id": "new-3011-candidate",
+          "label": 1,
+          "score": 0.996936393182769,
+          "prediction": 1
+        },
+        {
+          "id": "new-3011-candidate",
+          "label": 0,
+          "score": 0.9996065113899192,
+          "prediction": 1
+        },
+        {
+          "id": "new-3012-candidate",
+          "label": 0,
+          "score": 0.9985222519142093,
+          "prediction": 1
+        },
+        {
+          "id": "new-3012-candidate",
+          "label": 1,
+          "score": 0.9653003250510942,
+          "prediction": 1
+        },
+        {
+          "id": "new-3013-candidate",
+          "label": 1,
+          "score": 0.9980258871322043,
+          "prediction": 1
+        },
+        {
+          "id": "new-3013-candidate",
+          "label": 0,
+          "score": 0.999804900656806,
+          "prediction": 1
+        },
+        {
+          "id": "new-3014-candidate",
+          "label": 0,
+          "score": 0.9977155741969773,
+          "prediction": 1
+        },
+        {
+          "id": "new-3014-candidate",
+          "label": 1,
+          "score": 0.9788839571582233,
+          "prediction": 1
+        },
+        {
+          "id": "new-3015-candidate",
+          "label": 1,
+          "score": 0.9982621390218642,
+          "prediction": 1
+        },
+        {
+          "id": "new-3015-candidate",
+          "label": 0,
+          "score": 0.9998007371878437,
+          "prediction": 1
+        },
+        {
+          "id": "new-3016-candidate",
+          "label": 0,
+          "score": 0.996305272088178,
+          "prediction": 1
+        },
+        {
+          "id": "new-3016-candidate",
+          "label": 1,
+          "score": 0.9632591142491426,
+          "prediction": 1
+        },
+        {
+          "id": "new-3017-candidate",
+          "label": 1,
+          "score": 0.9994352980162421,
+          "prediction": 1
+        },
+        {
+          "id": "new-3017-candidate",
+          "label": 0,
+          "score": 0.9997544408586823,
+          "prediction": 1
+        },
+        {
+          "id": "new-3018-candidate",
+          "label": 0,
+          "score": 0.9979017187564606,
+          "prediction": 1
+        },
+        {
+          "id": "new-3018-candidate",
+          "label": 1,
+          "score": 0.9806723270599738,
+          "prediction": 1
+        },
+        {
+          "id": "new-3019-candidate",
+          "label": 1,
+          "score": 0.9961997614554264,
+          "prediction": 1
+        },
+        {
+          "id": "new-3019-candidate",
+          "label": 0,
+          "score": 0.9997624337972892,
+          "prediction": 1
+        },
+        {
+          "id": "new-3020-candidate",
+          "label": 0,
+          "score": 0.9964432992738013,
+          "prediction": 1
+        },
+        {
+          "id": "new-3020-candidate",
+          "label": 1,
+          "score": 0.9728610944253268,
+          "prediction": 1
+        },
+        {
+          "id": "new-3021-candidate",
+          "label": 1,
+          "score": 0.9993581913931753,
+          "prediction": 1
+        },
+        {
+          "id": "new-3021-candidate",
+          "label": 0,
+          "score": 0.9996491325517128,
+          "prediction": 1
+        },
+        {
+          "id": "new-3022-candidate",
+          "label": 0,
+          "score": 0.9980721211404696,
+          "prediction": 1
+        },
+        {
+          "id": "new-3022-candidate",
+          "label": 1,
+          "score": 0.981764299627474,
+          "prediction": 1
+        },
+        {
+          "id": "new-3023-candidate",
+          "label": 1,
+          "score": 0.9954758504117239,
+          "prediction": 1
+        },
+        {
+          "id": "new-3023-candidate",
+          "label": 0,
+          "score": 0.9997886424525345,
+          "prediction": 1
+        }
+      ]
+    },
+    "gemini_guided": {
+      "confusion": {
+        "tp": 24,
+        "fp": 24,
+        "fn": 0,
+        "tn": 0
+      },
+      "fraud_recall": 1.0,
+      "precision": 0.5,
+      "f1": 0.6666666666666666,
+      "false_positive_rate": 1.0,
+      "predictions": [
+        {
+          "id": "new-3000-candidate",
+          "label": 0,
+          "score": 0.9938243582782941,
+          "prediction": 1
+        },
+        {
+          "id": "new-3000-candidate",
+          "label": 1,
+          "score": 0.9190016040719866,
+          "prediction": 1
+        },
+        {
+          "id": "new-3001-candidate",
+          "label": 1,
+          "score": 0.9960326583992675,
+          "prediction": 1
+        },
+        {
+          "id": "new-3001-candidate",
+          "label": 0,
+          "score": 0.9978948992125409,
+          "prediction": 1
+        },
+        {
+          "id": "new-3002-candidate",
+          "label": 0,
+          "score": 0.998018960490712,
+          "prediction": 1
+        },
+        {
+          "id": "new-3002-candidate",
+          "label": 1,
+          "score": 0.9373935506092373,
+          "prediction": 1
+        },
+        {
+          "id": "new-3003-candidate",
+          "label": 1,
+          "score": 0.9986790881170958,
+          "prediction": 1
+        },
+        {
+          "id": "new-3003-candidate",
+          "label": 0,
+          "score": 0.9963188077867025,
+          "prediction": 1
+        },
+        {
+          "id": "new-3004-candidate",
+          "label": 0,
+          "score": 0.9932332086162622,
+          "prediction": 1
+        },
+        {
+          "id": "new-3004-candidate",
+          "label": 1,
+          "score": 0.8976526268588124,
+          "prediction": 1
+        },
+        {
+          "id": "new-3005-candidate",
+          "label": 1,
+          "score": 0.9963570841976214,
+          "prediction": 1
+        },
+        {
+          "id": "new-3005-candidate",
+          "label": 0,
+          "score": 0.997721561096717,
+          "prediction": 1
+        },
+        {
+          "id": "new-3006-candidate",
+          "label": 0,
+          "score": 0.9995359630366565,
+          "prediction": 1
+        },
+        {
+          "id": "new-3006-candidate",
+          "label": 1,
+          "score": 0.9510899432675507,
+          "prediction": 1
+        },
+        {
+          "id": "new-3007-candidate",
+          "label": 1,
+          "score": 0.9965715308100341,
+          "prediction": 1
+        },
+        {
+          "id": "new-3007-candidate",
+          "label": 0,
+          "score": 0.9978053916511938,
+          "prediction": 1
+        },
+        {
+          "id": "new-3008-candidate",
+          "label": 0,
+          "score": 0.998620530721758,
+          "prediction": 1
+        },
+        {
+          "id": "new-3008-candidate",
+          "label": 1,
+          "score": 0.9132760606131098,
+          "prediction": 1
+        },
+        {
+          "id": "new-3009-candidate",
+          "label": 1,
+          "score": 0.9970676950278249,
+          "prediction": 1
+        },
+        {
+          "id": "new-3009-candidate",
+          "label": 0,
+          "score": 0.9976759586301154,
+          "prediction": 1
+        },
+        {
+          "id": "new-3010-candidate",
+          "label": 0,
+          "score": 0.9989121436276036,
+          "prediction": 1
+        },
+        {
+          "id": "new-3010-candidate",
+          "label": 1,
+          "score": 0.896660832610471,
+          "prediction": 1
+        },
+        {
+          "id": "new-3011-candidate",
+          "label": 1,
+          "score": 0.9959380457672649,
+          "prediction": 1
+        },
+        {
+          "id": "new-3011-candidate",
+          "label": 0,
+          "score": 0.997169540249933,
+          "prediction": 1
+        },
+        {
+          "id": "new-3012-candidate",
+          "label": 0,
+          "score": 0.9986013088323907,
+          "prediction": 1
+        },
+        {
+          "id": "new-3012-candidate",
+          "label": 1,
+          "score": 0.8769696072674908,
+          "prediction": 1
+        },
+        {
+          "id": "new-3013-candidate",
+          "label": 1,
+          "score": 0.9976008406412339,
+          "prediction": 1
+        },
+        {
+          "id": "new-3013-candidate",
+          "label": 0,
+          "score": 0.9989001568151592,
+          "prediction": 1
+        },
+        {
+          "id": "new-3014-candidate",
+          "label": 0,
+          "score": 0.9972657928853893,
+          "prediction": 1
+        },
+        {
+          "id": "new-3014-candidate",
+          "label": 1,
+          "score": 0.9368434445955467,
+          "prediction": 1
+        },
+        {
+          "id": "new-3015-candidate",
+          "label": 1,
+          "score": 0.9987983097670681,
+          "prediction": 1
+        },
+        {
+          "id": "new-3015-candidate",
+          "label": 0,
+          "score": 0.9982818397676089,
+          "prediction": 1
+        },
+        {
+          "id": "new-3016-candidate",
+          "label": 0,
+          "score": 0.9954278709391582,
+          "prediction": 1
+        },
+        {
+          "id": "new-3016-candidate",
+          "label": 1,
+          "score": 0.858494638113396,
+          "prediction": 1
+        },
+        {
+          "id": "new-3017-candidate",
+          "label": 1,
+          "score": 0.9993161362246227,
+          "prediction": 1
+        },
+        {
+          "id": "new-3017-candidate",
+          "label": 0,
+          "score": 0.9977228384424565,
+          "prediction": 1
+        },
+        {
+          "id": "new-3018-candidate",
+          "label": 0,
+          "score": 0.9956882760562734,
+          "prediction": 1
+        },
+        {
+          "id": "new-3018-candidate",
+          "label": 1,
+          "score": 0.9463821755342355,
+          "prediction": 1
+        },
+        {
+          "id": "new-3019-candidate",
+          "label": 1,
+          "score": 0.9960329467253002,
+          "prediction": 1
+        },
+        {
+          "id": "new-3019-candidate",
+          "label": 0,
+          "score": 0.9981054226381024,
+          "prediction": 1
+        },
+        {
+          "id": "new-3020-candidate",
+          "label": 0,
+          "score": 0.996683402102098,
+          "prediction": 1
+        },
+        {
+          "id": "new-3020-candidate",
+          "label": 1,
+          "score": 0.9194780486040854,
+          "prediction": 1
+        },
+        {
+          "id": "new-3021-candidate",
+          "label": 1,
+          "score": 0.9991008363473877,
+          "prediction": 1
+        },
+        {
+          "id": "new-3021-candidate",
+          "label": 0,
+          "score": 0.99760345281935,
+          "prediction": 1
+        },
+        {
+          "id": "new-3022-candidate",
+          "label": 0,
+          "score": 0.9958206229621762,
+          "prediction": 1
+        },
+        {
+          "id": "new-3022-candidate",
+          "label": 1,
+          "score": 0.9103289417289485,
+          "prediction": 1
+        },
+        {
+          "id": "new-3023-candidate",
+          "label": 1,
+          "score": 0.9960575772675874,
+          "prediction": 1
+        },
+        {
+          "id": "new-3023-candidate",
+          "label": 0,
+          "score": 0.9990023925883929,
+          "prediction": 1
+        }
+      ]
+    }
+  }
+}

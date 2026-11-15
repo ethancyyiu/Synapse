@@ -1,3 +1,4 @@
+import { initNeural, selectNeuralTransaction } from './neural.js';
 const $ = id => document.getElementById(id);
 const state = { mode: 'fixture', account: '', rows: [], selected: null, model: 'independent', frontier: false };
 const money = value => new Intl.NumberFormat('en-US', { style: 'currency', currency: 'USD' }).format(value);
@@ -52,6 +53,7 @@ function renderDetail() {
   const root = $('detail');
   root.replaceChildren();
   const row = state.rows.find(item => item.transaction.id === state.selected);
+  selectNeuralTransaction(row, state.mode);
   if (!row) { root.append(el('h3', 'Transaction evidence'), el('p', 'Select a transaction.', 'detail-placeholder')); return; }
   const txn = row.transaction;
   const top = el('div', undefined, 'detail-head');
@@ -63,16 +65,17 @@ function renderDetail() {
   detailMetric(metrics, 'Historical median purchase', money(row.context.historical_median));
   detailMetric(metrics, 'Prior purchases', String(row.context.history_purchases));
   detailMetric(metrics, 'Purchases in prior 24h', String(row.context.purchases_last_24h));
+  detailMetric(metrics, 'Same merchant older than 24h', String(row.context.merchant_older_count));
   root.append(metrics, el('h4', 'Why it was ranked here'));
   const list = el('ul', undefined, 'evidence');
   row.evidence.forEach(item => list.append(el('li', item)));
   root.append(list);
   const teacher = el('div', undefined, 'callout');
-  teacher.append(el('strong', `Deterministic teacher fixture: ${row.teacher_fixture.risk}`),
+  teacher.append(el('strong', `Separate six-feature rule fixture: ${row.teacher_fixture.risk}`),
     el('p', row.teacher_fixture.explanation),
     el('p', `Uncertainty: ${row.teacher_fixture.uncertainty}`));
   root.append(teacher);
-  const comparison = el('p', `Local scores · independent ${pct(row.scores.independent)} · guided ${pct(row.scores.guided)} · shuffled ${pct(row.scores.shuffled)}`, 'muted');
+  const comparison = el('p', `Local scores · seven-feature control ${pct(row.scores.tenure_control)} · seven-feature Gemini ${pct(row.scores.tenure_gemini)} · original independent ${pct(row.scores.independent)}`, 'muted');
   root.append(comparison);
   if (state.mode === 'fixture') root.append(el('p', `Synthetic scenario label: ${row.synthetic_label ? 'injected suspicious case' : 'benign case'}. This is not a verified bank fraud label.`, 'muted'));
   root.append(el('p', 'The score is an uncalibrated ranking value. Review the transaction with a person before any action.', 'muted'));
@@ -131,7 +134,7 @@ async function loadAccounts(source, notice = '', initialData = null) {
   state.mode = data.mode;
   $('source-select').value = data.mode;
   $('source-mode').textContent = data.mode === 'fixture'
-    ? 'Offline fixtures - generated mock purchases' : 'Nessie API - live mock purchases - read-only';
+    ? 'Offline fixtures - generated mock purchases' : 'Nessie API - account list retrieved';
   $('account-select').replaceChildren(...data.accounts.map(account => {
     const option = el('option', account.name); option.value = account.id; return option;
   }));
@@ -147,8 +150,8 @@ async function loadAccounts(source, notice = '', initialData = null) {
 
 async function init() {
   try {
-    const [status, research] = await Promise.all([
-      getJson('/api/fraud/status'), getJson('/api/fraud/research')]);
+    const [status, research, newStudy] = await Promise.all([
+      getJson('/api/fraud/status'), getJson('/api/fraud/research'), getJson('/api/fraud/new-study')]);
     state.frontier = status.frontier_configured;
     if (status.frontier_student_trained) {
       const option = el('option', `${status.frontier_student_provider === 'gemini' ? 'Gemini' : 'OpenAI'}-guided local student (${status.frontier_student_messages} messages)`);
@@ -175,6 +178,20 @@ async function init() {
       return tr;
     }));
     $('gate-result').textContent = `Predefined gate: ${research.success_gate_passed ? 'passed' : 'failed'}.`;
+    if (newStudy.available) {
+      const names = {limited_baseline: 'Limited labels', independent_labels: 'Extra independent labels',
+        gemini_guided: '12 Gemini messages'};
+      $('new-metric-body').replaceChildren(...Object.keys(names).map(name => {
+        const result = newStudy.arms[name], row = el('tr');
+        row.append(el('td', names[name]),
+          el('td', `${result.confusion.tp}/${result.confusion.tp + result.confusion.fn}`),
+          el('td', String(result.confusion.fp)),
+          el('td', result.f1.toFixed(3)),
+          el('td', pct(result.false_positive_rate)));
+        return row;
+      }));
+      $('new-gate-result').textContent = `Predefined Gemini advantage gate: ${newStudy.success_gate_passed ? 'passed' : 'failed'}.`;
+    }
     try {
       const source = status.mode;
       const available = await getJson(`/api/fraud/accounts?source=${source}`);
@@ -212,3 +229,4 @@ $('model-select').addEventListener('change', event => {
   }
 });
 init();
+initNeural();

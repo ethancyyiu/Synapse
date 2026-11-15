@@ -1,0 +1,169 @@
+{
+  "status": "completed",
+  "protocol": "docs/synapse-fraud-neural-protocol.md",
+  "seed": 420,
+  "teacherSeed": 90841,
+  "studentSeed": 90842,
+  "neurons": 6900,
+  "synapses": 990102,
+  "teacherWins": 71,
+  "teacherGate": 58,
+  "teacherEpisodeWins": [
+    9,
+    21,
+    23,
+    22,
+    21,
+    19,
+    23,
+    19,
+    20,
+    21,
+    18,
+    18
+  ],
+  "points": [
+    {
+      "rounds": 0,
+      "alone": 1,
+      "trained": 1,
+      "random": 1,
+      "shuffled": 1
+    },
+    {
+      "rounds": 24,
+      "alone": 0,
+      "trained": 47,
+      "random": 1,
+      "shuffled": 47
+    },
+    {
+      "rounds": 48,
+      "alone": 23,
+      "trained": 47,
+      "random": 66,
+      "shuffled": 47
+    },
+    {
+      "rounds": 96,
+      "alone": 24,
+      "trained": 72,
+      "random": 68,
+      "shuffled": 48
+    }
+  ],
+  "recoveryAt": {
+    "alone": null,
+    "trained": 96,
+    "random": 48,
+    "shuffled": null
+  },
+  "advantage48": -19,
+  "messages": {
+    "trained": 96,
+    "random": 96,
+    "shuffled": 96
+  },
+  "decoded": {
+    "trained": 96,
+    "random": 96,
+    "shuffled": 96
+  },
+  "spikeCounts": {
+    "trained": [
+      757,
+      523
+    ],
+    "random": [
+      509,
+      445
+    ],
+    "shuffled": [
+      749,
+      537
+    ]
+  },
+  "teachingTrace": [
+    {
+      "round": 1,
+      "cue": 0,
+      "sentAction": 2,
+      "dnCounts": [
+        8,
+        9
+      ],
+      "decodedAction": 2,
+      "flyBAction": 1,
+      "syntheticReward": 0,
+      "imitationUpdate": 1
+    },
+    {
+      "round": 2,
+      "cue": 0,
+      "sentAction": 2,
+      "dnCounts": [
+        8,
+        10
+      ],
+      "decodedAction": 2,
+      "flyBAction": 1,
+      "syntheticReward": 0,
+      "imitationUpdate": 1
+    },
+    {
+      "round": 3,
+      "cue": 2,
+      "sentAction": 0,
+      "dnCounts": [
+        9,
+        0
+      ],
+      "decodedAction": 0,
+      "flyBAction": 1,
+      "syntheticReward": -1,
+      "imitationUpdate": 1
+    },
+    {
+      "round": 4,
+      "cue": 2,
+      "sentAction": 0,
+      "dnCounts": [
+        7,
+        0
+      ],
+      "decodedAction": 0,
+      "flyBAction": 2,
+      "syntheticReward": 0,
+      "imitationUpdate": 1
+    },
+    {
+      "round": 5,
+      "cue": 0,
+      "sentAction": 2,
+      "dnCounts": [
+        7,
+        9
+      ],
+      "decodedAction": 2,
+      "flyBAction": 1,
+      "syntheticReward": 0,
+      "imitationUpdate": 1
+    },
+    {
+      "round": 6,
+      "cue": 1,
+      "sentAction": 2,
+      "dnCounts": [
+        9,
+        9
+      ],
+      "decodedAction": 2,
+      "flyBAction": 2,
+      "syntheticReward": 1,
+      "imitationUpdate": 1
+    }
+  ],
+  "trainedStudentWeights": "{\"heads\":[{\"W\":[[-0.10212401615634824,-0.09090801349418205,0.01601347982275893],[-0.04337028551183553,-0.06906297242076073,0.01792175882503449],[0.2500541483512116,0.252187163888879,-0.10316567068216997]],\"b\":[-0.22716971268329594,-0.1459506480884399,0.6582057563374305]},{\"W\":[[0.1789967330938559,0.18461232353431253,0.17065722541396494],[0.09369385437185744,0.07658421912283696,0.07602634998257751],[-0.2722927764623747,-0.29974223609728745,-0.2765866618165577]],\"b\":[-0.16163967061874462,-0.0839082518887004,0.31032720286139526]},{\"W\":[[0.2539266904808876,0.25559711875375385,0.3557129478802397],[-0.17508018362978908,-0.15072910017408134,-0.2321932628101222],[-0.08648977321768454,-0.07011283707039771,-0.09990861867008426]],\"b\":[0.3184480582883532,-0.21037498666761925,-0.0630969014135075]},{\"W\":[[0,0,0],[0,0,0],[0,0,0]],\"b\":[0,0,0]}],\"baseline\":0}",
+  "teacherFrozen": true,
+  "synapsesUnchanged": true
+}
