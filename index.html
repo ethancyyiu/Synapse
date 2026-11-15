@@ -428,6 +428,27 @@ summary:hover { color: #4ade80; }
 @media (max-width: 760px) { .story-steps { grid-template-columns: 1fr; } }
 .story-next { margin: 18px 0 0; font-weight: 700; }
 table.uses tr.ours th, table.uses tr.ours td { color: #4ade80; font-weight: 700; }
+table.twin th:first-child { white-space: nowrap; }
+.twin-chart { margin: 10px 0 14px; max-width: 980px; }
+.twin-key { display: flex; align-items: center; gap: 8px; margin: 0 0 10px; color: var(--graphite); font-size: .9rem; }
+.twin-swatch { display: inline-block; width: 18px; height: 10px; margin-left: 10px; }
+.twin-swatch:first-child { margin-left: 0; }
+.twin-swatch.fly, .twin-bar.fly { background: #edebe6; }
+.twin-swatch.bank, .twin-bar.bank { background: #4ade80; }
+.twin-row { display: grid; grid-template-columns: minmax(150px, 230px) 1fr; gap: 14px; align-items: center; padding: 6px 0; border-top: 1px solid var(--rule); }
+.twin-name { margin: 0; font-size: .92rem; }
+.twin-bars { display: grid; gap: 4px; }
+.twin-track { position: relative; height: 18px; }
+.twin-track::before { content: ""; position: absolute; left: 33.33%; top: -4px; bottom: -4px; border-left: 1px solid #8a929b; }
+.twin-bar { position: absolute; top: 2px; height: 14px; }
+.twin-bar.clipped { background: repeating-linear-gradient(90deg, #4ade80 0 6px, transparent 6px 10px); }
+.twin-val { position: absolute; top: 0; font-size: .82rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.twin-axis { border-top: 1px solid #5f5d58; }
+.twin-ticks::before { display: none; }
+.twin-ticks span { position: absolute; transform: translateX(-50%); font-size: .78rem; color: var(--graphite); white-space: nowrap; }
+.twin-ticks span:first-child { transform: none; }
+.twin-ticks span:last-child { transform: translateX(-100%); }
+@media (max-width: 760px) { .twin-row { grid-template-columns: 1fr; gap: 4px; } }
 .archive-tools { display: flex; gap: 10px; align-items: center; margin: 0 0 12px; }
 .visually-hidden {
   position: absolute;
@@ -937,6 +958,42 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
               </details>
             </details>
           <p class="legend">Locked before running: <a href="docs/rule-switch-cohort-protocol.md">protocol</a> · <a href="data/rule_switch_cohort_summary.json">results</a> · <a href="docs/lab-notebook.md">lab notebook</a>.</p>
+        </section>
+        <section id="two-experiments" class="panel" aria-labelledby="two-experiments-title">
+          <h2 id="two-experiments-title">One experiment, two worlds</h2>
+          <p class="legend">The fly test and the fraud test are the same experiment. Every part of one has a match in the other, playing the same role.</p>
+          <h3>On one scale</h3>
+          <p class="legend">Different measures, one question: how much of the possible improvement did each group recover? 0% = the student learning alone; 100% = the best it could reach (fly: a perfect 72 of 72; fraud: the same model given every true label).</p>
+          <div class="twin-chart" role="img" aria-label="Share of the possible improvement recovered. Taught: fly 93%, fraud 91%. Shuffled advice: fly 36%, fraud far below alone. Random advice: fly 36%, fraud far below alone. Bad teacher: fly 20%, fraud minus 40%.">
+            <p class="twin-key"><span class="twin-swatch fly"></span>Fly-brain experiment <span class="twin-swatch bank"></span>Fraud experiment</p>
+            <div class="twin-row"><p class="twin-name">Taught by the current teacher</p><div class="twin-bars"><div class="twin-track"><span class="twin-bar fly" style="left:33.33%;width:62.00%"></span><b class="twin-val" style="left:calc(95.33% + 8px)">93%</b></div><div class="twin-track"><span class="twin-bar bank" style="left:33.33%;width:60.67%"></span><b class="twin-val" style="left:calc(94.00% + 8px)">91%</b></div></div></div>
+            <div class="twin-row"><p class="twin-name">Shuffled advice</p><div class="twin-bars"><div class="twin-track"><span class="twin-bar fly" style="left:33.33%;width:24.00%"></span><b class="twin-val" style="left:calc(57.33% + 8px)">36%</b></div><div class="twin-track"><span class="twin-bar bank clipped" style="left:0.00%;width:33.33%"></span><b class="twin-val" style="left:calc(33.33% + 8px)">−1,269%: far below alone</b></div></div></div>
+            <div class="twin-row"><p class="twin-name">Random advice</p><div class="twin-bars"><div class="twin-track"><span class="twin-bar fly" style="left:33.33%;width:24.00%"></span><b class="twin-val" style="left:calc(57.33% + 8px)">36%</b></div><div class="twin-track"><span class="twin-bar bank clipped" style="left:0.00%;width:33.33%"></span><b class="twin-val" style="left:calc(33.33% + 8px)">−1,132%: far below alone</b></div></div></div>
+            <div class="twin-row"><p class="twin-name">Bad teacher (fly: untrained; fraud: out-of-date)</p><div class="twin-bars"><div class="twin-track"><span class="twin-bar fly" style="left:33.33%;width:13.33%"></span><b class="twin-val" style="left:calc(46.67% + 8px)">20%</b></div><div class="twin-track"><span class="twin-bar bank" style="left:6.67%;width:26.67%"></span><b class="twin-val" style="left:calc(33.33% + 8px)">−40%</b></div></div></div>
+            <div class="twin-row twin-axis"><p class="twin-name"></p><div class="twin-bars"><div class="twin-track twin-ticks"><span style="left:0%">−50%</span><span style="left:33.33%">0% alone</span><span style="left:66.67%">50%</span><span style="left:100%">100% best</span></div></div></div>
+          </div>
+          <p class="finding"><strong>Right advice recovers about 90% of the possible improvement in both experiments</strong> (fly 93%, fraud 91%). Wrong advice differs: in the fly any message helps a little, but on real data wrong advice is far worse than none, so the adviser must be current and checked.</p>
+          <p class="legend">The fraud gap is small (0.036 average precision), so its percentages are noisier: on 2 of 12 runs, even every true label did not beat learning alone. This common scale was worked out afterwards from the saved summaries, not locked in advance (<a href="data/rule_switch_cohort_summary.json">fly</a> · <a href="data/real_data_advice/fraud_v2_summary.json">fraud</a>).</p>
+          <h3>Side by side</h3>
+          <div class="scroll"><table class="uses twin">
+            <thead><tr><th>Role</th><th>Fly-brain experiment</th><th>Fraud experiment</th></tr></thead>
+            <tbody>
+              <tr><th>Teacher: adapted first</th><td>Fly A, trained on the new rule</td><td>The bank's model, trained on its own new-period data</td></tr>
+              <tr><th>Student: built differently</th><td>Fly B (a 48-number learner; Fly A has 13)</td><td>The credit union's model (logistic regression; the bank uses boosted trees)</td></tr>
+              <tr><th>The change</th><td>The opponent reverses its Rock-Paper-Scissors rule</td><td>Fraud patterns shift from day 1 to day 2</td></tr>
+              <tr><th>The message: advice only</th><td>Fly A's preferred move, as spikes on two neurons</td><td>One flag per purchase: "block" or "allow"</td></tr>
+              <tr><th>Message size</th><td>Under 12 bytes before the test point</td><td>3,062 bytes for 24,500 purchases</td></tr>
+              <tr><th>Student's own learning</th><td>Its own wins and losses</td><td>Only 500 labelled purchases (labels are scarce and late)</td></tr>
+              <tr><th>Teacher check before teaching</th><td>Fly A must reach 58 of 72</td><td>The bank's model must beat the student on its own held-out cases</td></tr>
+              <tr><th>Controls</th><td>Alone, shuffled, random, untrained teacher</td><td>Alone, shuffled, random, out-of-date teacher</td></tr>
+              <tr><th>The test: teacher gone</th><td>Fly B plays 72 games with Fly A unplugged</td><td>The credit union scores held-out purchases on its own</td></tr>
+              <tr><th>Measure</th><td>Wins out of 72, 48 rounds after the change</td><td>Average precision (0 to 1) on held-out purchases</td></tr>
+              <tr><th>Rules fixed in advance</th><td>15 runs; lead over the best control must clear +4 wins</td><td>15 runs; lead over the best control must clear +0.02</td></tr>
+              <tr><th>Common scale: improvement recovered</th><td>93% of the way from alone to a perfect score</td><td>91% of the way from alone to every true label</td></tr>
+              <tr class="ours"><th>Result</th><td>Taught 68, alone 10: lead <strong>+24.9</strong>. Passed</td><td>Taught 0.789, alone 0.756, ceiling 0.792: lead <strong>+0.033</strong>. Narrowly failed</td></tr>
+            </tbody>
+          </table></div>
+          <p class="legend">The fly test shows the idea works even between brains that cannot copy each other; the fraud test shows the same setup on real data. Fraud details: <a href="#bank-evidence">Usage tab</a> · <a href="docs/real-data-advice-v2-protocol.md">protocol</a>.</p>
         </section>
         <details id="live-runs" class="panel"><summary>Your own live runs <small>(empty until you train a fly live on the Simulation tab)</small></summary>
           <section id="rounds-summary" aria-labelledby="rounds-title">
