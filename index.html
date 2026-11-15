@@ -725,9 +725,9 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         </ol>
         <nav class="page-nav" aria-label="Other pages"><span class="secondary"><a href="fraud.html">Banking: mock review</a> · <a href="rhythm.html">Rhythm game</a> · <a href="docs/demo-guide.md">Demo guide</a> · <a href="archive.html">Archive</a> · <a href="legacy.html">Legacy</a></span></nav>
       </header>
-      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-sim" role="tab" href="#demo" aria-controls="tab-sim" aria-selected="true">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Stats</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a><a id="tab-btn-bank" role="tab" href="#bank" aria-controls="tab-bank" aria-selected="false">Banking application</a></div><a class="fraud-link" href="fraud.html">Mock review queue</a></nav>
+      <nav class="tab-rail" aria-label="Page tabs"><div class="tabs" role="tablist"><a id="tab-btn-bank" role="tab" href="#bank" aria-controls="tab-bank" aria-selected="true">Usage</a><a id="tab-btn-sim" role="tab" href="#solution" aria-controls="tab-sim" aria-selected="false">Simulation</a><a id="tab-btn-stats" role="tab" href="#stats" aria-controls="tab-stats" aria-selected="false">Statistics</a><a id="tab-btn-research" role="tab" href="#research" aria-controls="tab-research" aria-selected="false">Research</a></div><a class="fraud-link" href="fraud.html">Mock review queue</a></nav>
       <main>
-        <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim">
+        <div id="tab-sim" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-sim" hidden>
         <h2 id="solution" class="section-title">Our solution: advice, not data</h2>
         <p class="section-lede">We rebuilt the bank problem as a controlled experiment, inside two brains built from a real fruit-fly wiring diagram.</p>
         <section class="panel" aria-labelledby="solution-map-title">
@@ -1133,21 +1133,8 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
             </details>
         </section>
         </div>
-        <div id="tab-bank" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-bank" hidden>
-        <h2 id="bank" class="section-title">Bank A teaches Bank B</h2>
-        <p class="section-lede">A bank with a newer fraud model sends compact advice to a credit union whose different model learned older patterns.</p>
-        <section id="bank-quick" class="panel" aria-labelledby="bank-quick-title">
-          <h2 id="bank-quick-title">One saved run: what changed?</h2>
-          <p>Bank A's boosted-tree model has learned newer patterns. Bank B starts with an older logistic model. For each case, Bank A sends only a <strong>flag/allow bit</strong>, never customer records or model weights. Bank B checks the advice, retrains its own model, then scores held-out purchases independently.</p>
-          <div class="bank-quick-cards">
-            <div class="bank-quick-card"><h3>Without teacher</h3><strong id="bank-quick-alone">Loading saved result…</strong><span id="bank-quick-alone-alarms"></span></div>
-            <div class="bank-quick-card taught"><h3>With teacher</h3><strong id="bank-quick-taught">Loading saved result…</strong><span id="bank-quick-taught-alarms"></span></div>
-          </div>
-          <p id="bank-quick-note" class="legend"></p>
-          <p id="bank-quick-study" class="legend"></p>
-          <p class="story-next"><a href="#bank-ledger">Inspect the 200 saved purchases →</a> · <a href="#demo">Return to Science →</a></p>
-        </section>
-        <h2 class="section-title">The problem</h2>
+        <div id="tab-bank" class="tab-panel" role="tabpanel" aria-labelledby="tab-btn-bank">
+        <h2 id="bank" class="section-title">The problem</h2>
         <p class="section-lede">When fraud tactics change, the bank that sees it first adapts. Smaller banks find out last, and keep approving the scam until they do.</p>
         <section id="problem-who" class="panel" aria-labelledby="problem-who-title">
           <h2 id="problem-who-title">Who is affected</h2>
@@ -1169,6 +1156,17 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
         </section>
         <h2 id="bank-evidence" class="section-title">What happened on public card data?</h2>
         <p class="section-lede">We tested the idea on 284,807 real card transactions with ordinary machine-learning models, no fly brain: a bank's model sends a credit union's differently built model one flag per purchase.</p>
+        <section id="bank-quick" class="panel" aria-labelledby="bank-quick-title">
+          <h2 id="bank-quick-title">One saved run: what changed?</h2>
+          <p>Bank A's boosted-tree model has learned newer patterns. Bank B starts with an older logistic model. For each case, Bank A sends only a <strong>flag/allow bit</strong>, never customer records or model weights. Bank B checks the advice, retrains its own model, then scores held-out purchases independently.</p>
+          <div class="bank-quick-cards">
+            <div class="bank-quick-card"><h3>Without teacher</h3><strong id="bank-quick-alone">Loading saved result…</strong><span id="bank-quick-alone-alarms"></span></div>
+            <div class="bank-quick-card taught"><h3>With teacher</h3><strong id="bank-quick-taught">Loading saved result…</strong><span id="bank-quick-taught-alarms"></span></div>
+          </div>
+          <p id="bank-quick-note" class="legend"></p>
+          <p id="bank-quick-study" class="legend"></p>
+          <p class="story-next"><a href="#bank-ledger">Inspect the 200 saved purchases →</a> · <a href="#solution">How it works →</a></p>
+        </section>
         <section id="bank-study" class="panel" aria-labelledby="bank-study-title">
           <h2 id="bank-study-title">Locked study on real fraud data</h2>
           <p class="legend">284,807 real card transactions (Worldline and ULB). The change is time: the credit union's model was trained on day 1 and must cope with day 2. Protocol fixed before the runs: <a href="docs/real-data-advice-v2-protocol.md">v2 protocol</a>; the first version failed outright and is kept in <code>data/real_data_advice/fraud/</code>.</p>
@@ -1218,9 +1216,9 @@ table.bank-summary td.better { color: var(--gfp); font-weight: 700; }
       const route = () => {
         const target = location.hash.length > 1 && document.getElementById(location.hash.slice(1));
         const panel = target?.closest?.('.tab-panel');
-        if (!panel) return showTab('sim', null, false);
+        if (!panel) return showTab('bank', null, false);
         const name = Object.keys(tabs).find(key => tabs[key] === panel.id);
-        const top = ['demo', 'solution', 'stats', 'research', 'bank'].includes(target.id);
+        const top = ['solution', 'stats', 'research', 'bank'].includes(target.id);
         for (let details = target.closest('details'); details; details = details.parentElement.closest('details')) details.open = true;
         showTab(name, top ? null : target);
       };
